@@ -1,0 +1,29 @@
+# Private development material
+private/
+sources/
+*.private.md
+*.personal.md
+*.journal.md
+*.transcript.md
+
+# Unreviewed reference artwork
+characters/**/references/*
+!characters/**/references/.gitkeep
+
+# Local environment
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+build/
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Generated drafts
+*.tmp
+*.bak
+*.log
