@@ -61,6 +61,9 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
   continuing pages 005–010. All new execution and the 32-page working outline
   remain DRAFT pending approval. Pages 005–032 are unscripted; the storyboard
   remains a scaffold. See the [chapter handoff](../stories/arc-01/chapter-001/handoff.md).
+  A [four-page prompt pack](../stories/arc-01/chapter-001/page-prompts.md) is now
+  available for the user's manual image generation, with per-page character
+  reference lists and draft layout/format conventions. No chapter art generated.
 
 - Resolve supporting-cast details in the [open decisions](../continuity/open-threads.md#supporting-cast-decisions-2026-11-13),
   including Autumn's exact age, final visual traits, histories,

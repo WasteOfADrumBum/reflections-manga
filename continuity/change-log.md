@@ -16,6 +16,20 @@
 - No absent-parent fate, model-sheet approval, chapter event, release, or new
   production deployment is authorized by these records.
 
+## 2026-11-13: Story 001 Manual Page-Generation Prompts
+
+- Prepared four self-contained full-page draft prompts from the saved 18-panel
+  opening script, retaining its exact dialogue, internal captions, SFX, and title.
+  Saved a combined page-prompts.md guide plus four individual plain-text exports.
+- Listed actual character-sheet inputs by page, including Morgan and Rowan in
+  page 002 backgrounds. Linked the registered everyday v1 identity cards and
+  explained previous-page references without replacing the identity anchors.
+- Proposed repeatable outfits, kitchen/nook geography, portrait color draft
+  settings, reading order, panel arrangements, and a provisional Ruby band
+  placement. These are production proposals, not new canon or final standards.
+- Updated chapter continuity, handoff, and production status. No artwork,
+  approved storyboard, image QA, chapter approval, release, or push performed.
+
 ## 2026-11-13: Cal Is 39; Ages and Roles on the Site Tree
 
 - USER-APPROVED: Caleb "Cal" Mercer is 39, one year older than Ethan. Updated

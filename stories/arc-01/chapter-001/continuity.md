@@ -84,6 +84,27 @@ version selection, additional image generation, or model-sheet approval in this
 writing batch. Ethan's ring practice remains open; do not decide it through the
 hand framing. Ruby's ring remains present without a symbolic close-up.
 
+## Manual Page-Prompt Pack: 2026-11-13
+
+[Four self-contained page prompts](page-prompts.md) now adapt the 18-panel
+opening for the user's manual generation workflow. Reference checklist:
+page 001 Ethan/Morgan/Rowan; page 002 Ethan/Ruby/Riley/Rowan/Morgan, including
+background cast; page 003 all six family members; page 004 Ethan only.
+
+The pack proposes a muted-color 2:3 portrait draft at 1024 x 1536 where supported,
+left-to-right reading, panel arrangements, and reusable kitchen/nook geography.
+These are test settings, not selected final page standards or approved layouts.
+For visual repeatability only, it proposes Ruby's simple band on the left ring
+finger; this does not resolve canonical ring design or placement. Ethan's ring
+practice remains open; no ring is added as a new identifying accessory.
+
+Use registered everyday v1 identity cards consistently; attach actual images.
+Accepted previous pages may supply room/outfit/style continuity after the
+identity inputs. Source identities and written specifications retain priority.
+The pack includes exact lettering for full-page draft generation at the user's
+request; check against the script and retain editable lettering for final work.
+No pages have been generated or visually reviewed by preparing these prompts.
+
 ## Established Constraints and Proposed Cast
 
 - Proposed cast: Ethan (38), Morgan (34), Ruby (28), Rowan (9), Avery (7),
