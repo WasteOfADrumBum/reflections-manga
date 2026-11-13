@@ -42,8 +42,7 @@ The proposed reference-sheet layout does not establish manga page standards.
 Do not render labels, names, measurements, dialogue, watermarks, or logos.
 CHARACTER
 Caleb "Cal" Mercer, a fictional adult man approximately 188 cm tall, about
-6'2". His exact age is undecided; for this provisional study, depict an
-adult around Ethan's age of 38, without establishing a numbered age.
+6'2". He is 39, one year older than Ethan (user-selected 2026-11-13).
 Heavyset with broad shoulders, thick arms, and a noticeable soft belly.
 Maintain balanced human proportions and an ordinary neck length. Messy,
 slightly scraggly grooming and naturally narrowed, tired-looking eyes.

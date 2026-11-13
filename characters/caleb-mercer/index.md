@@ -7,7 +7,7 @@ No model sheet or chapter appearance is approved.
 ## Identity
 
 - Name: Caleb Mercer; familiar name Cal.
-- Age: Not finalized. Prior proposal: around Ethan's age of 38, possibly 1-3 years older.
+- Age: 39, one year older than Ethan. Selected by the user 2026-11-13.
 - Height: 6'2" / approximately 188 cm, explicitly confirmed 2026-11-13.
 - Build direction: Heavyset, with a worn, scraggly presentation.
 - Style direction: Mostly black; run-down biker look, wrinkles and occasional small stains.
@@ -38,6 +38,6 @@ not established hobbies, ownership, jobs, or past encounters.
 
 ## Open Decisions
 
-Exact age; hair/eye colors and haircut; complexion; occupation; living situation;
+Hair/eye colors and haircut; complexion; occupation; living situation;
 romantic status; recovery history; speech patterns; and any recurring accessory.
 The prompt uses clearly provisional visual choices for a reviewable study.

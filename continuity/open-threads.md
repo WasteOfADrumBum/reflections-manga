@@ -74,7 +74,7 @@ Review those choices and the four-page pacing before continuing pages 005–010.
 
 ## Supporting-Cast Decisions: 2026-11-13
 
-- [Cal](../characters/caleb-mercer/index.md): Exact age, final hair/eye colors,
+- [Cal](../characters/caleb-mercer/index.md): Final hair/eye colors,
   haircut, complexion, recovery specifics, occupation, home, romantic status,
   and how he met Ethan. Smoking and caffeine habits remain unselected alternatives.
 - [Nat](../characters/natalie-greene/index.md): Final hair/eye colors, hairstyle,
