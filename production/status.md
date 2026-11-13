@@ -61,14 +61,17 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
 - Story 001 now has a [detailed proposed 32-page opening map](../stories/arc-01/concepts/story-001-three-hearts-different-needs.md#proposed-chapter-1-map-32-pages)
   and [Chapter 001 draft outline](../stories/arc-01/chapter-001/outline.md),
   recorded 2026-11-13. A user-authorized [opening script draft](../stories/arc-01/chapter-001/script.md)
-  now covers pages 001–004 in 18 panels, with exact dialogue, internal thoughts,
-  and end-of-page hooks. Review it and its proposed scene details before
-  continuing pages 005–010. All new execution and the 32-page working outline
-  remain DRAFT pending approval. Pages 005–032 are unscripted; the storyboard
-  remains a scaffold. See the [chapter handoff](../stories/arc-01/chapter-001/handoff.md).
+  now covers pages 001–010 in 44 panels (18 opening, 26 continuation), with exact
+  lettering and page-end hooks. The user reported pages 001–004 done and asked
+  to continue; all four [working page files](../stories/arc-01/chapter-001/pages/index.md)
+  are present and initially inspected, 1024 x 1536 PNG. Chapter QA and approval
+  remain open. Pages 011–032 are unscripted; the storyboard file remains a scaffold.
+  See the [chapter handoff](../stories/arc-01/chapter-001/handoff.md).
   A [four-page prompt pack](../stories/arc-01/chapter-001/page-prompts.md) is now
   available for the user's manual image generation, with per-page character
-  reference lists and draft layout/format conventions. No chapter art generated.
+  reference lists and draft layout/format conventions. The [next six-page pack](../stories/arc-01/chapter-001/page-prompts-005-010.md)
+  is ready for manual generation of pages 005–010; no new images for that batch
+  were generated during this continuation.
 
 - Resolve supporting-cast details in the [open decisions](../continuity/open-threads.md#supporting-cast-decisions-2026-11-13),
   including Autumn's exact age, final visual traits, histories,

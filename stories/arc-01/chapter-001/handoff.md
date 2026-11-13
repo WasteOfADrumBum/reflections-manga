@@ -2,55 +2,63 @@
 
 Updated: 2026-11-13.
 Story: 001 — Three Hearts, Different Needs.
-Stage: SCRIPT, partial DRAFT v1 for review.
+Stage: Partial script and manual art production; DRAFT, not a released chapter.
 
 ## Saved Work
 
-- [Working outline](outline.md): Proposed 32-page adaptation; not approved.
-- [Opening script](script.md): Pages 001–004, 18 panels, exact ordered lettering
-  and internal thoughts, with page-end hooks. Pages 005–032 are unscripted.
-- [Continuity](continuity.md): Established constraints separated from proposed
-  opening outfits, geography, prop states, character beats, and review questions.
-- [Page prompt pack](page-prompts.md): Four self-contained manual-generation
-  prompts, required character sheets per page, previous-page reference guidance,
-  exact lettering, and draft format/layout conventions. No images generated.
-  Individual copyable exports are in prompts/page-001-v1.txt through page-004-v1.txt.
-- Storyboard remains the original empty scaffold; draft panel arrangements are
-  proposed inside the prompt pack, not approved storyboard pages.
+- [Working outline](outline.md): Proposed 32-page adaptation; final approval open.
+- [Chapter script](script.md): Pages 001–010, 44 panels. Opening 001–004 has
+  18 panels; continuation 005–010 has 26. Pages 011–032 remain unscripted.
+- [Opening prompt pack](page-prompts.md) and its four original text exports
+  are preserved. The user has generated those pages.
+- [Working page inventory](pages/index.md): All four user-created page files
+  located and inspected, PNG 1024 x 1536. Page 004 has no filename extension.
+- [Continuation prompt pack](page-prompts-005-010.md): Six self-contained prompts
+  and text exports prompts/page-005-v1.txt through page-010-v1.txt, exact dialogue,
+  per-page reference mapping, proposed layouts, and scene-state rules.
+- [Continuity](continuity.md): Approved family constraints separated from draft
+  scenes and the observed temporary clothes/room details in the user-created pages.
+- Storyboard file is still an empty scaffold. Proposed panel arrangements are
+  in the script/prompts; no approved final storyboard or editable lettering.
 
 ## Authorization and Approval State
 
-The user requested a draft of pages 001–004 from the existing working outline,
-including proposed missing details. That authorizes this writing batch; it is
-not creative approval of the map, script, scenes, page count, or character facts.
-Approved profiles and relationship records retain priority. No canonical
-timeline developments or release entries were added.
+The user said pages 001–004 are done and asked to keep going. Treat those images
+as working outputs accepted for progression and continue the next outlined batch.
+This is not final creative approval of the complete chapter, final standards,
+or entry of draft events into the canonical timeline. No release or commit/push
+is triggered by this partial production session.
 
-## Review Focus
+The next batch's bag-packing task, prop designs, dialogue, coffee interaction,
+and staging remain DRAFT proposals. New background family history is not used
+to explain current behavior or add flashbacks to these scenes.
 
-- Does the Morgan → Ruby → shared family → private mirror sequence engage a
-  first-time reader while preserving the warmth of the family?
-- Review Ruby's reassurance after respecting Riley's independent zipper attempt;
-  keep her competence and Riley's agency visible.
-- Review the shoe and crooked-shirt jokes, Avery's spoon play, four-panel page 1,
-  small bathroom, and temporary outfit proposals.
-- Check that the mirror thoughts read as Ethan's uncertainty, not a factual
-  judgment of either spouse or a literal alternate-personality reveal.
+## Immediate Next Action
 
-## Next Action
+Generate pages 005–010 sequentially using the saved prompts:
 
-The user requested prompts to generate the opening manually with attached
-character pictures. Use page-prompts.md, attach each page's specified sheets,
-and produce/review one page at a time. Any returned images still require checks
-for identity, scene states, reading order, and exact lettering. Record actual
-outputs and user decisions before treating any page as accepted or approved.
+- Page 005: Ethan, Morgan, Ruby sheets, then rendered page 003 for the kitchen
+  and clothes; page 004 optional for Ethan's immediate continuity.
+- Pages 006–007: Ethan and Morgan sheets, then preceding newly selected page.
+- Page 008: Ethan and Ruby sheets, then new page 007 plus rendered page 003
+  for Ruby's cardigan/knit top.
+- Pages 009–010: Ethan and Ruby sheets, then preceding newly selected page.
 
-Review/revise pages 001–004 with the user. After that review, draft pages
-005–010 from the same working map, showing why Ethan enjoys both relationships
-and retaining his right to disagree. Do not rewrite the opening's proposed
-events as established history unless approved.
+No children are drawn in this batch. Keep the original character sheets as
+identity anchors; prior pages supply environment/outfit/style continuity only.
+Record actual outputs and review before calling any new page finished.
 
-Before final art, choose page standards and physical reading direction,
-storyboard the script, resolve applicable adult visual details and ring
-questions, and record actual character-reference versions. This session did
-not perform storyboard, lettering-fit, art, or full chapter QA.
+## Carry Forward
+
+- Same morning and house; no school/work schedule or outing destination fixed.
+- Morgan retains her rendered olive overshirt; Ruby retains her rendered
+  dusty-rose cardigan and ivory cable knit. No permanent wardrobe change.
+- The blue bottle moves from counter to tote main compartment attempt, then
+  its outer pocket. Packed tote rests by the nook bench after page 007.
+- The plain cream mug stays untouched through page 010. Page 011 can begin the
+  outlined child beat, but no exact child action or parental address is approved yet.
+- Ethan's identity question, later insight, and outward boundary are unresolved.
+
+After the user completes/reviews this batch, draft pages 011–015 from the same
+outline. Complete reference, anatomy, reading-flow, lettering, and continuity
+QA before final chapter approval and release.

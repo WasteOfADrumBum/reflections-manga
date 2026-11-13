@@ -52,7 +52,12 @@ Opening script update: pages 001–004 are now [DRAFT v1 for review](../stories/
 authorized for drafting on 2026-11-13. Proposed details include Rowan's shoe
 recovery, Riley zipping her own hoodie while Ruby waits, the crooked-henley
 joke, Avery's spoon play, and a bathroom mirror. None is approved canon.
-Review those choices and the four-page pacing before continuing pages 005–010.
+The user has since generated pages 001–004 and requested continuation. Those
+working images are registered; this does not mark complete chapter QA or canon
+approval. Pages 005–010 now have draft script and manual-generation prompts.
+Review their bag-packing task, private Morgan/Ruby exchange, Morgan/Ethan banter,
+and Ruby/Ethan coffee/reassurance sequence before treating them as approved events.
+Pages 011–032 remain unscripted.
 
 - Review adapting Story 001 as Chapter 001 in 32 pages; this does not set a
   universal chapter length, final allocation, or completed production stage.
@@ -65,8 +70,8 @@ Review those choices and the four-page pacing before continuing pages 005–010.
   narration. None becomes an approved voice or relationship fact by being saved.
 - Resolve the morning/later-day/night/next-morning/possible second-evening
   sequence, location choices, wardrobe changes, props, and reference versions.
-- Plan Morgan/Ruby's independent platonic friendship in execution; the map
-  does not yet specify a private scene without Ethan.
+- Review page 005's proposed private Morgan/Ruby bag-preparation exchange;
+  their independent platonic friendship is preserved, but the scene is DRAFT.
 - Resolve page-1 layout, panel divisions, page dimensions, reading direction,
   resolution, and lettering before final art.
 - Carry small boundaries and unresolved identity questions into Story 002 only

@@ -1,5 +1,22 @@
 # Change Log
 
+## 2026-11-13: Story 001 Continues Through Page 010
+
+- The user reported pages 001–004 done and requested continuation. Located and
+  visually inspected the four saved 1024 x 1536 PNG outputs; registered actual
+  filenames and hashes, preserving page 004's extensionless source name.
+- Recorded observed temporary outfit layers and kitchen details separately
+  from the original prompts and permanent identity canon. No images edited.
+- Drafted pages 005–010 in 26 panels, preserving the outline's consensual
+  Morgan/Ethan agency and Ruby/Ethan affection/reassurance. Proposed packing
+  an outing bag and a private Morgan/Ruby exchange; no destination or schedule set.
+- Saved six self-contained generation prompts and a combined guide, with exact
+  dialogue, per-page cast, prior-page references, prop states, and a coffee bridge
+  into the planned child introductions. No new art generated in this session.
+- Updated chapter script, outline, continuity, prompt links, handoff, registries,
+  production status, and open decisions. Pages 011–032 remain unscripted; final
+  chapter QA, creative approval, canon entry, release, commit, and push are open.
+
 ## 2026-11-13: First Four Chapter 001 Pages on the Site Reader
 
 - At the user's request, web copies of pages 001-004 (A01-C001-P001 to P004)
