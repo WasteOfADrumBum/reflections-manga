@@ -1,5 +1,13 @@
 # Change Log
 
+## 2026-11-13: Bennett Family Portrait Draft
+
+- Generated a full-body family portrait of Ruby, Autumn, Thomas, Avery, and Ethan
+  from the user's five supplied consolidated reference sheets.
+- Saved the image and exact prompt in assets/drafts/bennett-family-portrait-study.md.
+- Garden setting and pose remain illustration proposals awaiting review;
+  no artwork approval, story event, family-membership change, or release established.
+
 ## 2026-11-13: Surname-First Consolidated Filenames
 
 - Renamed the 16 consolidated v1 images to surname-first filenames, such as
