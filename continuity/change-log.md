@@ -1,5 +1,23 @@
 # Change Log
 
+## 2026-11-13: Walker Extended Family Portrait Draft
+
+- Generated a thirteen-person portrait with Ethan, Morgan, Ruby, all three
+  children, Richard, Linda, Diane, Nathan, Adrian, Thomas, and Autumn.
+- Saved the image, exact prompt, five reference-board mappings, and review notes
+  in assets/drafts/walker-extended-family-portrait-study.md.
+- Setting and pose await review. Existing names and approval states remain intact;
+  no canonical event, artwork approval, residence, or release established.
+
+## 2026-11-13: Hayes Family Portrait Draft
+
+- Generated a full-body portrait of Diane, Nathan, Adrian, Morgan, Ethan,
+  Rowan, and Riley from the user's supplied reference sheets.
+- Saved the image, exact prompt, reference-board mapping, and review notes in
+  assets/drafts/hayes-family-portrait-study.md.
+- Park setting and pose await review. Nathan and Adrian's proposed details
+  retain their status; no canon, family-membership, artwork-approval, or release change.
+
 ## 2026-11-13: Bennett Family Portrait Draft
 
 - Generated a full-body family portrait of Ruby, Autumn, Thomas, Avery, and Ethan
