@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css">
   <script>document.documentElement.classList.add("js");</script>
+  <script src="/js/characters.js" defer></script>
   <script src="/js/main.js" defer></script>
 </head>
 <body>
@@ -40,34 +41,132 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="page-hero tone" aria-labelledby="page-title">
+    <section class="page-hero page-hero-tight tone" aria-labelledby="page-title">
       <div class="wrap reveal">
         <span class="eyebrow">Reader's guide</span>
         <h1 id="page-title">The characters</h1>
-        <p>One family under one roof. Here's who's who, what drives them, and how they fit together.</p>
-        <nav aria-label="Jump to a character">
-          <ul class="char-index"><li><a href="#family-tree">Family tree</a></li><li><a href="#ethan-walker">Ethan</a></li><li><a href="#morgan-hayes">Morgan</a></li><li><a href="#ruby-bennett">Ruby</a></li><li><a href="#rowan-hayes-walker">Rowan</a></li><li><a href="#riley-hayes-walker">Riley</a></li><li><a href="#avery-bennett-walker">Avery</a></li></ul>
-        </nav>
+        <p>One family under one roof. <span class="js-only">Pick anyone in the family tree to read their story.</span></p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" aria-labelledby="ft-title">
       <div class="wrap">
-        <section class="family-tree" id="family-tree" aria-labelledby="ft-title">
-          <div class="section-head">
-            <h2 id="ft-title">Family tree</h2>
-            <p>Ethan is married to both Morgan and Ruby, in one shared marriage. Morgan and Ruby aren't a couple; they're best friends who raise all three kids together.</p>
+        <h2 id="ft-title" class="visually-hidden">Family tree</h2>
+        <div class="cast">
+          <div class="cast-tree">
+            <div class="ft-wrap">
+              <div class="ft-stage">
+                <svg class="ft-lines ft-lines-wide" viewBox="0 0 960 560" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><path class="ft-friend" d="M170 72 C 170 24, 790 24, 790 72"/><line class="ft-marry" x1="228" y1="126" x2="422" y2="126"/><line class="ft-marry" x1="228" y1="134" x2="422" y2="134"/><line class="ft-marry" x1="538" y1="126" x2="732" y2="126"/><line class="ft-marry" x1="538" y1="134" x2="732" y2="134"/><path class="ft-line" d="M325.0 134 V312 M215 312 H435 M215 312 V362 M435 312 V362"/><path class="ft-line" d="M635.0 134 V312 H635 V362"/><text class="ft-tag" x="325.0" y="116" text-anchor="middle" font-size="20">Married</text><text class="ft-tag" x="635.0" y="116" text-anchor="middle" font-size="20">Married</text><rect class="ft-tagbg" x="330" y="26" width="300" height="32"/><text class="ft-tag" x="480" y="52" text-anchor="middle" font-size="20">Best friends &amp; co-parents</text></svg>
+                <svg class="ft-lines ft-lines-narrow" viewBox="0 0 360 380" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet"><path class="ft-friend" d="M64 48 C 64 10, 296 10, 296 48"/><line class="ft-marry" x1="100" y1="80" x2="144" y2="80"/><line class="ft-marry" x1="100" y1="88" x2="144" y2="88"/><line class="ft-marry" x1="216" y1="80" x2="260" y2="80"/><line class="ft-marry" x1="216" y1="88" x2="260" y2="88"/><path class="ft-line" d="M122.0 88 V214 M64 214 H170 M64 214 V238 M170 214 V238"/><path class="ft-line" d="M238.0 88 V202 H296 V238"/></svg>
+                <ul class="ft-nodes" aria-label="Family tree: choose a character"><li class="ft-node-item" style="--x:17.708;--y:12.857;--s:12.083;--nx:17.778;--ny:12.632;--ns:20.000"><a class="ft-node" href="#morgan-hayes" data-char="morgan-hayes" aria-controls="morgan-hayes"><span class="ft-face"><img src="/images/characters/morgan-hayes-portrait.webp" alt="" width="440" height="316" decoding="async"></span><span class="ft-label"><span class="ft-nm">Morgan</span><span class="ft-ag">Age 34</span></span><span class="visually-hidden">, married to Ethan, mom of Rowan and Riley</span></a></li><li class="ft-node-item" style="--x:50.000;--y:12.857;--s:12.083;--nx:50.000;--ny:12.632;--ns:20.000"><a class="ft-node" href="#ethan-walker" data-char="ethan-walker" aria-controls="ethan-walker"><span class="ft-face"><img src="/images/characters/ethan-walker-portrait.webp" alt="" width="440" height="316" decoding="async"></span><span class="ft-label"><span class="ft-nm">Ethan</span><span class="ft-ag">Age 38</span></span><span class="visually-hidden">, husband to Morgan and Ruby</span></a></li><li class="ft-node-item" style="--x:82.292;--y:12.857;--s:12.083;--nx:82.222;--ny:12.632;--ns:20.000"><a class="ft-node" href="#ruby-bennett" data-char="ruby-bennett" aria-controls="ruby-bennett"><span class="ft-face"><img src="/images/characters/ruby-bennett-portrait.webp" alt="" width="440" height="316" decoding="async"></span><span class="ft-label"><span class="ft-nm">Ruby</span><span class="ft-ag">Age 28</span></span><span class="visually-hidden">, married to Ethan, mom of Avery</span></a></li><li class="ft-node-item" style="--x:22.396;--y:64.643;--s:10.000;--nx:17.778;--ny:62.632;--ns:17.778"><a class="ft-node" href="#rowan-hayes-walker" data-char="rowan-hayes-walker" aria-controls="rowan-hayes-walker"><span class="ft-face"><img src="/images/characters/rowan-hayes-walker-portrait.webp" alt="" width="440" height="316" decoding="async"></span><span class="ft-label"><span class="ft-nm">Rowan</span><span class="ft-ag">Age 9</span></span><span class="visually-hidden">, son of Ethan and Morgan</span></a></li><li class="ft-node-item" style="--x:45.312;--y:64.643;--s:10.000;--nx:47.222;--ny:62.632;--ns:17.778"><a class="ft-node" href="#riley-hayes-walker" data-char="riley-hayes-walker" aria-controls="riley-hayes-walker"><span class="ft-face"><img src="/images/characters/riley-hayes-walker-portrait.webp" alt="" width="440" height="316" decoding="async"></span><span class="ft-label"><span class="ft-nm">Riley</span><span class="ft-ag">About 6</span></span><span class="visually-hidden">, daughter of Ethan and Morgan</span></a></li><li class="ft-node-item" style="--x:66.146;--y:64.643;--s:10.000;--nx:82.222;--ny:62.632;--ns:17.778"><a class="ft-node" href="#avery-bennett-walker" data-char="avery-bennett-walker" aria-controls="avery-bennett-walker"><span class="ft-face"><img src="/images/characters/avery-bennett-walker-portrait.webp" alt="" width="440" height="316" decoding="async"></span><span class="ft-label"><span class="ft-nm">Avery</span><span class="ft-ag">Age 7</span></span><span class="visually-hidden">, daughter of Ethan and Ruby</span></a></li></ul>
+              </div>
+            </div>
+            <ul class="ft-legend" aria-label="Line key">
+              <li><svg viewBox="0 0 40 12" aria-hidden="true" focusable="false"><line class="ft-marry" x1="0" y1="3" x2="40" y2="3"/><line class="ft-marry" x1="0" y1="9" x2="40" y2="9"/></svg> Married</li>
+              <li><svg viewBox="0 0 40 12" aria-hidden="true" focusable="false"><line class="ft-friend" x1="0" y1="6" x2="40" y2="6"/></svg> Best friends &amp; co-parents</li>
+              <li><svg viewBox="0 0 40 12" aria-hidden="true" focusable="false"><line class="ft-line" x1="0" y1="6" x2="40" y2="6"/></svg> Parent to child</li>
+            </ul>
           </div>
-          <figure class="ft-figure">
-            <svg class="ft-svg ft-wide" viewBox="0 0 960 540" role="img" aria-label="Family tree. Ethan is married to Morgan and to Ruby. Ethan and Morgan's children are Rowan, 9, and Riley, about 6. Ethan and Ruby's daughter is Avery, 7. Morgan and Ruby are best friends and co-parents." xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="ft-wide-morgan"><circle cx="170" cy="130" r="58"/></clipPath><clipPath id="ft-wide-ethan"><circle cx="480" cy="130" r="58"/></clipPath><clipPath id="ft-wide-ruby"><circle cx="790" cy="130" r="58"/></clipPath><clipPath id="ft-wide-rowan"><circle cx="215" cy="420" r="48"/></clipPath><clipPath id="ft-wide-riley"><circle cx="435" cy="420" r="48"/></clipPath><clipPath id="ft-wide-avery"><circle cx="635" cy="420" r="48"/></clipPath></defs><path class="ft-friend" d="M170 72 C 170 22, 790 22, 790 72"/><line class="ft-marry" x1="228" y1="126" x2="422" y2="126"/><line class="ft-marry" x1="228" y1="134" x2="422" y2="134"/><line class="ft-marry" x1="538" y1="126" x2="732" y2="126"/><line class="ft-marry" x1="538" y1="134" x2="732" y2="134"/><text class="ft-tag" x="325.0" y="116" text-anchor="middle" font-size="16">Married</text><text class="ft-tag" x="635.0" y="116" text-anchor="middle" font-size="16">Married</text><rect class="ft-tagbg" x="360" y="26" width="240" height="26" rx="2"/><text class="ft-tag" x="480" y="46" text-anchor="middle" font-size="16">Best friends &amp; co-parents</text><path class="ft-line" d="M325.0 134 V320 M215 320 H435 M215 320 V372 M435 320 V372"/><path class="ft-line" d="M635.0 134 V320 H635 V372"/><image href="/images/characters/morgan-hayes-portrait.webp" x="89.38000000000001" y="69.1" width="161.23999999999998" height="116" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-wide-morgan)"/><circle class="ft-ring" cx="170" cy="130" r="58"/><text class="ft-name" x="170" y="218" text-anchor="middle" font-size="22">Morgan</text><text class="ft-age" x="170" y="240" text-anchor="middle" font-size="16">Age 34</text><image href="/images/characters/ethan-walker-portrait.webp" x="399.38" y="69.1" width="161.23999999999998" height="116" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-wide-ethan)"/><circle class="ft-ring" cx="480" cy="130" r="58"/><text class="ft-name" x="480" y="218" text-anchor="middle" font-size="22">Ethan</text><text class="ft-age" x="480" y="240" text-anchor="middle" font-size="16">Age 38</text><image href="/images/characters/ruby-bennett-portrait.webp" x="709.38" y="69.1" width="161.23999999999998" height="116" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-wide-ruby)"/><circle class="ft-ring" cx="790" cy="130" r="58"/><text class="ft-name" x="790" y="218" text-anchor="middle" font-size="22">Ruby</text><text class="ft-age" x="790" y="240" text-anchor="middle" font-size="16">Age 28</text><image href="/images/characters/rowan-hayes-walker-portrait.webp" x="148.28" y="369.6" width="133.44" height="96" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-wide-rowan)"/><circle class="ft-ring" cx="215" cy="420" r="48"/><text class="ft-name" x="215" y="498" text-anchor="middle" font-size="22">Rowan</text><text class="ft-age" x="215" y="520" text-anchor="middle" font-size="16">Age 9</text><image href="/images/characters/riley-hayes-walker-portrait.webp" x="368.28" y="369.6" width="133.44" height="96" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-wide-riley)"/><circle class="ft-ring" cx="435" cy="420" r="48"/><text class="ft-name" x="435" y="498" text-anchor="middle" font-size="22">Riley</text><text class="ft-age" x="435" y="520" text-anchor="middle" font-size="16">About 6</text><image href="/images/characters/avery-bennett-walker-portrait.webp" x="568.28" y="369.6" width="133.44" height="96" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-wide-avery)"/><circle class="ft-ring" cx="635" cy="420" r="48"/><text class="ft-name" x="635" y="498" text-anchor="middle" font-size="22">Avery</text><text class="ft-age" x="635" y="520" text-anchor="middle" font-size="16">Age 7</text></svg>
-            <svg class="ft-svg ft-narrow" viewBox="0 0 360 360" role="img" aria-label="Family tree. Ethan is married to Morgan and to Ruby. Ethan and Morgan's children are Rowan, 9, and Riley, about 6. Ethan and Ruby's daughter is Avery, 7. Morgan and Ruby are best friends and co-parents." xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="ft-narrow-morgan"><circle cx="64" cy="84" r="36"/></clipPath><clipPath id="ft-narrow-ethan"><circle cx="180" cy="84" r="36"/></clipPath><clipPath id="ft-narrow-ruby"><circle cx="296" cy="84" r="36"/></clipPath><clipPath id="ft-narrow-rowan"><circle cx="64" cy="268" r="32"/></clipPath><clipPath id="ft-narrow-riley"><circle cx="170" cy="268" r="32"/></clipPath><clipPath id="ft-narrow-avery"><circle cx="296" cy="268" r="32"/></clipPath></defs><path class="ft-friend" d="M64 48 C 64 10, 296 10, 296 48"/><line class="ft-marry" x1="100" y1="80" x2="144" y2="80"/><line class="ft-marry" x1="100" y1="88" x2="144" y2="88"/><line class="ft-marry" x1="216" y1="80" x2="260" y2="80"/><line class="ft-marry" x1="216" y1="88" x2="260" y2="88"/><path class="ft-line" d="M122.0 88 V212 M64 212 H170 M64 212 V236 M170 212 V236"/><path class="ft-line" d="M238.0 88 V200 H296 V236"/><image href="/images/characters/morgan-hayes-portrait.webp" x="13.96" y="46.199999999999996" width="100.08" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-narrow-morgan)"/><circle class="ft-ring" cx="64" cy="84" r="36"/><text class="ft-name" x="64" y="144" text-anchor="middle" font-size="16">Morgan</text><text class="ft-age" x="64" y="163" text-anchor="middle" font-size="13">Age 34</text><image href="/images/characters/ethan-walker-portrait.webp" x="129.96" y="46.199999999999996" width="100.08" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-narrow-ethan)"/><circle class="ft-ring" cx="180" cy="84" r="36"/><text class="ft-name" x="180" y="144" text-anchor="middle" font-size="16">Ethan</text><text class="ft-age" x="180" y="163" text-anchor="middle" font-size="13">Age 38</text><image href="/images/characters/ruby-bennett-portrait.webp" x="245.96" y="46.199999999999996" width="100.08" height="72" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-narrow-ruby)"/><circle class="ft-ring" cx="296" cy="84" r="36"/><text class="ft-name" x="296" y="144" text-anchor="middle" font-size="16">Ruby</text><text class="ft-age" x="296" y="163" text-anchor="middle" font-size="13">Age 28</text><image href="/images/characters/rowan-hayes-walker-portrait.webp" x="19.520000000000003" y="234.4" width="88.96" height="64" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-narrow-rowan)"/><circle class="ft-ring" cx="64" cy="268" r="32"/><text class="ft-name" x="64" y="324" text-anchor="middle" font-size="16">Rowan</text><text class="ft-age" x="64" y="343" text-anchor="middle" font-size="13">Age 9</text><image href="/images/characters/riley-hayes-walker-portrait.webp" x="125.52000000000001" y="234.4" width="88.96" height="64" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-narrow-riley)"/><circle class="ft-ring" cx="170" cy="268" r="32"/><text class="ft-name" x="170" y="324" text-anchor="middle" font-size="16">Riley</text><text class="ft-age" x="170" y="343" text-anchor="middle" font-size="13">About 6</text><image href="/images/characters/avery-bennett-walker-portrait.webp" x="251.52" y="234.4" width="88.96" height="64" preserveAspectRatio="xMidYMid slice" clip-path="url(#ft-narrow-avery)"/><circle class="ft-ring" cx="296" cy="268" r="32"/><text class="ft-name" x="296" y="324" text-anchor="middle" font-size="16">Avery</text><text class="ft-age" x="296" y="343" text-anchor="middle" font-size="13">Age 7</text></svg>
-            <figcaption class="ft-legend">
-              <span><svg viewBox="0 0 40 12" aria-hidden="true" focusable="false"><line class="ft-marry" x1="0" y1="3" x2="40" y2="3"/><line class="ft-marry" x1="0" y1="9" x2="40" y2="9"/></svg> Married</span>
-              <span><svg viewBox="0 0 40 12" aria-hidden="true" focusable="false"><line class="ft-friend" x1="0" y1="6" x2="40" y2="6"/></svg> Best friends &amp; co-parents</span>
-              <span><svg viewBox="0 0 40 12" aria-hidden="true" focusable="false"><line class="ft-line" x1="0" y1="6" x2="40" y2="6"/></svg> Parent to child</span>
-            </figcaption>
-          </figure>
 
+          <div class="cast-panel" id="cast-panel" aria-label="Character details" role="region">
+            <div class="cast-placeholder js-only">
+              <div class="empty-art" aria-hidden="true"></div>
+              <h3>Who do you want to meet?</h3>
+              <p>Select a portrait in the family tree to open that character's bio here.</p>
+            </div>
+            <div class="cast-toolbar js-only" hidden>
+              <button type="button" class="cast-btn" data-cast-prev>Previous</button>
+              <button type="button" class="cast-btn" data-cast-next>Next</button>
+              <button type="button" class="cast-btn cast-close" data-cast-close>Close</button>
+            </div>
+            <article class="char" id="ethan-walker" aria-labelledby="ethan-walker-name">
+              <div class="char-portrait">
+                <img src="/images/characters/ethan-walker-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Ethan Walker reference portrait: a man with a brown high-fade undercut, a full medium-length beard and warm brown eyes, wearing an olive T-shirt.">
+                <p><a href="/images/characters/ethan-walker-sheet.webp">Full reference sheet<span class="visually-hidden"> for Ethan (image)</span></a></p>
+              </div>
+              <div class="char-body">
+                <h3 id="ethan-walker-name" tabindex="-1">Ethan Walker</h3>
+                <p class="char-tagline">The one everyone leans on</p>
+                <ul class="char-stats" aria-label="Quick facts"><li>Age 38</li><li>5&#x27;10&quot; / 178 cm</li><li>Husband to Morgan and Ruby</li><li>Works full-time</li></ul>
+                <p>Ethan is technically minded and quietly introspective, a dependable problem solver who keeps his own uncertainty to himself. He&#x27;s analytical, protective and observant, and he&#x27;d rather crack a joke than admit he&#x27;s struggling.</p><p>With Morgan, he tends to follow her lead; their relationship is direct, funny and quick to spark into arguments. With Ruby, he&#x27;s the one who leads, and they share deep, unhurried conversations. He calls Morgan “Hun” and Ruby “Babe.”</p><p>His central struggle: feeling responsible for everyone&#x27;s happiness while finding it hard to say what he needs, and wondering who he is when no one needs anything from him.</p>
+                <h4>At a glance</h4>
+                <ul class="trait-list"><li>Analytical and observant</li><li>Loyal and determined</li><li>Overthinks and doubts himself</li><li>Thoughtful pauses; restless hands when anxious</li></ul>
+              </div>
+            </article>
+            <article class="char" id="morgan-hayes" aria-labelledby="morgan-hayes-name">
+              <div class="char-portrait">
+                <img src="/images/characters/morgan-hayes-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Morgan Hayes-Walker reference portrait: a woman with long, layered chestnut-brown hair, hazel eyes and light freckles, wearing an olive utility jacket.">
+                <p><a href="/images/characters/morgan-hayes-sheet.webp">Full reference sheet<span class="visually-hidden"> for Morgan (image)</span></a></p>
+              </div>
+              <div class="char-body">
+                <h3 id="morgan-hayes-name" tabindex="-1">Morgan Hayes-Walker</h3>
+                <p class="char-tagline">Strong-willed, and more tender than she lets on</p>
+                <ul class="char-stats" aria-label="Quick facts"><li>Age 34</li><li>5&#x27;7&quot; / 170 cm</li><li>Married to Ethan</li><li>Works part-time</li></ul>
+                <p>Morgan is confident, practical and fiercely independent. She meets problems head on, teases with a dry sense of humor, and hides uncertainty behind it more often than she&#x27;d admit.</p><p>She takes the lead with Ethan, and their chemistry comes with plenty of clashes. Ruby is her best friend; the two confide in each other and co-parent all three kids. She&#x27;s the firmer parent at home, and Riley is closest to her.</p><p>Her inner tension: wanting independence and control while also needing support, tenderness and understanding. She doesn&#x27;t wear her wedding ring, and she hasn&#x27;t said why.</p>
+                <h4>At a glance</h4>
+                <ul class="trait-list"><li>Assertive and resourceful</li><li>Protective and playful</li><li>Can get defensive</li><li>Hesitates to ask for help</li></ul>
+              </div>
+            </article>
+            <article class="char" id="ruby-bennett" aria-labelledby="ruby-bennett-name">
+              <div class="char-portrait">
+                <img src="/images/characters/ruby-bennett-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Ruby Bennett-Walker reference portrait: a petite woman with a copper-red pixie cut, emerald-green eyes and soft freckles, wearing a pink cardigan.">
+                <p><a href="/images/characters/ruby-bennett-sheet.webp">Full reference sheet<span class="visually-hidden"> for Ruby (image)</span></a></p>
+              </div>
+              <div class="char-body">
+                <h3 id="ruby-bennett-name" tabindex="-1">Ruby Bennett-Walker</h3>
+                <p class="char-tagline">The quiet heart of the house</p>
+                <ul class="char-stats" aria-label="Quick facts"><li>Age 28</li><li>5&#x27;0&quot; / 152 cm</li><li>Married to Ethan</li><li>Handles most daily childcare</li></ul>
+                <p>Ruby is warm, gentle and quietly romantic. She speaks through attention, small gestures and the expressions that cross her face, and she moves with a former dancer&#x27;s grace.</p><p>She looks to Ethan for reassurance and direction, and their bond is built on emotional closeness and long talks. Morgan is her best friend and co-parent. Ruby stepped back to focus on the kids and handles most of their daily care; Rowan is closest to her, and she&#x27;s especially attuned to what Avery needs.</p><p>Her inner tension: she wants harmony and closeness, but she struggles to voice her own needs and can come to resent always being the one who keeps the peace.</p>
+                <h4>At a glance</h4>
+                <ul class="trait-list"><li>Affectionate and perceptive</li><li>Emotionally attentive</li><li>Hesitates during confrontation</li><li>Avoids showing disappointment</li></ul>
+              </div>
+            </article>
+            <article class="char" id="rowan-hayes-walker" aria-labelledby="rowan-hayes-walker-name">
+              <div class="char-portrait">
+                <img src="/images/characters/rowan-hayes-walker-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Rowan Hayes-Walker reference portrait: a boy with messy, textured chestnut hair and brown-hazel eyes, wearing a navy and orange hoodie.">
+                <p><a href="/images/characters/rowan-hayes-walker-sheet.webp">Full reference sheet<span class="visually-hidden"> for Rowan (image)</span></a></p>
+              </div>
+              <div class="char-body">
+                <h3 id="rowan-hayes-walker-name" tabindex="-1">Rowan Hayes-Walker</h3>
+                <p class="char-tagline">The builder with a comeback for everything</p>
+                <ul class="char-stats" aria-label="Quick facts"><li>Age 9</li><li>130 cm</li><li>Son of Ethan and Morgan</li><li>Closest to Ruby</li></ul>
+                <p>Rowan is sociable, talkative and funny, and he loves making people laugh. He&#x27;s happiest building things: puzzles, construction toys, and figuring out how mechanisms work.</p><p>When something feels unfair he argues his case, and his excitement sometimes outruns his judgment. He&#x27;s picked up Morgan&#x27;s raised eyebrows and dry humor, and he and his little sister Riley are nearly inseparable.</p>
+                <h4>At a glance</h4>
+                <ul class="trait-list"><li>Sociable and funny</li><li>Loves building and puzzles</li><li>Acts before thinking</li></ul>
+              </div>
+            </article>
+            <article class="char" id="riley-hayes-walker" aria-labelledby="riley-hayes-walker-name">
+              <div class="char-portrait">
+                <img src="/images/characters/riley-hayes-walker-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Riley Hayes-Walker reference portrait: a young girl with a short chestnut pixie cut, green-hazel eyes and light freckles, wearing a purple hoodie over a teal top.">
+                <p><a href="/images/characters/riley-hayes-walker-sheet.webp">Full reference sheet<span class="visually-hidden"> for Riley (image)</span></a></p>
+              </div>
+              <div class="char-body">
+                <h3 id="riley-hayes-walker-name" tabindex="-1">Riley Hayes-Walker</h3>
+                <p class="char-tagline">Fearless, curious, and doing it herself</p>
+                <ul class="char-stats" aria-label="Quick facts"><li>Age about 6</li><li>110 cm</li><li>Daughter of Ethan and Morgan</li><li>Closest to Morgan</li></ul>
+                <p>Riley is fearless and inquisitive, always eager to investigate and try things on her own. She loves pretend play, costumes and cats.</p><p>When she&#x27;s frustrated she insists on doing it alone, and accepting help is hard for her. She has Morgan&#x27;s playful confidence, and she and her big brother Rowan are almost always together.</p>
+                <h4>At a glance</h4>
+                <ul class="trait-list"><li>Fearless and inquisitive</li><li>Loves pretend play, costumes and cats</li><li>Finds it hard to accept help</li></ul>
+              </div>
+            </article>
+            <article class="char" id="avery-bennett-walker" aria-labelledby="avery-bennett-walker-name">
+              <div class="char-portrait">
+                <img src="/images/characters/avery-bennett-walker-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Avery Bennett-Walker reference portrait: a girl with long auburn hair tied back, hazel eyes and freckles across her nose and cheeks, wearing a lavender T-shirt.">
+                <p><a href="/images/characters/avery-bennett-walker-sheet.webp">Full reference sheet<span class="visually-hidden"> for Avery (image)</span></a></p>
+              </div>
+              <div class="char-body">
+                <h3 id="avery-bennett-walker-name" tabindex="-1">Avery Bennett-Walker</h3>
+                <p class="char-tagline">All motion, music and big feelings</p>
+                <ul class="char-stats" aria-label="Quick facts"><li>Age 7</li><li>126 cm</li><li>Daughter of Ethan and Ruby</li><li>Closest to Ethan</li></ul>
+                <p>Avery is playful and expressive. She loves jokes, music, movement, sports and climbing, and she shares her excitement and feelings freely.</p><p>Avery is autistic. She&#x27;s more physical than talkative and often prefers other ways of communicating before speech. Advance notice and a visual plan help with transitions, and when things get overwhelming, a trusted adult nearby helps. When she&#x27;s frustrated she wants help finding the next step, and compromise can be tough when a plan isn&#x27;t what she wanted.</p><p>She&#x27;s learned Ethan&#x27;s care in explaining things. Rowan and Riley&#x27;s tight pairing sometimes leaves her on the outside, but all three still love playing together.</p>
+                <h4>At a glance</h4>
+                <ul class="trait-list"><li>Playful and expressive</li><li>Loves music, sports and climbing</li><li>Finds compromise hard</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="ft-text">
           <h3 class="ft-subhead">Who belongs to whom</h3>
           <ul class="ft-units grid grid-3">
             <li class="card">
@@ -85,137 +184,15 @@
               <p>Best friends and co-parents, not romantically involved. Both are moms to all three kids.</p>
             </li>
           </ul>
-
           <dl class="facts ft-facts">
             <div><dt>Siblings</dt><dd>Rowan and Riley are full siblings. Avery is a half-sister to both through Ethan.</dd></div>
             <div><dt>Parents</dt><dd>All three kids see Ethan, Morgan and Ruby as their parents.</dd></div>
             <div><dt>Closest bonds</dt><dd>Rowan is closest to Ruby, Riley to Morgan, and Avery to Ethan.</dd></div>
             <div><dt>The wedding</dt><dd>All three married in one shared ceremony, with Ethan between Morgan and Ruby.</dd></div>
           </dl>
-        </section>
-        <section class="char-group" aria-labelledby="adults-title">
-          <div class="section-head">
-            <h2 id="adults-title">The marriage</h2>
-            <p>Three adults, two marriages, one household.</p>
-          </div>
-          <ul class="char-list">
-          <li>
-            <article class="char" id="ethan-walker" aria-labelledby="ethan-walker-name">
-              <div class="char-portrait">
-                <img src="/images/characters/ethan-walker-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Ethan Walker reference portrait: a man with a brown high-fade undercut, a full medium-length beard and warm brown eyes, wearing an olive T-shirt.">
-                <p><a href="/images/characters/ethan-walker-sheet.webp">Full reference sheet<span class="visually-hidden"> for Ethan (image)</span></a></p>
-              </div>
-              <div class="char-body">
-                <h3 id="ethan-walker-name">Ethan Walker</h3>
-                <p class="char-tagline">The one everyone leans on</p>
-                <ul class="char-stats" aria-label="Quick facts"><li>Age 38</li><li>5&#x27;10&quot; / 178 cm</li><li>Husband to Morgan and Ruby</li><li>Works full-time</li></ul>
-                <p>Ethan is technically minded and quietly introspective, a dependable problem solver who keeps his own uncertainty to himself. He&#x27;s analytical, protective and observant, and he&#x27;d rather crack a joke than admit he&#x27;s struggling.</p>
-                <p>With Morgan, he tends to follow her lead; their relationship is direct, funny and quick to spark into arguments. With Ruby, he&#x27;s the one who leads, and they share deep, unhurried conversations. He calls Morgan “Hun” and Ruby “Babe.”</p>
-                <p>His central struggle: feeling responsible for everyone&#x27;s happiness while finding it hard to say what he needs, and wondering who he is when no one needs anything from him.</p>
-                <h4>At a glance</h4>
-                <ul class="trait-list"><li>Analytical and observant</li><li>Loyal and determined</li><li>Overthinks and doubts himself</li><li>Thoughtful pauses; restless hands when anxious</li></ul>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="char" id="morgan-hayes" aria-labelledby="morgan-hayes-name">
-              <div class="char-portrait">
-                <img src="/images/characters/morgan-hayes-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Morgan Hayes-Walker reference portrait: a woman with long, layered chestnut-brown hair, hazel eyes and light freckles, wearing an olive utility jacket.">
-                <p><a href="/images/characters/morgan-hayes-sheet.webp">Full reference sheet<span class="visually-hidden"> for Morgan (image)</span></a></p>
-              </div>
-              <div class="char-body">
-                <h3 id="morgan-hayes-name">Morgan Hayes-Walker</h3>
-                <p class="char-tagline">Strong-willed, and more tender than she lets on</p>
-                <ul class="char-stats" aria-label="Quick facts"><li>Age 34</li><li>5&#x27;7&quot; / 170 cm</li><li>Married to Ethan</li><li>Works part-time</li></ul>
-                <p>Morgan is confident, practical and fiercely independent. She meets problems head on, teases with a dry sense of humor, and hides uncertainty behind it more often than she&#x27;d admit.</p>
-                <p>She takes the lead with Ethan, and their chemistry comes with plenty of clashes. Ruby is her best friend; the two confide in each other and co-parent all three kids. She&#x27;s the firmer parent at home, and Riley is closest to her.</p>
-                <p>Her inner tension: wanting independence and control while also needing support, tenderness and understanding. She doesn&#x27;t wear her wedding ring, and she hasn&#x27;t said why.</p>
-                <h4>At a glance</h4>
-                <ul class="trait-list"><li>Assertive and resourceful</li><li>Protective and playful</li><li>Can get defensive</li><li>Hesitates to ask for help</li></ul>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="char" id="ruby-bennett" aria-labelledby="ruby-bennett-name">
-              <div class="char-portrait">
-                <img src="/images/characters/ruby-bennett-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Ruby Bennett-Walker reference portrait: a petite woman with a copper-red pixie cut, emerald-green eyes and soft freckles, wearing a pink cardigan.">
-                <p><a href="/images/characters/ruby-bennett-sheet.webp">Full reference sheet<span class="visually-hidden"> for Ruby (image)</span></a></p>
-              </div>
-              <div class="char-body">
-                <h3 id="ruby-bennett-name">Ruby Bennett-Walker</h3>
-                <p class="char-tagline">The quiet heart of the house</p>
-                <ul class="char-stats" aria-label="Quick facts"><li>Age 28</li><li>5&#x27;0&quot; / 152 cm</li><li>Married to Ethan</li><li>Handles most daily childcare</li></ul>
-                <p>Ruby is warm, gentle and quietly romantic. She speaks through attention, small gestures and the expressions that cross her face, and she moves with a former dancer&#x27;s grace.</p>
-                <p>She looks to Ethan for reassurance and direction, and their bond is built on emotional closeness and long talks. Morgan is her best friend and co-parent. Ruby stepped back to focus on the kids and handles most of their daily care; Rowan is closest to her, and she&#x27;s especially attuned to what Avery needs.</p>
-                <p>Her inner tension: she wants harmony and closeness, but she struggles to voice her own needs and can come to resent always being the one who keeps the peace.</p>
-                <h4>At a glance</h4>
-                <ul class="trait-list"><li>Affectionate and perceptive</li><li>Emotionally attentive</li><li>Hesitates during confrontation</li><li>Avoids showing disappointment</li></ul>
-              </div>
-            </article>
-          </li>
-          </ul>
-        </section>
-        <section class="char-group" aria-labelledby="children-title">
-          <div class="section-head">
-            <h2 id="children-title">The kids</h2>
-            <p>All three see Ethan, Morgan and Ruby as their parents.</p>
-          </div>
-          <ul class="char-list">
-          <li>
-            <article class="char" id="rowan-hayes-walker" aria-labelledby="rowan-hayes-walker-name">
-              <div class="char-portrait">
-                <img src="/images/characters/rowan-hayes-walker-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Rowan Hayes-Walker reference portrait: a boy with messy, textured chestnut hair and brown-hazel eyes, wearing a navy and orange hoodie.">
-                <p><a href="/images/characters/rowan-hayes-walker-sheet.webp">Full reference sheet<span class="visually-hidden"> for Rowan (image)</span></a></p>
-              </div>
-              <div class="char-body">
-                <h3 id="rowan-hayes-walker-name">Rowan Hayes-Walker</h3>
-                <p class="char-tagline">The builder with a comeback for everything</p>
-                <ul class="char-stats" aria-label="Quick facts"><li>Age 9</li><li>130 cm</li><li>Son of Ethan and Morgan</li><li>Closest to Ruby</li></ul>
-                <p>Rowan is sociable, talkative and funny, and he loves making people laugh. He&#x27;s happiest building things: puzzles, construction toys, and figuring out how mechanisms work.</p>
-                <p>When something feels unfair he argues his case, and his excitement sometimes outruns his judgment. He&#x27;s picked up Morgan&#x27;s raised eyebrows and dry humor, and he and his little sister Riley are nearly inseparable.</p>
-                <h4>At a glance</h4>
-                <ul class="trait-list"><li>Sociable and funny</li><li>Loves building and puzzles</li><li>Acts before thinking</li></ul>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="char" id="riley-hayes-walker" aria-labelledby="riley-hayes-walker-name">
-              <div class="char-portrait">
-                <img src="/images/characters/riley-hayes-walker-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Riley Hayes-Walker reference portrait: a young girl with a short chestnut pixie cut, green-hazel eyes and light freckles, wearing a purple hoodie over a teal top.">
-                <p><a href="/images/characters/riley-hayes-walker-sheet.webp">Full reference sheet<span class="visually-hidden"> for Riley (image)</span></a></p>
-              </div>
-              <div class="char-body">
-                <h3 id="riley-hayes-walker-name">Riley Hayes-Walker</h3>
-                <p class="char-tagline">Fearless, curious, and doing it herself</p>
-                <ul class="char-stats" aria-label="Quick facts"><li>Age about 6</li><li>110 cm</li><li>Daughter of Ethan and Morgan</li><li>Closest to Morgan</li></ul>
-                <p>Riley is fearless and inquisitive, always eager to investigate and try things on her own. She loves pretend play, costumes and cats.</p>
-                <p>When she&#x27;s frustrated she insists on doing it alone, and accepting help is hard for her. She has Morgan&#x27;s playful confidence, and she and her big brother Rowan are almost always together.</p>
-                <h4>At a glance</h4>
-                <ul class="trait-list"><li>Fearless and inquisitive</li><li>Loves pretend play, costumes and cats</li><li>Finds it hard to accept help</li></ul>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="char" id="avery-bennett-walker" aria-labelledby="avery-bennett-walker-name">
-              <div class="char-portrait">
-                <img src="/images/characters/avery-bennett-walker-portrait.webp" width="440" height="316" loading="lazy" decoding="async" alt="Avery Bennett-Walker reference portrait: a girl with long auburn hair tied back, hazel eyes and freckles across her nose and cheeks, wearing a lavender T-shirt.">
-                <p><a href="/images/characters/avery-bennett-walker-sheet.webp">Full reference sheet<span class="visually-hidden"> for Avery (image)</span></a></p>
-              </div>
-              <div class="char-body">
-                <h3 id="avery-bennett-walker-name">Avery Bennett-Walker</h3>
-                <p class="char-tagline">All motion, music and big feelings</p>
-                <ul class="char-stats" aria-label="Quick facts"><li>Age 7</li><li>126 cm</li><li>Daughter of Ethan and Ruby</li><li>Closest to Ethan</li></ul>
-                <p>Avery is playful and expressive. She loves jokes, music, movement, sports and climbing, and she shares her excitement and feelings freely.</p>
-                <p>Avery is autistic. She&#x27;s more physical than talkative and often prefers other ways of communicating before speech. Advance notice and a visual plan help with transitions, and when things get overwhelming, a trusted adult nearby helps. When she&#x27;s frustrated she wants help finding the next step, and compromise can be tough when a plan isn&#x27;t what she wanted.</p>
-                <p>She&#x27;s learned Ethan&#x27;s care in explaining things. Rowan and Riley&#x27;s tight pairing sometimes leaves her on the outside, but all three still love playing together.</p>
-                <h4>At a glance</h4>
-                <ul class="trait-list"><li>Playful and expressive</li><li>Loves music, sports and climbing</li><li>Finds compromise hard</li></ul>
-              </div>
-            </article>
-          </li>
-          </ul>
-        </section>
-        <p class="note" style="margin-top:3rem">Character art shown here comes from the series reference sheets used to keep designs consistent; finished chapter art may differ. All characters are fictional.</p>
+        </div>
+
+        <p class="note" style="margin-top:2.5rem">Character art comes from the series reference sheets used to keep designs consistent; finished chapter art may differ. All characters are fictional.</p>
       </div>
     </section>
   </main>
