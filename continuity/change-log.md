@@ -12,6 +12,24 @@
 - These remain standalone art: no chapter event, model sheet, smoking habit,
   farm, or vehicle is established by their use.
 
+## 2026-11-13: Story 001 Opening Script, Pages 001–004
+
+- Drafted 18 panels from the existing 32-page working outline at the user's
+  request, with exact ordered speech, internal captions, SFX/title text,
+  stable line IDs, framing, visible cast, emotional beats, and page-end hooks.
+- Proposed Riley's independent zipper attempt as Ruby's reassurance context,
+  a small shoe joke, the shared crooked-shirt joke, Avery's rhythmic spoon play,
+  and a bathroom mirror. Kept all scenes, outfits, props, and dialogue DRAFT.
+- Retained the original four mirror thoughts, both romantic bonds, Morgan/Ruby's
+  platonic friendship, adult agency, and approved child traits and attachments.
+  No child address form, new sensory need, permanent wardrobe, or ring practice selected.
+- Recorded opening scene states and draft outfit combinations in chapter
+  continuity; updated outline, registry, production status, and open decisions.
+  Added a chapter handoff with the next writing step and remaining review points.
+- Completed a writing consistency pass; storyboard and final chapter QA remain
+  outstanding. Pages 005–032 remain unscripted. No art, canon event, approved
+  master, release, commit, push, or website publication created by this batch.
+
 ## 2026-11-13: Revised Beach Image Added to Illustrations
 
 - Copied beach day v2 to assets/illustrations/ethan-morgan-ruby-beach-day-v2.png
