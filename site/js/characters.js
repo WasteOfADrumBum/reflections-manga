@@ -68,6 +68,39 @@
     });
   })();
 
+
+  // Reference sheet viewer: open sheets in an in-page dialog with Close and Back controls.
+  (function sheetViewer() {
+    var dlg = document.getElementById("sheet-viewer");
+    if (!dlg || typeof dlg.showModal !== "function") return; // old browsers keep the plain link
+    var img = dlg.querySelector(".sheet-body img");
+    var title = dlg.querySelector(".sheet-title");
+    var nameEl = dlg.querySelector("[data-sheet-name]");
+    var full = dlg.querySelector("[data-sheet-full]");
+    var opener = null;
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('.char-portrait a[href$="-sheet.webp"]');
+      if (!a) return;
+      e.preventDefault();
+      var art = a.closest(".char");
+      var h = art && document.getElementById(art.id + "-name");
+      var name = h ? h.textContent.split(" ")[0] : "";
+      opener = a;
+      img.src = a.getAttribute("href");
+      img.alt = (h ? h.textContent : name) + " reference sheet: front, three-quarter and back views, plus three facial expressions.";
+      title.textContent = name + ": reference sheet";
+      nameEl.textContent = name;
+      full.setAttribute("href", a.getAttribute("href"));
+      dlg.showModal();
+      dlg.querySelector("[data-sheet-close]").focus();
+    });
+    function shut() { if (dlg.open) dlg.close(); }
+    dlg.querySelector("[data-sheet-close]").addEventListener("click", shut);
+    dlg.querySelector("[data-sheet-back]").addEventListener("click", shut);
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) shut(); });
+    dlg.addEventListener("close", function () { if (opener) opener.focus(); });
+  })();
+
   articles.forEach(function (a) { a.hidden = true; });
 
   function open(id, moveFocus) {
@@ -147,7 +180,7 @@
   nextBtn.addEventListener("click", function () { lastTrigger = null; open(nextBtn.getAttribute("data-target"), true); });
   closeBtn.addEventListener("click", close);
   panel.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && current) { e.preventDefault(); close(); }
+    if (e.key === "Escape" && current && !(document.getElementById("sheet-viewer") || {}).open) { e.preventDefault(); close(); }
   });
 
   // In-page links (cards below the tree, deep links) open the matching bio.

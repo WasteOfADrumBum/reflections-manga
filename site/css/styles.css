@@ -402,6 +402,7 @@ p { margin: 0 0 1em; }
 
 
 
+
 /* Characters: interactive family tree */
 .page-hero-tight { padding: clamp(1.25rem, 3vw, 2rem) 0; }
 .page-hero-tight h1 { font-size: clamp(2rem, 5vw, 3.25rem); margin-bottom: 0.25rem; }
@@ -508,6 +509,24 @@ html:not(.js) .cast-panel { display: grid; gap: 2rem; }
 .ft-kids { margin: 0; padding-left: 1.2rem; }
 .ft-kids a { color: var(--accent); font-weight: 600; }
 .ft-facts div { grid-template-columns: 10rem 1fr; }
+
+
+/* Reference sheet viewer */
+.sheet-viewer {
+  width: min(64rem, calc(100vw - 1.5rem)); max-height: calc(100vh - 1.5rem); padding: 0;
+  border: 3px solid var(--rule); background: var(--card); color: var(--ink); box-shadow: var(--shadow);
+}
+.sheet-viewer::backdrop { background: rgba(10, 10, 14, 0.72); }
+.sheet-viewer[open] { display: flex; flex-direction: column; }
+.sheet-bar, .sheet-foot { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0.75rem; }
+.sheet-bar { justify-content: space-between; border-bottom: 3px solid var(--rule); }
+.sheet-foot { justify-content: space-between; flex-wrap: wrap; border-top: 3px solid var(--rule); }
+.sheet-title { font-size: 1.15rem; margin: 0; }
+.sheet-bar .cast-close { width: 3.25rem; flex: none; }
+.sheet-body { overflow: auto; background: #e9e7e3; touch-action: pan-x pan-y pinch-zoom; flex: 1 1 auto; }
+.sheet-body img { width: 100%; height: auto; display: block; }
+.sheet-full { font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; }
+@media (prefers-reduced-motion: no-preference) { .sheet-viewer[open] { animation: rise 0.2s ease both; } }
 
 @media (forced-colors: active) {
   .ft-lines text { fill: CanvasText; }
