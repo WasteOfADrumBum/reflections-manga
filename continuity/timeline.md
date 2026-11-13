@@ -39,6 +39,17 @@ At the opening family snapshot, Ethan works full-time, Morgan works part-time,
 and Ruby handles most daily childcare. All three children regard all three
 adults as parents. When these work and parenting roles began remains open.
 
+## Supporting-Cast Opening Snapshot
+
+Recorded 2026-11-13 as character development, not an in-universe event date.
+Nat is 34, matching Morgan; Ellie is 9, matching Rowan; Owen is approximately 6,
+matching Riley's open age target. Autumn is older than Ruby and approximately
+Morgan's age, without a finalized exact age. Cal's exact age is open; an age
+near Ethan's was proposed. See the [registry](../characters/index.md).
+
+No friendship beginnings, childhood events, births on calendar dates, recovery
+milestones, visits, or chapter appearances are added to the event sequence.
+
 ## Rules
 
 Track in-universe chronology. Separate memories and imagined scenes from

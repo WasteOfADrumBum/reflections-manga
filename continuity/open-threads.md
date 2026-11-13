@@ -38,9 +38,28 @@ These are planning questions, not established chapter events:
   does not wear her ring; the practical reason and drawer location remain draft.
 - Story-to-chapter allocation and the scope of a first foundation chapter.
 
-The children's questionnaire is complete. See [approved answers](../characters/questionnaire-answers.md).
+The central family's children's questionnaire is complete. See [approved answers](../characters/questionnaire-answers.md).
 Future development questions in [character arcs](character-arcs.md) are not
 approved story events or predetermined outcomes.
+
+## Supporting-Cast Decisions: 2026-11-13
+
+- [Cal](../characters/caleb-mercer/index.md): Exact age, final hair/eye colors,
+  haircut, complexion, recovery specifics, occupation, home, romantic status,
+  and how he met Ethan. Smoking and caffeine habits remain unselected alternatives.
+- [Nat](../characters/natalie-greene/index.md): Final hair/eye colors, hairstyle,
+  complexion, glasses design, occupation, home, romantic status, hobbies, and
+  how she met Morgan. Motherhood does not establish another parent or custody.
+- [Autumn](../characters/autumn/index.md): Surname, exact age, final hair shade/
+  length, eye color, complexion/freckles, occupation, home, romantic status,
+  accessories, and sister backstory. Ruby's height remains a draft measurement.
+- [Ellie](../characters/ellie-greene/index.md) and
+  [Owen](../characters/owen-greene/index.md): Heights, full visual/personality/
+  wardrobe approval, birthdays, schools, other parentage, household, and any
+  friendships with Rowan/Riley. Owen's exact age follows Riley's open age target.
+- Voices, relationship histories, selected interests, and future chapter
+  introductions for all five. The three adult prompts are provisional studies;
+  no supporting-character images or chapter events are approved.
 
 ## Template
 

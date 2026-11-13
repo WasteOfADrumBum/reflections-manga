@@ -1,5 +1,23 @@
 # Change Log
 
+## 2026-11-13: Supporting Characters and Three Reference Prompts
+
+- Added Caleb "Cal" Mercer, Natalie "Nat" Greene, and Autumn with identity,
+  appearance, personality, wardrobe, reference-status records, and individual
+  reference-sheet prompts following Ethan's template.
+- Added linked Ellie and Owen Greene profiles with the same record structure.
+  Ellie is 9 like Rowan; Owen remains approximately 6 like Riley.
+- Separated the user's selected names, relationships, and character direction
+  from prior assistant proposals. Kept Autumn's surname open, age targets
+  qualified, and unselected visual traits, histories, and child designs provisional.
+- Updated the character registry, reciprocal adult links, family tree,
+  relationship canon, opening-age snapshot, open decisions, prompt index,
+  README, global character guidance, and production status.
+- Retained all existing approved family facts and supplied artwork. No private
+  transcript, new image, chapter event, completed story, or release added.
+- Repository commit/push is authorized for these documentation changes by
+  the current request; committing drafts does not approve their creative content.
+
 ## 2026-11-12: Fifteen Connected Stories and Four Arcs
 
 - Recorded the user's central identity question, character framework, tier

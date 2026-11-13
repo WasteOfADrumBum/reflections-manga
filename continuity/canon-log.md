@@ -2,6 +2,36 @@
 
 ## Approved Canon
 
+### 2026-11-13: Supporting-Cast Foundation
+
+The user explicitly requested the named additions and their established
+character directions. This records that limited foundation, not blanket approval
+of every suggestion in the earlier assistant response.
+
+- Caleb "Cal" Mercer is Ethan's best friend. Direction: approximately 6'2" /
+  188 cm, heavyset, scraggly, narrowed/tired-looking eyes, mostly black worn
+  biker clothing with imperfect upkeep. Recovery is part of the retained
+  concept; substance, treatment, duration, and recovery events are unspecified.
+- Natalie "Nat" Greene is Morgan's best friend outside the household, without
+  replacing Morgan and Ruby's friendship. Nat is 34 like Morgan; direction:
+  about 5'10" / 178 cm, tall, thin, dorky, glasses, less tomboyish than Morgan.
+- Nat's daughter Ellie Greene is 9 like Rowan. Her son Owen Greene is
+  approximately 6 like Riley; neither child's height or final design is selected.
+- Autumn is Ruby's older sister, approximately Morgan's age, the same height
+  as Ruby, with a fuller feminine build, long hair, outgoing personality, and
+  earthy relaxed style including wide-leg jeans. Strawberry blonde remains
+  the suggested hair direction. Her surname and exact age remain open.
+
+Ethan's 178 cm and Ruby's 152 cm remain existing draft measurements; matching
+them does not independently approve those measurements. Cal's exact age,
+all detailed visual study choices, prior personality/hobby extensions, sister
+childhood roles, child designs, other parentage, living arrangements, romantic
+statuses, and proposed interactions remain open or explicitly marked proposals.
+
+See the [character registry](../characters/index.md) and
+[supporting relationships](relationships.md#supporting-relationships-2026-11-13).
+No model sheets, artwork, chapter events, completed story, or release approved.
+
 ### 2026-11-12: Rowan's Initial Appearance Choices
 
 - Balanced resemblance: Ethan's expressive brows, Morgan's nose and eye shape.

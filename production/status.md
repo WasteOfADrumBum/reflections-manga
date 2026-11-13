@@ -1,6 +1,6 @@
 # Production Status
 
-Updated: 2026-11-12.
+Updated: 2026-11-13.
 
 ## Established
 
@@ -11,7 +11,13 @@ Updated: 2026-11-12.
 - A [production walkthrough](getting-started.md), 11 stage prompts, and expanded
   chapter templates are available. No story, images, or PDF is produced by the guide.
 
-- Six fictional family members are registered.
+- Eleven fictional characters are registered: six central family members and
+  five supporting characters, including Nat's children Ellie and Owen.
+- [Cal](../characters/caleb-mercer/index.md), [Nat](../characters/natalie-greene/index.md),
+  and [Autumn](../characters/autumn/index.md) have written profiles and draft
+  reference prompts. Selected direction is distinguished from prior suggestions.
+  Ellie is 9 like Rowan; Owen is approximately 6 like Riley. Supporting-character
+  model sheets and the children's detailed designs remain unapproved.
 - Six user-saved PNG reference cards are present, each 1536 x 1024, and linked
   from character profiles and prompts. See the reference workflow for reuse.
 - Ethan is 38, Morgan is 34, and Ruby is 28.
@@ -25,18 +31,22 @@ Updated: 2026-11-12.
 - [Character arc questions](../continuity/character-arcs.md) remain planning proposals.
 - Rowan is 9 and 130 cm; Avery is confirmed at 7 and 126 cm; Riley is
   approximately 6 and 110 cm.
-- All 50 child questionnaire decisions are recorded. Written appearance,
+- All 50 central-family child questionnaire decisions are recorded. Written appearance,
   personality, wardrobe, and selected communication/support choices are approved.
 - Each child has identity, appearance, personality, and wardrobe files.
 - Family tree, bible, timeline, and continuity reference the current decisions.
-- Six reusable reference-sheet prompts are saved in each character's prompts
-  folder and listed in the [prompt library](../prompts/index.md). Prompt layout
+- Nine reusable reference-sheet prompts are saved in the relevant characters'
+  prompts folders and listed in the [prompt library](../prompts/index.md). Prompt layout
   and exact outfit combinations remain proposals; no images generated here.
 
 See [approved questionnaire answers](../characters/questionnaire-answers.md),
 [character registry](../characters/index.md), and [canon log](../continuity/canon-log.md).
 
 ## Remaining
+
+- Resolve supporting-cast details in the [open decisions](../continuity/open-threads.md#supporting-cast-decisions-2026-11-13),
+  including Autumn's surname, Cal's exact age, final visual traits, histories,
+  and Ellie/Owen's designs. No supporting-character artwork is supplied.
 
 - Reconcile adult visual drafts and any incidental differences in the supplied cards before final canon approval.
 - Refine birthdays, school context, and further unasked interaction details.

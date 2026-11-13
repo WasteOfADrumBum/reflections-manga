@@ -36,6 +36,10 @@ resentment, ring motives, crises, and resolutions remain draft story material.
 
 ## Family and Relationships
 
+- Best friend of [Natalie "Nat" Greene](../natalie-greene/index.md) outside the
+  household, added 2026-11-13. This also preserves her existing friendship with Ruby.
+  How she met Nat remains open.
+
 - Married to Ethan within the family's shared three-adult marital commitment.
 - Romantically and sexually involved with Ethan in a committed relationship.
 - Best friends and coparents with Ruby Bennett-Walker; they confide in one

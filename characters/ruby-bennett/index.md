@@ -38,6 +38,9 @@ friendship with Morgan is meaningful and platonic. Future incidents remain draft
 
 ## Family and Relationships
 
+- Younger sister of [Autumn](../autumn/index.md), added 2026-11-13.
+  Autumn's surname, exact age, and their childhood history remain open.
+
 - Married to Ethan within the family's shared three-adult marital commitment.
 - Romantically and sexually involved with Ethan in a committed relationship.
 - Best friends and coparents with Morgan Hayes-Walker; they confide in one

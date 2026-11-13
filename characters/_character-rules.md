@@ -28,10 +28,15 @@ Written specifications can be approved before artwork exists. Track these
 states separately: completed questionnaire, approved written profile,
 approved model sheet, and approved chapter art. Do not infer one from another.
 
-For the current children, consult [approved questionnaire answers](questionnaire-answers.md)
+For Rowan, Avery, and Riley, consult [approved questionnaire answers](questionnaire-answers.md)
 and their individual appearance, personality, and wardrobe files. Keep
 unasked details open. Child profile directories use their full fictional names:
 rowan-hayes-walker, avery-bennett-walker, and riley-hayes-walker.
+
+Ellie and Owen Greene are supporting children added 2026-11-13. Their prior
+appearance, personality, and wardrobe suggestions remain provisional; no
+questionnaire or model sheet is approved for them. Same-age comparisons do not
+transfer another child's measurements or selected traits.
 
 Physical identity stays consistent between panels.
 Temporary expressions and outfits may change.

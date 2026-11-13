@@ -34,6 +34,17 @@ See the [approved questionnaire answers](characters/questionnaire-answers.md).
 
 All characters and events are fictional.
 
+## Supporting Characters
+
+- [Caleb "Cal" Mercer](characters/caleb-mercer/index.md): Ethan's best friend.
+- [Natalie "Nat" Greene](characters/natalie-greene/index.md): Morgan's best friend
+  outside the household; mother of [Ellie](characters/ellie-greene/index.md), 9,
+  and [Owen](characters/owen-greene/index.md), approximately 6.
+- [Autumn](characters/autumn/index.md): Ruby's older sister; surname open.
+
+Selected character direction and provisional suggestions are labeled separately.
+Three individual adult reference-sheet prompts are linked from their profiles.
+
 ## Workflow
 
 The series now has a [15-story connected roadmap](series/roadmap.md), grouped
@@ -65,11 +76,11 @@ Changes must be recorded in `continuity/change-log.md`.
 ## Status
 
 Project setup: Family and written child specifications established
-Character profiles: Six profiles; child questionnaire choices approved, adult visual drafts awaiting approval
+Character profiles: Eleven profiles; central-family child questionnaire choices approved, adult visual drafts and supporting-child designs awaiting approval
 Artwork: Six user-saved character cards registered for reuse; no new chapter artwork generated
 Chapters released: 0
 
 See [production status](production/status.md) for remaining work and open decisions.
 Start with the [production walkthrough](production/getting-started.md) and
 [stage-by-stage prompt library](prompts/index.md). The library also links all
-six character reference-sheet prompts.
+nine character reference-sheet prompts.

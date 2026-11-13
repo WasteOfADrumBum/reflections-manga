@@ -37,6 +37,9 @@ He also contributes to conflicts. Planned incidents and resolutions remain draft
 
 ## Family and Relationships
 
+- Best friend of [Caleb "Cal" Mercer](../caleb-mercer/index.md), added 2026-11-13.
+  Their meeting and shared history remain open.
+
 - Husband to Morgan Hayes-Walker and Ruby Bennett-Walker within their shared
   three-adult marital commitment.
 - Maintains a full, committed romantic and sexual relationship with each woman.
