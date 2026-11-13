@@ -64,7 +64,8 @@
 
   function close() {
     if (!current) return;
-    var trigger = lastTrigger || document.querySelector('.ft-node[data-char="' + current + '"]');
+    var node = document.querySelector('.ft-node[data-char="' + current + '"]');
+    var trigger = (lastTrigger && lastTrigger.offsetParent !== null && !panel.contains(lastTrigger)) ? lastTrigger : node;
     current = null;
     articles.forEach(function (a) { a.hidden = true; });
     nodes.forEach(function (n) { n.setAttribute("aria-expanded", "false"); });
