@@ -3,9 +3,10 @@
 Standalone character illustrations collected by the user on 2026-11-13.
 Seven PNGs are indexed below; each is a byte-for-byte copy of its linked draft source.
 
-The original Ethan/Cal, Ruby/Autumn, and Morgan/Nat selections have website
-copies in `site/images/moments/`. The four Ethan/Morgan/Ruby illustrations
-were added by the user to this collection; website copies are not yet present.
+All seven have website copies in `site/images/moments/` and appear in the
+character galleries on the site characters page (added 2026-11-13 at the
+user's request). The four Ethan/Morgan/Ruby illustrations were added by the
+user to this collection.
 Their source studies retain their recorded review status. Adding them here
 does not independently approve model sheets or chapter artwork.
 

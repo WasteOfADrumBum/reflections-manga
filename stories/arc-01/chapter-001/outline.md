@@ -1,7 +1,8 @@
 # Chapter Outline
 
 Status: DRAFT proposed outline, recorded 2026-11-13; pending approval.
-Stage: OUTLINE (draft). No approved script, storyboard, artwork, or chapter events.
+Stage: SCRIPT (partial draft, pages 001–004); outline remains DRAFT.
+No approved script, storyboard, artwork, or chapter events.
 
 ## Title
 
@@ -55,8 +56,13 @@ of authentic parts of himself → tentative boundaries and continued inquiry.
 
 ## Approval and Next Step
 
-Review the map and its open decisions before scripting. Keep sample dialogue,
+Review the map's open decisions alongside the opening draft before continuing
+the script. Keep sample dialogue,
 subjective narration, settings, child actions, day transitions, and staging
 provisional. Page dimensions, reading direction, and lettering remain open.
-The existing script and storyboard are unfilled scaffolds, not completed stages.
+The [opening script](script.md) now drafts pages 001–004 in 18 panels for review,
+as authorized by the user on 2026-11-13. It proposes Riley's zipper as the
+page-2 incident, a four-panel page 1, and a bathroom mirror for page 4.
+These fill open details without approving the underlying map or new canon.
+Pages 005–032 remain unscripted; the storyboard is still an unfilled scaffold.
 No developments enter the canonical timeline or release index from this outline.

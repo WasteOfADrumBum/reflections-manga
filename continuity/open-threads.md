@@ -48,6 +48,12 @@ approved story events or predetermined outcomes.
 Status: DRAFT pending approval. See the [detailed map](../stories/arc-01/concepts/story-001-three-hearts-different-needs.md#proposed-chapter-1-map-32-pages)
 and [chapter continuity](../stories/arc-01/chapter-001/continuity.md).
 
+Opening script update: pages 001–004 are now [DRAFT v1 for review](../stories/arc-01/chapter-001/script.md),
+authorized for drafting on 2026-11-13. Proposed details include Rowan's shoe
+recovery, Riley zipping her own hoodie while Ruby waits, the crooked-henley
+joke, Avery's spoon play, and a bathroom mirror. None is approved canon.
+Review those choices and the four-page pacing before continuing pages 005–010.
+
 - Review adapting Story 001 as Chapter 001 in 32 pages; this does not set a
   universal chapter length, final allocation, or completed production stage.
 - Review proposed Rowan/Avery/Riley scene assignments. The source's Ellie/Owen

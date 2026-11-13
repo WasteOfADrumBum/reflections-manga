@@ -52,3 +52,11 @@ historical ceremony details remain open. Existing references are preserved.
 The user supplied a beach outfit reference for this standalone scene. See
 the [image, exact inputs, prompt and framing review](../../../assets/drafts/ethan-morgan-ruby-beach-day-study.md). Outfit and
 activity selection here do not approve a master, permanent hobby, or chapter event.
+
+## Site Gallery: 2026-11-13
+
+The user asked for the reference sheets to appear in a gallery on the site
+characters page. Web copies were made of v1 (everyday), v3 (gym), v4 (black henley), v5 (wedding suit), v6 (beach).
+Held back from the public site pending the user's decision: v2 (underwear).
+Web copies live in `site/images/characters/refs/`. Site display does not
+approve any sheet as a master or settle open details shown on it.
