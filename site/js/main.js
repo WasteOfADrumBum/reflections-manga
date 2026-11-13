@@ -81,6 +81,14 @@
       .join("");
   }
 
+  // Links such as /series?chapter=001#reader (from a character's "Appears in") open that chapter.
+  var wanted = /[?&]chapter=([^&#]+)/.exec(location.search);
+  if (wanted) {
+    chapters.forEach(function (c, i) {
+      if (c.id === decodeURIComponent(wanted[1])) { state.chapter = i; select.value = String(i); }
+    });
+  }
+
   select.addEventListener("change", function () {
     state.chapter = Number(select.value) || 0;
     state.page = 0;

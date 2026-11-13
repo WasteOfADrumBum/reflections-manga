@@ -1,5 +1,21 @@
 # Change Log
 
+## 2026-11-13: One Family Tree, Galleries, and Appears-In on the Site
+
+- At the user's request the site characters page now draws one tree: the
+  household, Nat with Ellie and Owen, Cal, and Autumn, with the bio panel below.
+- The tree shows question-mark placeholders for Morgan's, Ethan's, and Ruby's
+  parents. They are placeholders only: no names, number of parents, marriages,
+  or living status are established. Ruby and Autumn hang from the same pair for
+  layout; their sibling type (full, half, other) remains unspecified.
+- Each bio has a gallery of reference sheets and standalone illustrations in
+  place of the single reference-sheet link. Lingerie, underwear, sleepwear-set,
+  and two swimsuit sheets were held back pending the user's decision; see each
+  character's references index.
+- Each bio has an "Appears in" list driven by `cast` in site/js/chapters.js.
+  PROPOSAL: Chapter 001 lists the six household members from the draft outline,
+  labelled "in planning". This does not approve the outline or its cast.
+
 ## 2026-11-13: Best-Friend and Sister Illustrations on the Site
 
 - The user selected three standalone illustrations for the repo and website:
