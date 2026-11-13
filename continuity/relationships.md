@@ -11,7 +11,7 @@ unapproved personality, backstory, and interaction proposals.
 
 [Ethan Walker](../characters/ethan-walker/index.md) (38),
 [Morgan Hayes-Walker](../characters/morgan-hayes/index.md) (34), and
-[Ruby Bennett-Walker](../characters/ruby-bennett/index.md) (28) share one
+[Ruby Bennett-Walker](../characters/ruby-bennett-walker/index.md) (28) share one
 household and a committed V-shaped polyamorous marriage. Ethan is the romantic
 partner of both women. The family may call itself a throuple; that does not
 make all three pairings romantic.
@@ -151,14 +151,15 @@ The children's form of address for Ethan remains unspecified by the user.
 | Nat and [Ellie](../characters/ellie-greene/index.md) | Mother and daughter; Ellie is 9 like Rowan | Other parentage, custody, school, or a confirmed friendship with Rowan |
 | Nat and [Owen](../characters/owen-greene/index.md) | Mother and son; Owen is approximately 6 like Riley | Exact age, other parentage, custody, school, or a confirmed friendship with Riley |
 | Ellie and Owen | Older sister and younger brother, both Nat's children | Full/half/adoptive sibling status or shared household |
-| [Autumn](../characters/autumn/index.md) and Ruby | Autumn is Ruby's older sister, approximately Morgan's age; Avery's aunt through Ruby | Surname, exact age, sibling type, childhood roles, or specific encounters |
+| [Autumn Bennett](../characters/autumn-bennett/index.md) and Ruby | Autumn is Ruby's older sister, approximately Morgan's age; Avery's aunt through Ruby | Exact age, sibling type, childhood roles, or specific encounters |
 
 Morgan and Ruby remain best friends and coparents. Nat's independent friendship
 does not replace that bond. No new romantic relationships, parental authority,
 living arrangements, chapter appearances, or milestone events are established.
 The proposed blunt support from Cal, gentle challenges from Nat, sisterly
 boundary tension, and child playmates remain development ideas in their profiles.
-Do not infer Autumn's surname from Ruby's current married name.
+The user confirmed Autumn Bennett and Ruby Bennett-Walker on 2026-11-13,
+with two t's in Bennett. Avery's name remains Avery Bennett-Walker.
 
 ## Open Details and Portrayal Rules
 

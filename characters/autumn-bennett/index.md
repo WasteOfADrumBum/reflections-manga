@@ -1,12 +1,12 @@
-# Autumn
+# Autumn Bennett
 
-Status: First name, older-sister relationship, and broad character direction
-selected by the user, recorded 2026-11-13. Surname and detailed design remain open.
+Status: Full name Autumn Bennett, older-sister relationship, and broad character
+direction selected by the user, recorded 2026-11-13. Detailed design remains open.
 No model sheet or chapter appearance is approved.
 
 ## Identity
 
-- Name: Autumn; family surname not established.
+- Name: Autumn Bennett; surname explicitly confirmed by the user.
 - Age direction: Approximately Morgan's age, around 34; exact age unselected.
 - Relationship: Ruby's older sister.
 - Height: Same as Ruby; approximately 5'0" / 152 cm using Ruby's existing draft height.
@@ -23,10 +23,10 @@ between encouragement and speaking for someone who can speak for herself.
 
 ## Family and Relationships
 
-- Older sister of [Ruby Bennett-Walker](../ruby-bennett/index.md).
+- Older sister of [Ruby Bennett-Walker](../ruby-bennett-walker/index.md).
 - Avery's aunt through Ruby; closeness and forms of address are not established.
 - Bonds with Ethan, Morgan, Rowan, and Riley remain to be developed.
-- Do not infer Autumn's surname from Ruby's current Bennett-Walker name.
+- The user confirmed Bennett for Autumn and Bennett-Walker for Ruby.
 - Shared childhood roles, parents, sibling type, partner, children, and living
   arrangements are not established.
 
@@ -36,10 +36,10 @@ between encouragement and speaking for someone who can speak for herself.
 - [Personality](personality.md)
 - [Wardrobe](wardrobe.md)
 - [Reference status](references/index.md)
-- [Reference-sheet prompt](prompts/autumn-reference-sheet.md)
+- [Reference-sheet prompt](prompts/autumn-bennett-reference-sheet.md)
 
 ## Open Decisions
 
-Surname; exact age; final hair length/shade; eye color and complexion; occupation;
+Exact age; final hair length/shade; eye color and complexion; occupation;
 living situation; romantic status; family history; voice; and recurring accessories.
 Matching Ruby's height preserves the relationship, not final approval of 152 cm.

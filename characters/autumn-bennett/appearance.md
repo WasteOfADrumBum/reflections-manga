@@ -1,4 +1,4 @@
-# Autumn: Appearance
+# Autumn Bennett: Appearance
 
 Status: User-directed resemblance, silhouette, and long-hair direction;
 specific rendering choices remain provisional. Recorded 2026-11-13.

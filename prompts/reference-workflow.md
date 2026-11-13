@@ -1,6 +1,6 @@
 # Character Reference Workflow
 
-Updated: 2026-11-12.
+Updated: 2026-11-13.
 Purpose: Preserve the same fictional cast across panels, chapters, and the series.
 
 ## Current Reference Images
@@ -13,10 +13,26 @@ silently approve every incidental detail or override established written facts.
 |---|---|
 | Ethan | [Sheet](../characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png) |
 | Morgan | [Sheet](../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png) |
-| Ruby | [Sheet](../characters/ruby-bennett/references/ruby-bennett-reference-sheet-v1.png) |
+| Ruby | [Sheet](../characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png) |
 | Rowan | [Sheet](../characters/rowan-hayes-walker/references/rowan-hayes-walker-reference-sheet-v1.png) |
 | Riley | [Sheet](../characters/riley-hayes-walker/references/riley-hayes-walker-reference-sheet-v1.png) |
 | Avery | [Sheet](../characters/avery-bennett-walker/references/avery-bennett-walker-reference-sheet-v1.png) |
+
+## Pending Supporting-Character Sheets
+
+The user will save these PNGs in the corresponding references folders.
+These are expected filenames; no file presence or approval is asserted here.
+
+| Character | References folder | Expected PNG filename |
+|---|---|---|
+| Cal | [Folder record](../characters/caleb-mercer/references/index.md) | caleb-mercer-reference-sheet-v1.png |
+| Nat | [Folder record](../characters/natalie-greene/references/index.md) | natalie-greene-reference-sheet-v1.png |
+| Autumn Bennett | [Folder record](../characters/autumn-bennett/references/index.md) | autumn-bennett-reference-sheet-v1.png |
+| Ellie | [Folder record](../characters/ellie-greene/references/index.md) | ellie-greene-reference-sheet-v1.png |
+| Owen | [Folder record](../characters/owen-greene/references/index.md) | owen-greene-reference-sheet-v1.png |
+
+After a file is saved, verify its actual dimensions and version, inspect the
+image, and record its approval state before selecting it as a canonical reference.
 
 ## What a Reference Actually Requires
 

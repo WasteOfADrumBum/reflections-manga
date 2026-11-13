@@ -31,7 +31,7 @@ approved 2026-11-12. Exact age remains the existing tentative target.
 - Mother: [Morgan Hayes-Walker](../morgan-hayes/index.md), 34.
 - Older full brother: [Rowan](../rowan-hayes-walker/index.md), about 9.
 - Older paternal half-sister: [Avery](../avery-bennett-walker/index.md), 7.
-- [Ruby](../ruby-bennett/index.md) is also her mother and handles most daily
+- [Ruby](../ruby-bennett-walker/index.md) is also her mother and handles most daily
   childcare for all three children. Riley recognizes all three adults as her parents.
 - Closest parental attachment: Morgan.
 - Nearly inseparable from Rowan; Avery sometimes ends up outside their close

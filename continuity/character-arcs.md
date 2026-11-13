@@ -15,7 +15,7 @@ future events, or required outcomes.
 |---|---|---|
 | [Ethan](../characters/ethan-walker/index.md) | Full-time worker and parent; more submissive with Morgan and more dominant with Ruby; Avery's closest parental attachment | How might he give each relationship and parenting bond deliberate attention? |
 | [Morgan](../characters/morgan-hayes/index.md) | More dominant with Ethan; part-time worker and firmer disciplinary mother; Ruby's best friend; Riley's closest parental attachment | How might directness and cooperation shape a particular family disagreement? |
-| [Ruby](../characters/ruby-bennett/index.md) | More submissive with Ethan; emotionally intimate conversations; primary daily caregiver for all three children; Rowan's closest parental attachment | How might she express her own needs alongside caregiving? |
+| [Ruby](../characters/ruby-bennett-walker/index.md) | More submissive with Ethan; emotionally intimate conversations; primary daily caregiver for all three children; Rowan's closest parental attachment | How might she express her own needs alongside caregiving? |
 | [Avery](../characters/avery-bennett-walker/index.md) | Closest to Ethan; sometimes outside Rowan and Riley's close pairing; still plays with both | How might a scene explore belonging while respecting her individual communication preferences? |
 | [Rowan](../characters/rowan-hayes-walker/index.md) | Closest to Ruby; nearly inseparable from Riley; enjoys playing with Avery too | How might he notice and respond to a sibling's perspective without becoming a substitute parent? |
 | [Riley](../characters/riley-hayes-walker/index.md) | Closest to Morgan; nearly inseparable from Rowan; enjoys playing with Avery too | How might her existing independence interact with shared play? |

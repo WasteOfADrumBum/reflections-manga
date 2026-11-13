@@ -13,9 +13,10 @@ below. Detailed prior assistant suggestions remain proposals, not fixed canon.
 |---|---:|---|---|
 | [Ethan Walker](ethan-walker/index.md) | 38 | 5'10" / 178 cm | Age approved; height remains existing draft |
 | [Morgan Hayes-Walker](morgan-hayes/index.md) | 34 | 5'7" / 170 cm | Age approved; height remains existing draft |
-| [Ruby Bennett-Walker](ruby-bennett/index.md) | 28 | 5'0" / 152 cm | Age approved; height remains existing draft |
+| [Ruby Bennett-Walker](ruby-bennett-walker/index.md) | 28 | 5'0" / 152 cm | Age approved; height remains existing draft |
 
-Existing adult directory names remain stable to preserve links and asset references.
+Use the current profile links. Ruby's directory is ruby-bennett-walker and
+Autumn's is autumn-bennett, corrected 2026-11-13 with matching reference links.
 
 ## Children
 
@@ -36,10 +37,10 @@ User-supplied character cards are registered for reuse; see each profile's refer
 |---|---|---|---|---|
 | [Caleb "Cal" Mercer](caleb-mercer/index.md) | Ethan's best friend | Around Ethan's age proposed; exact age open | About 6'2" / 188 cm | Heavyset, scraggly, worn black biker direction; detailed design pending |
 | [Natalie "Nat" Greene](natalie-greene/index.md) | Morgan's best friend outside the household | 34, same as Morgan | About 5'10" / 178 cm | Tall, thin, dorky, glasses; detailed design pending |
-| [Autumn](autumn/index.md) | Ruby's older sister | Around 34; exact age open | Same as Ruby, currently drafted at 152 cm | Fuller build, long hair, strawberry blonde suggested; surname open |
+| [Autumn Bennett](autumn-bennett/index.md) | Ruby's older sister | Around 34; exact age open | Same as Ruby, currently drafted at 152 cm | Name confirmed; fuller build, long hair, strawberry blonde suggested |
 
 Nat's friendship does not replace Morgan and Ruby's established friendship.
-Autumn's family surname is not inferred from Ruby's Bennett-Walker name.
+The user confirmed Autumn Bennett and Ruby Bennett-Walker; Bennett has two t's.
 The relative height directions do not finalize Ethan's or Ruby's draft measurements.
 
 ## Natalie's Children

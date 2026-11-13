@@ -1,12 +1,12 @@
 # Ruby Bennett-Walker: Reference Images
 
-Updated: 2026-11-12.
+Updated: 2026-11-13.
 Status: User-supplied card selected for future reference use. This record does
 not silently approve every incidental image detail or change written canon.
 
 ## Current Card
 
-- [Ruby Bennett-Walker reference sheet](ruby-bennett-reference-sheet-v1.png)
+- [Ruby Bennett-Walker reference sheet](ruby-bennett-walker-reference-sheet-v1.png)
 - Version: v1.
 - Format: PNG, 1536 x 1024 pixels, 3:2 landscape.
 - Source: Manually saved by the user following the supplied character-card message.
@@ -15,6 +15,10 @@ not silently approve every incidental image detail or change written canon.
 - [Wardrobe](../wardrobe.md)
 
 ## Continuity Notes
+
+Directory and image filename corrected to ruby-bennett-walker on 2026-11-13.
+The original v1 image bytes and recorded SHA-256 are preserved. Any old name
+rendered inside the supplied image does not override the current written name.
 
 Ruby must wear her wedding ring in applicable scenes. Ring design and placement remain unfinalized; image ambiguity does not revoke the written requirement.
 

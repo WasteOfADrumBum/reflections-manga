@@ -1,6 +1,7 @@
 # Ruby Bennett-Walker
 
 Status: Name, adult age, and family relationships approved 2026-11-12.
+Surname spelling Bennett-Walker reconfirmed and directory corrected 2026-11-13.
 Appearance, personality, and wardrobe details remain existing drafts unless explicitly approved.
 
 ## Identity
@@ -38,8 +39,8 @@ friendship with Morgan is meaningful and platonic. Future incidents remain draft
 
 ## Family and Relationships
 
-- Younger sister of [Autumn](../autumn/index.md), added 2026-11-13.
-  Autumn's surname, exact age, and their childhood history remain open.
+- Younger sister of [Autumn Bennett](../autumn-bennett/index.md), added 2026-11-13.
+  Autumn's surname is Bennett. Her exact age and their childhood history remain open.
 
 - Married to Ethan within the family's shared three-adult marital commitment.
 - Romantically and sexually involved with Ethan in a committed relationship.
@@ -80,7 +81,7 @@ The revised adult age was approved by the user on 2026-11-12.
 ## Reference Images
 
 - [Current card and continuity notes](references/index.md)
-- [Reference PNG](references/ruby-bennett-reference-sheet-v1.png)
+- [Reference PNG](references/ruby-bennett-walker-reference-sheet-v1.png)
 
 ## Reusable Prompt
 

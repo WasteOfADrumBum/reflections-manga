@@ -50,7 +50,7 @@ approved story events or predetermined outcomes.
 - [Nat](../characters/natalie-greene/index.md): Final hair/eye colors, hairstyle,
   complexion, glasses design, occupation, home, romantic status, hobbies, and
   how she met Morgan. Motherhood does not establish another parent or custody.
-- [Autumn](../characters/autumn/index.md): Surname, exact age, final hair shade/
+- [Autumn Bennett](../characters/autumn-bennett/index.md): Exact age, final hair shade/
   length, eye color, complexion/freckles, occupation, home, romantic status,
   accessories, and sister backstory. Ruby's height remains a draft measurement.
 - [Ellie](../characters/ellie-greene/index.md) and

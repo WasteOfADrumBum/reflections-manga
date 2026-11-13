@@ -1,6 +1,6 @@
-# Autumn: Reference-Sheet Prompt
+# Autumn Bennett: Reference-Sheet Prompt
 
-Version: 1
+Version: 2
 Updated: 2026-11-13
 Status: Draft prompt based on selected supporting-character direction.
 Detailed visual selections, expressions, and outfit combinations are proposals.
@@ -24,8 +24,8 @@ Keep chosen provisional features stable within the study and review them afterwa
 
 ## Optional Family Resemblance Reference
 
-- [Ruby's reference record](../../ruby-bennett/references/index.md)
-- [Ruby's supplied card](../../ruby-bennett/references/ruby-bennett-reference-sheet-v1.png)
+- [Ruby's reference record](../../ruby-bennett-walker/references/index.md)
+- [Ruby's supplied card](../../ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png)
 
 Inspect and attach the actual Ruby image only when a family-resemblance input
 is useful. Identify it as Ruby, not Autumn; its incidental details and Ruby's
@@ -50,9 +50,9 @@ view. Each view depicts the same person; do not invent additional characters.
 The proposed reference-sheet layout does not establish manga page standards.
 Do not render labels, names, measurements, dialogue, watermarks, or logos.
 CHARACTER
-Autumn, a fictional adult woman and Ruby's older sister. Her surname is
-unestablished. Depict an adult approximately Morgan's age, around 34,
-without finalizing her exact age. Same height as Ruby, approximately
+Autumn Bennett, a fictional adult woman and Ruby Bennett-Walker's older sister.
+Her surname is confirmed as Bennett. Depict an adult approximately Morgan's age,
+around 34, without finalizing her exact age. Same height as Ruby, approximately
 152 cm / 5'0" using Ruby's current draft measurement. Fuller and slightly
 heavier than Ruby, with a mature feminine figure and a fuller bust.
 Maintain balanced, natural adult anatomy and an ordinary neck length.
@@ -85,7 +85,8 @@ builds, and long strawberry-blonde versus copper-red pixie silhouettes.
 Do not give Autumn Ruby's haircut, exact body, jewelry, or married surname.
 If Ruby's fictional sheet is attached, use it only as a family-resemblance
 guide, not an approved Autumn reference. Do not render Ruby or Avery.
-No childhood event, family surname, occupation, or romance is established.
+The surname is Bennett, with two t's. No childhood event, occupation, or
+romance is established.
 
 REFERENCE AND CONSISTENCY RULES
 If fictional character references are attached, preserve their established

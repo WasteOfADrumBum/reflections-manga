@@ -40,7 +40,7 @@ All characters and events are fictional.
 - [Natalie "Nat" Greene](characters/natalie-greene/index.md): Morgan's best friend
   outside the household; mother of [Ellie](characters/ellie-greene/index.md), 9,
   and [Owen](characters/owen-greene/index.md), approximately 6.
-- [Autumn](characters/autumn/index.md): Ruby's older sister; surname open.
+- [Autumn Bennett](characters/autumn-bennett/index.md): Ruby's older sister.
 
 Selected character direction and provisional suggestions are labeled separately.
 Five individual supporting-character reference-sheet prompts are linked from

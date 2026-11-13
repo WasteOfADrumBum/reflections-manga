@@ -1,5 +1,23 @@
 # Change Log
 
+## 2026-11-13: Bennett Names and Matching Directories
+
+- Implemented the user's corrected spelling: Autumn Bennett and Ruby
+  Bennett-Walker, with two t's. Avery remains Avery Bennett-Walker.
+- Renamed characters/autumn to characters/autumn-bennett and
+  characters/ruby-bennett to characters/ruby-bennett-walker.
+- Renamed their prompt files, Ruby's v1 reference filename, and Ruby's site
+  image files to match. Updated live profile, prompt, relationship, family-tree,
+  registry, website, and ignore-rule references.
+- Resolved Autumn's surname decision while retaining other provisional details.
+  Historical entries below preserve the development decisions made at the time.
+- Preserved existing artwork bytes and approval states. No story release.
+- Recorded the requested manual-save filenames for Cal, Nat, Autumn, Ellie,
+  and Owen in their reference records and the reference workflow. Their PNGs
+  are expected, not claimed present or approved.
+- The website publishes automatically from main, so this correction is prepared
+  on a separate branch for review before any production deployment.
+
 ## 2026-11-13: Ellie and Owen Reference-Sheet Prompts
 
 - Added the two requested individual prompts using the existing Ethan-style
