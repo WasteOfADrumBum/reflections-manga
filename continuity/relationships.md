@@ -167,6 +167,8 @@ The children's form of address for Ethan remains unspecified by the user.
 | Nat and [Owen](../characters/owen-greene/index.md) | Mother and son; Owen is approximately 6 like Riley | Exact age, other parentage, custody, school, or a confirmed friendship with Riley |
 | Ellie and Owen | Older sister and younger brother, both Nat's children | Full/half/adoptive sibling status or shared household |
 | [Autumn Bennett](../characters/autumn-bennett/index.md) and Ruby | Autumn is Ruby's older sister, approximately Morgan's age; Avery's aunt through Ruby | Exact age, sibling type, childhood roles, or specific encounters |
+| [Nathan "Nate" Hayes](../characters/nathan-hayes/index.md), [Adrian Hayes](../characters/adrian-hayes/index.md), and Morgan | Hayes siblings; Nate oldest, Adrian middle, Morgan youngest; Diane is their mother and they share the unnamed father in Morgan's history | Brothers' proposed ages of 41 and 38, detailed childhood responses, present-day tensions, or specific encounters |
+| Nate and Adrian with Rowan and Riley | Uncles through Morgan | Closeness, address forms, caregiving, visits, or legal status |
 
 Morgan and Ruby remain best friends and coparents. Nat's independent friendship
 does not replace that bond. No new romantic relationships, parental authority,
@@ -176,11 +178,20 @@ boundary tension, and child playmates remain development ideas in their profiles
 The user confirmed Autumn Bennett and Ruby Bennett-Walker on 2026-11-13,
 with two t's in Bennett. Avery's current name is Avery Bennett Walker, revised 2026-11-13.
 
+The Hayes sibling connections were added at the user's request on 2026-11-13.
+Their [family-history proposal](../characters/hayes-family-history.md) preserves
+Nate's attempted leadership and guilt, Adrian's withdrawal and gratitude, and
+Morgan's growing responsibility as draft backstory. None establishes an argument,
+estrangement, early job, family-chat incident, or causal explanation of adult
+behavior. The brothers' connection to Avery is through the shared family,
+without additional parentage. Adrian's possible gender exploration and possible
+autistic traits are independent proposals, not a final identity or diagnosis.
+
 ## Parent Generation: Approved 2026-11-13
 
 | Parent | Established relationship and upbringing |
 |---|---|
-| [Diane Hayes](../characters/diane-hayes/index.md), 58 | Morgan's mother; raised Morgan without her father after he left when Morgan was 13 |
+| [Diane Hayes](../characters/diane-hayes/index.md), 58 | Mother of Nate, Adrian, and Morgan; raised Morgan without her father after he left when Morgan was 13 |
 | [Thomas "Tom" Bennett](../characters/thomas-bennett/index.md), 60 | Father of Ruby and Autumn; raised Ruby without her mother after her death when Ruby was 6; also raised Autumn without her mother present |
 | [Richard "Rick" Walker](../characters/richard-walker/index.md), 65 | Ethan's father |
 | [Linda Walker](../characters/linda-walker/index.md), 62 | Ethan's mother |

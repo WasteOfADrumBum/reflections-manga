@@ -11,10 +11,17 @@ Updated: 2026-11-13.
 - A [production walkthrough](getting-started.md), 11 stage prompts, and expanded
   chapter templates are available. No story, images, or PDF is produced by the guide.
 
-- Fifteen fictional characters are registered: six central family members,
-  five supporting characters including Nat's children, and four approved
-  parent-generation profiles: Diane (58), Tom (60), Rick (65), and Linda (62).
-  Parent written profiles are approved; no parent images or model sheets exist.
+- Seventeen fictional characters are registered: six central family members,
+  seven supporting characters including Nat's children and Morgan's brothers,
+  and four approved parent-generation profiles: Diane (58), Tom (60), Rick (65),
+  and Linda (62).
+  Parent written profiles are approved independently of artwork.
+- [Nathan "Nate" Hayes](../characters/nathan-hayes/index.md) and
+  [Adrian Hayes](../characters/adrian-hayes/index.md) were added 2026-11-13 as
+  Morgan's older brothers and Diane's sons, with Nate oldest and Adrian middle.
+  Proposed ages 41 and 38, designs, jobs, childhood responses, and Adrian's
+  identity/neurodevelopmental directions remain drafts. See the
+  [Hayes family-history record](../characters/hayes-family-history.md).
 - Current names are Morgan H. Walker (Hayes middle name / Walker surname),
   Ruby Bennett-Walker, Rowan Walker, Riley Walker, and Avery Bennett Walker.
   Legacy directory and asset identifiers are preserved.
@@ -77,6 +84,11 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
   including Autumn's exact age, final visual traits, histories,
   and Ellie/Owen's designs. Existing user-saved supporting-character images
   and public web copies retain the approval limits in their reference records.
+
+- Review the [Hayes sibling decisions](../continuity/open-threads.md#hayes-sibling-decisions-2026-11-13),
+  including the three-/four-year age gaps, proposed departure-age calculations,
+  family-role backstory, designs, jobs, and Adrian's separate identity directions.
+  No reference-sheet prompts or images have been prepared for the two brothers.
 
 - Reconcile adult visual drafts and any incidental differences in the supplied cards before final canon approval.
 - Refine birthdays, school context, and further unasked interaction details.

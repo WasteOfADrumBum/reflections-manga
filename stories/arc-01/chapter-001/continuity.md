@@ -30,6 +30,12 @@ the family when she was 13; Ruby's mother died when she was 6. Use the
 for timing limits and unresolved details. These facts add no flashback, dialogue,
 scene, or causal explanation of current behavior to this draft chapter.
 
+Nathan "Nate" Hayes and Adrian Hayes were added as Morgan's older brothers
+and Diane's sons on 2026-11-13. Their
+[detailed family-history proposal](../../../characters/hayes-family-history.md),
+ages, designs, and possible identity directions remain drafts. Neither brother
+is added to this chapter's proposed cast, dialogue, or flashbacks by this update.
+
 ## Opening Script Batch: Pages 001–004
 
 Status: DRAFT v1 for review, 2026-11-13. The user authorized drafting these four

@@ -96,6 +96,31 @@ Pages 011–032 remain unscripted.
   introductions for all five. The five supporting-character prompts remain
   provisional studies; no supporting-character images or chapter events are approved.
 
+## Hayes Sibling Decisions: 2026-11-13
+
+Nathan "Nate" Hayes and Adrian Hayes are registered as Morgan's older brothers
+and Diane's sons, with Nate oldest and Adrian middle. Their shared father is
+the unnamed father who left when Morgan was 13. See the
+[family-history record](../characters/hayes-family-history.md).
+
+- Finalize or revise the proposed opening ages 41 and 38. With Morgan at 34,
+  the gaps are three and four years; the proposed departure ages 20 and 17
+  remain conditional estimates. Do not change Morgan's approved age to fit spacing.
+- Approve or revise their proposed heights, builds, hair/eyes, glasses for
+  Adrian, wardrobe, personalities, and interests before treating them as fixed traits.
+- Select occupations from the supplied options; none is selected by workwear,
+  hobbies, gender exploration, or neurodevelopmental speculation.
+- Review Nate's attempted provision and guilt, Adrian's withdrawal, Morgan's
+  early work and organizer role, and any causal link to current habits. These
+  remain proposed backstory, not approved incidents or established adult conflict.
+- Decide Adrian's private gender questioning and possible autistic traits
+  independently. No diagnosis, final identity label, disclosure, or family reaction
+  is established, and neither direction explains the other or family withdrawal.
+- Establish current family contact, residences, partners/children if any,
+  voices, uncle bonds, and chapter introductions only when needed.
+- No model sheets, reference images, or character-sheet prompts were created.
+  External inspiration links from the supplied notes are not approved references.
+
 ## Parent-Generation Decisions: 2026-11-13
 
 Written parent identities, ages, heights, appearance, personality, wardrobe,

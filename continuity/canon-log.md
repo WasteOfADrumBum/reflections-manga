@@ -5,6 +5,30 @@
 Newest explicit decisions supersede earlier conflicting labels; older entries
 are preserved as historical records.
 
+### 2026-11-13: Hayes Brothers Added; Detailed Proposal Kept Separate
+
+- At the user's request to integrate the supplied character notes, added Nathan
+  "Nate" Hayes and Adrian Hayes as Morgan's older brothers and Diane Hayes's sons.
+  Nate is the oldest sibling, Adrian the middle, and Morgan the youngest. They
+  share the unnamed father in Morgan's established history.
+- Nate and Adrian are uncles through Morgan to Rowan Walker and Riley Walker;
+  no closeness, residence, caregiving, or additional parentage is established.
+- This family foundation is recorded separately from the notes' proposals.
+  Opening ages 41 and 38, heights, designs, personalities, interests, jobs,
+  detailed childhood responses, and present-day tensions remain pending approval.
+- The supplied ages imply three- and four-year gaps with Morgan at 34. Ages
+  of about 20 and 17 at the father's departure are conditional estimates, not
+  approved chronology. Morgan's approved age and departure history are preserved.
+- Adrian's gender questioning and possible autistic traits remain independent
+  proposals. No final identity label, diagnosis, disclosure, or causal explanation
+  of withdrawal is approved. Avery's existing autism canon is unchanged.
+- See [Hayes family history](../characters/hayes-family-history.md) for the
+  proposed roles: Nate tried to lead, Adrian withdrew, Morgan gradually took
+  responsibility. Early employment, specific duties, and causal explanations
+  of Morgan's behavior remain proposed history.
+- Preserve all current surnames, other family history, existing artwork, and
+  draft chapter status. No chapter event, master model sheet, or release approved.
+
 ### 2026-11-13: Childhood Family History Approved
 
 - Morgan's father had alcoholism and left the family when Morgan was 13.

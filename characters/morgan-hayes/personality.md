@@ -45,6 +45,17 @@ and resolutions are draft material rather than established history.
 
 Future developments remain open; see [arc planning](../../continuity/character-arcs.md).
 
+## Proposed Childhood Context: 2026-11-13
+
+The [Hayes family-history proposal](../hayes-family-history.md) links a possible
+habit of taking charge to responsibilities Morgan may have assumed after her
+father left when she was 13. Nate tried to lead, Adrian withdrew, and Morgan
+began working young and became the family's organizer in this proposed history.
+Only the father's departure and Morgan's age at it were previously approved;
+the specific responses, early work, and causal explanation remain drafts.
+Preserve her affection, autonomy, and ability to change rather than treating
+family history as the complete explanation of her present choices.
+
 ## Approved Relationship Behavior
 
 - More dominant with Ethan; their physical chemistry developed first and their

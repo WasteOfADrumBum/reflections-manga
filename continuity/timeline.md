@@ -27,6 +27,29 @@ name and cause of death remain unspecified. Tom also raised Autumn without her
 mother present, but a shared mother is unestablished. Do not assign Autumn an
 age at Ruby's mother's death or a maternal bereavement from this information.
 
+## Hayes Sibling Age Proposal: 2026-11-13
+
+Nate and Adrian were added as Morgan's older brothers and Diane's sons; they
+share the unnamed father in Morgan's established history. Sibling order is
+Nate, Adrian, Morgan. Their supplied opening ages remain proposals.
+
+| Sibling | Opening age | Approximate age at father's departure |
+|---|---|---|
+| Nathan "Nate" Hayes | Proposed 41 | Proposed estimate 20, conditional on opening age |
+| Adrian Hayes | Proposed 38 | Proposed estimate 17, conditional on opening age |
+| Morgan H. Walker | Approved 34 | Approved 13 |
+
+The proposed gaps are three and four years, rather than exactly three years
+between each sibling. Exact birthdays and event spacing remain open; neither
+brother's age is finalized. Do not infer exact ages for Diane at their births.
+
+The [Hayes family-history record](../characters/hayes-family-history.md) saves
+Nate's attempt to provide, Adrian's withdrawal, and Morgan's early work and
+growing responsibility as development proposals. These are not added to the
+approved event sequence. Morgan's approved age, the approximately 21-year
+departure offset, Ruby's maternal history, and adult relationship chronology
+remain unchanged. No new visits, disclosures, diagnoses, or chapter events.
+
 ## Relationship Chronology
 
 | Sequence | Established event | Timing limits |

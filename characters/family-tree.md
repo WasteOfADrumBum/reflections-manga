@@ -64,6 +64,8 @@ Written profiles and these parent connections approved 2026-11-13.
 ```mermaid
 flowchart TB
   D["Diane Hayes, 58"] --> M["Morgan H. Walker, 34"]
+  D --> N["Nathan / Nate Hayes, proposed 41"]
+  D --> H["Adrian Hayes, proposed 38"]
   L["Linda Walker, 62"] --> E["Ethan Walker, 38"]
   K["Richard / Rick Walker, 65"] --> E
   T["Thomas / Tom Bennett, 60"] --> R["Ruby Bennett-Walker, 28"]
@@ -74,6 +76,12 @@ Diane is Rowan and Riley's grandmother through Morgan; Tom is Avery's
 grandfather through Ruby. Rick and Linda are grandparents to all three
 children through Ethan. These lines establish parentage, not residence,
 marital status, caregiving duties, or emotional closeness.
+
+Nate and Adrian were added 2026-11-13 as Morgan's older brothers and Diane's
+sons: Nate oldest, Adrian middle, Morgan youngest. They share the unnamed
+father in Morgan's established history. Nate and Adrian are uncles through
+Morgan to Rowan and Riley. Their diagram ages are proposals, not approved ages;
+see the [Hayes family-history record](hayes-family-history.md) for approval limits.
 
 Family history approved 2026-11-13:
 
@@ -86,8 +94,8 @@ Family history approved 2026-11-13:
   father does not establish a shared mother; Autumn's maternal history stays open.
 
 See the [childhood chronology](../continuity/timeline.md#childhood-family-history-approved-2026-11-13)
-for approximate offsets from the opening snapshot. No divorce, additional
-circumstances, or new character names are established.
+for approximate offsets from the opening snapshot. No divorce or additional
+circumstances for those absent parents are established.
 
 ## Extended Family and Friends
 
@@ -95,6 +103,7 @@ Supporting-cast relationships selected 2026-11-13:
 
 | Connection | Established relationship | Limits |
 |---|---|---|
+| [Nate](nathan-hayes/index.md), [Adrian](adrian-hayes/index.md), and Morgan | Hayes siblings, all Diane's children; Nate oldest, Morgan youngest | Brothers' ages, childhood responses, designs, jobs, and current family circumstances are proposals |
 | [Autumn Bennett](autumn-bennett/index.md) and Ruby | Autumn is Ruby's older sister and Avery's aunt through Ruby | Exact age, sibling type, and family history remain open |
 | [Natalie "Nat" Greene](natalie-greene/index.md), [Ellie](ellie-greene/index.md), and [Owen](owen-greene/index.md) | Nat is their mother; Ellie is 9, Owen approximately 6 | Other parentage, full/half/adoptive sibling status, custody, and household remain open |
 | [Caleb "Cal" Mercer](caleb-mercer/index.md) and Ethan | Best friends | Meeting, duration, and shared history remain open |

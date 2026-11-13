@@ -1,5 +1,24 @@
 # Change Log
 
+## 2026-11-13: Hayes Brothers and Family-Backstory Proposal
+
+- Integrated the supplied notes as Nathan "Nate" Hayes and Adrian Hayes,
+  Morgan's older brothers and Diane's sons; recorded Nate/Adrian/Morgan birth order.
+- Added each brother's profile, proposed appearance/personality/wardrobe, and
+  reference-status record. Saved shared family history with explicit approval
+  boundaries, age arithmetic, occupation options, and proposed family dynamics.
+- Kept opening ages 41 and 38, heights, designs, detailed childhood responses,
+  Morgan's early work, and causal explanations provisional. Flagged the actual
+  three- and four-year gaps; did not revise Morgan's approved age of 34.
+- Kept Adrian's gender questioning and possible autistic traits independent and
+  unapproved; added no diagnosis, final label, disclosure, or family reaction.
+- Updated reciprocal family links, registry, family tree, Morgan's personality
+  context, bible, timeline, relationship canon, arc planning, open decisions,
+  character rules, Chapter 001 background continuity, README, and production status.
+- Preserved surname conventions, absent-parent unknowns, Ruby's maternal history,
+  existing visual assets, unrelated work, and draft story status. No source image
+  imported, art generated, website change, deployment, or story release performed.
+
 ## 2026-11-13: Story 001 Continues Through Page 010
 
 - The user reported pages 001–004 done and requested continuation. Located and

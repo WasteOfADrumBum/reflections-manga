@@ -41,6 +41,10 @@ resentment, ring motives, crises, and resolutions remain draft story material.
 ## Family and Relationships
 
 - Daughter of [Diane Hayes](../diane-hayes/index.md), 58. Morgan's father had alcoholism and left the family when Morgan was 13; Diane raised her without him in the household after his departure (user-approved 2026-11-13). His name, current status, and later contact remain unspecified.
+- Youngest Hayes sibling; younger sister of [Nathan "Nate" Hayes](../nathan-hayes/index.md)
+  and [Adrian Hayes](../adrian-hayes/index.md), added 2026-11-13. Nate is the
+  oldest and Adrian the middle sibling; their proposed opening ages are 41 and 38.
+  Their mother is Diane and they share the unnamed father described above.
 
 - Best friend of [Natalie "Nat" Greene](../natalie-greene/index.md) outside the
   household, added 2026-11-13. This also preserves her existing friendship with Ruby.
@@ -74,6 +78,15 @@ was explicitly revised and approved 2026-11-13. The concrete middle-name/surname
 choice resolves the earlier contradictory verbal description. The retained
 `morgan-hayes` folder and older asset labels are stable identifiers, not her current surname.
 The revised adult age was approved by the user on 2026-11-12.
+
+## Proposed Hayes Family Backstory
+
+The supplied [family-history proposal](../hayes-family-history.md) contrasts
+Nate's attempt to lead, Adrian's withdrawal, and Morgan's gradual assumption
+of responsibility after their father left. Morgan's early work and becoming
+the family's organizer and emotional backbone remain proposed history.
+Difficulty delegating or trusting support is a possible learned response,
+not an approved causal explanation of her personality or relationship roles.
 
 ## Profile Files
 
