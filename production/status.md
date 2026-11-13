@@ -26,6 +26,11 @@ Updated: 2026-11-13.
 - Six user-saved PNG reference cards are present, each 1536 x 1024, and linked
   from character profiles and prompts. See the reference workflow for reuse.
 - Ethan is 38, Morgan is 34, and Ruby is 28.
+- Childhood family history approved 2026-11-13: Morgan's father had alcoholism
+  and left when she was 13; Ruby's mother died when she was 6. Profiles and
+  [chronology](../continuity/timeline.md#childhood-family-history-approved-2026-11-13)
+  record these facts and their timing limits. Other circumstances remain open;
+  no chapter events or explanations of adult behavior are added.
 - Ethan's romantic marriages and Morgan/Ruby's platonic friendship are recorded.
 - Workplace origins, early relationships, V-polyamory, moving in approximately
   six months later, and the shared same-day wedding are recorded in

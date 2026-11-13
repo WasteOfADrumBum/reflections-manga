@@ -24,6 +24,12 @@ Avery Bennett Walker. Legacy character links remain stable. Approved parent
 profiles expand background canon; none of Diane, Tom, Rick, or Linda is added
 to this chapter's proposed cast or scenes. No chapter events or art are approved.
 
+Background history approved 2026-11-13: Morgan's father had alcoholism and left
+the family when she was 13; Ruby's mother died when she was 6. Use the
+[childhood chronology](../../../continuity/timeline.md#childhood-family-history-approved-2026-11-13)
+for timing limits and unresolved details. These facts add no flashback, dialogue,
+scene, or causal explanation of current behavior to this draft chapter.
+
 ## Opening Script Batch: Pages 001–004
 
 Status: DRAFT v1 for review, 2026-11-13. The user authorized drafting these four

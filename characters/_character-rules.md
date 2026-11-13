@@ -37,7 +37,11 @@ rowan-hayes-walker, avery-bennett-walker, and riley-hayes-walker.
 Diane Hayes, Thomas "Tom" Bennett, Richard "Rick" Walker, and Linda Walker
 have approved written profiles recorded 2026-11-13. Written approval does not
 approve a model sheet, relatives' provisional visuals, or suggested childhood
-influences. Keep absent-parent identities, fates, and circumstances open.
+influences. Family history approved 2026-11-13: Morgan's father had alcoholism
+and left the family when Morgan was 13; Ruby's mother died when Ruby was 6.
+Keep their names, Morgan's father's current status, Ruby's mother's cause of
+death, and other unprovided circumstances open. Do not extend Ruby's maternal
+history to Autumn without approval of a shared mother.
 
 Ellie and Owen Greene are supporting children added 2026-11-13. Their prior
 appearance, personality, and wardrobe suggestions remain provisional; no

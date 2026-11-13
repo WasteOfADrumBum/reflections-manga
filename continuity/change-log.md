@@ -1,5 +1,24 @@
 # Change Log
 
+## 2026-11-13: Approved Childhood Family History Reconciliation
+
+- Recorded the user's explicit approval: Morgan's father had alcoholism and
+  left the family when she was 13; Ruby's mother died when she was 6.
+- Reconciled Diane Hayes and Thomas "Tom" Bennett's biographies, Morgan and
+  Ruby's profiles, Autumn's maternal-history limits, registry, family tree,
+  character rules, series bible, relationship canon, and open decisions.
+- Added childhood chronology with approximate offsets from opening: about
+  21 years for Morgan's father's departure and 22 years for Ruby's mother's
+  death. Exact dates and event spacing remain open. Clarified that the earlier
+  household summaries did not establish either parent's absence from birth.
+- Updated world-record pointers, Chapter 001's background continuity, production
+  status, README, and the two parent biographies in the site source.
+- Preserved all existing names and surname conventions, earlier log entries,
+  visual assets, and draft story status. Kept unprovided names, Morgan's father's
+  current status, Ruby's mother's cause of death, and Autumn's maternal history open.
+- No chapter completion, release, artwork approval, or production deployment
+  is part of this documentation update.
+
 ## 2026-11-13: Approved Parent Profiles and Name Reconciliation
 
 - Added Diane Hayes, Thomas "Tom" Bennett, Richard "Rick" Walker, and Linda Walker

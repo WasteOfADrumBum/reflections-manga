@@ -75,9 +75,19 @@ grandfather through Ruby. Rick and Linda are grandparents to all three
 children through Ethan. These lines establish parentage, not residence,
 marital status, caregiving duties, or emotional closeness.
 
-Morgan was raised without a father in the household. Ruby and Autumn were
-raised without their mother present. No name, fate, reason for absence, death,
-divorce, or estrangement is established for those absent parents.
+Family history approved 2026-11-13:
+
+- Morgan's father had alcoholism and left the family when Morgan was 13.
+  Diane raised Morgan without him after his departure. His name, current
+  status, and later contact remain unspecified.
+- Ruby's mother died when Ruby was 6. Tom raised Ruby without her afterward.
+  Her name and cause of death remain unspecified.
+- Tom also raised Autumn without her mother present. The sisters' shared
+  father does not establish a shared mother; Autumn's maternal history stays open.
+
+See the [childhood chronology](../continuity/timeline.md#childhood-family-history-approved-2026-11-13)
+for approximate offsets from the opening snapshot. No divorce, additional
+circumstances, or new character names are established.
 
 ## Extended Family and Friends
 

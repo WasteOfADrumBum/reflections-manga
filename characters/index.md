@@ -30,9 +30,12 @@ Written parent profiles approved 2026-11-13; no model sheets or chapter appearan
 | [Richard "Rick" Walker](richard-walker/index.md) | 65 | 5'11" / approximately 180 cm | Ethan's father |
 | [Linda Walker](linda-walker/index.md) | 62 | 5'5" / approximately 165 cm | Ethan's mother |
 
-Morgan was raised without a father in the household; Ruby and Autumn were
-raised without their mother present. Their identities, circumstances, and fates
-remain unspecified. Diane is Morgan's mother. Tom is father to both Bennett sisters.
+Family history approved 2026-11-13: Morgan's father had alcoholism and left the
+family when Morgan was 13; Diane raised her without him after his departure.
+Ruby's mother died when Ruby was 6; Tom raised Ruby without her afterward.
+Tom also raised Autumn without her mother present. A shared mother is not
+established for the sisters. Morgan's father's name and current status, Ruby's
+mother's name and cause of death, and Autumn's maternal history remain open.
 
 ## Children
 

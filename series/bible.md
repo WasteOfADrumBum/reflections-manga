@@ -56,9 +56,13 @@ without deciding its field split.
 
 Parent generation approved 2026-11-13: Diane Hayes (58), Morgan's mother; Thomas
 "Tom" Bennett (60), Ruby and Autumn's father; Richard "Rick" Walker (65) and
-Linda Walker (62), Ethan's parents. Diane raised Morgan without a father in
-the household; Tom raised both daughters without their mother present. Those
-absent parents' identities and fates remain unspecified. See the approved
+Linda Walker (62), Ethan's parents. Morgan's father had alcoholism and left
+the family when Morgan was 13; Diane raised her without him afterward. Ruby's
+mother died when Ruby was 6; Tom raised Ruby without her afterward. Tom also
+raised Autumn without her mother present, but a shared mother is not established.
+These childhood facts were approved 2026-11-13. Morgan's father's name and current
+status, Ruby's mother's name and cause of death, and Autumn's maternal history
+remain unspecified. See the approved
 written [parent profiles](../characters/index.md#approved-parent-generation).
 Suggested childhood influences remain proposals. Other existing visual draft
 choices are not approved by these parent designs.

@@ -5,6 +5,29 @@
 Newest explicit decisions supersede earlier conflicting labels; older entries
 are preserved as historical records.
 
+### 2026-11-13: Childhood Family History Approved
+
+- Morgan's father had alcoholism and left the family when Morgan was 13.
+  Diane Hayes raised Morgan without him after his departure. His name,
+  current status, later contact, and any further circumstances remain unspecified.
+- Ruby's mother died when Ruby was 6. Thomas "Tom" Bennett raised Ruby
+  without her mother afterward. Her name and cause of death remain unspecified.
+- These explicit user-approved facts supersede the earlier statements that
+  both absent parents' fates and circumstances were wholly unspecified. Earlier
+  entries below preserve the prior approval state; absence from birth is not canon.
+- Tom also raised Autumn without her mother present. A shared father does not
+  establish a shared mother or full-sibling status; Ruby's history does not
+  establish Autumn's maternal history or an age at bereavement.
+- The [timeline](timeline.md#childhood-family-history-approved-2026-11-13) records
+  the childhood ages and approximate age-based offsets: about 21 years before
+  opening for Morgan's father's departure and about 22 for Ruby's mother's death.
+  These are planning estimates, not calendar dates or exact event spacing.
+- Preserve Morgan H. Walker, Ruby Bennett-Walker, Rowan Walker, Riley Walker,
+  and Avery Bennett Walker, including the established name-field conventions.
+- No new names, divorce, current status for Morgan's father, cause of death,
+  personality changes, or causal explanation of adult behavior are approved.
+  No chapter event, artwork, completed story, or release is approved by this update.
+
 ### 2026-11-13: Parent Profiles and Current Family Names Approved
 
 The user explicitly approved the four parents and requested the established

@@ -39,10 +39,10 @@ friendship with Morgan is meaningful and platonic. Future incidents remain draft
 
 ## Family and Relationships
 
-- Daughter of [Thomas "Tom" Bennett](../thomas-bennett/index.md), 60, also Autumn's father. He raised both daughters without their mother present; her identity and fate remain unspecified.
+- Daughter of [Thomas "Tom" Bennett](../thomas-bennett/index.md), 60, also Autumn's father. Ruby's mother died when Ruby was 6; Tom raised Ruby without her mother after that death (user-approved 2026-11-13). Her mother's name and cause of death remain unspecified.
 
 - Younger sister of [Autumn Bennett](../autumn-bennett/index.md), added 2026-11-13.
-  Autumn's surname is Bennett. Her exact age and detailed childhood events remain open; their father-led household is recorded above.
+  Autumn's surname is Bennett. Tom also raised Autumn without her mother present. A shared mother and full-sibling status remain unestablished; Ruby's mother's death does not resolve Autumn's maternal history. Autumn's exact age and detailed childhood events remain open.
 
 - Married to Ethan within the family's shared three-adult marital commitment.
 - Romantically and sexually involved with Ethan in a committed relationship.

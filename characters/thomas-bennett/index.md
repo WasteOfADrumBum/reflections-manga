@@ -20,7 +20,9 @@ Patient, dependable, emotionally perceptive, quietly humorous, and sometimes con
 ## Family and Relationships
 
 - Father of [Ruby Bennett-Walker](../ruby-bennett-walker/index.md), 28, and her older sister [Autumn Bennett](../autumn-bennett/index.md), approximately 34.
-- Raised both daughters without their mother present. Her identity, circumstances, and fate are unspecified; full/half-sibling status is not resolved by a shared father.
+- Ruby's mother died when Ruby was 6 (user-approved 2026-11-13). Tom raised Ruby without her mother after that death; this does not establish that her mother was absent from birth.
+- Tom also raised Autumn without her mother present. The shared father does not establish a shared mother or full-sibling status, so Ruby's mother's death does not resolve Autumn's maternal history.
+- Ruby's mother's name and cause of death remain unspecified. No marital status, exact date, or additional circumstances are established.
 - Grandfather through Ruby to [Avery Bennett Walker](../avery-bennett-walker/index.md).
 - Connection to Rowan and Riley is through the shared family; no additional biological or legal parentage is assigned.
 

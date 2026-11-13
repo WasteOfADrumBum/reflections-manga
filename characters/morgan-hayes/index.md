@@ -40,7 +40,7 @@ resentment, ring motives, crises, and resolutions remain draft story material.
 
 ## Family and Relationships
 
-- Daughter of [Diane Hayes](../diane-hayes/index.md), 58. Diane raised her without a father in the household; his identity and fate remain unspecified.
+- Daughter of [Diane Hayes](../diane-hayes/index.md), 58. Morgan's father had alcoholism and left the family when Morgan was 13; Diane raised her without him in the household after his departure (user-approved 2026-11-13). His name, current status, and later contact remain unspecified.
 
 - Best friend of [Natalie "Nat" Greene](../natalie-greene/index.md) outside the
   household, added 2026-11-13. This also preserves her existing friendship with Ruby.

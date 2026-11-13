@@ -99,9 +99,14 @@ Still open: birthdays, occupations, residences, voice, recurring accessories,
 grandparent address forms and bonds, caregiving, visits, reactions to the
 marriage, Rick/Linda's marital status, and chapter introductions.
 
-Morgan's absent father and Ruby/Autumn's absent mother have no established
-identity, fate, or reason for absence. No decision is required before a story
-needs those details. Suggested childhood influences are proposals.
+Resolved family history, approved 2026-11-13: Morgan's father had alcoholism
+and left the family when Morgan was 13; Ruby's mother died when Ruby was 6.
+Still open: Morgan's father's name, current status, and later contact; Ruby's
+mother's name and cause of death; exact event dates and any further circumstances.
+Autumn's maternal history and the sisters' full/half-sibling status remain open;
+do not infer a shared mother or Autumn's bereavement from Ruby's history.
+No decision is required before a story needs those details. Suggested childhood
+influences and causal explanations of current behavior remain proposals.
 Parent reference prompts are draft study instructions; no images or model
 sheets are approved. Morgan's naming configuration is resolved; Avery's
 middle-name/surname field split remains unspecified and need not be inferred.

@@ -20,7 +20,8 @@ Protective, self-reliant, outspoken, quick to offer advice, and sometimes overly
 ## Family and Relationships
 
 - Mother of [Morgan H. Walker](../morgan-hayes/index.md), 34.
-- Raised Morgan without a father in the household. His identity, circumstances, and fate are unspecified.
+- Morgan's father had alcoholism and left the family when Morgan was 13 (user-approved 2026-11-13). Diane raised Morgan without him in the household after his departure; this does not establish that he was absent from birth.
+- His name, current status, and any later contact remain unspecified. No divorce, death, recovery history, or further circumstances are established.
 - Grandmother through Morgan to [Rowan Walker](../rowan-hayes-walker/index.md) and [Riley Walker](../riley-hayes-walker/index.md).
 - Connection to Avery is through the shared family; no additional biological or legal parentage is assigned.
 

@@ -180,8 +180,8 @@ with two t's in Bennett. Avery's current name is Avery Bennett Walker, revised 2
 
 | Parent | Established relationship and upbringing |
 |---|---|
-| [Diane Hayes](../characters/diane-hayes/index.md), 58 | Morgan's mother; raised Morgan without a father in the household |
-| [Thomas "Tom" Bennett](../characters/thomas-bennett/index.md), 60 | Father of Ruby and Autumn; raised both without their mother present |
+| [Diane Hayes](../characters/diane-hayes/index.md), 58 | Morgan's mother; raised Morgan without her father after he left when Morgan was 13 |
+| [Thomas "Tom" Bennett](../characters/thomas-bennett/index.md), 60 | Father of Ruby and Autumn; raised Ruby without her mother after her death when Ruby was 6; also raised Autumn without her mother present |
 | [Richard "Rick" Walker](../characters/richard-walker/index.md), 65 | Ethan's father |
 | [Linda Walker](../characters/linda-walker/index.md), 62 | Ethan's mother |
 
@@ -191,9 +191,15 @@ through Ruby to Avery. The shared household continues to recognize all three
 adults as parents. Grandparent titles, closeness, residence, visits, caregiving,
 reactions to the marriage, and Rick/Linda's marital status remain unspecified.
 
-Morgan's absent father and the Bennett sisters' absent mother have no established
-identity or fate. Do not infer death, divorce, estrangement, or reason for absence.
-Tom's shared fatherhood does not resolve the sisters' full/half-sibling status.
+Morgan's father had alcoholism and left the family when Morgan was 13.
+His name, current status, and later contact remain unspecified. Ruby's mother
+died when Ruby was 6; her name and cause of death remain unspecified. These
+facts were explicitly approved 2026-11-13 and replace the earlier unspecified
+absence history. No divorce, recovery history, or further circumstances are established.
+Tom's shared fatherhood does not establish a shared mother or resolve the
+sisters' full/half-sibling status. Ruby's mother's death does not establish
+Autumn's maternal history or age at bereavement. See the
+[childhood chronology](timeline.md#childhood-family-history-approved-2026-11-13).
 Family resemblance directions in the parent profiles do not independently
 approve relatives' existing visual drafts. Proposed childhood influences
 remain proposals; no new chapter events are established.

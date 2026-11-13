@@ -96,3 +96,8 @@ fifteen character reference-sheet prompts.
 Written parent profiles and current names approved 2026-11-13. Hayes is
 Morgan's middle name and Walker her surname. Avery Bennett Walker remains
 unhyphenated. Existing folders and image paths are stable legacy identifiers.
+
+Childhood family history approved 2026-11-13: Morgan's father had alcoholism
+and left the family when she was 13; Ruby's mother died when she was 6.
+See the [family chronology](continuity/timeline.md#childhood-family-history-approved-2026-11-13)
+for timing limits and unresolved details.
