@@ -334,6 +334,9 @@ p { margin: 0 0 1em; }
 }
 .reader button { font-weight: 700; cursor: pointer; }
 .reader button:disabled { opacity: 0.45; cursor: not-allowed; }
+.reader-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.5rem; flex: 1 1 18rem; min-width: 0; }
+.reader-pick label { margin-right: 0; }
+.reader-pick select { flex: 1 1 12rem; min-width: 0; max-width: 100%; text-overflow: ellipsis; }
 .reader-controls { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
 .reader-stage { padding: 1rem; min-height: 16rem; display: grid; place-items: center; }
 .reader-page { margin: 0; max-width: 46rem; width: 100%; }
@@ -622,3 +625,5 @@ html:not(.js) .cast-panel { display: grid; gap: 2rem; }
   .ft-face { border-color: CanvasText; }
   .ft-node[aria-expanded="true"] .ft-face { outline: 4px solid Highlight; }
 }
+
+.family-photo { max-width: 68rem; }
