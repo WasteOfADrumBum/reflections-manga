@@ -396,3 +396,38 @@ p { margin: 0 0 1em; }
   .btn, .card, .panel, .char, .reader { border-color: CanvasText; box-shadow: none; }
   .site-nav a[aria-current="page"] { outline: 2px solid CanvasText; }
 }
+
+/* Family tree */
+.family-tree { margin-bottom: 3.5rem; }
+.ft-figure { margin: 0 0 2rem; padding: 1rem; background: var(--card); border: 3px solid var(--rule); box-shadow: var(--shadow); }
+.ft-svg { width: 100%; height: auto; display: block; }
+.ft-wide { max-width: 60rem; margin-inline: auto; }
+.ft-narrow { display: none; max-width: 26rem; margin-inline: auto; }
+@media (max-width: 40rem) {
+  .ft-wide { display: none; }
+  .ft-narrow { display: block; }
+  .ft-figure { padding: 0.75rem 0.5rem; }
+}
+.ft-svg text { fill: var(--ink); font-family: var(--font-body); }
+.ft-name { font-family: var(--font-display) !important; font-weight: 800; }
+.ft-age, .ft-tag { fill: var(--ink-soft) !important; font-weight: 600; }
+.ft-ring { fill: none; stroke: var(--ink); stroke-width: 3; }
+.ft-marry { stroke: var(--accent); stroke-width: 3; }
+.ft-friend { fill: none; stroke: var(--ink-soft); stroke-width: 2.5; stroke-dasharray: 7 6; }
+.ft-line { fill: none; stroke: var(--ink); stroke-width: 3; }
+.ft-tagbg { fill: var(--card); }
+.ft-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; margin-top: 1rem; font-size: 0.95rem; font-weight: 600; }
+.ft-legend span { display: inline-flex; align-items: center; gap: 0.5rem; }
+.ft-legend svg { width: 2.5rem; height: 0.75rem; }
+.ft-subhead { font-size: 1.3rem; margin-bottom: 1rem; }
+.ft-units { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.ft-units h4 { font-family: var(--font-display); font-size: 1.2rem; margin: 0 0 0.4rem; }
+.ft-units a { color: var(--ink); }
+.ft-kids { margin: 0; padding-left: 1.2rem; }
+.ft-kids a { color: var(--accent); font-weight: 600; }
+.ft-facts div { grid-template-columns: 10rem 1fr; }
+@media (forced-colors: active) {
+  .ft-svg text { fill: CanvasText; }
+  .ft-ring, .ft-line, .ft-marry, .ft-friend { stroke: CanvasText; }
+  .ft-tagbg { fill: Canvas; }
+}
