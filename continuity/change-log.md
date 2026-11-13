@@ -1,5 +1,14 @@
 # Change Log
 
+## 2026-11-13: Girls' Trip Beach Photo Draft
+
+- Generated a playful beach portrait of Natalie, Morgan, Autumn, and Ruby
+  leaning together in the four supplied beach outfits with varied poses.
+- Saved the image, unchanged input copies, exact prompt, and review notes in
+  assets/drafts/girls-trip-beach-study.md.
+- Trip and pose remain artwork proposals; no permanent traits, canon event,
+  artwork approval, or release established.
+
 ## 2026-11-13: Walker Extended Family Portrait Draft
 
 - Generated a thirteen-person portrait with Ethan, Morgan, Ruby, all three
