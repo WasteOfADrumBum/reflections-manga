@@ -401,6 +401,7 @@ p { margin: 0 0 1em; }
 
 
 
+
 /* Characters: interactive family tree */
 .page-hero-tight { padding: clamp(1.25rem, 3vw, 2rem) 0; }
 .page-hero-tight h1 { font-size: clamp(2rem, 5vw, 3.25rem); margin-bottom: 0.25rem; }
@@ -493,12 +494,13 @@ html:not(.js) .cast-panel { display: grid; gap: 2rem; }
   .js .cast-panel .char:not([hidden]) { animation: rise 0.28s ease both; }
 }
 
-.char-family { margin: 0; display: grid; gap: 0.35rem; }
-.char-family div { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.75rem; }
-.char-family dt { font-weight: 700; }
-.char-family dd { margin: 0; }
-.char-family a { font-weight: 600; }
-@container (max-width: 22rem) { .char-family div { grid-template-columns: 1fr; gap: 0; } }
+.char-rel { margin: 0; display: grid; gap: 0.35rem; }
+.char-rel div { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.75rem; }
+.char-rel dt { font-weight: 700; }
+.char-rel dd { margin: 0; }
+.char-rel a { font-weight: 600; }
+.char-rel-wrap[hidden] { display: none; }
+@container (max-width: 22rem) { .char-rel div { grid-template-columns: 1fr; gap: 0; } }
 .ft-subhead { font-size: 1.3rem; margin-bottom: 1rem; }
 .ft-units { list-style: none; padding: 0; margin: 0 0 1.5rem; }
 .ft-units h4 { font-family: var(--font-display); font-size: 1.2rem; margin: 0 0 0.4rem; }
