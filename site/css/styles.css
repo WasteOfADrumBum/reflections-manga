@@ -226,11 +226,14 @@ p { margin: 0 0 1em; }
 /* Hero family illustration */
 .hero-family { margin: 0; position: relative; border: 3px solid var(--rule); background: #e9e7e3; box-shadow: var(--shadow); }
 .hero-family img { width: 100%; height: auto; display: block; }
-.hero-family figcaption {
-  position: absolute; left: 0.5rem; bottom: 0.5rem; right: 0.5rem; width: fit-content; max-width: calc(100% - 1rem);
-  background: var(--paper); color: var(--ink); border: 2px solid var(--rule);
-  font-weight: 700; font-size: 0.85rem; padding: 0.1rem 0.5rem;
+.hero-labels { list-style: none; margin: 0; padding: 0; position: absolute; inset: 0; pointer-events: none; }
+.hero-labels li {
+  position: absolute; left: var(--lx); top: var(--ly); transform: translate(-50%, -50%);
+  background: #16161a; color: #f6f3ec; border: 2px solid #f6f3ec; box-shadow: 0 0 0 1px #16161a;
+  font-weight: 700; font-size: clamp(0.68rem, 1.6vw, 0.85rem); line-height: 1.2;
+  padding: 0.1rem 0.45rem; white-space: nowrap;
 }
+@media (min-width: 56rem) { .hero-labels li { font-size: 0.8rem; } }
 @media (min-width: 56rem) { .hero-family { transform: rotate(-1deg); } }
 
 /* Sections */
