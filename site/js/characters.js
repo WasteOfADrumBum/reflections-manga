@@ -46,8 +46,8 @@
     var i = order.indexOf(id);
     var p = order[(i - 1 + order.length) % order.length];
     var nx = order[(i + 1) % order.length];
-    prevBtn.textContent = "Previous: " + nameOf(p);
-    nextBtn.textContent = "Next: " + nameOf(nx);
+    prevBtn.querySelector(".cast-name").textContent = nameOf(p);
+    nextBtn.querySelector(".cast-name").textContent = nameOf(nx);
     prevBtn.setAttribute("data-target", p);
     nextBtn.setAttribute("data-target", nx);
     if (history.replaceState) history.replaceState(null, "", "#" + id);
