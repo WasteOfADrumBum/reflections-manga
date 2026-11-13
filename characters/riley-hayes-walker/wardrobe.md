@@ -1,4 +1,4 @@
-# Riley Hayes-Walker: Wardrobe
+# Riley Walker: Wardrobe
 
 Status: Questionnaire style choices approved 2026-11-12.
 

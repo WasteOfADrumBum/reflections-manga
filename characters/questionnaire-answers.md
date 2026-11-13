@@ -1,11 +1,15 @@
 # Approved Child Questionnaire Answers
 
+Naming update 2026-11-13: Headings use current approved names. Original
+questionnaire answers and their 2026-11-12 approval remain unchanged.
+
+
 Status: User-selected written specifications, 2026-11-12.
 All 50 questionnaire decisions answered through built-in clickable questions.
 Answer meanings are recorded below because native option labels differed from
 the original A-D tables. Artwork and model sheets are not approved by these answers.
 
-## Rowan Hayes-Walker, 9
+## Rowan Walker, 9
 
 | Decision | Approved answer |
 |---|---|
@@ -28,7 +32,7 @@ the original A-D tables. Artwork and model sheets are not approved by these answ
 See [appearance](rowan-hayes-walker/appearance.md), [personality](rowan-hayes-walker/personality.md),
 and [wardrobe](rowan-hayes-walker/wardrobe.md).
 
-## Riley Hayes-Walker, Approximately 6
+## Riley Walker, Approximately 6
 
 | Decision | Approved answer |
 |---|---|
@@ -52,7 +56,7 @@ See [appearance](riley-hayes-walker/appearance.md), [personality](riley-hayes-wa
 and [wardrobe](riley-hayes-walker/wardrobe.md). Her exact age remains the existing
 approximately-six target; no age-confirmation question was asked for Riley.
 
-## Avery Bennett-Walker, 7 Confirmed
+## Avery Bennett Walker, 7 Confirmed
 
 | Decision | Approved answer |
 |---|---|

@@ -2,6 +2,35 @@
 
 ## Approved Canon
 
+Newest explicit decisions supersede earlier conflicting labels; older entries
+are preserved as historical records.
+
+### 2026-11-13: Parent Profiles and Current Family Names Approved
+
+The user explicitly approved the four parents and requested the established
+written appearance, personality, wardrobe, and family resemblance directions.
+
+- [Diane Hayes](../characters/diane-hayes/index.md): 58, 5'8" / approximately 173 cm; Morgan's mother.
+- [Thomas "Tom" Bennett](../characters/thomas-bennett/index.md): 60, 5'9" / approximately 175 cm; Ruby and Autumn's father.
+- [Richard "Rick" Walker](../characters/richard-walker/index.md): 65, 5'11" / approximately 180 cm; Ethan's father.
+- [Linda Walker](../characters/linda-walker/index.md): 62, 5'5" / approximately 165 cm; Ethan's mother.
+- Diane raised Morgan without a father in the household. Tom raised Ruby and
+  Autumn without their mother present. Neither absent parent's identity, fate,
+  or reason for absence is established. Preserve Autumn as Ruby's older sister.
+- Rick and Linda are Ethan's parents. Their marital status is unspecified.
+- Current names: Morgan H. Walker; Ruby Bennett-Walker; Rowan Walker; Riley Walker;
+  Avery Bennett Walker. Hayes is Morgan's middle name and Walker her married
+  surname. Her explicit resulting configuration resolves the earlier verbal
+  contradiction. Avery has no hyphen; her name-field split is unselected.
+- These name decisions supersede former displayed surname forms in older
+  entries below. Preserve those entries as history; use current profiles for
+  production. Legacy directory and image filenames are retained for compatibility.
+- Parent written profiles are approved independently of art. No draft image,
+  saved illustration study, model sheet, chapter event, or story release gains
+  approval. Existing relatives' unselected visuals remain provisional.
+- Suggested childhood influences and causal explanations of adult habits
+  remain development proposals, with exact incidents and chronology open.
+
 ### 2026-11-13: Ethan and Cal Proportions Confirmed
 
 - The user explicitly confirmed Cal at 6'2" / approximately 188 cm and Ethan

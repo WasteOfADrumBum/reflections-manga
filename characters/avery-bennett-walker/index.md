@@ -1,4 +1,4 @@
-# Avery Bennett-Walker
+# Avery Bennett Walker
 
 Status: Written questionnaire specifications approved 2026-11-12.
 Written selections approved; user-supplied card registered for reuse. Unasked details remain open.
@@ -6,7 +6,8 @@ Written selections approved; user-supplied card registered for reuse. Unasked de
 ## Identity
 
 - First name: Avery (approved 2026-11-12).
-- Surname: Bennett-Walker.
+- Full display name: Avery Bennett Walker (approved 2026-11-13), without a hyphen.
+- Middle-name/surname field split: Unspecified; preserve the full name exactly as written.
 - Gender: Girl.
 - Age: 7 at the story's opening, confirmed 2026-11-12.
 - Height: 126 cm / approximately 4'2" (approved 2026-11-12).
@@ -26,6 +27,9 @@ Written selections approved; user-supplied card registered for reuse. Unasked de
 - [Wardrobe](wardrobe.md)
 
 ## Family
+
+- Grandparents through Ethan: [Richard "Rick" Walker](../richard-walker/index.md) and [Linda Walker](../linda-walker/index.md).
+- Grandparent [Thomas "Tom" Bennett](../thomas-bennett/index.md), through Ruby. Grandparent closeness and forms of address remain open.
 
 - Father: [Ethan Walker](../ethan-walker/index.md), 38.
 - Mother: [Ruby Bennett-Walker](../ruby-bennett-walker/index.md), 28.

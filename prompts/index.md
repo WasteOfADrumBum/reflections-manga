@@ -1,9 +1,10 @@
 # Prompt Library
 
 Updated: 2026-11-13.
-Status: Eleven draft reference-sheet prompts prepared; six user-saved family
-reference cards are present. The five supporting characters have no supplied
-images. Workflow and panel templates are available. No new images generated here.
+Status: Fifteen draft reference-sheet prompts prepared, including four based
+on approved parent written profiles. Existing family and supporting-character
+image records retain their individual approval limits; no parent images or
+master model sheets are approved. No new images generated here.
 
 ## Start a Manga Chapter
 
@@ -30,16 +31,25 @@ These are stage launchers, not one request to produce every stage immediately.
 | Character | Prompt | Specification status |
 |---|---|---|
 | Ethan Walker | [Reference sheet](../characters/ethan-walker/prompts/ethan-walker-reference-sheet.md) | Name/age/family approved; adult appearance and outfit remain drafts |
-| Morgan Hayes-Walker | [Reference sheet](../characters/morgan-hayes/prompts/morgan-hayes-walker-reference-sheet.md) | Name/age/family/ring practice approved; adult appearance and outfit remain drafts |
+| Morgan H. Walker | [Reference sheet](../characters/morgan-hayes/prompts/morgan-hayes-walker-reference-sheet.md) | Name/age/family/ring practice approved; adult appearance and outfit remain drafts |
 | Ruby Bennett-Walker | [Reference sheet](../characters/ruby-bennett-walker/prompts/ruby-bennett-walker-reference-sheet.md) | Name/age/family/ring practice approved; adult appearance, outfit, and exact ring details remain drafts |
-| Rowan Hayes-Walker | [Reference sheet](../characters/rowan-hayes-walker/prompts/rowan-hayes-walker-reference-sheet.md) | Written questionnaire specifications approved; new art remains a study |
-| Riley Hayes-Walker | [Reference sheet](../characters/riley-hayes-walker/prompts/riley-hayes-walker-reference-sheet.md) | Written questionnaire specifications approved; age approximately 6; new art remains a study |
-| Avery Bennett-Walker | [Reference sheet](../characters/avery-bennett-walker/prompts/avery-bennett-walker-reference-sheet.md) | Written questionnaire specifications approved; new art remains a study |
-| Caleb "Cal" Mercer | [Reference sheet](../characters/caleb-mercer/prompts/caleb-mercer-reference-sheet.md) | Supporting-character direction selected; exact age and detailed visual choices remain provisional |
+| Rowan Walker | [Reference sheet](../characters/rowan-hayes-walker/prompts/rowan-hayes-walker-reference-sheet.md) | Written questionnaire specifications approved; new art remains a study |
+| Riley Walker | [Reference sheet](../characters/riley-hayes-walker/prompts/riley-hayes-walker-reference-sheet.md) | Written questionnaire specifications approved; age approximately 6; new art remains a study |
+| Avery Bennett Walker | [Reference sheet](../characters/avery-bennett-walker/prompts/avery-bennett-walker-reference-sheet.md) | Written questionnaire specifications approved; new art remains a study |
+| Caleb "Cal" Mercer | [Reference sheet](../characters/caleb-mercer/prompts/caleb-mercer-reference-sheet.md) | Age 39 and supporting-character direction selected; detailed visual choices remain provisional |
 | Natalie "Nat" Greene | [Reference sheet](../characters/natalie-greene/prompts/natalie-greene-reference-sheet.md) | Same age as Morgan; glasses and tall/thin direction selected; detailed design remains provisional |
 | Autumn Bennett | [Reference sheet](../characters/autumn-bennett/prompts/autumn-bennett-reference-sheet.md) | Name confirmed; Ruby's older sister; exact age open; same-height direction and fuller/long-haired design study |
 | Ellie Greene | [Reference sheet](../characters/ellie-greene/prompts/ellie-greene-reference-sheet.md) | Age 9 and family established; height open; appearance, personality, and outfit remain proposals |
 | Owen Greene | [Reference sheet](../characters/owen-greene/prompts/owen-greene-reference-sheet.md) | Age approximately 6 and family established; exact age/height open; detailed design remains provisional |
+
+## Parent-Generation Reference Sheets
+
+| Character | Prompt | Specification status |
+|---|---|---|
+| Diane Hayes | [Reference sheet](../characters/diane-hayes/prompts/diane-hayes-reference-sheet.md) | Written profile approved; outfit combination and new artwork require review |
+| Thomas "Tom" Bennett | [Reference sheet](../characters/thomas-bennett/prompts/thomas-bennett-reference-sheet.md) | Written profile approved; outfit combination and new artwork require review |
+| Richard "Rick" Walker | [Reference sheet](../characters/richard-walker/prompts/richard-walker-reference-sheet.md) | Written profile approved; outfit combination and new artwork require review |
+| Linda Walker | [Reference sheet](../characters/linda-walker/prompts/linda-walker-reference-sheet.md) | Written profile approved; outfit combination and new artwork require review |
 
 ## Using the Prompts
 

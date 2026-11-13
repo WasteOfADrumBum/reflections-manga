@@ -1,4 +1,4 @@
-# Avery Bennett-Walker: Wardrobe
+# Avery Bennett Walker: Wardrobe
 
 Status: Questionnaire choices approved 2026-11-12.
 

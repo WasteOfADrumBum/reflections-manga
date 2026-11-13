@@ -1,4 +1,4 @@
-# Morgan Hayes-Walker: Wardrobe
+# Morgan H. Walker: Wardrobe
 
 Status: Draft v1
 

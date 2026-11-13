@@ -35,8 +35,8 @@ Status: Planning
 
 ## Current Milestone
 
-The family structure and all three children's written questionnaire choices
-are established. Six user-saved reference cards are present. Resolve relevant
+The family structure, all three children's written questionnaire choices,
+current displayed names, and four parent-generation written profiles are established. Six user-saved reference cards are present. Resolve relevant
 visual draft conflicts, develop Chapter 001 from its fictional story brief,
 and choose page standards before final page production. See the production
 walkthrough for the outline-to-PDF workflow.

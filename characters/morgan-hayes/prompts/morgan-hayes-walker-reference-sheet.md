@@ -1,4 +1,4 @@
-# Morgan Hayes-Walker: Reference-Sheet Prompt
+# Morgan H. Walker: Reference-Sheet Prompt
 
 Version: 1
 Updated: 2026-11-12
@@ -49,7 +49,7 @@ view. Each view depicts the same person; do not invent additional characters.
 The proposed reference-sheet layout does not establish manga page standards.
 Do not render labels, names, measurements, dialogue, watermarks, or logos.
 CHARACTER
-Morgan Hayes-Walker, a fictional 34-year-old adult woman, approximately 170 cm
+Morgan H. Walker, a fictional 34-year-old adult woman, approximately 170 cm
 tall. Athletic, balanced proportions, moderately defined shoulders and arms,
 a firm waist, and strong legs. Warm, lightly sun-kissed complexion with
 subtle freckles. Softly angular face, defined cheekbones, natural feminine
@@ -73,7 +73,8 @@ practical. Morgan does not wear a wedding ring. Do not add a ring, invent
 other jewelry, or turn wardrobe choices into permanent identifying traits.
 
 CONTINUITY
-Use Hayes-Walker, not the earlier Hayes-only name, and age 34, not 28.
+Use Morgan H. Walker: Hayes is her middle name and Walker her married surname.
+Do not hyphenate or treat Hayes Walker as a two-part surname. Use age 34, not 28.
 Her haircut remains below the shoulders; Riley's pixie cut must not transfer
 to Morgan. Her full relationship with Ethan and platonic friendship with Ruby
 do not require any additional person to appear on this individual sheet.

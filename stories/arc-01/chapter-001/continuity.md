@@ -17,6 +17,13 @@ The proposed cast and scene sequence are recorded in the [outline](outline.md)
 and [Story 001 chapter map](../concepts/story-001-three-hearts-different-needs.md#proposed-chapter-1-map-32-pages).
 No scenes, dialogue, page allocation, or chapter events have been approved.
 
+## Character Record Reconciliation: 2026-11-13
+
+Use Morgan H. Walker, Ruby Bennett-Walker, Rowan Walker, Riley Walker, and
+Avery Bennett Walker. Legacy character links remain stable. Approved parent
+profiles expand background canon; none of Diane, Tom, Rick, or Linda is added
+to this chapter's proposed cast or scenes. No chapter events or art are approved.
+
 ## Opening Script Batch: Pages 001–004
 
 Status: DRAFT v1 for review, 2026-11-13. The user authorized drafting these four

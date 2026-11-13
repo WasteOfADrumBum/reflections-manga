@@ -16,7 +16,7 @@ and personality suggestions remain proposals. No artwork is approved.
 - Mother: [Natalie "Nat" Greene](../natalie-greene/index.md).
 - Younger brother: [Owen Greene](../owen-greene/index.md), approximately 6.
 - Other parentage, full/half/adoptive sibling status, custody, and home are unspecified.
-- Same-age comparison: [Rowan Hayes-Walker](../rowan-hayes-walker/index.md).
+- Same-age comparison: [Rowan Walker](../rowan-hayes-walker/index.md).
   A possible playmate relationship was suggested; no meeting, shared class,
   school, or friendship history is established. Rowan is a boy.
 

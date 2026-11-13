@@ -1,4 +1,4 @@
-# Rowan Hayes-Walker
+# Rowan Walker
 
 Status: Written questionnaire specifications approved 2026-11-12.
 Written selections approved; user-supplied card registered for reuse. Unasked details remain open.
@@ -6,7 +6,7 @@ Written selections approved; user-supplied card registered for reuse. Unasked de
 ## Identity
 
 - First name: Rowan (approved 2026-11-12).
-- Surname: Hayes-Walker.
+- Surname: Walker (revised and approved 2026-11-13).
 - Gender: Boy.
 - Age: 9 at the story's opening.
 - Height: 130 cm / approximately 4'3" (approved 2026-11-12).
@@ -21,8 +21,11 @@ Written selections approved; user-supplied card registered for reuse. Unasked de
 
 ## Family
 
+- Grandparents through Ethan: [Richard "Rick" Walker](../richard-walker/index.md) and [Linda Walker](../linda-walker/index.md).
+- Grandparent [Diane Hayes](../diane-hayes/index.md), through Morgan. Grandparent closeness and forms of address remain open.
+
 - Father: [Ethan Walker](../ethan-walker/index.md), 38.
-- Mother: [Morgan Hayes-Walker](../morgan-hayes/index.md), 34.
+- Mother: [Morgan H. Walker](../morgan-hayes/index.md), 34.
 - Younger full sister: [Riley](../riley-hayes-walker/index.md), about 6.
 - Younger paternal half-sister: [Avery](../avery-bennett-walker/index.md), 7.
 - [Ruby](../ruby-bennett-walker/index.md) is also his mother and handles most daily

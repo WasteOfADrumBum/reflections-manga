@@ -1,4 +1,4 @@
-# Avery Bennett-Walker: Reference-Sheet Prompt
+# Avery Bennett Walker: Reference-Sheet Prompt
 
 Version: 1
 Updated: 2026-11-12
@@ -49,7 +49,7 @@ view. Each view depicts the same person; do not invent additional characters.
 The proposed reference-sheet layout does not establish manga page standards.
 Do not render labels, names, measurements, dialogue, watermarks, or logos.
 CHARACTER
-Avery Bennett-Walker, a fictional 7-year-old girl, 126 cm tall. Sturdy build
+Avery Bennett Walker, a fictional 7-year-old girl, 126 cm tall. Sturdy build
 with natural, age-appropriate child proportions. Fair skin with a neutral
 undertone. Noticeable freckles across the nose and cheeks. Hazel eyes with
 brown, golden, and green tones. Long auburn hair, often tied back; for this

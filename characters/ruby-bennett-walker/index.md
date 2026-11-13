@@ -39,19 +39,21 @@ friendship with Morgan is meaningful and platonic. Future incidents remain draft
 
 ## Family and Relationships
 
+- Daughter of [Thomas "Tom" Bennett](../thomas-bennett/index.md), 60, also Autumn's father. He raised both daughters without their mother present; her identity and fate remain unspecified.
+
 - Younger sister of [Autumn Bennett](../autumn-bennett/index.md), added 2026-11-13.
-  Autumn's surname is Bennett. Her exact age and their childhood history remain open.
+  Autumn's surname is Bennett. Her exact age and detailed childhood events remain open; their father-led household is recorded above.
 
 - Married to Ethan within the family's shared three-adult marital commitment.
 - Romantically and sexually involved with Ethan in a committed relationship.
-- Best friends and coparents with Morgan Hayes-Walker; they confide in one
+- Best friends and coparents with Morgan H. Walker; they confide in one
   another about their relationships with Ethan. Imperfect communication remains possible.
 - Ruby and Morgan have no romantic or sexual relationship with each other.
-- Mother of [Avery Bennett-Walker](../avery-bennett-walker/index.md), 7, fathered by Ethan.
+- Mother of [Avery Bennett Walker](../avery-bennett-walker/index.md), 7, fathered by Ethan.
   Avery is autistic; her selected communication and support preferences are
   recorded in her character profile.
-- Also a parent to [Rowan Hayes-Walker](../rowan-hayes-walker/index.md) and
-  [Riley Hayes-Walker](../riley-hayes-walker/index.md). All three children recognize
+- Also a parent to [Rowan Walker](../rowan-hayes-walker/index.md) and
+  [Riley Walker](../riley-hayes-walker/index.md). All three children recognize
   all three adults as parents.
 - Stepped back to focus on childcare and handles most daily care for all three
   children. Her exact employment status remains unspecified.

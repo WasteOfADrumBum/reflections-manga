@@ -15,7 +15,7 @@ losing the person they actually are?
 Reflections follows three fictional adults navigating
 different approaches to affection, independence, and identity.
 
-Ethan Walker (38), Morgan Hayes-Walker (34), and Ruby Bennett-Walker (28)
+Ethan Walker (38), Morgan H. Walker (34), and Ruby Bennett-Walker (28)
 share a committed polyamorous marriage. Ethan has a full romantic relationship
 with each woman. Morgan and Ruby are close platonic friends, with no romantic
 or sexual relationship to one another. Their friendship includes private
@@ -47,9 +47,21 @@ Avery sometimes ends up outside their pairing, but all three enjoy playing toget
 The user's suggested preferred mother-address forms are Mom for Morgan and
 Mommy for Ruby. Ethan calls Morgan Hun and Ruby Babe or Baby.
 
-Children's names approved 2026-11-12: Rowan Hayes-Walker (son), Riley Hayes-Walker (Morgan's daughter), and Avery Bennett-Walker (Ruby's daughter).
+Children's current names revised and approved 2026-11-13: Rowan Walker (son), Riley Walker (Morgan's daughter), and Avery Bennett Walker (Ruby's daughter).
 
-Family structure and adult ages approved 2026-11-12. Other proposals remain drafts.
+Family structure and central adult ages approved 2026-11-12. Morgan uses Hayes
+as her middle name and Walker as her surname, displayed Morgan H. Walker.
+Ruby's surname is Bennett-Walker; Avery's unhyphenated full name is preserved
+without deciding its field split.
+
+Parent generation approved 2026-11-13: Diane Hayes (58), Morgan's mother; Thomas
+"Tom" Bennett (60), Ruby and Autumn's father; Richard "Rick" Walker (65) and
+Linda Walker (62), Ethan's parents. Diane raised Morgan without a father in
+the household; Tom raised both daughters without their mother present. Those
+absent parents' identities and fates remain unspecified. See the approved
+written [parent profiles](../characters/index.md#approved-parent-generation).
+Suggested childhood influences remain proposals. Other existing visual draft
+choices are not approved by these parent designs.
 
 Through ordinary interactions and emotionally significant
 moments, the narrative explores how perception, expectation,

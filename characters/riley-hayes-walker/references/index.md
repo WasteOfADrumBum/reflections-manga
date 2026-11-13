@@ -1,4 +1,4 @@
-# Riley Hayes-Walker: Reference Images
+# Riley Walker: Reference Images
 
 Updated: 2026-11-12.
 Status: User-supplied card selected for future reference use. This record does
@@ -6,7 +6,7 @@ not silently approve every incidental image detail or change written canon.
 
 ## Current Card
 
-- [Riley Hayes-Walker reference sheet](riley-hayes-walker-reference-sheet-v1.png)
+- [Riley Walker reference sheet](riley-hayes-walker-reference-sheet-v1.png)
 - Version: v1.
 - Format: PNG, 1536 x 1024 pixels, 3:2 landscape.
 - Source: Manually saved by the user following the supplied character-card message.

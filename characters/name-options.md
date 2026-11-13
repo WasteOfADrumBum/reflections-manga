@@ -1,15 +1,17 @@
 # Children's Names
 
-Status: Approved by the user on 2026-11-12. These selections supersede earlier shortlists.
+Status: Initial names selected 2026-11-12; current names revised and approved
+2026-11-13. These selections supersede earlier shortlists and surname forms.
 
 | Child | Approved name | Parents |
 |---|---|---|
-| Son, 9 | Rowan Hayes-Walker | Ethan and Morgan |
-| Daughter, 7 | Avery Bennett-Walker | Ethan and Ruby |
-| Daughter, about 6 | Riley Hayes-Walker | Ethan and Morgan |
+| Son, 9 | Rowan Walker | Ethan and Morgan |
+| Daughter, 7 | Avery Bennett Walker | Ethan and Ruby |
+| Daughter, about 6 | Riley Walker | Ethan and Morgan |
 
-Profile directories now use the approved full names: rowan-hayes-walker,
-avery-bennett-walker, and riley-hayes-walker.
+Profile directories retain stable legacy identifiers: rowan-hayes-walker,
+avery-bennett-walker, and riley-hayes-walker. Filenames and identifiers do not
+define current displayed names or the unselected field split in Avery's name.
 
 ## Approved Measurements
 

@@ -1,5 +1,21 @@
 # Change Log
 
+## 2026-11-13: Approved Parent Profiles and Name Reconciliation
+
+- Added Diane Hayes, Thomas "Tom" Bennett, Richard "Rick" Walker, and Linda Walker
+  with approved written profiles, appearance, personality, wardrobe, reference
+  status records, and draft reference-sheet prompts.
+- Updated registry, family tree, reciprocal parent/grandparent links, relationship
+  canon, timeline, development questions, bible, README, and production records.
+- Applied Morgan H. Walker (Hayes middle name / Walker surname), Ruby Bennett-Walker,
+  Rowan Walker, Riley Walker, and Avery Bennett Walker across current text and
+  the site source. Preserved legacy IDs, image files, historical decisions, and
+  exact saved illustration prompts; old names in them are superseded.
+- Replaced site parent placeholders with the four named parents and written bios;
+  absent parents are not presented as pending character introductions.
+- No absent-parent fate, model-sheet approval, chapter event, release, or new
+  production deployment is authorized by these records.
+
 ## 2026-11-13: Cal Is 39; Ages and Roles on the Site Tree
 
 - USER-APPROVED: Caleb "Cal" Mercer is 39, one year older than Ethan. Updated

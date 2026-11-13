@@ -6,7 +6,7 @@ Riley remains approximately 6. Heights approved: Rowan 130 cm, Riley 110 cm, Ave
 ```mermaid
 block-beta
   columns 5
-  M["Morgan Hayes-Walker, 34"]:2 E["Ethan Walker, 38"] R["Ruby Bennett-Walker, 28"]:2
+  M["Morgan H. Walker, 34"]:2 E["Ethan Walker, 38"] R["Ruby Bennett-Walker, 28"]:2
   space EM((" ")) space ER((" ")) space
   C1["Rowan, 9"] C3["Riley, about 6"] space C2["Avery, 7"]:2
 
@@ -24,7 +24,9 @@ block-beta
 The top row shows Morgan on the left, Ethan in the middle, and Ruby on the right.
 Arrows from Ethan to each woman indicate their romantic relationships.
 Each small circle joins two parents' lines; arrows below it lead to their children.
-Morgan's children use Hayes-Walker; Ruby's daughter uses Bennett-Walker.
+Morgan's children are Rowan Walker and Riley Walker. Ruby's daughter is Avery
+Bennett Walker, without a hyphen; her mother remains Ruby Bennett-Walker.
+Morgan uses Hayes as her middle name and Walker as her surname, displayed Morgan H. Walker.
 All three adults share a marital commitment. Morgan and Ruby are platonic.
 They married in one shared ceremony, with Ethan between the two women; the
 diagram's left/right layout does not establish ceremony sides. Legal recognition
@@ -55,6 +57,28 @@ Ruby handles most daily care for all three children. Morgan works part-time
 and is the firmer disciplinary mother; Ethan works full-time. The user's
 suggested preferred mother-address forms are Mom for Morgan and Mommy for Ruby.
 
+## Approved Parent Generation
+
+Written profiles and these parent connections approved 2026-11-13.
+
+```mermaid
+flowchart TB
+  D["Diane Hayes, 58"] --> M["Morgan H. Walker, 34"]
+  L["Linda Walker, 62"] --> E["Ethan Walker, 38"]
+  K["Richard / Rick Walker, 65"] --> E
+  T["Thomas / Tom Bennett, 60"] --> R["Ruby Bennett-Walker, 28"]
+  T --> A["Autumn Bennett, around 34"]
+```
+
+Diane is Rowan and Riley's grandmother through Morgan; Tom is Avery's
+grandfather through Ruby. Rick and Linda are grandparents to all three
+children through Ethan. These lines establish parentage, not residence,
+marital status, caregiving duties, or emotional closeness.
+
+Morgan was raised without a father in the household. Ruby and Autumn were
+raised without their mother present. No name, fate, reason for absence, death,
+divorce, or estrangement is established for those absent parents.
+
 ## Extended Family and Friends
 
 Supporting-cast relationships selected 2026-11-13:
@@ -66,11 +90,11 @@ Supporting-cast relationships selected 2026-11-13:
 | [Caleb "Cal" Mercer](caleb-mercer/index.md) and Ethan | Best friends | Meeting, duration, and shared history remain open |
 | Nat and Morgan | Best friends outside the shared household | Morgan and Ruby's best-friend/coparent bond is also preserved |
 
-These connections add no parenting or residence lines to the central household.
+These supporting friends and sibling connections add no new parenting or
+residence lines to the central household. Grandparent lines are recorded above.
 Ellie matches Rowan's age; Owen matches Riley's approximate age. Equal ages do
 not establish shared schools or existing friendships. The user confirmed the
-names Autumn Bennett and Ruby Bennett-Walker on 2026-11-13. Avery remains
-Avery Bennett-Walker.
+names Autumn Bennett and Ruby Bennett-Walker on 2026-11-13. Avery's revised name is Avery Bennett Walker, approved 2026-11-13.
 
 ## Approximate Parent Ages at Birth
 

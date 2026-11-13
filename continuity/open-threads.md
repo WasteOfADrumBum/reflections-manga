@@ -91,6 +91,21 @@ Review those choices and the four-page pacing before continuing pages 005–010.
   introductions for all five. The five supporting-character prompts remain
   provisional studies; no supporting-character images or chapter events are approved.
 
+## Parent-Generation Decisions: 2026-11-13
+
+Written parent identities, ages, heights, appearance, personality, wardrobe,
+and family resemblance directions are approved in the [registry](../characters/index.md#approved-parent-generation).
+Still open: birthdays, occupations, residences, voice, recurring accessories,
+grandparent address forms and bonds, caregiving, visits, reactions to the
+marriage, Rick/Linda's marital status, and chapter introductions.
+
+Morgan's absent father and Ruby/Autumn's absent mother have no established
+identity, fate, or reason for absence. No decision is required before a story
+needs those details. Suggested childhood influences are proposals.
+Parent reference prompts are draft study instructions; no images or model
+sheets are approved. Morgan's naming configuration is resolved; Avery's
+middle-name/surname field split remains unspecified and need not be inferred.
+
 ## Template
 
 - Thread:

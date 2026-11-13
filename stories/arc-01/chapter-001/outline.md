@@ -24,8 +24,8 @@ expressing them within their loving family.
 
 ## Characters
 
-Proposed cast: Ethan Walker, Morgan Hayes-Walker, Ruby Bennett-Walker,
-Rowan Hayes-Walker (9), Avery Bennett-Walker (7), and Riley Hayes-Walker
+Proposed cast: Ethan Walker, Morgan H. Walker, Ruby Bennett-Walker,
+Rowan Walker (9), Avery Bennett Walker (7), and Riley Walker
 (approximately 6). Use current profiles and the [continuity notes](continuity.md).
 Ellie and Owen Greene are Natalie's children; the source map's household-child
 references are reconciled explicitly in the concept, not adopted as new canon.

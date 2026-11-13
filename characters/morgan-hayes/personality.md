@@ -1,4 +1,4 @@
-# Morgan Hayes-Walker: Personality
+# Morgan H. Walker: Personality
 
 Status: Draft v1
 

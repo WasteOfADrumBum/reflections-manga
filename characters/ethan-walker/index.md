@@ -40,15 +40,17 @@ He also contributes to conflicts. Planned incidents and resolutions remain draft
 
 ## Family and Relationships
 
+- Son of [Richard "Rick" Walker](../richard-walker/index.md), 65, and [Linda Walker](../linda-walker/index.md), 62.
+
 - Best friend of [Caleb "Cal" Mercer](../caleb-mercer/index.md), added 2026-11-13.
   Their meeting and shared history remain open.
 
-- Husband to Morgan Hayes-Walker and Ruby Bennett-Walker within their shared
+- Husband to Morgan H. Walker and Ruby Bennett-Walker within their shared
   three-adult marital commitment.
 - Maintains a full, committed romantic and sexual relationship with each woman.
-- Father of [Rowan Hayes-Walker](../rowan-hayes-walker/index.md), 9, and
-  [Riley Hayes-Walker](../riley-hayes-walker/index.md), approximately 6, with Morgan.
-- Father of [Avery Bennett-Walker](../avery-bennett-walker/index.md), 7, with Ruby.
+- Father of [Rowan Walker](../rowan-hayes-walker/index.md), 9, and
+  [Riley Walker](../riley-hayes-walker/index.md), approximately 6, with Morgan.
+- Father of [Avery Bennett Walker](../avery-bennett-walker/index.md), 7, with Ruby.
 - His relationship with each spouse is distinct and emotionally complicated.
 - The three knew one another through different jobs in the same building,
   socialized outside work, and established V-polyamory before moving in together

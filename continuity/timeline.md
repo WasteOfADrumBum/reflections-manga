@@ -44,11 +44,24 @@ adults as parents. When these work and parenting roles began remains open.
 Recorded 2026-11-13 as character development, not an in-universe event date.
 Nat is 34, matching Morgan; Ellie is 9, matching Rowan; Owen is approximately 6,
 matching Riley's open age target. Autumn is older than Ruby and approximately
-Morgan's age, without a finalized exact age. Cal's exact age is open; an age
-near Ethan's was proposed. See the [registry](../characters/index.md).
+Morgan's age, without a finalized exact age. Cal is 39, one year older than
+Ethan, as already selected by the user. See the [registry](../characters/index.md).
 
 No friendship beginnings, childhood events, births on calendar dates, recovery
 milestones, visits, or chapter appearances are added to the event sequence.
+
+## Parent-Generation Snapshot: Recorded 2026-11-13
+
+Diane is 58; Tom is 60; Rick is 65; Linda is 62 at the opening snapshot.
+Diane is Morgan's mother and raised her without a father in the household. Tom
+is Ruby and Autumn's father and raised both without their mother present.
+Rick and Linda are Ethan's parents. No birthdays, exact ages at births, absence
+dates or reasons, deaths, divorces, visits, or new chronological events are
+established. The production approval date is not an in-universe date.
+
+Current display names were revised in production on 2026-11-13: Morgan H. Walker,
+Rowan Walker, Riley Walker, Avery Bennett Walker; Ruby remains Bennett-Walker.
+Do not infer the in-universe date of a name change from that record date.
 
 ## Rules
 

@@ -461,6 +461,11 @@ a.ft-node:hover .ft-face { transform: scale(1.05); box-shadow: 0 0 0 4px var(--p
 .ft-node[aria-expanded="true"] .ft-nm { color: var(--accent); }
 .ft-node:focus-visible { outline-offset: 2px; }
 
+/* Named parents awaiting artwork use initials instead of invented portraits. */
+.ft-initials { display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: max(0.85rem, 1.8cqw); }
+.ft-parent .ft-nm { font-size: max(0.78rem, 1.15cqw); }
+.ft-parent .ft-ag { font-size: max(0.68rem, 1cqw); }
+
 /* Relatives who have not been introduced: a question mark instead of a face */
 .ft-unknown .ft-face {
   display: grid; place-items: center; border: 2.5px dashed var(--ink-soft); background: transparent;
@@ -484,6 +489,8 @@ a.ft-node:hover .ft-face { transform: scale(1.05); box-shadow: 0 0 0 4px var(--p
   .ft-nm { font-size: max(0.85rem, 4cqw); }
   .ft-ag, .ft-role { font-size: max(0.72rem, 3cqw); }
   .ft-role { font-size: max(0.66rem, 2.8cqw); }
+  .ft-parent .ft-nm { font-size: max(0.72rem, 3cqw); }
+  .ft-parent .ft-ag { font-size: max(0.65rem, 2.6cqw); }
   .ft-unknown .ft-face { font-size: 5cqw; border-width: 2px; }
   .ft-unknown .ft-ag { font-size: max(0.68rem, 2.8cqw); text-transform: capitalize; }
   .ft-own { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
