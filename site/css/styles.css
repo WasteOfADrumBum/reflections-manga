@@ -223,6 +223,16 @@ p { margin: 0 0 1em; }
   .panel:nth-child(2) { transform: rotate(1.6deg); }
 }
 
+/* Hero family illustration */
+.hero-family { margin: 0; position: relative; border: 3px solid var(--rule); background: #e9e7e3; box-shadow: var(--shadow); }
+.hero-family img { width: 100%; height: auto; display: block; }
+.hero-family figcaption {
+  position: absolute; left: 0.5rem; bottom: 0.5rem; right: 0.5rem; width: fit-content; max-width: calc(100% - 1rem);
+  background: var(--paper); color: var(--ink); border: 2px solid var(--rule);
+  font-weight: 700; font-size: 0.85rem; padding: 0.1rem 0.5rem;
+}
+@media (min-width: 56rem) { .hero-family { transform: rotate(-1deg); } }
+
 /* Sections */
 .section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
 .section + .section { border-top: 3px solid var(--rule); }
