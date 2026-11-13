@@ -3,6 +3,10 @@
 Status: User-directed silhouette and presentation; detailed design study pending approval.
 Recorded 2026-11-13.
 
+Height 6'2" / approximately 188 cm explicitly confirmed by the user during the
+carry-study correction. Cal is about 10 cm taller than Ethan, not shorter or
+compressed in shared compositions. Both remain realistically proportioned adults.
+
 ## User-Directed Appearance
 
 - Approximately 6'2" / 188 cm; taller than Ethan's current 178 cm draft.

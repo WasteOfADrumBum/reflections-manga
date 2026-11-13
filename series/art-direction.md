@@ -49,6 +49,15 @@ Do not depict autism through invented facial or physical markers.
 - Reserve negative space for dialogue
 - Keep backgrounds and lighting continuous within scenes
 
+## Intimacy and Mature Content
+
+Apply the shared [Intimacy and Mature Content Guidelines](../production/intimacy-and-mature-content.md)
+across all 15 interconnected stories and their chapters, from scene planning
+through artwork and QA. Maintain that document as the single source for this
+production guidance instead of repeating it in individual chapters.
+It does not approve story events or replace character canon, continuity,
+or the chapter approval process.
+
 ## Color
 
 Muted, natural color palette with restrained highlights.

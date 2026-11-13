@@ -20,3 +20,9 @@ masters. The proposed 3:2 study layout does not establish manga page standards.
 Save Nat's PNG in this references folder as:
 `natalie-greene-reference-sheet-v1.png`.
 The file is present; site use does not make it an approved master. For later revisions, retain v1 and use v2, v3, and so on.
+
+## Vegetable truck study: 2026-11-13
+
+The user supplied an attached fictional sheet for this standalone illustration.
+See the [image versions, exact inputs, prompts, and review notes](../../../assets/drafts/morgan-natalie-vegetable-truck-study.md).
+Study use does not approve a master model sheet, permanent traits, or chapter events.

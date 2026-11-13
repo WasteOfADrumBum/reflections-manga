@@ -48,6 +48,12 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
 
 ## Remaining
 
+- Story 001 now has a [detailed proposed 32-page opening map](../stories/arc-01/concepts/story-001-three-hearts-different-needs.md#proposed-chapter-1-map-32-pages)
+  and [Chapter 001 draft outline](../stories/arc-01/chapter-001/outline.md),
+  recorded 2026-11-13. Review the map, child-beat adaptations, dialogue, day
+  transitions, and proposed allocation before scripting. All new execution
+  remains DRAFT pending approval; scripts and storyboards are still scaffolds.
+
 - Resolve supporting-cast details in the [open decisions](../continuity/open-threads.md#supporting-cast-decisions-2026-11-13),
   including Autumn's exact age, Cal's exact age, final visual traits, histories,
   and Ellie/Owen's designs. No supporting-character artwork is supplied.
@@ -60,8 +66,8 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
   without importing private real-life material.
 - Establish page dimensions, resolution, reading direction, and lettering.
 - Develop Chapter 001 through the production pipeline.
-- Expand Three Hearts, Different Needs as the foundation concept, selecting
-  chapter scope and page standards before art. The 3 x 18-24-page Weight of
+- Review Three Hearts, Different Needs as the proposed 32-page foundation
+  chapter, selecting scope and page standards before art. The 3 x 18-24-page Weight of
   Everything example is a separate uncommitted expansion proposal.
 
 ## Publication

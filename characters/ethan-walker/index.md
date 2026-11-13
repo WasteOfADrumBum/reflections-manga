@@ -2,6 +2,9 @@
 
 Status: Name, adult age, and family relationships approved 2026-11-12.
 Appearance, personality, and wardrobe details remain existing drafts unless explicitly approved.
+Height 5'10" / approximately 178 cm and realistic dad-bod build explicitly
+confirmed by the user during the 2026-11-13 art correction. Other visual details
+retain their existing approval states.
 
 ## Identity
 

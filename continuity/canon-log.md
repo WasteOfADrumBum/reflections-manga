@@ -2,6 +2,16 @@
 
 ## Approved Canon
 
+### 2026-11-13: Ethan and Cal Proportions Confirmed
+
+- The user explicitly confirmed Cal at 6'2" / approximately 188 cm and Ethan
+  at 5'10" / approximately 178 cm, with Ethan retaining a softly rounded dad bod.
+- The first comic carry study was rejected for making Ethan look too tall and
+  lean and Cal too short. A corrected v2 is an unapproved standalone art study.
+- These confirmations supersede earlier draft-height labels for these two men.
+  No other permanent visual traits, romantic relationship, or chapter event
+  are established. See [study record](../assets/drafts/ethan-caleb-carry-study.md).
+
 ### 2026-11-13: Bennett Names and Directory Correction
 
 - The user confirmed Autumn Bennett and Ruby Bennett-Walker, then clarified

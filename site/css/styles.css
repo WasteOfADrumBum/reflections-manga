@@ -483,6 +483,15 @@ html:not(.js) .js-only { display: none !important; }
 .ft-row .ft-label { white-space: normal; text-align: center; }
 @container ft (max-width: 34rem) { .ft-row-item { flex-basis: 33.333%; } }
 
+/* Illustrations under the cast: widths follow each image's shape so a row shares one height */
+.moments { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.moment { margin: 0; flex: var(--ar, 1) 1 0; min-width: 0; border: 3px solid var(--rule); background: var(--card); box-shadow: var(--shadow); }
+.moment-wide { flex-basis: 100%; }
+.moment img { display: block; width: 100%; height: auto; }
+.moment figcaption { padding: 0.6rem 0.9rem; border-top: 3px solid var(--rule); color: var(--ink-soft); font-size: 0.95rem; }
+.moment figcaption strong { color: var(--ink); font-family: var(--font-display); margin-right: 0.35rem; }
+@media (max-width: 40rem) { .moment { flex-basis: 100%; } }
+
 /* Panel */
 .cast-panel { container-type: inline-size; }
 html:not(.js) .cast-panel { display: grid; gap: 2rem; }

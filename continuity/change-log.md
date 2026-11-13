@@ -1,5 +1,88 @@
 # Change Log
 
+## 2026-11-13: Indoor Shared-Wedding Portrait Study
+
+- Generated the requested indoor wedding portrait with Ethan centered, holding
+  Morgan's and Ruby's hands, smiling outward while both women look lovingly at him.
+- Used and archived the three attached outfit sheets: Ethan's black suit,
+  Morgan's ivory lace blouse/blush skirt, and Ruby's lace gown and short veil.
+- Saved the image, exact inputs, prompt, visual review, and continuity limits
+  under assets/drafts. Output approval remains open; no master replaced.
+- Preserved established shared-ceremony context without fixing historical
+  ceremony sides, venue, date, ages, legal status, or everyday ring practices.
+- No chapter release, publication, or production deployment performed.
+
+## 2026-11-13: Pajama Chase Alternative Rendered
+
+- The user accepted Morgan's black button-up pajama top and relaxed shorts,
+  keeping Ruby's navy set and the offered playful chase pose.
+- Generated and saved a new standalone image: Ethan hugging Ruby while Morgan
+  catches the back of his shirt, with all three laughing. Saved the exact Ruby
+  input, successful prompt, source links, and review notes under assets/drafts.
+- Updated the earlier unrendered-attempt record with the follow-up decision.
+  Clothing selection does not approve the image or permanent wardrobes.
+- No master replaced, canonical relationship changed, chapter event approved,
+  publication, deployment, or release performed. Image review remains open.
+
+## 2026-11-13: Pajama Chase Attempt Not Rendered
+
+- Attempted the user's new pajama references with the offered playful chase
+  pose: Ethan hugging Ruby while Morgan catches Ethan's shirt hem.
+- The built-in image tool rejected the input; no image was produced. Saved
+  the attempted prompt and outcome under assets/drafts without claiming a
+  completed asset, wardrobe approval, or chapter event.
+- A black button-up pajama alternative for Morgan remains a user decision.
+
+## 2026-11-13: Playful Three-Adult Bedroom Portrait Study
+
+- Created a standalone portrait conveying Morgan leading Ethan's pose while
+  Ethan leads Ruby's, preserving both marriages and Morgan/Ruby's platonic bond.
+- The image tool rejected the lingerie-based request. Informed the user and
+  generated a materially different, nonsexual version in opaque sleepwear
+  and robes using the existing clothed identity sheets.
+- Saved the image, successful prompt, source links, rendering limitation, and
+  review notes under assets/drafts. Output remains pending user review.
+- No new chapter event, permanent wardrobe, sexual practice, room layout,
+  canon revision, publication, or production deployment established.
+
+## 2026-11-13: Series-Wide Intimacy Production Guidance
+
+- Linked production/intimacy-and-mature-content.md from the shared visual style
+  guide, explicitly applying it across all 15 interconnected stories and their
+  chapters, from planning through art and QA.
+- Kept the guidance centralized without duplicating it in chapter files.
+  No story events, character facts, or creative approval states changed.
+
+## 2026-11-13: Story 001 Proposed 32-Page Opening Map
+
+- Retrieved the full fictional chapter proposal from the referenced Chapter Map
+  Write chat and recorded its detailed beats, sample dialogue, internal narration,
+  alternatives, and page ranges in Story 001. Linked a Chapter 001 outline summary.
+- Marked the adaptation, proposed title, 32-page allocation, scenes, dialogue,
+  and developments DRAFT pending approval. Saving is not creative approval.
+- Explicitly reconciled the source's Ellie/Owen household-child references with
+  current canon: they are Natalie's children. Proposed Rowan/Avery/Riley scene
+  assignments instead, preserving parentage, traits, communication, and bonds.
+- Updated chapter continuity, chapter/arc registries, production status, and open
+  decisions. Kept "Dad," exact interactions, transitions, staging, standards,
+  and carry-forward consequences unresolved where appropriate.
+- No character profile, approved relationship record, canonical event timeline,
+  completed script, storyboard, art, release index, commit, or push changed by
+  this planning update. Existing unrelated working changes are preserved.
+
+## 2026-11-13: Standalone Sisters and Vegetable Truck Illustrations
+
+- Saved Autumn encouraging Ruby's awkward smile and the requested full-body
+  portrait revision, with exact attached inputs, prompts, and review notes.
+- Saved Morgan in the open driver's doorway smoking while Natalie loads
+  vegetable crates into an old square-body pickup.
+- Retained truck v1 as too short, v2 as rejected for excessive length, and v3
+  as the requested moderate midpoint pending review. Preserved every version.
+- Linked the studies from the relevant reference records without replacing
+  any existing masters or changing prior website-use approvals.
+- No canonical chapter events, permanent smoking habit, farm ownership,
+  employment history, production deployment, or release established.
+
 ## 2026-11-13: Supporting Cast on the Site Characters Page
 
 - Added Nat, Ellie, Owen, Cal, and Autumn to site/characters.html as a
@@ -13,6 +96,17 @@
   references-folder file, not the archived carry input.
 - The user approved these five draft sheets for the public site on 2026-11-13.
   The source PNGs stay git-ignored; no master model sheet is approved by this use.
+
+## 2026-11-13: Ethan and Cal Comic Carry Study
+
+- Generated a standalone best-friends carry illustration from the two supplied
+  fictional sheets using the built-in image tool.
+- Preserved rejected v1, generated corrected v2, and saved both plus exact input
+  copies and prompts under assets/drafts. V2 awaits user review.
+- Recorded the user's explicit height confirmations (Cal 188 cm, Ethan 178 cm)
+  and Ethan's soft dad-bod requirement in the profiles and canon log.
+- Registered Cal's supplied input for this study without approving a master
+  model sheet, rewriting chapter continuity, or releasing a story.
 
 ## 2026-11-13: Bennett Names and Matching Directories
 

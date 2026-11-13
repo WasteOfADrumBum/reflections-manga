@@ -2,6 +2,11 @@
 
 Status: Draft v1
 
+Height 5'10" / approximately 178 cm and a realistic dad bod explicitly confirmed
+2026-11-13. Keep a softly rounded midsection and ordinary adult proportions;
+do not stretch or lean him out when composing him beside Cal (6'2" / 188 cm).
+Other appearance details remain the existing visual draft.
+
 Adult man approximately 178 cm tall.
 
 Moderately broad shoulders, naturally strong upper arms,

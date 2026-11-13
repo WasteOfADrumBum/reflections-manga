@@ -11,7 +11,7 @@ below. Detailed prior assistant suggestions remain proposals, not fixed canon.
 
 | Character | Age | Height | Status |
 |---|---:|---|---|
-| [Ethan Walker](ethan-walker/index.md) | 38 | 5'10" / 178 cm | Age approved; height remains existing draft |
+| [Ethan Walker](ethan-walker/index.md) | 38 | 5'10" / 178 cm | Age approved; height and dad bod confirmed 2026-11-13 |
 | [Morgan Hayes-Walker](morgan-hayes/index.md) | 34 | 5'7" / 170 cm | Age approved; height remains existing draft |
 | [Ruby Bennett-Walker](ruby-bennett-walker/index.md) | 28 | 5'0" / 152 cm | Age approved; height remains existing draft |
 
@@ -41,7 +41,8 @@ User-supplied character cards are registered for reuse; see each profile's refer
 
 Nat's friendship does not replace Morgan and Ruby's established friendship.
 The user confirmed Autumn Bennett and Ruby Bennett-Walker; Bennett has two t's.
-The relative height directions do not finalize Ethan's or Ruby's draft measurements.
+Ethan's 178 cm and Cal's 188 cm were explicitly confirmed 2026-11-13.
+Ruby's 152 cm remains a draft measurement.
 
 ## Natalie's Children
 
@@ -52,7 +53,8 @@ The relative height directions do not finalize Ethan's or Ruby's draft measureme
 
 Other parentage, full/half/adoptive sibling status, school, and household details
 are unspecified. Proposed friendships with Rowan and Riley are not established
-chapter events. No supporting-character images are supplied or approved.
+chapter events. Cal's user-supplied sheet is used for a standalone carry study;
+no supporting-character model sheet is approved by that use.
 
 ## References
 
