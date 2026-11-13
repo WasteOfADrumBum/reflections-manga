@@ -1,5 +1,47 @@
 # Change Log
 
+## 2026-11-13: Revised Beach Image Added to Illustrations
+
+- Copied beach day v2 to assets/illustrations/ethan-morgan-ruby-beach-day-v2.png
+  at the user's request, preserving the draft source.
+- Verified the copy is byte-for-byte identical, 1536 x 1024 PNG. Added its
+  description, SHA-256, source, study, and revision-prompt links to the index;
+  updated the collection count from six to seven.
+- Preserved existing collection entries and creative approval states.
+  No website publication, production deployment, or chapter release performed.
+
+## 2026-11-13: Beach Scene Depth and Scale Revision
+
+- Created v2 at the user's request: Morgan seated on a larger surfboard in
+  the shallows, Ruby and her towel farther back, and a taller umbrella pole
+  with clear canopy height. Ethan and the sandcastle remain in the foreground.
+- Ruby's full reclining figure and the umbrella canopy now fit inside the frame.
+  Saved the revision and exact correction prompt; retained v1 and source sheets.
+- Changed scene perspective and prop proportions without changing character
+  ages, permanent appearance, approved masters, or chapter continuity.
+- V2 awaits user review; no story release, publication, or deployment performed.
+
+## 2026-11-13: Three-Adult Beach Day Study
+
+- Generated the requested scene: Morgan with a surfboard, Ethan seated building
+  a sandcastle, and Ruby reclining with a book under a beach umbrella.
+- Used and archived the three supplied beach-outfit sheets. Saved the image,
+  exact inputs, prompt and visual review under assets/drafts.
+- Recorded v1's cropped right/lower edge for Ruby and umbrella-top framing;
+  output approval remains open.
+- No new chapter event, permanent hobby, beach location, accessory practice,
+  master replacement, release or production deployment established.
+
+## 2026-11-13: Illustrations Index Expanded to Six Images
+
+- Indexed the three user-added Ethan/Morgan/Ruby illustrations: bedroom portrait,
+  indoor wedding portrait, and pajama chase.
+- Verified all three are 1536 x 1024 PNGs and byte-for-byte matches of their
+  saved draft sources. Recorded descriptions, SHA-256 hashes, and study links.
+- Distinguished the three existing website selections from the new local
+  additions, which do not yet have website copies. Preserved source review
+  states and existing canon; no image files, website content, or masters changed.
+
 ## 2026-11-13: Indoor Shared-Wedding Portrait Study
 
 - Generated the requested indoor wedding portrait with Ethan centered, holding

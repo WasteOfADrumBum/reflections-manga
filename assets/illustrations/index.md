@@ -1,12 +1,31 @@
 # Illustrations
 
-Standalone character illustrations selected by the user on 2026-11-13 for the
-repo and the series website. Each is a copy of the draft version the user chose.
-Web copies live in `site/images/moments/`.
+Standalone character illustrations collected by the user on 2026-11-13.
+Seven PNGs are indexed below; each is a byte-for-byte copy of its linked draft source.
+
+The original Ethan/Cal, Ruby/Autumn, and Morgan/Nat selections have website
+copies in `site/images/moments/`. The four Ethan/Morgan/Ruby illustrations
+were added by the user to this collection; website copies are not yet present.
+Their source studies retain their recorded review status. Adding them here
+does not independently approve model sheets or chapter artwork.
 
 These are standalone art, not chapter events. They do not approve model sheets
 or establish story facts (for example a smoking habit, a farm, or a truck).
 Written profiles and reference sheets still take precedence for character details.
+
+## Ethan, Morgan, and Ruby: Beach Day
+
+- [ethan-morgan-ruby-beach-day-v2.png](ethan-morgan-ruby-beach-day-v2.png)
+- Format: PNG, 1536 x 1024 pixels.
+- Source: byte-for-byte copy of [beach day draft v2](../drafts/ethan-morgan-ruby-beach-day-v2.png).
+- SHA-256: c358e49d6579f95771fefb8f77eed5de9fed5d2885870cc6e250403b0fde130f.
+- Shows: Ethan seated in the foreground building a sandcastle; Morgan sitting
+  on a larger surfboard in the water; Ruby farther back reading on a towel
+  beneath a raised beach umbrella.
+- [Source study and continuity notes](../drafts/ethan-morgan-ruby-beach-day-study.md).
+- [Revision prompt and review](../drafts/ethan-morgan-ruby-beach-day-v2-prompt.md).
+- Status: Added to the collection at the user's request. Collection selection
+  does not independently approve model sheets, permanent traits, or chapter events.
 
 ## Ethan and Cal
 
@@ -31,3 +50,44 @@ Written profiles and reference sheets still take precedence for character detail
 - Source: byte-for-byte copy of `assets/drafts/morgan-natalie-vegetable-truck-v3.png`.
 - SHA-256: 5f3e8816127065d13b7cbc90d05a1ce5fe2ded5f2399fdc319f5740335e983c2.
 - Shows: Morgan and her best friend, Nat.
+
+## Ethan, Morgan, and Ruby: Bedroom Portrait
+
+- [ethan-morgan-ruby-bedroom-portrait-v1.png](ethan-morgan-ruby-bedroom-portrait-v1.png)
+- Format: PNG, 1536 x 1024 pixels.
+- Source: byte-for-byte copy of [bedroom portrait draft v1](../drafts/ethan-morgan-ruby-bedroom-portrait-v1.png).
+- SHA-256: 3c41facff2819bfa224885483d677cbb9b2aad5b24140122815009c574e09f18.
+- Shows: Morgan standing beside seated Ethan and Ruby in a warmly lit bedroom.
+  Morgan playfully guides Ethan's chin while Ethan gently guides Ruby's chin;
+  all three wear opaque sleepwear and robes.
+- [Source study and continuity notes](../drafts/ethan-morgan-ruby-bedroom-portrait-study.md).
+- Status: Added to the collection by the user; source output review remains open.
+  The room, poses, and clothing do not establish permanent character details.
+
+## Ethan, Morgan, and Ruby: Indoor Wedding Portrait
+
+- [ethan-morgan-ruby-indoor-wedding-v1.png](ethan-morgan-ruby-indoor-wedding-v1.png)
+- Format: PNG, 1536 x 1024 pixels.
+- Source: byte-for-byte copy of [indoor wedding draft v1](../drafts/ethan-morgan-ruby-indoor-wedding-v1.png).
+- SHA-256: f69fbb0a43091d0e03082312b7549b63e42ef552c1bd2e4b0f6db6fd5b25fe2e.
+- Shows: Ethan centered in a black suit, holding Morgan's and Ruby's hands.
+  He smiles toward the viewer while both women look lovingly toward him;
+  cream drapery and blush flowers frame the indoor portrait.
+- [Source study and continuity notes](../drafts/ethan-morgan-ruby-indoor-wedding-study.md).
+- Status: Added to the collection by the user; source output review remains open.
+  The established shared ceremony is the context; this staging does not fix
+  historical ceremony sides, venue, date, ages, or everyday ring practices.
+
+## Ethan, Morgan, and Ruby: Pajama Chase
+
+- [ethan-morgan-ruby-pajama-chase-v1.png](ethan-morgan-ruby-pajama-chase-v1.png)
+- Format: PNG, 1536 x 1024 pixels.
+- Source: byte-for-byte copy of [pajama chase draft v1](../drafts/ethan-morgan-ruby-pajama-chase-v1.png).
+- SHA-256: 8defd29812650f84367baf90e1ff9b2a93042b13e92c58bebf8d0c9cc8440e12.
+- Shows: Ethan hugging Ruby around the waist while Morgan catches the back
+  of his shirt during a playful bedroom chase. Morgan wears black pajamas,
+  Ruby navy pajamas, and Ethan a sage henley with dark pajama trousers.
+- [Source study and continuity notes](../drafts/ethan-morgan-ruby-pajama-chase-study.md).
+- Status: Added to the collection by the user; source output review remains open.
+  The selected scene wardrobe and direction do not approve permanent wardrobes
+  or establish a chapter event.
