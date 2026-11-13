@@ -15,6 +15,12 @@ Everything outside this `site/` folder is the manga's working material and is no
 2. List them in `site/js/chapters.js` with descriptive `alt` text for each page (what happens and what is said).
 3. Merge to `main`. Vercel deploys automatically.
 
+## Character relationships
+
+Each bio's Relationships list comes from `site/js/relationships.js`. Add one line per relationship,
+for example `{ type: "Friend", people: ["Jordan"], note: "(Ruby's friend from ballet)" }`.
+Character ids become links to that bio; any other name shows as plain text.
+
 ## Character images
 
 `images/characters/` holds web-sized copies of the reference sheets in `characters/*/references/`.

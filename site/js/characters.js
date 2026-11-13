@@ -34,6 +34,40 @@
     });
   });
 
+
+  // Relationships: rendered from js/relationships.js so new ones are a single data line.
+  (function renderRelationships() {
+    var data = window.REFLECTIONS_RELATIONSHIPS || {};
+    function personHtml(p) {
+      var h = document.getElementById(p + "-name");
+      if (h) return '<a href="#' + p + '">' + h.textContent.split(" ")[0] + "</a>";
+      var d = document.createElement("span"); d.textContent = p; return d.innerHTML;
+    }
+    function joinNames(list) {
+      if (list.length < 2) return list.join("");
+      return list.slice(0, -1).join(", ") + " and " + list[list.length - 1];
+    }
+    function noteText(n) {
+      if (!n) return "";
+      var d = document.createElement("span"); d.textContent = n;
+      return (/^[,;]/.test(n) ? "" : " ") + d.innerHTML;
+    }
+    Array.prototype.forEach.call(document.querySelectorAll("[data-rel-for]"), function (dl) {
+      var entries = data[dl.getAttribute("data-rel-for")] || [];
+      var rows = [], byType = {};
+      entries.forEach(function (e) {
+        var text = joinNames((e.people || []).map(personHtml)) + noteText(e.note);
+        if (!byType[e.type]) { byType[e.type] = []; rows.push(e.type); }
+        byType[e.type].push(text);
+      });
+      dl.innerHTML = rows.map(function (t) {
+        var dt = document.createElement("span"); dt.textContent = t;
+        return "<div><dt>" + dt.innerHTML + "</dt><dd>" + byType[t].join("; ") + "</dd></div>";
+      }).join("");
+      if (!rows.length && dl.parentNode) dl.parentNode.hidden = true;
+    });
+  })();
+
   articles.forEach(function (a) { a.hidden = true; });
 
   function open(id, moveFocus) {
@@ -67,7 +101,41 @@
     var node = document.querySelector('.ft-node[data-char="' + current + '"]');
     var trigger = (lastTrigger && lastTrigger.offsetParent !== null && !panel.contains(lastTrigger)) ? lastTrigger : node;
     current = null;
-    articles.forEach(function (a) { a.hidden = true; });
+  
+  // Relationships: rendered from js/relationships.js so new ones are a single data line.
+  (function renderRelationships() {
+    var data = window.REFLECTIONS_RELATIONSHIPS || {};
+    function personHtml(p) {
+      var h = document.getElementById(p + "-name");
+      if (h) return '<a href="#' + p + '">' + h.textContent.split(" ")[0] + "</a>";
+      var d = document.createElement("span"); d.textContent = p; return d.innerHTML;
+    }
+    function joinNames(list) {
+      if (list.length < 2) return list.join("");
+      return list.slice(0, -1).join(", ") + " and " + list[list.length - 1];
+    }
+    function noteText(n) {
+      if (!n) return "";
+      var d = document.createElement("span"); d.textContent = n;
+      return (/^[,;]/.test(n) ? "" : " ") + d.innerHTML;
+    }
+    Array.prototype.forEach.call(document.querySelectorAll("[data-rel-for]"), function (dl) {
+      var entries = data[dl.getAttribute("data-rel-for")] || [];
+      var rows = [], byType = {};
+      entries.forEach(function (e) {
+        var text = joinNames((e.people || []).map(personHtml)) + noteText(e.note);
+        if (!byType[e.type]) { byType[e.type] = []; rows.push(e.type); }
+        byType[e.type].push(text);
+      });
+      dl.innerHTML = rows.map(function (t) {
+        var dt = document.createElement("span"); dt.textContent = t;
+        return "<div><dt>" + dt.innerHTML + "</dt><dd>" + byType[t].join("; ") + "</dd></div>";
+      }).join("");
+      if (!rows.length && dl.parentNode) dl.parentNode.hidden = true;
+    });
+  })();
+
+  articles.forEach(function (a) { a.hidden = true; });
     nodes.forEach(function (n) { n.setAttribute("aria-expanded", "false"); });
     placeholder.hidden = false;
     toolbar.hidden = true;
