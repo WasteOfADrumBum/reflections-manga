@@ -428,7 +428,7 @@ html:not(.js) .js-only { display: none !important; }
 .cast-tree { background: var(--card); border: 3px solid var(--rule); box-shadow: var(--shadow); padding: 1rem; }
 .ft-wrap { container-type: inline-size; container-name: ft; }
 /* The stage is its own size container, so faces and labels scale with the drawing itself. */
-.ft-stage { position: relative; aspect-ratio: 1280 / 700; container-type: inline-size; }
+.ft-stage { position: relative; aspect-ratio: 1280 / 745; container-type: inline-size; }
 .ft-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
 .ft-lines-narrow { display: none; }
 .ft-lines text { fill: var(--ink-soft); font-family: var(--font-body); font-weight: 600; }
@@ -453,7 +453,8 @@ html:not(.js) .js-only { display: none !important; }
 .ft-face img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
 .ft-label { display: flex; flex-direction: column; align-items: center; line-height: 1.15; white-space: nowrap; }
 .ft-nm { font-family: var(--font-display); font-weight: 800; font-size: max(0.95rem, 1.5cqw); }
-.ft-ag { font-weight: 600; font-size: max(0.78rem, 1.15cqw); color: var(--ink-soft); }
+.ft-ag, .ft-role { font-weight: 600; font-size: max(0.78rem, 1.15cqw); }
+.ft-role { color: var(--ink-soft); }
 .js .ft-node { cursor: pointer; }
 a.ft-node:hover .ft-face { transform: scale(1.05); box-shadow: 0 0 0 4px var(--paper), 0 0 0 7px var(--ink); }
 .ft-node[aria-expanded="true"] .ft-face { box-shadow: 0 0 0 4px var(--paper), 0 0 0 8px var(--accent); }
@@ -466,7 +467,7 @@ a.ft-node:hover .ft-face { transform: scale(1.05); box-shadow: 0 0 0 4px var(--p
   color: var(--ink-soft); font-family: var(--font-display); font-weight: 800; font-size: 3cqw; line-height: 1;
 }
 .ft-unknown .ft-label { text-align: center; }
-.ft-unknown .ft-ag { font-size: max(0.72rem, 1.05cqw); }
+.ft-unknown .ft-ag { font-size: max(0.72rem, 1.05cqw); color: var(--ink-soft); }
 .ft-own { display: block; }
 .ft-key-q {
   display: inline-grid; place-items: center; width: 1.3rem; height: 1.3rem; border-radius: 50%;
@@ -474,14 +475,15 @@ a.ft-node:hover .ft-face { transform: scale(1.05); box-shadow: 0 0 0 4px var(--p
 }
 
 @container ft (max-width: 48rem) {
-  .ft-stage { aspect-ratio: 360 / 496; max-width: 30rem; margin-inline: auto; }
+  .ft-stage { aspect-ratio: 360 / 548; max-width: 30rem; margin-inline: auto; }
   .ft-lines-wide { display: none; }
   .ft-lines-narrow { display: block; }
   .ft-node-item { left: calc(var(--nx) * 1%); top: calc(var(--ny) * 1%); }
   .ft-node { min-width: 0; padding-inline: 0; }
   .ft-face { width: calc(var(--ns) * 1cqw); }
   .ft-nm { font-size: max(0.85rem, 4cqw); }
-  .ft-ag { font-size: max(0.72rem, 3cqw); }
+  .ft-ag, .ft-role { font-size: max(0.72rem, 3cqw); }
+  .ft-role { font-size: max(0.66rem, 2.8cqw); }
   .ft-unknown .ft-face { font-size: 5cqw; border-width: 2px; }
   .ft-unknown .ft-ag { font-size: max(0.68rem, 2.8cqw); text-transform: capitalize; }
   .ft-own { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }

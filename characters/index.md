@@ -35,7 +35,7 @@ User-supplied character cards are registered for reuse; see each profile's refer
 
 | Character | Connection | Age direction | Height direction | Status |
 |---|---|---|---|---|
-| [Caleb "Cal" Mercer](caleb-mercer/index.md) | Ethan's best friend | Around Ethan's age proposed; exact age open | About 6'2" / 188 cm | Heavyset, scraggly, worn black biker direction; detailed design pending |
+| [Caleb "Cal" Mercer](caleb-mercer/index.md) | Ethan's best friend | 39, one year older than Ethan (user-selected 2026-11-13) | About 6'2" / 188 cm | Heavyset, scraggly, worn black biker direction; detailed design pending |
 | [Natalie "Nat" Greene](natalie-greene/index.md) | Morgan's best friend outside the household | 34, same as Morgan | About 5'10" / 178 cm | Tall, thin, dorky, glasses; detailed design pending |
 | [Autumn Bennett](autumn-bennett/index.md) | Ruby's older sister | Around 34; exact age open | Same as Ruby, currently drafted at 152 cm | Name confirmed; fuller build, long hair, strawberry blonde suggested |
 

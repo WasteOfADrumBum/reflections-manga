@@ -1,5 +1,14 @@
 # Change Log
 
+## 2026-11-13: Cal Is 39; Ages and Roles on the Site Tree
+
+- USER-APPROVED: Caleb "Cal" Mercer is 39, one year older than Ethan. Updated
+  his profile, the character index, his reference-sheet prompt, the open
+  threads, and his site bio.
+- Every person on the site family tree now shows first name, age, and a short
+  role (for example "Husband & dad", "Wife & mom", "Best friend"). The role
+  wording is site copy and adds no new facts.
+
 ## 2026-11-13: One Family Tree, Galleries, and Appears-In on the Site
 
 - At the user's request the site characters page now draws one tree: the
