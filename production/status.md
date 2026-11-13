@@ -35,9 +35,13 @@ Updated: 2026-11-13.
   personality, wardrobe, and selected communication/support choices are approved.
 - Each child has identity, appearance, personality, and wardrobe files.
 - Family tree, bible, timeline, and continuity reference the current decisions.
-- Nine reusable reference-sheet prompts are saved in the relevant characters'
+- Eleven reusable reference-sheet prompts are saved in the relevant characters'
   prompts folders and listed in the [prompt library](../prompts/index.md). Prompt layout
   and exact outfit combinations remain proposals; no images generated here.
+- Ellie and Owen have individual 3:2 reference-sheet prompts. Brown eyes,
+  specific hair arrangements, and exact outfits are study proposals; heights
+  remain open and Owen's age remains approximate. No child design is approved
+  by preparing a prompt.
 
 See [approved questionnaire answers](../characters/questionnaire-answers.md),
 [character registry](../characters/index.md), and [canon log](../continuity/canon-log.md).

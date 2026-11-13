@@ -32,9 +32,11 @@ not an approved equivalent of the main family's child questionnaire.
 - [Personality](personality.md)
 - [Wardrobe](wardrobe.md)
 - [Reference status](references/index.md)
+- [Reference-sheet prompt](prompts/ellie-greene-reference-sheet.md)
 
 ## Open Decisions
 
 Birthday, school, height, final design, temperament, interests, glasses,
 other parentage, household, and relationships beyond the stated family.
-No individual image-generation prompt was requested for Ellie in this session.
+An individual reference-sheet prompt is saved; its study choices do not approve
+her design or establish a height. No artwork is generated or approved.

@@ -43,7 +43,8 @@ All characters and events are fictional.
 - [Autumn](characters/autumn/index.md): Ruby's older sister; surname open.
 
 Selected character direction and provisional suggestions are labeled separately.
-Three individual adult reference-sheet prompts are linked from their profiles.
+Five individual supporting-character reference-sheet prompts are linked from
+their profiles, including Ellie and Owen.
 
 ## Workflow
 
@@ -83,4 +84,4 @@ Chapters released: 0
 See [production status](production/status.md) for remaining work and open decisions.
 Start with the [production walkthrough](production/getting-started.md) and
 [stage-by-stage prompt library](prompts/index.md). The library also links all
-nine character reference-sheet prompts.
+eleven character reference-sheet prompts.

@@ -58,8 +58,8 @@ approved story events or predetermined outcomes.
   wardrobe approval, birthdays, schools, other parentage, household, and any
   friendships with Rowan/Riley. Owen's exact age follows Riley's open age target.
 - Voices, relationship histories, selected interests, and future chapter
-  introductions for all five. The three adult prompts are provisional studies;
-  no supporting-character images or chapter events are approved.
+  introductions for all five. The five supporting-character prompts remain
+  provisional studies; no supporting-character images or chapter events are approved.
 
 ## Template
 

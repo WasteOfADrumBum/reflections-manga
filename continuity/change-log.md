@@ -1,5 +1,18 @@
 # Change Log
 
+## 2026-11-13: Ellie and Owen Reference-Sheet Prompts
+
+- Added the two requested individual prompts using the existing Ethan-style
+  3:2 layout: three full-body views and three expression studies per child.
+- Recorded proposed brown eyes, hair arrangements, and exact study outfits in
+  the relevant appearance and wardrobe records. These remain provisional.
+- Preserved Ellie's age of 9, Owen's approximate age of 6, and their established
+  family relationships. Kept both heights, Owen's exact age, complexion,
+  final resemblance, and Ellie's optional glasses undecided.
+- Linked both prompts from their profiles, reference records, prompt library,
+  README, and production status. Updated the prompt count to eleven.
+- No images, new relationship events, approved designs, or story release added.
+
 ## 2026-11-13: Supporting Characters and Three Reference Prompts
 
 - Added Caleb "Cal" Mercer, Natalie "Nat" Greene, and Autumn with identity,

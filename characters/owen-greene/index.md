@@ -32,9 +32,11 @@ to take things apart. Keep these separate from Riley's approved traits.
 - [Personality](personality.md)
 - [Wardrobe](wardrobe.md)
 - [Reference status](references/index.md)
+- [Reference-sheet prompt](prompts/owen-greene-reference-sheet.md)
 
 ## Open Decisions
 
 Exact age, birthday, school, height, final design, temperament, interests,
 other parentage, household, and relationships beyond the stated family.
-No individual image-generation prompt was requested for Owen in this session.
+An individual reference-sheet prompt is saved; its study choices do not approve
+his design or establish an exact age or height. No artwork is generated or approved.

@@ -1,8 +1,8 @@
 # Prompt Library
 
 Updated: 2026-11-13.
-Status: Nine draft reference-sheet prompts prepared; six user-saved family
-reference cards are present. The three supporting adults have no supplied
+Status: Eleven draft reference-sheet prompts prepared; six user-saved family
+reference cards are present. The five supporting characters have no supplied
 images. Workflow and panel templates are available. No new images generated here.
 
 ## Start a Manga Chapter
@@ -38,9 +38,8 @@ These are stage launchers, not one request to produce every stage immediately.
 | Caleb "Cal" Mercer | [Reference sheet](../characters/caleb-mercer/prompts/caleb-mercer-reference-sheet.md) | Supporting-character direction selected; exact age and detailed visual choices remain provisional |
 | Natalie "Nat" Greene | [Reference sheet](../characters/natalie-greene/prompts/natalie-greene-reference-sheet.md) | Same age as Morgan; glasses and tall/thin direction selected; detailed design remains provisional |
 | Autumn | [Reference sheet](../characters/autumn/prompts/autumn-reference-sheet.md) | Ruby's older sister; surname/exact age open; same-height direction and fuller/long-haired design study |
-
-Ellie and Owen Greene have linked profiles under Nat's family, but no individual
-image prompts were requested or created for them in this session.
+| Ellie Greene | [Reference sheet](../characters/ellie-greene/prompts/ellie-greene-reference-sheet.md) | Age 9 and family established; height open; appearance, personality, and outfit remain proposals |
+| Owen Greene | [Reference sheet](../characters/owen-greene/prompts/owen-greene-reference-sheet.md) | Age approximately 6 and family established; exact age/height open; detailed design remains provisional |
 
 ## Using the Prompts
 

@@ -13,3 +13,11 @@ character's fixed traits from the other.
 Height, eyes, complexion, freckles, haircut details, and accessories remain open.
 Do not reuse Rowan's approved 130 cm height or features simply because they
 share an age. Do not generate a model sheet until requested.
+
+## Reference-Sheet Study Proposal: 2026-11-13
+
+For the requested prompt only, propose straight brown hair worn loose below the
+shoulders and brown eyes. Omit glasses in this study while keeping the option
+open. Haircut details, eye color, complexion, and final family resemblance
+remain unapproved; no numeric height is proposed. See the
+[draft prompt](prompts/ellie-greene-reference-sheet.md).
