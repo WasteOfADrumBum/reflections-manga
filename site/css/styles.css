@@ -627,3 +627,72 @@ html:not(.js) .cast-panel { display: grid; gap: 2rem; }
 }
 
 .family-photo { max-width: 68rem; }
+
+/* Memories: photo album */
+.album { --leather: #3a2a20; --leaf: #f5eedc; --leaf-ink: #2b241e; --leaf-line: rgba(80, 60, 40, 0.08); }
+.album-book {
+  display: grid; gap: 0; padding: 0.9rem 0.9rem 0.9rem 1.6rem;
+  background: var(--leather); border: 3px solid var(--rule); box-shadow: var(--shadow);
+  border-radius: 6px; position: relative;
+}
+.album-leaf {
+  position: relative; display: grid; gap: 1.6rem; align-content: start; justify-items: center;
+  padding: 1.6rem 1.1rem 1.4rem 1.6rem; color: var(--leaf-ink);
+  background: var(--leaf) repeating-linear-gradient(0deg, transparent 0 27px, var(--leaf-line) 27px 28px);
+  border-radius: 2px 4px 4px 2px; box-shadow: inset 10px 0 14px -10px rgba(0, 0, 0, 0.35);
+}
+/* binder rings along the inner edge */
+.album-leaf::before {
+  content: ""; position: absolute; top: 1.25rem; bottom: 1.25rem; left: -1.15rem; width: 1.5rem;
+  background: radial-gradient(circle at 50% 50%, #d9d4c8 0 4px, #8d877b 4px 6px, transparent 6.5px) center top / 1.5rem 3.5rem repeat-y;
+  pointer-events: none;
+}
+.js .album-leaf[hidden] { display: none; }
+.album-spread .album-book { grid-template-columns: 1fr 1fr; padding: 0.9rem; }
+.album-spread .album-leaf::before { display: none; }
+.album-spread .album-leaf { border-radius: 4px 2px 2px 4px; box-shadow: inset -12px 0 16px -10px rgba(0, 0, 0, 0.35); }
+.album-spread .album-leaf-right { border-radius: 2px 4px 4px 2px; box-shadow: inset 12px 0 16px -10px rgba(0, 0, 0, 0.35); }
+.album-spread .album-leaf-right::before {
+  display: block; left: -0.75rem; width: 1.5rem;
+}
+html:not(.js) .album-leaf + .album-leaf { margin-top: 0.9rem; }
+.snap {
+  margin: 0; width: 100%; max-width: 30rem; background: #fffefa; padding: 0.6rem 0.6rem 0.3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); transform: rotate(-1.2deg); position: relative;
+}
+.snap:nth-child(even) { transform: rotate(1.4deg); }
+.snap-tall { max-width: 17rem; }
+.snap::before {
+  content: ""; position: absolute; top: -0.7rem; left: 50%; width: 5.5rem; height: 1.4rem; margin-left: -2.75rem;
+  background: rgba(214, 196, 150, 0.75); transform: rotate(-3deg); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.snap-link { display: block; border-radius: 1px; }
+.snap-link img { display: block; width: 100%; height: auto; }
+.snap-link:focus-visible { outline: 3px solid #9a3412; outline-offset: 3px; }
+.snap figcaption {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-align: center;
+  color: var(--leaf-ink); padding: 0.45rem 0 0.2rem;
+}
+.album-controls { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap; }
+.album-nav { min-width: 9rem; align-items: center; text-align: center; }
+.album-nav .cast-dir { font-size: 0.9rem; color: inherit; }
+.album-nav:disabled { opacity: 0.45; cursor: not-allowed; }
+.album-nav:disabled:hover { background: var(--card); color: var(--ink); }
+.album-count { margin: 0; font-weight: 700; color: var(--ink-soft); }
+@media (max-width: 30rem) {
+  .album-book { padding: 0.6rem 0.6rem 0.6rem 1.3rem; }
+  .album-leaf { padding: 1.4rem 0.8rem 1.2rem 1.2rem; }
+  .album-leaf::before { left: -0.95rem; }
+  .album-nav { min-width: 0; flex: 1 1 0; }
+  .album-count { order: -1; flex-basis: 100%; text-align: center; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .turn-next .album-leaf:not([hidden]) { animation: leaf-in-next 0.35s ease both; }
+  .turn-prev .album-leaf:not([hidden]) { animation: leaf-in-prev 0.35s ease both; }
+  @keyframes leaf-in-next { from { opacity: 0; transform: perspective(1200px) rotateY(-12deg); transform-origin: left center; } to { opacity: 1; transform: none; } }
+  @keyframes leaf-in-prev { from { opacity: 0; transform: perspective(1200px) rotateY(12deg); transform-origin: right center; } to { opacity: 1; transform: none; } }
+}
+@media (forced-colors: active) {
+  .album-book, .album-leaf, .snap { border: 1px solid CanvasText; }
+  .album-leaf::before, .snap::before { display: none; }
+}
