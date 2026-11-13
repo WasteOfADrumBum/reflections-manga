@@ -1,5 +1,17 @@
 # Change Log
 
+## 2026-11-13: Best-Friend and Sister Illustrations on the Site
+
+- The user selected three standalone illustrations for the repo and website:
+  Ethan and Cal (carry v2), Ruby and Autumn (smile v2), and Morgan and Nat
+  (vegetable truck v3).
+- Saved named copies in assets/illustrations with an index recording source
+  draft, size, and SHA-256. The drafts and their study notes are unchanged.
+- Added a "Best friends and sisters" section to site/characters.html with web
+  copies in site/images/moments.
+- These remain standalone art: no chapter event, model sheet, smoking habit,
+  farm, or vehicle is established by their use.
+
 ## 2026-11-13: Revised Beach Image Added to Illustrations
 
 - Copied beach day v2 to assets/illustrations/ethan-morgan-ruby-beach-day-v2.png
