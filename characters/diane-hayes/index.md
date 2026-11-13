@@ -9,7 +9,7 @@ No model sheet, illustration, or chapter appearance is approved by this profile.
 - Name: Diane Hayes
 - Age: 58 at the opening snapshot.
 - Height: 5'8" / approximately 173 cm.
-- Family role: Morgan's mother.
+- Family role: Mother of Nate, Adrian, and Morgan.
 
 ## Character
 
@@ -20,6 +20,9 @@ Protective, self-reliant, outspoken, quick to offer advice, and sometimes overly
 ## Family and Relationships
 
 - Mother of [Morgan H. Walker](../morgan-hayes/index.md), 34.
+- Mother of [Nathan "Nate" Hayes](../nathan-hayes/index.md), the oldest Hayes
+  sibling, and [Adrian Hayes](../adrian-hayes/index.md), the middle sibling.
+  Their family roles were added 2026-11-13; proposed ages of 41 and 38 remain open.
 - Morgan's father had alcoholism and left the family when Morgan was 13 (user-approved 2026-11-13). Diane raised Morgan without him in the household after his departure; this does not establish that he was absent from birth.
 - His name, current status, and any later contact remain unspecified. No divorce, death, recovery history, or further circumstances are established.
 - Grandmother through Morgan to [Rowan Walker](../rowan-hayes-walker/index.md) and [Riley Walker](../riley-hayes-walker/index.md).
@@ -39,6 +42,12 @@ rules. They do not approve unselected traits of relatives.
 ## Proposed Development
 
 Morgan may have learned independence from Diane alongside difficulty accepting help. Specific lessons, incidents, and a causal explanation of Morgan's habits remain story proposals.
+
+The supplied [Hayes family-history proposal](../hayes-family-history.md) adds
+possible responses to the siblings' father's departure: Nate tried to lead,
+Adrian withdrew, and Morgan gradually took responsibility. Those detailed
+responses, Nate's financial support, and Morgan's early work remain proposals;
+they do not establish additional duties, incidents, or failures for Diane.
 
 ## Profile Files
 

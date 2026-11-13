@@ -52,7 +52,12 @@ Opening script update: pages 001–004 are now [DRAFT v1 for review](../stories/
 authorized for drafting on 2026-11-13. Proposed details include Rowan's shoe
 recovery, Riley zipping her own hoodie while Ruby waits, the crooked-henley
 joke, Avery's spoon play, and a bathroom mirror. None is approved canon.
-Review those choices and the four-page pacing before continuing pages 005–010.
+The user has since generated pages 001–004 and requested continuation. Those
+working images are registered; this does not mark complete chapter QA or canon
+approval. Pages 005–010 now have draft script and manual-generation prompts.
+Review their bag-packing task, private Morgan/Ruby exchange, Morgan/Ethan banter,
+and Ruby/Ethan coffee/reassurance sequence before treating them as approved events.
+Pages 011–032 remain unscripted.
 
 - Review adapting Story 001 as Chapter 001 in 32 pages; this does not set a
   universal chapter length, final allocation, or completed production stage.
@@ -65,8 +70,8 @@ Review those choices and the four-page pacing before continuing pages 005–010.
   narration. None becomes an approved voice or relationship fact by being saved.
 - Resolve the morning/later-day/night/next-morning/possible second-evening
   sequence, location choices, wardrobe changes, props, and reference versions.
-- Plan Morgan/Ruby's independent platonic friendship in execution; the map
-  does not yet specify a private scene without Ethan.
+- Review page 005's proposed private Morgan/Ruby bag-preparation exchange;
+  their independent platonic friendship is preserved, but the scene is DRAFT.
 - Resolve page-1 layout, panel divisions, page dimensions, reading direction,
   resolution, and lettering before final art.
 - Carry small boundaries and unresolved identity questions into Story 002 only
@@ -90,6 +95,34 @@ Review those choices and the four-page pacing before continuing pages 005–010.
 - Voices, relationship histories, selected interests, and future chapter
   introductions for all five. The five supporting-character prompts remain
   provisional studies; no supporting-character images or chapter events are approved.
+
+## Hayes Sibling Decisions: 2026-11-13
+
+Nathan "Nate" Hayes and Adrian Hayes are registered as Morgan's older brothers
+and Diane's sons, with Nate oldest and Adrian middle. Their shared father is
+the unnamed father who left when Morgan was 13. See the
+[family-history record](../characters/hayes-family-history.md).
+
+- Finalize or revise the proposed opening ages 41 and 38. With Morgan at 34,
+  the gaps are three and four years; the proposed departure ages 20 and 17
+  remain conditional estimates. Do not change Morgan's approved age to fit spacing.
+- Approve or revise their proposed heights, builds, hair/eyes, glasses for
+  Adrian, wardrobe, personalities, and interests before treating them as fixed traits.
+- Select occupations from the supplied options; none is selected by workwear,
+  hobbies, gender exploration, or neurodevelopmental speculation.
+- Review Nate's attempted provision and guilt, Adrian's withdrawal, Morgan's
+  early work and organizer role, and any causal link to current habits. These
+  remain proposed backstory, not approved incidents or established adult conflict.
+- Decide Adrian's private gender questioning and possible autistic traits
+  independently. No diagnosis, final identity label, disclosure, or family reaction
+  is established, and neither direction explains the other or family withdrawal.
+- Establish current family contact, residences, partners/children if any,
+  voices, uncle bonds, and chapter introductions only when needed.
+- Draft [Nate](../characters/nathan-hayes/prompts/nathan-hayes-reference-sheet.md)
+  and [Adrian](../characters/adrian-hayes/prompts/adrian-hayes-reference-sheet.md)
+  reference-sheet prompts are prepared. Review future output before registering
+  or approving any model sheet; no local reference images exist for either brother.
+  External inspiration links from the supplied notes are not approved references.
 
 ## Parent-Generation Decisions: 2026-11-13
 

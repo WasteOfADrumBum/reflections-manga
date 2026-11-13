@@ -67,6 +67,16 @@ written [parent profiles](../characters/index.md#approved-parent-generation).
 Suggested childhood influences remain proposals. Other existing visual draft
 choices are not approved by these parent designs.
 
+Morgan's older brothers were added at the user's request on 2026-11-13:
+[Nathan "Nate" Hayes](../characters/nathan-hayes/index.md), the oldest sibling,
+and [Adrian Hayes](../characters/adrian-hayes/index.md), the middle sibling.
+All three are Diane's children and share the unnamed father in Morgan's history.
+The [Hayes family-history proposal](../characters/hayes-family-history.md)
+retains draft opening ages of 41 and 38, distinct childhood responses, and
+possible influences on Morgan's responsibility and control. Detailed history,
+designs, jobs, Adrian's private gender questioning, and possible autistic traits
+remain proposals; no diagnosis, final identity label, or chapter events are approved.
+
 Through ordinary interactions and emotionally significant
 moments, the narrative explores how perception, expectation,
 and communication shape relationships.

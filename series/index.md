@@ -44,3 +44,7 @@ walkthrough for the outline-to-PDF workflow.
 The user-supplied direction now contains 15 connected story concepts in four
 arcs. Their intended outcomes are drafts, not established chapter events.
 Next planning focus: the foundation concept, Three Hearts, Different Needs.
+
+Morgan's older brothers, Nathan "Nate" Hayes and Adrian Hayes, are now registered.
+Their [shared family-history record](../characters/hayes-family-history.md)
+separates family connections from proposed ages, designs, and detailed backstory.

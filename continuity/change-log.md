@@ -1,5 +1,174 @@
 # Change Log
 
+## 2026-11-13: Hayes Brothers and Chapter 001 Pages 005-010 on the Site
+
+- At the user's request, Nate and Adrian Hayes were added to the site family tree
+  and character list as Morgan's older brothers, with portrait crops and sheets
+  from their v1 reference files. Site bios use only names, sibling order, and
+  family links. PROPOSED ages and heights are shown as "About"; personality,
+  occupation, identity, and backstory proposals are not published.
+- The tree now puts the three Hayes siblings under Diane; on phones the adult
+  row shows name and age only.
+- Web copies of pages 005-010 were added to the reader with alt text. Site
+  display does not approve the script, pages, or canon events.
+
+## 2026-11-13: Story 001 Pages 011–020 and Ten-Page Prompt Workflow
+
+- Recorded the user's preference for ten-page prompt packs, each page accompanied
+  by one high-level plot sentence, a copyable prompt, and ordered character references.
+- Confirmed ten saved working page images; inspected 005–010 and updated the
+  inventory/hashes. Page 004 currently has a .png extension with unchanged bytes.
+  No images renamed or edited; prior prompt exports remain intact.
+- Drafted 011–020 in 41 panels with 35 lettering items, preserving the outline's
+  child introductions and near-simultaneous adult requests. New scene props,
+  child actions, dialogue and internal interpretations remain DRAFT.
+- Saved ten self-contained text prompts, a combined pack, and a quick page guide
+  covering prepared pages 001–020. Updated script, outline, continuity, handoff,
+  production guide/status, registry, and open decisions. Corrected the stale
+  extensionless page-004 link in the earlier pack.
+- Maintained approved physical traits, attachments and parenting agency. No AAC
+  system, new diagnosis/support level, child address for Ethan, spousal hierarchy,
+  identity resolution or permanent wardrobe approved. No new art, final chapter QA,
+  release, deployment, commit or push. Remaining packs: 021–030, then 031–032.
+
+## 2026-11-13: Girls' Hotel Sleepover Comedy Draft
+
+- Generated the disclosed covered comedy alternative: Autumn and Natalie pillow
+  fight on the bed, Nat's hood slips over her glasses, Morgan takes Ruby's hair towel.
+- Preserved the left-to-center bed and rear bathroom doorway. Saved image,
+  successful prompt, references, and adaptation notes in
+  assets/drafts/girls-trip-hotel-sleepover-study.md.
+- Clothing-exposure gags were not produced. Hotel scene remains a proposal,
+  without a canonical event, permanent character change, artwork approval, or release.
+
+## 2026-11-13: Girls' Beach Splash-Fight Draft
+
+- Following an image-tool rejection of the suggestive version, generated the
+  disclosed vacation-comedy alternative with Natalie, Morgan, Autumn, and Ruby.
+- Saved the image, successful prompt, input links, and review notes in
+  assets/drafts/girls-trip-beach-splash-fight-study.md; prior group photo preserved.
+- Scene remains a draft with no canonical event, permanent trait change,
+  artwork approval, or release established.
+
+## 2026-11-13: Girls' Trip Beach Photo Draft
+
+- Generated a playful beach portrait of Natalie, Morgan, Autumn, and Ruby
+  leaning together in the four supplied beach outfits with varied poses.
+- Saved the image, unchanged input copies, exact prompt, and review notes in
+  assets/drafts/girls-trip-beach-study.md.
+- Trip and pose remain artwork proposals; no permanent traits, canon event,
+  artwork approval, or release established.
+
+## 2026-11-13: Walker Extended Family Portrait Draft
+
+- Generated a thirteen-person portrait with Ethan, Morgan, Ruby, all three
+  children, Richard, Linda, Diane, Nathan, Adrian, Thomas, and Autumn.
+- Saved the image, exact prompt, five reference-board mappings, and review notes
+  in assets/drafts/walker-extended-family-portrait-study.md.
+- Setting and pose await review. Existing names and approval states remain intact;
+  no canonical event, artwork approval, residence, or release established.
+
+## 2026-11-13: Hayes Family Portrait Draft
+
+- Generated a full-body portrait of Diane, Nathan, Adrian, Morgan, Ethan,
+  Rowan, and Riley from the user's supplied reference sheets.
+- Saved the image, exact prompt, reference-board mapping, and review notes in
+  assets/drafts/hayes-family-portrait-study.md.
+- Park setting and pose await review. Nathan and Adrian's proposed details
+  retain their status; no canon, family-membership, artwork-approval, or release change.
+
+## 2026-11-13: Bennett Family Portrait Draft
+
+- Generated a full-body family portrait of Ruby, Autumn, Thomas, Avery, and Ethan
+  from the user's five supplied consolidated reference sheets.
+- Saved the image and exact prompt in assets/drafts/bennett-family-portrait-study.md.
+- Garden setting and pose remain illustration proposals awaiting review;
+  no artwork approval, story event, family-membership change, or release established.
+
+## 2026-11-13: Surname-First Consolidated Filenames
+
+- Renamed the 16 consolidated v1 images to surname-first filenames, such as
+  mercer-caleb.png. Used current Walker surnames for Morgan, Rowan, and Riley.
+- Avery's walker-avery-bennett.png is a sorting filename only; it does not
+  establish the unresolved middle-name/surname field split in her profile.
+- Updated and sorted the collection index and registry description. Verified
+  unchanged image hashes; original character folders remain untouched.
+- No canon changes, artwork approval, commit, or push.
+
+## 2026-11-13: Consolidated Collection Simplified to v1
+
+- At the user's request, kept only 16 v1 copies in characters/_reference-sheets,
+  renamed to character-folder names with .png extensions (e.g., caleb-mercer.png).
+- Removed 18 later-version copies from this consolidated directory only.
+  All 34 originals, including their later versions, remain unchanged.
+- Updated the collection index and registry link; verified retained copies and
+  original files using SHA-256. No artwork approval, canon change, commit, or push.
+
+## 2026-11-13: Consolidated Reference-Sheet Copies
+
+- Copied all 34 saved reference-sheet images across 16 character folders into
+  characters/_reference-sheets, preserving every original and exact filename.
+- Added an index linking each copy, its original, and original reference notes,
+  with SHA-256 hashes verifying that the copies match their sources.
+- Linked the collection from the character registry. This is a snapshot;
+  future changes require deliberate copying. No artwork approval, canon,
+  relationship, or story-status changes; no commit or push performed.
+
+## 2026-11-13: Hayes Brothers Reference-Sheet Prompts
+
+- Added individual Nate and Adrian prompts in per-character prompts folders,
+  matching Ethan's filename pattern, section structure, copyable prompt style,
+  3:2 study layout, three body views, and three expression studies. Included
+  source-profile, art-direction, reference-status, and panel-template links.
+- Used the user's current draft ages, heights, physical designs, wardrobes,
+  and personality directions. Recorded Nate's proposed stubble in his appearance
+  profile; kept exact study choices and all unapproved designs provisional.
+- Preserved Nate's sincere effort and guilt in his proposed family response.
+  Kept Adrian's private gender questioning and possible, undiagnosed autism
+  separate from one another and from proposed family disengagement.
+- Updated both profile indexes and reference notes, the prompt library and
+  count (seventeen), README, production status, and unresolved review decisions.
+- No image generated, imported, or approved; no fictional image path claimed,
+  canonical marking/accessory added, family event approved, chapter completed,
+  release created, or unrelated chapter-page change included. These draft
+  documentation changes do not trigger the approved-story commit/push workflow.
+
+## 2026-11-13: Hayes Brothers and Family-Backstory Proposal
+
+- Integrated the supplied notes as Nathan "Nate" Hayes and Adrian Hayes,
+  Morgan's older brothers and Diane's sons; recorded Nate/Adrian/Morgan birth order.
+- Added each brother's profile, proposed appearance/personality/wardrobe, and
+  reference-status record. Saved shared family history with explicit approval
+  boundaries, age arithmetic, occupation options, and proposed family dynamics.
+- Kept opening ages 41 and 38, heights, designs, detailed childhood responses,
+  Morgan's early work, and causal explanations provisional. Flagged the actual
+  three- and four-year gaps; did not revise Morgan's approved age of 34.
+- Kept Adrian's gender questioning and possible autistic traits independent and
+  unapproved; added no diagnosis, final label, disclosure, or family reaction.
+- Updated reciprocal family links, registry, family tree, Morgan's personality
+  context, bible, timeline, relationship canon, arc planning, open decisions,
+  character rules, Chapter 001 background continuity, README, and production status.
+- Preserved surname conventions, absent-parent unknowns, Ruby's maternal history,
+  existing visual assets, unrelated work, and draft story status. No source image
+  imported, art generated, website change, deployment, or story release performed.
+
+## 2026-11-13: Story 001 Continues Through Page 010
+
+- The user reported pages 001–004 done and requested continuation. Located and
+  visually inspected the four saved 1024 x 1536 PNG outputs; registered actual
+  filenames and hashes, preserving page 004's extensionless source name.
+- Recorded observed temporary outfit layers and kitchen details separately
+  from the original prompts and permanent identity canon. No images edited.
+- Drafted pages 005–010 in 26 panels, preserving the outline's consensual
+  Morgan/Ethan agency and Ruby/Ethan affection/reassurance. Proposed packing
+  an outing bag and a private Morgan/Ruby exchange; no destination or schedule set.
+- Saved six self-contained generation prompts and a combined guide, with exact
+  dialogue, per-page cast, prior-page references, prop states, and a coffee bridge
+  into the planned child introductions. No new art generated in this session.
+- Updated chapter script, outline, continuity, prompt links, handoff, registries,
+  production status, and open decisions. Pages 011–032 remain unscripted; final
+  chapter QA, creative approval, canon entry, release, commit, and push are open.
+
 ## 2026-11-13: First Four Chapter 001 Pages on the Site Reader
 
 - At the user's request, web copies of pages 001-004 (A01-C001-P001 to P004)

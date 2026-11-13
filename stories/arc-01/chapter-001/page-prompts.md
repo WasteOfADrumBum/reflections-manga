@@ -5,6 +5,11 @@ Source: [Opening script](script.md), pages 001–004, 18 panels.
 Purpose: Four self-contained prompts for the user to paste with character images.
 No artwork generated, no script or scene approved, and no model sheet replaced.
 
+Progress update: The user has since generated pages 001–004 and asked to continue.
+The [working images are registered](pages/index.md). Original prompt text below
+is preserved. Use the [next six prompts for pages 005–010](page-prompts-005-010.md)
+for the continuation, with the rendered outfit details recorded in continuity.md.
+
 ## How to Use
 
 Generate one page at a time, ideally in the same conversation. Upload the actual

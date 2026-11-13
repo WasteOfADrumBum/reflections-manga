@@ -11,10 +11,17 @@ Updated: 2026-11-13.
 - A [production walkthrough](getting-started.md), 11 stage prompts, and expanded
   chapter templates are available. No story, images, or PDF is produced by the guide.
 
-- Fifteen fictional characters are registered: six central family members,
-  five supporting characters including Nat's children, and four approved
-  parent-generation profiles: Diane (58), Tom (60), Rick (65), and Linda (62).
-  Parent written profiles are approved; no parent images or model sheets exist.
+- Seventeen fictional characters are registered: six central family members,
+  seven supporting characters including Nat's children and Morgan's brothers,
+  and four approved parent-generation profiles: Diane (58), Tom (60), Rick (65),
+  and Linda (62).
+  Parent written profiles are approved independently of artwork.
+- [Nathan "Nate" Hayes](../characters/nathan-hayes/index.md) and
+  [Adrian Hayes](../characters/adrian-hayes/index.md) were added 2026-11-13 as
+  Morgan's older brothers and Diane's sons, with Nate oldest and Adrian middle.
+  Proposed ages 41 and 38, designs, jobs, childhood responses, and Adrian's
+  identity/neurodevelopmental directions remain drafts. See the
+  [Hayes family-history record](../characters/hayes-family-history.md).
 - Current names are Morgan H. Walker (Hayes middle name / Walker surname),
   Ruby Bennett-Walker, Rowan Walker, Riley Walker, and Avery Bennett Walker.
   Legacy directory and asset identifiers are preserved.
@@ -45,7 +52,7 @@ Updated: 2026-11-13.
   personality, wardrobe, and selected communication/support choices are approved.
 - Each child has identity, appearance, personality, and wardrobe files.
 - Family tree, bible, timeline, and continuity reference the current decisions.
-- Fifteen reusable reference-sheet prompts are saved in the relevant characters'
+- Seventeen reusable reference-sheet prompts are saved in the relevant characters'
   prompts folders and listed in the [prompt library](../prompts/index.md). Prompt layout
   and exact outfit combinations remain proposals; no images generated here.
 - Ellie and Owen have individual 3:2 reference-sheet prompts. Brown eyes,
@@ -61,19 +68,29 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
 - Story 001 now has a [detailed proposed 32-page opening map](../stories/arc-01/concepts/story-001-three-hearts-different-needs.md#proposed-chapter-1-map-32-pages)
   and [Chapter 001 draft outline](../stories/arc-01/chapter-001/outline.md),
   recorded 2026-11-13. A user-authorized [opening script draft](../stories/arc-01/chapter-001/script.md)
-  now covers pages 001–004 in 18 panels, with exact dialogue, internal thoughts,
-  and end-of-page hooks. Review it and its proposed scene details before
-  continuing pages 005–010. All new execution and the 32-page working outline
-  remain DRAFT pending approval. Pages 005–032 are unscripted; the storyboard
-  remains a scaffold. See the [chapter handoff](../stories/arc-01/chapter-001/handoff.md).
+  now covers pages 001–010 in 44 panels (18 opening, 26 continuation), with exact
+  lettering and page-end hooks. The user reported pages 001–004 done and asked
+  to continue; all four [working page files](../stories/arc-01/chapter-001/pages/index.md)
+  are present and initially inspected, 1024 x 1536 PNG. Chapter QA and approval
+  remain open. Pages 011–032 are unscripted; the storyboard file remains a scaffold.
+  See the [chapter handoff](../stories/arc-01/chapter-001/handoff.md).
   A [four-page prompt pack](../stories/arc-01/chapter-001/page-prompts.md) is now
   available for the user's manual image generation, with per-page character
-  reference lists and draft layout/format conventions. No chapter art generated.
+  reference lists and draft layout/format conventions. The [next six-page pack](../stories/arc-01/chapter-001/page-prompts-005-010.md)
+  is ready for manual generation of pages 005–010; no new images for that batch
+  were generated during this continuation.
 
 - Resolve supporting-cast details in the [open decisions](../continuity/open-threads.md#supporting-cast-decisions-2026-11-13),
   including Autumn's exact age, final visual traits, histories,
   and Ellie/Owen's designs. Existing user-saved supporting-character images
   and public web copies retain the approval limits in their reference records.
+
+- Review the [Hayes sibling decisions](../continuity/open-threads.md#hayes-sibling-decisions-2026-11-13),
+  including the three-/four-year age gaps, proposed departure-age calculations,
+  family-role backstory, designs, jobs, and Adrian's separate identity directions.
+  Both brothers now have Ethan-style reference-sheet prompts linked from their
+  profiles and reference notes. All design choices remain studies; no images
+  have been generated or registered and no model sheets are approved for them.
 
 - Reconcile adult visual drafts and any incidental differences in the supplied cards before final canon approval.
 - Refine birthdays, school context, and further unasked interaction details.

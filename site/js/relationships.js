@@ -20,6 +20,7 @@ window.REFLECTIONS_RELATIONSHIPS = {
   ],
   "morgan-hayes": [
     {"type": "Mother", "people": ["diane-hayes"]},
+    { type: "Brothers", people: ["nathan-hayes", "adrian-hayes"], note: "(both older)" },
     { type: "Married to", people: ["ethan-walker"], note: ", in a shared ceremony with Ruby" },
     { type: "Kids", people: ["rowan-hayes-walker", "riley-hayes-walker"] },
     { type: "Also mom to", people: ["avery-bennett-walker"] },
@@ -37,6 +38,7 @@ window.REFLECTIONS_RELATIONSHIPS = {
     { type: "Sister", people: ["autumn-bennett"], note: "(older)" }
   ],
   "rowan-hayes-walker": [
+    { type: "Uncles", people: ["nathan-hayes", "adrian-hayes"], note: "(Morgan's brothers)" },
     {"type": "Grandparents", "people": ["richard-walker", "linda-walker"], "note": "(through Ethan)"},
     {"type": "Grandmother", "people": ["diane-hayes"], "note": "(through Morgan)"},
     { type: "Parents", people: ["ethan-walker", "morgan-hayes"] },
@@ -46,6 +48,7 @@ window.REFLECTIONS_RELATIONSHIPS = {
     { type: "Closest to", people: ["ruby-bennett-walker"] }
   ],
   "riley-hayes-walker": [
+    { type: "Uncles", people: ["nathan-hayes", "adrian-hayes"], note: "(Morgan's brothers)" },
     {"type": "Grandparents", "people": ["richard-walker", "linda-walker"], "note": "(through Ethan)"},
     {"type": "Grandmother", "people": ["diane-hayes"], "note": "(through Morgan)"},
     { type: "Parents", people: ["ethan-walker", "morgan-hayes"] },
@@ -85,10 +88,8 @@ window.REFLECTIONS_RELATIONSHIPS = {
   ],
   "diane-hayes": [
   {
-    "type": "Daughter",
-    "people": [
-      "morgan-hayes"
-    ]
+    "type": "Children",
+    "people": ["nathan-hayes", "adrian-hayes", "morgan-hayes"]
   },
   {
     "type": "Grandchildren",
@@ -148,5 +149,16 @@ window.REFLECTIONS_RELATIONSHIPS = {
     ],
     "note": "(through Ethan)"
   }
-]
+],
+  "nathan-hayes": [
+    { type: "Mother", people: ["diane-hayes"] },
+    { type: "Siblings", people: ["adrian-hayes", "morgan-hayes"], note: "(both younger)" },
+    { type: "Niece and nephew", people: ["rowan-hayes-walker", "riley-hayes-walker"], note: "(through Morgan)" }
+  ],
+  "adrian-hayes": [
+    { type: "Mother", people: ["diane-hayes"] },
+    { type: "Brother", people: ["nathan-hayes"], note: "(older)" },
+    { type: "Sister", people: ["morgan-hayes"], note: "(younger)" },
+    { type: "Niece and nephew", people: ["rowan-hayes-walker", "riley-hayes-walker"], note: "(through Morgan)" }
+  ]
 };

@@ -43,6 +43,14 @@ Keep their names, Morgan's father's current status, Ruby's mother's cause of
 death, and other unprovided circumstances open. Do not extend Ruby's maternal
 history to Autumn without approval of a shared mother.
 
+Nathan "Nate" Hayes and Adrian Hayes were added as Morgan's older brothers
+and Diane's sons on 2026-11-13; Nate is oldest, Adrian middle, Morgan youngest.
+Their ages of 41 and 38, designs, detailed family responses, occupations, and
+Adrian's gender questioning and possible autistic traits remain proposals.
+Use the [Hayes family-history approval limits](hayes-family-history.md).
+Do not infer a diagnosis, final identity label, causal explanation of withdrawal,
+or new canonical visual traits from a proposal or an inspiration image.
+
 Ellie and Owen Greene are supporting children added 2026-11-13. Their prior
 appearance, personality, and wardrobe suggestions remain provisional; no
 questionnaire or model sheet is approved for them. Same-age comparisons do not

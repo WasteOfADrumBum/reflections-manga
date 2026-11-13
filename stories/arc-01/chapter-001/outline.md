@@ -1,7 +1,8 @@
 # Chapter Outline
 
 Status: DRAFT proposed outline, recorded 2026-11-13; pending approval.
-Stage: SCRIPT (partial draft, pages 001–004); outline remains DRAFT.
+Stage: SCRIPT (partial draft, pages 001–010) and working art for pages 001–004;
+outline remains DRAFT.
 No approved script, storyboard, artwork, or chapter events.
 
 ## Title
@@ -64,5 +65,10 @@ The [opening script](script.md) now drafts pages 001–004 in 18 panels for revi
 as authorized by the user on 2026-11-13. It proposes Riley's zipper as the
 page-2 incident, a four-panel page 1, and a bathroom mirror for page 4.
 These fill open details without approving the underlying map or new canon.
-Pages 005–032 remain unscripted; the storyboard is still an unfilled scaffold.
+The user has generated pages 001–004 and requested continuation; see the
+[working page inventory](pages/index.md). Pages 005–010 now have 26 additional
+scripted panels and [six manual-generation prompts](page-prompts-005-010.md).
+They propose packing an outing bag, a private Morgan/Ruby exchange, Morgan/Ethan
+banter and shared decisions, and Ruby/Ethan reassurance with an untouched coffee
+bridge. Pages 011–032 remain unscripted; the storyboard file is still a scaffold.
 No developments enter the canonical timeline or release index from this outline.

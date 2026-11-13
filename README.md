@@ -41,10 +41,17 @@ All characters and events are fictional.
   outside the household; mother of [Ellie](characters/ellie-greene/index.md), 9,
   and [Owen](characters/owen-greene/index.md), approximately 6.
 - [Autumn Bennett](characters/autumn-bennett/index.md): Ruby's older sister.
+- [Nathan "Nate" Hayes](characters/nathan-hayes/index.md) and
+  [Adrian Hayes](characters/adrian-hayes/index.md): Morgan's older brothers,
+  with Nate oldest and Adrian middle; both are Diane's sons. Proposed ages
+  41 and 38 and detailed backstory remain drafts. See
+  [Hayes family history](characters/hayes-family-history.md) for approval limits.
 
 Selected character direction and provisional suggestions are labeled separately.
-Five individual supporting-character reference-sheet prompts are linked from
-their profiles, including Ellie and Owen.
+Seven supporting-character reference-sheet prompts are linked from their
+profiles, including Ellie, Owen, Nate, and Adrian. Nate and Adrian's prompts
+are design studies only; neither has a registered reference image or approved
+model sheet.
 
 ## Workflow
 
@@ -77,18 +84,18 @@ Changes must be recorded in `continuity/change-log.md`.
 ## Status
 
 Project setup: Family and written child specifications established
-Character profiles: Fifteen profiles; four parent written profiles and central-family child questionnaire choices approved; other adult visual drafts and supporting-child designs awaiting approval
+Character profiles: Seventeen profiles; four parent written profiles and central-family child questionnaire choices approved; Hayes sibling details, other adult visual drafts, and supporting-child designs awaiting approval
 Artwork: Six user-saved character cards registered for reuse; no new chapter artwork generated
 Chapters released: 0
 
 See [production status](production/status.md) for remaining work and open decisions.
 Start with the [production walkthrough](production/getting-started.md) and
 [stage-by-stage prompt library](prompts/index.md). The library also links all
-fifteen character reference-sheet prompts.
+seventeen character reference-sheet prompts.
 
 ## Approved Parent Generation
 
-- [Diane Hayes](characters/diane-hayes/index.md), 58: Morgan's mother.
+- [Diane Hayes](characters/diane-hayes/index.md), 58: Nate, Adrian, and Morgan's mother.
 - [Thomas "Tom" Bennett](characters/thomas-bennett/index.md), 60: Ruby and Autumn's father.
 - [Richard "Rick" Walker](characters/richard-walker/index.md), 65: Ethan's father.
 - [Linda Walker](characters/linda-walker/index.md), 62: Ethan's mother.

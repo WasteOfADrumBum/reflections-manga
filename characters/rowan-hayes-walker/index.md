@@ -23,6 +23,9 @@ Written selections approved; user-supplied card registered for reuse. Unasked de
 
 - Grandparents through Ethan: [Richard "Rick" Walker](../richard-walker/index.md) and [Linda Walker](../linda-walker/index.md).
 - Grandparent [Diane Hayes](../diane-hayes/index.md), through Morgan. Grandparent closeness and forms of address remain open.
+- Uncles through Morgan: [Nathan "Nate" Hayes](../nathan-hayes/index.md) and
+  [Adrian Hayes](../adrian-hayes/index.md), added 2026-11-13. Closeness,
+  forms of address, visits, and caregiving remain open.
 
 - Father: [Ethan Walker](../ethan-walker/index.md), 38.
 - Mother: [Morgan H. Walker](../morgan-hayes/index.md), 34.

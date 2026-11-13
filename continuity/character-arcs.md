@@ -48,6 +48,23 @@ Use [the roadmap](../series/roadmap.md) for order and story-specific constraints
 - Record approved developments in the relevant chapter continuity and canon log
   only after approval; do not backfill these questions as events.
 
+## Hayes Sibling Development Proposals: 2026-11-13
+
+Names and family order are recorded in [relationships](relationships.md).
+The detailed [family-history proposal](../characters/hayes-family-history.md)
+and the following directions remain drafts, not established history or outcomes.
+
+| Character | Proposed tension | Preserve |
+|---|---|---|
+| Nate | Tried to lead after the father's departure; guilt and bravado complicate support for Morgan | Sincere effort, affection, and strengths; no simplistic failure label |
+| Adrian | Withdrew into interests; gratitude and respect do not always reach Morgan as reliable support | Creativity, sensitivity, friendships, and strengths beyond family expectations |
+| Morgan | Gradually became organizer and emotional backbone; may struggle to delegate or trust help | Warmth, agency, and choices beyond childhood responsibilities |
+
+Adrian's private gender questioning and possible autistic traits are separate
+proposals. Neither causes the other or automatically explains withdrawal. No
+diagnosis, identity disclosure, family reaction, reconciliation, or new arc
+assignment is established. Do not transfer Avery's support profile to him.
+
 ## Parent-Generation Development Proposals
 
 The four parents' written personalities and family links were approved

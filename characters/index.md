@@ -25,7 +25,7 @@ Written parent profiles approved 2026-11-13; no model sheets or chapter appearan
 
 | Character | Age | Height | Family role |
 |---|---:|---|---|
-| [Diane Hayes](diane-hayes/index.md) | 58 | 5'8" / approximately 173 cm | Morgan's mother |
+| [Diane Hayes](diane-hayes/index.md) | 58 | 5'8" / approximately 173 cm | Nate, Adrian, and Morgan's mother |
 | [Thomas "Tom" Bennett](thomas-bennett/index.md) | 60 | 5'9" / approximately 175 cm | Ruby and Autumn's father |
 | [Richard "Rick" Walker](richard-walker/index.md) | 65 | 5'11" / approximately 180 cm | Ethan's father |
 | [Linda Walker](linda-walker/index.md) | 62 | 5'5" / approximately 165 cm | Ethan's mother |
@@ -61,11 +61,19 @@ User-supplied character cards are registered for reuse; see each profile's refer
 | [Caleb "Cal" Mercer](caleb-mercer/index.md) | Ethan's best friend | 39, one year older than Ethan (user-selected 2026-11-13) | About 6'2" / 188 cm | Heavyset, scraggly, worn black biker direction; detailed design pending |
 | [Natalie "Nat" Greene](natalie-greene/index.md) | Morgan's best friend outside the household | 34, same as Morgan | About 5'10" / 178 cm | Tall, thin, dorky, glasses; detailed design pending |
 | [Autumn Bennett](autumn-bennett/index.md) | Ruby's older sister | Around 34; exact age open | Same as Ruby, currently drafted at 152 cm | Name confirmed; fuller build, long hair, strawberry blonde suggested |
+| [Nathan "Nate" Hayes](nathan-hayes/index.md) | Morgan's oldest brother; Diane's son | Proposed 41; not finalized | Proposed 6'0" / 183 cm | Name and family role added 2026-11-13; design and detailed backstory are proposals |
+| [Adrian Hayes](adrian-hayes/index.md) | Morgan's older brother, younger than Nate; Diane's son | Proposed 38; not finalized | Proposed 5'11" / 180 cm | Name and family role added 2026-11-13; design, detailed backstory, and identity directions are proposals |
 
 Nat's friendship does not replace Morgan and Ruby's established friendship.
 The user confirmed Autumn Bennett and Ruby Bennett-Walker; Bennett has two t's.
 Ethan's 178 cm and Cal's 188 cm were explicitly confirmed 2026-11-13.
 Ruby's 152 cm remains a draft measurement.
+
+The [Hayes family-history record](hayes-family-history.md) separates the new
+sibling connections from proposed ages, childhood responses, jobs, and designs.
+The 41/38/34 age proposal has three- and four-year gaps. Adrian's private gender
+questioning and possible autistic traits are independent, unapproved directions;
+no final identity label or diagnosis is established.
 
 ## Natalie's Children
 
@@ -81,6 +89,7 @@ no supporting-character model sheet is approved by that use.
 
 ## References
 
+- [Consolidated reference-sheet copies](_reference-sheets/index.md): v1 only, with surname-first filenames; all originals and versions retained in each character's references folder. Copying does not approve artwork.
 - [Name choices](name-options.md)
 - [Child development questionnaire](child-development-questionnaire.md)
 - [Approved questionnaire answers](questionnaire-answers.md)
