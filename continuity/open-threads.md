@@ -118,7 +118,10 @@ the unnamed father who left when Morgan was 13. See the
   is established, and neither direction explains the other or family withdrawal.
 - Establish current family contact, residences, partners/children if any,
   voices, uncle bonds, and chapter introductions only when needed.
-- No model sheets, reference images, or character-sheet prompts were created.
+- Draft [Nate](../characters/nathan-hayes/prompts/nathan-hayes-reference-sheet.md)
+  and [Adrian](../characters/adrian-hayes/prompts/adrian-hayes-reference-sheet.md)
+  reference-sheet prompts are prepared. Review future output before registering
+  or approving any model sheet; no local reference images exist for either brother.
   External inspiration links from the supplied notes are not approved references.
 
 ## Parent-Generation Decisions: 2026-11-13

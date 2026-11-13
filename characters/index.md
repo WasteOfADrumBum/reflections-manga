@@ -89,6 +89,7 @@ no supporting-character model sheet is approved by that use.
 
 ## References
 
+- [Consolidated reference-sheet copies](_reference-sheets/index.md): v1 only, with surname-first filenames; all originals and versions retained in each character's references folder. Copying does not approve artwork.
 - [Name choices](name-options.md)
 - [Child development questionnaire](child-development-questionnaire.md)
 - [Approved questionnaire answers](questionnaire-answers.md)

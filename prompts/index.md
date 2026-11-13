@@ -1,7 +1,7 @@
 # Prompt Library
 
 Updated: 2026-11-13.
-Status: Fifteen draft reference-sheet prompts prepared, including four based
+Status: Seventeen draft reference-sheet prompts prepared, including four based
 on approved parent written profiles. Existing family and supporting-character
 image records retain their individual approval limits; no parent images or
 master model sheets are approved. No new images generated here.
@@ -41,6 +41,8 @@ These are stage launchers, not one request to produce every stage immediately.
 | Autumn Bennett | [Reference sheet](../characters/autumn-bennett/prompts/autumn-bennett-reference-sheet.md) | Name confirmed; Ruby's older sister; exact age open; same-height direction and fuller/long-haired design study |
 | Ellie Greene | [Reference sheet](../characters/ellie-greene/prompts/ellie-greene-reference-sheet.md) | Age 9 and family established; height open; appearance, personality, and outfit remain proposals |
 | Owen Greene | [Reference sheet](../characters/owen-greene/prompts/owen-greene-reference-sheet.md) | Age approximately 6 and family established; exact age/height open; detailed design remains provisional |
+| Nathan "Nate" Hayes | [Reference sheet](../characters/nathan-hayes/prompts/nathan-hayes-reference-sheet.md) | Name/family role recorded; age 41, height 183 cm, design, outfit, and detailed backstory remain proposals; no registered image |
+| Adrian Hayes | [Reference sheet](../characters/adrian-hayes/prompts/adrian-hayes-reference-sheet.md) | Name/family role recorded; age 38, height 180 cm, design, outfit, and separate identity directions remain proposals; no registered image |
 
 ## Parent-Generation Reference Sheets
 

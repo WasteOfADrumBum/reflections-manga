@@ -46,6 +46,16 @@ age of 41; it is not approved chronology. See the
 - [Proposed wardrobe](wardrobe.md)
 - [Reference status](references/index.md)
 
+## Reusable Prompt
+
+- [Reference-sheet prompt](prompts/nathan-hayes-reference-sheet.md)
+
+## Visual Status
+
+Draft design-study prompt prepared 2026-11-13. No local reference image is
+registered and no model sheet is approved. Preparing the prompt does not
+finalize age, appearance, outfit, or detailed family history.
+
 ## Open Decisions
 
 Exact age, final visual design, occupation, birthdays, residence, voice,

@@ -48,9 +48,10 @@ All characters and events are fictional.
   [Hayes family history](characters/hayes-family-history.md) for approval limits.
 
 Selected character direction and provisional suggestions are labeled separately.
-Five existing supporting-character reference-sheet prompts are linked from
-their profiles, including Ellie and Owen. No prompts or images have been
-prepared for Nate and Adrian.
+Seven supporting-character reference-sheet prompts are linked from their
+profiles, including Ellie, Owen, Nate, and Adrian. Nate and Adrian's prompts
+are design studies only; neither has a registered reference image or approved
+model sheet.
 
 ## Workflow
 
@@ -90,7 +91,7 @@ Chapters released: 0
 See [production status](production/status.md) for remaining work and open decisions.
 Start with the [production walkthrough](production/getting-started.md) and
 [stage-by-stage prompt library](prompts/index.md). The library also links all
-fifteen character reference-sheet prompts.
+seventeen character reference-sheet prompts.
 
 ## Approved Parent Generation
 

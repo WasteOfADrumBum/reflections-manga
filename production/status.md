@@ -52,7 +52,7 @@ Updated: 2026-11-13.
   personality, wardrobe, and selected communication/support choices are approved.
 - Each child has identity, appearance, personality, and wardrobe files.
 - Family tree, bible, timeline, and continuity reference the current decisions.
-- Fifteen reusable reference-sheet prompts are saved in the relevant characters'
+- Seventeen reusable reference-sheet prompts are saved in the relevant characters'
   prompts folders and listed in the [prompt library](../prompts/index.md). Prompt layout
   and exact outfit combinations remain proposals; no images generated here.
 - Ellie and Owen have individual 3:2 reference-sheet prompts. Brown eyes,
@@ -88,7 +88,9 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
 - Review the [Hayes sibling decisions](../continuity/open-threads.md#hayes-sibling-decisions-2026-11-13),
   including the three-/four-year age gaps, proposed departure-age calculations,
   family-role backstory, designs, jobs, and Adrian's separate identity directions.
-  No reference-sheet prompts or images have been prepared for the two brothers.
+  Both brothers now have Ethan-style reference-sheet prompts linked from their
+  profiles and reference notes. All design choices remain studies; no images
+  have been generated or registered and no model sheets are approved for them.
 
 - Reconcile adult visual drafts and any incidental differences in the supplied cards before final canon approval.
 - Refine birthdays, school context, and further unasked interaction details.

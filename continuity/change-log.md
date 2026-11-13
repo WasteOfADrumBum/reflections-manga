@@ -1,5 +1,53 @@
 # Change Log
 
+## 2026-11-13: Surname-First Consolidated Filenames
+
+- Renamed the 16 consolidated v1 images to surname-first filenames, such as
+  mercer-caleb.png. Used current Walker surnames for Morgan, Rowan, and Riley.
+- Avery's walker-avery-bennett.png is a sorting filename only; it does not
+  establish the unresolved middle-name/surname field split in her profile.
+- Updated and sorted the collection index and registry description. Verified
+  unchanged image hashes; original character folders remain untouched.
+- No canon changes, artwork approval, commit, or push.
+
+## 2026-11-13: Consolidated Collection Simplified to v1
+
+- At the user's request, kept only 16 v1 copies in characters/_reference-sheets,
+  renamed to character-folder names with .png extensions (e.g., caleb-mercer.png).
+- Removed 18 later-version copies from this consolidated directory only.
+  All 34 originals, including their later versions, remain unchanged.
+- Updated the collection index and registry link; verified retained copies and
+  original files using SHA-256. No artwork approval, canon change, commit, or push.
+
+## 2026-11-13: Consolidated Reference-Sheet Copies
+
+- Copied all 34 saved reference-sheet images across 16 character folders into
+  characters/_reference-sheets, preserving every original and exact filename.
+- Added an index linking each copy, its original, and original reference notes,
+  with SHA-256 hashes verifying that the copies match their sources.
+- Linked the collection from the character registry. This is a snapshot;
+  future changes require deliberate copying. No artwork approval, canon,
+  relationship, or story-status changes; no commit or push performed.
+
+## 2026-11-13: Hayes Brothers Reference-Sheet Prompts
+
+- Added individual Nate and Adrian prompts in per-character prompts folders,
+  matching Ethan's filename pattern, section structure, copyable prompt style,
+  3:2 study layout, three body views, and three expression studies. Included
+  source-profile, art-direction, reference-status, and panel-template links.
+- Used the user's current draft ages, heights, physical designs, wardrobes,
+  and personality directions. Recorded Nate's proposed stubble in his appearance
+  profile; kept exact study choices and all unapproved designs provisional.
+- Preserved Nate's sincere effort and guilt in his proposed family response.
+  Kept Adrian's private gender questioning and possible, undiagnosed autism
+  separate from one another and from proposed family disengagement.
+- Updated both profile indexes and reference notes, the prompt library and
+  count (seventeen), README, production status, and unresolved review decisions.
+- No image generated, imported, or approved; no fictional image path claimed,
+  canonical marking/accessory added, family event approved, chapter completed,
+  release created, or unrelated chapter-page change included. These draft
+  documentation changes do not trigger the approved-story commit/push workflow.
+
 ## 2026-11-13: Hayes Brothers and Family-Backstory Proposal
 
 - Integrated the supplied notes as Nathan "Nate" Hayes and Adrian Hayes,
