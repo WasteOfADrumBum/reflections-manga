@@ -26,3 +26,29 @@ original v1 file; save deliberate revisions under a new version and record
 approval before replacing an approved master.
 
 See [series reference workflow](../../../prompts/reference-workflow.md).
+
+## Bedroom Portrait Study: 2026-11-13
+
+The existing clothed sheet was used as an identity input for a standalone
+portrait in opaque sleepwear. See the [image, successful prompt, wardrobe
+substitution, and review notes](../../../assets/drafts/ethan-morgan-ruby-bedroom-portrait-study.md). This does not approve the output,
+change a master, or establish a chapter event.
+
+## Pajama Chase Study: 2026-11-13
+
+The user selected a playful chase in Ruby's navy pajamas and Morgan's black
+button-up alternative. See the [image, inputs, successful prompt, and review
+notes](../../../assets/drafts/ethan-morgan-ruby-pajama-chase-study.md). Output approval and permanent wardrobe choices remain open.
+
+## Indoor Wedding Outfit Study: 2026-11-13
+
+The user supplied a wedding-outfit sheet for an indoor group portrait. See
+the [portrait, exact inputs, prompt, and continuity notes](../../../assets/drafts/ethan-morgan-ruby-indoor-wedding-study.md). This
+selects the outfit for this study; image/master approval and unselected
+historical ceremony details remain open. Existing references are preserved.
+
+## Beach Day Study: 2026-11-13
+
+The user supplied a beach outfit reference for this standalone scene. See
+the [image, exact inputs, prompt and framing review](../../../assets/drafts/ethan-morgan-ruby-beach-day-study.md). Outfit and
+activity selection here do not approve a master, permanent hobby, or chapter event.

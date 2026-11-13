@@ -24,8 +24,11 @@ Preserve all three adults' agency and Morgan/Ruby's platonic friendship.
 
 ## Chapter Allocation
 
-- [Existing Chapter 001 planning scaffold](chapter-001/outline.md) is preserved.
-- It has not yet been assigned a final title, script, page count, or approved concept adaptation.
+- [Chapter 001 proposed outline](chapter-001/outline.md): Three Hearts,
+  Different Needs, proposed 32-page adaptation of Story 001, recorded 2026-11-13.
+- The [detailed map](concepts/story-001-three-hearts-different-needs.md#proposed-chapter-1-map-32-pages)
+  includes draft scenes and sample dialogue. Title, allocation, page count,
+  and creative execution remain DRAFT pending approval; no completed script.
 
 Concept IDs are stable and distinct from chapter IDs. Expand each concept
 only when its brief, chapter scope, and carry-in continuity are selected.

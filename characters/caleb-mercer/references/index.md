@@ -2,7 +2,11 @@
 
 Updated: 2026-11-13.
 
-Status: No character reference image supplied, generated, or approved.
+Status: User supplied a fictional sheet for the 2026-11-13 carry illustration.
+Selected as that illustration's identity guide; no model sheet approved.
+
+- [Exact attached input archived with the study](../../../assets/drafts/ethan-caleb-carry-cal-input.png)
+- [Carry-study versions, prompt, and review notes](../../../assets/drafts/ethan-caleb-carry-study.md)
 
 - [Written appearance](../appearance.md)
 - [Wardrobe](../wardrobe.md)
@@ -17,5 +21,7 @@ masters. The proposed 3:2 study layout does not establish manga page standards.
 
 Save Cal's PNG in this references folder as:
 `caleb-mercer-reference-sheet-v1.png`.
-This is the expected filename, not a claim that the image is already present
-or approved. For later revisions, retain v1 and use v2, v3, and so on.
+That local filename is present, but differs byte-for-byte from the attached
+input archived above. Do not silently substitute it for the input used in this
+study or treat file presence as approval. For revisions, retain v1 and use v2,
+v3, and so on.
