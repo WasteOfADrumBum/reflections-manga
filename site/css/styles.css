@@ -353,7 +353,7 @@ p { margin: 0 0 1em; }
 .char-portrait { margin: 0; border-bottom: 3px solid var(--rule); background: var(--paper-2); }
 @media (min-width: 48rem) { .char-portrait { border-bottom: 0; border-right: 3px solid var(--rule); } }
 .char-portrait img { width: 100%; aspect-ratio: 440 / 316; object-fit: cover; }
-.char-portrait figcaption { padding: 0.6rem 0.9rem; font-size: 0.9rem; }
+.char-portrait p { margin: 0; padding: 0.6rem 0.9rem; font-size: 0.9rem; }
 .char-body { padding: 1.25rem 1.25rem 1.5rem; }
 .char-body h3 { font-size: clamp(1.5rem, 3vw, 1.9rem); margin-bottom: 0.15rem; }
 .char-tagline { font-family: var(--font-display); font-size: 1.1rem; color: var(--ink-soft); margin-bottom: 1rem; }
