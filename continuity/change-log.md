@@ -1,5 +1,23 @@
 # Change Log
 
+## 2026-11-13: First Four Chapter 001 Pages on the Site Reader
+
+- At the user's request, web copies of pages 001-004 (A01-C001-P001 to P004)
+  were added under site/pages/chapter-001 and listed in site/js/chapters.js
+  with the title "Three Hearts, Different Needs" and descriptive alt text.
+- The source page files are unchanged (P004 was saved without an extension).
+- Publishing these pages is site display at the user's request. It does not by
+  itself approve the script, outline, page standards, or canon events; the
+  chapter registry status is unchanged pending the user's explicit approval.
+
+## 2026-11-13: Parent Portraits on the Site
+
+- The user pushed reference sheets for Diane Hayes, Linda Walker, Rick Walker,
+  and Tom Bennett and asked for the site to be updated. The tree and bios now
+  use portrait crops and a gallery sheet in place of initials.
+- Source files are unchanged and not renamed. No master model sheet is approved
+  by site use.
+
 ## 2026-11-13: Approved Childhood Family History Reconciliation
 
 - Recorded the user's explicit approval: Morgan's father had alcoholism and
