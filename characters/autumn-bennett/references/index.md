@@ -2,7 +2,9 @@
 
 Updated: 2026-11-13.
 
-Status: No character reference image supplied, generated, or approved.
+Status: User-saved v1 sheet is present locally as `autumn-bennett-reference-sheet-v1.png`
+(1536x1024, git-ignored). On 2026-11-13 the user approved web copies of it
+for the public site characters page. It is not approved as a master model sheet.
 
 - [Written appearance](../appearance.md)
 - [Wardrobe](../wardrobe.md)
@@ -17,5 +19,4 @@ masters. The proposed 3:2 study layout does not establish manga page standards.
 
 Save Autumn's PNG in this references folder as:
 `autumn-bennett-reference-sheet-v1.png`.
-This is the expected filename, not a claim that the image is already present
-or approved. For later revisions, retain v1 and use v2, v3, and so on.
+The file is present; site use does not make it an approved master. For later revisions, retain v1 and use v2, v3, and so on.

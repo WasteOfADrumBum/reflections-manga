@@ -475,6 +475,14 @@ html:not(.js) .js-only { display: none !important; }
 .ft-legend li { display: inline-flex; align-items: center; gap: 0.45rem; }
 .ft-legend svg { width: 2.5rem; height: 0.75rem; }
 
+/* Friends and relatives: a simple row under the family tree */
+.ft-more { margin-top: 1rem; padding-top: 1rem; border-top: 3px solid var(--rule); }
+.ft-more-title { font-size: 1.15rem; text-align: center; margin: 0 0 0.75rem; }
+.ft-row { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 0.75rem; }
+.ft-row-item { flex: 0 0 20%; display: flex; justify-content: center; --s: 10; --ns: 17.778; }
+.ft-row .ft-label { white-space: normal; text-align: center; }
+@container ft (max-width: 34rem) { .ft-row-item { flex-basis: 33.333%; } }
+
 /* Panel */
 .cast-panel { container-type: inline-size; }
 html:not(.js) .cast-panel { display: grid; gap: 2rem; }

@@ -1,5 +1,19 @@
 # Change Log
 
+## 2026-11-13: Supporting Cast on the Site Characters Page
+
+- Added Nat, Ellie, Owen, Cal, and Autumn to site/characters.html as a
+  "Friends & relatives" row under the family tree, with bios and relationship
+  entries in site/js/relationships.js.
+- Bios use only user-selected facts (names, connections, ages, heights, broad
+  appearance, Autumn's outgoing direction). Proposed personality traits,
+  hobbies, child friendships, and Cal's recovery premise are left off the site.
+- Exported web copies (portrait crop and full sheet) of each locally saved
+  v1 reference sheet into site/images/characters. Cal's copy comes from the
+  references-folder file, not the archived carry input.
+- The user approved these five draft sheets for the public site on 2026-11-13.
+  The source PNGs stay git-ignored; no master model sheet is approved by this use.
+
 ## 2026-11-13: Bennett Names and Matching Directories
 
 - Implemented the user's corrected spelling: Autumn Bennett and Ruby
