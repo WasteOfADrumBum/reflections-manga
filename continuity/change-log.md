@@ -1,5 +1,55 @@
 # Change Log
 
+## 2026-11-13: Hayes Brothers and Chapter 001 Pages 005-010 on the Site
+
+- At the user's request, Nate and Adrian Hayes were added to the site family tree
+  and character list as Morgan's older brothers, with portrait crops and sheets
+  from their v1 reference files. Site bios use only names, sibling order, and
+  family links. PROPOSED ages and heights are shown as "About"; personality,
+  occupation, identity, and backstory proposals are not published.
+- The tree now puts the three Hayes siblings under Diane; on phones the adult
+  row shows name and age only.
+- Web copies of pages 005-010 were added to the reader with alt text. Site
+  display does not approve the script, pages, or canon events.
+
+## 2026-11-13: Story 001 Pages 011–020 and Ten-Page Prompt Workflow
+
+- Recorded the user's preference for ten-page prompt packs, each page accompanied
+  by one high-level plot sentence, a copyable prompt, and ordered character references.
+- Confirmed ten saved working page images; inspected 005–010 and updated the
+  inventory/hashes. Page 004 currently has a .png extension with unchanged bytes.
+  No images renamed or edited; prior prompt exports remain intact.
+- Drafted 011–020 in 41 panels with 35 lettering items, preserving the outline's
+  child introductions and near-simultaneous adult requests. New scene props,
+  child actions, dialogue and internal interpretations remain DRAFT.
+- Saved ten self-contained text prompts, a combined pack, and a quick page guide
+  covering prepared pages 001–020. Updated script, outline, continuity, handoff,
+  production guide/status, registry, and open decisions. Corrected the stale
+  extensionless page-004 link in the earlier pack.
+- Maintained approved physical traits, attachments and parenting agency. No AAC
+  system, new diagnosis/support level, child address for Ethan, spousal hierarchy,
+  identity resolution or permanent wardrobe approved. No new art, final chapter QA,
+  release, deployment, commit or push. Remaining packs: 021–030, then 031–032.
+
+## 2026-11-13: Girls' Hotel Sleepover Comedy Draft
+
+- Generated the disclosed covered comedy alternative: Autumn and Natalie pillow
+  fight on the bed, Nat's hood slips over her glasses, Morgan takes Ruby's hair towel.
+- Preserved the left-to-center bed and rear bathroom doorway. Saved image,
+  successful prompt, references, and adaptation notes in
+  assets/drafts/girls-trip-hotel-sleepover-study.md.
+- Clothing-exposure gags were not produced. Hotel scene remains a proposal,
+  without a canonical event, permanent character change, artwork approval, or release.
+
+## 2026-11-13: Girls' Beach Splash-Fight Draft
+
+- Following an image-tool rejection of the suggestive version, generated the
+  disclosed vacation-comedy alternative with Natalie, Morgan, Autumn, and Ruby.
+- Saved the image, successful prompt, input links, and review notes in
+  assets/drafts/girls-trip-beach-splash-fight-study.md; prior group photo preserved.
+- Scene remains a draft with no canonical event, permanent trait change,
+  artwork approval, or release established.
+
 ## 2026-11-13: Girls' Trip Beach Photo Draft
 
 - Generated a playful beach portrait of Natalie, Morgan, Autumn, and Ruby

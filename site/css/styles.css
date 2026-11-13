@@ -489,6 +489,7 @@ a.ft-node:hover .ft-face { transform: scale(1.05); box-shadow: 0 0 0 4px var(--p
   .ft-nm { font-size: max(0.85rem, 4cqw); }
   .ft-ag, .ft-role { font-size: max(0.72rem, 3cqw); }
   .ft-role { font-size: max(0.66rem, 2.8cqw); }
+  .ft-tight .ft-ag { font-size: max(0.64rem, 2.6cqw); }
   .ft-tight .ft-role { display: none; } /* five across on phones: name and age only */
   .ft-parent .ft-nm { font-size: max(0.72rem, 3cqw); }
   .ft-parent .ft-ag { font-size: max(0.65rem, 2.6cqw); }
