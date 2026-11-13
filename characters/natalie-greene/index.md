@@ -21,7 +21,7 @@ downgrade Morgan and Ruby's established best-friend and coparent bond.
 
 ## Family and Relationships
 
-- Best friend of [Morgan Hayes-Walker](../morgan-hayes/index.md).
+- Best friend of [Morgan H. Walker](../morgan-hayes/index.md).
 - Mother of [Ellie Greene](../ellie-greene/index.md), daughter, 9 like Rowan.
 - Mother of [Owen Greene](../owen-greene/index.md), son, approximately 6 like Riley.
 - Ellie and Owen's other parentage and legal sibling status are not established.

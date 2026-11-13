@@ -47,3 +47,12 @@ Use [the roadmap](../series/roadmap.md) for order and story-specific constraints
 - Existing child interests and questionnaire choices remain intact.
 - Record approved developments in the relevant chapter continuity and canon log
   only after approval; do not backfill these questions as events.
+
+## Parent-Generation Development Proposals
+
+The four parents' written personalities and family links were approved
+2026-11-13. Their suggested influences are optional development directions:
+Diane/Morgan and accepting help; Tom/Ruby/Autumn and nurture versus expression;
+Rick/Ethan and handling responsibility alone; Linda/Ethan and others' emotional
+needs. Specific lessons, causes of current behavior, conflicts, and resolutions
+remain proposals, not established history or required future outcomes.

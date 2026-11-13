@@ -1,4 +1,4 @@
-# Rowan Hayes-Walker: Appearance
+# Rowan Walker: Appearance
 
 Status: Questionnaire appearance choices approved 2026-11-12. No artwork approved.
 

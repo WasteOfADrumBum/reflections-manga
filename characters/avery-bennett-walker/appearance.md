@@ -1,4 +1,4 @@
-# Avery Bennett-Walker: Appearance
+# Avery Bennett Walker: Appearance
 
 Status: Questionnaire choices approved 2026-11-12. No artwork approved.
 

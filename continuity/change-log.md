@@ -1,5 +1,72 @@
 # Change Log
 
+## 2026-11-13: First Four Chapter 001 Pages on the Site Reader
+
+- At the user's request, web copies of pages 001-004 (A01-C001-P001 to P004)
+  were added under site/pages/chapter-001 and listed in site/js/chapters.js
+  with the title "Three Hearts, Different Needs" and descriptive alt text.
+- The source page files are unchanged (P004 was saved without an extension).
+- Publishing these pages is site display at the user's request. It does not by
+  itself approve the script, outline, page standards, or canon events; the
+  chapter registry status is unchanged pending the user's explicit approval.
+
+## 2026-11-13: Parent Portraits on the Site
+
+- The user pushed reference sheets for Diane Hayes, Linda Walker, Rick Walker,
+  and Tom Bennett and asked for the site to be updated. The tree and bios now
+  use portrait crops and a gallery sheet in place of initials.
+- Source files are unchanged and not renamed. No master model sheet is approved
+  by site use.
+
+## 2026-11-13: Approved Childhood Family History Reconciliation
+
+- Recorded the user's explicit approval: Morgan's father had alcoholism and
+  left the family when she was 13; Ruby's mother died when she was 6.
+- Reconciled Diane Hayes and Thomas "Tom" Bennett's biographies, Morgan and
+  Ruby's profiles, Autumn's maternal-history limits, registry, family tree,
+  character rules, series bible, relationship canon, and open decisions.
+- Added childhood chronology with approximate offsets from opening: about
+  21 years for Morgan's father's departure and 22 years for Ruby's mother's
+  death. Exact dates and event spacing remain open. Clarified that the earlier
+  household summaries did not establish either parent's absence from birth.
+- Updated world-record pointers, Chapter 001's background continuity, production
+  status, README, and the two parent biographies in the site source.
+- Preserved all existing names and surname conventions, earlier log entries,
+  visual assets, and draft story status. Kept unprovided names, Morgan's father's
+  current status, Ruby's mother's cause of death, and Autumn's maternal history open.
+- No chapter completion, release, artwork approval, or production deployment
+  is part of this documentation update.
+
+## 2026-11-13: Approved Parent Profiles and Name Reconciliation
+
+- Added Diane Hayes, Thomas "Tom" Bennett, Richard "Rick" Walker, and Linda Walker
+  with approved written profiles, appearance, personality, wardrobe, reference
+  status records, and draft reference-sheet prompts.
+- Updated registry, family tree, reciprocal parent/grandparent links, relationship
+  canon, timeline, development questions, bible, README, and production records.
+- Applied Morgan H. Walker (Hayes middle name / Walker surname), Ruby Bennett-Walker,
+  Rowan Walker, Riley Walker, and Avery Bennett Walker across current text and
+  the site source. Preserved legacy IDs, image files, historical decisions, and
+  exact saved illustration prompts; old names in them are superseded.
+- Replaced site parent placeholders with the four named parents and written bios;
+  absent parents are not presented as pending character introductions.
+- No absent-parent fate, model-sheet approval, chapter event, release, or new
+  production deployment is authorized by these records.
+
+## 2026-11-13: Story 001 Manual Page-Generation Prompts
+
+- Prepared four self-contained full-page draft prompts from the saved 18-panel
+  opening script, retaining its exact dialogue, internal captions, SFX, and title.
+  Saved a combined page-prompts.md guide plus four individual plain-text exports.
+- Listed actual character-sheet inputs by page, including Morgan and Rowan in
+  page 002 backgrounds. Linked the registered everyday v1 identity cards and
+  explained previous-page references without replacing the identity anchors.
+- Proposed repeatable outfits, kitchen/nook geography, portrait color draft
+  settings, reading order, panel arrangements, and a provisional Ruby band
+  placement. These are production proposals, not new canon or final standards.
+- Updated chapter continuity, handoff, and production status. No artwork,
+  approved storyboard, image QA, chapter approval, release, or push performed.
+
 ## 2026-11-13: Cal Is 39; Ages and Roles on the Site Tree
 
 - USER-APPROVED: Caleb "Cal" Mercer is 39, one year older than Ethan. Updated

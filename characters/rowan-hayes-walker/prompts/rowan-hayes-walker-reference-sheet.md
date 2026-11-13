@@ -1,4 +1,4 @@
-# Rowan Hayes-Walker: Reference-Sheet Prompt
+# Rowan Walker: Reference-Sheet Prompt
 
 Version: 1
 Updated: 2026-11-12
@@ -49,7 +49,7 @@ view. Each view depicts the same person; do not invent additional characters.
 The proposed reference-sheet layout does not establish manga page standards.
 Do not render labels, names, measurements, dialogue, watermarks, or logos.
 CHARACTER
-Rowan Hayes-Walker, a fictional 9-year-old boy, 130 cm tall. Slender build,
+Rowan Walker, a fictional 9-year-old boy, 130 cm tall. Slender build,
 natural child anatomy, and age-appropriate facial proportions. Fair skin with
 a neutral undertone. No visible freckles. Chestnut-brown hair, short at the
 sides with a slightly messy textured top. Brown-leaning hazel eyes with brown

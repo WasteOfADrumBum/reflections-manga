@@ -18,16 +18,16 @@ communication, emotional connection, and personal growth.
 ## Main Characters
 
 - Ruby Bennett-Walker
-- Morgan Hayes-Walker
+- Morgan H. Walker
 - Ethan Walker
 
 ## Children
 
 | Character | Parents | Opening age | Height |
 |---|---|---|---|
-| [Rowan Hayes-Walker](characters/rowan-hayes-walker/index.md) | Ethan and Morgan | 9 | 130 cm |
-| [Riley Hayes-Walker](characters/riley-hayes-walker/index.md) | Ethan and Morgan | Approximately 6 | 110 cm |
-| [Avery Bennett-Walker](characters/avery-bennett-walker/index.md) | Ethan and Ruby | 7 | 126 cm |
+| [Rowan Walker](characters/rowan-hayes-walker/index.md) | Ethan and Morgan | 9 | 130 cm |
+| [Riley Walker](characters/riley-hayes-walker/index.md) | Ethan and Morgan | Approximately 6 | 110 cm |
+| [Avery Bennett Walker](characters/avery-bennett-walker/index.md) | Ethan and Ruby | 7 | 126 cm |
 
 Written appearance, personality, and wardrobe selections are approved.
 See the [approved questionnaire answers](characters/questionnaire-answers.md).
@@ -77,11 +77,27 @@ Changes must be recorded in `continuity/change-log.md`.
 ## Status
 
 Project setup: Family and written child specifications established
-Character profiles: Eleven profiles; central-family child questionnaire choices approved, adult visual drafts and supporting-child designs awaiting approval
+Character profiles: Fifteen profiles; four parent written profiles and central-family child questionnaire choices approved; other adult visual drafts and supporting-child designs awaiting approval
 Artwork: Six user-saved character cards registered for reuse; no new chapter artwork generated
 Chapters released: 0
 
 See [production status](production/status.md) for remaining work and open decisions.
 Start with the [production walkthrough](production/getting-started.md) and
 [stage-by-stage prompt library](prompts/index.md). The library also links all
-eleven character reference-sheet prompts.
+fifteen character reference-sheet prompts.
+
+## Approved Parent Generation
+
+- [Diane Hayes](characters/diane-hayes/index.md), 58: Morgan's mother.
+- [Thomas "Tom" Bennett](characters/thomas-bennett/index.md), 60: Ruby and Autumn's father.
+- [Richard "Rick" Walker](characters/richard-walker/index.md), 65: Ethan's father.
+- [Linda Walker](characters/linda-walker/index.md), 62: Ethan's mother.
+
+Written parent profiles and current names approved 2026-11-13. Hayes is
+Morgan's middle name and Walker her surname. Avery Bennett Walker remains
+unhyphenated. Existing folders and image paths are stable legacy identifiers.
+
+Childhood family history approved 2026-11-13: Morgan's father had alcoholism
+and left the family when she was 13; Ruby's mother died when she was 6.
+See the [family chronology](continuity/timeline.md#childhood-family-history-approved-2026-11-13)
+for timing limits and unresolved details.

@@ -1,7 +1,8 @@
 # Character Registry
 
 Status: Family structure, adult ages, and written child questionnaire choices
-approved 2026-11-12. Adult visual drafts, model sheets, and unasked details remain open.
+approved 2026-11-12. Current names and four parent written profiles approved
+2026-11-13. Central-adult visual drafts, model sheets, and unasked details remain open.
 Relationship history, shared ceremony, parenting roles, and family bonds are
 recorded in the [relationship canon](../continuity/relationships.md).
 Supporting-cast names and core directions selected 2026-11-13 are recorded
@@ -12,21 +13,43 @@ below. Detailed prior assistant suggestions remain proposals, not fixed canon.
 | Character | Age | Height | Status |
 |---|---:|---|---|
 | [Ethan Walker](ethan-walker/index.md) | 38 | 5'10" / 178 cm | Age approved; height and dad bod confirmed 2026-11-13 |
-| [Morgan Hayes-Walker](morgan-hayes/index.md) | 34 | 5'7" / 170 cm | Age approved; height remains existing draft |
+| [Morgan H. Walker](morgan-hayes/index.md) | 34 | 5'7" / 170 cm | Age approved; height remains existing draft |
 | [Ruby Bennett-Walker](ruby-bennett-walker/index.md) | 28 | 5'0" / 152 cm | Age approved; height remains existing draft |
 
 Use the current profile links. Ruby's directory is ruby-bennett-walker and
 Autumn's is autumn-bennett, corrected 2026-11-13 with matching reference links.
 
+## Approved Parent Generation
+
+Written parent profiles approved 2026-11-13; no model sheets or chapter appearances approved.
+
+| Character | Age | Height | Family role |
+|---|---:|---|---|
+| [Diane Hayes](diane-hayes/index.md) | 58 | 5'8" / approximately 173 cm | Morgan's mother |
+| [Thomas "Tom" Bennett](thomas-bennett/index.md) | 60 | 5'9" / approximately 175 cm | Ruby and Autumn's father |
+| [Richard "Rick" Walker](richard-walker/index.md) | 65 | 5'11" / approximately 180 cm | Ethan's father |
+| [Linda Walker](linda-walker/index.md) | 62 | 5'5" / approximately 165 cm | Ethan's mother |
+
+Family history approved 2026-11-13: Morgan's father had alcoholism and left the
+family when Morgan was 13; Diane raised her without him after his departure.
+Ruby's mother died when Ruby was 6; Tom raised Ruby without her afterward.
+Tom also raised Autumn without her mother present. A shared mother is not
+established for the sisters. Morgan's father's name and current status, Ruby's
+mother's name and cause of death, and Autumn's maternal history remain open.
+
 ## Children
 
 | Character | Parents | Age | Approved height |
 |---|---|---:|---|
-| [Rowan Hayes-Walker](rowan-hayes-walker/index.md) | Ethan and Morgan | 9 | 130 cm / approximately 4'3" |
-| [Avery Bennett-Walker](avery-bennett-walker/index.md) | Ethan and Ruby | 7 | 126 cm / approximately 4'2" |
-| [Riley Hayes-Walker](riley-hayes-walker/index.md) | Ethan and Morgan | About 6 | 110 cm / approximately 3'7" |
+| [Rowan Walker](rowan-hayes-walker/index.md) | Ethan and Morgan | 9 | 130 cm / approximately 4'3" |
+| [Avery Bennett Walker](avery-bennett-walker/index.md) | Ethan and Ruby | 7 | 126 cm / approximately 4'2" |
+| [Riley Walker](riley-hayes-walker/index.md) | Ethan and Morgan | About 6 | 110 cm / approximately 3'7" |
 
-Names, heights, and written questionnaire selections approved 2026-11-12.
+Initial names, heights, and written questionnaire selections approved 2026-11-12;
+current displayed names revised and approved 2026-11-13. Morgan uses Hayes as
+her middle name and Walker as her surname, displayed Morgan H. Walker. Ruby
+uses Bennett-Walker; Avery uses Bennett Walker exactly as written, without
+inferring a middle-name/surname split. Legacy directory IDs remain stable.
 Rowan is 9; Avery is confirmed at 7; Riley remains approximately 6.
 Each child has approved written appearance, personality, and wardrobe choices.
 User-supplied character cards are registered for reuse; see each profile's reference links. Incidental image details do not override approved written facts.
@@ -68,4 +91,6 @@ no supporting-character model sheet is approved by that use.
 - [Global character rules](_character-rules.md)
 - [Reusable character prompts](../prompts/index.md)
 
-Adult designs remain drafts awaiting final approval. Existing artwork is preserved.
+The four parent-generation written designs are approved. Other adult visual
+drafts retain their existing status. Existing artwork is preserved; no parent
+model sheet is approved.

@@ -11,8 +11,13 @@ Updated: 2026-11-13.
 - A [production walkthrough](getting-started.md), 11 stage prompts, and expanded
   chapter templates are available. No story, images, or PDF is produced by the guide.
 
-- Eleven fictional characters are registered: six central family members and
-  five supporting characters, including Nat's children Ellie and Owen.
+- Fifteen fictional characters are registered: six central family members,
+  five supporting characters including Nat's children, and four approved
+  parent-generation profiles: Diane (58), Tom (60), Rick (65), and Linda (62).
+  Parent written profiles are approved; no parent images or model sheets exist.
+- Current names are Morgan H. Walker (Hayes middle name / Walker surname),
+  Ruby Bennett-Walker, Rowan Walker, Riley Walker, and Avery Bennett Walker.
+  Legacy directory and asset identifiers are preserved.
 - [Cal](../characters/caleb-mercer/index.md), [Nat](../characters/natalie-greene/index.md),
   and [Autumn Bennett](../characters/autumn-bennett/index.md) have written profiles and draft
   reference prompts. Selected direction is distinguished from prior suggestions.
@@ -21,6 +26,11 @@ Updated: 2026-11-13.
 - Six user-saved PNG reference cards are present, each 1536 x 1024, and linked
   from character profiles and prompts. See the reference workflow for reuse.
 - Ethan is 38, Morgan is 34, and Ruby is 28.
+- Childhood family history approved 2026-11-13: Morgan's father had alcoholism
+  and left when she was 13; Ruby's mother died when she was 6. Profiles and
+  [chronology](../continuity/timeline.md#childhood-family-history-approved-2026-11-13)
+  record these facts and their timing limits. Other circumstances remain open;
+  no chapter events or explanations of adult behavior are added.
 - Ethan's romantic marriages and Morgan/Ruby's platonic friendship are recorded.
 - Workplace origins, early relationships, V-polyamory, moving in approximately
   six months later, and the shared same-day wedding are recorded in
@@ -35,7 +45,7 @@ Updated: 2026-11-13.
   personality, wardrobe, and selected communication/support choices are approved.
 - Each child has identity, appearance, personality, and wardrobe files.
 - Family tree, bible, timeline, and continuity reference the current decisions.
-- Eleven reusable reference-sheet prompts are saved in the relevant characters'
+- Fifteen reusable reference-sheet prompts are saved in the relevant characters'
   prompts folders and listed in the [prompt library](../prompts/index.md). Prompt layout
   and exact outfit combinations remain proposals; no images generated here.
 - Ellie and Owen have individual 3:2 reference-sheet prompts. Brown eyes,
@@ -56,10 +66,14 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
   continuing pages 005–010. All new execution and the 32-page working outline
   remain DRAFT pending approval. Pages 005–032 are unscripted; the storyboard
   remains a scaffold. See the [chapter handoff](../stories/arc-01/chapter-001/handoff.md).
+  A [four-page prompt pack](../stories/arc-01/chapter-001/page-prompts.md) is now
+  available for the user's manual image generation, with per-page character
+  reference lists and draft layout/format conventions. No chapter art generated.
 
 - Resolve supporting-cast details in the [open decisions](../continuity/open-threads.md#supporting-cast-decisions-2026-11-13),
-  including Autumn's exact age, Cal's exact age, final visual traits, histories,
-  and Ellie/Owen's designs. No supporting-character artwork is supplied.
+  including Autumn's exact age, final visual traits, histories,
+  and Ellie/Owen's designs. Existing user-saved supporting-character images
+  and public web copies retain the approval limits in their reference records.
 
 - Reconcile adult visual drafts and any incidental differences in the supplied cards before final canon approval.
 - Refine birthdays, school context, and further unasked interaction details.

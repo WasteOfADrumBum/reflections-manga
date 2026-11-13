@@ -2,6 +2,58 @@
 
 ## Approved Canon
 
+Newest explicit decisions supersede earlier conflicting labels; older entries
+are preserved as historical records.
+
+### 2026-11-13: Childhood Family History Approved
+
+- Morgan's father had alcoholism and left the family when Morgan was 13.
+  Diane Hayes raised Morgan without him after his departure. His name,
+  current status, later contact, and any further circumstances remain unspecified.
+- Ruby's mother died when Ruby was 6. Thomas "Tom" Bennett raised Ruby
+  without her mother afterward. Her name and cause of death remain unspecified.
+- These explicit user-approved facts supersede the earlier statements that
+  both absent parents' fates and circumstances were wholly unspecified. Earlier
+  entries below preserve the prior approval state; absence from birth is not canon.
+- Tom also raised Autumn without her mother present. A shared father does not
+  establish a shared mother or full-sibling status; Ruby's history does not
+  establish Autumn's maternal history or an age at bereavement.
+- The [timeline](timeline.md#childhood-family-history-approved-2026-11-13) records
+  the childhood ages and approximate age-based offsets: about 21 years before
+  opening for Morgan's father's departure and about 22 for Ruby's mother's death.
+  These are planning estimates, not calendar dates or exact event spacing.
+- Preserve Morgan H. Walker, Ruby Bennett-Walker, Rowan Walker, Riley Walker,
+  and Avery Bennett Walker, including the established name-field conventions.
+- No new names, divorce, current status for Morgan's father, cause of death,
+  personality changes, or causal explanation of adult behavior are approved.
+  No chapter event, artwork, completed story, or release is approved by this update.
+
+### 2026-11-13: Parent Profiles and Current Family Names Approved
+
+The user explicitly approved the four parents and requested the established
+written appearance, personality, wardrobe, and family resemblance directions.
+
+- [Diane Hayes](../characters/diane-hayes/index.md): 58, 5'8" / approximately 173 cm; Morgan's mother.
+- [Thomas "Tom" Bennett](../characters/thomas-bennett/index.md): 60, 5'9" / approximately 175 cm; Ruby and Autumn's father.
+- [Richard "Rick" Walker](../characters/richard-walker/index.md): 65, 5'11" / approximately 180 cm; Ethan's father.
+- [Linda Walker](../characters/linda-walker/index.md): 62, 5'5" / approximately 165 cm; Ethan's mother.
+- Diane raised Morgan without a father in the household. Tom raised Ruby and
+  Autumn without their mother present. Neither absent parent's identity, fate,
+  or reason for absence is established. Preserve Autumn as Ruby's older sister.
+- Rick and Linda are Ethan's parents. Their marital status is unspecified.
+- Current names: Morgan H. Walker; Ruby Bennett-Walker; Rowan Walker; Riley Walker;
+  Avery Bennett Walker. Hayes is Morgan's middle name and Walker her married
+  surname. Her explicit resulting configuration resolves the earlier verbal
+  contradiction. Avery has no hyphen; her name-field split is unselected.
+- These name decisions supersede former displayed surname forms in older
+  entries below. Preserve those entries as history; use current profiles for
+  production. Legacy directory and image filenames are retained for compatibility.
+- Parent written profiles are approved independently of art. No draft image,
+  saved illustration study, model sheet, chapter event, or story release gains
+  approval. Existing relatives' unselected visuals remain provisional.
+- Suggested childhood influences and causal explanations of adult habits
+  remain development proposals, with exact incidents and chronology open.
+
 ### 2026-11-13: Ethan and Cal Proportions Confirmed
 
 - The user explicitly confirmed Cal at 6'2" / approximately 188 cm and Ethan

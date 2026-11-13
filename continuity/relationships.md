@@ -7,10 +7,25 @@ and the [timeline](timeline.md) for relative chronology.
 Supporting relationships selected 2026-11-13 are distinguished below from
 unapproved personality, backstory, and interaction proposals.
 
+## Current Names: Approved 2026-11-13
+
+| Character | Current name configuration |
+|---|---|
+| Morgan H. Walker | Given name Morgan; middle name Hayes (birth surname), displayed H.; married surname Walker, not hyphenated |
+| Ruby Bennett-Walker | Hyphenated surname Bennett-Walker |
+| Rowan Walker | Surname Walker |
+| Riley Walker | Surname Walker |
+| Avery Bennett Walker | Full name exactly as written, no hyphen; middle-name/surname split unspecified |
+
+The concrete Morgan configuration supersedes the earlier contradictory verbal
+phrase that she did not take Ethan's surname. Legacy folders, saved image
+labels, and historical logs may retain former names; use this table for new
+text and lettering. Naming changes establish no new legal marriage status.
+
 ## Shared Marriage
 
 [Ethan Walker](../characters/ethan-walker/index.md) (38),
-[Morgan Hayes-Walker](../characters/morgan-hayes/index.md) (34), and
+[Morgan H. Walker](../characters/morgan-hayes/index.md) (34), and
 [Ruby Bennett-Walker](../characters/ruby-bennett-walker/index.md) (28) share one
 household and a committed V-shaped polyamorous marriage. Ethan is the romantic
 partner of both women. The family may call itself a throuple; that does not
@@ -109,9 +124,9 @@ backstory or from surnames.
 
 | Child | Previously recorded parents | Opening age | Closest parental attachment |
 |---|---|---|---|
-| [Rowan Hayes-Walker](../characters/rowan-hayes-walker/index.md), son | Ethan and Morgan | 9 | Ruby |
-| [Avery Bennett-Walker](../characters/avery-bennett-walker/index.md), daughter | Ethan and Ruby | 7 | Ethan |
-| [Riley Hayes-Walker](../characters/riley-hayes-walker/index.md), daughter | Ethan and Morgan | Approximately 6 | Morgan |
+| [Rowan Walker](../characters/rowan-hayes-walker/index.md), son | Ethan and Morgan | 9 | Ruby |
+| [Avery Bennett Walker](../characters/avery-bennett-walker/index.md), daughter | Ethan and Ruby | 7 | Ethan |
+| [Riley Walker](../characters/riley-hayes-walker/index.md), daughter | Ethan and Morgan | Approximately 6 | Morgan |
 
 Rowan and Riley are full siblings; Avery is their paternal half-sister. Those
 existing parentage terms do not measure belonging or emotional closeness.
@@ -159,7 +174,35 @@ living arrangements, chapter appearances, or milestone events are established.
 The proposed blunt support from Cal, gentle challenges from Nat, sisterly
 boundary tension, and child playmates remain development ideas in their profiles.
 The user confirmed Autumn Bennett and Ruby Bennett-Walker on 2026-11-13,
-with two t's in Bennett. Avery's name remains Avery Bennett-Walker.
+with two t's in Bennett. Avery's current name is Avery Bennett Walker, revised 2026-11-13.
+
+## Parent Generation: Approved 2026-11-13
+
+| Parent | Established relationship and upbringing |
+|---|---|
+| [Diane Hayes](../characters/diane-hayes/index.md), 58 | Morgan's mother; raised Morgan without her father after he left when Morgan was 13 |
+| [Thomas "Tom" Bennett](../characters/thomas-bennett/index.md), 60 | Father of Ruby and Autumn; raised Ruby without her mother after her death when Ruby was 6; also raised Autumn without her mother present |
+| [Richard "Rick" Walker](../characters/richard-walker/index.md), 65 | Ethan's father |
+| [Linda Walker](../characters/linda-walker/index.md), 62 | Ethan's mother |
+
+Rick and Linda are grandparents through Ethan to Rowan, Riley, and Avery.
+Diane is grandmother through Morgan to Rowan and Riley; Tom is grandfather
+through Ruby to Avery. The shared household continues to recognize all three
+adults as parents. Grandparent titles, closeness, residence, visits, caregiving,
+reactions to the marriage, and Rick/Linda's marital status remain unspecified.
+
+Morgan's father had alcoholism and left the family when Morgan was 13.
+His name, current status, and later contact remain unspecified. Ruby's mother
+died when Ruby was 6; her name and cause of death remain unspecified. These
+facts were explicitly approved 2026-11-13 and replace the earlier unspecified
+absence history. No divorce, recovery history, or further circumstances are established.
+Tom's shared fatherhood does not establish a shared mother or resolve the
+sisters' full/half-sibling status. Ruby's mother's death does not establish
+Autumn's maternal history or age at bereavement. See the
+[childhood chronology](timeline.md#childhood-family-history-approved-2026-11-13).
+Family resemblance directions in the parent profiles do not independently
+approve relatives' existing visual drafts. Proposed childhood influences
+remain proposals; no new chapter events are established.
 
 ## Open Details and Portrayal Rules
 

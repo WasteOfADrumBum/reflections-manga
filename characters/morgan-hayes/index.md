@@ -1,10 +1,14 @@
-# Morgan Hayes-Walker
+# Morgan H. Walker
 
 Status: Name, adult age, and family relationships approved 2026-11-12.
 Appearance, personality, and wardrobe details remain existing drafts unless explicitly approved.
 
 ## Identity
 
+- Display name: Morgan H. Walker (approved naming revision 2026-11-13).
+- Given name: Morgan.
+- Middle name: Hayes, her birth surname; displayed as H.
+- Married surname: Walker, without a hyphen or a two-part surname.
 - Age: 34
 - Height: 5'7" / 170 cm
 - Build: Athletic, naturally toned
@@ -36,6 +40,8 @@ resentment, ring motives, crises, and resolutions remain draft story material.
 
 ## Family and Relationships
 
+- Daughter of [Diane Hayes](../diane-hayes/index.md), 58. Morgan's father had alcoholism and left the family when Morgan was 13; Diane raised her without him in the household after his departure (user-approved 2026-11-13). His name, current status, and later contact remain unspecified.
+
 - Best friend of [Natalie "Nat" Greene](../natalie-greene/index.md) outside the
   household, added 2026-11-13. This also preserves her existing friendship with Ruby.
   How she met Nat remains open.
@@ -45,9 +51,9 @@ resentment, ring motives, crises, and resolutions remain draft story material.
 - Best friends and coparents with Ruby Bennett-Walker; they confide in one
   another about their relationships with Ethan. Imperfect communication remains possible.
 - Morgan and Ruby have no romantic or sexual relationship with each other.
-- Mother of [Rowan Hayes-Walker](../rowan-hayes-walker/index.md), 9, and
-  [Riley Hayes-Walker](../riley-hayes-walker/index.md), approximately 6, both fathered by Ethan.
-- Also a parent to [Avery Bennett-Walker](../avery-bennett-walker/index.md).
+- Mother of [Rowan Walker](../rowan-hayes-walker/index.md), 9, and
+  [Riley Walker](../riley-hayes-walker/index.md), approximately 6, both fathered by Ethan.
+- Also a parent to [Avery Bennett Walker](../avery-bennett-walker/index.md).
   All three children recognize all three adults as parents.
 - Works part-time and is the firmer, more disciplinary mother to all three children.
 - Riley's closest parental attachment is to Morgan. The user's suggested
@@ -63,7 +69,10 @@ resentment, ring motives, crises, and resolutions remain draft story material.
 - See [family relationships](../../continuity/relationships.md),
   [timeline](../../continuity/timeline.md), and [arc planning](../../continuity/character-arcs.md).
 
-The family structure and married name were approved by the user on 2026-11-12.
+The family structure was approved 2026-11-12; the current name configuration
+was explicitly revised and approved 2026-11-13. The concrete middle-name/surname
+choice resolves the earlier contradictory verbal description. The retained
+`morgan-hayes` folder and older asset labels are stable identifiers, not her current surname.
 The revised adult age was approved by the user on 2026-11-12.
 
 ## Profile Files

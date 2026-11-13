@@ -1,4 +1,4 @@
-# Riley Hayes-Walker: Reference-Sheet Prompt
+# Riley Walker: Reference-Sheet Prompt
 
 Version: 1
 Updated: 2026-11-12
@@ -49,7 +49,7 @@ view. Each view depicts the same person; do not invent additional characters.
 The proposed reference-sheet layout does not establish manga page standards.
 Do not render labels, names, measurements, dialogue, watermarks, or logos.
 CHARACTER
-Riley Hayes-Walker, a fictional girl approximately 6 years old, 110 cm tall.
+Riley Walker, a fictional girl approximately 6 years old, 110 cm tall.
 Slender build with natural child anatomy and age-appropriate facial
 proportions. Fair skin with a neutral undertone. Light freckles across the
 nose. Chestnut-brown hair in a short pixie cut. Green-leaning hazel eyes.

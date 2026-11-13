@@ -11,7 +11,12 @@ Stage: SCRIPT, partial DRAFT v1 for review.
   and internal thoughts, with page-end hooks. Pages 005–032 are unscripted.
 - [Continuity](continuity.md): Established constraints separated from proposed
   opening outfits, geography, prop states, character beats, and review questions.
-- Storyboard remains the original empty scaffold. No art or composed pages.
+- [Page prompt pack](page-prompts.md): Four self-contained manual-generation
+  prompts, required character sheets per page, previous-page reference guidance,
+  exact lettering, and draft format/layout conventions. No images generated.
+  Individual copyable exports are in prompts/page-001-v1.txt through page-004-v1.txt.
+- Storyboard remains the original empty scaffold; draft panel arrangements are
+  proposed inside the prompt pack, not approved storyboard pages.
 
 ## Authorization and Approval State
 
@@ -33,6 +38,12 @@ timeline developments or release entries were added.
   judgment of either spouse or a literal alternate-personality reveal.
 
 ## Next Action
+
+The user requested prompts to generate the opening manually with attached
+character pictures. Use page-prompts.md, attach each page's specified sheets,
+and produce/review one page at a time. Any returned images still require checks
+for identity, scene states, reading order, and exact lettering. Record actual
+outputs and user decisions before treating any page as accepted or approved.
 
 Review/revise pages 001–004 with the user. After that review, draft pages
 005–010 from the same working map, showing why Ethan enjoys both relationships

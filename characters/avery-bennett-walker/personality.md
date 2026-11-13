@@ -1,4 +1,4 @@
-# Avery Bennett-Walker: Personality
+# Avery Bennett Walker: Personality
 
 Status: Questionnaire choices approved 2026-11-12.
 

@@ -17,6 +17,19 @@ The proposed cast and scene sequence are recorded in the [outline](outline.md)
 and [Story 001 chapter map](../concepts/story-001-three-hearts-different-needs.md#proposed-chapter-1-map-32-pages).
 No scenes, dialogue, page allocation, or chapter events have been approved.
 
+## Character Record Reconciliation: 2026-11-13
+
+Use Morgan H. Walker, Ruby Bennett-Walker, Rowan Walker, Riley Walker, and
+Avery Bennett Walker. Legacy character links remain stable. Approved parent
+profiles expand background canon; none of Diane, Tom, Rick, or Linda is added
+to this chapter's proposed cast or scenes. No chapter events or art are approved.
+
+Background history approved 2026-11-13: Morgan's father had alcoholism and left
+the family when she was 13; Ruby's mother died when she was 6. Use the
+[childhood chronology](../../../continuity/timeline.md#childhood-family-history-approved-2026-11-13)
+for timing limits and unresolved details. These facts add no flashback, dialogue,
+scene, or causal explanation of current behavior to this draft chapter.
+
 ## Opening Script Batch: Pages 001–004
 
 Status: DRAFT v1 for review, 2026-11-13. The user authorized drafting these four
@@ -76,6 +89,27 @@ Use the existing profiles and registered reference cards before art; no referenc
 version selection, additional image generation, or model-sheet approval in this
 writing batch. Ethan's ring practice remains open; do not decide it through the
 hand framing. Ruby's ring remains present without a symbolic close-up.
+
+## Manual Page-Prompt Pack: 2026-11-13
+
+[Four self-contained page prompts](page-prompts.md) now adapt the 18-panel
+opening for the user's manual generation workflow. Reference checklist:
+page 001 Ethan/Morgan/Rowan; page 002 Ethan/Ruby/Riley/Rowan/Morgan, including
+background cast; page 003 all six family members; page 004 Ethan only.
+
+The pack proposes a muted-color 2:3 portrait draft at 1024 x 1536 where supported,
+left-to-right reading, panel arrangements, and reusable kitchen/nook geography.
+These are test settings, not selected final page standards or approved layouts.
+For visual repeatability only, it proposes Ruby's simple band on the left ring
+finger; this does not resolve canonical ring design or placement. Ethan's ring
+practice remains open; no ring is added as a new identifying accessory.
+
+Use registered everyday v1 identity cards consistently; attach actual images.
+Accepted previous pages may supply room/outfit/style continuity after the
+identity inputs. Source identities and written specifications retain priority.
+The pack includes exact lettering for full-page draft generation at the user's
+request; check against the script and retain editable lettering for final work.
+No pages have been generated or visually reviewed by preparing these prompts.
 
 ## Established Constraints and Proposed Cast
 

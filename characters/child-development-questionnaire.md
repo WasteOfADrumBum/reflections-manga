@@ -1,5 +1,9 @@
 # Child Development Questionnaire
 
+Naming update 2026-11-13: Headings use current approved names. Original
+questionnaire answers and their 2026-11-12 approval remain unchanged.
+
+
 Status: All 50 questionnaire decisions completed through native clickable questions on 2026-11-12.
 Written selections approved; artwork and unasked details remain open.
 Created 2026-11-12. Rowan: 9. Avery: 7 confirmed. Riley: approximately 6.
@@ -62,7 +66,7 @@ Reply like: Rowan: 1C, 2A, 3B, 4D, 5E: your description.
 Names are already approved and are not being reopened. Appearance options are
 fictional design choices within family resemblance, not genetic predictions.
 
-## Rowan Hayes-Walker, 9
+## Rowan Walker, 9
 
 Parents: Ethan and Morgan. E = Other for every row.
 
@@ -84,7 +88,7 @@ Parents: Ethan and Morgan. E = Other for every row.
 | 14 | Difficulty to grow through | Wants everything perfect | Acts before thinking | Avoids asking for help | Struggles to lose gracefully |
 | 15 | Learned family habit | Ethan's thinking pauses | Morgan's raised-brow humor | Ruby's attentive listening | Different habits with each adult |
 
-## Riley Hayes-Walker, About 6
+## Riley Walker, About 6
 
 Parents: Ethan and Morgan. E = Other for every row.
 
@@ -106,7 +110,7 @@ Parents: Ethan and Morgan. E = Other for every row.
 | 14 | Difficulty to grow through | Impatient about turns | Wants to do everything alone | Takes teasing personally | Gets carried away in play |
 | 15 | Learned family habit | Ethan's thoughtful questions | Morgan's playful confidence | Ruby's caring gestures | Different habits with each adult |
 
-## Avery Bennett-Walker, 7 Confirmed (Original Menus Below)
+## Avery Bennett Walker, 7 Confirmed (Original Menus Below)
 
 Parents: Ethan and Ruby. E = Other for every row. Autism does not predetermine
 any answer. Sensory and communication choices describe her individually.

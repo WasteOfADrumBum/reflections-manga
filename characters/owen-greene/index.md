@@ -17,7 +17,7 @@ and personality suggestions remain proposals. No artwork is approved.
 - Mother: [Natalie "Nat" Greene](../natalie-greene/index.md).
 - Older sister: [Ellie Greene](../ellie-greene/index.md), 9.
 - Other parentage, full/half/adoptive sibling status, custody, and home are unspecified.
-- Same-age comparison: [Riley Hayes-Walker](../riley-hayes-walker/index.md).
+- Same-age comparison: [Riley Walker](../riley-hayes-walker/index.md).
   A possible recurring friendship was suggested; no meeting, shared class,
   school, or friendship history is established.
 

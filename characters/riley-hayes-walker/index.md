@@ -1,4 +1,4 @@
-# Riley Hayes-Walker
+# Riley Walker
 
 Status: Concept. Parentage, gender, and surname approved 2026-11-12.
 Name, questionnaire appearance, personality, wardrobe, and height choices
@@ -7,7 +7,7 @@ approved 2026-11-12. Exact age remains the existing tentative target.
 ## Identity
 
 - First name: Riley (approved 2026-11-12).
-- Surname: Hayes-Walker.
+- Surname: Walker (revised and approved 2026-11-13).
 - Gender: Girl.
 - Age: Approximately 6 at the story's opening.
 - Height: 110 cm / approximately 3'7" (approved 2026-11-12).
@@ -27,8 +27,11 @@ approved 2026-11-12. Exact age remains the existing tentative target.
 
 ## Family
 
+- Grandparents through Ethan: [Richard "Rick" Walker](../richard-walker/index.md) and [Linda Walker](../linda-walker/index.md).
+- Grandparent [Diane Hayes](../diane-hayes/index.md), through Morgan. Grandparent closeness and forms of address remain open.
+
 - Father: [Ethan Walker](../ethan-walker/index.md), 38.
-- Mother: [Morgan Hayes-Walker](../morgan-hayes/index.md), 34.
+- Mother: [Morgan H. Walker](../morgan-hayes/index.md), 34.
 - Older full brother: [Rowan](../rowan-hayes-walker/index.md), about 9.
 - Older paternal half-sister: [Avery](../avery-bennett-walker/index.md), 7.
 - [Ruby](../ruby-bennett-walker/index.md) is also her mother and handles most daily

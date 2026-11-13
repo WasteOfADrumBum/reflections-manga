@@ -23,12 +23,16 @@ between encouragement and speaking for someone who can speak for herself.
 
 ## Family and Relationships
 
+- Daughter of [Thomas "Tom" Bennett](../thomas-bennett/index.md), 60, also Ruby's father. He raised Autumn without her mother present; her mother's identity, circumstances, and fate remain unspecified.
+- Ruby's mother died when Ruby was 6 (user-approved 2026-11-13). A shared father does not establish a shared mother, so this does not establish a death or age at bereavement for Autumn.
+
 - Older sister of [Ruby Bennett-Walker](../ruby-bennett-walker/index.md).
 - Avery's aunt through Ruby; closeness and forms of address are not established.
 - Bonds with Ethan, Morgan, Rowan, and Riley remain to be developed.
 - The user confirmed Bennett for Autumn and Bennett-Walker for Ruby.
-- Shared childhood roles, parents, sibling type, partner, children, and living
-  arrangements are not established.
+- Shared father and upbringing without their mother present are approved 2026-11-13.
+  Detailed childhood roles, sibling type, partner, children, and current living
+  arrangements remain open. A shared father does not establish full-sibling status.
 
 ## Profile Files
 

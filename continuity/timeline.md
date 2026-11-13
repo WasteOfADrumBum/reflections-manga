@@ -1,8 +1,31 @@
 # Fictional Timeline
 
-Status: Established relative relationship history, recorded 2026-11-12.
+Status: Established relative relationship history, recorded 2026-11-12;
+approved childhood family history added 2026-11-13.
 No calendar years, birthdays, or chapter events are established.
 The record date is a production date, not an in-universe event date.
+
+## Childhood Family History: Approved 2026-11-13
+
+| Established event | Character's age at event | Approximate offset from opening |
+|---|---|---|
+| Ruby's mother died | Ruby was 6 | About 22 years before opening, using Ruby's approved opening age of 28 |
+| Morgan's father, who had alcoholism, left the family | Morgan was 13 | About 21 years before opening, using Morgan's approved opening age of 34 |
+
+The childhood ages and events are user-approved facts. The offsets are age-based
+planning estimates, not exact elapsed years or calendar dates; birthdays and
+the events' exact spacing remain open. Both events precede the births of the
+current household's children. The existing adult relationship sequence below
+is unchanged; no meeting, wedding, or birth date is inferred from this history.
+
+Diane raised Morgan without her father after his departure; Tom raised Ruby
+without her mother after her death. Earlier broad descriptions of these
+households do not establish either parent's absence from birth.
+
+Morgan's father's name, current status, and later contact, and Ruby's mother's
+name and cause of death remain unspecified. Tom also raised Autumn without her
+mother present, but a shared mother is unestablished. Do not assign Autumn an
+age at Ruby's mother's death or a maternal bereavement from this information.
 
 ## Relationship Chronology
 
@@ -44,11 +67,25 @@ adults as parents. When these work and parenting roles began remains open.
 Recorded 2026-11-13 as character development, not an in-universe event date.
 Nat is 34, matching Morgan; Ellie is 9, matching Rowan; Owen is approximately 6,
 matching Riley's open age target. Autumn is older than Ruby and approximately
-Morgan's age, without a finalized exact age. Cal's exact age is open; an age
-near Ethan's was proposed. See the [registry](../characters/index.md).
+Morgan's age, without a finalized exact age. Cal is 39, one year older than
+Ethan, as already selected by the user. See the [registry](../characters/index.md).
 
-No friendship beginnings, childhood events, births on calendar dates, recovery
+No friendship beginnings, additional childhood events, births on calendar dates, recovery
 milestones, visits, or chapter appearances are added to the event sequence.
+
+## Parent-Generation Snapshot: Recorded 2026-11-13
+
+Diane is 58; Tom is 60; Rick is 65; Linda is 62 at the opening snapshot.
+Diane is Morgan's mother; Morgan's father left when she was 13, as recorded above.
+Tom is Ruby and Autumn's father; Ruby's mother died when Ruby was 6. He also
+raised Autumn without her mother present, without establishing a shared mother.
+Rick and Linda are Ethan's parents. No birthdays, exact ages at births, calendar
+dates for the childhood events, divorces, visits, or further events are established.
+The production approval date is not an in-universe date.
+
+Current display names were revised in production on 2026-11-13: Morgan H. Walker,
+Rowan Walker, Riley Walker, Avery Bennett Walker; Ruby remains Bennett-Walker.
+Do not infer the in-universe date of a name change from that record date.
 
 ## Rules
 
