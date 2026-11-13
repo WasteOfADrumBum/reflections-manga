@@ -1,4 +1,4 @@
-# Ruby Bennett: Wardrobe
+# Ruby Bennett-Walker: Wardrobe
 
 Status: Draft v1
 
@@ -27,6 +27,10 @@ Ivory, blush, dusty rose, muted lavender,
 burgundy, warm cream, and charcoal.
 
 ## Rules
+
+Ruby wears her wedding ring. Preserve it in applicable new artwork.
+Its design and placement have not been finalized; do not invent a canonical
+metal, stone, or engraving. Existing reference assets remain unchanged.
 
 Preserve feminine silhouettes and natural fabric movement.
 Outfits may vary by scene, weather, and activity.

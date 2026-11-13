@@ -64,3 +64,13 @@ Check:
 
 Significant canon changes require explicit approval.
 Do not silently overwrite approved creative assets.
+
+## Working Agreement
+
+Update the relevant project files during each working session, including
+character records, relationship details, continuity, and unresolved decisions.
+Distinguish user-approved facts from new proposals awaiting approval.
+When a story completes QA and receives approval, commit its approved files,
+update continuity and the release index, and push to the configured GitHub
+remote. Inspect the diff first and exclude private sources and unrelated work.
+Do not treat a planning session or unfinished chapter as a completed story.

@@ -1,12 +1,10 @@
 # Fictional Timeline
 
-Status: Draft
+The maintained chronology is now [continuity/timeline.md](../continuity/timeline.md).
 
-## Chronology
+It preserves the existing opening-age snapshot and planning estimates and adds
+the approved relative relationship history. Calendar dates, birthdays, and birth
+timing relative to relationship milestones remain unspecified.
 
-No canonical events established.
-
-## Rules
-
-Track in-universe chronology.
-Separate memories and imagined scenes from established events.
+This entry preserves existing links. Update the continuity record rather than
+maintaining a second version here.

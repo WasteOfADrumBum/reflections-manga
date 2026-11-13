@@ -1,0 +1,46 @@
+# Fictional Timeline
+
+Status: Established relative relationship history, recorded 2026-11-12.
+No calendar years, birthdays, or chapter events are established.
+The record date is a production date, not an in-universe event date.
+
+## Relationship Chronology
+
+| Sequence | Established event | Timing limits |
+|---|---|---|
+| 1 | Ethan, Morgan, and Ruby knew one another while working different jobs in the same building | Meeting date, jobs, location, and ages at meeting remain unspecified |
+| 2 | The three began spending time together outside work | Elapsed time unspecified |
+| 3 | Ethan and Morgan began a physical relationship first; Ethan and Ruby grew emotionally closer during the same general period | No exact interval or exclusive-relationship period established |
+| 4 | As intimacy with Ruby grew, the three discussed and established consensual V-polyamory | Polyamory was popular in their unnamed area |
+| 5 | The three moved into a shared home | Approximately six months after establishing polyamory |
+| 6 | All three married in a shared ceremony on the same day, with Ethan in the middle and Morgan and Ruby on opposite sides | Interval after moving in, date, venue, and legal recognition unspecified |
+
+See [relationships](relationships.md) for ceremony and household details.
+Do not place any child's birth before or after these milestones without approval.
+
+## Opening Family Snapshot
+
+Existing approved ages are preserved: Ethan 38, Morgan 34, Ruby 28;
+Rowan 9, Avery 7, and Riley approximately 6. See the
+[character registry](../characters/index.md) for specifications and approval states.
+
+The prior world timeline contained these age-based planning offsets:
+
+| Relative time | Family event | Approximate parent ages | Status |
+|---|---|---|---|
+| 9 years before opening | Ethan and Morgan's son born | Ethan 29, Morgan 25 | Son's age approved |
+| 7 years before opening | Ethan and Ruby's daughter born | Ethan 31, Ruby 21 | Avery's age confirmed |
+| 6 years before opening | Ethan and Morgan's daughter born | Ethan 32, Morgan 28 | Tentative child age |
+
+These inherited calculations are planning estimates, not newly approved birth
+dates or exact ages at birth. No new age or parentage is inferred in this update.
+
+At the opening family snapshot, Ethan works full-time, Morgan works part-time,
+and Ruby handles most daily childcare. All three children regard all three
+adults as parents. When these work and parenting roles began remains open.
+
+## Rules
+
+Track in-universe chronology. Separate memories and imagined scenes from
+established events. Do not infer relationship dates from birth order, age
+calculations, or the date a production decision was recorded.

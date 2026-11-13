@@ -1,4 +1,4 @@
-# Morgan Hayes: Wardrobe
+# Morgan Hayes-Walker: Wardrobe
 
 Status: Draft v1
 
@@ -35,6 +35,9 @@ Black, charcoal, olive, navy, burgundy,
 brown, and muted cream.
 
 ## Rules
+
+Morgan does not wear a wedding ring. Do not add one to new artwork.
+Her reason for not wearing it has not been established.
 
 Practical comfort takes priority.
 Retain an athletic, recognizably tomboy silhouette.

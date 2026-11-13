@@ -1,20 +1,11 @@
 # Character Relationships
 
-Status: Draft
+The maintained family relationship record is now
+[continuity/relationships.md](../continuity/relationships.md).
 
-## Ruby Bennett
+It preserves the approved family structure, parentage, ring rules, and portrayal
+boundaries and adds the user-approved relationship history, ceremony, household
+roles, sibling bonds, and preferred forms of address recorded 2026-11-12.
 
-Relationships to be established.
-
-## Morgan Hayes
-
-Relationships to be established.
-
-## Ethan Walker
-
-Relationships to be established.
-
-## Rules
-
-Track actual in-universe interactions.
-Do not treat a character's assumptions as objective facts.
+This entry preserves existing links. Update the continuity record rather than
+maintaining a second version here.

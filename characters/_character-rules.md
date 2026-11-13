@@ -20,8 +20,18 @@ Each character directory contains:
 - `personality.md`: Behavioral characteristics
 - `wardrobe.md`: Outfit definitions
 - `references/`: Approved model sheets
+- `prompts/`: Versioned text prompts; prompt files do not approve generated artwork
 
 ## Continuity
+
+Written specifications can be approved before artwork exists. Track these
+states separately: completed questionnaire, approved written profile,
+approved model sheet, and approved chapter art. Do not infer one from another.
+
+For the current children, consult [approved questionnaire answers](questionnaire-answers.md)
+and their individual appearance, personality, and wardrobe files. Keep
+unasked details open. Child profile directories use their full fictional names:
+rowan-hayes-walker, avery-bennett-walker, and riley-hayes-walker.
 
 Physical identity stays consistent between panels.
 Temporary expressions and outfits may change.

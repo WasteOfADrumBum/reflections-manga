@@ -1,4 +1,4 @@
-# Morgan Hayes: Appearance
+# Morgan Hayes-Walker: Appearance
 
 Status: Draft v1
 

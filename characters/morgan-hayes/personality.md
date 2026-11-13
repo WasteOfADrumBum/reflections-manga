@@ -1,6 +1,9 @@
-# Morgan Hayes: Personality
+# Morgan Hayes-Walker: Personality
 
 Status: Draft v1
+
+The general traits below remain drafts. The relationship behavior in the
+approved section is user-established fictional canon, recorded 2026-11-12.
 
 Morgan is independent, practical, assertive, and playful.
 
@@ -33,4 +36,21 @@ Her confident exterior sometimes conceals uncertainty.
 
 ## Development
 
-To be established through future story arcs.
+The user-directed series tension is independence and control alongside a
+desire for support, understanding, love, and tenderness. Show affection and
+vulnerability as well as confrontation; do not make dominance a lack of
+empathy or a right to silence Ethan. Her private friendship with Ruby remains
+platonic. See the [15-story plan](../../series/roadmap.md); future incidents
+and resolutions are draft material rather than established history.
+
+Future developments remain open; see [arc planning](../../continuity/character-arcs.md).
+
+## Approved Relationship Behavior
+
+- More dominant with Ethan; their physical chemistry developed first and their
+  current relationship includes jokes, directness, and more frequent clashes.
+- Best friends with Ruby, with mutual emotional support and private discussions
+  about their relationships with Ethan. Their bond is not romantic or sexual.
+- The firmer disciplinary mother to all three children; Riley's closest parental
+  attachment is to Morgan. Firmness does not establish harshness or sole authority.
+- See [relationships](../../continuity/relationships.md) for full context.

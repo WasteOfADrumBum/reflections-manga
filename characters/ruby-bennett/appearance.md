@@ -1,4 +1,4 @@
-# Ruby Bennett: Appearance
+# Ruby Bennett-Walker: Appearance
 
 Status: Draft v1
 
