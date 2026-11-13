@@ -28,7 +28,7 @@ Written selections approved; user-supplied card registered for reuse. Unasked de
 ## Family
 
 - Father: [Ethan Walker](../ethan-walker/index.md), 38.
-- Mother: [Ruby Bennett-Walker](../ruby-bennett/index.md), 28.
+- Mother: [Ruby Bennett-Walker](../ruby-bennett-walker/index.md), 28.
 - Older paternal half-brother: [Rowan](../rowan-hayes-walker/index.md), about 9.
 - Younger paternal half-sister: [Riley](../riley-hayes-walker/index.md), about 6.
 - [Morgan](../morgan-hayes/index.md) is also her mother and shares care for all

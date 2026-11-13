@@ -61,15 +61,16 @@ Supporting-cast relationships selected 2026-11-13:
 
 | Connection | Established relationship | Limits |
 |---|---|---|
-| [Autumn](autumn/index.md) and Ruby | Autumn is Ruby's older sister and Avery's aunt through Ruby | Surname, exact age, sibling type, and family history remain open |
+| [Autumn Bennett](autumn-bennett/index.md) and Ruby | Autumn is Ruby's older sister and Avery's aunt through Ruby | Exact age, sibling type, and family history remain open |
 | [Natalie "Nat" Greene](natalie-greene/index.md), [Ellie](ellie-greene/index.md), and [Owen](owen-greene/index.md) | Nat is their mother; Ellie is 9, Owen approximately 6 | Other parentage, full/half/adoptive sibling status, custody, and household remain open |
 | [Caleb "Cal" Mercer](caleb-mercer/index.md) and Ethan | Best friends | Meeting, duration, and shared history remain open |
 | Nat and Morgan | Best friends outside the shared household | Morgan and Ruby's best-friend/coparent bond is also preserved |
 
 These connections add no parenting or residence lines to the central household.
 Ellie matches Rowan's age; Owen matches Riley's approximate age. Equal ages do
-not establish shared schools or existing friendships. Autumn's surname remains
-unestablished despite Ruby's current Bennett-Walker name.
+not establish shared schools or existing friendships. The user confirmed the
+names Autumn Bennett and Ruby Bennett-Walker on 2026-11-13. Avery remains
+Avery Bennett-Walker.
 
 ## Approximate Parent Ages at Birth
 

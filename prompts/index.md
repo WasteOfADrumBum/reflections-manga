@@ -31,13 +31,13 @@ These are stage launchers, not one request to produce every stage immediately.
 |---|---|---|
 | Ethan Walker | [Reference sheet](../characters/ethan-walker/prompts/ethan-walker-reference-sheet.md) | Name/age/family approved; adult appearance and outfit remain drafts |
 | Morgan Hayes-Walker | [Reference sheet](../characters/morgan-hayes/prompts/morgan-hayes-walker-reference-sheet.md) | Name/age/family/ring practice approved; adult appearance and outfit remain drafts |
-| Ruby Bennett-Walker | [Reference sheet](../characters/ruby-bennett/prompts/ruby-bennett-walker-reference-sheet.md) | Name/age/family/ring practice approved; adult appearance, outfit, and exact ring details remain drafts |
+| Ruby Bennett-Walker | [Reference sheet](../characters/ruby-bennett-walker/prompts/ruby-bennett-walker-reference-sheet.md) | Name/age/family/ring practice approved; adult appearance, outfit, and exact ring details remain drafts |
 | Rowan Hayes-Walker | [Reference sheet](../characters/rowan-hayes-walker/prompts/rowan-hayes-walker-reference-sheet.md) | Written questionnaire specifications approved; new art remains a study |
 | Riley Hayes-Walker | [Reference sheet](../characters/riley-hayes-walker/prompts/riley-hayes-walker-reference-sheet.md) | Written questionnaire specifications approved; age approximately 6; new art remains a study |
 | Avery Bennett-Walker | [Reference sheet](../characters/avery-bennett-walker/prompts/avery-bennett-walker-reference-sheet.md) | Written questionnaire specifications approved; new art remains a study |
 | Caleb "Cal" Mercer | [Reference sheet](../characters/caleb-mercer/prompts/caleb-mercer-reference-sheet.md) | Supporting-character direction selected; exact age and detailed visual choices remain provisional |
 | Natalie "Nat" Greene | [Reference sheet](../characters/natalie-greene/prompts/natalie-greene-reference-sheet.md) | Same age as Morgan; glasses and tall/thin direction selected; detailed design remains provisional |
-| Autumn | [Reference sheet](../characters/autumn/prompts/autumn-reference-sheet.md) | Ruby's older sister; surname/exact age open; same-height direction and fuller/long-haired design study |
+| Autumn Bennett | [Reference sheet](../characters/autumn-bennett/prompts/autumn-bennett-reference-sheet.md) | Name confirmed; Ruby's older sister; exact age open; same-height direction and fuller/long-haired design study |
 | Ellie Greene | [Reference sheet](../characters/ellie-greene/prompts/ellie-greene-reference-sheet.md) | Age 9 and family established; height open; appearance, personality, and outfit remain proposals |
 | Owen Greene | [Reference sheet](../characters/owen-greene/prompts/owen-greene-reference-sheet.md) | Age approximately 6 and family established; exact age/height open; detailed design remains provisional |
 

@@ -1,12 +1,12 @@
 # Ruby Bennett-Walker: Reference-Sheet Prompt
 
-Version: 1
-Updated: 2026-11-12
+Version: 2
+Updated: 2026-11-13
 Status: Draft prompt based on approved name, age, ring practice, and existing unapproved adult appearance and wardrobe drafts. Ring design and placement remain open.
 
 ## Existing Reference Image
 
-- [Attach this character card](../references/ruby-bennett-reference-sheet-v1.png)
+- [Attach this character card](../references/ruby-bennett-walker-reference-sheet-v1.png)
 - [Reference status and continuity notes](../references/index.md)
 
 Reuse the existing card as an actual image input. The prompt below is for a

@@ -25,7 +25,7 @@ Written selections approved; user-supplied card registered for reuse. Unasked de
 - Mother: [Morgan Hayes-Walker](../morgan-hayes/index.md), 34.
 - Younger full sister: [Riley](../riley-hayes-walker/index.md), about 6.
 - Younger paternal half-sister: [Avery](../avery-bennett-walker/index.md), 7.
-- [Ruby](../ruby-bennett/index.md) is also his mother and handles most daily
+- [Ruby](../ruby-bennett-walker/index.md) is also his mother and handles most daily
   childcare for all three children. Rowan recognizes all three adults as his parents.
 - Closest parental attachment: Ruby.
 - Nearly inseparable from Riley; Avery sometimes ends up outside their close

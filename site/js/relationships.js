@@ -11,43 +11,66 @@
 //   { type: "Friend", people: ["Jordan"], note: "(Ruby's friend from ballet)" },
 window.REFLECTIONS_RELATIONSHIPS = {
   "ethan-walker": [
-    { type: "Married to", people: ["morgan-hayes", "ruby-bennett"], note: ", in one shared ceremony with Ethan between them" },
+    { type: "Married to", people: ["morgan-hayes", "ruby-bennett-walker"], note: ", in one shared ceremony with Ethan between them" },
     { type: "Kids", people: ["rowan-hayes-walker", "riley-hayes-walker"], note: "with Morgan" },
     { type: "Kids", people: ["avery-bennett-walker"], note: "with Ruby" },
-    { type: "Closest to", people: ["avery-bennett-walker"] }
+    { type: "Closest to", people: ["avery-bennett-walker"] },
+    { type: "Best friend", people: ["caleb-mercer"] }
   ],
   "morgan-hayes": [
     { type: "Married to", people: ["ethan-walker"], note: ", in a shared ceremony with Ruby" },
     { type: "Kids", people: ["rowan-hayes-walker", "riley-hayes-walker"] },
     { type: "Also mom to", people: ["avery-bennett-walker"] },
-    { type: "Best friend", people: ["ruby-bennett"], note: "(co-parent, not a romantic partner)" },
+    { type: "Best friend", people: ["ruby-bennett-walker"], note: "(co-parent, not a romantic partner)" },
+    { type: "Best friend", people: ["natalie-greene"], note: "(outside the household)" },
     { type: "Closest to", people: ["riley-hayes-walker"] }
   ],
-  "ruby-bennett": [
+  "ruby-bennett-walker": [
     { type: "Married to", people: ["ethan-walker"], note: ", in a shared ceremony with Morgan" },
     { type: "Kids", people: ["avery-bennett-walker"] },
     { type: "Also mom to", people: ["rowan-hayes-walker", "riley-hayes-walker"] },
     { type: "Best friend", people: ["morgan-hayes"], note: "(co-parent, not a romantic partner)" },
-    { type: "Closest to", people: ["rowan-hayes-walker"] }
+    { type: "Closest to", people: ["rowan-hayes-walker"] },
+    { type: "Sister", people: ["autumn-bennett"], note: "(older)" }
   ],
   "rowan-hayes-walker": [
     { type: "Parents", people: ["ethan-walker", "morgan-hayes"] },
-    { type: "Also his mom", people: ["ruby-bennett"] },
+    { type: "Also his mom", people: ["ruby-bennett-walker"] },
     { type: "Siblings", people: ["riley-hayes-walker"], note: "(full sister)" },
     { type: "Siblings", people: ["avery-bennett-walker"], note: "(half-sister through Ethan)" },
-    { type: "Closest to", people: ["ruby-bennett"] }
+    { type: "Closest to", people: ["ruby-bennett-walker"] }
   ],
   "riley-hayes-walker": [
     { type: "Parents", people: ["ethan-walker", "morgan-hayes"] },
-    { type: "Also her mom", people: ["ruby-bennett"] },
+    { type: "Also her mom", people: ["ruby-bennett-walker"] },
     { type: "Siblings", people: ["rowan-hayes-walker"], note: "(full brother)" },
     { type: "Siblings", people: ["avery-bennett-walker"], note: "(half-sister through Ethan)" },
     { type: "Closest to", people: ["morgan-hayes"] }
   ],
   "avery-bennett-walker": [
-    { type: "Parents", people: ["ethan-walker", "ruby-bennett"] },
+    { type: "Parents", people: ["ethan-walker", "ruby-bennett-walker"] },
     { type: "Also her mom", people: ["morgan-hayes"] },
     { type: "Siblings", people: ["rowan-hayes-walker", "riley-hayes-walker"], note: "(half-siblings through Ethan)" },
-    { type: "Closest to", people: ["ethan-walker"] }
+    { type: "Closest to", people: ["ethan-walker"] },
+    { type: "Aunt", people: ["autumn-bennett"], note: "(Ruby's sister)" }
+  ],
+  "natalie-greene": [
+    { type: "Best friend", people: ["morgan-hayes"] },
+    { type: "Kids", people: ["ellie-greene", "owen-greene"] }
+  ],
+  "ellie-greene": [
+    { type: "Mom", people: ["natalie-greene"] },
+    { type: "Brother", people: ["owen-greene"], note: "(younger)" }
+  ],
+  "owen-greene": [
+    { type: "Mom", people: ["natalie-greene"] },
+    { type: "Sister", people: ["ellie-greene"], note: "(older)" }
+  ],
+  "caleb-mercer": [
+    { type: "Best friend", people: ["ethan-walker"] }
+  ],
+  "autumn-bennett": [
+    { type: "Sister", people: ["ruby-bennett-walker"], note: "(younger)" },
+    { type: "Niece", people: ["avery-bennett-walker"] }
   ]
 };

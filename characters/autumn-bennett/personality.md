@@ -1,4 +1,4 @@
-# Autumn: Personality
+# Autumn Bennett: Personality
 
 Status: Extroverted, outgoing, earthy, relaxed direction selected; detailed prior
 suggestions remain proposals. Recorded 2026-11-13.

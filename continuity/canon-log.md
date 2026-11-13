@@ -2,6 +2,18 @@
 
 ## Approved Canon
 
+### 2026-11-13: Bennett Names and Directory Correction
+
+- The user confirmed Autumn Bennett and Ruby Bennett-Walker, then clarified
+  that the surname is Bennett with two t's. The intermediate single-t spelling
+  is superseded. Avery remains Avery Bennett-Walker.
+- Autumn's previously undecided surname is resolved by this explicit choice.
+- Profile directories are now characters/autumn-bennett and
+  characters/ruby-bennett-walker. Prompt filenames, Ruby's reference filename,
+  site image filenames, character identifiers, and project links match.
+- Renamed existing artwork without changing image bytes. No design, age,
+  relationship event, or story release is approved by this naming correction.
+
 ### 2026-11-13: Supporting-Cast Foundation
 
 The user explicitly requested the named additions and their established
@@ -20,7 +32,8 @@ of every suggestion in the earlier assistant response.
 - Autumn is Ruby's older sister, approximately Morgan's age, the same height
   as Ruby, with a fuller feminine build, long hair, outgoing personality, and
   earthy relaxed style including wide-leg jeans. Strawberry blonde remains
-  the suggested hair direction. Her surname and exact age remain open.
+  the suggested hair direction. Her surname was open at this stage; Bennett was
+  subsequently selected above. Her exact age remains open.
 
 Ethan's 178 cm and Ruby's 152 cm remain existing draft measurements; matching
 them does not independently approve those measurements. Cal's exact age,

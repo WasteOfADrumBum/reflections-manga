@@ -1,4 +1,4 @@
-# Autumn: Wardrobe
+# Autumn Bennett: Wardrobe
 
 Status: Earthy, relaxed style and wide-leg-jeans direction selected; exact
 garments and accessories remain proposals. Recorded 2026-11-13.

@@ -14,7 +14,7 @@ Updated: 2026-11-13.
 - Eleven fictional characters are registered: six central family members and
   five supporting characters, including Nat's children Ellie and Owen.
 - [Cal](../characters/caleb-mercer/index.md), [Nat](../characters/natalie-greene/index.md),
-  and [Autumn](../characters/autumn/index.md) have written profiles and draft
+  and [Autumn Bennett](../characters/autumn-bennett/index.md) have written profiles and draft
   reference prompts. Selected direction is distinguished from prior suggestions.
   Ellie is 9 like Rowan; Owen is approximately 6 like Riley. Supporting-character
   model sheets and the children's detailed designs remain unapproved.
@@ -49,7 +49,7 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
 ## Remaining
 
 - Resolve supporting-cast details in the [open decisions](../continuity/open-threads.md#supporting-cast-decisions-2026-11-13),
-  including Autumn's surname, Cal's exact age, final visual traits, histories,
+  including Autumn's exact age, Cal's exact age, final visual traits, histories,
   and Ellie/Owen's designs. No supporting-character artwork is supplied.
 
 - Reconcile adult visual drafts and any incidental differences in the supplied cards before final canon approval.

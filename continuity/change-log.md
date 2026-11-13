@@ -1,5 +1,37 @@
 # Change Log
 
+## 2026-11-13: Supporting Cast on the Site Characters Page
+
+- Added Nat, Ellie, Owen, Cal, and Autumn to site/characters.html as a
+  "Friends & relatives" row under the family tree, with bios and relationship
+  entries in site/js/relationships.js.
+- Bios use only user-selected facts (names, connections, ages, heights, broad
+  appearance, Autumn's outgoing direction). Proposed personality traits,
+  hobbies, child friendships, and Cal's recovery premise are left off the site.
+- Exported web copies (portrait crop and full sheet) of each locally saved
+  v1 reference sheet into site/images/characters. Cal's copy comes from the
+  references-folder file, not the archived carry input.
+- The user approved these five draft sheets for the public site on 2026-11-13.
+  The source PNGs stay git-ignored; no master model sheet is approved by this use.
+
+## 2026-11-13: Bennett Names and Matching Directories
+
+- Implemented the user's corrected spelling: Autumn Bennett and Ruby
+  Bennett-Walker, with two t's. Avery remains Avery Bennett-Walker.
+- Renamed characters/autumn to characters/autumn-bennett and
+  characters/ruby-bennett to characters/ruby-bennett-walker.
+- Renamed their prompt files, Ruby's v1 reference filename, and Ruby's site
+  image files to match. Updated live profile, prompt, relationship, family-tree,
+  registry, website, and ignore-rule references.
+- Resolved Autumn's surname decision while retaining other provisional details.
+  Historical entries below preserve the development decisions made at the time.
+- Preserved existing artwork bytes and approval states. No story release.
+- Recorded the requested manual-save filenames for Cal, Nat, Autumn, Ellie,
+  and Owen in their reference records and the reference workflow. Their PNGs
+  are expected, not claimed present or approved.
+- The website publishes automatically from main, so this correction is prepared
+  on a separate branch for review before any production deployment.
+
 ## 2026-11-13: Ellie and Owen Reference-Sheet Prompts
 
 - Added the two requested individual prompts using the existing Ethan-style
