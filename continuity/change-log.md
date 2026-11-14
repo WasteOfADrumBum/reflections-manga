@@ -1,5 +1,12 @@
 # Change Log
 
+## 2026-11-13: Manga and Arc Covers Selected
+
+- Registered the five user-supplied cover images and web-sized copies.
+- Chapter 001 now opens with the manga cover, then Arc 1, before story page 001.
+- Registered Arc 2, 3 and 4 opening covers for their first chapters without assigning future chapter IDs or publishing unfinished chapters.
+- All four arc covers appear with the website reading order. Original artwork and story-page numbering are preserved.
+
 ## 2026-11-13: Two Girls' Trip Photos Added to the Website
 
 - Added the selected beach splash fight v1 and hotel pillow fight v2 from the unmerged `codex/bennett-character-directories` branch.
