@@ -34,7 +34,34 @@ window.REFLECTIONS_COVERS = {
   }
 };
 
-// Released chapters for the reader on series.html.
+window.REFLECTIONS_CHAPTER_COVERS = {
+  "001": {
+    "src": "/images/covers/arc-01-chapter-01-three-hearts-different-needs.webp",
+    "alt": "Reflections: Three Hearts, Different Needs. Ethan faces his reflection in a mirror while Ruby and Morgan watch from the kitchen.",
+    "width": 1024,
+    "height": 1536
+  },
+  "002": {
+    "src": "/images/covers/arc-01-chapter-02-different-languages.webp",
+    "alt": "Reflections: Different Languages. Morgan holds Ethan's shirt near the collar while Ruby rests her hand on his arm; the three are reflected in the window behind them.",
+    "width": 1024,
+    "height": 1536
+  },
+  "003": {
+    "src": "/images/covers/arc-01-chapter-03-right-beside-you.webp",
+    "alt": "Reflections: Right Beside You. Ethan and Ruby sit near one another on a sofa while Morgan knits in an armchair behind them.",
+    "width": 1024,
+    "height": 1536
+  },
+  "004": {
+    "src": "/images/covers/arc-01-chapter-04-always-the-one-who-reaches.webp",
+    "alt": "Reflections: Always the One Who Reaches. Ethan and Morgan sit on a sofa with their hands close but separate. Ruby stands behind them holding a mug.",
+    "width": 1024,
+    "height": 1536
+  }
+};
+
+// Chapters available in the reader, including clearly marked cover previews.
 // To publish pages: add page images under site/pages/chapter-001/ and list them here,
 // each with descriptive alt text (what happens on the page, including dialogue).
 //
@@ -63,15 +90,45 @@ window.REFLECTIONS_CHAPTERS = [
       { src: "/pages/chapter-001/009.webp", alt: "Ethan, arms folded on the table, answers gently: \"No, Babe.\" Ruby: \"You went quiet.\" Ethan: \"Just thinking.\" Ruby: \"About what?\" Ethan glances toward the packed bag by the bench: \"Whether we forgot anything.\" Ruby taps the list in front of her and smiles: \"We haven't.\" Ethan: \"Good.\"", width: 1024, height: 1536 },
       { src: "/pages/chapter-001/010.webp", alt: "Standing by the table, Ruby gestures to his untouched mug: \"You can have your coffee, you know.\" Ethan: \"In a minute.\" He leans his forehead against hers: \"You all right?\" Ruby, eyes closed, smiling: \"I am.\" Ethan: \"Good.\" Her hand rests on his arm. In the last panel the two walk away together, leaving the full mug on the table.", width: 1024, height: 1536 }
     ]
+  },
+  {
+    id: "002",
+    arc: 1,
+    title: "Different Languages",
+    coverOnly: true,
+    note: "Chapter cover preview. Story pages are coming soon.",
+    cast: [],
+    pages: []
+  },
+  {
+    id: "003",
+    arc: 1,
+    title: "Right Beside You",
+    coverOnly: true,
+    note: "Chapter cover preview. Story pages are coming soon.",
+    cast: [],
+    pages: []
+  },
+  {
+    id: "004",
+    arc: 1,
+    title: "Always the One Who Reaches",
+    coverOnly: true,
+    note: "Chapter cover preview. Story pages are coming soon.",
+    cast: [],
+    pages: []
   }
 ];
 
 // Attach the selected opening covers before story pages without renaming them.
 window.REFLECTIONS_CHAPTERS.forEach(function (chapter) {
-  if (!chapter.opensArc) return;
   var covers = window.REFLECTIONS_COVERS;
   var opening = [];
-  if (chapter.arc === 1) opening.push(covers.series);
-  if (covers[chapter.arc]) opening.push(covers[chapter.arc]);
+  if (chapter.opensArc) {
+    if (chapter.arc === 1) opening.push(covers.series);
+    if (covers[chapter.arc]) opening.push(covers[chapter.arc]);
+  }
+  var chapterCover = window.REFLECTIONS_CHAPTER_COVERS[chapter.id];
+  if (chapterCover) opening.push(chapterCover);
   chapter.pages = opening.concat(chapter.pages || []);
 });
