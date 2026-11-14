@@ -61,6 +61,34 @@ window.REFLECTIONS_CHAPTER_COVERS = {
   }
 };
 
+// End-of-chapter cards: shown as the last image of each chapter, after its story pages.
+window.REFLECTIONS_CHAPTER_END_CARDS = {
+  "001": {
+    "src": "/images/covers/arc-01-chapter-01-end-three-hearts-different-needs.webp",
+    "alt": "Ruby and Morgan lean against Ethan on either side as the three sit together at dusk. Text: “I know how to be needed. I’m still learning how to be myself.” End of Chapter 1: Three Hearts, Different Needs. Akira. To be continued.",
+    "width": 1024,
+    "height": 1536
+  },
+  "002": {
+    "src": "/images/covers/arc-01-chapter-02-end-different-languages.webp",
+    "alt": "Ruby and Morgan lean on a table on either side of Ethan, who talks with open hands. Text: “I thought I was showing you love. I didn’t realize you were still waiting to feel it.” End of Chapter 2: Different Languages. Akira. To be continued.",
+    "width": 1024,
+    "height": 1536
+  },
+  "003": {
+    "src": "/images/covers/arc-01-chapter-03-end-right-beside-you.webp",
+    "alt": "Ethan and Ruby sit apart on a sofa, glancing at each other, while Morgan reads in an armchair behind them. Text: “I missed you while you were sitting right beside me.” End of Chapter 3: Right Beside You. Akira. To be continued.",
+    "width": 1024,
+    "height": 1536
+  },
+  "004": {
+    "src": "/images/covers/arc-01-chapter-04-end-always-the-one-who-reaches.webp",
+    "alt": "Ethan and Morgan stand facing each other as their hands reach and almost touch, while Ruby sits on the sofa behind them holding a mug. Text: “I wanted you to reach for me. I didn’t know how to ask.” End of Chapter 4: Always the One Who Reaches. Akira. End of Arc 1.",
+    "width": 1024,
+    "height": 1536
+  }
+};
+
 // Chapters available in the reader, including clearly marked cover previews.
 // To publish pages: add page images under site/pages/chapter-001/ and list them here,
 // each with descriptive alt text (what happens on the page, including dialogue).
@@ -120,7 +148,7 @@ window.REFLECTIONS_CHAPTERS = [
   }
 ];
 
-// Attach the selected opening covers before story pages without renaming them.
+// Attach the opening covers before story pages and the end card after them, without renaming pages.
 window.REFLECTIONS_CHAPTERS.forEach(function (chapter) {
   var covers = window.REFLECTIONS_COVERS;
   var opening = [];
@@ -130,5 +158,6 @@ window.REFLECTIONS_CHAPTERS.forEach(function (chapter) {
   }
   var chapterCover = window.REFLECTIONS_CHAPTER_COVERS[chapter.id];
   if (chapterCover) opening.push(chapterCover);
-  chapter.pages = opening.concat(chapter.pages || []);
+  var endCard = (window.REFLECTIONS_CHAPTER_END_CARDS || {})[chapter.id];
+  chapter.pages = opening.concat(chapter.pages || [], endCard ? [endCard] : []);
 });
