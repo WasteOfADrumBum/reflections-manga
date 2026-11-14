@@ -346,13 +346,13 @@ p { margin: 0 0 1em; }
 .reader-side { display: none; }
 @media (min-width: 56rem) {
   .reader-nav { display: none; }
-  .reader-view { grid-template-columns: 5rem minmax(0, 1fr) 5rem; align-items: center; }
+  .reader-view { grid-template-columns: 6.5rem minmax(0, 1fr) 6.5rem; align-items: center; }
   .reader .reader-side {
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.35rem;
-    min-height: 9rem; margin: 0 0.75rem; padding: 0.5rem 0.25rem;
+    min-height: 9rem; margin: 0 0.5rem; padding: 0.5rem 0.35rem;
   }
   .reader-side-prev { order: -1; }
-  .reader-side-text { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; text-align: center; line-height: 1.2; }
+  .reader-side-text { font-size: 0.75rem; letter-spacing: 0.04em; overflow-wrap: anywhere; text-transform: uppercase; text-align: center; line-height: 1.2; }
   .reader-side:not(.is-jump) .reader-side-text {
     position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
   }
