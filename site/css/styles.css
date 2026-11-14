@@ -696,3 +696,4 @@ html:not(.js) .album-leaf + .album-leaf { margin-top: 0.9rem; }
   .album-book, .album-leaf, .snap { border: 1px solid CanvasText; }
   .album-leaf::before, .snap::before { display: none; }
 }
+.album-leaf .snap-tall:only-child { max-width: 22rem; }
