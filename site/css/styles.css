@@ -327,19 +327,20 @@ p { margin: 0 0 1em; }
   gap: 0.75rem; padding: 0.75rem 1rem; border-bottom: 3px solid var(--rule);
 }
 .reader-bar label { font-weight: 700; margin-right: 0.5rem; }
-.reader select, .reader button {
+.reader select, .reader button, .pager-btn {
   font: inherit; min-height: 44px; padding: 0 0.75rem;
   border: 2px solid var(--rule); border-radius: var(--radius);
   background: var(--paper); color: var(--ink);
 }
-.reader button { font-weight: 700; cursor: pointer; }
-.reader button:disabled { opacity: 0.45; cursor: not-allowed; }
+.reader button, .pager-btn { font-weight: 700; cursor: pointer; }
+.reader button:disabled, .pager-btn:disabled { opacity: 0.45; cursor: not-allowed; }
 .reader-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.5rem; flex: 1 1 18rem; min-width: 0; }
 .reader-pick label { margin-right: 0; }
 .reader-pick select { flex: 1 1 12rem; min-width: 0; max-width: 100%; text-overflow: ellipsis; }
 .reader-nav { display: flex; justify-content: space-between; align-items: stretch; gap: 0.75rem; padding: 0.75rem 1rem 0; }
 .reader-nav-bottom { padding: 0 1rem 1rem; }
-.reader .reader-btn { max-width: 49%; min-height: 44px; padding: 0.35rem 0.7rem; font-size: 0.9rem; line-height: 1.2; text-align: left; }
+/* Shared Previous/Next button size for the reader and the Memories album */
+.reader .reader-btn, .pager-btn { max-width: 49%; min-height: 44px; padding: 0.35rem 0.7rem; font-size: 0.9rem; line-height: 1.2; text-align: left; }
 .reader .reader-btn[data-reader-next] { margin-left: auto; text-align: right; }
 .reader .reader-btn.is-jump { background: var(--ink); color: var(--paper); }
 .reader-view { display: grid; grid-template-columns: minmax(0, 1fr); }
@@ -656,7 +657,9 @@ html:not(.js) .cast-panel { display: grid; gap: 2rem; }
   border-radius: 6px; position: relative;
 }
 .album-leaf {
-  position: relative; display: grid; gap: 1.6rem; align-content: start; justify-items: center;
+  /* Every page is the same size; photos shrink to fit their share of it. */
+  --n: 2; container-type: size; aspect-ratio: 5 / 7.2;
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-around; gap: 1.6rem;
   padding: 1.6rem 1.1rem 1.4rem 1.6rem; color: var(--leaf-ink);
   background: var(--leaf) repeating-linear-gradient(0deg, transparent 0 27px, var(--leaf-line) 27px 28px);
   border-radius: 2px 4px 4px 2px; box-shadow: inset 10px 0 14px -10px rgba(0, 0, 0, 0.35);
@@ -676,34 +679,34 @@ html:not(.js) .cast-panel { display: grid; gap: 2rem; }
   display: block; left: -0.75rem; width: 1.5rem;
 }
 html:not(.js) .album-leaf + .album-leaf { margin-top: 0.9rem; }
+.album-leaf:has(> .snap:only-child) { --n: 1; }
 .snap {
-  margin: 0; width: 100%; max-width: 30rem; background: #fffefa; padding: 0.6rem 0.6rem 0.3rem;
+  margin: 0; flex: none; display: flex; flex-direction: column; align-items: center; background: #fffefa; padding: 0.6rem 0.6rem 0.3rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); transform: rotate(-1.2deg); position: relative;
 }
 .snap:nth-child(even) { transform: rotate(1.4deg); }
-.snap-tall { max-width: 17rem; }
 .snap::before {
   content: ""; position: absolute; top: -0.7rem; left: 50%; width: 5.5rem; height: 1.4rem; margin-left: -2.75rem;
   background: rgba(214, 196, 150, 0.75); transform: rotate(-3deg); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 .snap-link { display: block; border-radius: 1px; }
-.snap-link img { display: block; width: 100%; height: auto; }
+.snap-link img {
+  display: block; width: auto; height: auto;
+  max-width: min(100cqw - 4.5rem, 28rem);
+  max-height: calc((100cqh - 3rem - (var(--n) - 1) * 1.6rem) / var(--n) - 3.5rem);
+}
 .snap-link:focus-visible { outline: 3px solid #9a3412; outline-offset: 3px; }
 .snap figcaption {
   font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-align: center;
   color: var(--leaf-ink); padding: 0.45rem 0 0.2rem;
 }
 .album-controls { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap; }
-.album-nav { min-width: 9rem; align-items: center; text-align: center; }
-.album-nav .cast-dir { font-size: 0.9rem; color: inherit; }
-.album-nav:disabled { opacity: 0.45; cursor: not-allowed; }
-.album-nav:disabled:hover { background: var(--card); color: var(--ink); }
 .album-count { margin: 0; font-weight: 700; color: var(--ink-soft); }
+.album-nav[data-album-next] { text-align: right; }
 @media (max-width: 30rem) {
   .album-book { padding: 0.6rem 0.6rem 0.6rem 1.3rem; }
   .album-leaf { padding: 1.4rem 0.8rem 1.2rem 1.2rem; }
   .album-leaf::before { left: -0.95rem; }
-  .album-nav { min-width: 0; flex: 1 1 0; }
   .album-count { order: -1; flex-basis: 100%; text-align: center; }
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -716,4 +719,3 @@ html:not(.js) .album-leaf + .album-leaf { margin-top: 0.9rem; }
   .album-book, .album-leaf, .snap { border: 1px solid CanvasText; }
   .album-leaf::before, .snap::before { display: none; }
 }
-.album-leaf .snap-tall:only-child { max-width: 22rem; }
