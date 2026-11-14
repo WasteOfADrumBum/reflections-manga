@@ -54,7 +54,7 @@
       <div class="wrap">
         <div class="section-head">
           <h2 id="read-title">Chapters</h2>
-          <p>Pick a chapter, then use the buttons or your left and right arrow keys to turn pages.</p>
+          <p>Pick a chapter, then turn pages with the buttons, your left and right arrow keys, or a swipe on a phone.</p>
         </div>
         <div class="reader" id="reader" role="region" aria-label="Chapter reader">
           <div class="reader-bar">
@@ -62,17 +62,25 @@
               <label for="chapter-select">Chapter</label>
               <select id="chapter-select"><option>Chapter 001: Three Hearts, Different Needs</option></select>
             </div>
-            <div class="reader-controls">
-              <button type="button" data-reader-prev disabled>Previous page</button>
-              <button type="button" data-reader-next disabled>Next page</button>
-            </div>
           </div>
-          <div class="reader-stage">
-            <div class="empty">
-              <div class="empty-art" aria-hidden="true"></div>
-              <h3>Chapter 001: Three Hearts, Different Needs</h3>
-              <p>The manga cover, Arc 1 cover, Chapter 1 cover and first ten story pages are available. Turn on JavaScript to read them here.</p>
+          <div class="reader-nav reader-nav-top js-only">
+            <button type="button" class="reader-btn" data-reader-prev data-pos="top" disabled>Previous page</button>
+            <button type="button" class="reader-btn" data-reader-next data-pos="top" disabled>Next page</button>
+          </div>
+          <div class="reader-view">
+            <button type="button" class="reader-side reader-side-prev js-only" data-reader-prev data-pos="side" disabled><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg><span class="reader-side-text">Previous page</span></button>
+            <div class="reader-stage">
+              <div class="empty">
+                <div class="empty-art" aria-hidden="true"></div>
+                <h3>Chapter 001: Three Hearts, Different Needs</h3>
+                <p>The manga cover, Arc 1 cover, Chapter 1 cover and first ten story pages are available. Turn on JavaScript to read them here.</p>
+              </div>
             </div>
+            <button type="button" class="reader-side reader-side-next js-only" data-reader-next data-pos="side" disabled><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg><span class="reader-side-text">Next page</span></button>
+          </div>
+          <div class="reader-nav reader-nav-bottom js-only">
+            <button type="button" class="reader-btn" data-reader-prev data-pos="bottom" disabled>Previous page</button>
+            <button type="button" class="reader-btn" data-reader-next data-pos="bottom" disabled>Next page</button>
           </div>
           <p class="visually-hidden" aria-live="polite" data-reader-status></p>
         </div>

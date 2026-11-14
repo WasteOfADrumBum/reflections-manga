@@ -34,6 +34,9 @@ window.REFLECTIONS_COVERS = {
   }
 };
 
+// Arc names, used by the reader when Next or Previous moves into another arc.
+window.REFLECTIONS_ARCS = { 1: "Three Become One", 2: "The Invisible Weight", 3: "Fractured Reflections", 4: "The Choice" };
+
 window.REFLECTIONS_CHAPTER_COVERS = {
   "001": {
     "src": "/images/covers/arc-01-chapter-01-three-hearts-different-needs.webp",
