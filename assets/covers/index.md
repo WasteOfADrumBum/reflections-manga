@@ -30,3 +30,14 @@ Selected 2026-11-13. Chapter positions follow the user's four supplied titles, s
 | 4 | Always the One Who Reaches | [PNG](arc-01-chapter-04-always-the-one-who-reaches.png) | Chapter 004 |
 
 Chapter 001 front matter now runs: manga cover, Arc 1 cover, Chapter 1 cover, then numbered story page 001. Chapters 002-004 are cover previews with story pages coming soon. Their covers appear first, without repeating the manga or arc cover. Existing concept IDs (including story 009 for Right Beside You and story 007 for Always the One Who Reaches) remain stable.
+
+## Arc 1 End-of-Chapter Cards
+
+Added 2026-11-14 at the user's request. Each card is the last image in its chapter, after the numbered story pages; Chapter 4's card also closes Arc 1. Originals are 1024 × 1536; website copies are WebP at the same size in `site/images/covers/`.
+
+| Arc 1 chapter | Title | Original | Reader |
+|---|---|---|---|
+| 1 | Three Hearts, Different Needs | [PNG](arc-01-chapter-01-end-three-hearts-different-needs.png) | Last image in Chapter 001 |
+| 2 | Different Languages | [PNG](arc-01-chapter-02-end-different-languages.png) | Last image in Chapter 002 |
+| 3 | Right Beside You | [PNG](arc-01-chapter-03-end-right-beside-you.png) | Last image in Chapter 003 |
+| 4 | Always the One Who Reaches | [PNG](arc-01-chapter-04-end-always-the-one-who-reaches.png) | Last image in Chapter 004 |
