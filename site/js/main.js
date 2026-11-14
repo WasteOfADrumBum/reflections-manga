@@ -65,14 +65,22 @@
     return null;
   }
 
+  // short: the desktop chevron's caption; btn: the phone button text;
+  // full: the accessible name, which starts with the visible text.
   function label(dir, t) {
     var word = dir > 0 ? "Next" : "Previous";
-    if (!t || t.kind === "page") return { short: word + " page", full: word + " page" };
-    if (t.kind === "arc") {
-      var name = t.arc ? "Arc " + t.arc + (arcs[t.arc] ? ": " + arcs[t.arc] : "") : t.to.title;
-      return { short: word + " arc", full: word + " arc, " + name };
+    if (!t || t.kind === "page") return { short: word + " page", btn: word + " page", full: word + " page" };
+    var num = parseInt(t.to.id, 10);
+    var chap = "Chapter " + (isNaN(num) ? t.to.id : num);
+    if (t.kind === "arc" && t.arc) {
+      var arcName = "Arc " + t.arc;
+      return {
+        short: word + " arc",
+        btn: word + ": " + arcName,
+        full: word + ": " + arcName + (arcs[t.arc] ? ", " + arcs[t.arc] : "") + ", " + chap + ", " + t.to.title
+      };
     }
-    return { short: word + " chapter", full: word + " chapter: " + t.to.title };
+    return { short: word + " chapter", btn: word + ": " + chap, full: word + ": " + chap + ", " + t.to.title };
   }
 
   function paintButtons() {
@@ -83,12 +91,13 @@
         var jump = !!t && t.kind !== "page";
         b.classList.toggle("is-jump", jump);
         if (b.classList.contains("reader-side")) {
-          b.querySelector(".reader-side-text").textContent = jump ? l.short : l.full;
+          b.querySelector(".reader-side-text").textContent = jump ? l.btn : l.full;
           b.setAttribute("aria-label", l.full);
         } else {
           b.innerHTML = dir < 0
-            ? '<span aria-hidden="true">&larr; </span>' + escapeText(l.full)
-            : escapeText(l.full) + '<span aria-hidden="true"> &rarr;</span>';
+            ? '<span aria-hidden="true">&larr; </span>' + escapeText(l.btn)
+            : escapeText(l.btn) + '<span aria-hidden="true"> &rarr;</span>';
+          if (jump) b.setAttribute("aria-label", l.full); else b.removeAttribute("aria-label");
         }
       });
     });
