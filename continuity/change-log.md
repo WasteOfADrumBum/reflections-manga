@@ -1,5 +1,12 @@
 # Change Log
 
+## 2026-11-13: Arc 1 Chapter Covers Applied
+
+- Matched the four supplied covers to Three Hearts, Different Needs; Different Languages; Right Beside You; and Always the One Who Reaches, in that chapter order.
+- Added Chapter 1's cover after the manga and Arc 1 covers, before its ten story pages.
+- Added Chapters 002-004 as explicitly labeled cover previews and linked all four from the reading order. Unfinished story pages remain unpublished.
+- Stored original files and optimized WebP copies with descriptive alternative text. Concept story IDs remain unchanged.
+
 ## 2026-11-13: Manga and Arc Covers Selected
 
 - Registered the five user-supplied cover images and web-sized copies.

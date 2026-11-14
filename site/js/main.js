@@ -60,6 +60,7 @@
     var total = ch.pages.length;
     var p = ch.pages[state.page];
     stage.innerHTML =
+      (ch.coverOnly ? '<p class="note">' + escapeText(ch.note) + '</p>' : '') +
       '<figure class="reader-page">' +
       '<img src="' + encodeURI(p.src) + '" alt="' + escapeText(p.alt || "") + '" width="' + (p.width || 1200) + '" height="' + (p.height || 1700) + '" decoding="async">' +
       "<figcaption>Page " + (state.page + 1) + " of " + total + "</figcaption>" +
