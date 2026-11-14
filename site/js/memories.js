@@ -39,6 +39,21 @@
   }
 
   prev.addEventListener("click", function () { turn(-1); });
+
+  // Swipe left for the next page and right for the previous one. A tap still opens a photo.
+  var book = album.querySelector(".album-book");
+  var touch = null;
+  book.addEventListener("touchstart", function (e) {
+    touch = e.touches.length === 1 ? { x: e.touches[0].clientX, y: e.touches[0].clientY, t: Date.now() } : null;
+  }, { passive: true });
+  book.addEventListener("touchend", function (e) {
+    if (!touch) return;
+    var dx = e.changedTouches[0].clientX - touch.x, dy = e.changedTouches[0].clientY - touch.y;
+    var quick = Date.now() - touch.t < 800;
+    touch = null;
+    if (quick && Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) turn(dx < 0 ? 1 : -1);
+  }, { passive: true });
+  book.addEventListener("touchcancel", function () { touch = null; }, { passive: true });
   next.addEventListener("click", function () { turn(1); });
   if (wide.addEventListener) wide.addEventListener("change", function () { render(false); });
   else if (wide.addListener) wide.addListener(function () { render(false); });
