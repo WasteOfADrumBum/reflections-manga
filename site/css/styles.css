@@ -339,7 +339,7 @@ p { margin: 0 0 1em; }
 .reader-pick select { flex: 1 1 12rem; min-width: 0; max-width: 100%; text-overflow: ellipsis; }
 .reader-nav { display: flex; justify-content: space-between; align-items: stretch; gap: 0.75rem; padding: 0.75rem 1rem 0; }
 .reader-nav-bottom { padding: 0 1rem 1rem; }
-.reader .reader-btn { max-width: 48%; padding: 0.4rem 0.75rem; line-height: 1.25; text-align: left; }
+.reader .reader-btn { max-width: 49%; min-height: 44px; padding: 0.35rem 0.7rem; font-size: 0.9rem; line-height: 1.2; text-align: left; }
 .reader .reader-btn[data-reader-next] { margin-left: auto; text-align: right; }
 .reader .reader-btn.is-jump { background: var(--ink); color: var(--paper); }
 .reader-view { display: grid; grid-template-columns: minmax(0, 1fr); }
