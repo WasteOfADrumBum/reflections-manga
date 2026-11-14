@@ -1,7 +1,7 @@
 # Chapter Outline
 
 Status: DRAFT proposed outline, recorded 2026-11-13; pending approval.
-Stage: SCRIPT (partial draft, pages 001–010) and working art for pages 001–004;
+Stage: SCRIPT (partial draft, pages 001–030) and working art registered for 001–010;
 outline remains DRAFT.
 No approved script, storyboard, artwork, or chapter events.
 
@@ -70,5 +70,10 @@ The user has generated pages 001–004 and requested continuation; see the
 scripted panels and [six manual-generation prompts](page-prompts-005-010.md).
 They propose packing an outing bag, a private Morgan/Ruby exchange, Morgan/Ethan
 banter and shared decisions, and Ruby/Ethan reassurance with an untouched coffee
-bridge. Pages 011–032 remain unscripted; the storyboard file is still a scaffold.
+bridge. The user has since generated 005–010 and requested ten-page batches.
+Pages 011–020 now add 41 DRAFT panels for the child introductions and overlapping
+requests, with [summaries/reference lists](page-guide.md) and a [ten-page prompt pack](page-prompts-011-020.md).
+Pages 021–030 now have 40 DRAFT panels and a [ten-page prompt pack](page-prompts-021-030.md)
+for independent care from both women, late-night reflection, and next-morning
+small requests. Only 031–032 remain unscripted; the storyboard file is still a scaffold.
 No developments enter the canonical timeline or release index from this outline.

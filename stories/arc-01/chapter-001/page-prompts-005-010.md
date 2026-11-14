@@ -32,7 +32,7 @@ sheets even though the rest of pages 005–007 focuses on Ethan and Morgan.
 - [Morgan everyday v1](../../../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png)
 - [Ruby everyday v1](../../../characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png)
 - [Rendered opening inventory](pages/index.md); use [page 003](pages/A01-C001-P003.png)
-  for the kitchen and adult outfits, and [page 004](pages/A01-C001-P004) for
+  for the kitchen and adult outfits, and [page 004](pages/A01-C001-P004.png) for
   Ethan's immediate mirror-to-kitchen continuity.
 - [First four prompts](page-prompts.md) remain preserved as the original batch.
   The new prompts follow observed temporary layers in the rendered outputs,

@@ -17,7 +17,7 @@ several chapters; no universal chapter length or global chapter allocation is fi
 
 | Chapter | Title | Status |
 |---|---|---|
-| [001](arc-01/chapter-001/outline.md) | Three Hearts, Different Needs (proposed) | Working art 001–004; DRAFT script/prompts through 010; chapter approval open |
+| [001](arc-01/chapter-001/outline.md) | Three Hearts, Different Needs (proposed) | Working art registered 001–010; DRAFT script/prompts through 030; [quick page guide](arc-01/chapter-001/page-guide.md); chapter approval open |
 
 ## Workflow
 

@@ -1,5 +1,38 @@
 # Change Log
 
+## 2026-11-13: Hotel Comedy Underlayer Revision
+
+- At the user's request, changed Natalie's visible shorts to opaque olive briefs
+  in girls-trip-hotel-pillow-fight-v2.png; retained v1 and recorded the edit prompt.
+- Visually checked the localized change and scene preservation. Artwork remains
+  a draft; no permanent character or canonical event change.
+
+## 2026-11-13: Story 001 Pages 021–030 Prompt Pack
+
+- Prepared the requested ten-page batch with one-sentence plot summaries,
+  ordered character references, and ten self-contained copyable prompt exports.
+- Added 40 DRAFT panels / 40 lettering items to the chapter script, retaining
+  the outline's tiredness exchanges, realization captions, five-minute pause
+  and permission not to have every answer. Earlier page bodies/prompts preserved.
+- Explicitly separated first-morning scenes, later-night reflection and the
+  next morning; recorded three empty mugs, temporary day-two outfits and bowl
+  continuity. No destination, off-page crisis, sleeping arrangement, permanent
+  redesign, compulsory disclosure or full reconciliation established.
+- Extended the quick guide through 030 and updated outline, continuity,
+  handoff, production status, registry and open decisions. Only 031–032 remain
+  outlined. Existing local image registration remains 001–010; the request
+  does not establish generated output for 011–020 or 021–030.
+- No images edited/generated, completed chapter QA, final creative approval,
+  canonical event entry, release, deployment, commit or push performed.
+
+## 2026-11-13: Girls' Trip Hotel Comedy Draft
+
+- Generated Natalie and Autumn's pillow-fight aftermath with Morgan and Ruby's
+  pajama keep-away prank at the bathroom door, using four supplied adult references.
+- Saved the image, input copies, prompt, coverage adjustment, and review notes
+  in assets/drafts/girls-trip-hotel-pillow-fight-study.md.
+- Scene remains a draft; no permanent trait, canonical event, approval, or release change.
+
 ## 2026-11-13: Hayes Brothers and Chapter 001 Pages 005-010 on the Site
 
 - At the user's request, Nate and Adrian Hayes were added to the site family tree
