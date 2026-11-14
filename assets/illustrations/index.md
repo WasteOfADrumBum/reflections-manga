@@ -1,9 +1,9 @@
 # Illustrations
 
 Standalone character illustrations collected by the user on 2026-11-13.
-Seven PNGs are indexed below; each is a byte-for-byte copy of its linked draft source.
+The entries below describe standalone illustrations and their source studies.
 
-All seven have website copies in `site/images/moments/` and appear in the
+The illustrations indexed here have website copies in `site/images/moments/` and appear in the
 character galleries on the site characters page (added 2026-11-13 at the
 user's request). The four Ethan/Morgan/Ruby illustrations were added by the
 user to this collection.
@@ -92,3 +92,19 @@ Written profiles and reference sheets still take precedence for character detail
 - Status: Added to the collection by the user; source output review remains open.
   The selected scene wardrobe and direction do not approve permanent wardrobes
   or establish a chapter event.
+
+## Girls' Trip: Beach Splash Fight
+
+- [girls-trip-beach-splash-fight-v1.png](girls-trip-beach-splash-fight-v1.png)
+- Shows: Nat, Morgan, Autumn and Ruby splashing one another in shallow water.
+- Source: selected illustration from `codex/bennett-character-directories`, commit `d39a1672a34723276ffeebc145459f88119d823b`.
+- Website: all four character galleries and the Memories photo album.
+- Status: collected and published at the user's request; this does not establish a chapter event or approve permanent character changes.
+
+## Girls' Trip: Hotel Pillow Fight
+
+- [girls-trip-hotel-pillow-fight-v2.png](girls-trip-hotel-pillow-fight-v2.png)
+- Shows: Autumn and Nat after a pillow fight while Morgan holds Ruby's pajamas overhead.
+- Source: selected revision v2 from `codex/bennett-character-directories`, commit `d39a1672a34723276ffeebc145459f88119d823b`.
+- Website: all four character galleries and the Memories photo album.
+- Status: collected and published at the user's request; scene wardrobe and actions remain standalone illustration details.

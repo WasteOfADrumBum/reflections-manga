@@ -1,5 +1,11 @@
 # Change Log
 
+## 2026-11-13: Two Girls' Trip Photos Added to the Website
+
+- Added the selected beach splash fight v1 and hotel pillow fight v2 from the unmerged `codex/bennett-character-directories` branch.
+- Included both in Morgan, Ruby, Nat and Autumn's galleries and on a seventh Memories album page, with descriptive alternative text.
+- Preserved source artwork unchanged. These are standalone illustrations, not new chapter events or permanent character approvals.
+
 ## 2026-11-13: Hayes Brothers and Chapter 001 Pages 005-010 on the Site
 
 - At the user's request, Nate and Adrian Hayes were added to the site family tree
