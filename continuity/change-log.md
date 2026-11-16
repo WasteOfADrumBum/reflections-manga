@@ -33,6 +33,26 @@
   in assets/drafts/girls-trip-hotel-pillow-fight-study.md.
 - Scene remains a draft; no permanent trait, canonical event, approval, or release change.
 
+## 2026-11-13: Arc 1 Chapter Covers Applied
+
+- Matched the four supplied covers to Three Hearts, Different Needs; Different Languages; Right Beside You; and Always the One Who Reaches, in that chapter order.
+- Added Chapter 1's cover after the manga and Arc 1 covers, before its ten story pages.
+- Added Chapters 002-004 as explicitly labeled cover previews and linked all four from the reading order. Unfinished story pages remain unpublished.
+- Stored original files and optimized WebP copies with descriptive alternative text. Concept story IDs remain unchanged.
+
+## 2026-11-13: Manga and Arc Covers Selected
+
+- Registered the five user-supplied cover images and web-sized copies.
+- Chapter 001 now opens with the manga cover, then Arc 1, before story page 001.
+- Registered Arc 2, 3 and 4 opening covers for their first chapters without assigning future chapter IDs or publishing unfinished chapters.
+- All four arc covers appear with the website reading order. Original artwork and story-page numbering are preserved.
+
+## 2026-11-13: Two Girls' Trip Photos Added to the Website
+
+- Added the selected beach splash fight v1 and hotel pillow fight v2 from the unmerged `codex/bennett-character-directories` branch.
+- Included both in Morgan, Ruby, Nat and Autumn's galleries and on a seventh Memories album page, with descriptive alternative text.
+- Preserved source artwork unchanged. These are standalone illustrations, not new chapter events or permanent character approvals.
+
 ## 2026-11-13: Hayes Brothers and Chapter 001 Pages 005-010 on the Site
 
 - At the user's request, Nate and Adrian Hayes were added to the site family tree

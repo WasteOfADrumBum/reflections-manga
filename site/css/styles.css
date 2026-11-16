@@ -327,14 +327,38 @@ p { margin: 0 0 1em; }
   gap: 0.75rem; padding: 0.75rem 1rem; border-bottom: 3px solid var(--rule);
 }
 .reader-bar label { font-weight: 700; margin-right: 0.5rem; }
-.reader select, .reader button {
+.reader select, .reader button, .pager-btn {
   font: inherit; min-height: 44px; padding: 0 0.75rem;
   border: 2px solid var(--rule); border-radius: var(--radius);
   background: var(--paper); color: var(--ink);
 }
-.reader button { font-weight: 700; cursor: pointer; }
-.reader button:disabled { opacity: 0.45; cursor: not-allowed; }
-.reader-controls { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.reader button, .pager-btn { font-weight: 700; cursor: pointer; }
+.reader button:disabled, .pager-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.reader-pick { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.5rem; flex: 1 1 18rem; min-width: 0; }
+.reader-pick label { margin-right: 0; }
+.reader-pick select { flex: 1 1 12rem; min-width: 0; max-width: 100%; text-overflow: ellipsis; }
+.reader-nav { display: flex; justify-content: space-between; align-items: stretch; gap: 0.75rem; padding: 0.75rem 1rem 0; }
+.reader-nav-bottom { padding: 0 1rem 1rem; }
+/* Shared Previous/Next button size for the reader and the Memories album */
+.reader .reader-btn, .pager-btn { max-width: 49%; min-height: 44px; padding: 0.35rem 0.7rem; font-size: 0.9rem; line-height: 1.2; text-align: left; }
+.reader .reader-btn[data-reader-next] { margin-left: auto; text-align: right; }
+.reader .reader-btn.is-jump { background: var(--ink); color: var(--paper); }
+.reader-view { display: grid; grid-template-columns: minmax(0, 1fr); }
+.reader-side { display: none; }
+@media (min-width: 56rem) {
+  .reader-nav { display: none; }
+  .reader-view { grid-template-columns: 6.5rem minmax(0, 1fr) 6.5rem; align-items: center; }
+  .reader .reader-side {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.35rem;
+    min-height: 9rem; margin: 0 0.5rem; padding: 0.5rem 0.35rem;
+  }
+  .reader-side-prev { order: -1; }
+  .reader-side-text { font-size: 0.75rem; letter-spacing: 0.04em; overflow-wrap: anywhere; text-transform: uppercase; text-align: center; line-height: 1.2; }
+  .reader-side:not(.is-jump) .reader-side-text {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  }
+  .reader .reader-side.is-jump { background: var(--ink); color: var(--paper); }
+}
 .reader-stage { padding: 1rem; min-height: 16rem; display: grid; place-items: center; }
 .reader-page { margin: 0; max-width: 46rem; width: 100%; }
 .reader-page img { width: 100%; border: 2px solid var(--rule); background: #fff; }
@@ -621,4 +645,77 @@ html:not(.js) .cast-panel { display: grid; gap: 2rem; }
   .ft-tagbg { fill: Canvas; }
   .ft-face { border-color: CanvasText; }
   .ft-node[aria-expanded="true"] .ft-face { outline: 4px solid Highlight; }
+}
+
+.family-photo { max-width: 68rem; }
+
+/* Memories: photo album */
+.album { --leather: #3a2a20; --leaf: #f5eedc; --leaf-ink: #2b241e; --leaf-line: rgba(80, 60, 40, 0.08); }
+.album-book {
+  display: grid; gap: 0; padding: 0.9rem 0.9rem 0.9rem 1.6rem;
+  background: var(--leather); border: 3px solid var(--rule); box-shadow: var(--shadow);
+  border-radius: 6px; position: relative;
+}
+.album-leaf {
+  /* Every page is the same size; photos shrink to fit their share of it. */
+  --n: 2; container-type: size; aspect-ratio: 5 / 7.2;
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-around; gap: 1.6rem;
+  padding: 1.6rem 1.1rem 1.4rem 1.6rem; color: var(--leaf-ink);
+  background: var(--leaf) repeating-linear-gradient(0deg, transparent 0 27px, var(--leaf-line) 27px 28px);
+  border-radius: 2px 4px 4px 2px; box-shadow: inset 10px 0 14px -10px rgba(0, 0, 0, 0.35);
+}
+/* binder rings along the inner edge */
+.album-leaf::before {
+  content: ""; position: absolute; top: 1.25rem; bottom: 1.25rem; left: -1.15rem; width: 1.5rem;
+  background: radial-gradient(circle at 50% 50%, #d9d4c8 0 4px, #8d877b 4px 6px, transparent 6.5px) center top / 1.5rem 3.5rem repeat-y;
+  pointer-events: none;
+}
+.js .album-leaf[hidden] { display: none; }
+.album-spread .album-book { grid-template-columns: 1fr 1fr; padding: 0.9rem; }
+.album-spread .album-leaf::before { display: none; }
+.album-spread .album-leaf { border-radius: 4px 2px 2px 4px; box-shadow: inset -12px 0 16px -10px rgba(0, 0, 0, 0.35); }
+.album-spread .album-leaf-right { border-radius: 2px 4px 4px 2px; box-shadow: inset 12px 0 16px -10px rgba(0, 0, 0, 0.35); }
+.album-spread .album-leaf-right::before {
+  display: block; left: -0.75rem; width: 1.5rem;
+}
+html:not(.js) .album-leaf + .album-leaf { margin-top: 0.9rem; }
+.album-leaf:has(> .snap:only-child) { --n: 1; }
+.snap {
+  margin: 0; flex: none; display: flex; flex-direction: column; align-items: center; background: #fffefa; padding: 0.6rem 0.6rem 0.3rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); transform: rotate(-1.2deg); position: relative;
+}
+.snap:nth-child(even) { transform: rotate(1.4deg); }
+.snap::before {
+  content: ""; position: absolute; top: -0.7rem; left: 50%; width: 5.5rem; height: 1.4rem; margin-left: -2.75rem;
+  background: rgba(214, 196, 150, 0.75); transform: rotate(-3deg); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.snap-link { display: block; border-radius: 1px; }
+.snap-link img {
+  display: block; width: auto; height: auto;
+  max-width: min(100cqw - 4.5rem, 28rem);
+  max-height: calc((100cqh - 3rem - (var(--n) - 1) * 1.6rem) / var(--n) - 3.5rem);
+}
+.snap-link:focus-visible { outline: 3px solid #9a3412; outline-offset: 3px; }
+.snap figcaption {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; text-align: center;
+  color: var(--leaf-ink); padding: 0.45rem 0 0.2rem;
+}
+.album-controls { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap; }
+.album-count { margin: 0; font-weight: 700; color: var(--ink-soft); }
+.album-nav[data-album-next] { text-align: right; }
+@media (max-width: 30rem) {
+  .album-book { padding: 0.6rem 0.6rem 0.6rem 1.3rem; }
+  .album-leaf { padding: 1.4rem 0.8rem 1.2rem 1.2rem; }
+  .album-leaf::before { left: -0.95rem; }
+  .album-count { order: -1; flex-basis: 100%; text-align: center; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .turn-next .album-leaf:not([hidden]) { animation: leaf-in-next 0.35s ease both; }
+  .turn-prev .album-leaf:not([hidden]) { animation: leaf-in-prev 0.35s ease both; }
+  @keyframes leaf-in-next { from { opacity: 0; transform: perspective(1200px) rotateY(-12deg); transform-origin: left center; } to { opacity: 1; transform: none; } }
+  @keyframes leaf-in-prev { from { opacity: 0; transform: perspective(1200px) rotateY(12deg); transform-origin: right center; } to { opacity: 1; transform: none; } }
+}
+@media (forced-colors: active) {
+  .album-book, .album-leaf, .snap { border: 1px solid CanvasText; }
+  .album-leaf::before, .snap::before { display: none; }
 }
