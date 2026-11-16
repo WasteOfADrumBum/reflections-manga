@@ -19,6 +19,18 @@ Creating a whole series means repeating this chapter cycle with shared records.
 It does not mean generating every episode, image, and conversation in one call.
 Image consistency and readable pacing require review and revision.
 
+## Prompt Batches and Quick Page Summaries
+
+User preference recorded 2026-11-13: prepare scripts/prompts in TEN-PAGE BATCHES.
+Each page entry must have a direct copyable prompt link, the character-reference
+images in attachment order, and ONE high-level plot sentence so the user can
+track the story without opening the prompt. Keep that overview beside the links.
+Continue to generate one page per request, in sequence, with the original
+identity sheets and a suitable prior page for scene continuity. Ten-page packs
+do not mean a ten-page composite image. A final remainder may be shorter:
+Story 001's 32-page working plan uses 011–020, then 021–030, then 031–032.
+See its [quick page guide](../stories/arc-01/chapter-001/page-guide.md).
+
 ## What Each Directory Does
 
 | Location | Purpose | When it is used |

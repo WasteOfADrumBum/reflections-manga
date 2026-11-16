@@ -1,64 +1,87 @@
 # Chapter 001 Handoff
 
 Updated: 2026-11-13.
-Story: 001 — Three Hearts, Different Needs.
-Stage: Partial script and manual art production; DRAFT, not a released chapter.
+Story 001: Three Hearts, Different Needs.
+Working chapter length: 32 pages.
+Stage: Partial script/manual art production; DRAFT chapter, no completed release.
 
-## Saved Work
+## User's Production Preference
 
-- [Working outline](outline.md): Proposed 32-page adaptation; final approval open.
-- [Chapter script](script.md): Pages 001–010, 44 panels. Opening 001–004 has
-  18 panels; continuation 005–010 has 26. Pages 011–032 remain unscripted.
-- [Opening prompt pack](page-prompts.md) and its four original text exports
-  are preserved. The user has generated those pages.
-- [Working page inventory](pages/index.md): All four user-created page files
-  located and inspected, PNG 1024 x 1536. Page 004 has no filename extension.
-- [Continuation prompt pack](page-prompts-005-010.md): Six self-contained prompts
-  and text exports prompts/page-005-v1.txt through page-010-v1.txt, exact dialogue,
-  per-page reference mapping, proposed layouts, and scene-state rules.
-- [Continuity](continuity.md): Approved family constraints separated from draft
-  scenes and the observed temporary clothes/room details in the user-created pages.
-- Storyboard file is still an empty scaffold. Proposed panel arrangements are
-  in the script/prompts; no approved final storyboard or editable lettering.
+Prepare prompts in TEN-PAGE BATCHES. Every page entry includes one high-level
+plot sentence, a direct copyable prompt and identity-sheet attachment order.
+Generate one page per request, in sequence, with original character sheets as
+identity anchors and a suitable prior rendered page for scene continuity.
 
-## Authorization and Approval State
+Current user request: prepare 021–030. Only 031–032 remain after this pack.
+This request does not itself report that 011–020 have been generated; only
+the ten existing 001–010 images are currently registered locally.
 
-The user said pages 001–004 are done and asked to keep going. Treat those images
-as working outputs accepted for progression and continue the next outlined batch.
-This is not final creative approval of the complete chapter, final standards,
-or entry of draft events into the canonical timeline. No release or commit/push
-is triggered by this partial production session.
+## Current Work
 
-The next batch's bag-packing task, prop designs, dialogue, coffee interaction,
-and staging remain DRAFT proposals. New background family history is not used
-to explain current behavior or add flashbacks to these scenes.
+- [Quick page guide](page-guide.md): Summaries, prompt links, ordered references
+  and status for all prepared pages 001–030.
+- [Chapter script](script.md): Pages 001–030, 125 panels (18 + 26 + 41 + 40).
+  Pages 031–032 remain outlined, not scripted.
+- [Current pack 021–030](page-prompts-021-030.md): Ten self-contained prompts,
+  exports prompts/page-021-v1.txt through page-030-v1.txt, exact lettering and
+  explicit first-morning / late-night / next-morning continuity.
+- Prior [001–004](page-prompts.md), [005–010](page-prompts-005-010.md), and
+  [011–020](page-prompts-011-020.md) packs and prompt exports preserved.
+- [Image inventory](pages/index.md): Ten existing 1024 x 1536 PNGs and hashes.
+  No source image changed; no new chapter art created in this session.
+- [Continuity](continuity.md) and [outline](outline.md) preserve draft/canon limits.
+  Storyboard file remains a scaffold; layouts in prompts are proposals.
+  Editable lettering sources are not registered.
 
-## Immediate Next Action
+## Immediate Next Step
 
-Generate pages 005–010 sequentially using the saved prompts:
+Generate page 021 with Ethan then Ruby identity sheets. Attach page 020 if
+generated for the immediate scene; completed page 010 is also an available
+kitchen/outfit reference. Follow the current pack for later reference images.
 
-- Page 005: Ethan, Morgan, Ruby sheets, then rendered page 003 for the kitchen
-  and clothes; page 004 optional for Ethan's immediate continuity.
-- Pages 006–007: Ethan and Morgan sheets, then preceding newly selected page.
-- Page 008: Ethan and Ruby sheets, then new page 007 plus rendered page 003
-  for Ruby's cardigan/knit top.
-- Pages 009–010: Ethan and Ruby sheets, then preceding newly selected page.
+- 021–022: Ethan + Ruby.
+- 023–024: Ethan + Morgan.
+- 025–027: Ethan ONLY; mentioned partners are not drawn in flashbacks.
+- 028–029: Ethan + Morgan.
+- 030: Ethan + Ruby.
 
-No children are drawn in this batch. Keep the original character sheets as
-identity anchors; prior pages supply environment/outfit/style continuity only.
-Record actual outputs and review before calling any new page finished.
+Character sheets attach before scene pages. Background people or reflection
+figures are not to be invented. Check exact dialogue, speaker tails, internal
+versus time captions, body proportions, light, clothes, room, props and panel
+order before using a returned image as the next page's continuity reference.
 
-## Carry Forward
+## New Batch Story and Chronology
 
-- Same morning and house; no school/work schedule or outing destination fixed.
-- Morgan retains her rendered olive overshirt; Ruby retains her rendered
-  dusty-rose cardigan and ivory cable knit. No permanent wardrobe change.
-- The blue bottle moves from counter to tote main compartment attempt, then
-  its outer pocket. Packed tote rests by the nook bench after page 007.
-- The plain cream mug stays untouched through page 010. Page 011 can begin the
-  outlined child beat, but no exact child action or parental address is approved yet.
-- Ethan's identity question, later insight, and outward boundary are unresolved.
+021–024 continue the first morning. Both women independently notice fatigue;
+Ethan deflects Ruby, then partially admits tiredness with Morgan. Both offer care.
+Morgan's blunt language is low, dry familiarity, without contempt or threats.
 
-After the user completes/reviews this batch, draft pages 011–015 from the same
-outline. Complete reference, anatomy, reading-flow, lettering, and continuity
-QA before final chapter approval and release.
+025–027 jump explicitly to late THAT NIGHT. Only Ethan appears, seated at the
+same kitchen table. Three clean empty mugs retain positions: cream in front,
+charcoal behind-left, dusty rose behind-right. Dark window and low warm light.
+His original sage short-sleeve henley/dark jeans remain; footwear outside crop.
+The elided day adds no outing destination, crisis, schedule, date or sleeping
+arrangement. Captions are subjective insight, not blame or compulsory disclosure.
+
+028–030 begin the NEXT morning. Temporary day-two outfit proposals:
+Ethan charcoal long-sleeve henley/black jeans; Morgan burgundy T-shirt/dark jeans,
+no overshirt; Ruby pale-lavender cardigan over the ivory cable-knit V-neck,
+dark leggings/flats. These are scene choices, not altered identity or permanent
+wardrobes. Carry them into the final same-day close if that timing is retained.
+
+Ethan requests five minutes before helping with breakfast; Morgan accepts.
+By 030 he has helped off-page and is drying its mixing bowl. Ruby welcomes
+his presence without requiring an answer. Her exact new question stays open.
+The full identity conflict is not resolved.
+
+## Next Writing Step and Approval
+
+Prepare only the closing two pages 031–032 from the existing outline: all three
+adults together in affection, preserving Morgan/Ruby's platonic bond and the
+unresolved identity question. Exact evening staging, wardrobe carryover and
+Story 002 teaser remain DRAFT execution.
+
+No full chapter QA, final creative approval, canonical event entry, release,
+deployment or commit/push is triggered by prompt readiness. Existing art
+review notes stay in the inventory. Do not silently replace images or revise
+earlier scripts to resolve an output error.

@@ -57,7 +57,20 @@ working images are registered; this does not mark complete chapter QA or canon
 approval. Pages 005–010 now have draft script and manual-generation prompts.
 Review their bag-packing task, private Morgan/Ruby exchange, Morgan/Ethan banter,
 and Ruby/Ethan coffee/reassurance sequence before treating them as approved events.
-Pages 011–032 remain unscripted.
+The user now reports 001–010 done and has requested a ten-page 011–020 pack.
+It drafts the child moments and overlapping requests, with one-sentence plots
+and ordered references in the [quick guide](../stories/arc-01/chapter-001/page-guide.md).
+Review Avery's proposed transition card/footwear, the children's toy/pretend play,
+the two folding chairs, and Ethan's subjective waiting captions as DRAFT execution.
+Only pages 031–032 now remain unscripted; no child-to-Ethan address, final page standard,
+permanent wardrobe or full chapter approval is selected by continuing.
+
+The user requested the 021–030 pack, now drafted with one-sentence plots and
+ordered references in the quick guide. Review the explicit night/next-morning
+transitions, three empty mugs, partial honesty with both women, five-minute
+pause, and temporary day-two outfits as DRAFT execution. Ruby's new question
+on 030 has no selected topic. The final affectionate two-page close and its
+unresolved identity question remain to be written; no new art approval inferred.
 
 - Review adapting Story 001 as Chapter 001 in 32 pages; this does not set a
   universal chapter length, final allocation, or completed production stage.

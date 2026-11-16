@@ -74,3 +74,10 @@ When a story completes QA and receives approval, commit its approved files,
 update continuity and the release index, and push to the configured GitHub
 remote. Inspect the diff first and exclude private sources and unrelated work.
 Do not treat a planning session or unfinished chapter as a completed story.
+
+## Session Efficiency
+
+Read only files the task needs; search before opening.
+Do not re-read unchanged files or view images already reviewed.
+Validate once, at the scope of the change. Keep reports short:
+what changed, what was checked, what is open.
