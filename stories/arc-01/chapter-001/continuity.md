@@ -1,10 +1,13 @@
 # Chapter Continuity
 
-Status: DRAFT planning notes, updated 2026-11-13. No approved chapter events.
+Status: DRAFT planning notes, updated 2026-11-17. No approved chapter events.
+User-selected ending direction is recorded separately from unapproved execution.
 
 ## Current Progress and Ten-Page Workflow
 
-The user reports pages 001–010 done; all ten 1024 x 1536 PNGs are present.
+The user now reports production through 020; pages 001–020 are locked for revision.
+The earlier inventory registers the original 001–010 working pages; this writing
+session does not verify or register additional rendered pages.
 Pages 005–010 received an initial visual inspection this session. The [inventory](pages/index.md)
 records paths, hashes and review limits. Page 004 now has a .png extension with
 unchanged bytes; this session did not rename or modify source images.
@@ -16,46 +19,93 @@ for pages 001–030 and the [current 021–030 pack](page-prompts-021-030.md).
 The final short pack will be 031–032. Generate one page per request, in sequence.
 New plot execution stays DRAFT; the workflow preference does not approve canon.
 
-## Batch 021–030: Care, Reflection and Small Requests — DRAFT
+## Batch 021–030: Psychological-Drama Revision — DRAFT
 
-The user requested the next ten-page preparation pack. This adds 40 panels
-and 40 exact lettering items (speech, internal thoughts and two objective time
-captions). Only 001–010 images are currently registered locally; do not infer
-011–020 generation or approval from requesting later prompts. No artwork was
-generated or source image modified during this session.
+Revised 2026-11-17 at the user's request: **46 panels / 69 lettering items**.
+Pages 001–020 are LOCKED continuity for this revision. Their prompt files,
+script scene bodies and existing artwork stay unchanged. The user reports pages
+through 020; that report does not expand local image registration or QA.
 
-- 021–024 continue the first morning. Ruby notices tiredness and invites more
-  honest connection; Ethan deflects. Morgan notices independently with direct,
-  dry concern. His partial "Just tired" is not yet a request for time or care.
-  Both women remain loving; neither is made jealous, helpless or threatening.
-- 025 explicitly captions "Later that night." The rest of the day is elided;
-  no outing destination, crisis, job/school schedule, date or sleeping layout
-  is established. Ethan is alone at the kitchen table, not in a flashback.
-- 025–027 keep his sage short-sleeve henley/dark jeans, waist-up framing, dark
-  window and low warm light. Exactly three clean EMPTY mugs: cream in front,
-  charcoal behind-left, dusty rose behind-right. No owner/favorite is assigned.
-  His hands rest around the cream mug on the table; no stale coffee is served.
-- The five source realization captions on 027 are preserved. They concern
-  authentic roles and unexpressed needs, not compulsory disclosure, a literal
-  alternate identity or sole blame for every relationship difficulty.
-- 028 explicitly captions "The next morning." New temporary day-two outfits:
-  Ethan charcoal LONG-SLEEVE henley/black jeans; Morgan burgundy T-shirt/dark
-  jeans with no overshirt; Ruby pale-lavender cardigan over her existing ivory
-  cable-knit V-neck, dark leggings/flats. These proposals do not change faces,
-  builds, heights, permanent wardrobes or ring canon. Carry them into the
-  closing same-day sequence if that timing is retained.
-- Day two has daylight and fresh coffee in the cream mug; night cups were
-  cleared off-page. Morgan's plain breakfast mixing bowl is on the counter in
-  028–029. Ethan requests five minutes before helping; Morgan accepts without
-  a power struggle or transfer of all household work. By 030 he has helped
-  off-page and is drying that bowl with a neutral towel, then sets both down.
-- On 030 Ruby's question topic remains unselected. He allows not having an
-  answer; she welcomes his presence. No hidden crisis, intimate escalation or
-  complete reconciliation is implied. Only 031–032 remain outlined.
+### User-Established Direction vs Proposed Execution
 
-Reference lists: 021–022 Ethan/Ruby; 023–024 Ethan/Morgan; 025–027 Ethan ONLY;
-028–029 Ethan/Morgan; 030 Ethan/Ruby. No absent partner is drawn in a thought
-or flashback; no children, relatives or incidental photograph faces are added.
+- Selected ending theme: **Self-worth & identity**. Exact closing line:
+  **“I know how to be needed…”**. Reserve it for the actual 031–032 close.
+  The older concept-map alternative ending is historical draft guidance.
+- The user established Ruby's morning coffee, reading, journaling, sewing/crafts
+  and minivan, and Morgan's cars/trucks, extended-cab pickup, furniture refinishing
+  and end-of-day whiskey. See their personality records. No vehicle make/model,
+  permanent prop design, drinking frequency or past event is established.
+- Revised scenes, exact dialogue, staging and emotional developments below
+  remain DRAFT pending creative review. No finished chapter approval or release.
+
+### Revised Sequence
+
+- 021–022 continue 020 immediately: Ruby notices fatigue, invites her husband to
+  sit, names creative interests and asks for unhurried time. Ethan hears a problem
+  to solve. His captions explicitly identify both women as his wives.
+- 023, a little later: Morgan independently notices strain. He mistakes her keys
+  for a truck-help request. She sets them aside and admits asking for company is
+  harder. He admits tiredness. No repair or departure occurs.
+- 024: Morgan and Ruby ONLY. Cabinet refinishing and a fabric/sewing-tin moment
+  frame a private discussion of their own indirect requests. Ruby corrects
+  Morgan's assumption about waiting; their friendship stays warm and platonic.
+  Ethan does not overhear and supplies no narration in this scene.
+- 025: explicit “Later that night.” Ethan alone; guilt in the absence of requests.
+  He identifies Morgan/Ruby as best friends, not lovers. No flashbacks.
+- 026–027: Morgan joins at the table with one modest whiskey pour. Ethan asks about
+  his different relational selves. Her “And what do you need?” has no easy answer.
+  She distinguishes frustration with guessing from love, then takes her glass
+  into the adjoining room. Ethan recognizes the needs he leaves unexpressed.
+- 028: explicit “The next morning.” He asks for five minutes before breakfast help.
+- 029: Morgan accepts and stays affectionate; he still fights the urge to get up.
+- 030: AFTER his pause and breakfast help, he dries the same bowl. Ruby welcomes
+  uncertainty, then asks what HE would like to do during their time together.
+  He automatically defers; her wish for him to choose reveals the identity hook.
+  No chosen activity, schedule, full reconciliation or new household rule follows.
+- 031–032 remain outlined, unscripted and outside this revision. Affection can
+  coexist with the unresolved question; do not replace the approved closing line
+  or append an invented continuation to it.
+
+### Props, Clothes, Light and Reference Order
+
+Original sheet attachment order:
+021–022 Ethan → Ruby; 023 Ethan → Morgan; 024 Morgan → Ruby;
+025 Ethan only; 026–027 Ethan → Morgan; 028–029 Ethan → Morgan; 030 Ethan → Ruby.
+Only the specified adults appear; mentioned people are not flashback figures.
+
+First morning: unchanged sage short-sleeve henley (Ethan), olive overshirt over
+charcoal tee (Morgan), dusty-rose cardigan over ivory cable knit (Ruby). Keep
+020's folded chairs at the closed door, tote/bottle at the nook bench, child's
+spoon/cup and toy bridge separate from adult coffee. Morgan's keys stay at the
+bench after 023. Ruby's own dusty-rose mug/book enter on 022; CLOSED sewing tin
+and fabric enter on 024. No readable book title or sewing-tool hazards shown.
+
+Night: first-day clothes, waist-up framing, dark window, low warm light.
+Three clean EMPTY mugs fixed: cream front, charcoal behind-left, dusty rose
+behind-right. Book, tin, fabric and preparation notebook put away off-page.
+Morgan's separate whiskey glass enters on 026 and goes with her on 027.
+No heavy drinking, intoxication or invented link to her father's history.
+No mug ownership beyond Ruby's newly introduced rose mug is established.
+
+Next morning: fresh coffee in the cream mug; previous night mugs/glass cleared.
+Ethan charcoal LONG-SLEEVE henley/black jeans; Morgan burgundy tee/dark jeans,
+no overshirt; Ruby pale-lavender cardigan over ivory knit/dark leggings/flats.
+These are scene outfits, not redesigns. Breakfast bowl stays on counter 028–029;
+dried and set down with towel on 030. Ruby's CLOSED private journal enters on 030;
+it is distinct from the preparation notebook and no contents are read or shown.
+Keep day-two clothes for the closing if it remains the same day.
+
+No date, destination, work/school schedule, sleeping arrangement, legal marriage
+recognition, new child trait or permanent physical change is added. Ring rules
+remain: Ruby wears her band, Morgan no ring, Ethan's practice unspecified.
+
+### Review Limits
+
+Writing checks cover continuity, voice, relationship structure, text budgets,
+speaker/ID order and prompt/script/pack synchronization. Each panel has at most
+three short lettering units and 30 words. Final visual lettering fit, anatomy,
+rendered reading order and dimensions require artwork review. All exact revised
+events remain DRAFT; no canon-log event, release, commit or push is triggered.
 
 ## Canonical References
 

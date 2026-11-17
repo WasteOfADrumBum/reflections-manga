@@ -1,87 +1,69 @@
 # Chapter 001 Handoff
 
-Updated: 2026-11-13.
+Updated: 2026-11-17.
 Story 001: Three Hearts, Different Needs.
-Working chapter length: 32 pages.
-Stage: Partial script/manual art production; DRAFT chapter, no completed release.
+Working length: 32 pages. Stage: revised DRAFT prompts/script, not a completed release.
 
-## User's Production Preference
+## Current Revision
 
-Prepare prompts in TEN-PAGE BATCHES. Every page entry includes one high-level
-plot sentence, a direct copyable prompt and identity-sheet attachment order.
-Generate one page per request, in sequence, with original character sheets as
-identity anchors and a suitable prior rendered page for scene continuity.
+The user reports production through 020 and locked pages 001–020. Their prompt
+files, script scene bodies and existing art were preserved. Only 021–030 story
+execution was revised in place; v1 filenames are retained. No art generated.
 
-Current user request: prepare 021–030. Only 031–032 remain after this pack.
-This request does not itself report that 011–020 have been generated; only
-the ten existing 001–010 images are currently registered locally.
+- [Current pack](page-prompts-021-030.md): 10 self-contained prompts, **46 panels /
+  69 lettering items**, with ordered identity and scene references.
+- [Script](script.md): 001–030, 131 panels (18 + 26 + 41 + 46). Revised 021–030
+  lettering IDs carry an R marker; old text IDs are not silently repurposed.
+- [Page guide](page-guide.md): revised summaries and reference orders for 021–030.
+- [Continuity](continuity.md): current dialogue intent, props, clothes, time cuts,
+  user-established character details and approval limits.
+- Prior prompt packs/exports and existing images preserved. Image inventory
+  and artwork QA were not expanded by this writing session.
 
-## Current Work
+## Emotional Arc
 
-- [Quick page guide](page-guide.md): Summaries, prompt links, ordered references
-  and status for all prepared pages 001–030.
-- [Chapter script](script.md): Pages 001–030, 125 panels (18 + 26 + 41 + 40).
-  Pages 031–032 remain outlined, not scripted.
-- [Current pack 021–030](page-prompts-021-030.md): Ten self-contained prompts,
-  exports prompts/page-021-v1.txt through page-030-v1.txt, exact lettering and
-  explicit first-morning / late-night / next-morning continuity.
-- Prior [001–004](page-prompts.md), [005–010](page-prompts-005-010.md), and
-  [011–020](page-prompts-011-020.md) packs and prompt exports preserved.
-- [Image inventory](pages/index.md): Ten existing 1024 x 1536 PNGs and hashes.
-  No source image changed; no new chapter art created in this session.
-- [Continuity](continuity.md) and [outline](outline.md) preserve draft/canon limits.
-  Storyboard file remains a scaffold; layouts in prompts are proposals.
-  Editable lettering sources are not registered.
+021–022: Ruby wants creative time and her husband's company. He hears a task.
+023: Morgan puts truck plans aside and admits asking for company is harder.
+024: Morgan and Ruby privately discuss their own indirect communication, then
+share an ordinary craft moment. Their best-friend/coparent bond stays platonic.
+025: That night's quiet makes Ethan feel guilty without an actual demand.
+026–027: Morgan's question exposes his inability to name a need. She remains
+loving but names her own frustration with guessing. He recognizes excluded needs.
+028–029: He asks for five minutes; she accepts and stays affectionate.
+030: After breakfast help, Ruby asks for a preference. He reflexively defers.
+Safety has increased; self-worth and identity remain unresolved.
 
-## Immediate Next Step
+## Reference/Time Contract
 
-Generate page 021 with Ethan then Ruby identity sheets. Attach page 020 if
-generated for the immediate scene; completed page 010 is also an available
-kitchen/outfit reference. Follow the current pack for later reference images.
+- 021–022: Ethan → Ruby.
+- 023: Ethan → Morgan.
+- 024: Morgan → Ruby ONLY; no Ethan narration or eavesdropping.
+- 025: Ethan only; explicit later-that-night cut, three EMPTY mugs.
+- 026–027: Ethan → Morgan; she adds one whiskey glass and takes it away on 027.
+- 028–029: Ethan → Morgan; explicit NEXT morning, fresh coffee, new-day clothes.
+- 030: Ethan → Ruby; after breakfast help, bowl dried/put down, journal CLOSED.
 
-- 021–022: Ethan + Ruby.
-- 023–024: Ethan + Morgan.
-- 025–027: Ethan ONLY; mentioned partners are not drawn in flashbacks.
-- 028–029: Ethan + Morgan.
-- 030: Ethan + Ruby.
+Character sheets first, scene pages second. Use the exact reference order and
+clothing in each prompt. First day/night retain sage henley/olive overshirt/
+dusty-rose cardigan. Day two: charcoal long-sleeve henley, burgundy tee without
+overshirt, pale-lavender cardigan over ivory cable knit. Ruby wears a band;
+Morgan none; do not invent Ethan's ring practice or a reason for Morgan's.
 
-Character sheets attach before scene pages. Background people or reflection
-figures are not to be invented. Check exact dialogue, speaker tails, internal
-versus time captions, body proportions, light, clothes, room, props and panel
-order before using a returned image as the next page's continuity reference.
+## Next Step and Approved Closing Direction
 
-## New Batch Story and Chronology
+Review/generate revised 021–030 one page at a time. Do not regenerate or rewrite
+001–020 to repair the new batch. Check lettering, body/face identity, clothes,
+props, light and reading order before selecting a page as the next reference.
 
-021–024 continue the first morning. Both women independently notice fatigue;
-Ethan deflects Ruby, then partially admits tiredness with Morgan. Both offer care.
-Morgan's blunt language is low, dry familiarity, without contempt or threats.
+The final 031–032 remain outlined and outside this revision. Their selected theme
+is **Self-worth & identity** and exact closing line **“I know how to be needed…”**.
+Reserve that line for the actual close. Do not append a new completion or use the
+old concept-map alternative final monologue as current ending instructions.
+Retain an affectionate three-adult close, Ethan's distinct marriages, Morgan/Ruby's
+platonic friendship, and the question of who he is beyond being useful.
+Exact closing staging and any teaser still require drafting/review.
 
-025–027 jump explicitly to late THAT NIGHT. Only Ethan appears, seated at the
-same kitchen table. Three clean empty mugs retain positions: cream in front,
-charcoal behind-left, dusty rose behind-right. Dark window and low warm light.
-His original sage short-sleeve henley/dark jeans remain; footwear outside crop.
-The elided day adds no outing destination, crisis, schedule, date or sleeping
-arrangement. Captions are subjective insight, not blame or compulsory disclosure.
-
-028–030 begin the NEXT morning. Temporary day-two outfit proposals:
-Ethan charcoal long-sleeve henley/black jeans; Morgan burgundy T-shirt/dark jeans,
-no overshirt; Ruby pale-lavender cardigan over the ivory cable-knit V-neck,
-dark leggings/flats. These are scene choices, not altered identity or permanent
-wardrobes. Carry them into the final same-day close if that timing is retained.
-
-Ethan requests five minutes before helping with breakfast; Morgan accepts.
-By 030 he has helped off-page and is drying its mixing bowl. Ruby welcomes
-his presence without requiring an answer. Her exact new question stays open.
-The full identity conflict is not resolved.
-
-## Next Writing Step and Approval
-
-Prepare only the closing two pages 031–032 from the existing outline: all three
-adults together in affection, preserving Morgan/Ruby's platonic bond and the
-unresolved identity question. Exact evening staging, wardrobe carryover and
-Story 002 teaser remain DRAFT execution.
-
-No full chapter QA, final creative approval, canonical event entry, release,
-deployment or commit/push is triggered by prompt readiness. Existing art
-review notes stay in the inventory. Do not silently replace images or revise
-earlier scripts to resolve an output error.
+New wording, staging and emotional developments remain DRAFT. User-established
+hobbies/vehicles and selected closing direction are distinct from approval of
+finished scenes. No completed QA, chapter approval, canon event entry, release,
+commit or push is triggered.

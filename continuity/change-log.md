@@ -1,5 +1,28 @@
 # Change Log
 
+## 2026-11-17: Chapter 001 Pages 021–030 Psychological-Drama Revision
+
+- Revised ten prompt exports IN PLACE, retaining v1 names and existing format.
+  Locked 001–020 prompt files, script scene bodies and existing art preserved.
+- Revised batch: 46 panels / 69 lettering items, 131 chapter panels total.
+  Added explicit marriage context, Ruby's creative/relational wants, Morgan's
+  practical affection, private platonic friendship and richer subjective
+  narration. A night conversation exposes Ethan's difficulty naming needs;
+  an accepted morning pause pays off before Ruby asks for his own preference.
+- Captured user-established Ruby/Morgan hobbies and vehicles in personality
+  records, distinct from new DRAFT events and prop designs.
+- Synced pack, script, guide, outline, continuity, handoff, relationship portrayal,
+  open decisions and production status.
+- Recorded user-selected closing theme Self-worth & identity and exact line
+  “I know how to be needed…” for the actual 031–032 close. Older alternative
+  ending stays historical draft guidance. No new 031–032 prompts or invented
+  completion of the line.
+- Writing QA verified unchanged hashes for 20 locked prompts and 19 existing
+  images, unchanged earlier script scenes, matching prompt/pack/script lettering,
+  unique IDs and text budgets (maximum 21 words per panel). Rendered art QA remains open.
+- No artwork generated/edited, private source imported, approved asset
+  overwritten, chapter approval/release, canon event entry, commit or push.
+
 ## 2026-11-13: Hotel Comedy Underlayer Revision
 
 - At the user's request, changed Natalie's visible shorts to opaque olive briefs

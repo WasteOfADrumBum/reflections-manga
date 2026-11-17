@@ -1,49 +1,57 @@
-Create ONE finished-looking DRAFT manga page for Reflections, Story 001, "Three Hearts, Different Needs," page 23. Exactly FOUR panels.
+Create ONE finished-looking DRAFT manga page for Reflections, Story 001, "Three Hearts, Different Needs," page 23. Exactly FIVE panels.
 
 REFERENCE ORDER: image 1 = Ethan; image 2 = Morgan.
-Attach scene references AFTER these identity sheets. Use the immediately preceding generated page for scene continuity, plus completed page 7 for Morgan's day-one overshirt.
-Original sheets anchor faces, hair, eyes, age and build; earlier pages guide temporary scene state. Do not reproduce sheet labels, pose grids or alternate costumes. Follow the current scene clothes below even if a reference or earlier-day page shows another outfit.
+Attach identity sheets FIRST, then scene references. Use new page 022 for kitchen/daylight; page 007 anchors Morgan's day-one overshirt.
+Original sheets anchor faces, hair, eyes, ages and builds; prior pages guide scene state. Current scene clothes override a sheet's different outfit. Do not reproduce reference labels, pose grids, extra cast or earlier rendering errors.
 
-PAGE PLOT: Morgan bluntly challenges Ethan's claim that nothing is wrong.
+PAGE PLOT: Morgan sets aside her truck plans and lets Ethan see that her practical requests sometimes conceal a wish for his company.
 Direction only: DO NOT print this summary inside the image.
 
-FORMAT/STYLE: Portrait 1024 x 1536 (2:3), English LEFT TO RIGHT then TOP TO BOTTOM, white gutters and safe margins. Match the contemporary Japanese seinen-inspired manga: clean expressive linework, semi-realistic adult proportions, subtle cel shading, muted natural FULL COLOR. Time-specific lighting below overrides prior-page light. No panel numbers, page labels, watermark or extra title. Working draft settings, not a print specification.
+FORMAT/STYLE: Portrait 1024 x 1536 (2:3), English LEFT TO RIGHT then TOP TO BOTTOM. White gutters and safe margins. Contemporary Japanese seinen-inspired manga, clean expressive linework, semi-realistic mature adult proportions, subtle cel shading, muted natural FULL COLOR and cinematic shot changes. Time-specific lighting overrides prior-page light. No panel numbers, page labels, watermark or extra title. Working draft settings, not a print specification.
 
-VISIBLE CAST: Only Ethan and Morgan. No children, relatives, passersby, photo faces or extra people in reflections. Only the specified pair is drawn; other family members stay outside the framing.
+VISIBLE CAST: Only Ethan and Morgan; only where panels specify. No children, relatives, passersby, silhouettes, photo faces or extra reflection figures. Mentioned people are not drawn.
 
-Ethan Walker: adult 38, 178 cm, brown textured high-fade haircut, full connected brown beard, brown eyes. Realistic dad bod with softly rounded middle, natural strong arms and ordinary adult proportions. Preserve the actual identity sheet, not a slim superhero variation. No new ring, permanent marks or identity changes.
-OUTFIT: DAY ONE/NIGHT ONE: unchanged dark-sage/olive SHORT-SLEEVE three-button henley, dark jeans, dark casual boots if visible. On night pages 25–27 use waist-up framing; keep footwear outside the crop.
+Ethan Walker: 38, 178 cm, brown textured high-fade hair, full connected brown beard, brown eyes. Realistic soft rounded DAD BOD, natural strong arms, ordinary adult proportions. Do not slim him into a superhero, add a ring, permanent marking or new accessory.
+OUTFIT: Unchanged dark-sage/olive SHORT-SLEEVE three-button henley, dark jeans, casual dark boots if visible. Night scenes crop waist-up; no footwear change specified.
 
-Morgan H. Walker: adult 34, approximately 170 cm, athletic, layered chestnut hair below her shoulders, hazel eyes. Preserve mature face and confident, affectionate body language. NO wedding ring.
-OUTFIT: DAY ONE: open olive utility overshirt over charcoal T-shirt, dark jeans, dark practical boots, as rendered pages 5–7.
+Morgan H. Walker: 34, approximately 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, natural subtle freckles. Mature face, confident affectionate posture. NO wedding ring; no invented reason for its absence.
+OUTFIT: Same open olive utility overshirt over charcoal T-shirt, dark jeans, practical dark boots.
 
-SETTING AND TIME: A little later that same morning, kitchen/nook threshold. Ruby and children are elsewhere nearby outside the crop. The two folded gray chairs remain by the closed entry door; no new chair task.
-Keep the existing cream walls, light wood table/counter, kitchen window, adjoining coat/shoe nook, gray-cushioned bench, coat hooks and round stool. No different house, named venue, exact date or work/school schedule.
+SETTING AND TIME: A little later that first morning, kitchen/nook threshold. The Ruby conversation paused without a promised solution. Ruby and children nearby off-page. Morgan holds her own unbranded vehicle keys; no repair or departure occurs.
+Keep the existing cream walls, light wood table/counter, kitchen window, adjoining coat/shoe nook, gray-cushioned wood bench, coat hooks and low round stool. No different house, named location, date, work/school schedule or sleeping layout. Ethan is married to both women. Morgan and Ruby are PLATONIC best friends and coparents, with no romantic pairing between them. All three children regard all three adults as parents and stay nearby off-page, never responsible for adult feelings.
 
-FIRST MORNING: Soft daylight. Plain cream adult coffee mug is distinct from Avery's striped cup; Ruby's notes use the small notebook. Olive tote/blue bottle stay by the nook bench; two gray folded chairs remain by the CLOSED entry door. Do not duplicate/repack these props or repeat the chair task.
+FIRST-MORNING CONTINUITY: Soft warm daylight. Ethan's PLAIN CREAM mug remains distinct from Avery's striped cup and Ruby's dusty-rose mug introduced on 022. His coffee was sipped on 011; do not reset it as newly served. Preparation notebook is not Ruby's private journal. Avery's spoon remains beside her striped cup; toy bridge remains in children's play. Packed olive tote, cream blanket, lunchbox and blue bottle stay by nook bench, bottle in outer pocket. Exactly TWO folded gray chairs with dark frames stay by CLOSED entry door; never carry them again. Background props appear only where geography places them in frame; no duplicates.
 
-LAYOUT: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+LAYOUT: Wide top panel; two middle-row panels; two full-width lower panels. Exactly FIVE panels.
 
-PANEL 1: Medium-wide two-shot. Morgan stands beside the gray-cushioned nook bench and studies Ethan as he comes from the kitchen, empty-handed. Her olive overshirt and his sage henley are unchanged. She looks concerned beneath a direct raised eyebrow.
-Emotional direction: A different communication style notices the same person and strain.
+PANEL 1: Eye-level medium-wide nook two-shot. Morgan holds vehicle keys loosely, noticing Ethan coming from the kitchen. Concern beneath a raised eyebrow.
+Emotional direction: She notices him independently, not briefed by Ruby.
 Exact lettering, reading order:
 Morgan speech balloon: "What's wrong with you today?"
-
-PANEL 2: Closer view of Ethan looking aside with a small dismissive shrug. His expression is guarded rather than hostile toward Morgan.
-Emotional direction: The automatic deflection carries across both relationships.
-Exact lettering, reading order:
 Ethan speech balloon: "Nothing."
 
-PANEL 3: Close-up of Morgan with one eyebrow raised, voice dry and low. No yelling, pointing in his face, looming camera, sneer, or threatening gesture.
-Emotional direction: Her direct refusal to accept the stock answer is grounded in familiarity and concern.
+PANEL 2: Close on Morgan, affectionate skepticism, no looming angle or pointing.
+Emotional direction: Blunt familiarity, low volume, no contempt.
 Exact lettering, reading order:
-Morgan speech balloon: "Bullshit."
+Morgan speech balloon: "Bullshit. You haven't stopped moving."
 
-PANEL 4: Medium two-shot. Ethan tries a faint joking smile; Morgan answers with a small affectionate smirk rather than escalating. Keep both on equal physical footing.
-Emotional direction: Their humor remains alive even as she refuses the easy answer.
+PANEL 3: Medium two-shot. Ethan nods at her keys with attempted humor; she does not hand them over.
+Emotional direction: He turns even concern into the next job.
 Exact lettering, reading order:
-Ethan speech balloon: "Subtle, Hun."
-Morgan speech balloon: "Wasn't trying to be."
+Ethan speech balloon: "I'll help with the truck in a minute, Hun."
+Morgan speech balloon: "I wasn't asking about the truck."
 
-ENDING: Her bluntness is familiar care, not contempt; page 024 gives Ethan room for a small honest answer.
-Ending direction is not printed text. Render ONLY the quoted lettering in its assigned panels, without speaker labels. Thoughts and time transitions use distinct quiet rectangular captions, never speech balloons. Give actual speech clear tails to the right person and preserve the listed LEFT-TO-RIGHT order. Keep faces and key actions unobscured, preserve silent panels, and draw natural hands. No added dialogue/SFX, plot-summary text, jealousy, threat, dramatic tears, split faces, literal alternate selves or complete instant reconciliation. Touch is familiar, welcome and non-explicit; both adults retain agency.
+PANEL 4: Morgan sets the keys on the nook bench and faces Ethan with both hands free. Tote and bottle stay untouched.
+Emotional direction: The practical spouse risks an admission of her own.
+Exact lettering, reading order:
+Morgan speech balloon: "I can ask for a hand all day. Asking you to stay is harder."
+
+PANEL 5: Ethan looks directly at her, not the keys. Morgan lightly touches his upper arm; he leans into the familiar contact. No restraint.
+Emotional direction: Tenderness and his authentic pleasure in trusting her.
+Exact lettering, reading order:
+Ethan speech balloon: "I'm tired, Morgan."
+Morgan speech balloon: "You can tell me that."
+Ethan INTERNAL CAPTION, no speech tail: "Letting her lead is easy. Letting her see me struggling isn't."
+
+ENDING: He admits tiredness, not yet what he needs. Page 024 gives the women a private scene.
+Ending guidance is not printed text. Letter ONLY the exact quoted text assigned to each panel. Never print plot summaries, cast names, emotional directions, panel labels or ending guidance. Speech balloons have clear tails to their speakers and follow the listed LEFT-TO-RIGHT order. Ethan INTERNAL CAPTIONS use quiet rectangular boxes WITHOUT tails; they are his subjective thoughts, not objective diagnoses or access to another person's mind. TIME CAPTIONS use separate small neutral boxes. No other narrator voice or unassigned thoughts. Plan lettering before art: no more than 30 words per panel, at most three short text units, roughly one quarter of the panel for lettering. Keep normal legible type, faces/hands visible and generous breathing room; never shrink lettering to fit. Preserve silent panels. No extra dialogue, SFX, jealousy effects, threats, dramatic tears, hallucinations, split faces, total-disclosure demand or instant reconciliation. Adults retain agency; touch is familiar, welcome and non-explicit.

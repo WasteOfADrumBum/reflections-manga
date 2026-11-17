@@ -1,47 +1,51 @@
 Create ONE finished-looking DRAFT manga page for Reflections, Story 001, "Three Hearts, Different Needs," page 21. Exactly FOUR panels.
 
 REFERENCE ORDER: image 1 = Ethan; image 2 = Ruby.
-Attach scene references AFTER these identity sheets. Use page 20 for immediate continuity if generated; completed page 10 is an available kitchen/Ethan/Ruby style-and-outfit reference. Do not assume a nonexistent page is attached.
-Original sheets anchor faces, hair, eyes, age and build; earlier pages guide temporary scene state. Do not reproduce sheet labels, pose grids or alternate costumes. Follow the current scene clothes below even if a reference or earlier-day page shows another outfit.
+Attach identity sheets FIRST, then scene references. Use page 020 for immediate continuity if available; page 010 also anchors kitchen/Ethan/Ruby clothes. Never assume an unattached page exists.
+Original sheets anchor faces, hair, eyes, ages and builds; prior pages guide scene state. Current scene clothes override a sheet's different outfit. Do not reproduce reference labels, pose grids, extra cast or earlier rendering errors.
 
-PAGE PLOT: Ruby notices Ethan's tiredness, but he insists he is fine.
+PAGE PLOT: Ruby asks for her husband, while Ethan privately turns their chosen family life into a test of his usefulness.
 Direction only: DO NOT print this summary inside the image.
 
-FORMAT/STYLE: Portrait 1024 x 1536 (2:3), English LEFT TO RIGHT then TOP TO BOTTOM, white gutters and safe margins. Match the contemporary Japanese seinen-inspired manga: clean expressive linework, semi-realistic adult proportions, subtle cel shading, muted natural FULL COLOR. Time-specific lighting below overrides prior-page light. No panel numbers, page labels, watermark or extra title. Working draft settings, not a print specification.
+FORMAT/STYLE: Portrait 1024 x 1536 (2:3), English LEFT TO RIGHT then TOP TO BOTTOM. White gutters and safe margins. Contemporary Japanese seinen-inspired manga, clean expressive linework, semi-realistic mature adult proportions, subtle cel shading, muted natural FULL COLOR and cinematic shot changes. Time-specific lighting overrides prior-page light. No panel numbers, page labels, watermark or extra title. Working draft settings, not a print specification.
 
-VISIBLE CAST: Only Ethan and Ruby. No children, relatives, passersby, photo faces or extra people in reflections. Only the specified pair is drawn; other family members stay outside the framing.
+VISIBLE CAST: Only Ethan and Ruby; only where panels specify. No children, relatives, passersby, silhouettes, photo faces or extra reflection figures. Mentioned people are not drawn.
 
-Ethan Walker: adult 38, 178 cm, brown textured high-fade haircut, full connected brown beard, brown eyes. Realistic dad bod with softly rounded middle, natural strong arms and ordinary adult proportions. Preserve the actual identity sheet, not a slim superhero variation. No new ring, permanent marks or identity changes.
-OUTFIT: DAY ONE/NIGHT ONE: unchanged dark-sage/olive SHORT-SLEEVE three-button henley, dark jeans, dark casual boots if visible. On night pages 25–27 use waist-up framing; keep footwear outside the crop.
+Ethan Walker: 38, 178 cm, brown textured high-fade hair, full connected brown beard, brown eyes. Realistic soft rounded DAD BOD, natural strong arms, ordinary adult proportions. Do not slim him into a superhero, add a ring, permanent marking or new accessory.
+OUTFIT: Unchanged dark-sage/olive SHORT-SLEEVE three-button henley, dark jeans, casual dark boots if visible. Night scenes crop waist-up; no footwear change specified.
 
-Ruby Bennett-Walker: adult 28, approximately 152 cm, petite SLENDER MATURE ADULT, copper-red pixie, green eyes, subtle nose/cheek freckles. Preserve mature face and natural height difference from Ethan. Same simple provisional left-ring-finger band; exact ring details remain draft rendering choices.
-OUTFIT: DAY ONE: same dusty-rose long cardigan over ivory CABLE-KNIT V-neck, dark leggings and ballet flats, as rendered pages 8–10.
+Ruby Bennett-Walker: 28, approximately 152 cm, petite SLENDER MATURE ADULT, copper-red pixie, green eyes, subtle nose/cheek freckles. Mature anatomy and natural adult height difference. Preserve simple provisional LEFT ring-finger wedding band; exact design remains a draft choice.
+OUTFIT: Same dusty-rose long cardigan over ivory CABLE-KNIT V-neck, dark leggings and ballet flats.
 
-SETTING AND TIME: Same morning and kitchen table, immediately after scripted page 020. Ethan has returned empty-handed; Ruby is by the table. No major time jump or departure.
-Keep the existing cream walls, light wood table/counter, kitchen window, adjoining coat/shoe nook, gray-cushioned bench, coat hooks and round stool. No different house, named venue, exact date or work/school schedule.
+SETTING AND TIME: Same first morning, immediately after page 020: Ethan returns EMPTY-HANDED to Ruby at the kitchen table. No time jump or repeated chair task.
+Keep the existing cream walls, light wood table/counter, kitchen window, adjoining coat/shoe nook, gray-cushioned wood bench, coat hooks and low round stool. No different house, named location, date, work/school schedule or sleeping layout. Ethan is married to both women. Morgan and Ruby are PLATONIC best friends and coparents, with no romantic pairing between them. All three children regard all three adults as parents and stay nearby off-page, never responsible for adult feelings.
 
-FIRST MORNING: Soft daylight. Plain cream adult coffee mug is distinct from Avery's striped cup; Ruby's notes use the small notebook. Olive tote/blue bottle stay by the nook bench; two gray folded chairs remain by the CLOSED entry door. Do not duplicate/repack these props or repeat the chair task.
+FIRST-MORNING CONTINUITY: Soft warm daylight. Ethan's PLAIN CREAM mug remains distinct from Avery's striped cup and Ruby's dusty-rose mug introduced on 022. His coffee was sipped on 011; do not reset it as newly served. Preparation notebook is not Ruby's private journal. Avery's spoon remains beside her striped cup; toy bridge remains in children's play. Packed olive tote, cream blanket, lunchbox and blue bottle stay by nook bench, bottle in outer pocket. Exactly TWO folded gray chairs with dark frames stay by CLOSED entry door; never carry them again. Background props appear only where geography places them in frame; no duplicates.
 
-LAYOUT: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+LAYOUT: Wide top panel; two middle-row panels; generous wide bottom panel. Exactly FOUR panels.
 
-PANEL 1: Medium-wide kitchen two-shot. Ethan has just reached Ruby at the table. She looks up with calm concern, reading his face rather than pointing at the bag or chairs. The plain cream mug and small preparation notebook stay on the table. Morgan and the children are outside the framing.
-Emotional direction: Her attention is on him, not on extracting more help.
+PANEL 1: Medium-wide kitchen two-shot. Ethan reaches Ruby at the table. His cream mug and her small preparation notebook remain where page 020 left them. She studies his face rather than the packed bag.
+Emotional direction: Continue the exact unfinished encounter.
 Exact lettering, reading order:
 Ruby speech balloon: "You seem tired."
-
-PANEL 2: Closer view of Ethan giving Ruby a small practiced smile. His hands are relaxed but his shoulders have not quite settled; preserve his ordinary soft dad-bod proportions, without exaggerated exhaustion or tears.
-Emotional direction: He tries to reassure her before saying anything about his own needs.
-Exact lettering, reading order:
 Ethan speech balloon: "I'm fine."
 
-PANEL 3: Close-up of Ruby holding his gaze. Her expression is thoughtful and unconvinced, not frightened, angry, or helpless. Give this pause its own quiet space.
-Emotional direction: She notices the gap between his reassuring words and his tiredness.
-SILENT: no dialogue, thoughts, captions or SFX.
-
-PANEL 4: Medium two-shot, with Ruby's expression still gentle and Ethan's smile beginning to falter. The table and untouched preparation notebook keep the same geography.
-Emotional direction: The repeated answer has become recognizable to someone who loves him.
+PANEL 2: Closer two-shot. Ruby holds his gaze; his practiced smile stays a moment too long. Leave clear space for the caption.
+Emotional direction: Make the marriage legible through first-person context.
 Exact lettering, reading order:
 Ruby speech balloon: "You always say that."
+Ethan INTERNAL CAPTION, no speech tail: "Ruby is my wife. Morgan is too."
 
-ENDING: Ruby recognizes his familiar deflection; page 022 makes clear that she wanted connection rather than another task.
-Ending direction is not printed text. Render ONLY the quoted lettering in its assigned panels, without speaker labels. Thoughts and time transitions use distinct quiet rectangular captions, never speech balloons. Give actual speech clear tails to the right person and preserve the listed LEFT-TO-RIGHT order. Keep faces and key actions unobscured, preserve silent panels, and draw natural hands. No added dialogue/SFX, plot-summary text, jealousy, threat, dramatic tears, split faces, literal alternate selves or complete instant reconciliation. Touch is familiar, welcome and non-explicit; both adults retain agency.
+PANEL 3: Ruby draws out the empty chair beside her at the table, inviting Ethan to sit. His mug stays on the table.
+Emotional direction: She wants companionship, not another task.
+Exact lettering, reading order:
+Ruby speech balloon: "I wanted my husband for a minute. The chairs can survive without you."
+
+PANEL 4: Wider table view. Ethan sits in the offered chair. They share an affectionate smile; his hands settle empty on the table.
+Emotional direction: His love is real; his tension concerns deserving it.
+Exact lettering, reading order:
+Ethan speech balloon: "You've got me, Babe."
+Ethan INTERNAL CAPTION, no speech tail: "Two wives. One family. A life I chose. Why does sitting down feel like neglecting something?"
+
+ENDING: Ruby has his attention but not the truth of his tiredness. Page 022 gives her a specific desire of her own.
+Ending guidance is not printed text. Letter ONLY the exact quoted text assigned to each panel. Never print plot summaries, cast names, emotional directions, panel labels or ending guidance. Speech balloons have clear tails to their speakers and follow the listed LEFT-TO-RIGHT order. Ethan INTERNAL CAPTIONS use quiet rectangular boxes WITHOUT tails; they are his subjective thoughts, not objective diagnoses or access to another person's mind. TIME CAPTIONS use separate small neutral boxes. No other narrator voice or unassigned thoughts. Plan lettering before art: no more than 30 words per panel, at most three short text units, roughly one quarter of the panel for lettering. Keep normal legible type, faces/hands visible and generous breathing room; never shrink lettering to fit. Preserve silent panels. No extra dialogue, SFX, jealousy effects, threats, dramatic tears, hallucinations, split faces, total-disclosure demand or instant reconciliation. Adults retain agency; touch is familiar, welcome and non-explicit.

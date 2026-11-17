@@ -1,6 +1,6 @@
 # Production Status
 
-Updated: 2026-11-13.
+Updated: 2026-11-17.
 
 ## Established
 
@@ -68,7 +68,7 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
 - Story 001 now has a [detailed proposed 32-page opening map](../stories/arc-01/concepts/story-001-three-hearts-different-needs.md#proposed-chapter-1-map-32-pages)
   and [Chapter 001 draft outline](../stories/arc-01/chapter-001/outline.md),
   recorded 2026-11-13. A user-authorized [opening script draft](../stories/arc-01/chapter-001/script.md)
-  now covers pages 001–030 in 125 panels (18 + 26 + 41 + 40), with exact lettering
+  now covers pages 001–030 in 131 panels (18 + 26 + 41 + 46), with exact lettering
   and page-end hooks. The user reports 001–010 done; all ten [working page files](../stories/arc-01/chapter-001/pages/index.md)
   are present, 1024 x 1536 PNG. Chapter QA and approval remain open. Pages
   031–032 are unscripted; the storyboard file remains a scaffold.
@@ -84,8 +84,13 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
   is ready, with an [at-a-glance guide](../stories/arc-01/chapter-001/page-guide.md)
   for all thirty prepared pages. The [current 021–030 pack](../stories/arc-01/chapter-001/page-prompts-021-030.md)
   is ready, with first-morning care, late-night reflection and next-morning small
-  requests. The final pack will be 031–032. Only 001–010 images are registered
-  locally; preparing later prompts does not establish new rendered-page progress.
+  requests. The 2026-11-17 revision enriches 021–030 with marriage context,
+  character interests, private friendship and a night conversation (46 panels /
+  69 lettering items). The user reports production through 020 and locks 001–020;
+  their prompts, script scenes and art are preserved. The prior inventory
+  registers 001–010; this writing session does not add image registration/QA.
+  The final pack remains 031–032, with selected theme Self-worth & identity and
+  exact closing line “I know how to be needed…”. New execution remains DRAFT.
 
 - Resolve supporting-cast details in the [open decisions](../continuity/open-threads.md#supporting-cast-decisions-2026-11-13),
   including Autumn's exact age, final visual traits, histories,

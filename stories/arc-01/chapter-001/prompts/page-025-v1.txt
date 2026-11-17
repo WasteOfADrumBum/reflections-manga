@@ -1,45 +1,46 @@
 Create ONE finished-looking DRAFT manga page for Reflections, Story 001, "Three Hearts, Different Needs," page 25. Exactly FOUR panels.
 
 REFERENCE ORDER: image 1 = Ethan.
-Attach scene references AFTER these identity sheets. Use the preceding generated page for Ethan's identity/outfit and kitchen design ONLY. CHANGE to the explicitly specified late-night light and seated composition. Morgan is not drawn and needs no reference.
-Original sheets anchor faces, hair, eyes, age and build; earlier pages guide temporary scene state. Do not reproduce sheet labels, pose grids or alternate costumes. Follow the current scene clothes below even if a reference or earlier-day page shows another outfit.
+Attach identity sheets FIRST, then scene references. Use new page 024 for kitchen and page 023 for Ethan's sage henley. CHANGE to late NIGHT; do not copy daylight.
+Original sheets anchor faces, hair, eyes, ages and builds; prior pages guide scene state. Current scene clothes override a sheet's different outfit. Do not reproduce reference labels, pose grids, extra cast or earlier rendering errors.
 
-PAGE PLOT: Alone late at night, Ethan admits that following Morgan can feel like relief.
+PAGE PLOT: In the quiet house that night, Ethan realizes he feels guilty even when nobody is asking anything of him.
 Direction only: DO NOT print this summary inside the image.
 
-FORMAT/STYLE: Portrait 1024 x 1536 (2:3), English LEFT TO RIGHT then TOP TO BOTTOM, white gutters and safe margins. Match the contemporary Japanese seinen-inspired manga: clean expressive linework, semi-realistic adult proportions, subtle cel shading, muted natural FULL COLOR. Time-specific lighting below overrides prior-page light. No panel numbers, page labels, watermark or extra title. Working draft settings, not a print specification.
+FORMAT/STYLE: Portrait 1024 x 1536 (2:3), English LEFT TO RIGHT then TOP TO BOTTOM. White gutters and safe margins. Contemporary Japanese seinen-inspired manga, clean expressive linework, semi-realistic mature adult proportions, subtle cel shading, muted natural FULL COLOR and cinematic shot changes. Time-specific lighting overrides prior-page light. No panel numbers, page labels, watermark or extra title. Working draft settings, not a print specification.
 
-VISIBLE CAST: Only Ethan. No children, relatives, passersby, photo faces or extra people in reflections. Ethan thinks about absent people; do NOT illustrate them in flashbacks, thought bubbles, portraits or silhouettes.
+VISIBLE CAST: Only Ethan; only where panels specify. No children, relatives, passersby, silhouettes, photo faces or extra reflection figures. Mentioned people are not drawn.
 
-Ethan Walker: adult 38, 178 cm, brown textured high-fade haircut, full connected brown beard, brown eyes. Realistic dad bod with softly rounded middle, natural strong arms and ordinary adult proportions. Preserve the actual identity sheet, not a slim superhero variation. No new ring, permanent marks or identity changes.
-OUTFIT: DAY ONE/NIGHT ONE: unchanged dark-sage/olive SHORT-SLEEVE three-button henley, dark jeans, dark casual boots if visible. On night pages 25–27 use waist-up framing; keep footwear outside the crop.
+Ethan Walker: 38, 178 cm, brown textured high-fade hair, full connected brown beard, brown eyes. Realistic soft rounded DAD BOD, natural strong arms, ordinary adult proportions. Do not slim him into a superhero, add a ring, permanent marking or new accessory.
+OUTFIT: Unchanged dark-sage/olive SHORT-SLEEVE three-button henley, dark jeans, casual dark boots if visible. Night scenes crop waist-up; no footwear change specified.
 
-SETTING AND TIME: Later that night, same kitchen table. The rest of the day is elided; no outing destination or off-page incident is asserted. Only Ethan is shown. Three clean empty mugs sit on the table.
-Keep the existing cream walls, light wood table/counter, kitchen window, adjoining coat/shoe nook, gray-cushioned bench, coat hooks and round stool. No different house, named venue, exact date or work/school schedule.
+SETTING AND TIME: Later THAT NIGHT, same kitchen table. The intervening day is elided; no outing, crisis, schedule or sleeping arrangement asserted. Ethan alone, seated waist-up. Sewing tin, fabric, book and notebook put away off-page; room not redesigned.
+Keep the existing cream walls, light wood table/counter, kitchen window, adjoining coat/shoe nook, gray-cushioned wood bench, coat hooks and low round stool. No different house, named location, date, work/school schedule or sleeping layout. Ethan is married to both women. Morgan and Ruby are PLATONIC best friends and coparents, with no romantic pairing between them. All three children regard all three adults as parents and stay nearby off-page, never responsible for adult feelings.
 
-NIGHT: Dark window, subdued warm kitchen lighting. Exactly THREE clean EMPTY mugs: cream front nearest Ethan, charcoal behind-left, dusty rose behind-right. Keep positions unchanged. Hands may loosely surround the cream mug while it RESTS on the table; no stale-coffee drinking, extra cup, photo or ghost. Nobody else is drawn.
+NIGHT CONTINUITY: Dark window, low warm light, no daylight. First-day clothes, waist-up crops. Exactly THREE clean EMPTY mugs: cream front nearest Ethan, charcoal behind-left, dusty rose behind-right. Fixed positions; no stale-coffee drinking. Morgan adds one separate whiskey glass on 026 and takes it away on 027. No absent-person flashbacks, alternate selves, photos or reflection figures.
 
-LAYOUT: Wide establishing top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+LAYOUT: Wide establishing top panel; two middle-row panels; spacious wide bottom panel. Exactly FOUR panels.
 
-PANEL 1: Wide quiet kitchen view. Ethan sits alone at the wooden table in the same sage henley and dark jeans, framed from the waist up so footwear is outside the crop. The window is dark; subdued warm kitchen lighting replaces daylight. Exactly three clean EMPTY mugs sit on the table: cream nearest Ethan, charcoal behind-left, dusty rose behind-right. No people in reflections, photos, or silhouettes.
-Emotional direction: A clear time change creates private space without showing a new crisis or household sleeping arrangement.
+PANEL 1: Wide table view, Ethan alone, dark window. Exactly three clean EMPTY mugs: cream nearest him, charcoal behind-left, dusty rose behind-right. Warm low light, waist-up framing.
+Emotional direction: Ordinary tasks ended; no invented off-page crisis.
 Exact lettering, reading order:
 TIME CAPTION, no speech tail: "Later that night."
+Ethan INTERNAL CAPTION, no speech tail: "The chairs got moved. The morning passed. Nothing terrible happened."
 
-PANEL 2: Close shot of Ethan's relaxed hands around the cream mug while it remains resting on the table, not lifted to drink. The other two empty mugs retain their background positions.
-Emotional direction: He can acknowledge a genuine pleasure rather than treating every role as false.
+PANEL 2: Close on Ethan's face, a trace of fondness, no resentment. Mugs unchanged; no absent-person imagery.
+Emotional direction: Brief context clarifies the platonic pairing.
 Exact lettering, reading order:
-Ethan INTERNAL CAPTION, no speech tail: "With Morgan, I can stop steering for a while."
+Ethan INTERNAL CAPTION, no speech tail: "Morgan and Ruby are best friends, not lovers."
 
-PANEL 3: Medium side view of Ethan, a small genuine smile at the thought. Preserve his face and soft midsection; keep the room and three mugs unchanged.
-Emotional direction: Following someone he trusts can be relief.
+PANEL 3: Medium side view, hand beside his cream mug without lifting it. An empty seat remains visible.
+Emotional direction: He recognizes relationships and lives that need no constant supervision.
 Exact lettering, reading order:
-Ethan INTERNAL CAPTION, no speech tail: "I like that."
+Ethan INTERNAL CAPTION, no speech tail: "They don't need me in every conversation. Our kids don't need me every second."
 
-PANEL 4: Medium frontal view, Ethan's smile settling into a searching expression. His hands remain lightly at the cream mug; the two other mugs are quiet ordinary objects, not literal stand-ins that acquire faces.
-Emotional direction: Enjoyment and uncertainty coexist; he has not reached the later realization yet.
+PANEL 4: Wide quiet view, generous space around Ethan. He listens to the stillness, hand beginning to close around the mug handle; mug stays on the table.
+Emotional direction: His own fear of uselessness, not actual rejection.
 Exact lettering, reading order:
-Ethan INTERNAL CAPTION, no speech tail: "So why does it feel like I'm always getting it wrong?"
+Ethan INTERNAL CAPTION, no speech tail: "So why do I feel guilty the moment the house goes quiet?"
 
-ENDING: He enjoys this part of himself; page 026 considers the different pleasure he finds with Ruby.
-Ending direction is not printed text. Render ONLY the quoted lettering in its assigned panels, without speaker labels. Thoughts and time transitions use distinct quiet rectangular captions, never speech balloons. Give actual speech clear tails to the right person and preserve the listed LEFT-TO-RIGHT order. Keep faces and key actions unobscured, preserve silent panels, and draw natural hands. No added dialogue/SFX, plot-summary text, jealousy, threat, dramatic tears, split faces, literal alternate selves or complete instant reconciliation. Touch is familiar, welcome and non-explicit; both adults retain agency.
+ENDING: The quiet triggers his unease. Morgan joins in 026, not summoned by an emergency.
+Ending guidance is not printed text. Letter ONLY the exact quoted text assigned to each panel. Never print plot summaries, cast names, emotional directions, panel labels or ending guidance. Speech balloons have clear tails to their speakers and follow the listed LEFT-TO-RIGHT order. Ethan INTERNAL CAPTIONS use quiet rectangular boxes WITHOUT tails; they are his subjective thoughts, not objective diagnoses or access to another person's mind. TIME CAPTIONS use separate small neutral boxes. No other narrator voice or unassigned thoughts. Plan lettering before art: no more than 30 words per panel, at most three short text units, roughly one quarter of the panel for lettering. Keep normal legible type, faces/hands visible and generous breathing room; never shrink lettering to fit. Preserve silent panels. No extra dialogue, SFX, jealousy effects, threats, dramatic tears, hallucinations, split faces, total-disclosure demand or instant reconciliation. Adults retain agency; touch is familiar, welcome and non-explicit.

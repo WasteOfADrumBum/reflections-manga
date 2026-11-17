@@ -1,8 +1,9 @@
 # Three Hearts, Different Needs: Chapter Script
 
 Status: DRAFT v1 for review, 2026-11-13.
-Scope: Story 001 / proposed Chapter 001, pages 001–030 drafted. One hundred twenty-five panels.
-Batch panels: 001–004 = 18; 005–010 = 26; 011–020 = 41; 021–030 = 40.
+Scope: Story 001 / proposed Chapter 001, pages 001–030 drafted. 131 panels.
+Revision: 2026-11-17, pages 021–030 only; pages 001–020 locked.
+Batch panels: 001–004 = 18; 005–010 = 26; 011–020 = 41; 021–030 = 46.
 Pages 031–032 remain outlined, not scripted. User-generated working images for
 pages 001–010 are registered in [the page inventory](pages/index.md). This session
 creates writing, summaries, and prompts, not new artwork or final chapter approval.
@@ -993,459 +994,573 @@ Proposed layout: Wide top panel; two middle-row panels; wide bottom panel. Exact
 
 End-of-page hook: End before Ruby speaks. Page 021 can begin with her noticing his tiredness, as in the existing outline.
 
-## Scene 07: Both of Them See Something
+## Scene 07: Company Mistaken for Work
 
-Time: First morning, continuing from page 020; the Morgan exchange is a little later.
-Location: Existing kitchen, table and nook. Only the specified adult pair is drawn.
-Focus: Both women notice Ethan's strain. Care and deflection coexist; no jealousy
-or villain is introduced. Morgan's profanity is delivered dryly, without contempt.
+First morning, continuing page 020. Same home, outfits and prop states.
 
-### Page 021 — What She Notices
+### Page 021 — The Husband Who Came Back
 
-Plot summary: Ruby notices Ethan's tiredness, but he insists he is fine.
+Plot summary: Ruby asks for her husband, while Ethan privately turns their chosen family life into a test of his usefulness.
 Visible cast across this page: Ethan, Ruby.
-Time/location: Same morning and kitchen table, immediately after scripted page 020. Ethan has returned empty-handed; Ruby is by the table. No major time jump or departure.
-Proposed layout: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+Time/location: Same first morning, immediately after page 020: Ethan returns EMPTY-HANDED to Ruby at the kitchen table. No time jump or repeated chair task.
+Proposed layout: Wide top panel; two middle-row panels; generous wide bottom panel. Exactly FOUR panels.
 
 #### Panel 021.1
 
-- Visual: Medium-wide kitchen two-shot. Ethan has just reached Ruby at the table. She looks up with calm concern, reading his face rather than pointing at the bag or chairs. The plain cream mug and small preparation notebook stay on the table. Morgan and the children are outside the framing.
-- Emotional beat: Her attention is on him, not on extracting more help.
+- Visual: Medium-wide kitchen two-shot. Ethan reaches Ruby at the table. His cream mug and her small preparation notebook remain where page 020 left them. She studies his face rather than the packed bag.
+- Emotional beat: Continue the exact unfinished encounter.
 - Exact lettering, reading order:
-  1. `P021.1.D01` — Ruby: "You seem tired."
+  1. `P021.1.DR01` — Ruby: "You seem tired."
+  2. `P021.1.DR02` — Ethan: "I'm fine."
 - Other lettering/SFX: None.
 
 #### Panel 021.2
 
-- Visual: Closer view of Ethan giving Ruby a small practiced smile. His hands are relaxed but his shoulders have not quite settled; preserve his ordinary soft dad-bod proportions, without exaggerated exhaustion or tears.
-- Emotional beat: He tries to reassure her before saying anything about his own needs.
+- Visual: Closer two-shot. Ruby holds his gaze; his practiced smile stays a moment too long. Leave clear space for the caption.
+- Emotional beat: Make the marriage legible through first-person context.
 - Exact lettering, reading order:
-  1. `P021.2.D01` — Ethan: "I'm fine."
+  1. `P021.2.DR01` — Ruby: "You always say that."
+  2. `P021.2.TR01` — Ethan, internal caption: "Ruby is my wife. Morgan is too."
 - Other lettering/SFX: None.
 
 #### Panel 021.3
 
-- Visual: Close-up of Ruby holding his gaze. Her expression is thoughtful and unconvinced, not frightened, angry, or helpless. Give this pause its own quiet space.
-- Emotional beat: She notices the gap between his reassuring words and his tiredness.
-- Lettering: SILENT — no speech, thoughts, narration, or SFX.
+- Visual: Ruby draws out the empty chair beside her at the table, inviting Ethan to sit. His mug stays on the table.
+- Emotional beat: She wants companionship, not another task.
+- Exact lettering, reading order:
+  1. `P021.3.DR01` — Ruby: "I wanted my husband for a minute. The chairs can survive without you."
+- Other lettering/SFX: None.
 
 #### Panel 021.4
 
-- Visual: Medium two-shot, with Ruby's expression still gentle and Ethan's smile beginning to falter. The table and untouched preparation notebook keep the same geography.
-- Emotional beat: The repeated answer has become recognizable to someone who loves him.
+- Visual: Wider table view. Ethan sits in the offered chair. They share an affectionate smile; his hands settle empty on the table.
+- Emotional beat: His love is real; his tension concerns deserving it.
 - Exact lettering, reading order:
-  1. `P021.4.D01` — Ruby: "You always say that."
+  1. `P021.4.DR01` — Ethan: "You've got me, Babe."
+  2. `P021.4.TR01` — Ethan, internal caption: "Two wives. One family. A life I chose. Why does sitting down feel like neglecting something?"
 - Other lettering/SFX: None.
 
-End-of-page hook: Ruby recognizes his familiar deflection; page 022 makes clear that she wanted connection rather than another task.
+End-of-page hook: Ruby has his attention but not the truth of his tiredness. Page 022 gives her a specific desire of her own.
 
-### Page 022 — A Minute With Him
+### Page 022 — What She Actually Asked For
 
-Plot summary: Ruby invites Ethan to share more, and he keeps his answer small.
+Plot summary: Ruby shares her wish for creative time and unhurried closeness; Ethan catches himself trying to solve her instead of hearing her.
 Visible cast across this page: Ethan, Ruby.
-Time/location: Same kitchen table, seconds after page 021. Cream mug remains on the table, already sipped on page 011; do not reset it to a newly served cup.
-Proposed layout: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+Time/location: Seconds after 021, same table and seats. Ruby brings her own dusty-rose coffee mug and a plain bookmarked paperback from the adjacent counter in panel 1. Newly introduced scene props, not retroactive earlier-page changes. The preparation notebook is NOT her private journal.
+Proposed layout: Wide top panel; two middle-row panels; two full-width lower panels, last panel spacious. Exactly FIVE panels.
 
 #### Panel 022.1
 
-- Visual: Medium two-shot. Ruby rests her hands naturally near the notebook rather than gesturing for Ethan to perform a task. Ethan stands or sits comfortably across the table corner at an ordinary conversational angle.
-- Emotional beat: Her original request was for time and honest connection with him.
+- Visual: Ruby sets her dusty-rose mug and bookmarked paperback on her side of the table, separate from Ethan's cream mug and the preparation notebook. Both seated; cover has no readable title or pictured people.
+- Emotional beat: Reading and coffee belong to her own life; ordinary parenting humor.
 - Exact lettering, reading order:
-  1. `P022.1.D01` — Ruby: "I wanted to know how you're doing."
+  1. `P022.1.DR01` — Ruby: "I read the same paragraph three times this morning."
+  2. `P022.1.DR02` — Ethan: "Bad book?"
+  3. `P022.1.DR03` — Ruby: "Three kids."
 - Other lettering/SFX: None.
 
 #### Panel 022.2
 
-- Visual: Closer view of Ethan glancing toward the familiar nook, then back at Ruby. He gives a small shrug, neither accusing the household nor inventing a crisis.
-- Emotional beat: He reduces the larger feeling to a manageable explanation.
+- Visual: Close on Ruby, hand resting on the book, looking toward Ethan.
+- Emotional beat: She has interests beyond keeping everyone comfortable.
 - Exact lettering, reading order:
-  1. `P022.2.D01` — Ethan: "Just a busy morning."
+  1. `P022.2.DR01` — Ruby: "I miss making things that don't have to be useful."
 - Other lettering/SFX: None.
 
 #### Panel 022.3
 
-- Visual: Medium close view of Ruby giving him space to answer. Her posture is open; she does not hold him in place or demand access to every private thought.
-- Emotional beat: An invitation to share, not an obligation to surrender privacy.
+- Visual: Medium two-shot. Ethan leans in with a practical suggestion; Ruby answers warmly without abandoning her meaning.
+- Emotional beat: His sincere care still misses part of the request.
 - Exact lettering, reading order:
-  1. `P022.3.D01` — Ruby: "If there's more, you can tell me."
+  1. `P022.3.DR01` — Ethan: "We could make room for your sewing."
+  2. `P022.3.DR02` — Ruby: "I'd like that. But that's not all I meant."
 - Other lettering/SFX: None.
 
 #### Panel 022.4
 
-- Visual: Medium two-shot. Ethan's attempt at a light smile meets Ruby's steady, affectionate gaze. Neither reaches a resolution; keep the room warm and ordinary.
-- Emotional beat: He assumes his needs must be dramatic to deserve speaking aloud; she gently offers another possibility.
+- Visual: Close on Ruby meeting his eyes steadily, not pleading. Book, coffee and notebook untouched.
+- Emotional beat: She names a relational need directly.
 - Exact lettering, reading order:
-  1. `P022.4.D01` — Ethan: "Nothing dramatic."
-  2. `P022.4.D02` — Ruby: "It doesn't have to be."
+  1. `P022.4.DR01` — Ruby: "I want time with you that isn't about getting through a list."
 - Other lettering/SFX: None.
 
-End-of-page hook: Her invitation stays open, but he has not explained the pressure he feels; Morgan later notices the same strain.
+#### Panel 022.5
 
-### Page 023 — Morgan's Version
+- Visual: Quiet two-shot. Ethan offers his open hand on the table; Ruby rests hers in it by choice. He meets her eyes while his free hand still presses against the table.
+- Emotional beat: Connection and performance anxiety coexist.
+- Exact lettering, reading order:
+  1. `P022.5.DR01` — Ethan: "I am listening."
+  2. `P022.5.TR01` — Ethan, internal caption: "She asked for me. I'm already searching for the right answer."
+- Other lettering/SFX: None.
 
-Plot summary: Morgan bluntly challenges Ethan's claim that nothing is wrong.
+End-of-page hook: Warm contact and an unanswered need coexist. Page 023 shifts to Morgan a little later, without restarting this exchange.
+
+### Page 023 — The Truck Can Wait
+
+Plot summary: Morgan sets aside her truck plans and lets Ethan see that her practical requests sometimes conceal a wish for his company.
 Visible cast across this page: Ethan, Morgan.
-Time/location: A little later that same morning, kitchen/nook threshold. Ruby and children are elsewhere nearby outside the crop. The two folded gray chairs remain by the closed entry door; no new chair task.
-Proposed layout: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+Time/location: A little later that first morning, kitchen/nook threshold. The Ruby conversation paused without a promised solution. Ruby and children nearby off-page. Morgan holds her own unbranded vehicle keys; no repair or departure occurs.
+Proposed layout: Wide top panel; two middle-row panels; two full-width lower panels. Exactly FIVE panels.
 
 #### Panel 023.1
 
-- Visual: Medium-wide two-shot. Morgan stands beside the gray-cushioned nook bench and studies Ethan as he comes from the kitchen, empty-handed. Her olive overshirt and his sage henley are unchanged. She looks concerned beneath a direct raised eyebrow.
-- Emotional beat: A different communication style notices the same person and strain.
+- Visual: Eye-level medium-wide nook two-shot. Morgan holds vehicle keys loosely, noticing Ethan coming from the kitchen. Concern beneath a raised eyebrow.
+- Emotional beat: She notices him independently, not briefed by Ruby.
 - Exact lettering, reading order:
-  1. `P023.1.D01` — Morgan: "What's wrong with you today?"
+  1. `P023.1.DR01` — Morgan: "What's wrong with you today?"
+  2. `P023.1.DR02` — Ethan: "Nothing."
 - Other lettering/SFX: None.
 
 #### Panel 023.2
 
-- Visual: Closer view of Ethan looking aside with a small dismissive shrug. His expression is guarded rather than hostile toward Morgan.
-- Emotional beat: The automatic deflection carries across both relationships.
+- Visual: Close on Morgan, affectionate skepticism, no looming angle or pointing.
+- Emotional beat: Blunt familiarity, low volume, no contempt.
 - Exact lettering, reading order:
-  1. `P023.2.D01` — Ethan: "Nothing."
+  1. `P023.2.DR01` — Morgan: "Bullshit. You haven't stopped moving."
 - Other lettering/SFX: None.
 
 #### Panel 023.3
 
-- Visual: Close-up of Morgan with one eyebrow raised, voice dry and low. No yelling, pointing in his face, looming camera, sneer, or threatening gesture.
-- Emotional beat: Her direct refusal to accept the stock answer is grounded in familiarity and concern.
+- Visual: Medium two-shot. Ethan nods at her keys with attempted humor; she does not hand them over.
+- Emotional beat: He turns even concern into the next job.
 - Exact lettering, reading order:
-  1. `P023.3.D01` — Morgan: "Bullshit."
+  1. `P023.3.DR01` — Ethan: "I'll help with the truck in a minute, Hun."
+  2. `P023.3.DR02` — Morgan: "I wasn't asking about the truck."
 - Other lettering/SFX: None.
 
 #### Panel 023.4
 
-- Visual: Medium two-shot. Ethan tries a faint joking smile; Morgan answers with a small affectionate smirk rather than escalating. Keep both on equal physical footing.
-- Emotional beat: Their humor remains alive even as she refuses the easy answer.
+- Visual: Morgan sets the keys on the nook bench and faces Ethan with both hands free. Tote and bottle stay untouched.
+- Emotional beat: The practical spouse risks an admission of her own.
 - Exact lettering, reading order:
-  1. `P023.4.D01` — Ethan: "Subtle, Hun."
-  2. `P023.4.D02` — Morgan: "Wasn't trying to be."
+  1. `P023.4.DR01` — Morgan: "I can ask for a hand all day. Asking you to stay is harder."
 - Other lettering/SFX: None.
 
-End-of-page hook: Her bluntness is familiar care, not contempt; page 024 gives Ethan room for a small honest answer.
+#### Panel 023.5
 
-### Page 024 — A Smaller Truth
+- Visual: Ethan looks directly at her, not the keys. Morgan lightly touches his upper arm; he leans into the familiar contact. No restraint.
+- Emotional beat: Tenderness and his authentic pleasure in trusting her.
+- Exact lettering, reading order:
+  1. `P023.5.DR01` — Ethan: "I'm tired, Morgan."
+  2. `P023.5.DR02` — Morgan: "You can tell me that."
+  3. `P023.5.TR01` — Ethan, internal caption: "Letting her lead is easy. Letting her see me struggling isn't."
+- Other lettering/SFX: None.
 
-Plot summary: Ethan admits he is tired, and Morgan makes room for honesty.
-Visible cast across this page: Ethan, Morgan.
-Time/location: Same nook threshold, continuous with page 023. No other family members visible, no new props or altered clothing.
-Proposed layout: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+End-of-page hook: He admits tiredness, not yet what he needs. Page 024 gives the women a private scene.
+
+## Scene 08: Their Own Conversation
+
+First morning, a little later; Ethan absent. Morgan and Ruby remain platonic friends.
+
+### Page 024 — A Friendship of Their Own
+
+Plot summary: Alone together, Morgan and Ruby admit how they hide their own wishes, then return to the easy give-and-take of their friendship.
+Visible cast across this page: Morgan, Ruby.
+Time/location: A little later that first morning, kitchen table. Ethan is elsewhere off-page, NOT listening in; children outside the framing. Ruby brings a small CLOSED sewing tin and one loose fabric scrap to the table. Not the packed lunchbox; no loose needles/scissors. Morgan's keys remain on the nook bench.
+Proposed layout: Wide top panel; two middle-row panels; two full-width lower panels; last panel SILENT. Exactly FIVE panels.
 
 #### Panel 024.1
 
-- Visual: Medium two-shot. Morgan's smirk settles into a softer expression; her arms rest comfortably at her sides, leaving Ethan space. He looks back at her.
-- Emotional beat: The person who leads him can also make room for his vulnerability.
+- Visual: Morgan stands at the table; Ruby sets down her closed sewing tin and fabric beside her existing book and dusty-rose mug. Easy shared grin.
+- Emotional beat: Their craft/furniture interests form an ordinary shared project.
 - Exact lettering, reading order:
-  1. `P024.1.D01` — Morgan: "You don't have to give me the polished version."
+  1. `P024.1.DR01` — Morgan: "I'll finish sanding that little cabinet."
+  2. `P024.1.DR02` — Ruby: "Leave room for my sewing tin."
+  3. `P024.1.DR03` — Morgan: "Then you're helping pick the finish."
 - Other lettering/SFX: None.
 
 #### Panel 024.2
 
-- Visual: Closer view of Ethan releasing a small breath, shoulders lowering slightly. This is a partial honest answer, not a disclosure of the whole identity conflict.
-- Emotional beat: He names tiredness without yet asking for time or care.
+- Visual: Closer on Ruby smoothing the fabric scrap, expression becoming thoughtful. Morgan listens without reaching for her.
+- Emotional beat: Ruby can be disappointed and speak for herself.
 - Exact lettering, reading order:
-  1. `P024.2.D01` — Ethan: "Just tired."
+  1. `P024.2.DR01` — Ruby: "I thought getting him alone would make it easier to talk."
 - Other lettering/SFX: None.
 
 #### Panel 024.3
 
-- Visual: Medium two-shot. Ethan starts to rebuild his reassuring smile. Morgan lightly rests a hand on his upper arm in a familiar, welcome gesture, not restraining him.
-- Emotional beat: She offers care while he still treats fatigue as something he must fix alone.
+- Visual: Medium two-shot across a table corner. Morgan rests her hands on the tabletop; Ruby looks up.
+- Emotional beat: Recognize different habits without assigning all responsibility to Ethan.
 - Exact lettering, reading order:
-  1. `P024.3.D01` — Ethan: "I'll shake it off."
-  2. `P024.3.D02` — Morgan: "You don't have to."
+  1. `P024.3.DR01` — Morgan: "I keep handing him things when I mean 'stay here.'"
+  2. `P024.3.DR02` — Ruby: "I keep saying 'it's okay' before I've said what I want."
 - Other lettering/SFX: None.
 
 #### Panel 024.4
 
-- Visual: Wider view of the same pair, Morgan's hand now resting back at her side. She looks toward him with a small, sincere smile; he nods. No promise of a complete conversation or change is implied.
-- Emotional beat: Support is available, even though he has not yet explained what he needs.
+- Visual: Equal-eye-level close two-shot. Morgan's concern is direct; Ruby answers with gentle firmness and a small wry smile.
+- Emotional beat: Friends can care and set boundaries; no plan to manage Ethan.
 - Exact lettering, reading order:
-  1. `P024.4.D01` — Morgan: "Come find me later."
-  2. `P024.4.D02` — Ethan: "Yeah."
+  1. `P024.4.DR01` — Morgan: "I don't want you doing all the waiting."
+  2. `P024.4.DR02` — Ruby: "I don't want you guessing for me, either."
 - Other lettering/SFX: None.
 
-End-of-page hook: He gives only part of the truth; the next scene jumps to that night, when he has a private moment to think.
+#### Panel 024.5
 
-## Scene 08: Three Empty Mugs
+- Visual: Wider view. Ruby holds one edge of the fabric scrap and indicates the opposite corner; Morgan holds that corner steady across the table. Ordinary craft cooperation, no romantic leaning, kiss, hand-clasp or couple framing. Tin stays closed.
+- Emotional beat: A minor correction survives. Their friendship has a life beyond their husband.
+- Lettering/SFX: None. SILENT.
 
-Time: Later that night, explicitly captioned. The rest of the day is elided;
-no outing destination, off-page crisis or new relationship event is asserted.
-Location: Same kitchen table, low warm light and dark window. Ethan only.
-Props: Three clean empty mugs: cream front, charcoal behind-left, dusty rose
-behind-right. They are scene motifs, not assigned canonical favorite possessions.
+End-of-page hook: Their independent friendship survives a small correction. Page 025 explicitly jumps to that night, with no invented daytime event.
 
-### Page 025 — When the House Is Quiet
+## Scene 09: The Unanswered Question
 
-Plot summary: Alone late at night, Ethan admits that following Morgan can feel like relief.
+Explicitly later that night. Same kitchen; first-day outfits; three empty mugs.
+
+### Page 025 — When Nobody Calls
+
+Plot summary: In the quiet house that night, Ethan realizes he feels guilty even when nobody is asking anything of him.
 Visible cast across this page: Ethan.
-Time/location: Later that night, same kitchen table. The rest of the day is elided; no outing destination or off-page incident is asserted. Only Ethan is shown. Three clean empty mugs sit on the table.
-Proposed layout: Wide establishing top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+Time/location: Later THAT NIGHT, same kitchen table. The intervening day is elided; no outing, crisis, schedule or sleeping arrangement asserted. Ethan alone, seated waist-up. Sewing tin, fabric, book and notebook put away off-page; room not redesigned.
+Proposed layout: Wide establishing top panel; two middle-row panels; spacious wide bottom panel. Exactly FOUR panels.
 
 #### Panel 025.1
 
-- Visual: Wide quiet kitchen view. Ethan sits alone at the wooden table in the same sage henley and dark jeans, framed from the waist up so footwear is outside the crop. The window is dark; subdued warm kitchen lighting replaces daylight. Exactly three clean EMPTY mugs sit on the table: cream nearest Ethan, charcoal behind-left, dusty rose behind-right. No people in reflections, photos, or silhouettes.
-- Emotional beat: A clear time change creates private space without showing a new crisis or household sleeping arrangement.
+- Visual: Wide table view, Ethan alone, dark window. Exactly three clean EMPTY mugs: cream nearest him, charcoal behind-left, dusty rose behind-right. Warm low light, waist-up framing.
+- Emotional beat: Ordinary tasks ended; no invented off-page crisis.
 - Exact lettering, reading order:
-  1. `P025.1.N01` — Narration, time caption: "Later that night."
+  1. `P025.1.NR01` — Objective time caption: "Later that night."
+  2. `P025.1.TR01` — Ethan, internal caption: "The chairs got moved. The morning passed. Nothing terrible happened."
 - Other lettering/SFX: None.
 
 #### Panel 025.2
 
-- Visual: Close shot of Ethan's relaxed hands around the cream mug while it remains resting on the table, not lifted to drink. The other two empty mugs retain their background positions.
-- Emotional beat: He can acknowledge a genuine pleasure rather than treating every role as false.
+- Visual: Close on Ethan's face, a trace of fondness, no resentment. Mugs unchanged; no absent-person imagery.
+- Emotional beat: Brief context clarifies the platonic pairing.
 - Exact lettering, reading order:
-  1. `P025.2.T01` — Ethan, internal caption: "With Morgan, I can stop steering for a while."
+  1. `P025.2.TR01` — Ethan, internal caption: "Morgan and Ruby are best friends, not lovers."
 - Other lettering/SFX: None.
 
 #### Panel 025.3
 
-- Visual: Medium side view of Ethan, a small genuine smile at the thought. Preserve his face and soft midsection; keep the room and three mugs unchanged.
-- Emotional beat: Following someone he trusts can be relief.
+- Visual: Medium side view, hand beside his cream mug without lifting it. An empty seat remains visible.
+- Emotional beat: He recognizes relationships and lives that need no constant supervision.
 - Exact lettering, reading order:
-  1. `P025.3.T01` — Ethan, internal caption: "I like that."
+  1. `P025.3.TR01` — Ethan, internal caption: "They don't need me in every conversation. Our kids don't need me every second."
 - Other lettering/SFX: None.
 
 #### Panel 025.4
 
-- Visual: Medium frontal view, Ethan's smile settling into a searching expression. His hands remain lightly at the cream mug; the two other mugs are quiet ordinary objects, not literal stand-ins that acquire faces.
-- Emotional beat: Enjoyment and uncertainty coexist; he has not reached the later realization yet.
+- Visual: Wide quiet view, generous space around Ethan. He listens to the stillness, hand beginning to close around the mug handle; mug stays on the table.
+- Emotional beat: His own fear of uselessness, not actual rejection.
 - Exact lettering, reading order:
-  1. `P025.4.T01` — Ethan, internal caption: "So why does it feel like I'm always getting it wrong?"
+  1. `P025.4.TR01` — Ethan, internal caption: "So why do I feel guilty the moment the house goes quiet?"
 - Other lettering/SFX: None.
 
-End-of-page hook: He enjoys this part of himself; page 026 considers the different pleasure he finds with Ruby.
+End-of-page hook: The quiet triggers his unease. Morgan joins in 026, not summoned by an emergency.
 
-### Page 026 — Another Real Part
+### Page 026 — An Answer for Everyone
 
-Plot summary: Ethan recognizes that caring for Ruby is real, while questioning why he hides his own needs.
-Visible cast across this page: Ethan.
-Time/location: Same kitchen table that night, continuous with page 025. Ethan remains seated with three empty mugs in the same arrangement; no flashbacks or imagined people.
-Proposed layout: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+Plot summary: Morgan joins Ethan for a nightcap, and an ordinary question exposes his inability to name what he needs.
+Visible cast across this page: Ethan, Morgan.
+Time/location: Continuous with 025, late-night table. Morgan enters with ONE small clear lowball glass containing a modest pour of whiskey, sits at Ethan's left. Glass rests beside her, separate from the three EMPTY mugs in unchanged positions. No bottle, brand, intoxication, trauma explanation or children.
+Proposed layout: Wide top panel; two middle-row panels; two full-width lower panels; last holds an unanswered beat. Exactly FIVE panels.
 
 #### Panel 026.1
 
-- Visual: Medium view of Ethan at the table, turned slightly toward the empty place beside him. His expression softens with affection; the cream mug remains nearest his hands and the other mugs behind it. Do not draw Ruby or a memory of her.
-- Emotional beat: He values giving care, not only receiving relief.
+- Visual: Medium-wide. Morgan sets her whiskey glass beside her seat and sits at Ethan's left, mugs untouched. Same first-day clothes, waist-up. A little tired herself, pleased to find him.
+- Emotional beat: An end-of-day pause, not a counseling appointment.
 - Exact lettering, reading order:
-  1. `P026.1.T01` — Ethan, internal caption: "With Ruby, I like being someone she can lean on."
+  1. `P026.1.DR01` — Morgan: "You coming to sit with us?"
 - Other lettering/SFX: None.
 
 #### Panel 026.2
 
-- Visual: Close view of Ethan's hands opening a little around the cream mug, still on the table. Natural fingers, no added ring or identifying accessory.
-- Emotional beat: His care is genuine rather than a performance he hates.
+- Visual: Medium two-shot. Ethan turns; Morgan settles comfortably, glass resting beside her hand.
+- Emotional beat: Familiar humor makes room for awkwardness.
 - Exact lettering, reading order:
-  1. `P026.2.T01` — Ethan, internal caption: "I don't have to pretend to care."
+  1. `P026.2.DR01` — Ethan: "In a minute. Just thinking."
+  2. `P026.2.DR02` — Morgan: "I can see that."
 - Other lettering/SFX: None.
 
 #### Panel 026.3
 
-- Visual: Close-up of Ethan's ordinary face with a small, honest smile and relaxed eyes. Keep the low warm light consistent, without romantic fantasy overlays.
-- Emotional beat: A simple admission of love and authenticity.
+- Visual: Closer two-shot. Ethan risks a question. Morgan answers without mockery or claims to know his private thoughts.
+- Emotional beat: Different relationships do not make him a false person.
 - Exact lettering, reading order:
-  1. `P026.3.T01` — Ethan, internal caption: "I do."
+  1. `P026.3.DR01` — Ethan: "Am I different with you than I am with Ruby?"
+  2. `P026.3.DR02` — Morgan: "Of course. You're married to two different people."
 - Other lettering/SFX: None.
 
 #### Panel 026.4
 
-- Visual: Wider view across the table, leaving some quiet space around Ethan and the three mugs. His expression becomes more thoughtful, not defeated or angry at either absent partner.
-- Emotional beat: The missing part may be his expressed needs, not the truth of his affection.
+- Visual: Ethan looks down at his empty cream mug; Morgan becomes more attentive. Whiskey stays on the table.
+- Emotional beat: Name the pattern, expose the missing self.
 - Exact lettering, reading order:
-  1. `P026.4.T01` — Ethan, internal caption: "So why am I pretending I never need anything?"
+  1. `P026.4.DR01` — Ethan: "I keep trying to be what everybody needs."
+  2. `P026.4.DR02` — Morgan: "And what do you need?"
 - Other lettering/SFX: None.
 
-End-of-page hook: His question shifts from which role is fake to what he keeps out of both relationships.
+#### Panel 026.5
 
-### Page 027 — Both Are Him
+- Visual: Close on Ethan with Morgan soft at the edge. He starts to answer, then cannot. No tears or shock effects; room for the pause.
+- Emotional beat: Solutions for others, no practiced language for himself.
+- Exact lettering, reading order:
+  1. `P026.5.TR01` — Ethan, internal caption: "I can think of an answer for everyone except me."
+- Other lettering/SFX: None.
 
-Plot summary: Ethan recognizes that both relational roles are real parts of him, but his own needs stay hidden.
-Visible cast across this page: Ethan.
-Time/location: Same quiet kitchen table, same night and unchanged three-mug arrangement. No additional cast or flashbacks.
-Proposed layout: Three smaller full-width panels above one larger full-width closing panel. Exactly FOUR panels.
+End-of-page hook: Hold the unanswered question into 027, without diagnosis or manufactured confrontation.
+
+### Page 027 — The Part He Leaves Out
+
+Plot summary: Morgan distinguishes her frustration with guessing from her love for Ethan, leaving him to recognize the needs he hides in both marriages.
+Visible cast across this page: Ethan, Morgan.
+Time/location: Same night, seconds after 026. Same seats, table, clothes, light and three empty mugs. Morgan and her whiskey glass leave only when panel 3 shows her rising. Ethan alone in panels 4–5.
+Proposed layout: Wide top panel; two middle-row panels; two full-width lower panels; last image spacious. Exactly FIVE panels.
 
 #### Panel 027.1
 
-- Visual: Close-up of Ethan looking down thoughtfully, face softly lit. His body is unbroken and ordinary; no split-face, alter-ego, ghost, or mirror effect.
-- Emotional beat: He separates his own identity from a simplistic weak/strong ranking.
+- Visual: Medium two-shot. Morgan sits back, giving space after her question. Ethan has no answer yet.
+- Emotional beat: Curiosity is not a demand for immediate disclosure.
 - Exact lettering, reading order:
-  1. `P027.1.T01` — Ethan, internal caption: "Morgan doesn't make me weak."
+  1. `P027.1.DR01` — Morgan: "You don't have to answer tonight."
 - Other lettering/SFX: None.
 
 #### Panel 027.2
 
-- Visual: Same face and camera axis, expression softening toward understanding. Keep hair, beard, eye color, and night lighting identical.
-- Emotional beat: Strength also belongs to him rather than being conferred by another person.
+- Visual: Equal-eye-level close two-shot. Ethan meets her eyes uncertainly; Morgan answers honestly, no smirk or idealized saintliness.
+- Emotional beat: Her need for communication coexists with affection.
 - Exact lettering, reading order:
-  1. `P027.2.T01` — Ethan, internal caption: "Ruby doesn't make me strong."
+  1. `P027.2.DR01` — Ethan: "Do you ever get tired of me being like this?"
+  2. `P027.2.DR02` — Morgan: "I get tired of guessing. I don't get tired of you."
 - Other lettering/SFX: None.
 
 #### Panel 027.3
 
-- Visual: Medium shot of Ethan's hands relaxing beside the cream mug on the table; charcoal and dusty-rose mugs stay behind it. He is not pushing away or rejecting any cup.
-- Emotional beat: He begins to accept the coexistence of authentic parts.
+- Visual: Morgan rises and lifts her whiskey glass from beside her seat. Free hand briefly touches Ethan's shoulder; she turns toward the adjoining room, not an outside door. He stays seated.
+- Emotional beat: Invitation, not punishment or abandonment.
 - Exact lettering, reading order:
-  1. `P027.3.T01` — Ethan, internal caption: "They're just different parts of me."
+  1. `P027.3.DR01` — Morgan: "Come when you're ready."
 - Other lettering/SFX: None.
 
 #### Panel 027.4
 
-- Visual: Larger quiet frontal panel of Ethan seated at the same table, looking up with a searching, steadier expression. Reserve room for two separate internal captions, in order. No triumphant spotlight or instant resolution.
-- Emotional beat: He recognizes what he has withheld about his needs; the thought does not impose total disclosure or make him solely responsible for every relationship difficulty.
+- Visual: Ethan alone, waist-up, looking toward the adjoining room. Morgan's glass has gone with her. Three empty mugs remain fixed.
+- Emotional beat: Both roles are authentic, not opposing masks.
 - Exact lettering, reading order:
-  1. `P027.4.T01` — Ethan, internal caption: "The problem isn't that they don't know who I am."
-  2. `P027.4.T02` — Ethan, internal caption: "I've never shown either of them everything."
+  1. `P027.4.TR01` — Ethan, internal caption: "Following her is part of me. So is being strong for Ruby."
 - Other lettering/SFX: None.
 
-End-of-page hook: The insight is a beginning; page 028 tests it with one ordinary request the next morning.
+#### Panel 027.5
 
-## Scene 09: Small Requests, Different Answers
+- Visual: Close on Ethan loosening his grip on the cream mug handle. Empty mug stays on the table.
+- Emotional beat: Recognize excluded needs without demanding total disclosure.
+- Exact lettering, reading order:
+  1. `P027.5.TR01` — Ethan, internal caption: "I keep leaving out the part that needs something back."
+- Other lettering/SFX: None.
 
-Time: The next morning, explicitly captioned, then later that same morning.
-Location: Same kitchen, table and counter. Day-two outfit proposals apply.
-Focus: Ethan asks for a short pause before shared work and allows uncertainty
-with Ruby. The full identity conflict is not resolved by these small steps.
+End-of-page hook: Partial insight, not a cure. Page 028 tests one ordinary need.
+
+## Scene 10: A Need, Then a Preference
+
+Explicitly next morning. Temporary day-two outfits, fresh coffee and breakfast bowl.
 
 ### Page 028 — Five Minutes
 
-Plot summary: The next morning, Ethan asks Morgan for five minutes instead of automatically getting up.
+Plot summary: The next morning Ethan asks for five minutes, then waits as though this small need might cost him affection.
 Visible cast across this page: Ethan, Morgan.
-Time/location: The NEXT morning in the same kitchen. A new day, not seconds after the night scene. New temporary day-two outfits are specified; Ethan has a fresh hot drink in the plain cream mug. The other night mugs have been cleared off-page.
-Proposed layout: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+Time/location: The NEXT morning, same kitchen. Night mugs and whiskey glass cleared off-page. Fresh hot coffee in Ethan's cream mug. Morgan at the counter with one plain breakfast mixing bowl. No clock, countdown or family schedule.
+Proposed layout: Wide top panel; two middle-row panels; wide bottom reaction panel. Exactly FOUR panels.
 
 #### Panel 028.1
 
-- Visual: Wide morning kitchen view. Ethan sits at the table with a fresh hot drink in the plain cream mug. He now wears a CHARCOAL LONG-SLEEVE henley and black jeans. Morgan stands at the counter with a plain mixing bowl, in a BURGUNDY T-shirt and dark jeans, no olive overshirt today. Soft daylight returns. No children or Ruby are drawn.
-- Emotional beat: An ordinary new morning is a practical test of his private insight.
+- Visual: Wide daylight kitchen. Ethan seated, fresh coffee, CHARCOAL LONG-SLEEVE henley/black jeans. Morgan at counter by bowl, BURGUNDY T-shirt/dark jeans, no overshirt.
+- Emotional beat: An ordinary request tests last night's insight.
 - Exact lettering, reading order:
-  1. `P028.1.N01` — Narration, time caption: "The next morning."
-  2. `P028.1.D01` — Morgan: "Can you give me a hand with breakfast?"
+  1. `P028.1.NR01` — Objective time caption: "The next morning."
+  2. `P028.1.DR01` — Morgan: "Can you give me a hand with breakfast?"
 - Other lettering/SFX: None.
 
 #### Panel 028.2
 
-- Visual: Closer view of Ethan beginning the familiar movement to stand, one hand shifting away from the mug; he pauses before actually rising. His face is thoughtful rather than annoyed at Morgan.
-- Emotional beat: He notices the automatic answer before giving it.
-- Lettering: SILENT — no speech, thoughts, narration, or SFX.
+- Visual: Close on Ethan starting to rise, hand moving from mug, then stopping before leaving his chair.
+- Emotional beat: Interrupt the automatic yes.
+- Exact lettering, reading order:
+  1. `P028.2.TR01` — Ethan, internal caption: "Say yes. It's easier."
+- Other lettering/SFX: None.
 
 #### Panel 028.3
 
-- Visual: Medium two-shot. Ethan remains seated and looks directly toward Morgan, calm and affectionate rather than defiant. Morgan is turned enough to hear him clearly.
-- Emotional beat: A small, explicit request for his own time, not a refusal of shared work.
+- Visual: Medium two-shot. Still seated, Ethan looks at Morgan, hand beside coffee.
+- Emotional beat: Specific modest need, not refusal of shared work.
 - Exact lettering, reading order:
-  1. `P028.3.D01` — Ethan: "Give me five minutes."
+  1. `P028.3.DR01` — Ethan: "Give me five minutes. I want to finish my coffee."
 - Other lettering/SFX: None.
 
 #### Panel 028.4
 
-- Visual: Close emphasis on Morgan's mild surprised pause, eyebrows lifting slightly. Ethan is visible at the edge, still relaxed with the mug. No anger, punishment, threatening silence or power struggle.
-- Emotional beat: This is new to their morning rhythm; her response is not assumed until the next page.
-- Lettering: SILENT — no speech, thoughts, narration, or SFX.
+- Visual: Close on Morgan's brief surprised pause; Ethan at edge. Neutral face, no anger or ominous shadow.
+- Emotional beat: The feared cost belongs to Ethan's interpretation.
+- Exact lettering, reading order:
+  1. `P028.4.TR01` — Ethan, internal caption: "I wait for it to cost me something."
+- Other lettering/SFX: None.
 
-End-of-page hook: End on Morgan's brief surprise; her simple response arrives on page 029.
+End-of-page hook: Hold his apprehension, not an invented negative response. Page 029 supplies Morgan's answer.
 
-### Page 029 — Room for Him
+### Page 029 — Nothing Breaks
 
-Plot summary: Morgan accepts the pause, and Ethan lets himself enjoy it.
+Plot summary: Morgan accepts his pause and stays affectionate, while Ethan realizes how hard it is to receive care without earning it.
 Visible cast across this page: Ethan, Morgan.
-Time/location: Same second morning, seconds after page 028. Ethan remains at the table with the cream mug; Morgan is at the breakfast counter and mixing bowl. No exact clock time or elapsed five-minute countdown is shown.
-Proposed layout: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+Time/location: Same second morning, continuous with 028. Ethan seated with fresh coffee. Bowl stays safely on counter. Morgan steps briefly to the table and returns to breakfast. The short pause has not elapsed.
+Proposed layout: Wide top panel; two middle-row panels; generous wide bottom panel. Exactly FOUR panels.
 
 #### Panel 029.1
 
-- Visual: Medium two-shot. Morgan's brief surprise resolves into a small, ordinary accepting smile as she looks toward seated Ethan. Their temporary day-two outfits remain unchanged.
-- Emotional beat: His request does not have to become an argument.
+- Visual: Medium two-shot. Morgan's surprise becomes an ordinary accepting smile.
+- Emotional beat: No hidden price or household bargain.
 - Exact lettering, reading order:
-  1. `P029.1.D01` — Morgan: "Okay."
+  1. `P029.1.DR01` — Morgan: "Okay."
 - Other lettering/SFX: None.
 
 #### Panel 029.2
 
-- Visual: Medium view of Morgan turning back to the counter and continuing her own breakfast preparation with the bowl. Ethan remains in the background with his cup. She is not sulking, keeping score, or making a show of doing every household task alone.
-- Emotional beat: They can stay connected while doing different things for a moment.
-- Lettering: SILENT — no speech, thoughts, narration, or SFX.
+- Visual: Morgan steps beside his chair, hands empty, gives a brief welcome kiss at his temple. Ethan tilts toward her, surprised by the warmth. Bowl stays on counter.
+- Emotional beat: She enjoys his company beyond the help.
+- Exact lettering, reading order:
+  1. `P029.2.DR01` — Morgan: "I like you sitting here, you know."
+- Other lettering/SFX: None.
 
 #### Panel 029.3
 
-- Visual: Close-up of Ethan after taking a relaxed sip, lowering the cream mug enough to show his face. He stays seated; his shoulders ease without a triumphant or guilty expression. No new wedding ring on his hand.
-- Emotional beat: He lets a little time belong to him.
-- Lettering: SILENT — no speech, thoughts, narration, or SFX.
+- Visual: Close two-shot as kiss ends. Ethan tries a half-joke; Morgan answers with affection and familiar disbelief.
+- Emotional beat: The joke reveals his fear; her reply stays human.
+- Exact lettering, reading order:
+  1. `P029.3.DR01` — Ethan: "Even when I'm no use?"
+  2. `P029.3.DR02` — Morgan: "You're having coffee, Ethan. You're allowed."
+- Other lettering/SFX: None.
 
 #### Panel 029.4
 
-- Visual: Wide warm kitchen view. Ethan sits comfortably at the table while Morgan works at the counter; both are at ease in the same shared room. Keep this a short pause before helping, not a new arrangement that transfers all work to her.
-- Emotional beat: A small change in behavior, not a completed cure for the whole identity conflict.
+- Visual: Wide daylight kitchen. Morgan back at counter with bowl; Ethan takes a real unhurried sip, easing but not transformed.
+- Emotional beat: A boundary survives, work continues, the reflex persists.
 - Exact lettering, reading order:
-  1. `P029.4.T01` — Ethan, internal caption: "Five minutes."
+  1. `P029.4.TR01` — Ethan, internal caption: "Nothing breaks. I still have to stop myself from getting up."
 - Other lettering/SFX: None.
 
-End-of-page hook: A boundary can be received with care; page 030 brings a different small change to his conversation with Ruby.
+End-of-page hook: The pause is accepted. Before 030 he finishes coffee and helps with breakfast off-page.
 
-### Page 030 — Without Every Answer
+### Page 030 — A Choice of His Own
 
-Plot summary: Ethan tells Ruby he may not have the answer, and she welcomes him anyway.
+Plot summary: After helping with breakfast, Ethan accepts uncertainty with Ruby but discovers that even a simple personal preference is hard to name.
 Visible cast across this page: Ethan, Ruby.
-Time/location: Later that same second morning in the kitchen. The five-minute pause has ended and Ethan has helped with breakfast off-page; he now dries the plain mixing bowl. Ruby joins him in a new temporary pale-lavender cardigan over the ivory knit top. Morgan and children are not drawn.
-Proposed layout: Wide top panel; two middle-row panels; wide bottom panel. Exactly FOUR panels.
+Time/location: Later that second morning. Pause finished; Ethan helped with breakfast off-page and now dries the SAME plain bowl with a neutral towel. Ruby in day-two pale-lavender cardigan over ivory cable-knit V-neck. Her CLOSED private journal is newly introduced on the table, distinct from yesterday's preparation notebook. No readable journal content; no Morgan or children in frame.
+Proposed layout: Wide top panel; two middle-row panels; two full-width lower panels; last generous and quiet. Exactly FIVE panels.
 
 #### Panel 030.1
 
-- Visual: Medium-wide kitchen view. Ethan, in the charcoal long-sleeve henley and black jeans, dries the same plain breakfast mixing bowl with a neutral dish towel. Ruby stands nearby, wearing a PALE-LAVENDER cardigan over her ivory cable-knit V-neck and dark leggings. Her expression is warm and straightforward, not anxious dependence.
-- Emotional beat: The pause has not removed him from shared work; another relationship can make room for his limits too.
+- Visual: Medium-wide. Ethan dries breakfast bowl at counter. Ruby joins him, hand briefly resting on her closed private journal on the table. Daylight and day-two clothes.
+- Emotional beat: Shared work after his pause; journaling remains Ruby's own activity.
 - Exact lettering, reading order:
-  1. `P030.1.D01` — Ruby: "Can I ask you something?"
+  1. `P030.1.DR01` — Ruby: "Can I ask you something?"
 - Other lettering/SFX: None.
 
 #### Panel 030.2
 
-- Visual: Medium close two-shot. Ethan turns his full attention toward Ruby, bowl lowered safely against the counter rather than held awkwardly between them. He has a small, candid smile and no need to perform certainty.
-- Emotional beat: He allows uncertainty to be part of the self he shares.
+- Visual: Ethan lowers bowl safely onto counter and turns fully toward Ruby, towel in one hand.
+- Emotional beat: Shares a limit rather than promises certainty.
 - Exact lettering, reading order:
-  1. `P030.2.D01` — Ethan: "Yeah. But I don't know if I'm going to have the answer."
+  1. `P030.2.DR01` — Ethan: "Yeah. But I don't know if I'll have the answer."
 - Other lettering/SFX: None.
 
 #### Panel 030.3
 
-- Visual: Close-up of Ruby smiling back with gentle confidence, Ethan at the frame edge. No laugh at his expense or suggestion she needs no care of her own.
-- Emotional beat: She asked for his presence, without requiring him to solve every problem.
+- Visual: Close on Ruby, gentle confidence; bowl stays at rest.
+- Emotional beat: She welcomes a person, not an answer-producing role.
 - Exact lettering, reading order:
-  1. `P030.3.D01` — Ruby: "I didn't ask you to."
+  1. `P030.3.DR01` — Ruby: "I didn't ask you to."
+  2. `P030.3.DR02` — Ruby: "When we get a little time together, what would you like to do?"
 - Other lettering/SFX: None.
 
 #### Panel 030.4
 
-- Visual: Medium two-shot with the bowl now resting on the counter and towel laid beside it. Ethan and Ruby face each other, relaxed and attentive, giving the conversation room to begin. No added dialogue, intimate escalation or implied full reconciliation.
-- Emotional beat: The exact topic stays open; the change is his willingness to be present without a guaranteed answer.
-- Lettering: SILENT — no speech, thoughts, narration, or SFX.
+- Visual: Medium two-shot. Ethan makes his usual generous offer; Ruby answers warmly, without deadline or pressure.
+- Emotional beat: Her own wish is to meet his preference.
+- Exact lettering, reading order:
+  1. `P030.4.DR01` — Ethan: "Whatever you want, Babe."
+  2. `P030.4.DR02` — Ruby: "I'd like you to pick."
+- Other lettering/SFX: None.
 
-End-of-page hook: End on willingness to listen without having every answer; pages 031–032 can close with affection and an unresolved identity question.
+#### Panel 030.5
 
-## Pages 021–030: Draft Choices and Review Focus
+- Visual: Spacious two-shot. Ethan lays towel beside dry bowl, hands empty. Ruby waits comfortably, journal closed and unread. He looks searching, not devastated. Include an ordinary empty chair.
+- Emotional beat: The payoff is relational safety; the unresolved hook is self-worth and identity.
+- Exact lettering, reading order:
+  1. `P030.5.TR01` — Ethan, internal caption: "For once, there isn't a right answer. I still look for one."
+- Other lettering/SFX: None.
 
-- This is a prompt/script preparation request. Only images 001–010 are currently
-  registered locally; do not infer that 011–020 were generated or approved from
-  the request for the next pack. No new artwork created in this session.
-- Preserve the outline's exact tiredness exchanges, five realization captions,
-  five-minute request/acceptance, and Ruby's response to not having every answer.
-- Ruby invites connection without demanding total disclosure; Morgan's bluntness
-  is familiar concern, not intimidation. Ethan's partial admission on 024 does
-  not yet express his underlying need for time, care or a less polished self.
-- Explicit time captions separate late night on 025 from the next morning on
-  028. No off-page outing, job/school schedule, date or bedroom arrangement is
-  established by the gap. Never render the night and next morning as continuous.
-- Night 025–027 retains Ethan's sage henley/dark jeans, waist-up framing and
-  three EMPTY mugs. No flashbacks, absent character images or new family photos.
-- Day-two proposals: Ethan charcoal long-sleeve henley/black jeans; Morgan
-  burgundy T-shirt/dark jeans, no overshirt; Ruby pale-lavender cardigan over the
-  existing ivory cable knit, dark leggings/flats. These are temporary choices,
-  not changes to approved appearance or permanent wardrobes. Carry them into
-  the final same-day closing if that timing is retained.
-- The insight on 027 concerns hidden needs and authentic parts of himself;
-  it does not require surrendering privacy or assign him sole responsibility.
-- The five-minute pause on 028–029 precedes helping, not refusing household
-  work. By 030 he has helped with breakfast off-page and is drying the bowl.
-  Ruby's exact question topic stays unselected; no hidden crisis is invented.
-- Final pages 031–032 remain outlined, not scripted or prompted. Their planned
-  affectionate closing must preserve the unresolved identity question.
+End-of-page hook: Lead into the EXISTING outlined 031–032 affectionate close, keeping Morgan/Ruby platonic. Closing theme: SELF-WORTH & IDENTITY. Reserve the user-approved exact closing line "I know how to be needed…" for the actual close on 031–032; DO NOT print it on 030, append an invented completion, add a different closing line, or resolve the identity question. This revision does not shorten the chapter to 30 pages or create 031–032 prompts.
+
+## Pages 021–030: Revised Draft Choices and Review Focus
+
+Revised 2026-11-17: 46 panels / 69 lettering items.
+Revised lettering IDs carry an R marker so old wording is not silently reused.
+Pages 001–020 scene bodies remain unchanged. The user selected the ending theme
+and exact closing line; revised wording/staging/events remain DRAFT.
+
+## Scope and Closing Direction
+
+Pages 001–020 are LOCKED continuity for this revision, as directed by the user.
+Their prompts, script scenes and existing artwork are preserved. The user reports
+having pages through 020; local image inventory/QA is not expanded by that report.
+Only 021–030 receive new story execution. The working chapter remains 32 pages;
+031–032 remain outlined, not newly scripted or prompted here.
+
+The user-approved closing direction is **Self-worth & identity**, with the exact
+closing line **“I know how to be needed…”**. Reserve it for the actual 031–032
+close. The old concept map's alternative closing wording is superseded as ending
+guidance, retained as historical draft material rather than current lettering.
+No invented completion of the approved line is authorized here.
+All new dialogue, panel staging and events remain DRAFT awaiting creative review.
+
+## Reference and Scene Continuity
+
+Generate one page at a time, sequentially. Attach identity sheets in the table's
+order, then scene pages specified inside each prompt. No art generated here.
+
+- 021–022: Ethan → Ruby; continue 020, same morning and clothes.
+- 023: Ethan → Morgan; same morning; keys never become a repair request.
+- 024: Morgan → Ruby ONLY; Ethan absent, no eavesdropping or Ethan narration.
+- 025: Ethan ONLY; explicit late-night cut, three clean empty mugs.
+- 026–027: Ethan → Morgan; same night, separate whiskey glass; she takes it on
+  027. By 027's last two panels Ethan is alone again.
+- 028–029: Ethan → Morgan; explicit NEXT morning, fresh coffee, day-two clothes.
+- 030: Ethan → Ruby; after breakfast help, dry and put down the bowl.
+
+Original sheets are in the stable character folders:
+[Ethan](../../../characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png),
+[Morgan](../../../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png),
+[Ruby](../../../characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png).
+Use original sheets and written specifications; a previous rendering error never
+becomes identity canon. Ruby wears her provisional band; Morgan wears no ring;
+Ethan's ring practice stays open.
+
+Ruby's book and own dusty-rose coffee mug enter on 022; CLOSED sewing tin and
+fabric enter on 024. Her CLOSED private journal enters on 030, distinct from the
+preparation notebook. No journal contents shown. Craft/book props are put away
+before 025; mugs cleaned. Morgan's cabinet refinishing and truck interest appear
+in dialogue, without an outdoor repair scene, vehicle design or departure.
+Her one modest whiskey pour is an end-of-day detail, not a cause of conflict.
+
+021–027 retain first-day clothes; night scenes crop waist-up. 028–030 use Ethan's
+charcoal long-sleeve henley/black jeans, Morgan's burgundy T-shirt/dark jeans without
+overshirt, Ruby's pale-lavender cardigan over ivory cable-knit V-neck/dark leggings.
+Carry these into a same-day close if retained. No dates, work/school schedules,
+sleeping layout, new child traits, permanent appearance changes or legal claims.
+
+## Emotional Progression and Review
+
+Ruby wants creative time and unhurried closeness. Morgan finds it easier to ask
+for help than company. Their private friendship includes a small correction
+without rivalry or romance. Ethan hears bids for connection as performance tests,
+cannot name what he needs, then risks a modest five-minute request. Morgan accepts
+it and remains affectionate. Ruby welcomes uncertainty but asks him to choose
+something for himself. Being safe enough to ask has not yet made identity easy
+to name. The last two pages can hold love and that unresolved question together.
+
+All contextual/internal captions belong to Ethan; only time captions are neutral.
+Each panel contains at most three short lettering units and 30 words. Preserve
+readable type, faces, hands, left-to-right order and silent space. Writing checks
+do not establish rendered lettering fit, visual QA, dimensions or approval.
 
 ## Pages 011–020: Draft Choices and Review Focus
 

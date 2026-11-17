@@ -47,3 +47,16 @@ Future developments remain open; see [arc planning](../../continuity/character-a
 - Handles most daily care for all three children; Rowan's closest parental
   attachment is to Ruby. Caregiving does not remove her own needs or authority.
 - See [relationships](../../continuity/relationships.md) for full context.
+
+## User-Established Domestic Interests: 2026-11-17
+
+The user specified these fictional character facts for the continuation:
+
+- Enjoys morning coffee, reading and journaling.
+- Likes sewing and other crafts.
+- Drives a minivan; make, model, color and design remain open.
+
+Use these selectively through behavior and personal choices, not a checklist.
+Her private journal is her own; these interests authorize no journal contents,
+access by another person or new published source material. The Chapter 001
+021–030 scene execution remains DRAFT; these facts do not approve its events.

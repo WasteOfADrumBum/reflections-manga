@@ -45,15 +45,25 @@ subdivisions remain open.
 | 5–10 | Morgan/Ethan banter and agency; Ruby/Ethan reassurance | Show why he loves this life |
 | 11–15 | Individual Rowan, Avery, and Riley moments | Establish children as people |
 | 16–20 | Two ordinary requests overlap; Ethan hesitates | Make his role-switching pressure visible |
-| 21–24 | Both women independently notice his tiredness; he deflects | Show care alongside incomplete communication |
-| 25–27 | Quiet reflection: neither relational self is fake | Begin self-recognition |
-| 28–30 | Five-minute boundary; permission not to have every answer | Begin change without solving the arc |
+| 21–24 | Both wives seek company; their private friendship exposes indirect requests | Make marriage, personalities and emotional subtext legible |
+| 25–27 | Nighttime guilt; Morgan asks what he needs and he cannot answer | Expose usefulness as a measure of worth |
+| 28–30 | Accepted five-minute boundary; Ruby asks for his own preference | Give relational safety a payoff while identity stays open |
 | 31–32 | Affectionate three-adult closing and identity question | Lead into Story 002, Different Languages |
 
 ## Emotional Arc
 
 Warmth and belonging → private uncertainty → competing needs → recognition
 of authentic parts of himself → tentative boundaries and continued inquiry.
+
+## Selected Continuation Direction: 2026-11-17
+
+The user locked pages 001–020 and requested richer psychological-drama execution
+on 021–030 only. The current [prompt pack](page-prompts-021-030.md) and script
+supersede those page beats in the older concept map; earlier scenes stay intact.
+The user-approved closing theme is **Self-worth & identity**, with the exact
+closing line **“I know how to be needed…”** reserved for the actual 031–032 close.
+Older alternative closing text remains historical draft material. The ending
+direction is selected; new scenes, wording, staging and final art remain DRAFT.
 
 ## Approval and Next Step
 
@@ -73,7 +83,7 @@ banter and shared decisions, and Ruby/Ethan reassurance with an untouched coffee
 bridge. The user has since generated 005–010 and requested ten-page batches.
 Pages 011–020 now add 41 DRAFT panels for the child introductions and overlapping
 requests, with [summaries/reference lists](page-guide.md) and a [ten-page prompt pack](page-prompts-011-020.md).
-Pages 021–030 now have 40 DRAFT panels and a [ten-page prompt pack](page-prompts-021-030.md)
-for independent care from both women, late-night reflection, and next-morning
-small requests. Only 031–032 remain unscripted; the storyboard file is still a scaffold.
+Pages 021–030 now have 46 revised DRAFT panels and a [ten-page prompt pack](page-prompts-021-030.md)
+for clearer marriage context, distinct personalities, private Morgan/Ruby friendship,
+a late-night exchange, and next-morning small requests. Only 031–032 remain unscripted; the storyboard file is still a scaffold.
 No developments enter the canonical timeline or release index from this outline.

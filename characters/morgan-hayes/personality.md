@@ -65,3 +65,16 @@ family history as the complete explanation of her present choices.
 - The firmer disciplinary mother to all three children; Riley's closest parental
   attachment is to Morgan. Firmness does not establish harshness or sole authority.
 - See [relationships](../../continuity/relationships.md) for full context.
+
+## User-Established Domestic Interests: 2026-11-17
+
+The user specified these fictional character facts for the continuation:
+
+- Hands-on interests include working on cars/trucks and refinishing furniture.
+- Drives an extended-cab pickup; make, model, color and design remain open.
+- Enjoys whiskey at the end of a day; no quantity, frequency or alcohol problem
+  is established, and no causal link to her father's history is implied.
+
+Use selectively as interests of a whole person, alongside affection, humor and
+her own emotional needs. Chapter 001 021–030 dialogue, nightcap and other scene
+execution remain DRAFT; these facts do not approve its events.

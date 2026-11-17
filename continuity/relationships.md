@@ -226,3 +226,13 @@ established history. Keep adult romantic and sexual material separate from
 children's scenes and portray children in age-appropriate family contexts.
 All details here concern fictional people; private real-life material is not
 part of this record.
+
+## Chapter 001 Portrayal Direction: 2026-11-17
+
+The user requested clearer reader orientation on pages 021–030: Ethan is husband
+to each woman; Morgan and Ruby remain platonic best friends and coparents, with
+independent interests, needs and private conversations. This restates existing
+family canon. The [revised batch](../stories/arc-01/chapter-001/page-prompts-021-030.md)
+proposes indirect requests for company, a small correction between the women,
+and an accepted pause. These are DRAFT interactions, not established relationship
+events, jealousy, spouse hierarchy, new duties or a completed reconciliation.

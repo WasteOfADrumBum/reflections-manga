@@ -68,9 +68,16 @@ permanent wardrobe or full chapter approval is selected by continuing.
 The user requested the 021–030 pack, now drafted with one-sentence plots and
 ordered references in the quick guide. Review the explicit night/next-morning
 transitions, three empty mugs, partial honesty with both women, five-minute
-pause, and temporary day-two outfits as DRAFT execution. Ruby's new question
-on 030 has no selected topic. The final affectionate two-page close and its
-unresolved identity question remain to be written; no new art approval inferred.
+pause, and temporary day-two outfits as DRAFT execution.
+
+The 2026-11-17 revision selects Ruby's 030 question as Ethan's own preference
+for time together; an activity or schedule is not selected. Review the revised
+021–030 dialogue, craft/book/journal props, private Morgan/Ruby exchange,
+nighttime question/whiskey glass and accepted five-minute pause as DRAFT.
+The user locked 001–020 and selected closing theme **Self-worth & identity**
+and exact closing line **“I know how to be needed…”** for the actual 031–032 close.
+Older concept-map closing wording is superseded as direction, retained as draft.
+The final two pages remain unscripted; no new art approval is inferred.
 
 - Review adapting Story 001 as Chapter 001 in 32 pages; this does not set a
   universal chapter length, final allocation, or completed production stage.
@@ -164,3 +171,11 @@ middle-name/surname field split remains unspecified and need not be inferred.
 - Characters:
 - Current state:
 - Planned resolution:
+
+## Chapter 001 Continuation Review: 2026-11-17
+
+User-established hobbies and vehicles are now in Ruby/Morgan personality records.
+Vehicle designs and precise cabinet/sewing/journal designs remain open. No journal
+contents are authorized. Review the 021–030 execution before canon approval;
+final 031–032 staging, lettering, same-day timing and any teaser remain open.
+Keep the approved closing line exact, without inventing its continuation.

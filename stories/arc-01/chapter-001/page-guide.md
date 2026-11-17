@@ -1,6 +1,9 @@
 # Story 001: Quick Page Guide
 
-Updated: 2026-11-13.
+Updated: 2026-11-17.
+Pages 001–020 are locked for this revision; user reports production through 020.
+Earlier guide rows retain prior recorded image status. New story execution is
+limited to 021–030; no new images generated or inspected.
 Working plan: **32 pages**. User-generated working images: **001–010**.
 Draft script and copyable prompts: **001–030**. Pages **031–032** remain outlined.
 A rendered working page is not the same as a fully approved chapter.
@@ -40,16 +43,16 @@ count; off-panel voices alone do not require an image.
 | [18](prompts/page-018-v1.txt) | Ethan helps Morgan first, and Ruby quietly agrees to wait. | Ethan → Morgan → Ruby | DRAFT script/prompt ready |
 | [19](prompts/page-019-v1.txt) | Ethan realizes Ruby's reassurance still leaves her waiting. | Ethan → Ruby | DRAFT script/prompt ready |
 | [20](prompts/page-020-v1.txt) | Ethan returns to Ruby already preparing to hide how tired he feels. | Ethan → Morgan → Ruby | DRAFT script/prompt ready |
-| [21](prompts/page-021-v1.txt) | Ruby notices Ethan's tiredness, but he insists he is fine. | Ethan → Ruby | DRAFT script/prompt ready |
-| [22](prompts/page-022-v1.txt) | Ruby invites Ethan to share more, and he keeps his answer small. | Ethan → Ruby | DRAFT script/prompt ready |
-| [23](prompts/page-023-v1.txt) | Morgan bluntly challenges Ethan's claim that nothing is wrong. | Ethan → Morgan | DRAFT script/prompt ready |
-| [24](prompts/page-024-v1.txt) | Ethan admits he is tired, and Morgan makes room for honesty. | Ethan → Morgan | DRAFT script/prompt ready |
-| [25](prompts/page-025-v1.txt) | Alone late at night, Ethan admits that following Morgan can feel like relief. | Ethan | DRAFT script/prompt ready |
-| [26](prompts/page-026-v1.txt) | Ethan recognizes that caring for Ruby is real, while questioning why he hides his own needs. | Ethan | DRAFT script/prompt ready |
-| [27](prompts/page-027-v1.txt) | Ethan recognizes that both relational roles are real parts of him, but his own needs stay hidden. | Ethan | DRAFT script/prompt ready |
-| [28](prompts/page-028-v1.txt) | The next morning, Ethan asks Morgan for five minutes instead of automatically getting up. | Ethan → Morgan | DRAFT script/prompt ready |
-| [29](prompts/page-029-v1.txt) | Morgan accepts the pause, and Ethan lets himself enjoy it. | Ethan → Morgan | DRAFT script/prompt ready |
-| [30](prompts/page-030-v1.txt) | Ethan tells Ruby he may not have the answer, and she welcomes him anyway. | Ethan → Ruby | DRAFT script/prompt ready |
+| [21](prompts/page-021-v1.txt) | Ruby asks for her husband, while Ethan privately turns their chosen family life into a test of his usefulness. | Ethan → Ruby | Revised DRAFT prompt, 2026-11-17 |
+| [22](prompts/page-022-v1.txt) | Ruby shares her wish for creative time and unhurried closeness; Ethan catches himself trying to solve her instead of hearing her. | Ethan → Ruby | Revised DRAFT prompt, 2026-11-17 |
+| [23](prompts/page-023-v1.txt) | Morgan sets aside her truck plans and lets Ethan see that her practical requests sometimes conceal a wish for his company. | Ethan → Morgan | Revised DRAFT prompt, 2026-11-17 |
+| [24](prompts/page-024-v1.txt) | Alone together, Morgan and Ruby admit how they hide their own wishes, then return to the easy give-and-take of their friendship. | Morgan → Ruby | Revised DRAFT prompt, 2026-11-17 |
+| [25](prompts/page-025-v1.txt) | In the quiet house that night, Ethan realizes he feels guilty even when nobody is asking anything of him. | Ethan | Revised DRAFT prompt, 2026-11-17 |
+| [26](prompts/page-026-v1.txt) | Morgan joins Ethan for a nightcap, and an ordinary question exposes his inability to name what he needs. | Ethan → Morgan | Revised DRAFT prompt, 2026-11-17 |
+| [27](prompts/page-027-v1.txt) | Morgan distinguishes her frustration with guessing from her love for Ethan, leaving him to recognize the needs he hides in both marriages. | Ethan → Morgan | Revised DRAFT prompt, 2026-11-17 |
+| [28](prompts/page-028-v1.txt) | The next morning Ethan asks for five minutes, then waits as though this small need might cost him affection. | Ethan → Morgan | Revised DRAFT prompt, 2026-11-17 |
+| [29](prompts/page-029-v1.txt) | Morgan accepts his pause and stays affectionate, while Ethan realizes how hard it is to receive care without earning it. | Ethan → Morgan | Revised DRAFT prompt, 2026-11-17 |
+| [30](prompts/page-030-v1.txt) | After helping with breakfast, Ethan accepts uncertainty with Ruby but discovers that even a simple personal preference is hard to name. | Ethan → Ruby | Revised DRAFT prompt, 2026-11-17 |
 
 ## Prompt Packs and Continuity
 
@@ -67,7 +70,9 @@ identity anchors; accepted rendered pages guide clothes, setting, and style.
 
 ## Closing Outline Still to Write
 
-- 031–032: Affectionate closing and the unresolved identity question.
+- 031–032: Affectionate closing; user-approved theme **Self-worth & identity**
+  and exact closing line **“I know how to be needed…”**. Reserve it for that close;
+  older concept-map ending wording is historical draft guidance.
 
 This closing remains an outline direction. The new 021–030 script keeps the
 first-day conversations, later-night reflection, and NEXT-morning boundary
