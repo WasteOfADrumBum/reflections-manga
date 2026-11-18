@@ -1,5 +1,9 @@
 # Story 001: Quick Page Guide
 
+> **Current retelling · November 18, 2026.** Start with the [v2 page guide and 30 prompts](page-guide-v2.md) or read the [v2 script](script-v2.md). The earlier lock on pages 1–20 and the 32-page plan below belong to v1.
+
+## Previous version · v1
+
 Updated: 2026-11-17.
 Pages 001–020 are locked for this revision; user reports production through 020.
 Earlier guide rows retain prior recorded image status. New story execution is
@@ -43,7 +47,7 @@ count; off-panel voices alone do not require an image.
 | [18](prompts/page-018-v1.txt) | Ethan helps Morgan first, and Ruby quietly agrees to wait. | Ethan → Morgan → Ruby | DRAFT script/prompt ready |
 | [19](prompts/page-019-v1.txt) | Ethan realizes Ruby's reassurance still leaves her waiting. | Ethan → Ruby | DRAFT script/prompt ready |
 | [20](prompts/page-020-v1.txt) | Ethan returns to Ruby already preparing to hide how tired he feels. | Ethan → Morgan → Ruby | DRAFT script/prompt ready |
-| [21](prompts/page-021-v1.txt) | Ruby asks for her husband, while Ethan privately turns their chosen family life into a test of his usefulness. | Ethan → Ruby | Revised DRAFT prompt, 2026-11-17 |
+| [21](prompts/page-021-v1.txt) | Ruby gets Ethan to sit with her instead of moving on to another task. | Ethan → Ruby | Revised DRAFT prompt, 2026-11-17 |
 | [22](prompts/page-022-v1.txt) | Ruby shares her wish for creative time and unhurried closeness; Ethan catches himself trying to solve her instead of hearing her. | Ethan → Ruby | Revised DRAFT prompt, 2026-11-17 |
 | [23](prompts/page-023-v1.txt) | Morgan sets aside her truck plans and lets Ethan see that her practical requests sometimes conceal a wish for his company. | Ethan → Morgan | Revised DRAFT prompt, 2026-11-17 |
 | [24](prompts/page-024-v1.txt) | Alone together, Morgan and Ruby admit how they hide their own wishes, then return to the easy give-and-take of their friendship. | Morgan → Ruby | Revised DRAFT prompt, 2026-11-17 |

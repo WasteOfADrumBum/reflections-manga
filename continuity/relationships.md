@@ -154,7 +154,8 @@ The children's form of address for Ethan remains unspecified by the user.
 ## Ring Continuity
 
 - Ruby wears her wedding ring; Morgan does not.
-- Reasons, designs, and Ethan's ring practice remain open.
+- Ruby values her band as a symbol. Morgan questions marriage as an institution. The user suggested a change in ring fit around pregnancy and a later habit as a possible explanation for leaving it off. Reserve discussion for later chapters. Designs and Ethan's ring practice remain open.
+- Children can use Mom or Mommy naturally for either mother. Context and balloon tails identify whom each child addresses.
 - Ring absence does not establish infidelity, lack of love, or separation.
 
 ## Supporting Relationships: 2026-11-13

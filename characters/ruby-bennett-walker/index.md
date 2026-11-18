@@ -67,7 +67,7 @@ friendship with Morgan is meaningful and platonic. Future incidents remain draft
   in together approximately six months later.
 - All three married in a shared same-day ceremony, with Ethan in the middle
   between Morgan and Ruby. Legal recognition remains unspecified.
-- Wears her wedding ring. Ring design remains unestablished.
+- Wears her wedding ring as a meaningful symbol of her commitment. Its design remains open.
 - See [family relationships](../../continuity/relationships.md),
   [timeline](../../continuity/timeline.md), and [arc planning](../../continuity/character-arcs.md).
 

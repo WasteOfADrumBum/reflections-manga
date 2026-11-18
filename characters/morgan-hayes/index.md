@@ -69,7 +69,7 @@ resentment, ring motives, crises, and resolutions remain draft story material.
   and moved in together approximately six months later.
 - All three married in a shared same-day ceremony, with Ethan in the middle
   between Morgan and Ruby. Legal recognition remains unspecified.
-- Does not wear her wedding ring. The reason remains unestablished.
+- Leaves her wedding ring off and questions marriage as an institution. Save that conversation for later chapters. The user suggested finger-size changes around pregnancy followed by habit as a possible practical explanation. Its details remain open.
 - See [family relationships](../../continuity/relationships.md),
   [timeline](../../continuity/timeline.md), and [arc planning](../../continuity/character-arcs.md).
 

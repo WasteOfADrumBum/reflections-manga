@@ -1,5 +1,9 @@
 # Story 001: Pages 011–020 Prompt Pack
 
+> **Current retelling · November 18, 2026.** Start with the [v2 page guide and 30 prompts](page-guide-v2.md) or read the [v2 script](script-v2.md). The earlier lock on pages 1–20 and the 32-page plan below belong to v1.
+
+## Previous version · v1
+
 Status: DRAFT v1, 2026-11-13. Ten-page preparation batch requested by the user.
 Source: [Chapter script](script.md), pages 011–020, 41 panels.
 Working chapter length: 32 pages. Images 001–010 exist; this pack does not

@@ -1,5 +1,7 @@
 # Production Status
 
+**Chapter 001 · November 18, 2026.** The [30-page retelling and generation guide](../stories/arc-01/chapter-001/page-guide-v2.md) is the current writing draft. Earlier Chapter 001 counts and packs below document v1.
+
 Updated: 2026-11-17.
 
 ## Established
@@ -84,9 +86,9 @@ See [approved questionnaire answers](../characters/questionnaire-answers.md),
   is ready, with an [at-a-glance guide](../stories/arc-01/chapter-001/page-guide.md)
   for all thirty prepared pages. The [current 021–030 pack](../stories/arc-01/chapter-001/page-prompts-021-030.md)
   is ready, with first-morning care, late-night reflection and next-morning small
-  requests. The 2026-11-17 revision enriches 021–030 with marriage context,
+  requests. The 2026-11-17 revision enriches 021–030 with natural spouse language,
   character interests, private friendship and a night conversation (46 panels /
-  69 lettering items). The user reports production through 020 and locks 001–020;
+  67 lettering items). The user reports production through 020 and locks 001–020;
   their prompts, script scenes and art are preserved. The prior inventory
   registers 001–010; this writing session does not add image registration/QA.
   The final pack remains 031–032, with selected theme Self-worth & identity and

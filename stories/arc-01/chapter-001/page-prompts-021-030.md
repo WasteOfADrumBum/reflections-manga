@@ -1,13 +1,17 @@
 # Story 001: Pages 021–030 Prompt Pack
 
+> **Current retelling · November 18, 2026.** Start with the [v2 page guide and 30 prompts](page-guide-v2.md) or read the [v2 script](script-v2.md). The earlier lock on pages 1–20 and the 32-page plan below belong to v1.
+
+## Previous version · v1
+
 Status: DRAFT revision, 2026-11-17. Existing v1 filenames retained for in-place editing.
-Source: [Chapter script](script.md), revised pages 021–030: 46 panels / 69 lettering items.
+Source: [Chapter script](script.md), revised pages 021–030: 46 panels / 67 lettering items.
 
 ## Plot, Prompt and Character References
 
 | Page / copyable prompt | One-sentence plot | Character sheets, in order |
 |---|---|---|
-| [21](prompts/page-021-v1.txt) | Ruby asks for her husband, while Ethan privately turns their chosen family life into a test of his usefulness. | Ethan → Ruby |
+| [21](prompts/page-021-v1.txt) | Ruby gets Ethan to sit with her instead of moving on to another task. | Ethan → Ruby |
 | [22](prompts/page-022-v1.txt) | Ruby shares her wish for creative time and unhurried closeness; Ethan catches himself trying to solve her instead of hearing her. | Ethan → Ruby |
 | [23](prompts/page-023-v1.txt) | Morgan sets aside her truck plans and lets Ethan see that her practical requests sometimes conceal a wish for his company. | Ethan → Morgan |
 | [24](prompts/page-024-v1.txt) | Alone together, Morgan and Ruby admit how they hide their own wishes, then return to the easy give-and-take of their friendship. | Morgan → Ruby |
@@ -17,6 +21,15 @@ Source: [Chapter script](script.md), revised pages 021–030: 46 panels / 69 let
 | [28](prompts/page-028-v1.txt) | The next morning Ethan asks for five minutes, then waits as though this small need might cost him affection. | Ethan → Morgan |
 | [29](prompts/page-029-v1.txt) | Morgan accepts his pause and stays affectionate, while Ethan realizes how hard it is to receive care without earning it. | Ethan → Morgan |
 | [30](prompts/page-030-v1.txt) | After helping with breakfast, Ethan accepts uncertainty with Ruby but discovers that even a simple personal preference is hard to name. | Ethan → Ruby |
+
+## Tone Correction: After Page 021 Trial
+
+The user found explanatory relationship captions too direct this far into the
+chapter. Preserve natural spouse language such as “my husband” and “Babe”; reveal
+family relationships through familiar behavior and conversation. Page 021 keeps
+its spoken dialogue and drops both internal captions. Pages 025–026 also avoid
+explaining or counting the pairings. Keep the emotional build gradual, with
+internal thoughts about the moment rather than a biography for the reader.
 
 ## Scope and Closing Direction
 
@@ -94,7 +107,7 @@ REFERENCE ORDER: image 1 = Ethan; image 2 = Ruby.
 Attach identity sheets FIRST, then scene references. Use page 020 for immediate continuity if available; page 010 also anchors kitchen/Ethan/Ruby clothes. Never assume an unattached page exists.
 Original sheets anchor faces, hair, eyes, ages and builds; prior pages guide scene state. Current scene clothes override a sheet's different outfit. Do not reproduce reference labels, pose grids, extra cast or earlier rendering errors.
 
-PAGE PLOT: Ruby asks for her husband, while Ethan privately turns their chosen family life into a test of his usefulness.
+PAGE PLOT: Ruby gets Ethan to sit with her instead of moving on to another task.
 Direction only: DO NOT print this summary inside the image.
 
 FORMAT/STYLE: Portrait 1024 x 1536 (2:3), English LEFT TO RIGHT then TOP TO BOTTOM. White gutters and safe margins. Contemporary Japanese seinen-inspired manga, clean expressive linework, semi-realistic mature adult proportions, subtle cel shading, muted natural FULL COLOR and cinematic shot changes. Time-specific lighting overrides prior-page light. No panel numbers, page labels, watermark or extra title. Working draft settings, not a print specification.
@@ -120,11 +133,10 @@ Exact lettering, reading order:
 Ruby speech balloon: "You seem tired."
 Ethan speech balloon: "I'm fine."
 
-PANEL 2: Closer two-shot. Ruby holds his gaze; his practiced smile stays a moment too long. Leave clear space for the caption.
-Emotional direction: Make the marriage legible through first-person context.
+PANEL 2: Closer two-shot. Ruby holds his gaze; his practiced smile stays a moment too long. Let their expressions carry the pause.
+Emotional direction: She recognizes the familiar answer and gives him a moment.
 Exact lettering, reading order:
 Ruby speech balloon: "You always say that."
-Ethan INTERNAL CAPTION, no speech tail: "Ruby is my wife. Morgan is too."
 
 PANEL 3: Ruby draws out the empty chair beside her at the table, inviting Ethan to sit. His mug stays on the table.
 Emotional direction: She wants companionship, not another task.
@@ -132,10 +144,9 @@ Exact lettering, reading order:
 Ruby speech balloon: "I wanted my husband for a minute. The chairs can survive without you."
 
 PANEL 4: Wider table view. Ethan sits in the offered chair. They share an affectionate smile; his hands settle empty on the table.
-Emotional direction: His love is real; his tension concerns deserving it.
+Emotional direction: He sits slightly forward at first, then begins to settle into her company. Keep the mood ordinary and affectionate.
 Exact lettering, reading order:
 Ethan speech balloon: "You've got me, Babe."
-Ethan INTERNAL CAPTION, no speech tail: "Two wives. One family. A life I chose. Why does sitting down feel like neglecting something?"
 
 ENDING: Ruby has his attention but not the truth of his tiredness. Page 022 gives her a specific desire of her own.
 Ending guidance is not printed text. Letter ONLY the exact quoted text assigned to each panel. Never print plot summaries, cast names, emotional directions, panel labels or ending guidance. Speech balloons have clear tails to their speakers and follow the listed LEFT-TO-RIGHT order. Ethan INTERNAL CAPTIONS use quiet rectangular boxes WITHOUT tails; they are his subjective thoughts, not objective diagnoses or access to another person's mind. TIME CAPTIONS use separate small neutral boxes. No other narrator voice or unassigned thoughts. Plan lettering before art: no more than 30 words per panel, at most three short text units, roughly one quarter of the panel for lettering. Keep normal legible type, faces/hands visible and generous breathing room; never shrink lettering to fit. Preserve silent panels. No extra dialogue, SFX, jealousy effects, threats, dramatic tears, hallucinations, split faces, total-disclosure demand or instant reconciliation. Adults retain agency; touch is familiar, welcome and non-explicit.
@@ -359,9 +370,9 @@ TIME CAPTION, no speech tail: "Later that night."
 Ethan INTERNAL CAPTION, no speech tail: "The chairs got moved. The morning passed. Nothing terrible happened."
 
 PANEL 2: Close on Ethan's face, a trace of fondness, no resentment. Mugs unchanged; no absent-person imagery.
-Emotional direction: Brief context clarifies the platonic pairing.
+Emotional direction: Company is available; he has not quite let himself stop.
 Exact lettering, reading order:
-Ethan INTERNAL CAPTION, no speech tail: "Morgan and Ruby are best friends, not lovers."
+Ethan INTERNAL CAPTION, no speech tail: "I could go and sit with them."
 
 PANEL 3: Medium side view, hand beside his cream mug without lifting it. An empty seat remains visible.
 Emotional direction: He recognizes relationships and lives that need no constant supervision.
@@ -421,7 +432,7 @@ PANEL 3: Closer two-shot. Ethan risks a question. Morgan answers without mockery
 Emotional direction: Different relationships do not make him a false person.
 Exact lettering, reading order:
 Ethan speech balloon: "Am I different with you than I am with Ruby?"
-Morgan speech balloon: "Of course. You're married to two different people."
+Morgan speech balloon: "Sometimes. Why?"
 
 PANEL 4: Ethan looks down at his empty cream mug; Morgan becomes more attentive. Whiskey stays on the table.
 Emotional direction: Name the pattern, expose the missing self.
