@@ -18,18 +18,17 @@ VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, 
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: First morning, kitchen through open back door to porch steps. Phone in Ethan's hand, album stays on cabinet after p2. Ruby's coffee moves table → hands → inside windowsill on p5.
 
-PANEL 1: At the cabinet the children join the adults. Frame the album from its back edge: show the accordion folds and binding, with the print facing the children and out of the reader's view. Rowan and Riley lean shoulder to shoulder over it. Avery edges in beside Ruby. Show the children in the present, no invented baby portraits.
-NARRATION (Narrator): "Ethan and Morgan had Rowan and Riley. He and Ruby had Avery."
+PANEL 1: Wide view at the low cabinet. The three kids come to see the album. Rowan leans comfortably against Ruby's arm. Riley peers past his elbow. Avery spots a folded section she can reach from the other end. Morgan shifts over to give her room. Stay in the present. From behind the album we see its cloth spine and paper folds. The photographs face the children. Ethan is nearby with his phone, outside the frame.
+NARRATION (Narrator): "When Rowan and Riley were born, Ethan held Morgan's hand. When Avery was born, Ruby held his."
 
-PANEL 2: Rowan holds the little album out to Ruby for a closer look at her binding. Riley tries to unfold it farther, eager to see what comes next.
-SPEECH (Rowan): "Mommy, how'd you make the pages do that?"
-SPEECH (Ruby): "It's all one strip of paper. Pull that end."
+PANEL 2: Closer on Rowan and Ruby. Rowan draws out one fold and discovers another tucked behind it. He looks up at Ruby, delighted. She bends beside him with her cheek against his hair for a moment. Show both faces and the join in the paper.
+SPEECH (Rowan): "Mommy, how long does this thing get?"
+SPEECH (Ruby): "Longer than my sewing table. I had to finish it on the floor."
 
-PANEL 3: Avery takes two sideways steps in a silly rhythm. Morgan matches the second one. Avery laughs, then points from herself to the place beside Morgan.
-SPEECH (Avery): "Mom. Here."
-SPEECH (Morgan): "Saving me a spot?"
+PANEL 3: Same album, opposite end. Avery has a finger under the last fold, ready to open it. Rowan reaches across to do it for her. Morgan catches his eye and holds up one open hand. Her voice is quiet and matter-of-fact. Show Avery concentrating on the fold, with room to open it herself.
+SPEECH (Morgan): "Hang on, Rowan. Let Avery have a turn."
 
-PANEL 4: Wide. Riley grins through the album folds like a cat in tall grass. Ruby gently folds it shut and returns it to the cabinet.
-SPEECH (Riley): "Can we do one where we're cats?"
-SPEECH (Ruby): "After one where I can tell who's who."
+PANEL 4: One continuous wide shot. Avery has opened the fold herself and uncovered the empty pocket. Rowan has drawn his hand back so everyone can see. Riley, the youngest with the chestnut pixie and purple hoodie, leans into Ruby's side and curls her fingers like cat paws. Ruby slips an arm around her and grins down at her. Morgan is beside Avery, smiling at the open page, with the back window just beyond them. Ruby rests her free hand on the cover, ready to close the album and leave it on the cabinet. Frame Riley to Ruby's left so the first balloon points clearly to Riley's speaking mouth and the reply points to Ruby's.
+SPEECH (Riley): "Mommy, can we do one with cat faces?"
+SPEECH (Ruby): "One where I can see your freckles first. Then cats."
 ```
