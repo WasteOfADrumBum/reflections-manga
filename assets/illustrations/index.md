@@ -1,5 +1,16 @@
 # Illustrations
 
+## Chapter 001 Page 1: Wedding Album Portrait
+
+- [Standalone wedding portrait](ethan-morgan-ruby-wedding-album-page-001-v1.png).
+- PNG, 1536 x 1024 pixels; created 2026-11-18 for the user's album upload.
+- Regenerated from the wedding print on page 1, preserving Morgan/Ethan/Ruby
+  order and wedding attire while removing the album surround and lettering.
+- Unlike the standalone studies below, this derives from an existing chapter
+  image. No new wedding facts or chapter artwork approval are established.
+- [Source images, exact prompt, and review notes](../drafts/page-001-wedding-album-portrait-study.md).
+- Status: ready for review/upload by the user; not uploaded or deployed.
+
 Standalone character illustrations collected by the user on 2026-11-13.
 The entries below describe standalone illustrations and their source studies.
 

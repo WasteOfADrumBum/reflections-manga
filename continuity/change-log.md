@@ -1,5 +1,14 @@
 # Change Log
 
+## 2026-11-18: Standalone Page 1 Wedding Photograph
+
+- Restored the supplied page-1 wedding print as a separate 1536 x 1024 portrait
+  for the user's photo-album upload, removing album corners and page lettering.
+- Saved the image in assets/illustrations and indexed it with source/prompt notes
+  in assets/drafts/page-001-wedding-album-portrait-study.md.
+- Checked composition, outfits, clean edges, and dimensions. Original page
+  retained; no upload, deployment, story revision, or artwork approval performed.
+
 ## 2026-11-18 · Chapter 001 retelling
 
 User reopened the entire chapter for regeneration. [V2](../stories/arc-01/chapter-001/page-guide-v2.md) replaces the earlier 32-page working plan with a 30-page draft about a family photograph. Each voice has its own attributed thoughts. Neutral narration marks family context and time changes. The closing thought stays with Ethan. Artwork and story approval are pending.
