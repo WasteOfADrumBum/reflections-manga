@@ -222,11 +222,31 @@ async function loadUploads(deps: StudioDeps): Promise<UploadedReference[]> {
   return rows.map((r) => ({ id: r.id, characterId: r.character_id, kind: r.kind, status: r.status, label: r.label, blobPath: r.blob_path, chapterId: r.chapter_id, pages: r.pages }));
 }
 
+// Identity sheets are multi-megabyte PNGs. prepareReference re-encodes each one
+// at maximum compression, which is most of the time spent on a page, and the
+// same sheets are attached again on later pages and again during QA. The bytes
+// depend only on the file contents, so reuse them for the life of this process.
+const preparedRefs = new Map<string, Buffer>();
+const PREPARED_REF_CACHE = 24;
+
 async function readReference(deps: StudioDeps, e: ReferenceManifestEntry): Promise<ReferenceImage> {
   const raw = e.source === "repo" ? await deps.repo.readBinary(e.path) : (await deps.blobs.get(e.path))?.data ?? null;
   if (!raw) throw new Error(`Reference image missing: ${e.label}`);
-  const data = await prepareReference(raw);
-  e.sha256 = sha256(raw);
+  const hash = sha256(raw);
+  e.sha256 = hash;
+  let data = preparedRefs.get(hash);
+  if (data) {
+    preparedRefs.delete(hash);
+    preparedRefs.set(hash, data);
+  } else {
+    data = await prepareReference(raw);
+    preparedRefs.set(hash, data);
+    while (preparedRefs.size > PREPARED_REF_CACHE) {
+      const oldest = preparedRefs.keys().next().value;
+      if (oldest === undefined) break;
+      preparedRefs.delete(oldest);
+    }
+  }
   return { label: e.label, filename: `ref-${e.slot}.png`, mime: "image/png", data };
 }
 
