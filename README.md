@@ -74,6 +74,14 @@ and [relationship canon](continuity/relationships.md) for current family develop
 See the [relative timeline](continuity/timeline.md) for established history and
 [character arc planning](continuity/character-arcs.md) for unapproved development questions.
 
+## Reflections Studio
+
+A private studio at `/admin` on the site generates chapter pages from the
+prompts and character sheets in this repository with OpenAI, checks them, and
+publishes approved pages through a pull request. Locked pages and canonical
+files are never overwritten. See [docs/studio](docs/studio/SETUP.md) and
+[production/studio](production/studio/README.md).
+
 ## Canon Rules
 
 Approved reference images and canonical profiles take precedence

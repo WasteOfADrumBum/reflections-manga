@@ -1,0 +1,45 @@
+name: Studio worker heartbeat
+
+# Optional safety net for unattended generation. The studio dispatches this
+# workflow when a job starts or resumes (set GITHUB_DISPATCH_WORKFLOW to this
+# file name in Vercel). It nudges the worker once a minute so a crashed or
+# timed-out function invocation is recovered within a minute, then stops as
+# soon as no job is running. It only uses Actions minutes while a job runs.
+#
+# Needs repository settings:
+#   Variables: STUDIO_URL  (for example https://your-site.vercel.app)
+#   Secrets:   STUDIO_CRON_SECRET (same value as CRON_SECRET in Vercel)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: studio-worker-heartbeat
+  cancel-in-progress: false
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - name: Nudge the worker until no job is running
+        env:
+          STUDIO_URL: ${{ vars.STUDIO_URL }}
+          CRON_SECRET: ${{ secrets.STUDIO_CRON_SECRET }}
+        run: |
+          set -u
+          if [ -z "${STUDIO_URL}" ] || [ -z "${CRON_SECRET}" ]; then
+            echo "STUDIO_URL variable or STUDIO_CRON_SECRET secret is not set; nothing to do."
+            exit 0
+          fi
+          idle=0
+          for i in $(seq 1 340); do
+            curl -fsS -X POST -H "Authorization: Bearer ${CRON_SECRET}" "${STUDIO_URL}/api/studio/worker/run" -o /dev/null || echo "nudge failed (will retry)"
+            sleep 60
+            active=$(curl -fsS -H "Authorization: Bearer ${CRON_SECRET}" "${STUDIO_URL}/api/studio/worker/status" | sed -E 's/.*"activeJobs":([0-9]+).*/\1/' || echo "1")
+            if [ "${active}" = "0" ]; then idle=$((idle+1)); else idle=0; fi
+            if [ "${idle}" -ge 2 ]; then echo "No running jobs. Stopping."; exit 0; fi
+          done
