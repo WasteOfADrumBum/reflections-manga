@@ -3,17 +3,17 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { PGlite } from "@electric-sql/pglite";
 import sharp from "sharp";
-import { createApp } from "../../api/_lib/app.ts";
-import { hashPassword } from "../../api/_lib/auth/auth.ts";
-import type { Clock, StudioDeps } from "../../api/_lib/context.ts";
-import type { Db } from "../../api/_lib/db/client.ts";
-import { resetMigrationCache } from "../../api/_lib/db/schema.ts";
-import { silentLogger } from "../../api/_lib/log.ts";
-import type { ImageProvider, ImageRequest, QaProvider, QaRequest, VisionQaResult } from "../../api/_lib/openai/providers.ts";
-import type { Publisher, PublishRequest } from "../../api/_lib/publish/publisher.ts";
-import { findChapterBlock, matchBracket } from "../../api/_lib/content/chapters.ts";
-import { LocalRepoSource, type RepoEntry, type RepoSource } from "../../api/_lib/repo/source.ts";
-import { MemoryBlobStore } from "../../api/_lib/storage/blobs.ts";
+import { createApp } from "../../api/_lib/app.js";
+import { hashPassword } from "../../api/_lib/auth/auth.js";
+import type { Clock, StudioDeps } from "../../api/_lib/context.js";
+import type { Db } from "../../api/_lib/db/client.js";
+import { resetMigrationCache } from "../../api/_lib/db/schema.js";
+import { silentLogger } from "../../api/_lib/log.js";
+import type { ImageProvider, ImageRequest, QaProvider, QaRequest, VisionQaResult } from "../../api/_lib/openai/providers.js";
+import type { Publisher, PublishRequest } from "../../api/_lib/publish/publisher.js";
+import { findChapterBlock, matchBracket } from "../../api/_lib/content/chapters.js";
+import { LocalRepoSource, type RepoEntry, type RepoSource } from "../../api/_lib/repo/source.js";
+import { MemoryBlobStore } from "../../api/_lib/storage/blobs.js";
 
 export const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
 export const PASSWORD = "correct horse battery staple";
@@ -248,7 +248,7 @@ export function api(h: Harness, cookie: string) {
 
 /** Runs worker steps until nothing is runnable, advancing the clock past retry waits. */
 export async function drain(h: Harness, maxSteps = 200) {
-  const { runWorkerStep } = await import("../../api/_lib/engine/worker.ts");
+  const { runWorkerStep } = await import("../../api/_lib/engine/worker.js");
   const outcomes: string[] = [];
   for (let i = 0; i < maxSteps; i++) {
     const r = await runWorkerStep(h.deps);

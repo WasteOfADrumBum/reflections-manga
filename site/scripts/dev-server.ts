@@ -14,9 +14,9 @@ import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { createApp, runWorkerLoop } from "../api/_lib/app.ts";
-import { OpenAIImageProvider, OpenAIQaProvider } from "../api/_lib/openai/openai-adapters.ts";
-import { createHarness } from "../tests/helpers/harness.ts";
+import { createApp, runWorkerLoop } from "../api/_lib/app.js";
+import { OpenAIImageProvider, OpenAIQaProvider } from "../api/_lib/openai/openai-adapters.js";
+import { createHarness } from "../tests/helpers/harness.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const SITE = path.resolve(here, "..");
@@ -43,19 +43,29 @@ let working = false;
 h.deps.kick = () => {
   if (working) return;
   working = true;
-  setTimeout(async () => {
-    try {
-      await runWorkerLoop(h.deps, { budgetMs: 30_000 });
-    } finally {
-      working = false;
-    }
-    // Keep draining in the background like chained invocations would.
-    const pending = await h.db.query<{ n: number }>(`SELECT count(*)::int AS n FROM job_pages jp JOIN jobs j ON j.id = jp.job_id WHERE j.status IN ('queued','running') AND jp.status IN ('queued','retry_wait')`);
-    if ((pending[0]?.n ?? 0) > 0) setTimeout(() => h.deps.kick("dev-loop"), 500);
+  setTimeout(() => {
+    void pump().catch((err) => console.error(err));
   }, 50);
 };
+
+/** One worker step, then handoff, is how a Vercel invocation stays under its limit.
+ *  This process has no such limit, so keep taking ready pages instead of waiting
+ *  out the gap between invocations. Retry delays still pause inside the loop. */
+async function pump() {
+  try {
+    for (;;) {
+      const { steps } = await runWorkerLoop(h.deps, { budgetMs: 30_000 });
+      const last = steps.at(-1) as { worked?: boolean; more?: boolean } | undefined;
+      if (!last?.worked || !last.more) break;
+    }
+  } finally {
+    working = false;
+  }
+  const pending = await h.db.query<{ n: number }>(`SELECT count(*)::int AS n FROM job_pages jp JOIN jobs j ON j.id = jp.job_id WHERE j.status IN ('queued','running') AND jp.status IN ('queued','retry_wait')`);
+  if ((pending[0]?.n ?? 0) > 0) setTimeout(() => h.deps.kick("dev-loop"), 500);
+}
 if (process.env.STUDIO_DEV_VERIFIED === "1") {
-  const { setStudioSetting } = await import("../api/_lib/engine/jobs.ts");
+  const { setStudioSetting } = await import("../api/_lib/engine/jobs.js");
   await setStudioSetting(h.deps, "real_generation_verified", true);
 }
 const handle = createApp(h.deps);

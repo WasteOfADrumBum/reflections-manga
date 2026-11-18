@@ -1,5 +1,5 @@
-import type { LoadedPrompt } from "../content/chapters.ts";
-import type { ScriptPage } from "../content/script-parser.ts";
+import type { LoadedPrompt } from "../content/chapters.js";
+import type { ScriptPage } from "../content/script-parser.js";
 
 /**
  * Structured continuity record. Built from the page's explicit instructions

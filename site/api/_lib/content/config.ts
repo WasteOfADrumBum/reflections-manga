@@ -1,5 +1,5 @@
 import { z } from "zod";
-import type { RepoSource } from "../repo/source.ts";
+import type { RepoSource } from "../repo/source.js";
 
 export const CONFIG_PATH = "production/studio/config.json";
 

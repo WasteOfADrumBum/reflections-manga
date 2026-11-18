@@ -1,9 +1,9 @@
-import type { LoadedPrompt } from "../content/chapters.ts";
-import { expectedCast } from "../content/prompt-parser.ts";
-import type { ScriptPage } from "../content/script-parser.ts";
-import type { ImageInfo } from "../images.ts";
-import type { VisionQaResult } from "../openai/providers.ts";
-import { compareTranscription } from "./dialogue.ts";
+import type { LoadedPrompt } from "../content/chapters.js";
+import { expectedCast } from "../content/prompt-parser.js";
+import type { ScriptPage } from "../content/script-parser.js";
+import type { ImageInfo } from "../images.js";
+import type { VisionQaResult } from "../openai/providers.js";
+import { compareTranscription } from "./dialogue.js";
 
 export type QaStatus = "pass" | "uncertain" | "fail";
 

@@ -25,6 +25,14 @@ glob patterns) through `vitest`, `vite` and `typescript-eslint`. It is
 development-only, the globs are ours, and no patched release exists yet
 (4.0.7 is the latest). Recheck monthly and update when a fix ships.
 
+Relative imports in `site/api`, `site/tests` and `site/scripts` end in `.js`
+(the NodeNext convention), never `.ts`. Vercel compiles each `.ts` file to
+`.js` without rewriting import paths, so a `.ts` path crashes the function at
+start-up. `npm run check:bundle` compiles the function file by file and loads it
+with plain Node to catch this. Local scripts (`npm run dev`, `npm run
+hash-password`) run through `tsx`, which maps those `.js` paths to the `.ts`
+sources.
+
 Tests use PGlite (real Postgres engine in WASM), jsdom with axe-core, and
 Playwright with `@axe-core/playwright` in CI.
 

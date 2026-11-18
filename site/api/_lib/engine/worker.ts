@@ -1,22 +1,22 @@
-import type { StudioDeps } from "../context.ts";
-import { content } from "../context.ts";
-import { loadCharacters, resolveSheetFiles } from "../content/characters.ts";
-import type { LoadedPrompt } from "../content/chapters.ts";
-import { pad3 } from "../content/config.ts";
-import { expectedLettering, sha256 } from "../content/prompt-parser.ts";
-import type { Db } from "../db/client.ts";
-import { one } from "../db/client.ts";
-import { inspectImage, normalizeToTarget, prepareReference } from "../images.ts";
-import { classifyProviderError, type ReferenceImage } from "../openai/providers.ts";
-import { costFromUsage, estimatePageCost, QA_COST_ASSUMED_USD, qaCostFromUsage } from "../openai/pricing.ts";
-import { checkPromptAgainstScript } from "../qa/dialogue.ts";
-import { buildQaInstructions, combineQa } from "../qa/evaluate.ts";
-import { BlobExistsError } from "../storage/blobs.ts";
-import { buildContinuityState, type ContinuityState, continuitySummary } from "./continuity.ts";
-import { logEvent } from "./events.ts";
-import { checkEligibility, setStudioSetting } from "./jobs.ts";
-import { buildFinalPrompt, planReferences, type ReferenceManifestEntry, type SceneImageCandidate, type UploadedReference } from "./references.ts";
-import type { AttemptRow, JobPageRow, JobRow, VersionRow } from "./types.ts";
+import type { StudioDeps } from "../context.js";
+import { content } from "../context.js";
+import { loadCharacters, resolveSheetFiles } from "../content/characters.js";
+import type { LoadedPrompt } from "../content/chapters.js";
+import { pad3 } from "../content/config.js";
+import { expectedLettering, sha256 } from "../content/prompt-parser.js";
+import type { Db } from "../db/client.js";
+import { one } from "../db/client.js";
+import { inspectImage, normalizeToTarget, prepareReference } from "../images.js";
+import { classifyProviderError, type ReferenceImage } from "../openai/providers.js";
+import { costFromUsage, estimatePageCost, QA_COST_ASSUMED_USD, qaCostFromUsage } from "../openai/pricing.js";
+import { checkPromptAgainstScript } from "../qa/dialogue.js";
+import { buildQaInstructions, combineQa } from "../qa/evaluate.js";
+import { BlobExistsError } from "../storage/blobs.js";
+import { buildContinuityState, type ContinuityState, continuitySummary } from "./continuity.js";
+import { logEvent } from "./events.js";
+import { checkEligibility, setStudioSetting } from "./jobs.js";
+import { buildFinalPrompt, planReferences, type ReferenceManifestEntry, type SceneImageCandidate, type UploadedReference } from "./references.js";
+import type { AttemptRow, JobPageRow, JobRow, VersionRow } from "./types.js";
 
 /**
  * Durable worker. Each call performs at most ONE step (generate or validate)
@@ -222,11 +222,31 @@ async function loadUploads(deps: StudioDeps): Promise<UploadedReference[]> {
   return rows.map((r) => ({ id: r.id, characterId: r.character_id, kind: r.kind, status: r.status, label: r.label, blobPath: r.blob_path, chapterId: r.chapter_id, pages: r.pages }));
 }
 
+// Identity sheets are multi-megabyte PNGs. prepareReference re-encodes each one
+// at maximum compression, which is most of the time spent on a page, and the
+// same sheets are attached again on later pages and again during QA. The bytes
+// depend only on the file contents, so reuse them for the life of this process.
+const preparedRefs = new Map<string, Buffer>();
+const PREPARED_REF_CACHE = 24;
+
 async function readReference(deps: StudioDeps, e: ReferenceManifestEntry): Promise<ReferenceImage> {
   const raw = e.source === "repo" ? await deps.repo.readBinary(e.path) : (await deps.blobs.get(e.path))?.data ?? null;
   if (!raw) throw new Error(`Reference image missing: ${e.label}`);
-  const data = await prepareReference(raw);
-  e.sha256 = sha256(raw);
+  const hash = sha256(raw);
+  e.sha256 = hash;
+  let data = preparedRefs.get(hash);
+  if (data) {
+    preparedRefs.delete(hash);
+    preparedRefs.set(hash, data);
+  } else {
+    data = await prepareReference(raw);
+    preparedRefs.set(hash, data);
+    while (preparedRefs.size > PREPARED_REF_CACHE) {
+      const oldest = preparedRefs.keys().next().value;
+      if (oldest === undefined) break;
+      preparedRefs.delete(oldest);
+    }
+  }
   return { label: e.label, filename: `ref-${e.slot}.png`, mime: "image/png", data };
 }
 

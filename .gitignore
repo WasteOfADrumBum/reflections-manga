@@ -39,4 +39,5 @@ desktop.ini
 
 # Studio test output
 site/test-results/
+site/.function-check/
 site/playwright-report/

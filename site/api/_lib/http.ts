@@ -1,5 +1,5 @@
-import { HttpError } from "./errors.ts";
-import type { Logger } from "./log.ts";
+import { HttpError } from "./errors.js";
+import type { Logger } from "./log.js";
 
 export const SECURITY_HEADERS: Record<string, string> = {
   "Cache-Control": "no-store",

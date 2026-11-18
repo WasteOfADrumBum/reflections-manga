@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { setStudioSetting } from "../../api/_lib/engine/jobs.ts";
-import { api, createHarness, drain, type Harness, login } from "../helpers/harness.ts";
+import { setStudioSetting } from "../../api/_lib/engine/jobs.js";
+import { api, createHarness, drain, type Harness, login } from "../helpers/harness.js";
 
 const BATCH = [21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
 
@@ -20,10 +20,16 @@ describe("simulated chapter 001 generation (mocked OpenAI)", () => {
     const { status, data } = await call("GET", "/chapters/001");
     expect(status).toBe(200);
     expect(data.pages).toHaveLength(30);
-    const byPage = new Map<number, { status: string }>(data.pages.map((p: { page: number; status: string }) => [p.page, p]));
+    const pages = data.pages as { page: number; status: string; sourceImagePath: string | null; publishedSrc: string | null }[];
+    const byPage = new Map(pages.map((p) => [p.page, p]));
     expect(byPage.get(1)?.status).toBe("published");
-    expect(byPage.get(2)?.status).toBe("locked");
-    for (let p = 3; p <= 30; p++) expect(byPage.get(p)?.status).toBe("ready");
+    expect(byPage.get(2)).toMatchObject({ status: "locked", sourceImagePath: "stories/arc-01/chapter-001/pages/A01-C001-P002.png" });
+    for (const p of pages) {
+      if (p.publishedSrc) expect(p.status, `page ${p.page}`).toBe("published");
+      else if (p.sourceImagePath) expect(p.status, `page ${p.page}`).toBe("locked");
+      else expect(p.status, `page ${p.page}`).toBe("ready");
+    }
+    expect(byPage.get(30)?.status).toBe("ready");
     expect(byPage.has(31)).toBe(false);
   });
 

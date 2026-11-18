@@ -1,4 +1,4 @@
-import { type LetteringKind, classifyLettering } from "./prompt-parser.ts";
+import { type LetteringKind, classifyLettering } from "./prompt-parser.js";
 
 /**
  * Parser for chapter scripts (script-v2.md, or the older script.md layout). The script is the canonical source of

@@ -1,14 +1,14 @@
 import { z } from "zod";
-import type { StudioDeps } from "../context.ts";
-import { content } from "../context.ts";
-import type { ChapterInventory } from "../content/chapters.ts";
-import { type GenerationSettings, generationSettingsSchema, pad3 } from "../content/config.ts";
-import { one } from "../db/client.ts";
-import { badRequest, conflict, forbidden, notFound } from "../errors.ts";
-import { estimateJob, estimatePageCost, pricingFor } from "../openai/pricing.ts";
-import { logEvent } from "./events.ts";
-import type { JobPageRow, JobRow } from "./types.ts";
-import { ACTIVE_JOB_STATUSES } from "./types.ts";
+import type { StudioDeps } from "../context.js";
+import { content } from "../context.js";
+import type { ChapterInventory } from "../content/chapters.js";
+import { type GenerationSettings, generationSettingsSchema, pad3 } from "../content/config.js";
+import { one } from "../db/client.js";
+import { badRequest, conflict, forbidden, notFound } from "../errors.js";
+import { estimateJob, estimatePageCost, pricingFor } from "../openai/pricing.js";
+import { logEvent } from "./events.js";
+import type { JobPageRow, JobRow } from "./types.js";
+import { ACTIVE_JOB_STATUSES } from "./types.js";
 
 export const settingsOverrideSchema = generationSettingsSchema.partial().strict();
 export type SettingsOverride = z.infer<typeof settingsOverrideSchema>;

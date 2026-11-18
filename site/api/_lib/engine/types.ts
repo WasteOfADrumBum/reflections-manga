@@ -1,4 +1,4 @@
-import type { GenerationSettings } from "../content/config.ts";
+import type { GenerationSettings } from "../content/config.js";
 
 export const ACTIVE_JOB_STATUSES = ["queued", "running", "paused"] as const;
 export type JobStatus = "queued" | "running" | "paused" | "completed" | "completed_with_issues" | "cancelled" | "budget_exceeded" | "blocked";

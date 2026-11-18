@@ -1,4 +1,4 @@
-import type { Db } from "./client.ts";
+import type { Db } from "./client.js";
 
 /**
  * Ordered, append-only migrations. Applied automatically and idempotently on

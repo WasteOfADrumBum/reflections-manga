@@ -1,9 +1,9 @@
 import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { createSessionToken } from "../../api/_lib/auth/auth.ts";
-import { setStudioSetting } from "../../api/_lib/engine/jobs.ts";
-import { api, BASE, CRON_SECRET, createHarness, drain, type Harness, login, PASSWORD, REPO_ROOT, SESSION_SECRET } from "../helpers/harness.ts";
+import { createSessionToken } from "../../api/_lib/auth/auth.js";
+import { setStudioSetting } from "../../api/_lib/engine/jobs.js";
+import { api, BASE, CRON_SECRET, createHarness, drain, type Harness, login, PASSWORD, REPO_ROOT, SESSION_SECRET } from "../helpers/harness.js";
 
 const PROTECTED: [string, string][] = [
   ["GET", "/dashboard"],
@@ -147,7 +147,7 @@ describe("existing artwork is never overwritten", () => {
   });
 
   it("refuses pages listed in lockedPages", async () => {
-    const { content } = await import("../../api/_lib/context.ts");
+    const { content } = await import("../../api/_lib/context.js");
     const c = await content(h.deps, true);
     const cfg = c.chapterConfig("001")!;
     const prev = cfg.lockedPages;
@@ -168,7 +168,7 @@ describe("existing artwork is never overwritten", () => {
       if (dir.endsWith("chapter-001/pages")) entries.push({ name: "A01-C001-P021.png", path: `${dir}/A01-C001-P021.png`, type: "file" });
       return entries;
     };
-    const { content } = await import("../../api/_lib/context.ts");
+    const { content } = await import("../../api/_lib/context.js");
     await content(h.deps, true);
     await drain(h);
     repo.list = realList;
