@@ -1,7 +1,7 @@
 import vm from "node:vm";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { setStudioSetting } from "../../api/_lib/engine/jobs.ts";
-import { api, createHarness, drain, type Harness, login } from "../helpers/harness.ts";
+import { setStudioSetting } from "../../api/_lib/engine/jobs.js";
+import { api, createHarness, drain, type Harness, login } from "../helpers/harness.js";
 
 function evalChapters(js: string) {
   const sandbox = { window: {} as Record<string, unknown> };

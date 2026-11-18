@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { characterForSheetName, loadCharacters, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.ts";
-import { ContentService, findChapterBlock, type LoadedPrompt, publishedPagesFromChaptersJs } from "../../api/_lib/content/chapters.ts";
-import { loadStudioConfig, parsePageRanges } from "../../api/_lib/content/config.ts";
-import { classifyLettering, expectedLettering, nameFromSheetFile, parsePrompt, parsePromptFilename } from "../../api/_lib/content/prompt-parser.ts";
-import { parseScript } from "../../api/_lib/content/script-parser.ts";
-import { checkPromptAgainstScript } from "../../api/_lib/qa/dialogue.ts";
-import { LocalRepoSource } from "../../api/_lib/repo/source.ts";
-import { REPO_ROOT, testRepo } from "../helpers/harness.ts";
+import { characterForSheetName, loadCharacters, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.js";
+import { ContentService, findChapterBlock, type LoadedPrompt, publishedPagesFromChaptersJs } from "../../api/_lib/content/chapters.js";
+import { loadStudioConfig, parsePageRanges } from "../../api/_lib/content/config.js";
+import { classifyLettering, expectedLettering, nameFromSheetFile, parsePrompt, parsePromptFilename } from "../../api/_lib/content/prompt-parser.js";
+import { parseScript } from "../../api/_lib/content/script-parser.js";
+import { checkPromptAgainstScript } from "../../api/_lib/qa/dialogue.js";
+import { LocalRepoSource } from "../../api/_lib/repo/source.js";
+import { REPO_ROOT, testRepo } from "../helpers/harness.js";
 
 const raw = new LocalRepoSource(REPO_ROOT);
 const repo = testRepo();
@@ -145,9 +145,14 @@ describe("chapter inventory", () => {
     const inv = await c.inventory("001");
     expect(inv.pages).toHaveLength(30);
     expect(inv.scriptPath).toBe("stories/arc-01/chapter-001/script-v2.md");
-    expect(inv.pages.filter((p) => p.locked).map((p) => p.page)).toEqual([1, 2]);
-    expect(inv.pages[1]!.sourceImagePath).toBe("stories/arc-01/chapter-001/pages/A01-C001-P002.png");
-    expect(inv.pages.filter((p) => !p.locked && p.prepared).map((p) => p.page)).toEqual(Array.from({ length: 28 }, (_, i) => i + 3));
+    // Page 001 is in the reader. Page 002's finished file is part of the v2 layout.
+    // Any later page with a file in pages/ is locked too; that set grows as art lands.
+    expect(inv.pages[0]!.publishedSrc).toBe("/pages/chapter-001/001.webp");
+    expect(inv.pages[1]).toMatchObject({ locked: true, sourceImagePath: "stories/arc-01/chapter-001/pages/A01-C001-P002.png" });
+    for (const p of inv.pages) {
+      expect(p.locked, `page ${p.page}`).toBe(p.publishedSrc != null || p.sourceImagePath != null);
+    }
+    expect(inv.pages[29]).toMatchObject({ locked: false, sourceImagePath: null, prepared: true });
     expect(inv.pages.every((p) => p.prepared)).toBe(true);
     // Old v1 numbering locks nothing: v1 art lives in pages/version_1/.
     expect(inv.pages[15]!.sourceImagePath).toBeNull();

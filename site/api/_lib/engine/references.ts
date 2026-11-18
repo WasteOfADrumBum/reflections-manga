@@ -1,7 +1,7 @@
-import type { CharacterRecord } from "../content/characters.ts";
-import { type ResolvedSheet, resolveCharacter } from "../content/characters.ts";
-import type { LoadedPrompt } from "../content/chapters.ts";
-import { pad3 } from "../content/config.ts";
+import type { CharacterRecord } from "../content/characters.js";
+import { type ResolvedSheet, resolveCharacter } from "../content/characters.js";
+import type { LoadedPrompt } from "../content/chapters.js";
+import { pad3 } from "../content/config.js";
 
 /**
  * Automatic reference selection for one page.

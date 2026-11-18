@@ -1,12 +1,12 @@
-import type { StudioDeps } from "../context.ts";
-import { content } from "../context.ts";
-import { pad3 } from "../content/config.ts";
-import { badRequest, conflict, forbidden, HttpError } from "../errors.ts";
-import { logEvent } from "../engine/events.ts";
-import type { VersionRow } from "../engine/types.ts";
-import { toReaderWebp } from "../images.ts";
-import { altTextFromScript } from "./alt-text.ts";
-import { addPagesToChaptersJs, type ReaderPageEntry, updateChapterNote } from "./chapters-js.ts";
+import type { StudioDeps } from "../context.js";
+import { content } from "../context.js";
+import { pad3 } from "../content/config.js";
+import { badRequest, conflict, forbidden, HttpError } from "../errors.js";
+import { logEvent } from "../engine/events.js";
+import type { VersionRow } from "../engine/types.js";
+import { toReaderWebp } from "../images.js";
+import { altTextFromScript } from "./alt-text.js";
+import { addPagesToChaptersJs, type ReaderPageEntry, updateChapterNote } from "./chapters-js.js";
 
 /**
  * Explicit publishing. Only versions the owner approved are included; nothing

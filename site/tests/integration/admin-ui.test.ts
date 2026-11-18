@@ -9,7 +9,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import axe from "axe-core";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { BASE, createHarness, drain, type Harness, login, REPO_ROOT } from "../helpers/harness.ts";
+import { BASE, createHarness, drain, type Harness, login, REPO_ROOT } from "../helpers/harness.js";
 
 let h: Harness;
 
@@ -97,8 +97,11 @@ describe("admin interface", () => {
     expect(tiles).toHaveLength(30);
     expect(tiles[0]).toMatch(/Page 001.*Published/);
     expect(tiles[1]).toMatch(/Page 002.*Locked/);
-    expect(tiles[2]).toMatch(/Page 003.*Ready to generate/);
-    expect(tiles[29]).toMatch(/Page 030.*Ready to generate/);
+    for (let n = 3; n <= 30; n++) {
+      const hasArt = await h.repo.exists(`stories/arc-01/chapter-001/pages/A01-C001-P${String(n).padStart(3, "0")}.png`);
+      const label = String(n).padStart(3, "0");
+      expect(tiles[n - 1]).toMatch(hasArt ? new RegExp(`Page ${label}.*Locked`) : new RegExp(`Page ${label}.*Ready to generate`));
+    }
     expect(await a11y()).toEqual([]);
   });
 
@@ -114,8 +117,9 @@ describe("admin interface", () => {
     await go("#/studio/001", () => heading() === "Generate pages" && !!document.querySelector(".stat"));
     const box = (n: number) => [...document.querySelectorAll<HTMLInputElement>(".check-grid input")].find((i) => i.value === String(n))!;
     expect(box(2).disabled).toBe(true);
-    expect(box(3).disabled).toBe(false);
-    expect(box(3).checked).toBe(true);
+    const firstReady = [...document.querySelectorAll<HTMLInputElement>(".check-grid input")].find((i) => !i.disabled && i.checked)!;
+    expect(Number(firstReady.value)).toBeGreaterThan(2);
+    expect(box(Number(firstReady.value)).disabled).toBe(false);
     expect(box(31)).toBeUndefined();
     expect(await a11y()).toEqual([]);
     const start = [...document.querySelectorAll("button")].find((b) => b.textContent === "Run one test page")!;
@@ -131,7 +135,8 @@ describe("admin interface", () => {
     await go("#/review/001", () => heading() === "Review and publish" && !!document.querySelector(".version"));
     const approve = [...document.querySelectorAll("button")].find((b) => b.textContent === "Approve")!;
     approve.click();
-    await settle(() => !!document.querySelector("form.card h2") && document.getElementById("view")!.textContent!.includes("Publish page 003"));
+    const published = `Publish page ${firstReady.value.padStart(3, "0")}`;
+    await settle(() => !!document.querySelector("form.card h2") && document.getElementById("view")!.textContent!.includes(published));
     expect(await a11y()).toEqual([]);
 
     await go("#/studio/001", () => heading() === "Generate pages" && !!document.querySelector(".stat"));

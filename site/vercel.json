@@ -9,7 +9,7 @@
     }
   },
   "rewrites": [
-    { "source": "/api/studio/:path*", "destination": "/api/studio?__path=:path*" }
+    { "source": "/api/studio/:studioPath*", "destination": "/api/studio?__path=:studioPath*" }
   ],
   "crons": [
     { "path": "/api/studio/worker/cron", "schedule": "17 9 * * *" }

@@ -20,8 +20,17 @@ test.describe.configure({ mode: "serial" });
 
 test("the public reader still works and has no studio links to drafts", async ({ page }) => {
   await page.goto("/series");
-  await expect(page.getByRole("heading", { level: 1, name: "Read Reflections" })).toBeVisible();
+  // series.html hides the reader until the visitor confirms they are 18+.
+  // The heading stays out of the accessibility tree (display:none) until then.
+  const gate = page.getByRole("dialog", { name: "Are you 18 or older?" });
+  await expect(gate).toBeVisible();
+  const readerHeading = page.getByRole("heading", { level: 1, name: "Read Reflections" });
+  await expect(readerHeading).toBeHidden();
+  await gate.getByRole("button", { name: "Yes, I'm 18 or older" }).click();
+  await expect(readerHeading).toBeVisible();
   await expect(page.locator("#reader")).toBeVisible();
+  // The hero fades in over 0.6s. Contrast is checked on the settled text.
+  await expect(page.locator(".page-hero .reveal")).toHaveCSS("opacity", "1");
   const html = await page.content();
   expect(html).not.toContain("/api/studio/assets");
   await expectAccessible(page);
@@ -46,6 +55,8 @@ test("sign-in page is accessible and keyboard operable", async ({ page }) => {
 });
 
 test("one-click test page, approval, full chapter run, review and publish", async ({ page }) => {
+  // A full chapter is 27 mocked pages. CI runners are slower than a warm laptop.
+  test.setTimeout(180_000);
   await signIn(page);
   await expectAccessible(page);
 
@@ -76,7 +87,7 @@ test("one-click test page, approval, full chapter run, review and publish", asyn
   await page.getByRole("link", { name: "Generate" }).first().click();
   await page.getByRole("button", { name: "Generate chapter" }).click();
   await page.getByRole("dialog").getByRole("button", { name: "Start paid generation" }).click();
-  await expect(page.locator("#view").getByText(/Job (Completed|Finished, needs attention): \d+ of/)).toBeVisible({ timeout: 80_000 });
+  await expect(page.locator("#view").getByText(/Job (Completed|Finished, needs attention): \d+ of/)).toBeVisible({ timeout: 150_000 });
   await expect(page.getByRole("link", { name: "Export pages (ZIP)" })).toBeVisible();
 
   await page.getByRole("link", { name: "Review pages" }).click();

@@ -1,5 +1,5 @@
-import type { LetteringItem } from "../content/prompt-parser.ts";
-import type { ScriptLine, ScriptPage } from "../content/script-parser.ts";
+import type { LetteringItem } from "../content/prompt-parser.js";
+import type { ScriptLine, ScriptPage } from "../content/script-parser.js";
 
 /** Normalises typography differences (curly quotes, ellipses, dashes, case, spacing). */
 export function normalizeText(s: string): string {

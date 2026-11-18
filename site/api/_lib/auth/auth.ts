@@ -1,8 +1,8 @@
 import { createHmac, randomBytes, scrypt as scryptCb, timingSafeEqual } from "node:crypto";
 import { promisify } from "node:util";
-import type { Db } from "../db/client.ts";
-import { one } from "../db/client.ts";
-import { forbidden, tooMany, unauthorized } from "../errors.ts";
+import type { Db } from "../db/client.js";
+import { one } from "../db/client.js";
+import { forbidden, tooMany, unauthorized } from "../errors.js";
 
 const scrypt = promisify(scryptCb) as (pw: string, salt: Buffer, keylen: number, opts: { N: number; r: number; p: number; maxmem: number }) => Promise<Buffer>;
 

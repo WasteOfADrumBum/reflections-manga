@@ -1,12 +1,12 @@
 import { randomUUID } from "node:crypto";
-import type { Db } from "./db/client.ts";
-import type { Logger } from "./log.ts";
-import type { ImageProvider, QaProvider } from "./openai/providers.ts";
-import type { Publisher } from "./publish/publisher.ts";
-import type { RepoSource } from "./repo/source.ts";
-import type { BlobStore } from "./storage/blobs.ts";
-import { ContentService } from "./content/chapters.ts";
-import { loadStudioConfig } from "./content/config.ts";
+import type { Db } from "./db/client.js";
+import type { Logger } from "./log.js";
+import type { ImageProvider, QaProvider } from "./openai/providers.js";
+import type { Publisher } from "./publish/publisher.js";
+import type { RepoSource } from "./repo/source.js";
+import type { BlobStore } from "./storage/blobs.js";
+import { ContentService } from "./content/chapters.js";
+import { loadStudioConfig } from "./content/config.js";
 
 export interface Clock {
   now(): Date;

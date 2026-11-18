@@ -1,15 +1,15 @@
 import { describe, expect, it } from "vitest";
-import { createSessionToken, hashPassword, readSessionToken, verifyPassword } from "../../api/_lib/auth/auth.ts";
-import { parseEnv, EnvError, missingConfiguration } from "../../api/_lib/env.ts";
-import { normalizeToTarget } from "../../api/_lib/images.ts";
-import { createLogger, redactString, sanitize } from "../../api/_lib/log.ts";
-import { OpenAIImageProvider } from "../../api/_lib/openai/openai-adapters.ts";
-import { addPagesToChaptersJs, updateChapterNote } from "../../api/_lib/publish/chapters-js.ts";
-import { altTextFromScript } from "../../api/_lib/publish/alt-text.ts";
-import { assertRepoPath, GitHubRepoSource } from "../../api/_lib/repo/source.ts";
-import { assertSafePathname } from "../../api/_lib/storage/blobs.ts";
-import { createZip } from "../../api/_lib/zip.ts";
-import { fakePage } from "../helpers/harness.ts";
+import { createSessionToken, hashPassword, readSessionToken, verifyPassword } from "../../api/_lib/auth/auth.js";
+import { parseEnv, EnvError, missingConfiguration } from "../../api/_lib/env.js";
+import { normalizeToTarget } from "../../api/_lib/images.js";
+import { createLogger, redactString, sanitize } from "../../api/_lib/log.js";
+import { OpenAIImageProvider } from "../../api/_lib/openai/openai-adapters.js";
+import { addPagesToChaptersJs, updateChapterNote } from "../../api/_lib/publish/chapters-js.js";
+import { altTextFromScript } from "../../api/_lib/publish/alt-text.js";
+import { assertRepoPath, GitHubRepoSource } from "../../api/_lib/repo/source.js";
+import { assertSafePathname } from "../../api/_lib/storage/blobs.js";
+import { createZip } from "../../api/_lib/zip.js";
+import { fakePage } from "../helpers/harness.js";
 import sharp from "sharp";
 
 describe("passwords and sessions", () => {

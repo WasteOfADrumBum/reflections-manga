@@ -1,9 +1,9 @@
-import type { StudioDeps } from "../context.ts";
-import { content } from "../context.ts";
-import { pad3 } from "../content/config.ts";
-import { reconcilePublished } from "../publish/service.ts";
-import { getStudioSetting } from "./jobs.ts";
-import type { JobPageRow, VersionRow } from "./types.ts";
+import type { StudioDeps } from "../context.js";
+import { content } from "../context.js";
+import { pad3 } from "../content/config.js";
+import { reconcilePublished } from "../publish/service.js";
+import { getStudioSetting } from "./jobs.js";
+import type { JobPageRow, VersionRow } from "./types.js";
 
 export type PageDisplayStatus =
   | "published"

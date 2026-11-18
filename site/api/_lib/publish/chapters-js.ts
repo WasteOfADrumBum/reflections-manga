@@ -1,4 +1,4 @@
-import { findChapterBlock, matchBracket } from "../content/chapters.ts";
+import { findChapterBlock, matchBracket } from "../content/chapters.js";
 
 export interface ReaderPageEntry {
   page: number;

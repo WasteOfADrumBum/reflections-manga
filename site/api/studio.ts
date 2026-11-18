@@ -1,16 +1,16 @@
 import { createHash } from "node:crypto";
 import { waitUntil } from "@vercel/functions";
-import { createApp } from "./_lib/app.ts";
-import { constantTimeEqual } from "./_lib/auth/auth.ts";
-import { defaultIds, type StudioDeps, systemClock } from "./_lib/context.ts";
-import { createPgDb } from "./_lib/db/client.ts";
-import { EnvError, missingConfiguration, parseEnv, publicBaseUrl } from "./_lib/env.ts";
-import { json } from "./_lib/http.ts";
-import { createLogger } from "./_lib/log.ts";
-import { OpenAIImageProvider, OpenAIQaProvider } from "./_lib/openai/openai-adapters.ts";
-import { GitHubPublisher } from "./_lib/publish/publisher.ts";
-import { GitHubRepoSource } from "./_lib/repo/source.ts";
-import { VercelBlobStore } from "./_lib/storage/blobs.ts";
+import { createApp } from "./_lib/app.js";
+import { constantTimeEqual } from "./_lib/auth/auth.js";
+import { defaultIds, type StudioDeps, systemClock } from "./_lib/context.js";
+import { createPgDb } from "./_lib/db/client.js";
+import { EnvError, missingConfiguration, parseEnv, publicBaseUrl } from "./_lib/env.js";
+import { json } from "./_lib/http.js";
+import { createLogger } from "./_lib/log.js";
+import { OpenAIImageProvider, OpenAIQaProvider } from "./_lib/openai/openai-adapters.js";
+import { GitHubPublisher } from "./_lib/publish/publisher.js";
+import { GitHubRepoSource } from "./_lib/repo/source.js";
+import { VercelBlobStore } from "./_lib/storage/blobs.js";
 
 /**
  * Single Vercel Function for the studio API (all routes under /api/studio/*,
@@ -83,17 +83,29 @@ function build(): ((req: Request) => Promise<Response>) | undefined {
 }
 
 /** vercel.json rewrites /api/studio/<path> to /api/studio?__path=<path>; restore the original path. */
-function restorePath(req: Request): Request {
-  const url = new URL(req.url);
+function absoluteUrl(req: Request): URL {
+  // Some runtimes hand over a path-only URL; resolve it against the Host header.
+  const host = req.headers.get("x-forwarded-host") ?? req.headers.get("host") ?? "localhost";
+  return new URL(req.url, `https://${host}`);
+}
+
+export function restorePath(req: Request): Request {
+  const url = absoluteUrl(req);
   const p = url.searchParams.get("__path");
-  if (p == null) return req;
+  if (p == null) return url.href === req.url ? req : rebuild(req, url);
   url.searchParams.delete("__path");
+  // Vercel also forwards the rewrite's named segment as a query parameter.
+  url.searchParams.delete("studioPath");
   url.pathname = `/api/studio/${p.replace(/^\/+/, "")}`;
+  return rebuild(req, url);
+}
+
+function rebuild(req: Request, url: URL): Request {
   const init: RequestInit & { duplex?: string } = { method: req.method, headers: req.headers, body: ["GET", "HEAD"].includes(req.method) ? undefined : req.body, duplex: "half" };
   return new Request(url, init);
 }
 
-export default async function studio(incoming: Request): Promise<Response> {
+async function studio(incoming: Request): Promise<Response> {
   const req = restorePath(incoming);
   const h = build();
   if (!h) {
@@ -114,3 +126,13 @@ export default async function studio(incoming: Request): Promise<Response> {
   }
   return h(req);
 }
+
+// Vercel's Node runtime passes a Web Request to named method exports (a bare
+// default export would receive Node's req/res instead).
+export const GET = studio;
+export const POST = studio;
+export const PUT = studio;
+export const PATCH = studio;
+export const DELETE = studio;
+export const OPTIONS = studio;
+export const HEAD = studio;

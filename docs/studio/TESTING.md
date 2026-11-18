@@ -4,7 +4,8 @@ All automated tests mock OpenAI and GitHub. None makes a paid request.
 
 Tests read the real repository content, with the reader seen as it is after the
 version 2 reader change (only v2 page 001 published), so they pass whether or not
-that change has been merged.
+that change has been merged. A page that already has a finished file in
+`stories/.../pages/` is locked; tests follow whichever of those files are present.
 
 ```
 cd site

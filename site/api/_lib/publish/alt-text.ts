@@ -1,4 +1,4 @@
-import type { ScriptPage } from "../content/script-parser.ts";
+import type { ScriptPage } from "../content/script-parser.js";
 
 /**
  * Descriptive alt text in the reader's existing style: what happens on the page

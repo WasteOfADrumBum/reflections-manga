@@ -1,16 +1,16 @@
 import { describe, expect, it } from "vitest";
-import { loadCharacters, resolveSheetFiles } from "../../api/_lib/content/characters.ts";
-import { ContentService, type LoadedPrompt } from "../../api/_lib/content/chapters.ts";
-import { loadStudioConfig } from "../../api/_lib/content/config.ts";
-import { parsePrompt } from "../../api/_lib/content/prompt-parser.ts";
-import { buildContinuityState, inferTimeOfDay } from "../../api/_lib/engine/continuity.ts";
-import { buildFinalPrompt, planReferences } from "../../api/_lib/engine/references.ts";
-import { backoffMs } from "../../api/_lib/engine/worker.ts";
-import { classifyProviderError } from "../../api/_lib/openai/providers.ts";
-import { costFromUsage, estimateJob, estimatePageCost } from "../../api/_lib/openai/pricing.ts";
-import { compareTranscription, normalizeText, similarity } from "../../api/_lib/qa/dialogue.ts";
-import { combineQa, deterministicChecks } from "../../api/_lib/qa/evaluate.ts";
-import { testRepo } from "../helpers/harness.ts";
+import { loadCharacters, resolveSheetFiles } from "../../api/_lib/content/characters.js";
+import { ContentService, type LoadedPrompt } from "../../api/_lib/content/chapters.js";
+import { loadStudioConfig } from "../../api/_lib/content/config.js";
+import { parsePrompt } from "../../api/_lib/content/prompt-parser.js";
+import { buildContinuityState, inferTimeOfDay } from "../../api/_lib/engine/continuity.js";
+import { buildFinalPrompt, planReferences } from "../../api/_lib/engine/references.js";
+import { backoffMs } from "../../api/_lib/engine/worker.js";
+import { classifyProviderError } from "../../api/_lib/openai/providers.js";
+import { costFromUsage, estimateJob, estimatePageCost } from "../../api/_lib/openai/pricing.js";
+import { compareTranscription, normalizeText, similarity } from "../../api/_lib/qa/dialogue.js";
+import { combineQa, deterministicChecks } from "../../api/_lib/qa/evaluate.js";
+import { testRepo } from "../helpers/harness.js";
 
 const repo = testRepo();
 async function prompt(page: number) {
