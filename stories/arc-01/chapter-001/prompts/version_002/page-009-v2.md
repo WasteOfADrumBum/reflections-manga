@@ -1,0 +1,26 @@
+# Page 009 · Version 2
+
+```text
+Create ONE finished-looking DRAFT manga page for Reflections, Chapter 001, “Three Hearts, Different Needs,” retelling v2. Page 9. Exactly 3 panels.
+
+REFERENCE ORDER: Attach these identity sheets first, in order: walker-ethan.png, walker-morgan.png. Then attach the selected v2 page 008 for scene continuity.
+
+FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive clean linework, restrained natural color, realistic anatomy and cinematic framing. White gutters. Use three stacked panels, giving the last reaction room. English, LEFT TO RIGHT across each row, then down. Place the first text unit highest at the left, the reply lower to its right. Frame speakers in that order before drawing balloons. SPEECH uses a smooth oval and one pointed tail aimed at the visible speaker's mouth. THOUGHT uses a scalloped cloud and a short chain of diminishing dots ending beside its owner's head. NARRATION alone uses a square-cornered, tailless box. Print only the quoted lines, exactly once and in listed order. Names, types and panel numbers are instructions. Render only assigned lettering. Keep tails and dot trails clear of other faces. Leave generous white space for lettering. No printed speaker labels, page title or added SFX.
+
+CAST: Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans.
+Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
+
+SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
+CONTINUITY: First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
+
+PANEL 1: Ethan steps onto the porch to test the broad rail beside the door. Morgan peels away from the group to meet him. He owns the phone throughout.
+SPEECH (Ethan): "Help me get this level, Hun?"
+
+PANEL 2: They set the phone landscape against the heavy planter, lens facing the steps. Morgan's bare fingers steady its lower edge.
+SPEECH (Morgan): "There. Let go."
+SPEECH (Ethan): "Bossy."
+SPEECH (Morgan): "Accurate."
+
+PANEL 3: Close on his hand opening. He laughs quietly; relief visible in his shoulders.
+THOUGHT (Ethan): "I like it when she tells me where to put my hands. It's the minute after that I can't figure out."
+```

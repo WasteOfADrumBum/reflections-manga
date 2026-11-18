@@ -1,0 +1,28 @@
+# Page 016 · Version 2
+
+```text
+Create ONE finished-looking DRAFT manga page for Reflections, Chapter 001, “Three Hearts, Different Needs,” retelling v2. Page 16. Exactly 4 panels.
+
+REFERENCE ORDER: Attach these identity sheets first, in order: walker-ethan.png, bennett-walker-ruby.png, walker-morgan.png. Then attach the selected v2 page 015 for scene continuity. Also use the selected page 010 group shot for the phone insert.
+
+FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive clean linework, restrained natural color, realistic anatomy and cinematic framing. White gutters. Use a wide top panel, two middle panels side by side, then a wide final panel. English, LEFT TO RIGHT across each row, then down. Place the first text unit highest at the left, the reply lower to its right. Frame speakers in that order before drawing balloons. SPEECH uses a smooth oval and one pointed tail aimed at the visible speaker's mouth. THOUGHT uses a scalloped cloud and a short chain of diminishing dots ending beside its owner's head. NARRATION alone uses a square-cornered, tailless box. Print only the quoted lines, exactly once and in listed order. Names, types and panel numbers are instructions. Render only assigned lettering. Keep tails and dot trails clear of other faces. Leave generous white space for lettering. No printed speaker labels, page title or added SFX.
+
+CAST: Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans.
+Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings.
+Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
+
+SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
+CONTINUITY: Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
+
+PANEL 1: Ethan takes out the phone again and zooms in on his own face. Use the stored steps photo and exactly the same smile.
+SPEECH (Ethan): "I could do another one."
+
+PANEL 2: Ruby keeps both hands in her cardigan pockets. Morgan looks out at the kids' game, still listening.
+SPEECH (Ruby): "I asked what you'd fix."
+
+PANEL 3: Tight on his thumb and forefinger spreading until his own smile dissolves into pixels.
+THOUGHT (Ethan): "Mine. I'd fix mine."
+
+PANEL 4: He locks the phone and pockets it. All three hear his reply.
+SPEECH (Ethan): "I don't want to take another one today."
+```
