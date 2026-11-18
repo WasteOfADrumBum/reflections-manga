@@ -1,0 +1,34 @@
+{
+  "$comment": "Reflections Studio production config. Read by the admin studio from GitHub. Locked pages are never generated or overwritten. Edit through a normal reviewed commit.",
+  "version": 1,
+  "chapters": {
+    "001": {
+      "arcId": "arc-01",
+      "arcNumber": 1,
+      "arcTitle": "Three Become One",
+      "title": "Three Hearts, Different Needs",
+      "storyDir": "stories/arc-01/chapter-001",
+      "plannedPages": 32,
+      "lockedPages": "1-20",
+      "lockReason": "Pages 001-020 are locked for the current revision (chapter handoff, 2026-11-17).",
+      "unpreparedPages": "31-32",
+      "unpreparedReason": "Pages 031-032 are outlined only. Their script and prompts are not written yet.",
+      "sourcePagePattern": "pages/A01-C001-P{page}.png",
+      "publishedDir": "site/pages/chapter-001",
+      "publishedSrcPrefix": "/pages/chapter-001/"
+    }
+  },
+  "generation": {
+    "imageModel": "gpt-image-2.5-sunburst",
+    "qaModel": "gpt-6-luna",
+    "size": "1024x1536",
+    "quality": "high",
+    "outputFormat": "png",
+    "maxAttemptsPerPage": 3,
+    "maxSceneReferences": 2,
+    "budgetUsdPerJob": 10,
+    "expectedRetryRate": 0.5,
+    "qaPassThreshold": 0.8,
+    "qaReviewThreshold": 0.55
+  }
+}
