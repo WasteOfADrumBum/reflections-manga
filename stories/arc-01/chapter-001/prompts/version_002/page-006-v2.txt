@@ -16,8 +16,8 @@ PANEL 1: Ethan stops short of the gap and glances back at the tilted phone. He r
 SPEECH (Ethan): "Hang on. I think the phone's crooked."
 
 PANEL 2: Ruby studies him in profile. He blinks slowly. The dark phone screen rests against his thigh.
-THOUGHT (Ethan): "Some mornings even the things I like feel like one more thing to get through."
+SPEECH (Ruby): "You doing okay?"
 
-PANEL 3: He looks at her, trying a grin. She lets the silence go one breath longer than usual.
-SPEECH (Ethan): "You got me outside. That's usually the hard part."
-SPEECH (Ruby): "Come sit by me. Just for this one."
+PANEL 3: Frame Ethan's face and Ruby's profile. He answers with a practiced little grin. Ruby waits a beat longer than he expects. Give his speech balloon the first reading position, then set his cloud thought lower with its own trail to him.
+SPEECH (Ethan): "Yeah. You got me outside. That's usually the hard part."
+THOUGHT (Ethan): "I was glad when I stopped the timer."

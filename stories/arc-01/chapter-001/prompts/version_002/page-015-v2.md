@@ -16,11 +16,12 @@ VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, 
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
-PANEL 1: Close on Morgan. Her head tips back at his tone; she starts to come right back at him.
-THOUGHT (Morgan): "Tell him who moved the kids. Who found the light. Keep score and I'll win."
+PANEL 1: Close on Morgan. At Ethan's tone, her head tips back. Her mouth opens for a retort, then closes. Hold the beat on her face.
+SILENT.
 
-PANEL 2: She looks across at Ruby rather than finishing the argument she rehearsed.
+PANEL 2: Morgan speaks evenly to Ruby. Her hands have gone still against her knees. After Morgan's speech, place her thought cloud in the next reading position, followed by Ruby's reply on the right.
 SPEECH (Morgan): "I thought it was a good picture. I still do."
+THOUGHT (Morgan): "I didn't even look at him when I said it."
 SPEECH (Ruby): "So do I. I just saw his face when he put the phone down."
 
 PANEL 3: Ethan withdraws half a step, stunned by the agreement.

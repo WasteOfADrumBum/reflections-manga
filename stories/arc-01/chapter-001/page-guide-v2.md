@@ -52,6 +52,12 @@ For future pages with a flashback or a photo insert, list references by characte
 | [029](prompts/version_002/page-029-v2.md) | What he saw | Ethan → Ruby → Morgan |
 | [030](prompts/version_002/page-030-v2.md) | The missing answer | Ethan → Ruby → Morgan |
 
+## Speech and private thoughts
+
+In selected conversations from page 6 onward, let the reader hear a character's spoken answer and then see the thought they keep to themselves. Use the existing oval balloon for the spoken line and a separate cloud with dots to the thinker for the private line. Follow the prompt's reading order. The other characters can notice a pause, a tight grip, or a hand drawn back. Their responses should follow what they heard and saw. Let quieter exchanges and reactions carry the scene between those moments.
+
+On page 13, Ethan covers his anger about Morgan answering for him. Ruby hears the brush-off and holds back from comforting him. Pages 15 and 28 carry that tension through Morgan's growing awareness of the same habit.
+
 ## Continuity for the regeneration
 
 - Pages 1–5 establish the shared wedding, biological parentage, both mothers parenting across those lines, the women's friendship and the three adults' private worries. Ruby keeps her band on. Morgan's left ring finger is bare. The later marriage conversation remains open.

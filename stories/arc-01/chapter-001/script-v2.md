@@ -101,11 +101,11 @@ PANEL 1: Ethan stops short of the gap and glances back at the tilted phone. He r
 SPEECH (Ethan): "Hang on. I think the phone's crooked."
 
 PANEL 2: Ruby studies him in profile. He blinks slowly. The dark phone screen rests against his thigh.
-THOUGHT (Ethan): "Some mornings even the things I like feel like one more thing to get through."
+SPEECH (Ruby): "You doing okay?"
 
-PANEL 3: He looks at her, trying a grin. She lets the silence go one breath longer than usual.
-SPEECH (Ethan): "You got me outside. That's usually the hard part."
-SPEECH (Ruby): "Come sit by me. Just for this one."
+PANEL 3: Frame Ethan's face and Ruby's profile. He answers with a practiced little grin. Ruby waits a beat longer than he expects. Give his speech balloon the first reading position, then set his cloud thought lower with its own trail to him.
+SPEECH (Ethan): "Yeah. You got me outside. That's usually the hard part."
+THOUGHT (Ethan): "I was glad when I stopped the timer."
 
 ### 007 · Ruby's thumb
 
@@ -206,19 +206,21 @@ PANEL 1: On the lawn Ethan lowers the phone after the shot. Ruby meets him at th
 SPEECH (Ruby): "That was the smile I meant."
 SPEECH (Ethan): "It's easier when somebody's being a cat."
 
-PANEL 2: She wants to laugh with him but chooses to finish the sentence.
-SPEECH (Ruby): "Did you want to be in that first one?"
+PANEL 2: Ruby glances toward Morgan on the lawn, then back at Ethan. He slides his phone into his pocket and answers lightly. His free hand tightens against the denim. Put the thought cloud beneath the spoken exchange and lead its tail to Ethan.
+SPEECH (Ruby): "Did it bother you when Morgan said that?"
+SPEECH (Ethan): "It's just a picture, Babe."
+THOUGHT (Ethan): "I wanted to tell her to shut up."
 
-PANEL 3: He slides his phone into his jeans pocket and looks at her.
-SPEECH (Ethan): "I wanted you to stop worrying about it."
-THOUGHT (Ethan): "Oh, hell. Now it sounds like she nagged me."
+PANEL 3: Ruby almost rests a hand on Ethan's back. She pulls her hand into her cardigan sleeve instead, leaving some room between them at the foot of the steps. Start with Ruby's small speech balloon, then place her own thought cloud lower.
+SPEECH (Ruby): "Okay."
+THOUGHT (Ruby): "I don't want to find out if he'd pull away."
 
 ### 014 · What she heard
 
 Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
 PANEL 1: Ruby stays on the bottom step. Morgan comes over from the lawn; the children continue their game nearby beyond this crop.
-SPEECH (Ruby): "Was I making that much of a fuss?"
+SPEECH (Ruby): "Did I push you too hard about being in it?"
 
 PANEL 2: Ethan looks down, one hand against his empty palm.
 SPEECH (Ethan): "No, Babe. You wanted a picture. I figured I could at least do that."
@@ -231,11 +233,12 @@ SPEECH (Ethan): "I know. I was counting."
 
 Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
-PANEL 1: Close on Morgan. Her head tips back at his tone; she starts to come right back at him.
-THOUGHT (Morgan): "Tell him who moved the kids. Who found the light. Keep score and I'll win."
+PANEL 1: Close on Morgan. At Ethan's tone, her head tips back. Her mouth opens for a retort, then closes. Hold the beat on her face.
+SILENT.
 
-PANEL 2: She looks across at Ruby rather than finishing the argument she rehearsed.
+PANEL 2: Morgan speaks evenly to Ruby. Her hands have gone still against her knees. After Morgan's speech, place her thought cloud in the next reading position, followed by Ruby's reply on the right.
 SPEECH (Morgan): "I thought it was a good picture. I still do."
+THOUGHT (Morgan): "I didn't even look at him when I said it."
 SPEECH (Ruby): "So do I. I just saw his face when he put the phone down."
 
 PANEL 3: Ethan withdraws half a step, stunned by the agreement.
@@ -343,7 +346,7 @@ SPEECH (Ruby): "You were sitting right there, and somehow I missed you."
 
 PANEL 3: He turns his empty hands over on his knees.
 SPEECH (Ethan): "I heard you asking. I couldn't get there any faster."
-THOUGHT (Ruby): "I thought he was waiting for me to drop it."
+THOUGHT (Ruby): "I thought he wanted me to leave him alone. Did I ever ask?"
 
 ### 023 · Different mornings
 
@@ -425,9 +428,10 @@ NARRATION (Narrator): "The next morning."
 PANEL 2: Ruby rests one fingertip on the edge of the closed album and glances at the phone without touching it.
 SPEECH (Ruby): "I've got room for one print. Want to choose it?"
 
-PANEL 3: Ethan opens the two shots. Show the lit gallery screen prominently in the foreground below all three adult faces. The two thumbnails are the actual steps and lawn images from pp10 and 12 in their original day-one clothing. Keep the real speakers visible for both balloon tails.
+PANEL 3: Ethan opens the two shots. Show the lit gallery screen prominently below all three adult faces. The two thumbnails are the actual steps and lawn images from pp10 and 12 in their original day-one clothing. Morgan starts to point toward the first one, stops, and brings her hand back to her own side of the table. Leave room for her thought cloud after her reply.
 SPEECH (Ethan): "You both liked the first one."
-SPEECH (Morgan): "She asked which one you like."
+SPEECH (Morgan): "Yeah. What's your pick?"
+THOUGHT (Morgan): "Let him take as long as he needs."
 
 ### 029 · What he saw
 

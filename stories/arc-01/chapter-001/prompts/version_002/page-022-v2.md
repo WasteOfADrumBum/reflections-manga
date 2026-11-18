@@ -24,5 +24,5 @@ SPEECH (Ruby): "You were sitting right there, and somehow I missed you."
 
 PANEL 3: He turns his empty hands over on his knees.
 SPEECH (Ethan): "I heard you asking. I couldn't get there any faster."
-THOUGHT (Ruby): "I thought he was waiting for me to drop it."
+THOUGHT (Ruby): "I thought he wanted me to leave him alone. Did I ever ask?"
 ```

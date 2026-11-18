@@ -17,7 +17,7 @@ SETTING: Cream-walled kitchen, small wood table, finished low cabinet against th
 CONTINUITY: Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
 PANEL 1: Ruby stays on the bottom step. Morgan comes over from the lawn; the children continue their game nearby beyond this crop.
-SPEECH (Ruby): "Was I making that much of a fuss?"
+SPEECH (Ruby): "Did I push you too hard about being in it?"
 
 PANEL 2: Ethan looks down, one hand against his empty palm.
 SPEECH (Ethan): "No, Babe. You wanted a picture. I figured I could at least do that."

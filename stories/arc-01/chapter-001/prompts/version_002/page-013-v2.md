@@ -19,10 +19,12 @@ PANEL 1: On the lawn Ethan lowers the phone after the shot. Ruby meets him at th
 SPEECH (Ruby): "That was the smile I meant."
 SPEECH (Ethan): "It's easier when somebody's being a cat."
 
-PANEL 2: She wants to laugh with him but chooses to finish the sentence.
-SPEECH (Ruby): "Did you want to be in that first one?"
+PANEL 2: Ruby glances toward Morgan on the lawn, then back at Ethan. He slides his phone into his pocket and answers lightly. His free hand tightens against the denim. Put the thought cloud beneath the spoken exchange and lead its tail to Ethan.
+SPEECH (Ruby): "Did it bother you when Morgan said that?"
+SPEECH (Ethan): "It's just a picture, Babe."
+THOUGHT (Ethan): "I wanted to tell her to shut up."
 
-PANEL 3: He slides his phone into his jeans pocket and looks at her.
-SPEECH (Ethan): "I wanted you to stop worrying about it."
-THOUGHT (Ethan): "Oh, hell. Now it sounds like she nagged me."
+PANEL 3: Ruby almost rests a hand on Ethan's back. She pulls her hand into her cardigan sleeve instead, leaving some room between them at the foot of the steps. Start with Ruby's small speech balloon, then place her own thought cloud lower.
+SPEECH (Ruby): "Okay."
+THOUGHT (Ruby): "I don't want to find out if he'd pull away."
 ```
