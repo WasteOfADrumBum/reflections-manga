@@ -7,16 +7,18 @@ FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive cl
 CAST: Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings.
 Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Night one, warm kitchen light, dark windows, day-one clothes. Kids in bed. Ruby's paperback has a stitched fabric bookmark. Ethan's phone stays pocketed.
 
 PANEL 1: He glances at the page she has marked with her thumb.
 SPEECH (Ethan): "Bad book?"
-SPEECH (Ruby): "Good one. Rotten attention span tonight."
+SPEECH (Ruby): "It's good. I keep thinking about this morning."
 
 PANEL 2: She closes it around a cloth bookmark she stitched. She keeps the book, not holding it out as a job.
-SPEECH (Ruby): "This morning I kept trying to get you back. You were sitting right there."
+SPEECH (Ruby): "You were sitting right there, and somehow I missed you."
 
 PANEL 3: He turns his empty hands over on his knees.
 SPEECH (Ethan): "I heard you asking. I couldn't get there any faster."
-THOUGHT (Ruby): "I've been treating the distance like he put it there on purpose."
+THOUGHT (Ruby): "I thought he was waiting for me to drop it."

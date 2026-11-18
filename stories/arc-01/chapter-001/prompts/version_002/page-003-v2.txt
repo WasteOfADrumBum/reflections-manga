@@ -8,15 +8,17 @@ CAST: Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes,
 Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans.
 Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: First morning, kitchen through open back door to porch steps. Phone in Ethan's hand, album stays on cabinet after p2. Ruby's coffee moves table → hands → inside windowsill on p5.
 
-PANEL 1: At the back window Morgan squints at the soft light on the porch. Ethan follows her pointing finger, phone lowered.
-SPEECH (Morgan): "Steps. While the house still throws some shade."
+PANEL 1: At the back window Morgan points through the window at the line of sunlight just short of the shaded steps. Ethan follows her pointing finger, phone lowered.
+SPEECH (Morgan): "Let's use the steps while they're still in the shade."
 SPEECH (Ethan): "Yes, ma'am."
 
 PANEL 2: Morgan gives him a quick kiss on the mouth. His grin reaches his eyes. Her bare left hand rests on his shoulder.
-SPEECH (Morgan): "That mouth on my husband."
+SPEECH (Morgan): "Oh, now you listen to your wife?"
 
 PANEL 3: Ruby collects her mug from the table. Her left wedding band catches against the handle. Her thumb settles against it for a beat. She sees Morgan already working out the angle.
 THOUGHT (Ruby): "Ask for the picture you want. Before it turns into a joke."

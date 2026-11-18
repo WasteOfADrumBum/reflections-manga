@@ -7,16 +7,18 @@ FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive cl
 CAST: Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings.
 Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Night one, warm kitchen light, dark windows, day-one clothes. Kids in bed. Ruby's paperback has a stitched fabric bookmark. Ethan's phone stays pocketed.
 
 PANEL 1: Ethan stays seated beside Ruby. He does not immediately cover her hand when she goes quiet.
-SPEECH (Ethan): "Some days everybody sounds a room away. Even up close."
+SPEECH (Ethan): "Sometimes it sounds like everyone's in the next room. It was like that this morning."
 
 PANEL 2: Ruby gives the sentence a beat, her bookmark between her fingers.
 SPEECH (Ruby): "Does it help if I stay?"
 SPEECH (Ethan): "Right now? Yeah."
 
-PANEL 3: She opens her paperback again, angled so he can see it. He leans in.
+PANEL 3: She opens her paperback again at the stitched bookmark and angles the spread toward him. Show both reading the same page, with the printed lines too small to read. He leans in.
 SPEECH (Ruby): "You missed two murders."
 SPEECH (Ethan): "Start with the first one."

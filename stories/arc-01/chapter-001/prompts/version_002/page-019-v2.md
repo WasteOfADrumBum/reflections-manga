@@ -10,16 +10,18 @@ FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive cl
 CAST: Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings.
 Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Afternoon in the same kitchen. Water cups by sink. Album on cabinet, moved into friends' hands and returned closed on p20. First day's clothes.
 
-PANEL 1: Later. The drained cups stand by the sink. Kitchen afternoon light, quiet. The two friends sit beside the cabinet, closed album between them. Only now move past the morning.
-NARRATION (Narrator): "By afternoon the shade had moved off the steps."
+PANEL 1: Later. The drained cups stand by the sink. Kitchen afternoon light, quiet. The two friends sit beside the cabinet, closed album between them. Show the sunlit bottom step through the open back door.
+NARRATION (Narrator): "By afternoon, sunlight reached the bottom step."
 
 PANEL 2: Ruby works a loose tail of thread into the binding with her nail. Morgan holds the cover steady when Ruby offers it to her.
 SPEECH (Ruby): "I left the pocket empty so he'd see it."
 SPEECH (Morgan): "I thought you just hadn't printed one."
 
 PANEL 3: A smile from Ruby with a little embarrassment.
-SPEECH (Ruby): "I do this thing where I leave somebody a space and call it asking."
+SPEECH (Ruby): "I thought he'd see that empty spot and say, 'Get in one with me.'"
 ```

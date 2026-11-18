@@ -7,11 +7,13 @@ FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive cl
 CAST: Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans.
 Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Same evening, porch steps under soft porch light, lawn beyond. Day-one clothes. Morgan's small whiskey glass moves to her far side on p24, stays there until p27. Ethan's phone stays pocketed.
 
 PANEL 1: Same porch and seats. Ethan rubs his thumb against hers.
-SPEECH (Ethan): "Am I different out here with you?"
+SPEECH (Ethan): "You think I'm easier to talk to when it's just us?"
 
 PANEL 2: She considers it, no instant reassurance.
 SPEECH (Morgan): "You let me give you hell. Sometimes you even tell me to quit."

@@ -11,11 +11,17 @@ Begin with [page 001](prompts/version_002/page-001-v2.md). Generate one page at 
 - [Riley](../../../characters/_reference-sheets/main_characters/children/walker-riley.png)
 - [Rowan](../../../characters/_reference-sheets/main_characters/children/walker-rowan.png)
 
+## Choosing references for what appears on the page
+
+Page 001 takes six sheets. Attach the everyday Ruby, Ethan and Morgan sheets above in that order, followed by [Morgan's wedding outfit v7](../../../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v7.png), [Ruby's wedding outfit v11](../../../characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v11.png) and [Ethan's wedding suit v5](../../../characters/ethan-walker/references/ethan-walker-reference-sheet-v5.png). Match the wedding clothes inside every view of the printed portrait. The adults handling the album wear their everyday clothes. Page 002 shows the binding from behind.
+
+For future pages with a flashback or a photo insert, list references by character and by the outfits actually visible. A present-day scene with a beach memory needs the everyday sheets for the present and swimsuit sheets for the people shown swimming. A swimsuit-only beach scene needs just the appropriate swimsuit sheet for each visible person. When a previously generated photo recurs, use the selected source image to preserve its pose, crop and original clothing. Each page prompt gives its upload order.
+
 ## Page order
 
 | Prompt | Beat | Attach sheets in this order |
 |---|---|---|
-| [001](prompts/version_002/page-001-v2.md) | The empty space | Ruby → Ethan → Morgan |
+| [001](prompts/version_002/page-001-v2.md) | The empty space | Everyday: Ruby → Ethan → Morgan. Wedding: Morgan v7 → Ruby v11 → Ethan v5 |
 | [002](prompts/version_002/page-002-v2.md) | Which mom? | Morgan → Ruby → Rowan → Avery → Riley |
 | [003](prompts/version_002/page-003-v2.md) | The good light | Ethan → Morgan → Ruby |
 | [004](prompts/version_002/page-004-v2.md) | Two promises | Ethan → Morgan → Ruby |

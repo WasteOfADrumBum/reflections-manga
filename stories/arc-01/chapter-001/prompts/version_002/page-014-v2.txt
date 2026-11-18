@@ -8,6 +8,8 @@ CAST: Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light
 Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans.
 Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
@@ -15,7 +17,7 @@ PANEL 1: Ruby stays on the bottom step. Morgan comes over from the lawn; the chi
 SPEECH (Ruby): "Was I making that much of a fuss?"
 
 PANEL 2: Ethan looks down, one hand against his empty palm.
-SPEECH (Ethan): "No. I just knew how to get it done."
+SPEECH (Ethan): "No, Babe. You wanted a picture. I figured I could at least do that."
 
 PANEL 3: Morgan sits a step above Ruby, enough space for an elbow between them. She waits until Ethan looks up.
 SPEECH (Morgan): "We asked for ten seconds."

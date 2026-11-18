@@ -14,6 +14,8 @@ Avery: 7, 126 cm, sturdy, long auburn hair tied back, hazel eyes, nose and cheek
 Riley: about 6, 110 cm, slender, chestnut pixie, green-leaning hazel eyes, light nose freckles. Scene wardrobe: purple hoodie with teal lining, purple trousers, teal sneakers.
 Rowan: 9, 130 cm, slender, short textured chestnut hair, brown-leaning hazel eyes, no freckles. Scene wardrobe: navy hoodie with orange accents, jeans, blue sneakers. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
@@ -24,6 +26,6 @@ SPEECH (Morgan): "A deal's a deal."
 PANEL 2: Ethan follows to the lawn with the phone. Ruby remains on the bottom step. Morgan drops into a crouch with the kids.
 SPEECH (Ethan): "Show me your meanest whiskers."
 
-PANEL 3: Ruby watches him make all four laugh, laughing too now that the lens points away. He takes the promised shot of Morgan and the kids.
+PANEL 3: Ruby watches him make all four laugh, laughing too now that the lens points away. Show the four subjects clearly together in the background, aligned with the phone's rear lens: Morgan crouches behind the children, Rowan at left, Riley at center curling both hands into claws, Avery at right with a scrunched-up nose. Capture this exact instant as the lawn photo for pp28–29. Ethan and Ruby stay outside the captured field.
 THOUGHT (Ruby): "There. That's the face. Now who's going to see it?"
 ```

@@ -8,30 +8,30 @@ English, LEFT TO RIGHT across each row, then down. Place the first text unit hig
 
 First morning. Album starts in Ruby's hands. Its last pocket is empty. The wedding insert shows Ethan between both brides in formal wedding clothes. Use everyday outfits for present-day panels.
 
-PANEL 1: Morning kitchen. Open on an old wedding print tucked into Ruby's hand-sewn accordion album. Cut tight to the three adult faces: one groom between two brides. Keep fingers and venue out of this insert.
-NARRATION (Narrator): "The day Morgan and Ruby married Ethan, somebody else held the camera."
+PANEL 1: One physical wedding print in a cream pocket of Ruby's accordion album. Its border and stitching frame a close three-person portrait: Morgan on the left, Ethan in the middle, Ruby on the right. Match each adult's wedding sheet, including hair, clothing and visible accessories. Place the small narration box in the margin clear of their faces.
+NARRATION (Narrator): "Morgan, Ruby and Ethan on the day they were married."
 
-PANEL 2: Pull back. Morgan steadies the little refinished cabinet against the kitchen wall. Ruby opens the album on top. Its last fold holds one empty landscape pocket. Ethan looks over Ruby's shoulder.
-SPEECH (Morgan): "All that sanding and you covered up the nicest bit."
-SPEECH (Ruby): "That's where the coffee ring was."
+PANEL 2: Present morning, a view down over the three adults' shoulders. Ruby unfolds the album across the low wooden cabinet. Show TWO adjacent landscape pockets large and sharp in the foreground: the exact wedding print from panel 1 on the left and one visibly empty pocket with four photo corners on the right. Morgan touches one empty corner. Ruby follows her finger. Their profiles remain visible for the balloon tails.
+SPEECH (Morgan): "Saving this one for something?"
+SPEECH (Ruby): "For us. With the kids this time."
 
-PANEL 3: Ruby kisses Ethan on the lips in passing. He smiles. She taps the empty pocket. The coffee in her rose mug stays on the kitchen table.
-SPEECH (Ruby): "Before anybody grows another inch. One with all six of us?"
+PANEL 3: The album stays open on the cabinet. Ruby has just kissed Ethan. Their lips have parted and she is looking up at him, one hand beside the empty pocket. He smiles. Keep the printed wedding picture visible beside the empty pocket. Her rose mug sits on the separate kitchen table.
+SPEECH (Ruby): "We should get one with all six of us before anybody grows another inch."
 
-PANEL 4: Ethan lifts his plain phone, lens toward the two women. Over his shoulder, Ruby looks straight past the lens at him.
-SPEECH (Ethan): "Give me a second."
-SPEECH (Ruby): "Six, Ethan."
+PANEL 4: Single wide shot over Ethan's left shoulder. At left foreground Ethan holds his phone horizontally at chest height with the lit screen toward the reader and rear lens toward both women. At right, beyond the phone, show BOTH real women together, fully visible from the waist up: taller Morgan on the left in olive, shorter Ruby on the right in rose. Morgan angles one shoulder toward Ruby. Ruby looks straight at Ethan with one eyebrow raised. First draw that pair once. Use a smaller, unmirrored crop of that SAME drawing inside the phone screen, including the same background, spacing, clothes, head angles, expressions and gaze at this instant. Keep the phone low enough that neither real face is obscured. Use a simple live preview. The shutter has not fired. Both balloons and tails sit outside the screen, pointing to the real speakers.
+SPEECH (Ethan): "Okay, squeeze in."
+SPEECH (Ruby): "That means you too, Ethan."
 
 ### 002 · Which mom?
 
 First morning, kitchen through open back door to porch steps. Phone in Ethan's hand, album stays on cabinet after p2. Ruby's coffee moves table → hands → inside windowsill on p5.
 
-PANEL 1: Across the kitchen Rowan and Riley lean shoulder to shoulder over the album. Avery edges in beside Ruby. Show the children in the present, no invented baby portraits.
+PANEL 1: At the cabinet the children join the adults. Frame the album from its back edge: show the accordion folds and binding, with the print facing the children and out of the reader's view. Rowan and Riley lean shoulder to shoulder over it. Avery edges in beside Ruby. Show the children in the present, no invented baby portraits.
 NARRATION (Narrator): "Ethan and Morgan had Rowan and Riley. He and Ruby had Avery."
 
 PANEL 2: Rowan holds the little album out to Ruby for a closer look at her binding. Riley tries to unfold it farther, eager to see what comes next.
 SPEECH (Rowan): "Mommy, how'd you make the pages do that?"
-SPEECH (Ruby): "One long piece. Here, try it."
+SPEECH (Ruby): "It's all one strip of paper. Pull that end."
 
 PANEL 3: Avery takes two sideways steps in a silly rhythm. Morgan matches the second one. Avery laughs, then points from herself to the place beside Morgan.
 SPEECH (Avery): "Mom. Here."
@@ -45,12 +45,12 @@ SPEECH (Ruby): "After one where I can tell who's who."
 
 First morning, kitchen through open back door to porch steps. Phone in Ethan's hand, album stays on cabinet after p2. Ruby's coffee moves table → hands → inside windowsill on p5.
 
-PANEL 1: At the back window Morgan squints at the soft light on the porch. Ethan follows her pointing finger, phone lowered.
-SPEECH (Morgan): "Steps. While the house still throws some shade."
+PANEL 1: At the back window Morgan points through the window at the line of sunlight just short of the shaded steps. Ethan follows her pointing finger, phone lowered.
+SPEECH (Morgan): "Let's use the steps while they're still in the shade."
 SPEECH (Ethan): "Yes, ma'am."
 
 PANEL 2: Morgan gives him a quick kiss on the mouth. His grin reaches his eyes. Her bare left hand rests on his shoulder.
-SPEECH (Morgan): "That mouth on my husband."
+SPEECH (Morgan): "Oh, now you listen to your wife?"
 
 PANEL 3: Ruby collects her mug from the table. Her left wedding band catches against the handle. Her thumb settles against it for a beat. She sees Morgan already working out the angle.
 THOUGHT (Ruby): "Ask for the picture you want. Before it turns into a joke."
@@ -66,9 +66,9 @@ First morning, kitchen through open back door to porch steps. Phone in Ethan's h
 PANEL 1: At the open kitchen door Morgan holds a palm level, showing Ethan where the phone could rest on the broad porch rail. No one sets it down yet.
 SPEECH (Morgan): "Set the timer. I'll test the spot with you."
 
-PANEL 2: Ruby passes Morgan her mug as she shrugs her slipped cardigan sleeve back up. Morgan takes a sip before handing it back.
+PANEL 2: Morgan has taken a cheeky sip while holding Ruby's distinctive rose mug. Draw her lowering it from her mouth as Ruby finishes adjusting her sleeve and reaches to take it back.
 SPEECH (Ruby): "That's mine."
-SPEECH (Morgan): "Then why's it exactly how I like it?"
+SPEECH (Morgan): "I know. Yours always tastes better."
 
 PANEL 3: Morgan studies Ethan fiddling with the phone, his back to them. Her grin fades.
 THOUGHT (Morgan): "Turn around, handsome. Just because."
@@ -91,22 +91,22 @@ SPEECH (Morgan): "That's Avery's. Scoot this way, cat."
 PANEL 3: Ethan frames five faces from the threshold. All five look back at him. Leave an Ethan-sized gap between the adults. No picture taken.
 THOUGHT (Ethan): "Through here I can tell when everybody's ready."
 
-PANEL 4: Reverse angle on Ethan lowering the phone just enough for Ruby to see his eyes.
-SPEECH (Ruby): "Who tells us when you are?"
+PANEL 4: Reverse angle from beside Ruby. Show her speaking in profile and Ethan lowering his phone until their eyes meet. Ruby pats the open spot beside her.
+SPEECH (Ruby): "There's room right here, Ethan."
 
 ### 006 · Some mornings
 
 First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
 
-PANEL 1: Hold the porch axis. Ruby sees he hasn't moved from the door. She walks the few feet back to him. Both in shade.
-SPEECH (Ethan): "It's the light. Give it a minute."
+PANEL 1: Hold the porch axis. Ruby sees he hasn't moved from the door. She walks the few feet back to him. Both in shade. The sunlit strip along the lawn makes his glance at the light legible.
+SPEECH (Ethan): "Hang on. The shade's just right over there."
 
 PANEL 2: Ruby studies him in profile. He blinks slowly. The dark phone screen rests against his thigh.
 THOUGHT (Ethan): "Some mornings even the things I like feel like one more thing to get through."
 
 PANEL 3: He looks at her, trying a grin. She lets the silence go one breath longer than usual.
 SPEECH (Ethan): "You got me outside. That's usually the hard part."
-SPEECH (Ruby): "I'm glad you came out."
+SPEECH (Ruby): "Come sit by me. Just for this one."
 
 ### 007 · Ruby's thumb
 
@@ -116,11 +116,11 @@ PANEL 1: Ruby indoors at the edge of the open doorway, Ethan beside her. Her thu
 THOUGHT (Ruby): "I could let him off. I'm very good at that."
 
 PANEL 2: She stops turning it. His eye meets hers.
-SPEECH (Ruby): "I want to open that book and see you in it. I get to want that, don't I?"
+SPEECH (Ruby): "When the kids open that book, I want them to see you there with us."
 
 PANEL 3: Ethan leans down to touch his forehead to hers. Keep his phone at his side.
 SPEECH (Ethan): "Yeah. I want you to have it."
-THOUGHT (Ruby): "That's almost what I asked."
+THOUGHT (Ruby): "I'd like you to want it too."
 
 ### 008 · Avery's turn
 
@@ -131,7 +131,7 @@ SPEECH (Rowan): "If I go up there, I can see the phone."
 SPEECH (Avery): "Here."
 
 PANEL 2: Morgan crouches in Avery's eye line. Draw her finger indicating the current step first, then the lawn. Avery follows with her eyes.
-SPEECH (Morgan): "One picture here. Then the grass for the cat one."
+SPEECH (Morgan): "We'll take this one on your step. Then you can all be cats on the grass."
 
 PANEL 3: Avery resumes tapping her two-beat rhythm on her knee. Riley answers with a paw gesture. Rowan stays put, trying it too.
 SPEECH (Riley): "Is that the cat song?"
@@ -144,16 +144,16 @@ THOUGHT (Morgan): "If I keep everybody moving, nobody has time to ask if I'm hav
 
 First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
 
-PANEL 1: Ethan steps onto the porch to test the broad rail beside the door. Morgan peels away from the group to meet him. He owns the phone throughout.
+PANEL 1: Ethan steps onto the porch to test the broad rail beside the door. Morgan peels away from the group to meet him. Ethan holds the phone. Leave the planter and a clear stretch of rail in frame.
 SPEECH (Ethan): "Help me get this level, Hun?"
 
 PANEL 2: They set the phone landscape against the heavy planter, lens facing the steps. Morgan's bare fingers steady its lower edge.
 SPEECH (Morgan): "There. Let go."
 SPEECH (Ethan): "Bossy."
-SPEECH (Morgan): "Accurate."
+SPEECH (Morgan): "Steady now, isn't it?"
 
 PANEL 3: Close on his hand opening. He laughs quietly; relief visible in his shoulders.
-THOUGHT (Ethan): "I like it when she tells me where to put my hands. It's the minute after that I can't figure out."
+THOUGHT (Ethan): "Soon as she says where she wants me, I can breathe again."
 
 ### 010 · Everybody ready?
 
@@ -168,7 +168,7 @@ SPEECH (Ruby): "There you are."
 PANEL 3: Near the instant of capture, his smile arrives a fraction late. Phone stays propped.
 THOUGHT (Ethan): "Her face just lit up. Whatever I'm doing with mine, keep it there."
 
-PANEL 4: Freeze the first group shot from the phone's angle. All six in frame, shade across the steps. No drawn shutter text.
+PANEL 4: The whole silent panel IS the stored landscape photograph, seen straight through the rear lens. Back row from left: Morgan, Ethan, Ruby. In front: Rowan, Riley, Avery. Riley holds two hands up like cat ears, Avery taps one knee, Ethan's smile has just caught up. Preserve these exact poses, crop and light for every later display of the steps photo.
 SILENT.
 
 ### 011 · Proof
@@ -176,10 +176,10 @@ SILENT.
 Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
 PANEL 1: Just after the exposure Ethan returns to the rail. He retrieves the phone and brings it to the two women on the steps.
-SPEECH (Ethan): "Whole family. Even the ears."
+SPEECH (Ethan): "Look at Riley's ears."
 
-PANEL 2: Ruby enlarges the photo on the screen while Ethan holds it. Crop the insert to Ethan's smile only. Her own mouth loses its smile.
-SPEECH (Ruby): "Were you smiling when you went over there?"
+PANEL 2: Over Ruby's shoulder: her cheek and speaking mouth in profile beside the phone. On its lit screen her fingers enlarge Ethan's face from the exact stored p10 photograph. Match his captured smile even though his real expression has changed.
+SPEECH (Ruby): "Is that the smile you put on for pictures?"
 
 PANEL 3: Morgan sees a photo she likes. Ruby sees the instant before the shutter. Ethan looks between them.
 SPEECH (Morgan): "That's his smile."
@@ -196,7 +196,7 @@ SPEECH (Morgan): "A deal's a deal."
 PANEL 2: Ethan follows to the lawn with the phone. Ruby remains on the bottom step. Morgan drops into a crouch with the kids.
 SPEECH (Ethan): "Show me your meanest whiskers."
 
-PANEL 3: Ruby watches him make all four laugh, laughing too now that the lens points away. He takes the promised shot of Morgan and the kids.
+PANEL 3: Ruby watches him make all four laugh, laughing too now that the lens points away. Show the four subjects clearly together in the background, aligned with the phone's rear lens: Morgan crouches behind the children, Rowan at left, Riley at center curling both hands into claws, Avery at right with a scrunched-up nose. Capture this exact instant as the lawn photo for pp28–29. Ethan and Ruby stay outside the captured field.
 THOUGHT (Ruby): "There. That's the face. Now who's going to see it?"
 
 ### 013 · Honest answer
@@ -208,11 +208,11 @@ SPEECH (Ruby): "That was the smile I meant."
 SPEECH (Ethan): "It's easier when somebody's being a cat."
 
 PANEL 2: She wants to laugh with him but chooses to finish the sentence.
-SPEECH (Ruby): "Did you want the first picture at all?"
+SPEECH (Ruby): "Did you want to be in that first one?"
 
 PANEL 3: He slides his phone into his jeans pocket and looks at her.
 SPEECH (Ethan): "I wanted you to stop worrying about it."
-THOUGHT (Ethan): "That came out exactly the way it sounded."
+THOUGHT (Ethan): "Oh, hell. Now it sounds like she nagged me."
 
 ### 014 · What she heard
 
@@ -222,7 +222,7 @@ PANEL 1: Ruby stays on the bottom step. Morgan comes over from the lawn; the chi
 SPEECH (Ruby): "Was I making that much of a fuss?"
 
 PANEL 2: Ethan looks down, one hand against his empty palm.
-SPEECH (Ethan): "No. I just knew how to get it done."
+SPEECH (Ethan): "No, Babe. You wanted a picture. I figured I could at least do that."
 
 PANEL 3: Morgan sits a step above Ruby, enough space for an elbow between them. She waits until Ethan looks up.
 SPEECH (Morgan): "We asked for ten seconds."
@@ -236,8 +236,8 @@ PANEL 1: Close on Morgan. Her head tips back at his tone; she starts to come rig
 THOUGHT (Morgan): "Tell him who moved the kids. Who found the light. Keep score and I'll win."
 
 PANEL 2: She looks across at Ruby rather than finishing the argument she rehearsed.
-SPEECH (Morgan): "I liked the photo. Can I still like it?"
-SPEECH (Ruby): "Yeah. I did too. That's why I asked him."
+SPEECH (Morgan): "I thought it was a good picture. I still do."
+SPEECH (Ruby): "So do I. I just saw his face when he put the phone down."
 
 PANEL 3: Ethan withdraws half a step, stunned by the agreement.
 SPEECH (Ethan): "I thought we were trying to fix the picture."
@@ -251,10 +251,10 @@ PANEL 1: Ethan takes out the phone again and zooms in on his own face. Use the s
 SPEECH (Ethan): "I could do another one."
 
 PANEL 2: Ruby keeps both hands in her cardigan pockets. Morgan looks out at the kids' game, still listening.
-SPEECH (Ruby): "I asked what you'd fix."
+SPEECH (Ruby): "What's wrong with this one?"
 
 PANEL 3: Tight on his thumb and forefinger spreading until his own smile dissolves into pixels.
-THOUGHT (Ethan): "Mine. I'd fix mine."
+THOUGHT (Ethan): "That smile."
 
 PANEL 4: He locks the phone and pockets it. All three hear his reply.
 SPEECH (Ethan): "I don't want to take another one today."
@@ -264,14 +264,14 @@ SPEECH (Ethan): "I don't want to take another one today."
 Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
 PANEL 1: Morgan stands. At Ethan's braced expression she deliberately loosens her shoulders.
-SPEECH (Morgan): "Okay. That's the photos done."
+SPEECH (Morgan): "Okay. Then we're done for today."
 
 PANEL 2: Ruby stays seated a moment. Her thumb traces the seam of her cardigan pocket.
 SPEECH (Ruby): "I'm disappointed."
 SPEECH (Ethan): "With me?"
 
 PANEL 3: Hold their faces across a little space. Ruby looks at him steadily.
-SPEECH (Ruby): "I wanted a good morning. I think you were having a different one."
+SPEECH (Ruby): "I thought you were having fun with us. I wish I'd caught on sooner."
 
 ### 018 · Lemon slices
 
@@ -281,7 +281,7 @@ PANEL 1: As the lawn game winds down, Riley arrives thirsty, grassy knees and al
 SPEECH (Riley): "Mom, can I have the sour kind?"
 SPEECH (Morgan): "One lemon coming up."
 
-PANEL 2: At the kitchen counter Rowan passes cups to Ruby. Avery indicates the cup she wants. Ruby slides it within reach. Ethan watches from the door.
+PANEL 2: At the kitchen counter show the cut lemon and wedges on a small plate beside the water jug. Rowan passes cups to Ruby. Avery points to her own cup. Ruby slides it within reach. Ethan watches from the door.
 SPEECH (Rowan): "Mommy, don't squeeze it in mine."
 SPEECH (Ruby): "I remember."
 
@@ -292,15 +292,15 @@ SPEECH (Riley): "That's your cat face!"
 
 Afternoon in the same kitchen. Water cups by sink. Album on cabinet, moved into friends' hands and returned closed on p20. First day's clothes.
 
-PANEL 1: Later. The drained cups stand by the sink. Kitchen afternoon light, quiet. The two friends sit beside the cabinet, closed album between them. Only now move past the morning.
-NARRATION (Narrator): "By afternoon the shade had moved off the steps."
+PANEL 1: Later. The drained cups stand by the sink. Kitchen afternoon light, quiet. The two friends sit beside the cabinet, closed album between them. Show the sunlit bottom step through the open back door.
+NARRATION (Narrator): "By afternoon, sunlight reached the bottom step."
 
 PANEL 2: Ruby works a loose tail of thread into the binding with her nail. Morgan holds the cover steady when Ruby offers it to her.
 SPEECH (Ruby): "I left the pocket empty so he'd see it."
 SPEECH (Morgan): "I thought you just hadn't printed one."
 
 PANEL 3: A smile from Ruby with a little embarrassment.
-SPEECH (Ruby): "I do this thing where I leave somebody a space and call it asking."
+SPEECH (Ruby): "I thought he'd see that empty spot and say, 'Get in one with me.'"
 
 ### 020 · What friends can say
 
@@ -314,8 +314,8 @@ SPEECH (Ruby): "To be fair, you did give him a ten-second shift."
 SPEECH (Morgan): "With two supervisors."
 
 PANEL 3: They share a laugh. Morgan passes the album back. Ruby sets it closed on the cabinet.
-SPEECH (Ruby): "Can we ask him one at a time next time?"
-SPEECH (Morgan): "I can do that."
+SPEECH (Ruby): "Next time I start answering for him, give me a nudge?"
+SPEECH (Morgan): "You get to nudge me back."
 
 ### 021 · Just sit
 
@@ -329,7 +329,7 @@ SPEECH (Ruby): "I wanted my husband for a minute."
 
 PANEL 3: Ethan sits beside her and leaves his phone in his pocket.
 SPEECH (Ethan): "You've got me, Babe."
-SPEECH (Ruby): "Good. I was about to find out who did it for the third time."
+SPEECH (Ruby): "Good. I've read this page three times."
 
 ### 022 · The unfinished page
 
@@ -337,27 +337,27 @@ Night one, warm kitchen light, dark windows, day-one clothes. Kids in bed. Ruby'
 
 PANEL 1: He glances at the page she has marked with her thumb.
 SPEECH (Ethan): "Bad book?"
-SPEECH (Ruby): "Good one. Rotten attention span tonight."
+SPEECH (Ruby): "It's good. I keep thinking about this morning."
 
 PANEL 2: She closes it around a cloth bookmark she stitched. She keeps the book, not holding it out as a job.
-SPEECH (Ruby): "This morning I kept trying to get you back. You were sitting right there."
+SPEECH (Ruby): "You were sitting right there, and somehow I missed you."
 
 PANEL 3: He turns his empty hands over on his knees.
 SPEECH (Ethan): "I heard you asking. I couldn't get there any faster."
-THOUGHT (Ruby): "I've been treating the distance like he put it there on purpose."
+THOUGHT (Ruby): "I thought he was waiting for me to drop it."
 
 ### 023 · Different mornings
 
 Night one, warm kitchen light, dark windows, day-one clothes. Kids in bed. Ruby's paperback has a stitched fabric bookmark. Ethan's phone stays pocketed.
 
 PANEL 1: Ethan stays seated beside Ruby. He does not immediately cover her hand when she goes quiet.
-SPEECH (Ethan): "Some days everybody sounds a room away. Even up close."
+SPEECH (Ethan): "Sometimes it sounds like everyone's in the next room. It was like that this morning."
 
 PANEL 2: Ruby gives the sentence a beat, her bookmark between her fingers.
 SPEECH (Ruby): "Does it help if I stay?"
 SPEECH (Ethan): "Right now? Yeah."
 
-PANEL 3: She opens her paperback again, angled so he can see it. He leans in.
+PANEL 3: She opens her paperback again at the stitched bookmark and angles the spread toward him. Show both reading the same page, with the printed lines too small to read. He leans in.
 SPEECH (Ruby): "You missed two murders."
 SPEECH (Ethan): "Start with the first one."
 
@@ -373,17 +373,17 @@ SPEECH (Morgan): "I liked having you here this morning. For about nine seconds."
 
 PANEL 3: He laughs. She follows his gaze toward the place on the rail where his phone stood.
 SPEECH (Ethan): "What was wrong with the tenth?"
-SPEECH (Morgan): "You were already halfway up to check on us."
+SPEECH (Morgan): "The timer went off and you were up. Didn't even see me smiling at you."
 
 ### 025 · What she kept
 
 Same evening, porch steps under soft porch light, lawn beyond. Day-one clothes. Morgan's small whiskey glass moves to her far side on p24, stays there until p27. Ethan's phone stays pocketed.
 
-PANEL 1: Morgan rests her arms on her knees. Her voice is easy at first.
-SPEECH (Morgan): "I know exactly how to get you out here to look at my truck."
+PANEL 1: Morgan rests her arms on her knees. Beyond the porch, a slice of light picks out the extended cab of her parked pickup where she glances. Her voice is easy at first.
+SPEECH (Morgan): "If I'd said my truck was making a noise, you'd have been out here in a second."
 
 PANEL 2: She risks looking straight at him. Her glass stays where she set it.
-SPEECH (Morgan): "I've spent all evening trying to ask if you'd come sit with me. Could've just opened the damn door."
+SPEECH (Morgan): "All I wanted was for you to come sit with me. Took me all evening to say it."
 
 PANEL 3: Ethan hooks his little finger around hers, a welcome familiar touch.
 SPEECH (Ethan): "I'd have come."
@@ -394,7 +394,7 @@ THOUGHT (Morgan): "I wish I'd believed that before he said it."
 Same evening, porch steps under soft porch light, lawn beyond. Day-one clothes. Morgan's small whiskey glass moves to her far side on p24, stays there until p27. Ethan's phone stays pocketed.
 
 PANEL 1: Same porch and seats. Ethan rubs his thumb against hers.
-SPEECH (Ethan): "Am I different out here with you?"
+SPEECH (Ethan): "You think I'm easier to talk to when it's just us?"
 
 PANEL 2: She considers it, no instant reassurance.
 SPEECH (Morgan): "You let me give you hell. Sometimes you even tell me to quit."
@@ -408,10 +408,10 @@ SPEECH (Morgan): "I get tired of guessing. I don't get tired of you."
 Same evening, porch steps under soft porch light, lawn beyond. Day-one clothes. Morgan's small whiskey glass moves to her far side on p24, stays there until p27. Ethan's phone stays pocketed.
 
 PANEL 1: Ethan looks out across the dark lawn. Leave comfortable room around the two of them.
-SPEECH (Ethan): "Five minutes? Before we go in."
+SPEECH (Ethan): "Can we sit here another five minutes?"
 
 PANEL 2: Morgan picks up her glass and settles back on the step.
-SPEECH (Morgan): "I've got five."
+SPEECH (Morgan): "Yeah. Scoot over a little."
 
 PANEL 3: Wide and silent. For the first time show him looking out at the same thing she sees. Phone stays pocketed.
 SILENT.
@@ -423,10 +423,10 @@ Second morning, all three at kitchen table. Closed handmade album with empty poc
 PANEL 1: Next morning. Soft window light. All three at kitchen table with the album closed. Ethan's phone lies in front of him. New outfits.
 NARRATION (Narrator): "The next morning."
 
-PANEL 2: She glances at the phone without touching it.
+PANEL 2: Ruby rests one fingertip on the edge of the closed album and glances at the phone without touching it.
 SPEECH (Ruby): "I've got room for one print. Want to choose it?"
 
-PANEL 3: Ethan opens the two shots. Crop to his hand and two small thumbnails, exact compositions from pages 10 and 12.
+PANEL 3: Ethan opens the two shots. Show the lit gallery screen prominently in the foreground below all three adult faces. The two thumbnails are the actual steps and lawn images from pp10 and 12 in their original day-one clothing. Keep the real speakers visible for both balloon tails.
 SPEECH (Ethan): "You both liked the first one."
 SPEECH (Morgan): "She asked which one you like."
 
@@ -434,11 +434,11 @@ SPEECH (Morgan): "She asked which one you like."
 
 Second morning, all three at kitchen table. Closed handmade album with empty pocket. Ethan's phone has exactly the steps shot and lawn shot from pp10 and 12 in this scene. For screen inserts reuse the selected v2 composition as a flat photo, with DAY-ONE clothes. Live adults wear DAY-TWO clothes. No print has been made.
 
-PANEL 1: Ethan holds up the second shot: Morgan and the three kids doing cat faces. Keep their expression and arrangement from the lawn.
+PANEL 1: Ethan holds up the second shot: Morgan and the three kids doing cat faces. Copy the exact p12 captured group and crop into the lit screen. In the stored image Morgan crouches behind them, Riley makes claws at center. In the live kitchen show Ethan's face alongside the phone as he speaks.
 SPEECH (Ethan): "This one. Look at Riley. She thinks she's terrifying."
 
 PANEL 2: Ruby starts to answer then looks at him instead of the phone.
-SPEECH (Ruby): "What do you like in the one with you in it?"
+SPEECH (Ruby): "And the one on the steps? What do you see when you look at that one?"
 
 PANEL 3: He switches back to the steps photo. The women wait. His eyes go straight to Ruby's pleased face, then Morgan's.
 THOUGHT (Ethan): "They're happy I got in. That's the first thing I check."
@@ -447,7 +447,7 @@ THOUGHT (Ethan): "They're happy I got in. That's the first thing I check."
 
 Second morning, all three at kitchen table. Closed handmade album with empty pocket. Ethan's phone has exactly the steps shot and lawn shot from pp10 and 12 in this scene. For screen inserts reuse the selected v2 composition as a flat photo, with DAY-ONE clothes. Live adults wear DAY-TWO clothes. No print has been made.
 
-PANEL 1: Ethan sets his phone face up, the first image still selected. Both women can hear him.
+PANEL 1: Ethan sets his phone face up, the saved p10 six-person steps photo still selected, in the day-one clothes and original seating. Angle the screen toward Ruby and Morgan. Keep its image distinct from the day-two table scene. Both women can hear him.
 SPEECH (Ethan): "I can't tell if I wanted to be there."
 
 PANEL 2: Ruby's hand stops on the album cover. Morgan looks directly at him. Make space for one quiet, precise question from Morgan.

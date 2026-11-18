@@ -14,6 +14,8 @@ Avery: 7, 126 cm, sturdy, long auburn hair tied back, hazel eyes, nose and cheek
 Rowan: 9, 130 cm, slender, short textured chestnut hair, brown-leaning hazel eyes, no freckles. Scene wardrobe: navy hoodie with orange accents, jeans, blue sneakers.
 Riley: about 6, 110 cm, slender, chestnut pixie, green-leaning hazel eyes, light nose freckles. Scene wardrobe: purple hoodie with teal lining, purple trousers, teal sneakers. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: First morning, kitchen through open back door to porch steps. Phone in Ethan's hand, album stays on cabinet after p2. Ruby's coffee moves table → hands → inside windowsill on p5.
 
@@ -27,6 +29,6 @@ SPEECH (Morgan): "That's Avery's. Scoot this way, cat."
 PANEL 3: Ethan frames five faces from the threshold. All five look back at him. Leave an Ethan-sized gap between the adults. No picture taken.
 THOUGHT (Ethan): "Through here I can tell when everybody's ready."
 
-PANEL 4: Reverse angle on Ethan lowering the phone just enough for Ruby to see his eyes.
-SPEECH (Ruby): "Who tells us when you are?"
+PANEL 4: Reverse angle from beside Ruby. Show her speaking in profile and Ethan lowering his phone until their eyes meet. Ruby pats the open spot beside her.
+SPEECH (Ruby): "There's room right here, Ethan."
 ```

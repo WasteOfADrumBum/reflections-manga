@@ -7,6 +7,8 @@ FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive cl
 CAST: Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings.
 Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
 
@@ -14,8 +16,8 @@ PANEL 1: Ruby indoors at the edge of the open doorway, Ethan beside her. Her thu
 THOUGHT (Ruby): "I could let him off. I'm very good at that."
 
 PANEL 2: She stops turning it. His eye meets hers.
-SPEECH (Ruby): "I want to open that book and see you in it. I get to want that, don't I?"
+SPEECH (Ruby): "When the kids open that book, I want them to see you there with us."
 
 PANEL 3: Ethan leans down to touch his forehead to hers. Keep his phone at his side.
 SPEECH (Ethan): "Yeah. I want you to have it."
-THOUGHT (Ruby): "That's almost what I asked."
+THOUGHT (Ruby): "I'd like you to want it too."

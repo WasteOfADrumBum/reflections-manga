@@ -11,14 +11,16 @@ CAST: Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes,
 Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings.
 Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
 PANEL 1: Just after the exposure Ethan returns to the rail. He retrieves the phone and brings it to the two women on the steps.
-SPEECH (Ethan): "Whole family. Even the ears."
+SPEECH (Ethan): "Look at Riley's ears."
 
-PANEL 2: Ruby enlarges the photo on the screen while Ethan holds it. Crop the insert to Ethan's smile only. Her own mouth loses its smile.
-SPEECH (Ruby): "Were you smiling when you went over there?"
+PANEL 2: Over Ruby's shoulder: her cheek and speaking mouth in profile beside the phone. On its lit screen her fingers enlarge Ethan's face from the exact stored p10 photograph. Match his captured smile even though his real expression has changed.
+SPEECH (Ruby): "Is that the smile you put on for pictures?"
 
 PANEL 3: Morgan sees a photo she likes. Ruby sees the instant before the shutter. Ethan looks between them.
 SPEECH (Morgan): "That's his smile."

@@ -10,14 +10,16 @@ FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive cl
 CAST: Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans.
 Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Same evening, porch steps under soft porch light, lawn beyond. Day-one clothes. Morgan's small whiskey glass moves to her far side on p24, stays there until p27. Ethan's phone stays pocketed.
 
-PANEL 1: Morgan rests her arms on her knees. Her voice is easy at first.
-SPEECH (Morgan): "I know exactly how to get you out here to look at my truck."
+PANEL 1: Morgan rests her arms on her knees. Beyond the porch, a slice of light picks out the extended cab of her parked pickup where she glances. Her voice is easy at first.
+SPEECH (Morgan): "If I'd said my truck was making a noise, you'd have been out here in a second."
 
 PANEL 2: She risks looking straight at him. Her glass stays where she set it.
-SPEECH (Morgan): "I've spent all evening trying to ask if you'd come sit with me. Could've just opened the damn door."
+SPEECH (Morgan): "All I wanted was for you to come sit with me. Took me all evening to say it."
 
 PANEL 3: Ethan hooks his little finger around hers, a welcome familiar touch.
 SPEECH (Ethan): "I'd have come."

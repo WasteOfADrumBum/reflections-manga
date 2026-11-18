@@ -9,6 +9,8 @@ Avery: 7, 126 cm, sturdy, long auburn hair tied back, hazel eyes, nose and cheek
 Rowan: 9, 130 cm, slender, short textured chestnut hair, brown-leaning hazel eyes, no freckles. Scene wardrobe: navy hoodie with orange accents, jeans, blue sneakers.
 Riley: about 6, 110 cm, slender, chestnut pixie, green-leaning hazel eyes, light nose freckles. Scene wardrobe: purple hoodie with teal lining, purple trousers, teal sneakers. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
 
@@ -17,7 +19,7 @@ SPEECH (Rowan): "If I go up there, I can see the phone."
 SPEECH (Avery): "Here."
 
 PANEL 2: Morgan crouches in Avery's eye line. Draw her finger indicating the current step first, then the lawn. Avery follows with her eyes.
-SPEECH (Morgan): "One picture here. Then the grass for the cat one."
+SPEECH (Morgan): "We'll take this one on your step. Then you can all be cats on the grass."
 
 PANEL 3: Avery resumes tapping her two-beat rhythm on her knee. Riley answers with a paw gesture. Rowan stays put, trying it too.
 SPEECH (Riley): "Is that the cat song?"

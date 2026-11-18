@@ -5,6 +5,8 @@ Purpose: Preserve the same fictional cast across panels, chapters, and the serie
 
 ## Current Reference Images
 
+Choose sheets for each outfit actually shown, including people inside a photograph or flashback. List the attachments in order and identify which panels or parts of a panel each sheet controls. If a character appears in everyday clothes and in a wedding portrait, include both sheets. For a page entirely in swimwear, each swimmer's swimsuit sheet can serve as their identity and outfit reference. For a recurring saved photo, also identify the selected source panel so its pose and crop carry forward.
+
 All six user-saved PNG files are present, 1536 x 1024 pixels each.
 They are selected for reuse as reference images. File registration does not
 silently approve every incidental detail or override established written facts.

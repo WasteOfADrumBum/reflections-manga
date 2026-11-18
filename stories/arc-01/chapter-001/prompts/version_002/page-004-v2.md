@@ -11,15 +11,17 @@ CAST: Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes,
 Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans.
 Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: First morning, kitchen through open back door to porch steps. Phone in Ethan's hand, album stays on cabinet after p2. Ruby's coffee moves table → hands → inside windowsill on p5.
 
 PANEL 1: At the open kitchen door Morgan holds a palm level, showing Ethan where the phone could rest on the broad porch rail. No one sets it down yet.
 SPEECH (Morgan): "Set the timer. I'll test the spot with you."
 
-PANEL 2: Ruby passes Morgan her mug as she shrugs her slipped cardigan sleeve back up. Morgan takes a sip before handing it back.
+PANEL 2: Morgan has taken a cheeky sip while holding Ruby's distinctive rose mug. Draw her lowering it from her mouth as Ruby finishes adjusting her sleeve and reaches to take it back.
 SPEECH (Ruby): "That's mine."
-SPEECH (Morgan): "Then why's it exactly how I like it?"
+SPEECH (Morgan): "I know. Yours always tastes better."
 
 PANEL 3: Morgan studies Ethan fiddling with the phone, his back to them. Her grin fades.
 THOUGHT (Morgan): "Turn around, handsome. Just because."

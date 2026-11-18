@@ -11,6 +11,8 @@ Rowan: 9, 130 cm, slender, short textured chestnut hair, brown-leaning hazel eye
 Avery: 7, 126 cm, sturdy, long auburn hair tied back, hazel eyes, nose and cheek freckles. Scene wardrobe: pastel music-note tee, pastel leggings, lavender sneakers.
 Riley: about 6, 110 cm, slender, chestnut pixie, green-leaning hazel eyes, light nose freckles. Scene wardrobe: purple hoodie with teal lining, purple trousers, teal sneakers. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
 
@@ -23,5 +25,5 @@ SPEECH (Ruby): "There you are."
 PANEL 3: Near the instant of capture, his smile arrives a fraction late. Phone stays propped.
 THOUGHT (Ethan): "Her face just lit up. Whatever I'm doing with mine, keep it there."
 
-PANEL 4: Freeze the first group shot from the phone's angle. All six in frame, shade across the steps. No drawn shutter text.
+PANEL 4: The whole silent panel IS the stored landscape photograph, seen straight through the rear lens. Back row from left: Morgan, Ethan, Ruby. In front: Rowan, Riley, Avery. Riley holds two hands up like cat ears, Avery taps one knee, Ethan's smile has just caught up. Preserve these exact poses, crop and light for every later display of the steps photo.
 SILENT.

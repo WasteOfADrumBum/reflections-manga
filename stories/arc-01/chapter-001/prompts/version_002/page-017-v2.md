@@ -11,16 +11,18 @@ CAST: Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders,
 Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans.
 Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Same morning and day-one clothes. Steps shot (p10) contains all six, Ethan between Morgan and Ruby. Ethan retrieves phone on p11. Lawn shot (p12) contains only Morgan, Rowan, Avery and Riley making playful cat faces. Ethan controls the phone and pockets it on pp13 and 16. Use existing photos exactly where specified.
 
 PANEL 1: Morgan stands. At Ethan's braced expression she deliberately loosens her shoulders.
-SPEECH (Morgan): "Okay. That's the photos done."
+SPEECH (Morgan): "Okay. Then we're done for today."
 
 PANEL 2: Ruby stays seated a moment. Her thumb traces the seam of her cardigan pocket.
 SPEECH (Ruby): "I'm disappointed."
 SPEECH (Ethan): "With me?"
 
 PANEL 3: Hold their faces across a little space. Ruby looks at him steadily.
-SPEECH (Ruby): "I wanted a good morning. I think you were having a different one."
+SPEECH (Ruby): "I thought you were having fun with us. I wish I'd caught on sooner."
 ```

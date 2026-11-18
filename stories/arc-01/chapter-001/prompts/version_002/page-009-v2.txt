@@ -7,16 +7,18 @@ FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive cl
 CAST: Ethan: 38, 178 cm, textured brown high fade, full brown beard, brown eyes, realistic soft rounded dad bod. Scene wardrobe: dark sage short-sleeve henley, dark jeans.
 Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
 
-PANEL 1: Ethan steps onto the porch to test the broad rail beside the door. Morgan peels away from the group to meet him. He owns the phone throughout.
+PANEL 1: Ethan steps onto the porch to test the broad rail beside the door. Morgan peels away from the group to meet him. Ethan holds the phone. Leave the planter and a clear stretch of rail in frame.
 SPEECH (Ethan): "Help me get this level, Hun?"
 
 PANEL 2: They set the phone landscape against the heavy planter, lens facing the steps. Morgan's bare fingers steady its lower edge.
 SPEECH (Morgan): "There. Let go."
 SPEECH (Ethan): "Bossy."
-SPEECH (Morgan): "Accurate."
+SPEECH (Morgan): "Steady now, isn't it?"
 
 PANEL 3: Close on his hand opening. He laughs quietly; relief visible in his shoulders.
-THOUGHT (Ethan): "I like it when she tells me where to put my hands. It's the minute after that I can't figure out."
+THOUGHT (Ethan): "Soon as she says where she wants me, I can breathe again."

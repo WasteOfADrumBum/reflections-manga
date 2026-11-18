@@ -10,6 +10,8 @@ FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive cl
 CAST: Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans.
 Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
 
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
 CONTINUITY: Afternoon in the same kitchen. Water cups by sink. Album on cabinet, moved into friends' hands and returned closed on p20. First day's clothes.
 
@@ -21,6 +23,6 @@ SPEECH (Ruby): "To be fair, you did give him a ten-second shift."
 SPEECH (Morgan): "With two supervisors."
 
 PANEL 3: They share a laugh. Morgan passes the album back. Ruby sets it closed on the cabinet.
-SPEECH (Ruby): "Can we ask him one at a time next time?"
-SPEECH (Morgan): "I can do that."
+SPEECH (Ruby): "Next time I start answering for him, give me a nudge?"
+SPEECH (Morgan): "You get to nudge me back."
 ```
