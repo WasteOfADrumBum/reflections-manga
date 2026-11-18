@@ -2,6 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/studio.ts": {
+      "maxDuration": 300,
+      "excludeFiles": "{tests,scripts,admin,pages,images,css,js}/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/studio/:path*", "destination": "/api/studio?__path=:path*" }
+  ],
+  "crons": [
+    { "path": "/api/studio/worker/cron", "schedule": "17 9 * * *" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -15,6 +27,14 @@
     {
       "source": "/images/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/admin(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' blob: data:; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" }
+      ]
     }
   ]
 }
