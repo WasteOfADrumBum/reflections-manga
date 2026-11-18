@@ -22,11 +22,17 @@ Dependencies are deliberately few: `openai`, `@vercel/blob`, `@vercel/functions`
 
 ## Data flow for one page
 
-1. **Plan (free).** Load `stories/<arc>/<chapter>/prompts/page-NNN-vN.txt` (latest
-   version) and the script. Check the prompt's exact lettering against
-   `script.md` word for word; any drift blocks the page (a canon decision).
-2. **References.** Canonical identity sheets in the prompt's `REFERENCE ORDER`
-   (the image under "Current Card" in each `references/index.md`), then approved
+1. **Plan (free).** Load the chapter's prompt for the page from its configured
+   `promptDir` (Chapter 001: `prompts/version_002/page-NNN-v2.txt`, latest
+   version) and its `scriptFile` (`script-v2.md`). Check the prompt's exact
+   lettering against the script word for word; any drift blocks the page (a
+   canon decision).
+2. **References.** Identity sheets in the prompt's `REFERENCE ORDER`. Version 2
+   prompts name each sheet file (`walker-ethan.png`, `children/walker-riley.png`,
+   `ruby-bennett-walker-reference-sheet-v11.png`); the studio finds them only in
+   the configured sheet folders and the characters' own `references/` folders and
+   attaches them in exactly that order. Older v1 prompts name a character and get
+   the image under "Current Card" in its `references/index.md`. Then approved
    outfit and location uploads scoped to the chapter/page, then scene pages the
    prompt names: repository artwork, else an approved studio version, else a
    QA-passed draft from this run (marked provisional). Identity always comes

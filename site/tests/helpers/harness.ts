@@ -11,13 +11,58 @@ import { resetMigrationCache } from "../../api/_lib/db/schema.ts";
 import { silentLogger } from "../../api/_lib/log.ts";
 import type { ImageProvider, ImageRequest, QaProvider, QaRequest, VisionQaResult } from "../../api/_lib/openai/providers.ts";
 import type { Publisher, PublishRequest } from "../../api/_lib/publish/publisher.ts";
-import { LocalRepoSource, type RepoSource } from "../../api/_lib/repo/source.ts";
+import { findChapterBlock, matchBracket } from "../../api/_lib/content/chapters.ts";
+import { LocalRepoSource, type RepoEntry, type RepoSource } from "../../api/_lib/repo/source.ts";
 import { MemoryBlobStore } from "../../api/_lib/storage/blobs.ts";
 
 export const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../..");
 export const PASSWORD = "correct horse battery staple";
 export const SESSION_SECRET = "test-session-secret-0123456789abcdef";
 export const CRON_SECRET = "test-cron-secret-0123456789abcdef";
+
+/**
+ * The repository as the studio sees it after the version 2 reader change
+ * (PR 32): chapter 001 shows only the v2 page 001, and the v1 reader files
+ * live in site/pages/chapter-001/version_1/. Tests use this view so they do
+ * not depend on whether that change has been merged yet.
+ */
+export class V2ReaderRepo implements RepoSource {
+  private chaptersJs: Promise<string | null> | undefined;
+  constructor(private readonly base: RepoSource) {}
+  private static hidden(p: string) {
+    const m = /^site\/pages\/chapter-001\/(\d{3})\.webp$/.exec(p);
+    return m != null && Number(m[1]) > 1;
+  }
+  private readerJs() {
+    this.chaptersJs ??= this.base.readText("site/js/chapters.js").then((js) => {
+      if (!js) return js;
+      const block = findChapterBlock(js, "001");
+      if (!block) return js;
+      const open = js.indexOf("pages: [", block.start);
+      const close = matchBracket(js, open + "pages: ".length, "[", "]");
+      const entry = `{ src: "/pages/chapter-001/001.webp", alt: "Version 2 page 001.", width: 1024, height: 1536 }`;
+      return `${js.slice(0, open)}pages: [\n      ${entry}\n    ]${js.slice(close + 1)}`;
+    });
+    return this.chaptersJs;
+  }
+  readText(p: string) {
+    if (p === "site/js/chapters.js") return this.readerJs();
+    return V2ReaderRepo.hidden(p) ? Promise.resolve(null) : this.base.readText(p);
+  }
+  readBinary(p: string) {
+    return V2ReaderRepo.hidden(p) ? Promise.resolve(null) : this.base.readBinary(p);
+  }
+  async list(dir: string): Promise<RepoEntry[]> {
+    return (await this.base.list(dir)).filter((e) => !V2ReaderRepo.hidden(e.path));
+  }
+  exists(p: string) {
+    return V2ReaderRepo.hidden(p) ? Promise.resolve(false) : this.base.exists(p);
+  }
+}
+
+export function testRepo(): RepoSource {
+  return new V2ReaderRepo(new LocalRepoSource(REPO_ROOT));
+}
 
 let cachedHash: string | undefined;
 async function passwordHash() {
@@ -68,7 +113,7 @@ export class MockImageProvider implements ImageProvider {
     const next = this.script.shift() ?? "ok";
     if (typeof next === "function") return { image: await next(req), format: "png" as const, usage: null, model: req.model };
     if (next !== "ok") throw Object.assign(new Error(next.message), next);
-    const page = /page (\d+)\./.exec(req.prompt)?.[1] ?? "?";
+    const page = /\bPage (\d+)\./.exec(req.prompt)?.[1] ?? "?";
     return {
       image: await fakePage(`P${page}`, this.size.width, this.size.height),
       format: "png" as const,
@@ -144,7 +189,7 @@ export async function createHarness(overrides: Partial<StudioDeps> = {}, opts: {
   const images = new MockImageProvider();
   const qa = new MockQaProvider();
   const blobs = opts.blobs ?? new MemoryBlobStore();
-  const repo = new LocalRepoSource(REPO_ROOT);
+  const repo = testRepo();
   const publisher = new MockPublisher(repo);
   const kicks: string[] = [];
   const deps: StudioDeps = {

@@ -55,7 +55,7 @@ test("one-click test page, approval, full chapter run, review and publish", asyn
 
   await page.getByRole("link", { name: "Generate" }).first().click();
   await expect(page.getByRole("heading", { level: 1, name: "Generate pages" })).toBeVisible();
-  await expect(page.getByLabel("Page 005", { exact: false })).toBeDisabled();
+  await expect(page.getByLabel("Page 002", { exact: false })).toBeDisabled();
   await expect(page.getByText("Estimated cost")).toBeVisible();
   await expectAccessible(page);
   await page.getByRole("button", { name: "Run one test page" }).click();
@@ -70,7 +70,7 @@ test("one-click test page, approval, full chapter run, review and publish", asyn
   await page.getByRole("link", { name: "Review pages" }).click();
   await expect(page.getByRole("heading", { level: 1, name: "Review and publish" })).toBeVisible();
   await page.getByRole("button", { name: "Approve" }).first().click();
-  await expect(page.getByText("Publish page 021")).toBeVisible();
+  await expect(page.getByText(/^Publish page \d{3}$/)).toBeVisible();
   await expectAccessible(page);
 
   await page.getByRole("link", { name: "Generate" }).first().click();

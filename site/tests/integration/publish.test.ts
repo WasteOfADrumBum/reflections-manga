@@ -39,7 +39,8 @@ describe("review and publishing", () => {
     await call("POST", `/versions/${id}/approve`, {});
     const res = await call("POST", "/publish", { chapterId: "001", versionIds: [id], confirm: true });
     expect(res.status).toBe(409);
-    expect(res.data.error.details.gaps).toEqual([16, 17, 18, 19, 20]);
+    // Only v2 page 001 is in the reader; page 002's art is in the repository but not published yet.
+    expect(res.data.error.details.gaps).toEqual(Array.from({ length: 19 }, (_, i) => i + 2));
   });
 
   it("opens one pull request that only adds files and appends reader entries in order", async () => {
@@ -60,14 +61,16 @@ describe("review and publishing", () => {
     const nextJs = req.files.find((f) => f.path === "site/js/chapters.js")!.content.toString();
     const before = evalChapters(original).find((c) => c.id === "001")!;
     const after = evalChapters(nextJs).find((c) => c.id === "001")!;
-    // Existing entries (covers, 001-015 and end card) are untouched; new pages slot in before the end card.
+    // Existing entries (covers, v2 page 001 and end card) are untouched; new pages slot in before the end card.
     const srcs = after.pages.map((p) => p.src);
     expect(srcs.slice(0, before.pages.length - 1)).toEqual(before.pages.slice(0, -1).map((p) => p.src));
     expect(srcs.slice(-4)).toEqual(["/pages/chapter-001/021.webp", "/pages/chapter-001/022.webp", "/pages/chapter-001/023.webp", before.pages.at(-1)!.src]);
     // Descriptive alt text comes from the script, including exact dialogue.
     const alt23 = after.pages.find((p) => p.src.endsWith("023.webp"))!.alt;
-    expect(alt23).toContain(`Morgan: "What's wrong with you today?"`);
-    expect(alt23).toContain(`Ethan's thought caption: "Letting her lead is easy. Letting her see me struggling isn't."`);
+    expect(alt23).toContain(`Ethan: "Sometimes it sounds like everyone's in the next room. It was like that this morning."`);
+    expect(alt23).toContain(`Ruby: "You missed two murders."`);
+    const alt22 = after.pages.find((p) => p.src.endsWith("022.webp"))!.alt;
+    expect(alt22).toContain(`"I thought he was waiting for me to drop it."`);
     // Other chapters are untouched.
     expect(evalChapters(nextJs).filter((c) => c.id !== "001")).toEqual(evalChapters(original).filter((c) => c.id !== "001"));
 
@@ -88,6 +91,7 @@ describe("review and publishing", () => {
   });
 
   it("keeps only one approved version per page and lets the owner reject one", async () => {
+    h.clock.advance(1000);
     await call("POST", "/chapters/001/pages/21/regenerate", { confirmPaid: true });
     await drain(h);
     const versions = (await h.db.query<{ id: string }>(`SELECT id FROM page_versions WHERE page = 21 ORDER BY created_at`)).map((r) => r.id);

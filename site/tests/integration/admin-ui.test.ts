@@ -94,28 +94,29 @@ describe("admin interface", () => {
   it("lists chapter pages with locked, ready and unprepared statuses", async () => {
     await go("#/chapters/001", () => heading().startsWith("Chapter 001"));
     const tiles = [...document.querySelectorAll(".page-tile")].map((t) => t.textContent ?? "");
+    expect(tiles).toHaveLength(30);
     expect(tiles[0]).toMatch(/Page 001.*Published/);
-    expect(tiles[19]).toMatch(/Page 020.*Locked/);
-    expect(tiles[20]).toMatch(/Page 021.*Ready to generate/);
-    expect(tiles[31]).toMatch(/Page 032.*Not prepared/);
+    expect(tiles[1]).toMatch(/Page 002.*Locked/);
+    expect(tiles[2]).toMatch(/Page 003.*Ready to generate/);
+    expect(tiles[29]).toMatch(/Page 030.*Ready to generate/);
     expect(await a11y()).toEqual([]);
   });
 
   it("shows a page's script, references and prompt", async () => {
     await go("#/chapters/001/pages/23", () => heading().startsWith("Page 023"));
     const text = document.getElementById("view")!.textContent!;
-    expect(text).toMatch(/Ethan Walker canonical identity sheet/);
-    expect(text).toMatch(/What's wrong with you today\?/);
+    expect(text).toMatch(/Ruby Bennett-Walker identity sheet \(bennett-walker-ruby\.png\)/);
+    expect(text).toMatch(/You missed two murders\./);
     expect(await a11y()).toEqual([]);
   });
 
   it("generates a test page in one click, then unlocks the full chapter", async () => {
     await go("#/studio/001", () => heading() === "Generate pages" && !!document.querySelector(".stat"));
     const box = (n: number) => [...document.querySelectorAll<HTMLInputElement>(".check-grid input")].find((i) => i.value === String(n))!;
-    expect(box(5).disabled).toBe(true);
-    expect(box(21).disabled).toBe(false);
-    expect(box(21).checked).toBe(true);
-    expect(box(31).disabled).toBe(true);
+    expect(box(2).disabled).toBe(true);
+    expect(box(3).disabled).toBe(false);
+    expect(box(3).checked).toBe(true);
+    expect(box(31)).toBeUndefined();
     expect(await a11y()).toEqual([]);
     const start = [...document.querySelectorAll("button")].find((b) => b.textContent === "Run one test page")!;
     start.click();
@@ -130,7 +131,7 @@ describe("admin interface", () => {
     await go("#/review/001", () => heading() === "Review and publish" && !!document.querySelector(".version"));
     const approve = [...document.querySelectorAll("button")].find((b) => b.textContent === "Approve")!;
     approve.click();
-    await settle(() => !!document.querySelector("form.card h2") && document.getElementById("view")!.textContent!.includes("Publish page 021"));
+    await settle(() => !!document.querySelector("form.card h2") && document.getElementById("view")!.textContent!.includes("Publish page 003"));
     expect(await a11y()).toEqual([]);
 
     await go("#/studio/001", () => heading() === "Generate pages" && !!document.querySelector(".stat"));

@@ -47,7 +47,7 @@ describe("retries, failures and recovery", () => {
   });
 
   it("regenerates automatically when QA finds a clear failure, then passes", async () => {
-    h.qa.script = [{ panelCount: 3, unexpectedPeople: ["a stranger by the window"] }];
+    h.qa.script = [{ panelCount: 5, unexpectedPeople: ["a stranger by the window"] }];
     const job = await call("POST", "/jobs", { chapterId: "001", pages: [22], confirmPaid: true });
     const outcomes = await drain(h);
     expect(outcomes).toEqual(["22:generated", "22:qa_retry", "22:generated", "22:pass"]);

@@ -2,9 +2,10 @@
 
 ## Generating a chapter
 
-1. **Generate** → choose the chapter. Ready pages are selected; locked and
-   unprepared pages cannot be selected (Chapter 001: 001–020 locked for this
-   revision, 031–032 outlined only).
+1. **Generate** → choose the chapter. Ready pages are selected; pages that
+   already have artwork cannot be selected. Chapter 001 works from the version 2
+   retelling (30 pages): v2 pages 001 and 002 already have art, so 003–030 are
+   ready. Nothing past page 030 is generated.
 2. Check the estimate: expected cost with retries and the worst case if every
    page uses all attempts. Set the job budget.
 3. Press **Generate chapter** and confirm. You can close the tab.
@@ -35,8 +36,9 @@ The studio opens a GitHub pull request that:
   without touching existing entries, covers, end cards or other chapters.
 
 It refuses if any target file already exists. Merging the pull request deploys
-the pages. Chapter 001 currently has pages 016–020 in the repository but not in
-the reader; publishing 021+ first asks you to confirm the gap.
+the pages. Chapter 001's reader shows only v2 page 001; v2 page 002 is in the
+repository but not in the reader yet, so publishing later pages first asks you
+to confirm the gap.
 
 ## Costs
 

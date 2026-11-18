@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { loadCharacters } from "../../api/_lib/content/characters.ts";
+import { loadCharacters, resolveSheetFiles } from "../../api/_lib/content/characters.ts";
 import { ContentService, type LoadedPrompt } from "../../api/_lib/content/chapters.ts";
 import { loadStudioConfig } from "../../api/_lib/content/config.ts";
+import { parsePrompt } from "../../api/_lib/content/prompt-parser.ts";
 import { buildContinuityState, inferTimeOfDay } from "../../api/_lib/engine/continuity.ts";
 import { buildFinalPrompt, planReferences } from "../../api/_lib/engine/references.ts";
 import { backoffMs } from "../../api/_lib/engine/worker.ts";
@@ -9,48 +10,82 @@ import { classifyProviderError } from "../../api/_lib/openai/providers.ts";
 import { costFromUsage, estimateJob, estimatePageCost } from "../../api/_lib/openai/pricing.ts";
 import { compareTranscription, normalizeText, similarity } from "../../api/_lib/qa/dialogue.ts";
 import { combineQa, deterministicChecks } from "../../api/_lib/qa/evaluate.ts";
-import { LocalRepoSource } from "../../api/_lib/repo/source.ts";
-import { REPO_ROOT } from "../helpers/harness.ts";
+import { testRepo } from "../helpers/harness.ts";
 
-const repo = new LocalRepoSource(REPO_ROOT);
+const repo = testRepo();
 async function prompt(page: number) {
   const c = new ContentService(repo, await loadStudioConfig(repo));
   return { prompt: (await c.loadPrompt("001", page)) as LoadedPrompt, script: await c.scriptPage("001", page) };
 }
 
+async function sheets(p: LoadedPrompt) {
+  const config = await loadStudioConfig(repo);
+  return resolveSheetFiles(repo, await loadCharacters(repo), config.chapters["001"]!.identitySheetDirs, p.referenceOrder.flatMap((r) => (r.file ? [r.file] : [])));
+}
+
 describe("reference planning", () => {
-  it("puts identity sheets first in prompt order and caps scene pages", async () => {
+  it("attaches the sheets the v2 prompt names, in its order, then outfits and scene pages", async () => {
     const { prompt: p } = await prompt(24);
     const plan = planReferences({
       chapterId: "001",
       prompt: p,
       characters: await loadCharacters(repo),
+      sheetFiles: await sheets(p),
       uploads: [
-        { id: "u1", characterId: "ruby-bennett-walker", kind: "outfit", status: "approved", label: "lavender cardigan", blobPath: "studio/references/u1.png", chapterId: "001", pages: [24] },
-        { id: "u2", characterId: "ruby-bennett-walker", kind: "outfit", status: "experimental", label: "draft", blobPath: "studio/references/u2.png", chapterId: null, pages: null },
-        { id: "u3", characterId: "morgan-hayes", kind: "outfit", status: "approved", label: "other chapter", blobPath: "studio/references/u3.png", chapterId: "002", pages: null },
+        { id: "u1", characterId: "morgan-hayes", kind: "outfit", status: "approved", label: "porch cardigan", blobPath: "studio/references/u1.png", chapterId: "001", pages: [24] },
+        { id: "u2", characterId: "morgan-hayes", kind: "outfit", status: "experimental", label: "draft", blobPath: "studio/references/u2.png", chapterId: null, pages: null },
+        { id: "u3", characterId: "ethan-walker", kind: "outfit", status: "approved", label: "other chapter", blobPath: "studio/references/u3.png", chapterId: "002", pages: null },
       ],
-      findScenePage: (page) => (page === 22 ? { page, source: "studio", path: "studio/drafts/p22.png", provisional: false, label: "Page 022 (approved studio version)" } : null),
-      maxSceneReferences: 2,
+      findScenePage: () => null,
+      maxSceneReferences: 3,
     });
     expect(plan.blockers).toEqual([]);
     expect(plan.entries.map((e) => `${e.slot}:${e.role}:${e.characterId ?? e.page ?? ""}`)).toEqual([
-      "1:identity:morgan-hayes",
-      "2:identity:ruby-bennett-walker",
-      "3:outfit:ruby-bennett-walker",
-      "4:scene:22",
+      "1:identity:ethan-walker",
+      "2:identity:morgan-hayes",
+      "3:outfit:morgan-hayes",
     ]);
+    expect(plan.entries[0]!.path).toBe("characters/_reference-sheets/main_characters/walker-ethan.png");
     expect(plan.warnings.join(" ")).toMatch(/page 023 has no usable image/);
     const final = buildFinalPrompt(p, plan);
     expect(final.startsWith(p.text.trimEnd())).toBe(true);
-    expect(final).toContain("image 4 = Page 022 (approved studio version) (scene continuity only; never overrides the identity sheets)");
+    expect(final).toContain("image 1 = Ethan Walker identity sheet (walker-ethan.png)");
     expect(final).toContain("Not attached: page 023");
   });
 
-  it("blocks a page whose character has no canonical sheet", async () => {
+  it("keeps all six sheets for page 001 and caps scene pages", async () => {
+    const { prompt: p1 } = await prompt(1);
+    const plan1 = planReferences({ chapterId: "001", prompt: p1, characters: await loadCharacters(repo), sheetFiles: await sheets(p1), uploads: [], findScenePage: () => null, maxSceneReferences: 3 });
+    expect(plan1.blockers).toEqual([]);
+    expect(plan1.entries.map((e) => e.path.split("/").pop())).toEqual([
+      "bennett-walker-ruby.png",
+      "walker-ethan.png",
+      "walker-morgan.png",
+      "morgan-hayes-reference-sheet-v7.png",
+      "ruby-bennett-walker-reference-sheet-v11.png",
+      "ethan-walker-reference-sheet-v5.png",
+    ]);
+    const { prompt: p28 } = await prompt(28);
+    const scene = (page: number) => ({ page, source: "repo" as const, path: `stories/x/P${page}.png`, provisional: false, label: `Page ${page}` });
+    const plan28 = planReferences({ chapterId: "001", prompt: p28, characters: await loadCharacters(repo), sheetFiles: await sheets(p28), uploads: [], findScenePage: scene, maxSceneReferences: 2 });
+    expect(plan28.entries.filter((e) => e.role === "scene").map((e) => e.page)).toEqual([27, 10]);
+    expect(plan28.warnings.join(" ")).toMatch(/Skipped scene reference page 012/);
+  });
+
+  it("blocks a page when a named sheet cannot be found", async () => {
     const { prompt: p } = await prompt(23);
+    const found = await sheets(p);
+    found.set("walker-ethan.png", null);
+    const plan = planReferences({ chapterId: "001", prompt: p, characters: await loadCharacters(repo), sheetFiles: found, uploads: [], findScenePage: () => null, maxSceneReferences: 2 });
+    expect(plan.blockers.join(" ")).toMatch(/"walker-ethan.png" named in the reference order was not found/);
+  });
+
+  it("v1 prompts still use each character's canonical card", async () => {
+    const text = (await repo.readText("stories/arc-01/chapter-001/prompts/version_001/page-023-v1.txt"))!;
+    const p = { ...parsePrompt(text, { page: 23, version: 1 }), path: "v1" } as LoadedPrompt;
     const chars = (await loadCharacters(repo)).map((c) => (c.id === "morgan-hayes" ? { ...c, canonicalSheet: null } : c));
     const plan = planReferences({ chapterId: "001", prompt: p, characters: chars, uploads: [], findScenePage: () => null, maxSceneReferences: 2 });
+    expect(plan.entries[0]!.label).toBe("Ethan Walker canonical identity sheet");
     expect(plan.blockers.join(" ")).toMatch(/Morgan H. Walker has no canonical reference sheet/);
   });
 });
@@ -58,6 +93,7 @@ describe("reference planning", () => {
 describe("continuity", () => {
   it("infers time of day from explicit instructions", () => {
     expect(inferTimeOfDay("The NEXT morning, same kitchen")).toBe("next morning");
+    expect(inferTimeOfDay("Second morning, all three at the table")).toBe("next morning");
     expect(inferTimeOfDay("Later THAT NIGHT")).toBe("night");
     expect(inferTimeOfDay("nothing here")).toBeNull();
   });
@@ -67,9 +103,8 @@ describe("continuity", () => {
     const s = buildContinuityState({ prompt: p, script, previous: null, previousApprovedPage: 27 });
     expect(s.timeOfDay).toBe("next morning");
     expect(s.location).toMatch(/kitchen/);
-    expect(s.characters.find((c) => c.name === "Morgan H. Walker")?.outfit).toMatch(/BURGUNDY/);
-    expect(s.props.join(" ")).toMatch(/mixing bowl/);
-    expect(s.relationships.join(" ")).toMatch(/PLATONIC/);
+    expect(s.characters.find((c) => c.name === "Ethan")?.outfit).toMatch(/charcoal long-sleeve henley/);
+    expect(s.scene).toBe(script!.title);
     expect(s.previousApprovedPage).toBe(27);
     expect(s.source).toBe("prompt");
   });

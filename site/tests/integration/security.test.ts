@@ -129,21 +129,33 @@ describe("existing artwork is never overwritten", () => {
   });
   afterAll(async () => h.db.close?.());
 
-  it.each([1, 5, 15, 16, 20])("refuses to queue locked page %i", async (page) => {
+  it.each([1, 2])("refuses to queue page %i, which already has v2 artwork", async (page) => {
     const res = await call("POST", "/jobs", { chapterId: "001", pages: [page], confirmPaid: true });
     expect(res.status).toBe(409);
     expect(JSON.stringify(res.data)).toMatch(/locked|already/i);
   });
 
   it("refuses to regenerate a locked page", async () => {
-    const res = await call("POST", "/chapters/001/pages/10/regenerate", { confirmPaid: true });
+    const res = await call("POST", "/chapters/001/pages/2/regenerate", { confirmPaid: true });
     expect(res.status).toBe(409);
   });
 
-  it("refuses unprepared pages 031-032 instead of inventing them", async () => {
+  it("refuses pages past the end of the 30-page v2 chapter instead of inventing them", async () => {
     const res = await call("POST", "/jobs", { chapterId: "001", pages: [31, 32], confirmPaid: true });
     expect(res.status).toBe(409);
-    expect(JSON.stringify(res.data)).toMatch(/outlined only/);
+    expect(JSON.stringify(res.data)).toMatch(/outside this chapter/);
+  });
+
+  it("refuses pages listed in lockedPages", async () => {
+    const { content } = await import("../../api/_lib/context.ts");
+    const c = await content(h.deps, true);
+    const cfg = c.chapterConfig("001")!;
+    const prev = cfg.lockedPages;
+    cfg.lockedPages = "5";
+    const res = await call("POST", "/jobs", { chapterId: "001", pages: [5], confirmPaid: true });
+    cfg.lockedPages = prev;
+    expect(res.status).toBe(409);
+    expect(JSON.stringify(res.data)).toMatch(/locked/i);
   });
 
   it("blocks a queued page that became locked before the worker reached it", async () => {
