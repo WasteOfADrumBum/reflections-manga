@@ -1,0 +1,9 @@
+# Keep tests, tooling and docs out of the deployment. Only the static site,
+# the admin pages and api/ functions are deployed.
+tests
+scripts
+test-results
+playwright-report
+*.config.js
+*.config.ts
+tsconfig.json

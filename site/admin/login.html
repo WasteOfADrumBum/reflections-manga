@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Sign in | Reflections Studio</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script type="module" src="/admin/js/login.js"></script>
+</head>
+<body class="studio">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="2" y="2" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 6h20L6 26z" fill="currentColor"/><path d="M26 10v16H10z" fill="#9a3412"/></svg>
+        Reflections <span class="studio-tag">Studio</span>
+      </a>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="section">
+      <div class="wrap narrow">
+        <h1>Sign in to the studio</h1>
+        <p>The production studio is private. Only the series owner can sign in.</p>
+        <div id="login-error" class="notice notice-error" role="alert" hidden></div>
+        <form id="login-form" class="card form-card" novalidate>
+          <div class="field">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required aria-describedby="password-hint">
+            <p class="hint" id="password-hint">Your password manager and paste both work here.</p>
+          </div>
+          <div class="field-check">
+            <input id="show-password" type="checkbox">
+            <label for="show-password">Show password</label>
+          </div>
+          <button class="btn btn-primary" type="submit">Sign in</button>
+        </form>
+        <p><a href="/">Back to the public site</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

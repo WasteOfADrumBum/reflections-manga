@@ -719,3 +719,20 @@ html:not(.js) .album-leaf + .album-leaf { margin-top: 0.9rem; }
   .album-book, .album-leaf, .snap { border: 1px solid CanvasText; }
   .album-leaf::before, .snap::before { display: none; }
 }
+
+/* Age gate (js/age-gate.js). Gated content stays hidden, for sight and screen readers, until confirmed. */
+html[data-age-gate]:not(.age-ok) [data-age-gated] { display: none !important; }
+.age-locked { padding: clamp(2.5rem, 8vw, 5rem) 0; max-width: 40rem; }
+.age-locked h1 { font-size: clamp(2rem, 6vw, 3rem); }
+.age-locked h1:focus { outline: none; }
+.age-locked h1:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.age-dialog {
+  width: min(32rem, calc(100vw - 2rem)); max-height: calc(100vh - 2rem); overflow: auto;
+  padding: 1.5rem; border: 3px solid var(--rule); background: var(--card); color: var(--ink); box-shadow: var(--shadow);
+}
+.age-dialog::backdrop { background: rgba(10, 10, 14, 0.85); }
+.age-dialog h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+.age-dialog p { margin-bottom: 0; }
+.age-noscript { padding: clamp(2.5rem, 8vw, 5rem) 0; max-width: 40rem; }
+@media (prefers-reduced-motion: no-preference) { .age-dialog[open] { animation: rise 0.2s ease both; } }
+@media (forced-colors: active) { .age-dialog { border-color: CanvasText; box-shadow: none; } }

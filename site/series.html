@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-age-gate>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&display=swap">
   <link rel="stylesheet" href="/css/styles.css">
   <script>document.documentElement.classList.add("js");</script>
+  <script src="/js/age-gate.js"></script>
   <script src="/js/chapters.js" defer></script>
   <script src="/js/main.js" defer></script>
 </head>
@@ -41,7 +42,14 @@
     </div>
   </header>
 
-  <main id="main" tabindex="-1">
+  <noscript>
+    <section class="age-noscript wrap" aria-labelledby="age-noscript-title">
+      <h1 id="age-noscript-title">For readers 18 and over</h1>
+      <p>The Reflections series and its chapters are for adult readers. Turn on JavaScript to confirm your age and read them, or go <a href="/">back to the home page</a>.</p>
+    </section>
+  </noscript>
+
+  <main id="main" tabindex="-1" data-age-gated>
     <section class="page-hero tone" aria-labelledby="page-title">
       <div class="wrap reveal">
         <span class="eyebrow">The series</span>
@@ -73,7 +81,7 @@
               <div class="empty">
                 <div class="empty-art" aria-hidden="true"></div>
                 <h3>Chapter 001: Three Hearts, Different Needs</h3>
-                <p>The manga cover, Arc 1 cover, Chapter 1 cover and first fifteen story pages are available. Turn on JavaScript to read them here.</p>
+                <p>The manga cover, Arc 1 cover, Chapter 1 cover and the first page of the redrawn Chapter 1 are available. Turn on JavaScript to read them here.</p>
               </div>
             </div>
             <button type="button" class="reader-side reader-side-next js-only" data-reader-next data-pos="side" disabled><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg><span class="reader-side-text">Next page</span></button>

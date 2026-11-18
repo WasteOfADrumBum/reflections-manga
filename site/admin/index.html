@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Studio | Reflections</title>
+  <meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131317" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script type="module" src="/admin/js/app.js"></script>
+</head>
+<body class="studio">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="2" y="2" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 6h20L6 26z" fill="currentColor"/><path d="M26 10v16H10z" fill="#9a3412"/></svg>
+        Reflections <span class="studio-tag">Studio</span>
+      </a>
+      <nav id="studio-nav" class="site-nav" aria-label="Studio">
+        <ul>
+          <li><a href="#/dashboard" data-nav="dashboard">Dashboard</a></li>
+          <li><a href="#/characters" data-nav="characters">Characters</a></li>
+          <li><a href="#/chapters" data-nav="chapters">Chapters</a></li>
+          <li><a href="#/studio" data-nav="studio">Generate</a></li>
+          <li><a href="#/review" data-nav="review">Review</a></li>
+        </ul>
+      </nav>
+      <button class="btn btn-quiet" type="button" id="sign-out">Sign out</button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="wrap studio-main" id="view" aria-busy="true">
+      <p class="loading">Loading the studio…</p>
+    </div>
+  </main>
+
+  <div id="announcer" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="alerter" class="visually-hidden" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title" aria-describedby="confirm-body">
+    <form method="dialog" class="dialog-body">
+      <h2 id="confirm-title">Confirm</h2>
+      <div id="confirm-body"></div>
+      <div class="btn-row">
+        <button class="btn" value="cancel" type="submit" id="confirm-cancel">Cancel</button>
+        <button class="btn btn-primary" value="ok" type="submit" id="confirm-ok">Continue</button>
+      </div>
+    </form>
+  </dialog>
+
+  <noscript><div class="wrap"><p class="notice notice-error">The studio needs JavaScript. The public site works without it.</p></div></noscript>
+</body>
+</html>

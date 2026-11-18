@@ -3,6 +3,9 @@
 Static site for the Reflections manga. Plain HTML, CSS and JavaScript with no build step.
 Everything outside this `site/` folder is the manga's working material and is not touched by the site.
 
+The private production studio lives at `/admin` (UI in `admin/`, server code in `api/`).
+See [docs/studio/SETUP.md](../docs/studio/SETUP.md). The public pages do not depend on it.
+
 ## Pages
 
 - `index.html`: landing page with the series overview
@@ -11,9 +14,29 @@ Everything outside this `site/` folder is the manga's working material and is no
 
 ## Publishing chapter pages
 
+Reflections Studio can do this for you: approve pages in `/admin` and publish them, which opens a
+pull request with the WebP files and `chapters.js` entries. The manual route still works:
+
 1. Export finished pages as `.webp` (about 1200 px wide) into `site/pages/chapter-001/`.
 2. List them in `site/js/chapters.js` with descriptive `alt` text for each page (what happens and what is said).
 3. Merge to `main`. Vercel deploys automatically.
+
+Chapter 001 is being redrawn as version 2. `site/pages/chapter-001/` holds the current (v2) pages;
+the earlier version 1 pages are in `site/pages/chapter-001/version_1/`, hidden from the reader. Their
+reader entries (with alt text) are kept in `version_1/index.json`, which the site never loads.
+
+## Age gate (18+)
+
+`series.html` and any future chapter page ask readers to confirm they are 18 or older before content shows.
+The home, characters and memories pages stay open. The answer is saved in the browser (localStorage, falling
+back to sessionStorage, then memory for that page if storage is blocked).
+
+To gate a new page: add `data-age-gate` to `<html>`, `data-age-gated` to `<main>`, and load
+`<script src="/js/age-gate.js"></script>` in `<head>` without `defer`, before other scripts. Copy the
+`<noscript>` notice from `series.html`. Scripts that load content can wait with
+`window.ReflectionsAgeGate.whenConfirmed(fn)`.
+
+This is a courtesy check in the browser, not access control: image files are still reachable by direct URL.
 
 ## Character relationships
 
@@ -33,9 +56,12 @@ cd site
 python3 -m http.server 8000
 ```
 
+To run the studio locally as well (mocked OpenAI and GitHub): `npm install && npm run dev`.
+
 Then open http://localhost:8000. (Clean URLs such as `/series` work on Vercel; locally use `/series.html`.)
 
 ## Deployment
 
 Vercel project with **Root Directory** set to `site` and framework preset **Other** (no build command).
-`vercel.json` enables clean URLs and basic security headers.
+`vercel.json` enables clean URLs, security headers, the studio API rewrite (`/api/studio/*`) and one daily
+cron that nudges the studio worker. `package.json` exists only for the studio function and its tests.
