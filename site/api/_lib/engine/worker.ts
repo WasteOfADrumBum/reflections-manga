@@ -1,6 +1,6 @@
 import type { StudioDeps } from "../context.ts";
 import { content } from "../context.ts";
-import { loadCharacters } from "../content/characters.ts";
+import { loadCharacters, resolveSheetFiles } from "../content/characters.ts";
 import type { LoadedPrompt } from "../content/chapters.ts";
 import { pad3 } from "../content/config.ts";
 import { expectedLettering, sha256 } from "../content/prompt-parser.ts";
@@ -243,10 +243,17 @@ export async function planPage(deps: StudioDeps, chapterId: string, page: number
   const consistency = checkPromptAgainstScript(expectedLettering(prompt), script);
   if (!consistency.ok) blockers.push(...consistency.problems.map((p) => `Script check: ${p}`));
   const characters = await loadCharacters(deps.repo);
+  const sheetFiles = await resolveSheetFiles(
+    deps.repo,
+    characters,
+    inv.config.identitySheetDirs,
+    prompt.referenceOrder.flatMap((r) => (r.file ? [r.file] : [])),
+  );
   const plan = planReferences({
     chapterId,
     prompt,
     characters,
+    sheetFiles,
     uploads: await loadUploads(deps),
     findScenePage: await loadSceneCandidates(deps, chapterId, page, inv),
     maxSceneReferences: settings.maxSceneReferences,

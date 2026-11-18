@@ -107,3 +107,71 @@ export function resolveCharacter(characters: CharacterRecord[], name: string): C
   const matches = characters.filter((c) => c.firstName.toLowerCase() === n);
   return matches.length === 1 ? matches[0]! : null;
 }
+
+export interface ResolvedSheet {
+  path: string;
+  characterId: string | null;
+}
+
+/**
+ * v2 prompts name the exact sheet to attach ("walker-ethan.png",
+ * "children/walker-riley.png", "morgan-hayes-reference-sheet-v7.png").
+ * Files are looked up only inside the configured identity-sheet folders and
+ * the characters' own references/ folders, never anywhere else.
+ */
+export async function resolveSheetFiles(
+  repo: RepoSource,
+  characters: CharacterRecord[],
+  dirs: string[],
+  files: string[],
+): Promise<Map<string, ResolvedSheet | null>> {
+  const out = new Map<string, ResolvedSheet | null>();
+  const listings = new Map<string, Set<string>>();
+  const listDir = async (dir: string) => {
+    let names = listings.get(dir);
+    if (!names) {
+      names = new Set((await repo.list(dir)).filter((e) => e.type === "file").map((e) => e.name));
+      listings.set(dir, names);
+    }
+    return names;
+  };
+  for (const file of files) {
+    if (out.has(file)) continue;
+    if (file.includes("..") || file.startsWith("/") || !IMAGE.test(file)) {
+      out.set(file, null);
+      continue;
+    }
+    const base = file.split("/").pop() ?? file;
+    let found: ResolvedSheet | null = null;
+    for (const c of characters) {
+      const ref = c.references.find((r) => r.name === base);
+      if (ref) {
+        found = { path: ref.path, characterId: c.id };
+        break;
+      }
+    }
+    if (!found) {
+      for (const dir of dirs) {
+        const sub = file.includes("/") ? `${dir}/${file.split("/").slice(0, -1).join("/")}` : dir;
+        if ((await listDir(sub)).has(base)) {
+          found = { path: `${sub}/${base}`, characterId: characterForSheetName(characters, base)?.id ?? null };
+          break;
+        }
+      }
+    }
+    out.set(file, found);
+  }
+  return out;
+}
+
+/** "walker-ethan.png" -> Ethan Walker; "bennett-walker-avery.png" -> Avery Bennett-Walker. */
+export function characterForSheetName(characters: CharacterRecord[], file: string): CharacterRecord | null {
+  const tokens = file.replace(/\.(png|webp|jpe?g)$/i, "").toLowerCase().split("-").filter(Boolean);
+  const first = tokens.at(-1);
+  if (!first) return null;
+  const byFirst = characters.filter((c) => c.firstName.toLowerCase() === first);
+  if (byFirst.length === 1) return byFirst[0]!;
+  const rest = tokens.slice(0, -1);
+  const strict = byFirst.filter((c) => rest.every((t) => c.id.split("-").includes(t)));
+  return strict.length === 1 ? strict[0]! : null;
+}

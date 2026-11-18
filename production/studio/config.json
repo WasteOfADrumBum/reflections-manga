@@ -1,5 +1,5 @@
 {
-  "$comment": "Reflections Studio production config. Read by the admin studio from GitHub. Locked pages are never generated or overwritten. Edit through a normal reviewed commit.",
+  "$comment": "Reflections Studio production config. Read by the admin studio from GitHub. Chapter 001 uses the version 2 retelling (prompts/version_002, script-v2.md, 30 pages). Pages that already have artwork in stories/.../pages/ or in the reader are never generated or overwritten; lockedPages can protect more. Edit through a normal reviewed commit.",
   "version": 1,
   "chapters": {
     "001": {
@@ -8,11 +8,18 @@
       "arcTitle": "Three Become One",
       "title": "Three Hearts, Different Needs",
       "storyDir": "stories/arc-01/chapter-001",
-      "plannedPages": 32,
-      "lockedPages": "1-20",
-      "lockReason": "Pages 001-020 are locked for the current revision (chapter handoff, 2026-11-17).",
-      "unpreparedPages": "31-32",
-      "unpreparedReason": "Pages 031-032 are outlined only. Their script and prompts are not written yet.",
+      "revisionLabel": "v2",
+      "plannedPages": 30,
+      "promptDir": "prompts/version_002",
+      "scriptFile": "script-v2.md",
+      "identitySheetDirs": [
+        "characters/_reference-sheets/main_characters",
+        "characters/_reference-sheets/main_characters/children"
+      ],
+      "lockedPages": "",
+      "lockReason": "Locked.",
+      "unpreparedPages": "",
+      "unpreparedReason": "Not prepared yet.",
       "sourcePagePattern": "pages/A01-C001-P{page}.png",
       "publishedDir": "site/pages/chapter-001",
       "publishedSrcPrefix": "/pages/chapter-001/"
@@ -25,7 +32,7 @@
     "quality": "high",
     "outputFormat": "png",
     "maxAttemptsPerPage": 3,
-    "maxSceneReferences": 2,
+    "maxSceneReferences": 3,
     "budgetUsdPerJob": 10,
     "expectedRetryRate": 0.5,
     "qaPassThreshold": 0.8,

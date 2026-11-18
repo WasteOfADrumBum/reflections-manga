@@ -2,7 +2,9 @@ import { createHash } from "node:crypto";
 
 /**
  * Parser for the repository's full-page generation prompts, e.g.
- * stories/arc-01/chapter-001/prompts/page-023-v1.txt.
+ * stories/arc-01/chapter-001/prompts/version_002/page-023-v2.txt (v2 layout:
+ * identity sheets named by file, SPEECH/THOUGHT/NARRATION lettering) or the
+ * older v1 layout (image N = Name, labelled balloons).
  *
  * The prompt text itself is sent to OpenAI VERBATIM. This parser only extracts
  * structure the studio needs around it: which reference images to attach and
@@ -29,7 +31,10 @@ export interface PromptPanel {
 
 export interface ReferenceSlot {
   index: number;
+  /** Character first name as used in the prompt ("Ethan"). */
   name: string;
+  /** v2 prompts name the exact sheet file to attach, e.g. "children/walker-riley.png". */
+  file?: string;
 }
 
 export interface SceneReference {
@@ -72,7 +77,7 @@ export function sha256(text: string | Buffer): string {
   return createHash("sha256").update(text).digest("hex");
 }
 
-/** "page-023-v1.txt" -> { page: 23, version: 1 } */
+/** "page-023-v2.txt" -> { page: 23, version: 2 } */
 export function parsePromptFilename(name: string): { page: number; version: number } | null {
   const m = /^page-(\d{3})-v(\d+)\.txt$/.exec(name);
   return m ? { page: Number(m[1]), version: Number(m[2]) } : null;
@@ -84,8 +89,17 @@ function splitBlocks(text: string): string[] {
   return text.replace(/\r\n/g, "\n").split(/\n\s*\n/).map((b) => b.trim()).filter(Boolean);
 }
 
+const V2_LABEL = /^(SPEECH|THOUGHT|NARRATION|CAPTION|SFX)\s*(?:\(([^)]*)\))?$/;
+
 export function classifyLettering(label: string): { kind: LetteringKind; speaker: string | null } {
   const l = label.trim();
+  const v2 = V2_LABEL.exec(l);
+  if (v2) {
+    const who = (v2[2] ?? "").trim();
+    const kind: LetteringKind = v2[1] === "SPEECH" ? "speech" : v2[1] === "THOUGHT" ? "thought" : v2[1] === "SFX" ? "sfx" : "caption";
+    const speaker = !who || /^narrator$/i.test(who) ? null : who;
+    return { kind, speaker };
+  }
   if (/time caption/i.test(l)) return { kind: "time", speaker: null };
   if (/internal caption|thought/i.test(l)) return { kind: "thought", speaker: l.replace(/\s*(internal caption|thought).*/i, "").replace(/,$/, "").trim() || null };
   if (/\bsfx\b|sound effect/i.test(l)) return { kind: "sfx", speaker: null };
@@ -117,7 +131,7 @@ function parsePanel(block: string): PromptPanel | null {
       continue;
     }
     const lm = LETTERING_LINE.exec(t);
-    if (lm && (inLettering || /balloon|caption/i.test(lm[1] ?? ""))) {
+    if (lm && (inLettering || /balloon|caption/i.test(lm[1] ?? "") || V2_LABEL.test((lm[1] ?? "").trim()))) {
       const label = (lm[1] ?? "").trim();
       const { kind, speaker } = classifyLettering(label);
       lettering.push({ kind, speaker, text: lm[2] ?? "", raw: t });
@@ -135,9 +149,27 @@ function parsePanel(block: string): PromptPanel | null {
   };
 }
 
+/** "walker-ethan.png" -> "Ethan"; "morgan-hayes-reference-sheet-v7.png" -> "Morgan". */
+export function nameFromSheetFile(file: string): string {
+  const stem = (file.split("/").pop() ?? file).replace(/\.(png|webp|jpe?g)$/i, "");
+  const parts = stem.split("-").filter(Boolean);
+  const pick = /reference-sheet/i.test(stem) ? parts[0] : parts.at(-1);
+  const n = pick ?? stem;
+  return n.charAt(0).toUpperCase() + n.slice(1).toLowerCase();
+}
+
 function parseReferenceOrder(block: string): ReferenceSlot[] {
   const slots: ReferenceSlot[] = [];
   const firstPara = block.replace(/\n/g, " ");
+  // v2: the prompt names each sheet file, in attachment order.
+  const fileRe = /(?:^|[\s(:,])((?:[\w-]+\/)*[\w.-]+\.(?:png|webp|jpe?g))\b/gi;
+  let fm: RegExpExecArray | null;
+  while ((fm = fileRe.exec(firstPara)) !== null) {
+    const file = fm[1] ?? "";
+    if (file.includes("..")) continue;
+    slots.push({ index: slots.length + 1, name: nameFromSheetFile(file), file });
+  }
+  if (slots.length) return slots;
   const orderText = /REFERENCE ORDER:\s*(.*?)(?:\.\s|$)/.exec(firstPara)?.[1] ?? "";
   const re = /image\s+(\d+)\s*(?:=|:)?\s*([A-Z][A-Za-z'.-]+(?:\s+[A-Z][A-Za-z'.-]+)?)/g;
   let m: RegExpExecArray | null;
@@ -152,12 +184,14 @@ function parseSceneReferences(instructions: string): SceneReference[] {
   const refs: SceneReference[] = [];
   const sentences = instructions.split(/(?<=[.;])\s+/);
   for (const s of sentences) {
-    const re = /\b(?:rendered\s+|new\s+|preceding\s+)?page\s+(\d{1,3})\b/gi;
+    const re = /\b(?:rendered\s+|new\s+|preceding\s+)?pages?\s+(\d{1,3})((?:\s*(?:,|and|&)\s*\d{1,3}\b)*)/gi;
     let m: RegExpExecArray | null;
     while ((m = re.exec(s)) !== null) {
-      const page = Number(m[1]);
-      if (refs.some((r) => r.page === page)) continue;
-      refs.push({ page, note: s.trim(), optional: /if available|may (?:additionally|clarify)|may show/i.test(s) });
+      const nums = [m[1] ?? "", ...((m[2] ?? "").match(/\d{1,3}/g) ?? [])].map(Number);
+      for (const page of nums) {
+        if (refs.some((r) => r.page === page)) continue;
+        refs.push({ page, note: s.trim(), optional: /if available|may (?:additionally|clarify)|may show|for any phone insert/i.test(s) });
+      }
     }
   }
   return refs;
@@ -203,7 +237,8 @@ export function parsePrompt(text: string, meta: { page: number; version: number 
     if (firstLine.startsWith("REFERENCE ORDER")) {
       out.referenceOrder = parseReferenceOrder(block);
       out.referenceInstructions = block.replace(/\n/g, " ");
-      out.sceneReferences = parseSceneReferences(block.replace(/^REFERENCE ORDER:[^\n]*\n?/, " "));
+      const namesFiles = out.referenceOrder.some((r) => r.file);
+      out.sceneReferences = parseSceneReferences(namesFiles ? block.replace(/\n/g, " ") : block.replace(/^REFERENCE ORDER:[^\n]*\n?/, " "));
       continue;
     }
     if (/^PANEL\s+\d+\s*(?::|—|-)/.test(firstLine)) {
@@ -217,10 +252,24 @@ export function parsePrompt(text: string, meta: { page: number; version: number 
       const body = [h[2] ?? "", ...block.split("\n").slice(1)].join("\n").trim();
       if (key === "PAGE PLOT") out.plot = body.split("\n")[0] ?? body;
       else if (/^(FORMAT|STYLE)/.test(key)) out.format = body;
-      else if (key === "VISIBLE CAST" || key === "CAST") out.visibleCast = body;
-      else if (/^SETTING/.test(key)) {
+      else if (key === "VISIBLE CAST") out.visibleCast = body;
+      else if (key === "CAST") {
+        out.visibleCast = body;
+        // v2: one "Name: age, height, ... Scene wardrobe: ..." line per character.
+        for (const line of body.split("\n")) {
+          const cm2 = /^([A-Z][a-z]+(?:\s+[A-Z][A-Za-z-]+)*):\s+(.+)$/.exec(line.trim());
+          if (!cm2 || !/\b\d{1,3}\b|cm\b/.test(cm2[2] ?? "")) continue;
+          const desc = cm2[2] ?? "";
+          const wardrobe = /Scene wardrobe:\s*([^.]*(?:\.[^A-Z][^.]*)*)\.?/.exec(desc)?.[1]?.trim() ?? null;
+          out.characters.push({ name: cm2[1] ?? "", description: desc.replace(/\s*Scene wardrobe:.*$/, "").trim(), outfit: wardrobe });
+        }
+      } else if (/^SETTING/.test(key)) {
         out.setting = body.split("\n")[0] ?? body;
         if (/CONTINUITY/.test(key)) out.continuity.push({ label: key, text: body });
+        for (const line of body.split("\n").slice(1)) {
+          const cl = /^([A-Z /-]*CONTINUITY):\s*(.*)$/.exec(line.trim());
+          if (cl) out.continuity.push({ label: cl[1] ?? "CONTINUITY", text: cl[2] ?? "" });
+        }
       } else if (/CONTINUITY$/.test(key)) out.continuity.push({ label: key, text: body });
       else if (key === "LAYOUT") out.layout = body;
       else if (key === "ENDING" || key === "PAGE-ENDING FEEL") out.ending = body.split("\n")[0] ?? body;

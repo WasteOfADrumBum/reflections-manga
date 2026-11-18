@@ -24,6 +24,7 @@ export interface ContinuityState {
 
 const TIME_WORDS = [
   ["next morning", "next morning"],
+  ["second morning", "next morning"],
   ["late night", "late night"],
   ["night", "night"],
   ["first morning", "morning"],

@@ -101,7 +101,7 @@ export class ContentService {
   }
 
   async promptFiles(chapter: ChapterConfig): Promise<Map<number, { path: string; version: number }>> {
-    const entries = await this.repo.list(`${chapter.storyDir}/prompts`);
+    const entries = await this.repo.list(`${chapter.storyDir}/${chapter.promptDir}`);
     const latest = new Map<number, { path: string; version: number }>();
     for (const e of entries) {
       const meta = parsePromptFilename(e.name);
@@ -113,7 +113,7 @@ export class ContentService {
   }
 
   script(chapter: ChapterConfig): Promise<Map<number, ScriptPage>> {
-    const path = `${chapter.storyDir}/script.md`;
+    const path = `${chapter.storyDir}/${chapter.scriptFile}`;
     let p = this.scriptCache.get(path);
     if (!p) {
       p = this.repo.readText(path).then((t) => (t ? parseScript(t) : new Map()));
@@ -164,7 +164,7 @@ export class ContentService {
         plot: script.get(page)?.plot ?? null,
       });
     }
-    return { id: chapterId, config, pages, scriptPath: `${config.storyDir}/script.md` };
+    return { id: chapterId, config, pages, scriptPath: `${config.storyDir}/${config.scriptFile}` };
   }
 
   async loadPrompt(chapterId: string, page: number): Promise<ParsedPrompt | null> {

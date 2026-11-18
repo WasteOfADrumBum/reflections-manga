@@ -1,5 +1,5 @@
 import type { CharacterRecord } from "../content/characters.ts";
-import { resolveCharacter } from "../content/characters.ts";
+import { type ResolvedSheet, resolveCharacter } from "../content/characters.ts";
 import type { LoadedPrompt } from "../content/chapters.ts";
 import { pad3 } from "../content/config.ts";
 
@@ -8,7 +8,10 @@ import { pad3 } from "../content/config.ts";
  *
  * Order (identity always first, so earlier generations can never outrank a
  * canonical sheet):
- *   1. Canonical identity sheets, in the prompt's REFERENCE ORDER.
+ *   1. Identity sheets, in the prompt's REFERENCE ORDER. v2 prompts name the
+ *      exact sheet file (resolved only inside configured sheet folders and
+ *      characters' references/); v1 prompts name a character and get its
+ *      canonical "Current Card".
  *   2. Approved outfit references for those characters (uploaded, scoped).
  *   3. Approved location references (uploaded, scoped).
  *   4. Scene continuity pages named by the prompt, in the order mentioned:
@@ -62,6 +65,8 @@ export function planReferences(opts: {
   findScenePage: (page: number) => SceneImageCandidate | null;
   maxSceneReferences: number;
   maxTotal?: number;
+  /** v2: sheet files named in the prompt, already resolved to repository paths. */
+  sheetFiles?: Map<string, ResolvedSheet | null>;
 }): ReferencePlan {
   const { prompt } = opts;
   const entries: ReferenceManifestEntry[] = [];
@@ -79,6 +84,23 @@ export function planReferences(opts: {
   if (prompt.referenceOrder.length === 0) blockers.push("The prompt has no REFERENCE ORDER, so identity sheets cannot be chosen safely.");
   const pageCharacters: CharacterRecord[] = [];
   for (const slot of prompt.referenceOrder) {
+    if (slot.file) {
+      const sheet = opts.sheetFiles?.get(slot.file) ?? null;
+      if (!sheet) {
+        blockers.push(`The identity sheet "${slot.file}" named in the reference order was not found in the character sheet folders.`);
+        continue;
+      }
+      const owner = sheet.characterId ? opts.characters.find((ch) => ch.id === sheet.characterId) ?? null : resolveCharacter(opts.characters, slot.name);
+      if (owner && !pageCharacters.includes(owner)) pageCharacters.push(owner);
+      add({
+        role: "identity",
+        label: `${owner?.displayName ?? slot.name} identity sheet (${slot.file.split("/").pop()})`,
+        source: "repo",
+        path: sheet.path,
+        ...(owner ? { characterId: owner.id } : {}),
+      });
+      continue;
+    }
     const c = resolveCharacter(opts.characters, slot.name);
     if (!c) {
       blockers.push(`"${slot.name}" in the reference order does not match a character profile.`);

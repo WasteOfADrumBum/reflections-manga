@@ -32,6 +32,14 @@ const chapterConfigSchema = z.object({
   lockReason: z.string().default("Locked."),
   unpreparedPages: z.string().default(""),
   unpreparedReason: z.string().default("Not prepared yet."),
+  /** Revision shown in the UI, e.g. "v2". */
+  revisionLabel: z.string().default(""),
+  /** Folder (under storyDir) holding page-NNN-vN.txt prompts for the active revision. */
+  promptDir: z.string().regex(/^[\w./-]+$/).refine((v) => !v.includes(".."), "promptDir must stay inside storyDir").default("prompts"),
+  /** Canonical script file (under storyDir) for the active revision. */
+  scriptFile: z.string().regex(/^[\w.-]+\.md$/).default("script.md"),
+  /** Folders searched for identity sheets that prompts name by file (e.g. "walker-ethan.png"). */
+  identitySheetDirs: z.array(z.string().regex(/^characters\/[\w./-]+$/).refine((v) => !v.includes(".."))).default([]),
   sourcePagePattern: z.string(),
   publishedDir: z.string(),
   publishedSrcPrefix: z.string(),

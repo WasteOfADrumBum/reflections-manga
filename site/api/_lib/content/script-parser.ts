@@ -1,7 +1,7 @@
-import type { LetteringKind } from "./prompt-parser.ts";
+import { type LetteringKind, classifyLettering } from "./prompt-parser.ts";
 
 /**
- * Parser for chapter script.md files. The script is the canonical source of
+ * Parser for chapter scripts (script-v2.md, or the older script.md layout). The script is the canonical source of
  * exact dialogue; prompts are checked against it before any paid request, and
  * generated pages are checked against it afterwards.
  */
@@ -35,7 +35,55 @@ function kindFor(id: string, label: string): { kind: LetteringKind; speaker: str
   return { kind: "speech", speaker: label.trim() };
 }
 
+const V2_PAGE = /^###\s+(\d{3})\s*[·•—-]\s*(.*)$/m;
+const V2_LINE = /^((?:SPEECH|THOUGHT|NARRATION|CAPTION|SFX)\s*(?:\([^)]*\))?):\s*["“](.*)["”]\s*$/;
+
+/**
+ * v2 scripts (script-v2.md): "### 021 · Title", a scene note, then
+ * "PANEL N: visual" followed by lines like SPEECH (Ruby): "...".
+ */
+export function parseScriptV2(markdown: string): Map<number, ScriptPage> {
+  const pages = new Map<number, ScriptPage>();
+  let page: ScriptPage | null = null;
+  let panel: ScriptPage["panels"][number] | null = null;
+  for (const raw of markdown.replace(/\r\n/g, "\n").split("\n")) {
+    const pm = /^###\s+(\d{3})\s*[·•—-]\s*(.*)$/.exec(raw);
+    if (pm) {
+      page = { page: Number(pm[1]), title: (pm[2] ?? "").trim(), plot: null, visibleCast: null, timeLocation: null, layout: null, panels: [] };
+      pages.set(page.page, page);
+      panel = null;
+      continue;
+    }
+    if (/^#{1,2}\s/.test(raw)) {
+      page = null;
+      panel = null;
+      continue;
+    }
+    if (!page) continue;
+    const t = raw.trim();
+    const pn = /^PANEL\s+(\d+)\s*(?::|—|-)\s*(.*)$/.exec(t);
+    if (pn) {
+      panel = { number: Number(pn[1]), visual: (pn[2] ?? "").trim(), lines: [] };
+      page.panels.push(panel);
+      continue;
+    }
+    if (!panel) {
+      if (t && !page.timeLocation) page.timeLocation = t;
+      continue;
+    }
+    const lm = V2_LINE.exec(t);
+    if (lm) {
+      const { kind, speaker } = classifyLettering(lm[1] ?? "");
+      const order = panel.lines.length + 1;
+      panel.lines.push({ id: `${String(page.page).padStart(3, "0")}.${panel.number}.${order}`, panel: panel.number, order, kind, speaker, text: lm[2] ?? "" });
+    }
+  }
+  for (const pg of pages.values()) pg.plot = pg.timeLocation;
+  return pages;
+}
+
 export function parseScript(markdown: string): Map<number, ScriptPage> {
+  if (V2_PAGE.test(markdown)) return parseScriptV2(markdown);
   const pages = new Map<number, ScriptPage>();
   let page: ScriptPage | null = null;
   let panel: ScriptPage["panels"][number] | null = null;
