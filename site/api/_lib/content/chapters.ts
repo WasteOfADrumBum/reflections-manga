@@ -1,7 +1,7 @@
-import type { RepoSource } from "../repo/source.ts";
-import { type ChapterConfig, type StudioConfig, pad3, parsePageRanges } from "./config.ts";
-import { type ParsedPrompt, parsePrompt, parsePromptFilename } from "./prompt-parser.ts";
-import { type ScriptPage, parseScript } from "./script-parser.ts";
+import type { RepoSource } from "../repo/source.js";
+import { type ChapterConfig, type StudioConfig, pad3, parsePageRanges } from "./config.js";
+import { type ParsedPrompt, parsePrompt, parsePromptFilename } from "./prompt-parser.js";
+import { type ScriptPage, parseScript } from "./script-parser.js";
 
 export interface RepoPageInfo {
   page: number;

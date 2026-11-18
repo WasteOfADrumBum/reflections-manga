@@ -14,9 +14,9 @@ import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { createApp, runWorkerLoop } from "../api/_lib/app.ts";
-import { OpenAIImageProvider, OpenAIQaProvider } from "../api/_lib/openai/openai-adapters.ts";
-import { createHarness } from "../tests/helpers/harness.ts";
+import { createApp, runWorkerLoop } from "../api/_lib/app.js";
+import { OpenAIImageProvider, OpenAIQaProvider } from "../api/_lib/openai/openai-adapters.js";
+import { createHarness } from "../tests/helpers/harness.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const SITE = path.resolve(here, "..");
@@ -55,7 +55,7 @@ h.deps.kick = () => {
   }, 50);
 };
 if (process.env.STUDIO_DEV_VERIFIED === "1") {
-  const { setStudioSetting } = await import("../api/_lib/engine/jobs.ts");
+  const { setStudioSetting } = await import("../api/_lib/engine/jobs.js");
   await setStudioSetting(h.deps, "real_generation_verified", true);
 }
 const handle = createApp(h.deps);

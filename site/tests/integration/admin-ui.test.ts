@@ -9,7 +9,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import axe from "axe-core";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { BASE, createHarness, drain, type Harness, login, REPO_ROOT } from "../helpers/harness.ts";
+import { BASE, createHarness, drain, type Harness, login, REPO_ROOT } from "../helpers/harness.js";
 
 let h: Harness;
 

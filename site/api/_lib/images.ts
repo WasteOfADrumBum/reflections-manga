@@ -1,5 +1,5 @@
 import sharp from "sharp";
-import { sha256 } from "./content/prompt-parser.ts";
+import { sha256 } from "./content/prompt-parser.js";
 
 export interface ImageInfo {
   width: number;

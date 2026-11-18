@@ -6,7 +6,7 @@
  */
 import { createInterface } from "node:readline";
 import { Writable } from "node:stream";
-import { hashPassword } from "../api/_lib/auth/auth.ts";
+import { hashPassword } from "../api/_lib/auth/auth.js";
 
 const muted = new Writable({ write: (_c, _e, cb) => cb() });
 const rl = createInterface({ input: process.stdin, output: muted, terminal: true });

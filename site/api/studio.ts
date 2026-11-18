@@ -1,16 +1,16 @@
 import { createHash } from "node:crypto";
 import { waitUntil } from "@vercel/functions";
-import { createApp } from "./_lib/app.ts";
-import { constantTimeEqual } from "./_lib/auth/auth.ts";
-import { defaultIds, type StudioDeps, systemClock } from "./_lib/context.ts";
-import { createPgDb } from "./_lib/db/client.ts";
-import { EnvError, missingConfiguration, parseEnv, publicBaseUrl } from "./_lib/env.ts";
-import { json } from "./_lib/http.ts";
-import { createLogger } from "./_lib/log.ts";
-import { OpenAIImageProvider, OpenAIQaProvider } from "./_lib/openai/openai-adapters.ts";
-import { GitHubPublisher } from "./_lib/publish/publisher.ts";
-import { GitHubRepoSource } from "./_lib/repo/source.ts";
-import { VercelBlobStore } from "./_lib/storage/blobs.ts";
+import { createApp } from "./_lib/app.js";
+import { constantTimeEqual } from "./_lib/auth/auth.js";
+import { defaultIds, type StudioDeps, systemClock } from "./_lib/context.js";
+import { createPgDb } from "./_lib/db/client.js";
+import { EnvError, missingConfiguration, parseEnv, publicBaseUrl } from "./_lib/env.js";
+import { json } from "./_lib/http.js";
+import { createLogger } from "./_lib/log.js";
+import { OpenAIImageProvider, OpenAIQaProvider } from "./_lib/openai/openai-adapters.js";
+import { GitHubPublisher } from "./_lib/publish/publisher.js";
+import { GitHubRepoSource } from "./_lib/repo/source.js";
+import { VercelBlobStore } from "./_lib/storage/blobs.js";
 
 /**
  * Single Vercel Function for the studio API (all routes under /api/studio/*,

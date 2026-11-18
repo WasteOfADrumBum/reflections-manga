@@ -1,4 +1,4 @@
-import type { Quality } from "../content/config.ts";
+import type { Quality } from "../content/config.js";
 
 /**
  * Pricing used for estimates. Sources (checked 2026-11-18):

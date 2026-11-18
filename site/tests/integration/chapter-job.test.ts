@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { setStudioSetting } from "../../api/_lib/engine/jobs.ts";
-import { api, createHarness, drain, type Harness, login } from "../helpers/harness.ts";
+import { setStudioSetting } from "../../api/_lib/engine/jobs.js";
+import { api, createHarness, drain, type Harness, login } from "../helpers/harness.js";
 
 const BATCH = [21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
 

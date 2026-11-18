@@ -1,4 +1,4 @@
-import type { RepoSource } from "../repo/source.ts";
+import type { RepoSource } from "../repo/source.js";
 
 /**
  * Character library built from characters/<id>/. The canonical identity sheet

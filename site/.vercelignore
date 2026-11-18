@@ -7,3 +7,4 @@ playwright-report
 *.config.js
 *.config.ts
 tsconfig.json
+.function-check

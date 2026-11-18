@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { characterForSheetName, loadCharacters, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.ts";
-import { ContentService, findChapterBlock, type LoadedPrompt, publishedPagesFromChaptersJs } from "../../api/_lib/content/chapters.ts";
-import { loadStudioConfig, parsePageRanges } from "../../api/_lib/content/config.ts";
-import { classifyLettering, expectedLettering, nameFromSheetFile, parsePrompt, parsePromptFilename } from "../../api/_lib/content/prompt-parser.ts";
-import { parseScript } from "../../api/_lib/content/script-parser.ts";
-import { checkPromptAgainstScript } from "../../api/_lib/qa/dialogue.ts";
-import { LocalRepoSource } from "../../api/_lib/repo/source.ts";
-import { REPO_ROOT, testRepo } from "../helpers/harness.ts";
+import { characterForSheetName, loadCharacters, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.js";
+import { ContentService, findChapterBlock, type LoadedPrompt, publishedPagesFromChaptersJs } from "../../api/_lib/content/chapters.js";
+import { loadStudioConfig, parsePageRanges } from "../../api/_lib/content/config.js";
+import { classifyLettering, expectedLettering, nameFromSheetFile, parsePrompt, parsePromptFilename } from "../../api/_lib/content/prompt-parser.js";
+import { parseScript } from "../../api/_lib/content/script-parser.js";
+import { checkPromptAgainstScript } from "../../api/_lib/qa/dialogue.js";
+import { LocalRepoSource } from "../../api/_lib/repo/source.js";
+import { REPO_ROOT, testRepo } from "../helpers/harness.js";
 
 const raw = new LocalRepoSource(REPO_ROOT);
 const repo = testRepo();

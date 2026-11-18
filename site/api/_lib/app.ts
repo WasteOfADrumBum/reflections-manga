@@ -16,15 +16,15 @@ import {
   type Session,
   sessionCookie,
   verifyPassword,
-} from "./auth/auth.ts";
-import type { StudioDeps } from "./context.ts";
-import { content } from "./context.ts";
-import { loadCharacters } from "./content/characters.ts";
-import { pad3 } from "./content/config.ts";
-import { ensureMigrated } from "./db/schema.ts";
-import { one } from "./db/client.ts";
-import { badRequest, conflict, HttpError, notFound, unauthorized } from "./errors.ts";
-import { logEvent } from "./engine/events.ts";
+} from "./auth/auth.js";
+import type { StudioDeps } from "./context.js";
+import { content } from "./context.js";
+import { loadCharacters } from "./content/characters.js";
+import { pad3 } from "./content/config.js";
+import { ensureMigrated } from "./db/schema.js";
+import { one } from "./db/client.js";
+import { badRequest, conflict, HttpError, notFound, unauthorized } from "./errors.js";
+import { logEvent } from "./engine/events.js";
 import {
   cancelJob,
   createJob,
@@ -41,16 +41,16 @@ import {
   chapterOverrides,
   setStudioSetting,
   settingsOverrideSchema,
-} from "./engine/jobs.ts";
-import { chapterOverview, dashboard } from "./engine/overview.ts";
-import type { VersionRow } from "./engine/types.ts";
-import { noteApproval, planPage, runWorkerStep } from "./engine/worker.ts";
-import { errorResponse, json, readJson, Router, SECURITY_HEADERS } from "./http.ts";
-import { thumbnail, toReaderWebp, validateUpload } from "./images.ts";
-import { altTextFromScript } from "./publish/alt-text.ts";
-import { publishChapter } from "./publish/service.ts";
-import { assertRepoPath } from "./repo/source.ts";
-import { createZip } from "./zip.ts";
+} from "./engine/jobs.js";
+import { chapterOverview, dashboard } from "./engine/overview.js";
+import type { VersionRow } from "./engine/types.js";
+import { noteApproval, planPage, runWorkerStep } from "./engine/worker.js";
+import { errorResponse, json, readJson, Router, SECURITY_HEADERS } from "./http.js";
+import { thumbnail, toReaderWebp, validateUpload } from "./images.js";
+import { altTextFromScript } from "./publish/alt-text.js";
+import { publishChapter } from "./publish/service.js";
+import { assertRepoPath } from "./repo/source.js";
+import { createZip } from "./zip.js";
 
 export const API_PREFIX = "/api/studio";
 
@@ -228,7 +228,7 @@ export function createApp(deps: StudioDeps) {
     const clean = await sharp(data).rotate().png().toBuffer(); // re-encode: strips metadata and any non-image payload
     const blobPath = `studio/references/${id}.png`;
     await deps.blobs.put(blobPath, clean, "image/png");
-    const { parsePageRanges } = await import("./content/config.ts");
+    const { parsePageRanges } = await import("./content/config.js");
     const pages = meta.data.pages?.trim() ? [...parsePageRanges(meta.data.pages)] : null;
     await deps.db.query(
       `INSERT INTO reference_assets (id, character_id, chapter_id, pages, label, kind, status, blob_path, sha256, width, height, bytes, created_at)

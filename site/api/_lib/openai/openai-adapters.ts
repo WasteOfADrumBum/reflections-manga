@@ -1,7 +1,7 @@
 import OpenAI, { toFile } from "openai";
 import { zodTextFormat } from "openai/helpers/zod";
-import type { ImageProvider, ImageRequest, ImageResult, QaProvider, QaRequest } from "./providers.ts";
-import { qaResultSchema } from "./providers.ts";
+import type { ImageProvider, ImageRequest, ImageResult, QaProvider, QaRequest } from "./providers.js";
+import { qaResultSchema } from "./providers.js";
 
 /** Models that accept the `input_fidelity` edit parameter (per the API reference, 2026-11-18). */
 const INPUT_FIDELITY_HIGH = new Set(["gpt-image-1.5"]);

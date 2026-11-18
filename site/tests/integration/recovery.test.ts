@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { setStudioSetting } from "../../api/_lib/engine/jobs.ts";
-import { runWorkerStep } from "../../api/_lib/engine/worker.ts";
-import { api, createHarness, drain, fakePage, type Harness, login } from "../helpers/harness.ts";
+import { setStudioSetting } from "../../api/_lib/engine/jobs.js";
+import { runWorkerStep } from "../../api/_lib/engine/worker.js";
+import { api, createHarness, drain, fakePage, type Harness, login } from "../helpers/harness.js";
 
 async function setup() {
   const h = await createHarness();

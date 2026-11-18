@@ -1,22 +1,22 @@
-import type { StudioDeps } from "../context.ts";
-import { content } from "../context.ts";
-import { loadCharacters, resolveSheetFiles } from "../content/characters.ts";
-import type { LoadedPrompt } from "../content/chapters.ts";
-import { pad3 } from "../content/config.ts";
-import { expectedLettering, sha256 } from "../content/prompt-parser.ts";
-import type { Db } from "../db/client.ts";
-import { one } from "../db/client.ts";
-import { inspectImage, normalizeToTarget, prepareReference } from "../images.ts";
-import { classifyProviderError, type ReferenceImage } from "../openai/providers.ts";
-import { costFromUsage, estimatePageCost, QA_COST_ASSUMED_USD, qaCostFromUsage } from "../openai/pricing.ts";
-import { checkPromptAgainstScript } from "../qa/dialogue.ts";
-import { buildQaInstructions, combineQa } from "../qa/evaluate.ts";
-import { BlobExistsError } from "../storage/blobs.ts";
-import { buildContinuityState, type ContinuityState, continuitySummary } from "./continuity.ts";
-import { logEvent } from "./events.ts";
-import { checkEligibility, setStudioSetting } from "./jobs.ts";
-import { buildFinalPrompt, planReferences, type ReferenceManifestEntry, type SceneImageCandidate, type UploadedReference } from "./references.ts";
-import type { AttemptRow, JobPageRow, JobRow, VersionRow } from "./types.ts";
+import type { StudioDeps } from "../context.js";
+import { content } from "../context.js";
+import { loadCharacters, resolveSheetFiles } from "../content/characters.js";
+import type { LoadedPrompt } from "../content/chapters.js";
+import { pad3 } from "../content/config.js";
+import { expectedLettering, sha256 } from "../content/prompt-parser.js";
+import type { Db } from "../db/client.js";
+import { one } from "../db/client.js";
+import { inspectImage, normalizeToTarget, prepareReference } from "../images.js";
+import { classifyProviderError, type ReferenceImage } from "../openai/providers.js";
+import { costFromUsage, estimatePageCost, QA_COST_ASSUMED_USD, qaCostFromUsage } from "../openai/pricing.js";
+import { checkPromptAgainstScript } from "../qa/dialogue.js";
+import { buildQaInstructions, combineQa } from "../qa/evaluate.js";
+import { BlobExistsError } from "../storage/blobs.js";
+import { buildContinuityState, type ContinuityState, continuitySummary } from "./continuity.js";
+import { logEvent } from "./events.js";
+import { checkEligibility, setStudioSetting } from "./jobs.js";
+import { buildFinalPrompt, planReferences, type ReferenceManifestEntry, type SceneImageCandidate, type UploadedReference } from "./references.js";
+import type { AttemptRow, JobPageRow, JobRow, VersionRow } from "./types.js";
 
 /**
  * Durable worker. Each call performs at most ONE step (generate or validate)

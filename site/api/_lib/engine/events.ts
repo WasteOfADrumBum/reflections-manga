@@ -1,6 +1,6 @@
-import type { Db } from "../db/client.ts";
-import type { LogLevel } from "../log.ts";
-import { redactString, sanitize } from "../log.ts";
+import type { Db } from "../db/client.js";
+import type { LogLevel } from "../log.js";
+import { redactString, sanitize } from "../log.js";
 
 /** Sanitised, queryable job log shown in the studio. */
 export async function logEvent(

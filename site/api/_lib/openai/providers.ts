@@ -1,6 +1,6 @@
 import { z } from "zod";
-import type { Quality } from "../content/config.ts";
-import type { ReportedUsage } from "./pricing.ts";
+import type { Quality } from "../content/config.js";
+import type { ReportedUsage } from "./pricing.js";
 
 /**
  * Provider interfaces. Production implementations call the official OpenAI
