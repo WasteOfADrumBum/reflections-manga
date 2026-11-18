@@ -83,17 +83,29 @@ function build(): ((req: Request) => Promise<Response>) | undefined {
 }
 
 /** vercel.json rewrites /api/studio/<path> to /api/studio?__path=<path>; restore the original path. */
-function restorePath(req: Request): Request {
-  const url = new URL(req.url);
+function absoluteUrl(req: Request): URL {
+  // Some runtimes hand over a path-only URL; resolve it against the Host header.
+  const host = req.headers.get("x-forwarded-host") ?? req.headers.get("host") ?? "localhost";
+  return new URL(req.url, `https://${host}`);
+}
+
+export function restorePath(req: Request): Request {
+  const url = absoluteUrl(req);
   const p = url.searchParams.get("__path");
-  if (p == null) return req;
+  if (p == null) return url.href === req.url ? req : rebuild(req, url);
   url.searchParams.delete("__path");
+  // Vercel also forwards the rewrite's named segment as a query parameter.
+  url.searchParams.delete("studioPath");
   url.pathname = `/api/studio/${p.replace(/^\/+/, "")}`;
+  return rebuild(req, url);
+}
+
+function rebuild(req: Request, url: URL): Request {
   const init: RequestInit & { duplex?: string } = { method: req.method, headers: req.headers, body: ["GET", "HEAD"].includes(req.method) ? undefined : req.body, duplex: "half" };
   return new Request(url, init);
 }
 
-export default async function studio(incoming: Request): Promise<Response> {
+async function studio(incoming: Request): Promise<Response> {
   const req = restorePath(incoming);
   const h = build();
   if (!h) {
@@ -114,3 +126,13 @@ export default async function studio(incoming: Request): Promise<Response> {
   }
   return h(req);
 }
+
+// Vercel's Node runtime passes a Web Request to named method exports (a bare
+// default export would receive Node's req/res instead).
+export const GET = studio;
+export const POST = studio;
+export const PUT = studio;
+export const PATCH = studio;
+export const DELETE = studio;
+export const OPTIONS = studio;
+export const HEAD = studio;
