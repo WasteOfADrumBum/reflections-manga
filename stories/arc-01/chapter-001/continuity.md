@@ -1,5 +1,9 @@
 # Chapter Continuity
 
+> **Current retelling · November 18, 2026.** Start with the [v2 page guide and 30 prompts](page-guide-v2.md) or read the [v2 script](script-v2.md). The earlier lock on pages 1–20 and the 32-page plan below belong to v1. The current draft follows the wedding album, two family photos and the empty print pocket through its page-30 close.
+
+## Previous version · v1
+
 Status: DRAFT planning notes, updated 2026-11-17. No approved chapter events.
 User-selected ending direction is recorded separately from unapproved execution.
 
@@ -21,7 +25,7 @@ New plot execution stays DRAFT; the workflow preference does not approve canon.
 
 ## Batch 021–030: Psychological-Drama Revision — DRAFT
 
-Revised 2026-11-17 at the user's request: **46 panels / 69 lettering items**.
+Revised 2026-11-17 at the user's request: **46 panels / 67 lettering items**.
 Pages 001–020 are LOCKED continuity for this revision. Their prompt files,
 script scene bodies and existing artwork stay unchanged. The user reports pages
 through 020; that report does not expand local image registration or QA.
@@ -42,7 +46,8 @@ through 020; that report does not expand local image registration or QA.
 
 - 021–022 continue 020 immediately: Ruby notices fatigue, invites her husband to
   sit, names creative interests and asks for unhurried time. Ethan hears a problem
-  to solve. His captions explicitly identify both women as his wives.
+  to solve. The natural “my husband” and “Babe” dialogue carries the relationship context.
+  No introductory caption counts or explains the marriages.
 - 023, a little later: Morgan independently notices strain. He mistakes her keys
   for a truck-help request. She sets them aside and admits asking for company is
   harder. He admits tiredness. No repair or departure occurs.
@@ -51,7 +56,7 @@ through 020; that report does not expand local image registration or QA.
   Morgan's assumption about waiting; their friendship stays warm and platonic.
   Ethan does not overhear and supplies no narration in this scene.
 - 025: explicit “Later that night.” Ethan alone; guilt in the absence of requests.
-  He identifies Morgan/Ruby as best friends, not lovers. No flashbacks.
+  He considers joining the others instead of explaining their relationship to the reader. No flashbacks.
 - 026–027: Morgan joins at the table with one modest whiskey pour. Ethan asks about
   his different relational selves. Her “And what do you need?” has no easy answer.
   She distinguishes frustration with guessing from love, then takes her glass

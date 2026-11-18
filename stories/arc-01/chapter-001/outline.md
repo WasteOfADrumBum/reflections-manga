@@ -1,5 +1,9 @@
 # Chapter Outline
 
+> **Current retelling · November 18, 2026.** Start with the [v2 page guide and 30 prompts](page-guide-v2.md) or read the [v2 script](script-v2.md). The earlier lock on pages 1–20 and the 32-page plan below belong to v1.
+
+## Previous version · v1
+
 Status: DRAFT proposed outline, recorded 2026-11-13; pending approval.
 Stage: SCRIPT (partial draft, pages 001–030) and working art registered for 001–010;
 outline remains DRAFT.
@@ -84,6 +88,6 @@ bridge. The user has since generated 005–010 and requested ten-page batches.
 Pages 011–020 now add 41 DRAFT panels for the child introductions and overlapping
 requests, with [summaries/reference lists](page-guide.md) and a [ten-page prompt pack](page-prompts-011-020.md).
 Pages 021–030 now have 46 revised DRAFT panels and a [ten-page prompt pack](page-prompts-021-030.md)
-for clearer marriage context, distinct personalities, private Morgan/Ruby friendship,
+for clearer natural spouse language, distinct personalities, private Morgan/Ruby friendship,
 a late-night exchange, and next-morning small requests. Only 031–032 remain unscripted; the storyboard file is still a scaffold.
 No developments enter the canonical timeline or release index from this outline.

@@ -4,7 +4,7 @@ REFERENCE ORDER: image 1 = Ethan; image 2 = Ruby.
 Attach identity sheets FIRST, then scene references. Use page 020 for immediate continuity if available; page 010 also anchors kitchen/Ethan/Ruby clothes. Never assume an unattached page exists.
 Original sheets anchor faces, hair, eyes, ages and builds; prior pages guide scene state. Current scene clothes override a sheet's different outfit. Do not reproduce reference labels, pose grids, extra cast or earlier rendering errors.
 
-PAGE PLOT: Ruby asks for her husband, while Ethan privately turns their chosen family life into a test of his usefulness.
+PAGE PLOT: Ruby gets Ethan to sit with her instead of moving on to another task.
 Direction only: DO NOT print this summary inside the image.
 
 FORMAT/STYLE: Portrait 1024 x 1536 (2:3), English LEFT TO RIGHT then TOP TO BOTTOM. White gutters and safe margins. Contemporary Japanese seinen-inspired manga, clean expressive linework, semi-realistic mature adult proportions, subtle cel shading, muted natural FULL COLOR and cinematic shot changes. Time-specific lighting overrides prior-page light. No panel numbers, page labels, watermark or extra title. Working draft settings, not a print specification.
@@ -30,11 +30,10 @@ Exact lettering, reading order:
 Ruby speech balloon: "You seem tired."
 Ethan speech balloon: "I'm fine."
 
-PANEL 2: Closer two-shot. Ruby holds his gaze; his practiced smile stays a moment too long. Leave clear space for the caption.
-Emotional direction: Make the marriage legible through first-person context.
+PANEL 2: Closer two-shot. Ruby holds his gaze; his practiced smile stays a moment too long. Let their expressions carry the pause.
+Emotional direction: She recognizes the familiar answer and gives him a moment.
 Exact lettering, reading order:
 Ruby speech balloon: "You always say that."
-Ethan INTERNAL CAPTION, no speech tail: "Ruby is my wife. Morgan is too."
 
 PANEL 3: Ruby draws out the empty chair beside her at the table, inviting Ethan to sit. His mug stays on the table.
 Emotional direction: She wants companionship, not another task.
@@ -42,10 +41,9 @@ Exact lettering, reading order:
 Ruby speech balloon: "I wanted my husband for a minute. The chairs can survive without you."
 
 PANEL 4: Wider table view. Ethan sits in the offered chair. They share an affectionate smile; his hands settle empty on the table.
-Emotional direction: His love is real; his tension concerns deserving it.
+Emotional direction: He sits slightly forward at first, then begins to settle into her company. Keep the mood ordinary and affectionate.
 Exact lettering, reading order:
 Ethan speech balloon: "You've got me, Babe."
-Ethan INTERNAL CAPTION, no speech tail: "Two wives. One family. A life I chose. Why does sitting down feel like neglecting something?"
 
 ENDING: Ruby has his attention but not the truth of his tiredness. Page 022 gives her a specific desire of her own.
 Ending guidance is not printed text. Letter ONLY the exact quoted text assigned to each panel. Never print plot summaries, cast names, emotional directions, panel labels or ending guidance. Speech balloons have clear tails to their speakers and follow the listed LEFT-TO-RIGHT order. Ethan INTERNAL CAPTIONS use quiet rectangular boxes WITHOUT tails; they are his subjective thoughts, not objective diagnoses or access to another person's mind. TIME CAPTIONS use separate small neutral boxes. No other narrator voice or unassigned thoughts. Plan lettering before art: no more than 30 words per panel, at most three short text units, roughly one quarter of the panel for lettering. Keep normal legible type, faces/hands visible and generous breathing room; never shrink lettering to fit. Preserve silent panels. No extra dialogue, SFX, jealousy effects, threats, dramatic tears, hallucinations, split faces, total-disclosure demand or instant reconciliation. Adults retain agency; touch is familiar, welcome and non-explicit.

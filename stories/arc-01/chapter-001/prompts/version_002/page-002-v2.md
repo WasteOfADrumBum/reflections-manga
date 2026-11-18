@@ -1,0 +1,34 @@
+# Page 002 · Version 2
+
+```text
+Create ONE finished-looking DRAFT manga page for Reflections, Chapter 001, “Three Hearts, Different Needs,” retelling v2. Page 2. Exactly 4 panels.
+
+REFERENCE ORDER: Attach these identity sheets first, in order: walker-morgan.png, bennett-walker-ruby.png, children/walker-rowan.png, children/bennett-walker-avery.png, children/walker-riley.png. Then attach the selected v2 page 001 for scene continuity.
+
+FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive clean linework, restrained natural color, realistic anatomy and cinematic framing. White gutters. Use a wide top panel, two middle panels side by side, then a wide final panel. English, LEFT TO RIGHT across each row, then down. Place the first text unit highest at the left, the reply lower to its right. Frame speakers in that order before drawing balloons. SPEECH uses a smooth oval and one pointed tail aimed at the visible speaker's mouth. THOUGHT uses a scalloped cloud and a short chain of diminishing dots ending beside its owner's head. NARRATION alone uses a square-cornered, tailless box. Print only the quoted lines, exactly once and in listed order. Names, types and panel numbers are instructions. Render only assigned lettering. Keep tails and dot trails clear of other faces. Leave generous white space for lettering. No printed speaker labels, page title or added SFX.
+
+CAST: Morgan: 34, about 170 cm, athletic, layered chestnut hair below shoulders, hazel eyes, bare left ring finger throughout. Scene wardrobe: open olive utility overshirt, charcoal tee, dark jeans.
+Ruby: 28, about 152 cm, slender adult, copper-red pixie, green eyes, light freckles, wedding band on left ring finger throughout. Scene wardrobe: dusty-rose cardigan, ivory cable-knit V-neck, dark leggings.
+Rowan: 9, 130 cm, slender, short textured chestnut hair, brown-leaning hazel eyes, no freckles. Scene wardrobe: navy hoodie with orange accents, jeans, blue sneakers.
+Avery: 7, 126 cm, sturdy, long auburn hair tied back, hazel eyes, nose and cheek freckles. Scene wardrobe: pastel music-note tee, pastel leggings, lavender sneakers.
+Riley: about 6, 110 cm, slender, chestnut pixie, green-leaning hazel eyes, light nose freckles. Scene wardrobe: purple hoodie with teal lining, purple trousers, teal sneakers. Draw only people required by the shot. Use the referenced group photos for any children appearing only on a phone. Preserve the children's relative heights. Use canon identity sheets over previous render errors.
+
+VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
+
+SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
+CONTINUITY: First morning, kitchen through open back door to porch steps. Phone in Ethan's hand, album stays on cabinet after p2. Ruby's coffee moves table → hands → inside windowsill on p5.
+
+PANEL 1: Wide view at the low cabinet. The three kids come to see the album. Rowan leans comfortably against Ruby's arm. Riley peers past his elbow. Avery spots a folded section she can reach from the other end. Morgan shifts over to give her room. Stay in the present. From behind the album we see its cloth spine and paper folds. The photographs face the children. Ethan is nearby with his phone, outside the frame.
+NARRATION (Narrator): "When Rowan and Riley were born, Ethan held Morgan's hand. When Avery was born, Ruby held his."
+
+PANEL 2: Closer on Rowan and Ruby. Rowan draws out one fold and discovers another tucked behind it. He looks up at Ruby, delighted. She bends beside him with her cheek against his hair for a moment. Show both faces and the join in the paper.
+SPEECH (Rowan): "Mommy, how long does this thing get?"
+SPEECH (Ruby): "Longer than my sewing table. I had to finish it on the floor."
+
+PANEL 3: Same album, opposite end. Avery has a finger under the last fold, ready to open it. Rowan reaches across to do it for her. Morgan catches his eye and holds up one open hand. Her voice is quiet and matter-of-fact. Show Avery concentrating on the fold, with room to open it herself.
+SPEECH (Morgan): "Hang on, Rowan. Let Avery have a turn."
+
+PANEL 4: One continuous wide shot. Avery has opened the fold herself and uncovered the empty pocket. Rowan has drawn his hand back so everyone can see. Riley, the youngest with the chestnut pixie and purple hoodie, leans into Ruby's side and curls her fingers like cat paws. Ruby slips an arm around her and grins down at her. Morgan is beside Avery, smiling at the open page, with the back window just beyond them. Ruby rests her free hand on the cover, ready to close the album and leave it on the cabinet. Frame Riley to Ruby's left so the first balloon points clearly to Riley's speaking mouth and the reply points to Ruby's.
+SPEECH (Riley): "Mommy, can we do one with cat faces?"
+SPEECH (Ruby): "One where I can see your freckles first. Then cats."
+```

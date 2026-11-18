@@ -1,5 +1,9 @@
 # Three Hearts, Different Needs: Chapter Script
 
+> **Current retelling · November 18, 2026.** Start with the [v2 page guide and 30 prompts](page-guide-v2.md) or read the [v2 script](script-v2.md). The earlier lock on pages 1–20 and the 32-page plan below belong to v1.
+
+## Previous version · v1
+
 Status: DRAFT v1 for review, 2026-11-13.
 Scope: Story 001 / proposed Chapter 001, pages 001–030 drafted. 131 panels.
 Revision: 2026-11-17, pages 021–030 only; pages 001–020 locked.
@@ -1000,7 +1004,7 @@ First morning, continuing page 020. Same home, outfits and prop states.
 
 ### Page 021 — The Husband Who Came Back
 
-Plot summary: Ruby asks for her husband, while Ethan privately turns their chosen family life into a test of his usefulness.
+Plot summary: Ruby gets Ethan to sit with her instead of moving on to another task.
 Visible cast across this page: Ethan, Ruby.
 Time/location: Same first morning, immediately after page 020: Ethan returns EMPTY-HANDED to Ruby at the kitchen table. No time jump or repeated chair task.
 Proposed layout: Wide top panel; two middle-row panels; generous wide bottom panel. Exactly FOUR panels.
@@ -1016,11 +1020,10 @@ Proposed layout: Wide top panel; two middle-row panels; generous wide bottom pan
 
 #### Panel 021.2
 
-- Visual: Closer two-shot. Ruby holds his gaze; his practiced smile stays a moment too long. Leave clear space for the caption.
-- Emotional beat: Make the marriage legible through first-person context.
+- Visual: Closer two-shot. Ruby holds his gaze; his practiced smile stays a moment too long. Let their expressions carry the pause.
+- Emotional beat: She recognizes the familiar answer and gives him a moment.
 - Exact lettering, reading order:
   1. `P021.2.DR01` — Ruby: "You always say that."
-  2. `P021.2.TR01` — Ethan, internal caption: "Ruby is my wife. Morgan is too."
 - Other lettering/SFX: None.
 
 #### Panel 021.3
@@ -1034,10 +1037,9 @@ Proposed layout: Wide top panel; two middle-row panels; generous wide bottom pan
 #### Panel 021.4
 
 - Visual: Wider table view. Ethan sits in the offered chair. They share an affectionate smile; his hands settle empty on the table.
-- Emotional beat: His love is real; his tension concerns deserving it.
+- Emotional beat: He sits slightly forward at first, then begins to settle into her company. Keep the mood ordinary and affectionate.
 - Exact lettering, reading order:
   1. `P021.4.DR01` — Ethan: "You've got me, Babe."
-  2. `P021.4.TR01` — Ethan, internal caption: "Two wives. One family. A life I chose. Why does sitting down feel like neglecting something?"
 - Other lettering/SFX: None.
 
 End-of-page hook: Ruby has his attention but not the truth of his tiredness. Page 022 gives her a specific desire of her own.
@@ -1226,9 +1228,9 @@ Proposed layout: Wide establishing top panel; two middle-row panels; spacious wi
 #### Panel 025.2
 
 - Visual: Close on Ethan's face, a trace of fondness, no resentment. Mugs unchanged; no absent-person imagery.
-- Emotional beat: Brief context clarifies the platonic pairing.
+- Emotional beat: Company is available; he has not quite let himself stop.
 - Exact lettering, reading order:
-  1. `P025.2.TR01` — Ethan, internal caption: "Morgan and Ruby are best friends, not lovers."
+  1. `P025.2.TR02` — Ethan, internal caption: "I could go and sit with them."
 - Other lettering/SFX: None.
 
 #### Panel 025.3
@@ -1279,7 +1281,7 @@ Proposed layout: Wide top panel; two middle-row panels; two full-width lower pan
 - Emotional beat: Different relationships do not make him a false person.
 - Exact lettering, reading order:
   1. `P026.3.DR01` — Ethan: "Am I different with you than I am with Ruby?"
-  2. `P026.3.DR02` — Morgan: "Of course. You're married to two different people."
+  2. `P026.3.DR03` — Morgan: "Sometimes. Why?"
 - Other lettering/SFX: None.
 
 #### Panel 026.4
@@ -1492,10 +1494,19 @@ End-of-page hook: Lead into the EXISTING outlined 031–032 affectionate close, 
 
 ## Pages 021–030: Revised Draft Choices and Review Focus
 
-Revised 2026-11-17: 46 panels / 69 lettering items.
+Revised 2026-11-17: 46 panels / 67 lettering items.
 Revised lettering IDs carry an R marker so old wording is not silently reused.
 Pages 001–020 scene bodies remain unchanged. The user selected the ending theme
 and exact closing line; revised wording/staging/events remain DRAFT.
+
+## Tone Correction: After Page 021 Trial
+
+The user found explanatory relationship captions too direct this far into the
+chapter. Preserve natural spouse language such as “my husband” and “Babe”; reveal
+family relationships through familiar behavior and conversation. Page 021 keeps
+its spoken dialogue and drops both internal captions. Pages 025–026 also avoid
+explaining or counting the pairings. Keep the emotional build gradual, with
+internal thoughts about the moment rather than a biography for the reader.
 
 ## Scope and Closing Direction
 

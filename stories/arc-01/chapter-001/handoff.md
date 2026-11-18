@@ -1,5 +1,9 @@
 # Chapter 001 Handoff
 
+> **Current retelling · November 18, 2026.** Start with the [v2 page guide and 30 prompts](page-guide-v2.md) or read the [v2 script](script-v2.md). The earlier lock on pages 1–20 and the 32-page plan below belong to v1. Generate page 001-v2 with Ruby, Ethan and Morgan's sheets, then follow the guide in sequence. Existing renders belong to the earlier version.
+
+## Previous version · v1
+
 Updated: 2026-11-17.
 Story 001: Three Hearts, Different Needs.
 Working length: 32 pages. Stage: revised DRAFT prompts/script, not a completed release.
@@ -11,7 +15,7 @@ files, script scene bodies and existing art were preserved. Only 021–030 story
 execution was revised in place; v1 filenames are retained. No art generated.
 
 - [Current pack](page-prompts-021-030.md): 10 self-contained prompts, **46 panels /
-  69 lettering items**, with ordered identity and scene references.
+  67 lettering items**, with ordered identity and scene references.
 - [Script](script.md): 001–030, 131 panels (18 + 26 + 41 + 46). Revised 021–030
   lettering IDs carry an R marker; old text IDs are not silently repurposed.
 - [Page guide](page-guide.md): revised summaries and reference orders for 021–030.
@@ -19,6 +23,14 @@ execution was revised in place; v1 filenames are retained. No art generated.
   user-established character details and approval limits.
 - Prior prompt packs/exports and existing images preserved. Image inventory
   and artwork QA were not expanded by this writing session.
+
+## Latest Tone Correction
+
+After trying page 021, the user rejected direct family-structure explanation.
+Keep its existing spoken conversation, including “my husband”; both introductory
+internal captions are removed. Also softened the corresponding lines on 025–026.
+Use natural dialogue, familiarity and behavior rather than relationship summaries.
+This preference refines presentation and changes no family canon or closing theme.
 
 ## Emotional Arc
 

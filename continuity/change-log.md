@@ -1,5 +1,19 @@
 # Change Log
 
+## 2026-11-18 · Chapter 001 retelling
+
+User reopened the entire chapter for regeneration. [V2](../stories/arc-01/chapter-001/page-guide-v2.md) replaces the earlier 32-page working plan with a 30-page draft about a family photograph. Each voice has its own attributed thoughts. Neutral narration marks family context and time changes. The closing thought stays with Ethan. Artwork and story approval are pending.
+
+## 2026-11-17: Tone Correction After Page 021 Trial
+
+- User found family-structure narration too direct and intense this late in the
+  chapter, while liking the spoken exchange and natural “husband” wording.
+- Removed both internal captions from 021; preserved every spoken line. Replaced
+  the relationship-summary caption on 025 and explanatory reply on 026 with
+  ordinary in-scene language. No family canon, ending or locked page changed.
+- Synced prompt exports, pack, script, guide and current production/continuity
+  notes. Batch remains 46 panels; current lettering count is 67. All stays DRAFT.
+
 ## 2026-11-17: Chapter 001 Pages 021–030 Psychological-Drama Revision
 
 - Revised ten prompt exports IN PLACE, retaining v1 names and existing format.
