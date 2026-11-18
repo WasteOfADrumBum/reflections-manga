@@ -15,7 +15,7 @@ Riley: about 6, 110 cm, slender, chestnut pixie, green-leaning hazel eyes, light
 VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
 
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
-CONTINUITY: First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
+CONTINUITY: First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. After canceling the first countdown on p6, Ethan keeps the phone until p9, when it goes back against the planter facing the steps. The first group photo is taken at the end of p10.
 
 PANEL 1: On the steps, Rowan suggests switching places. Avery plants one sneaker on the tread she picked. Riley keeps her balance with one hand on the rail.
 SPEECH (Rowan): "If I go up there, I can see the phone."

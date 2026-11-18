@@ -55,7 +55,7 @@ For future pages with a flashback or a photo insert, list references by characte
 ## Continuity for the regeneration
 
 - Pages 1–5 establish the shared wedding, biological parentage, both mothers parenting across those lines, the women's friendship and the three adults' private worries. Ruby keeps her band on. Morgan's left ring finger is bare. The later marriage conversation remains open.
-- Pages 6–10 move from door to steps. Each adult gets an individual thought before the timer fires. Avery chooses a place, hears the two-step plan and teaches the others her rhythm. Ethan describes periods of low mood in his own words.
+- Page 5 ends with Ethan starting the timer and jogging toward his spot. He cancels that attempt on page 6. They adjust the phone on page 9 and take the first group photo on page 10. Avery chooses a place, hears the two-step plan and teaches the others her rhythm. Ethan describes periods of low mood in his own words.
 - Pages 11–18 follow two distinct photos and the disagreement they provoke. Keep the selected panels from 10 and 12 as photo references. All six appear in the first. Morgan and the three children appear in the second. They return indoors together for water.
 - Pages 19–27 move through afternoon, after bedtime and out onto the porch that evening. Give the friends a private conversation and Ethan a different moment alone with each spouse.
 - Pages 28–30 return to the closed album the next morning. The empty pocket and Morgan's question carry into the next chapter. The last thought is Ethan's: “I know how to be needed…”

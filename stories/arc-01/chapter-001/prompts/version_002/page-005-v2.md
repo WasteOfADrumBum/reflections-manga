@@ -17,18 +17,18 @@ Riley: about 6, 110 cm, slender, chestnut pixie, green-leaning hazel eyes, light
 VISUAL CONTEXT: Stage a visible cue for the line being spoken. Keep the object, gesture or expression in the same panel as the reaction, or carry it across a clear adjacent cut. For a live rear-camera preview, copy the actual subjects at that instant into the screen with matching pose, gaze, left/right order, wardrobe and background. A stored photo repeats its original exposure. Keep speech tails anchored to the people speaking in the present.
 
 SETTING: Cream-walled kitchen, small wood table, finished low cabinet against the wall. One back door opens to a shaded porch above the lawn. Broad rail and heavy planter beside the door face the steps. Hold that geography and eyelines when cutting between shots.
-CONTINUITY: First morning, kitchen through open back door to porch steps. Phone in Ethan's hand, album stays on cabinet after p2. Ruby's coffee moves table → hands → inside windowsill on p5.
+CONTINUITY: First morning, kitchen through open back door to porch steps. The album stays on the cabinet. Ruby leaves her mug on the inside sill. Ethan starts with the phone in hand and ends with it on the porch rail.
 
 PANEL 1: Wide view from inside the back door. Morgan leads the three kids onto the shaded porch steps. Ruby puts her mug on the broad windowsill inside before following. Ethan stays at the threshold, phone in hand.
 SPEECH (Ruby): "You're coming too, right?"
 SPEECH (Ethan): "I'm right here, Babe."
 
-PANEL 2: Avery taps the tread she wants. Morgan shifts sideways to leave it free. Rowan and Riley crouch together one step down. Ruby joins the group.
-SPEECH (Morgan): "That's Avery's. Scoot this way, cat."
+PANEL 2: Avery taps the step she wants as Riley starts to sit there. Morgan pats the next space along to guide Riley over beside Rowan. Ruby joins the group.
+SPEECH (Morgan): "That's Avery's spot. Why don't you scoot this way, Cat?"
 
-PANEL 3: Ethan frames five faces from the threshold. All five look back at him. Leave an Ethan-sized gap between the adults. No picture taken.
-THOUGHT (Ethan): "Through here I can tell when everybody's ready."
-
-PANEL 4: Reverse angle from beside Ruby. Show her speaking in profile and Ethan lowering his phone until their eyes meet. Ruby pats the open spot beside her.
+PANEL 3: View from beside Ethan at the threshold. His shoulder and raised phone frame the left foreground. Beyond him, Ruby and Morgan sit with the three kids on the steps. Ruby looks over the phone at Ethan and pats the open step between her and Morgan. Keep that space plainly visible and point the balloon tail at Ruby's mouth.
 SPEECH (Ruby): "There's room right here, Ethan."
+
+PANEL 4: Wide, low shot from behind the porch rail. In the left foreground, Ethan's phone sits horizontally on the broad flat rail, braced against the heavy planter. Its illuminated screen faces the reader and shows a clear, active stopwatch icon over the camera preview. Its rear lens faces the steps. Ethan has just started the countdown and is already jogging from the rail toward the gap beside Ruby on the right. Show him mid-stride, hands empty, with Ruby and the family waiting on the steps. The countdown is still running.
+SILENT.
 ```

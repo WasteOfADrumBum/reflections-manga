@@ -78,27 +78,27 @@ SPEECH (Morgan): "Best friends are supposed to look away."
 
 ### 005 · The rehearsal
 
-First morning, kitchen through open back door to porch steps. Phone in Ethan's hand, album stays on cabinet after p2. Ruby's coffee moves table → hands → inside windowsill on p5.
+First morning, kitchen through open back door to porch steps. The album stays on the cabinet. Ruby leaves her mug on the inside sill. Ethan starts with the phone in hand and ends with it on the porch rail.
 
 PANEL 1: Wide view from inside the back door. Morgan leads the three kids onto the shaded porch steps. Ruby puts her mug on the broad windowsill inside before following. Ethan stays at the threshold, phone in hand.
 SPEECH (Ruby): "You're coming too, right?"
 SPEECH (Ethan): "I'm right here, Babe."
 
-PANEL 2: Avery taps the tread she wants. Morgan shifts sideways to leave it free. Rowan and Riley crouch together one step down. Ruby joins the group.
-SPEECH (Morgan): "That's Avery's. Scoot this way, cat."
+PANEL 2: Avery taps the step she wants as Riley starts to sit there. Morgan pats the next space along to guide Riley over beside Rowan. Ruby joins the group.
+SPEECH (Morgan): "That's Avery's spot. Why don't you scoot this way, Cat?"
 
-PANEL 3: Ethan frames five faces from the threshold. All five look back at him. Leave an Ethan-sized gap between the adults. No picture taken.
-THOUGHT (Ethan): "Through here I can tell when everybody's ready."
-
-PANEL 4: Reverse angle from beside Ruby. Show her speaking in profile and Ethan lowering his phone until their eyes meet. Ruby pats the open spot beside her.
+PANEL 3: View from beside Ethan at the threshold. His shoulder and raised phone frame the left foreground. Beyond him, Ruby and Morgan sit with the three kids on the steps. Ruby looks over the phone at Ethan and pats the open step between her and Morgan. Keep that space plainly visible and point the balloon tail at Ruby's mouth.
 SPEECH (Ruby): "There's room right here, Ethan."
+
+PANEL 4: Wide, low shot from behind the porch rail. In the left foreground, Ethan's phone sits horizontally on the broad flat rail, braced against the heavy planter. Its illuminated screen faces the reader and shows a clear, active stopwatch icon over the camera preview. Its rear lens faces the steps. Ethan has just started the countdown and is already jogging from the rail toward the gap beside Ruby on the right. Show him mid-stride, hands empty, with Ruby and the family waiting on the steps. The countdown is still running.
+SILENT.
 
 ### 006 · Some mornings
 
-First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
+First morning, seconds after p5. The phone is counting down on the porch rail. Ethan cancels this first attempt before the shutter fires and picks up the phone. The first group photo is taken on p10.
 
-PANEL 1: Hold the porch axis. Ruby sees he hasn't moved from the door. She walks the few feet back to him. Both in shade. The sunlit strip along the lawn makes his glance at the light legible.
-SPEECH (Ethan): "Hang on. The shade's just right over there."
+PANEL 1: Ethan stops short of the gap and glances back at the tilted phone. He returns to the porch rail, taps to cancel the countdown before the shutter fires, and lifts the phone from beside the planter. Ruby comes over from the steps and joins him beside the open door. Both are in shade.
+SPEECH (Ethan): "Hang on. I think the phone's crooked."
 
 PANEL 2: Ruby studies him in profile. He blinks slowly. The dark phone screen rests against his thigh.
 THOUGHT (Ethan): "Some mornings even the things I like feel like one more thing to get through."
@@ -109,7 +109,7 @@ SPEECH (Ruby): "Come sit by me. Just for this one."
 
 ### 007 · Ruby's thumb
 
-First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
+First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. After canceling the first countdown on p6, Ethan keeps the phone until p9, when it goes back against the planter facing the steps. The first group photo is taken at the end of p10.
 
 PANEL 1: Ruby indoors at the edge of the open doorway, Ethan beside her. Her thumb turns her band as she finds the words. The girls and Rowan stay on the steps outside the crop.
 THOUGHT (Ruby): "I could let him off. I'm very good at that."
@@ -123,7 +123,7 @@ THOUGHT (Ruby): "I'd like you to want it too."
 
 ### 008 · Avery's turn
 
-First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
+First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. After canceling the first countdown on p6, Ethan keeps the phone until p9, when it goes back against the planter facing the steps. The first group photo is taken at the end of p10.
 
 PANEL 1: On the steps, Rowan suggests switching places. Avery plants one sneaker on the tread she picked. Riley keeps her balance with one hand on the rail.
 SPEECH (Rowan): "If I go up there, I can see the phone."
@@ -141,7 +141,7 @@ THOUGHT (Morgan): "If I keep everybody moving, nobody has time to ask if I'm hav
 
 ### 009 · The level
 
-First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
+First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. After canceling the first countdown on p6, Ethan keeps the phone until p9, when it goes back against the planter facing the steps. The first group photo is taken at the end of p10.
 
 PANEL 1: Ethan steps onto the porch to test the broad rail beside the door. Morgan peels away from the group to meet him. Ethan holds the phone. Leave the planter and a clear stretch of rail in frame.
 SPEECH (Ethan): "Help me get this level, Hun?"
@@ -156,7 +156,7 @@ THOUGHT (Ethan): "Soon as she says where she wants me, I can breathe again."
 
 ### 010 · Everybody ready?
 
-First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. Phone stays with Ethan until p9, when it goes landscape against the planter facing the steps. First timer exposure occurs only at the end of p10.
+First morning. Album on cabinet, coffee on inside sill. Family gathers on porch steps. After canceling the first countdown on p6, Ethan keeps the phone until p9, when it goes back against the planter facing the steps. The first group photo is taken at the end of p10.
 
 PANEL 1: Ethan selects the timer, taps once and steps away from the rail. Morgan heads back to the gap. The others see him coming. No readable screen text.
 SPEECH (Ethan): "Ten seconds. Keep the cat on the steps."
