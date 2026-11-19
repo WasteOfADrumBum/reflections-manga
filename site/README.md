@@ -49,6 +49,10 @@ Character ids become links to that bio; any other name shows as plain text.
 `images/characters/` holds selected web-sized copies of sheets from the grouped character folders’ `references/` and `outfits/` directories.
 If a reference sheet changes, re-export the copy here.
 
+Gallery copies live in `images/characters/refs/` as `<id>-<short-name>.webp` (1536 px wide) plus a
+`-thumb.webp` (fits 360 x 240). The characters page is not behind the 18+ check, so lingerie sheets,
+`outfits/_review/` sheets, and sheets built around underwear-style bottoms or a bikini are not exported here.
+
 ## Local preview
 
 ```
