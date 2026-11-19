@@ -199,6 +199,20 @@ CREATE TABLE IF NOT EXISTS sheet_labels (
   updated_at timestamptz NOT NULL
 );
 CREATE INDEX IF NOT EXISTS generation_attempts_by_month ON generation_attempts (started_at);
+-- Photos uploaded for the public Memories album, before and after their pull request.
+CREATE TABLE IF NOT EXISTS album_items (
+  id uuid PRIMARY KEY,
+  title text NOT NULL,
+  alt text NOT NULL,
+  wide boolean NOT NULL DEFAULT false,
+  width integer NOT NULL,
+  height integer NOT NULL,
+  blob_path text NOT NULL UNIQUE,
+  status text NOT NULL,
+  pr_url text,
+  created_by text NOT NULL,
+  created_at timestamptz NOT NULL
+);
 `,
   },
 ];
