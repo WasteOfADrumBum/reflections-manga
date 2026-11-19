@@ -298,10 +298,10 @@ export function createApp(deps: StudioDeps) {
     const id = chapterParam(params.id!);
     const c = await content(deps);
     if (!c.chapterConfig(id)) throw notFound("Unknown chapter.");
-    const overview = await chapterOverview(deps, id);
+    const [overview, syn] = await Promise.all([chapterOverview(deps, id), c.chapterSynopsis(id)]);
     const settings = { defaults: c.studioConfig.generation, overrides: await chapterOverrides(deps, id) };
     const job = await one(deps.db, `SELECT * FROM jobs WHERE chapter_id = $1 ORDER BY created_at DESC LIMIT 1`, [id]);
-    return json({ ...overview, settings, latestJob: job ?? null, realGenerationVerified: await getStudioSetting(deps, "real_generation_verified", false), generationEnabled: deps.generationEnabled });
+    return json({ ...overview, synopsis: syn.synopsis, settings, latestJob: job ?? null, realGenerationVerified: await getStudioSetting(deps, "real_generation_verified", false), generationEnabled: deps.generationEnabled });
   });
 
   r.add("PUT", "/chapters/:id/settings", async ({ req, params }) => {
@@ -363,7 +363,8 @@ export function createApp(deps: StudioDeps) {
     await requireAdmin(req);
     const body = z.object({ chapterId: z.string().regex(/^\d{3}$/), pages: z.array(z.number().int()).min(1).max(60), settings: settingsOverrideSchema.optional() }).safeParse(await readJson(req, 64 * 1024));
     if (!body.success) throw badRequest("Choose a chapter and pages.");
-    return json(await estimate(deps, body.data.chapterId, body.data.pages, body.data.settings ?? {}));
+    const e = await estimate(deps, body.data.chapterId, body.data.pages, body.data.settings ?? {});
+    return json({ ...e, cost: costCard(e.settings.imageModel, e.settings.quality, e.referencesPerPage, e.settings.maxAttemptsPerPage) });
   });
 
   r.add("POST", "/jobs", async ({ req }) => {

@@ -57,7 +57,8 @@ const BADGE = {
   completed: "ok",
   pass: "ok",
   locked: "neutral",
-  ready: "info",
+  has_art: "ok",
+  ready: "neutral",
   queued: "info",
   running: "info",
   generating: "info",
@@ -98,6 +99,11 @@ export function label(status) {
 
 export function badge(status, text) {
   return h("span", { class: `badge badge-${BADGE[status] ?? "neutral"}` }, text ?? label(status));
+}
+
+/** Badges in a row wrap instead of spilling out of their card. */
+export function badges(...items) {
+  return h("span", { class: "badge-row" }, ...items.filter(Boolean));
 }
 
 export function notice(kind, ...children) {

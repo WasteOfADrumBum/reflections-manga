@@ -1,5 +1,5 @@
 // Arcs > chapters > pages, with the story text kept in the repository.
-import { get, post } from "../api.js";
+import { get, post, put } from "../api.js";
 import { act, crumbs, errorBox, head, prLink, render, repoImage, section } from "../shared.js";
 import { badge, clear, field, h, notice, progress } from "../ui.js";
 
@@ -101,12 +101,42 @@ export function pageTile(chapterId, p) {
   );
 }
 
+function settingsForm(id, c) {
+  const overrides = c.settings.overrides || {};
+  const defaults = c.settings.defaults;
+  const quality = h("select", {}, ...["low", "medium", "high", "xhigh", "max"].map((q) => h("option", { value: q, selected: (overrides.quality ?? defaults.quality) === q }, q)));
+  const attempts = h("input", { type: "number", min: "1", max: "6", value: String(overrides.maxAttemptsPerPage ?? defaults.maxAttemptsPerPage) });
+  const budget = h("input", { type: "number", min: "0.5", max: "200", step: "0.5", value: String(overrides.budgetUsdPerJob ?? defaults.budgetUsdPerJob) });
+  const scene = h("input", { type: "number", min: "0", max: "4", value: String(overrides.maxSceneReferences ?? defaults.maxSceneReferences) });
+  const form = h(
+    "form",
+    {},
+    h("p", { class: "small muted" }, `Defaults for this chapter's runs. Model: ${defaults.imageModel}. These never change the script or prompts.`),
+    h(
+      "div",
+      { class: "form-grid" },
+      field({ id: "set-quality", label: "Image quality", input: quality, hint: "Higher costs more per image." }),
+      field({ id: "set-attempts", label: "Attempts per page", input: attempts, hint: "Automatic retries when quality checks fail." }),
+      field({ id: "set-budget", label: "Default budget per run (USD)", input: budget }),
+      field({ id: "set-scene", label: "Earlier pages to attach", input: scene, hint: "For continuity, after the character sheets." }),
+    ),
+    h("button", { class: "btn", type: "submit" }, "Save settings"),
+  );
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    act(form.querySelector("button"), () => put(`/chapters/${id}/settings`, { quality: quality.value, maxAttemptsPerPage: Number(attempts.value), budgetUsdPerJob: Number(budget.value), maxSceneReferences: Number(scene.value) }), "Settings saved.").catch(() => undefined);
+  });
+  return h("details", { class: "panel-details" }, h("summary", {}, "Generation settings for this chapter"), form);
+}
+
 export async function chapterView(id) {
   const c = await get(`/chapters/${id}`);
   render(
     crumbs(["Story", "#/story"], [`Arc ${c.arcNumber}`, `#/story/${c.arcId}`], [`Chapter ${id}`]),
     head(`Chapter ${id}: ${c.title}`, c.synopsis ?? "", h("a", { class: "btn btn-primary", href: `#/studio/${id}` }, "Generate pages"), h("a", { class: "btn", href: `#/review/${id}` }, "Review")),
     h("p", { class: "small muted" }, `${c.doneCount} of ${c.plannedPages} pages have art. Script: ${c.scriptPath}`),
+    errorBox(),
     section("Pages", "pages-title", h("p", { class: "small muted" }, "Open a page to read its synopsis, pick outfits, edit the prompt for one run, generate or upload a version."), h("ul", { class: "page-grid", "aria-labelledby": "pages-title" }, ...c.pages.map((p) => pageTile(id, p)))),
+    settingsForm(id, c),
   );
 }

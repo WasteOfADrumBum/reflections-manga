@@ -113,7 +113,7 @@ export async function estimate(deps: StudioDeps, chapterId: string, pages: numbe
     expectedRetryRate: settings.expectedRetryRate,
     maxAttempts: settings.maxAttemptsPerPage,
   });
-  return { eligibility, settings, estimate: est };
+  return { eligibility, settings, estimate: est, referencesPerPage: avgRefs };
 }
 
 export async function createJob(deps: StudioDeps, input: CreateJobInput, opts: { createdBy: string; idempotencyKey: string | null }) {
