@@ -16,6 +16,8 @@ export interface PublishRequest {
   files: PublishFile[];
   /** Paths that must NOT already exist on the base branch (no overwrites of artwork). */
   mustNotExist: string[];
+  /** Paths removed in the same commit, used only to move a file (its content is re-added under a new path in `files`). */
+  deletePaths?: string[];
 }
 
 export interface PublishResult {
@@ -85,6 +87,7 @@ export class GitHubPublisher implements Publisher {
       const blob = await this.gh<{ sha: string }>("POST", `/git/blobs`, { content: file.content.toString("base64"), encoding: "base64" });
       tree.push({ path: file.path, mode: "100644", type: "blob", sha: blob.data.sha });
     }
+    for (const path of req.deletePaths ?? []) tree.push({ path, mode: "100644", type: "blob", sha: null as unknown as string });
     const newTree = await this.gh<{ sha: string }>("POST", `/git/trees`, { base_tree: baseCommit.data.tree.sha, tree });
     const commit = await this.gh<{ sha: string }>("POST", `/git/commits`, { message: req.commitMessage, tree: newTree.data.sha, parents: [baseSha] });
     await this.gh("POST", `/git/refs`, { ref: `refs/heads/${req.branch}`, sha: commit.data.sha });

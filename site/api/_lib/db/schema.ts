@@ -215,6 +215,16 @@ CREATE TABLE IF NOT EXISTS album_items (
 );
 `,
   },
+  {
+    id: 3,
+    name: "publishing art that is already in the repository",
+    sql: `
+-- A publication either publishes approved studio versions (kind 'versions') or
+-- copies page art already committed under stories/.../pages into the reader (kind 'repo_art').
+ALTER TABLE publications ADD COLUMN IF NOT EXISTS kind text NOT NULL DEFAULT 'versions';
+ALTER TABLE publications ADD COLUMN IF NOT EXISTS pages integer[] NOT NULL DEFAULT '{}';
+`,
+  },
 ];
 
 export async function migrate(db: Db): Promise<number[]> {

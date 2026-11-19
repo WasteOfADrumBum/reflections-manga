@@ -1,7 +1,9 @@
 // Character library: every sheet is an outfit; one picker swaps the preview.
 import { api, get, post, put } from "../api.js";
 import { act, errorBox, head, prLink, render, repoImage, section } from "../shared.js";
-import { badge, clear, field, h, label, notice, sheetOptions } from "../ui.js";
+import { badge, confirmDialog, field, fill, h, label, notice, sheetOptions, veil } from "../ui.js";
+
+const cap = (t) => (t ? t.charAt(0).toUpperCase() + t.slice(1) : "");
 
 function outfitCard(c, publisherReady, categories) {
   const sheets = c.sheets;
@@ -10,19 +12,39 @@ function outfitCard(c, publisherReady, categories) {
     return h("li", { class: "card char-card" }, h("h2", { id: `c-${c.id}` }, c.displayName), notice("warn", h("p", {}, "No sheet image for this character yet. Add one below.")), addSheetForm(c, publisherReady, categories));
   }
   const img = h("img", { src: repoImage(def.path, 480), alt: `${c.displayName}, ${def.label}`, loading: "lazy", decoding: "async", width: "480", height: "320" });
-  const caption = h("figcaption", {}, h("span", { class: "outfit-name" }, def.label), def.isDefault ? badge("approved", "Default") : null);
+  const frame = veil(img, def.sensitive, `${c.displayName}, ${def.label}`);
+  const name = h("p", { class: "outfit-name" }, def.label);
+  const tags = h("span", { class: "badge-row" });
   const fullLink = h("a", { href: repoImage(def.path), target: "_blank", rel: "noopener", class: "small" }, "Open full size", h("span", { class: "visually-hidden" }, " (opens in a new tab)"));
   const select = h("select", { id: `outfit-${c.id}` }, ...sheetOptions(sheets, def.path, (s) => (s.isDefault ? " (default)" : "")));
   const rename = h("input", { type: "text", maxlength: "80", value: def.label, id: `rename-${c.id}` });
   const renameBtn = h("button", { class: "btn btn-small", type: "button" }, "Save name");
+  const catSelect = h("select", { id: `cat-${c.id}` }, ...categories.map((k) => h("option", { value: k }, cap(k))));
+  const catBtn = h("button", { class: "btn btn-small", type: "button", disabled: !publisherReady }, "Change category");
+  const catResult = h("div", { "aria-live": "polite" });
+  const catForm = h(
+    "div",
+    { class: "cat-form" },
+    field({ id: `cat-${c.id}`, label: "Category", input: catSelect, hint: "Moves the sheet into its category in a pull request." }),
+    catBtn,
+  );
   const show = (path) => {
     const s = sheets.find((x) => x.path === path);
     if (!s) return;
     img.src = repoImage(s.path, 480);
     img.alt = `${c.displayName}, ${s.label}`;
-    clear(caption).append(h("span", { class: "outfit-name" }, s.label), s.isDefault ? badge("approved", "Default") : "", s.needsReview ? badge("uncertain", "Needs a category") : "");
+    frame.setSensitive(s.sensitive, `${c.displayName}, ${s.label}`);
+    name.textContent = s.label;
+    fill(
+      tags,
+      s.isDefault ? badge("approved", "Main sheet") : s.needsReview ? badge("uncertain", "Needs a category") : s.category ? badge("queued", cap(s.category)) : null,
+      s.sensitive ? badge("pending", "18+") : null,
+    );
     fullLink.href = repoImage(s.path);
     rename.value = s.label;
+    catForm.hidden = s.isDefault;
+    catSelect.value = s.category ?? categories[0];
+    fill(catResult);
   };
   select.addEventListener("change", () => show(select.value));
   renameBtn.addEventListener("click", () =>
@@ -35,15 +57,30 @@ function outfitCard(c, publisherReady, categories) {
       })
       .catch(() => undefined),
   );
+  catBtn.addEventListener("click", async () => {
+    const s = sheets.find((x) => x.path === select.value);
+    if (!s) return;
+    const ok = await confirmDialog({
+      title: `Move "${s.label}" to ${cap(catSelect.value)}?`,
+      body: h("p", {}, `Opens a pull request that moves this sheet into ${c.firstName}'s ${catSelect.value} outfits, updates the asset manifest and fixes every link to it. Nothing changes until you merge it.`),
+      confirmLabel: "Open pull request",
+    });
+    if (!ok) return;
+    const res = await act(catBtn, () => post(`/characters/${c.id}/sheets/category`, { path: s.path, category: catSelect.value }), "Pull request opened.").catch(() => null);
+    if (res) fill(catResult, prLink(res.prUrl));
+  });
+  show(def.path);
   return h(
     "li",
     { class: "card char-card" },
     h("h2", { id: `c-${c.id}` }, c.displayName),
     c.group ? h("p", { class: "eyebrow" }, c.group) : null,
-    h("figure", { class: "outfit-preview" }, img, caption),
+    h("figure", { class: "outfit-preview" }, frame, h("figcaption", {}, name, tags)),
     fullLink,
     field({ id: `outfit-${c.id}`, label: `Outfit (${sheets.length})`, input: select }),
     h("div", { class: "inline-form" }, field({ id: `rename-${c.id}`, label: "Name this outfit", input: rename, hint: "Shown in pickers. Saved in the studio, not the repository." }), renameBtn),
+    catForm,
+    catResult,
     addSheetForm(c, publisherReady, categories),
   );
 }
@@ -70,7 +107,7 @@ function addSheetForm(c, publisherReady, categories) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const res = await act(btn, () => post(`/characters/${c.id}/sheets`, new FormData(form)), "Pull request opened.").catch(() => null);
-    if (res) clear(result).append(prLink(res.prUrl));
+    if (res) fill(result, prLink(res.prUrl));
   });
   return h("details", { class: "add-sheet" }, h("summary", {}, "Add an outfit sheet"), form);
 }
@@ -84,7 +121,7 @@ function newCharacterForm(publisherReady, groups) {
   const btn = h("button", { class: "btn", type: "submit", disabled: !publisherReady }, "Open pull request");
   const form = h(
     "form",
-    { class: "panel form-card", id: "new-character" },
+    { class: "box form-card", id: "new-character" },
     h("h2", {}, "Add a character"),
     h("p", { class: "small muted" }, "Creates the character's folder in their cast group from the character template, with their main reference sheet, in a pull request. They appear here once you merge it."),
     h(
@@ -101,7 +138,7 @@ function newCharacterForm(publisherReady, groups) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const res = await act(btn, () => api("POST", "/create/character", new FormData(form)), "Pull request opened.").catch(() => null);
-    if (res) clear(result).append(prLink(res.prUrl));
+    if (res) fill(result, prLink(res.prUrl));
   });
   return form;
 }

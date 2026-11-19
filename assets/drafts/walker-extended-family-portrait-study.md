@@ -28,8 +28,8 @@ Original character sheets remain unchanged.
 - [Hayes relatives](hayes-family-relatives-input.png): top Nathan, middle Adrian, bottom Diane.
 - [Bennett relatives](walker-extended-bennett-input.png): top Autumn, bottom Thomas.
 
-Sources: the thirteen user-supplied PNGs in
-[the consolidated reference collection](../../characters/_reference-sheets/index.md).
+Sources: the thirteen user-supplied PNGs, now each character's main reference sheet
+(see the [character asset manifest](../../characters/asset-manifest.json)).
 
 ## Visual Review
 

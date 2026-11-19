@@ -33,7 +33,7 @@ export function crumbs(...items) {
 }
 
 export function section(title, id, ...children) {
-  return h("section", { class: "panel", "aria-labelledby": id }, h("h2", { id }, title), ...children);
+  return h("section", { class: "box", "aria-labelledby": id }, h("h2", { id }, title), ...children);
 }
 
 export function stopPolling() {

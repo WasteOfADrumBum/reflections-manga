@@ -1,7 +1,7 @@
 // Dashboard, batch generation and the job monitor.
 import { get, post } from "../api.js";
 import { act, announceOnce, costExplainer, crumbs, errorBox, head, poll, redraw, render, section, stopPolling } from "../shared.js";
-import { alertMessage, badge, clear, confirmDialog, field, h, label, notice, pad3, progress, usd, when } from "../ui.js";
+import { alertMessage, badge, confirmDialog, field, fill, h, label, notice, pad3, progress, usd, when } from "../ui.js";
 
 export async function dashboardView() {
   const [d, spend] = await Promise.all([get("/dashboard"), get("/spending").catch(() => null)]);
@@ -107,7 +107,7 @@ export async function studioView(chapterId) {
   });
   const quality = h("select", { id: "gen-quality" }, ...["low", "medium", "high", "xhigh", "max"].map((q) => h("option", { value: q, selected: (c.settings.overrides.quality ?? c.settings.defaults.quality) === q }, q)));
   const budget = h("input", { type: "number", min: "0.5", max: "200", step: "0.5", value: String(c.settings.overrides.budgetUsdPerJob ?? c.settings.defaults.budgetUsdPerJob) });
-  const estimateBox = h("div", { class: "panel", "aria-live": "polite" }, h("p", {}, "Choose pages to see the estimate."));
+  const estimateBox = h("div", { class: "box", "aria-live": "polite" }, h("p", {}, "Choose pages to see the estimate."));
   const testMode = !c.realGenerationVerified;
   const start = h("button", { class: "btn btn-primary", type: "button" }, testMode ? "Run one test page" : "Generate selected pages");
   const selected = () => boxes.filter((b) => b.input.checked).map((b) => Number(b.input.value));
@@ -117,10 +117,10 @@ export async function studioView(chapterId) {
     window.clearTimeout(estimateTimer);
     estimateTimer = window.setTimeout(async () => {
       const pages = testMode ? selected().slice(0, 1) : selected();
-      if (!pages.length) return clear(estimateBox).append(h("p", {}, "Choose at least one page."));
+      if (!pages.length) return fill(estimateBox, h("p", {}, "Choose at least one page."));
       try {
         const e = await post("/estimate", { chapterId: id, pages, settings: { quality: quality.value } });
-        clear(estimateBox).append(
+        fill(estimateBox, 
           h("h2", {}, "Estimated cost"),
           h("p", { class: "stat" }, usd(e.estimate.expectedUsd)),
           h("p", {}, `For ${e.estimate.pages} page(s) with ${e.settings.imageModel} at ${e.settings.quality} quality, allowing for some retries. If every page used all ${e.settings.maxAttemptsPerPage} attempts: ${usd(e.estimate.worstCaseUsd)}. The run stops at your budget.`),
@@ -129,7 +129,7 @@ export async function studioView(chapterId) {
           e.eligibility.some((x) => !x.eligible) ? notice("warn", h("ul", {}, ...e.eligibility.filter((x) => !x.eligible).map((x) => h("li", {}, `Page ${pad3(x.page)}: ${x.reason}`)))) : null,
         );
       } catch (err) {
-        clear(estimateBox).append(notice("error", h("p", {}, err.message)));
+        fill(estimateBox, notice("error", h("p", {}, err.message)));
       }
     }, 300);
   };
@@ -177,7 +177,7 @@ export async function studioView(chapterId) {
       ),
       h("div", { class: "check-grid" }, ...boxes.map((b) => b.el)),
     ),
-    h("div", { class: "form-grid" }, field({ id: "gen-quality", label: "Quality", input: quality, hint: "The image model's render quality. Higher costs more." }), field({ id: "gen-budget", label: "Budget for this run (USD, API credit)", input: budget, hint: "The run stops before any request that would pass this amount." })),
+    h("div", { class: "form-grid" }, field({ id: "gen-quality", label: "Quality", input: quality, hint: "Higher quality costs more per image." }), field({ id: "gen-budget", label: "Budget (USD)", input: budget, hint: "API credit for this run. It stops before going over." })),
     estimateBox,
     h("div", { class: "btn-row" }, start),
   );

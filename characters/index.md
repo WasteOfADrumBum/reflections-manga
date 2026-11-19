@@ -136,7 +136,7 @@ no supporting-character model sheet is approved by that use.
 
 ## References
 
-- [Consolidated reference-sheet copies](_reference-sheets/index.md): historical primary snapshots, with surname-first filenames; named mains and alternate outfits retained in each character folder. Copying does not approve artwork.
+- [Character asset manifest](asset-manifest.json): every character's main reference sheet and outfit sheets, by cast folder.
 - [Name choices](name-options.md)
 - [Child development questionnaire](child-development-questionnaire.md)
 - [Approved questionnaire answers](questionnaire-answers.md)

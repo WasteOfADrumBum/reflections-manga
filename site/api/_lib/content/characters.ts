@@ -8,8 +8,7 @@ import type { RepoEntry, RepoSource } from "../repo/source.js";
  * Every image in a character's references/ and outfits/ (including
  * outfits/_review) is one of their sheets, and characters/asset-manifest.json
  * says which one is the main reference, each outfit's category, and the
- * retired file names that used to point at it. Family copies in
- * characters/_reference-sheets/** count as the same sheet as their original.
+ * retired file names that used to point at it.
  * The default sheet is the "Current Card" if a references/index.md names one,
  * else the manifest's main reference, else the "-reference-main" file. A
  * character is only "missing a sheet" when no image exists for them at all.
@@ -22,8 +21,8 @@ export interface CharacterSheet {
   file: string;
   label: string;
   version: number | null;
-  source: "references" | "outfits" | "family";
-  /** Other repository paths holding a copy of the same sheet: family copies and retired file names. */
+  source: "references" | "outfits";
+  /** Retired repository paths that used to hold the same sheet (from the asset manifest). */
   aliases: string[];
   isDefault: boolean;
   /** Outfit category from the asset manifest or file name (casual, formal, sleepwear, ...). */
@@ -31,6 +30,8 @@ export interface CharacterSheet {
   /** Sheets in outfits/_review whose category the owner has not chosen yet. */
   needsReview: boolean;
   reviewNote: string | null;
+  /** Revealing sheets (lingerie, or a bra/briefs set awaiting a category): blurred until the viewer confirms they are 18 or older. */
+  sensitive: boolean;
   size?: number;
 }
 
@@ -61,7 +62,6 @@ export interface CharacterRecord {
 }
 
 const IMAGE = /\.(png|webp|jpe?g)$/i;
-export const FAMILY_DIR = "characters/_reference-sheets";
 export const MANIFEST_PATH = "characters/asset-manifest.json";
 export const OUTFIT_CATEGORIES = ["casual", "sleepwear", "swimwear", "activewear", "formal", "workwear", "outerwear", "seasonal", "lingerie"];
 
@@ -200,16 +200,12 @@ export function outfitLabelFromLinkText(text: string, c: { firstName: string; di
   return t.charAt(0).toUpperCase() + t.slice(1);
 }
 
-/** Family copy file name -> original path, from characters/_reference-sheets/index.md. */
-export function parseFamilyIndex(indexMd: string): Map<string, string> {
-  const out = new Map<string, string>();
-  for (const line of indexMd.split("\n")) {
-    if (!line.startsWith("|")) continue;
-    const links = imageLinks(line, FAMILY_DIR);
-    if (links.length < 2) continue;
-    out.set(links[0]!.path.split("/").pop()!, links[1]!.path);
-  }
-  return out;
+const REVEALING = /\b(lingerie|bra|briefs|panties|thong|corset|bodysuit|babydoll|boxer|bikini|underwear|topless|nude)\b/i;
+
+/** Lingerie, or a sheet whose own name says it shows underwear. Swimwear and sleepwear are not blurred unless the owner marks them on Site images. */
+export function isSensitiveSheet(category: string | null, file: string): boolean {
+  if (category === "lingerie") return true;
+  return REVEALING.test(file.replace(/\.(png|webp|jpe?g)$/i, "").replace(/-/g, " "));
 }
 
 export interface LoadCharactersOptions {
@@ -233,15 +229,13 @@ export async function loadCharacters(repo: RepoSource, opts: LoadCharactersOptio
     .filter((d) => d.startsWith("characters/") && !d.split("/").slice(1).some((seg) => seg.startsWith("_")) && !/\/(references|outfits|prompts)$/.test(d))
     .filter((d) => manifestDirs.has(d) || tree.some((e) => e.path.startsWith(`${d}/references/`) || e.path.startsWith(`${d}/outfits/`)))
     .sort();
-  const familyFiles = tree.filter((e) => e.path.startsWith(`${FAMILY_DIR}/`) && isSheet(e.name));
   const assetByPath = new Map((manifest?.assets ?? []).map((a) => [a.path, a]));
   const groupOf = new Map<string, string>();
   for (const g of Object.values(manifest?.characterGroups ?? {})) for (const id of g.characterIds) groupOf.set(id, g.label);
   const categories = manifest?.categories?.length ? manifest.categories : OUTFIT_CATEGORIES;
 
   // All reads run in parallel: on GitHub each one is a network request.
-  const [familyIndex, labelDocs, perCharacter] = await Promise.all([
-    repo.readText(`${FAMILY_DIR}/index.md`),
+  const [labelDocs, perCharacter] = await Promise.all([
     Promise.all((opts.labelDocs ?? []).map(async (p) => ({ path: p, text: (await repo.readText(p)) ?? "" }))),
     Promise.all(
       dirs.map(async (dir) => {
@@ -250,7 +244,6 @@ export async function loadCharacters(repo: RepoSource, opts: LoadCharactersOptio
       }),
     ),
   ]);
-  const copyToOriginal = parseFamilyIndex(familyIndex ?? "");
 
   // Link text from every document that names a sheet, keyed by repository path.
   const linkTexts = new Map<string, string[]>();
@@ -283,6 +276,7 @@ export async function loadCharacters(repo: RepoSource, opts: LoadCharactersOptio
         category: asset?.category ?? described.category,
         needsReview: asset ? asset.category == null && inReview : inReview,
         reviewNote: asset?.review ?? null,
+        sensitive: isSensitiveSheet(asset?.category ?? described.category, f.name),
         size: f.size,
       };
     });
@@ -306,47 +300,45 @@ export async function loadCharacters(repo: RepoSource, opts: LoadCharactersOptio
     });
   }
 
-  // Family sheets: an alias of the original when the index says it is a copy,
-  // otherwise a sheet of their own.
-  for (const f of familyFiles) {
-    const original = copyToOriginal.get(f.name);
-    const owner = (original ? records.find((r) => original.startsWith(`${r.dir}/`)) : null) ?? characterForSheetName(records, f.name);
-    if (!owner) continue;
-    const target = original ? owner.sheets.find((s) => s.path === original || s.aliases.includes(original)) : undefined;
-    if (target) target.aliases.push(f.path);
-    else owner.sheets.push({ path: f.path, file: f.name, label: "", version: null, source: "family", aliases: [], isDefault: false, category: null, needsReview: false, reviewNote: null, size: f.size });
-  }
-
   for (const r of records) finishSheets(r, linkTexts, categories);
   return records.sort((a, b) => a.displayName.localeCompare(b.displayName));
 }
 
 function finishSheets(r: CharacterRecord, linkTexts: Map<string, string[]>, categories: string[]) {
-  const rank = (x: CharacterSheet) => (x.path === r.canonicalSheet ? 0 : x.needsReview ? 3 : x.source === "family" ? 4 : x.category ? 1 : 2);
+  const rank = (x: CharacterSheet) => (x.path === r.canonicalSheet ? 0 : x.needsReview ? 3 : x.category ? 1 : 2);
   r.sheets.sort((a, b) => rank(a) - rank(b) || (a.category ?? "").localeCompare(b.category ?? "") || (a.version ?? 0) - (b.version ?? 0) || a.file.localeCompare(b.file, undefined, { numeric: true }));
   const card = r.canonicalSheet ? r.sheets.find((s) => s.path === r.canonicalSheet) : undefined;
-  const def = card ?? r.sheets.find((s) => s.aliases.some((a) => a.startsWith(`${FAMILY_DIR}/`))) ?? r.sheets.find((s) => s.source === "family") ?? r.sheets.find((s) => s.version === 1) ?? r.sheets.find((s) => !s.needsReview) ?? r.sheets[0] ?? null;
+  const def = card ?? r.sheets.find((s) => s.version === 1) ?? r.sheets.find((s) => !s.needsReview) ?? r.sheets[0] ?? null;
   for (const s of r.sheets) {
     s.isDefault = s === def;
     const described = describeSheetFile(r.id, s.file, categories);
     let base: string;
     if (described.kind === "main" || (s.isDefault && described.kind !== "outfit")) base = "Main sheet";
     else if (described.kind === "outfit" && described.descriptor) base = described.descriptor;
-    else if (described.kind === "review" && described.descriptor) base = `Needs review: ${described.descriptor.charAt(0).toLowerCase()}${described.descriptor.slice(1)}`;
+    else if (described.kind === "review" && described.descriptor) base = described.descriptor;
     else {
       const named = [s.path, ...s.aliases]
         .flatMap((p) => linkTexts.get(p) ?? [])
         .map((t) => outfitLabelFromLinkText(t, r))
         .filter((t): t is string => !!t && t !== "Main sheet")
         .sort((a, b) => b.length - a.length);
-      base = named[0] ?? (s.isDefault ? "Main sheet" : s.source === "family" ? "Family sheet" : "Outfit");
+      base = named[0] ?? (s.isDefault ? "Main sheet" : "Outfit");
     }
     s.label = s.version != null ? `${base} (v${s.version})` : base;
   }
-  // Two sheets with the same label get their file name added so the picker stays unambiguous.
-  const seen = new Map<string, number>();
-  for (const s of r.sheets) seen.set(s.label, (seen.get(s.label) ?? 0) + 1);
-  for (const s of r.sheets) if ((seen.get(s.label) ?? 0) > 1) s.label = `${s.label}, ${s.file}`;
+  // Pickers group sheets by category, so "Blue" can be both a lingerie and a
+  // sleepwear sheet. Two sheets with the same name in the same group are numbered.
+  const groupKey = (s: CharacterSheet) => `${s.needsReview ? "review" : (s.category ?? "")}\u0000${s.label.toLowerCase()}`;
+  const count = new Map<string, number>();
+  for (const s of r.sheets) count.set(groupKey(s), (count.get(groupKey(s)) ?? 0) + 1);
+  const nth = new Map<string, number>();
+  for (const s of r.sheets) {
+    const k = groupKey(s);
+    if ((count.get(k) ?? 0) < 2) continue;
+    const n = (nth.get(k) ?? 0) + 1;
+    nth.set(k, n);
+    if (n > 1) s.label = `${s.label} ${n}`;
+  }
   r.canonicalSheet = def?.path ?? null;
   r.references = r.sheets.map((s) => ({ path: s.path, name: s.file, status: s.isDefault ? "canonical" : "outfit", size: s.size }));
 }
@@ -357,7 +349,7 @@ export function applySheetLabels(characters: CharacterRecord[], labels: Map<stri
   return characters.map((c) => ({ ...c, sheets: c.sheets.map((s) => (labels.has(s.path) ? { ...s, label: labels.get(s.path)! } : s)) }));
 }
 
-/** Finds the sheet (and its owner) for a repository path, including family copies. */
+/** Finds the sheet (and its owner) for a repository path, including retired names. */
 export function findSheet(characters: CharacterRecord[], path: string): { character: CharacterRecord; sheet: CharacterSheet } | null {
   for (const c of characters) {
     const sheet = c.sheets.find((s) => s.path === path || s.aliases.includes(path));
@@ -381,10 +373,12 @@ export interface ResolvedSheet {
 }
 
 /**
- * v2 prompts name the exact sheet to attach ("walker-ethan.png",
- * "children/walker-riley.png", "morgan-hayes-reference-sheet-v7.png").
- * Files are looked up only inside the configured identity-sheet folders and
- * among the characters' own references/ sheets, never anywhere else.
+ * Prompts name the exact sheet to attach ("ethan-walker-reference-main.png",
+ * "ruby-bennett-walker-formal-wedding-dress.png"). Files are looked up among
+ * the characters' own sheets (current and retired names), then inside any
+ * configured identity-sheet folders. An older identity name such as
+ * "walker-ethan.png" that matches nothing falls back to that character's
+ * default sheet, so prompts written before the cast folders still work.
  */
 export async function resolveSheetFiles(
   repo: RepoSource,
@@ -413,7 +407,7 @@ export async function resolveSheetFiles(
     for (const c of characters) {
       // Current file names first, then retired names from the asset manifest
       // (an older prompt may still name "morgan-hayes-reference-sheet-v7.png").
-      const s = c.sheets.find((x) => x.source !== "family" && x.file === base) ?? c.sheets.find((x) => x.source !== "family" && x.aliases.some((a) => !a.startsWith(`${FAMILY_DIR}/`) && a.split("/").pop() === base));
+      const s = c.sheets.find((x) => x.file === base) ?? c.sheets.find((x) => x.aliases.some((a) => a.split("/").pop() === base));
       if (s) {
         found = { path: s.path, characterId: c.id };
         break;
@@ -428,6 +422,11 @@ export async function resolveSheetFiles(
           break;
         }
       }
+    }
+    if (!found) {
+      const owner = characterForSheetName(characters, base);
+      const def = owner?.sheets.find((x) => x.isDefault);
+      if (owner && def) found = { path: def.path, characterId: owner.id };
     }
     out.set(file, found);
   }

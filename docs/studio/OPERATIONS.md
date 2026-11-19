@@ -6,10 +6,10 @@
 |---|---|
 | **Dashboard** | Each chapter's progress, this month's API spend, anything that needs you, recent runs |
 | **Story** | Arcs → chapters → pages, with the arc focus (`stories/arc-NN/index.md`), chapter logline (`outline.md`) and page beat (page guide) from the repository. Add arcs and chapters here |
-| **Characters** | Each cast group (Main Cast, the families, Friends) with every outfit sheet as a version, grouped by category in a picker that swaps the preview. Name outfits, add outfit sheets, add characters |
+| **Characters** | Each cast group (Main Cast, the families, Friends) with every outfit sheet as a version, grouped by category in a picker that swaps the preview. Name outfits, change an outfit's category, add outfit sheets, add characters |
 | **Generate** | Queue several pages at once |
 | **Review** | Every version waiting for a decision, across chapters, and publishing |
-| **Site images** | Show or hide images in the public character galleries and Memories album; add album photos |
+| **Site images** | Show or hide gallery and album images, add any character sheet to its gallery, blur revealing images behind an 18+ check, reorder the Memories album and edit its captions; add album photos |
 | **Spending** | Monthly API dollars and tokens, pages generated vs kept, attempts per kept page, pages that needed too many tries |
 
 ## What it costs, and who pays
@@ -93,6 +93,14 @@ studio version is saved beside it as `A01-C001-PNNN.studio-<id>.png` with a
 
 Merging the pull request deploys the pages.
 
+**Art already in the repository.** Pages whose PNG is already committed under
+the chapter's `pages/` folder (for example made in ChatGPT) but are not in the
+reader appear in Review under "Art in the repository, not in the reader yet",
+and on their page screen under Current art. **Publish repository art** opens a
+pull request that adds the reader WebP and the reader entry only; the PNG is
+not touched, and a page already in the reader is never overwritten this way
+(replace reader art by uploading a version and publishing it from Review).
+
 ## Adding characters, outfits, arcs and chapters
 
 All of these open a pull request; nothing changes until you merge it.
@@ -106,6 +114,11 @@ All of these open a pull request; nothing changes until you merge it.
   the file is saved as `outfits/<id>-<category>-<name>.png`, listed in the
   outfit library table and registered in the asset manifest, so
   `tools/validate-character-assets.py` still passes.
+* **Outfit category** (a character's card → pick the outfit → Category →
+  Change category): moves the sheet to `outfits/<id>-<category>-<name>.png`
+  (out of `outfits/_review/` if it was waiting there), updates the asset
+  manifest and rewrites every link to it, in one pull request. The main
+  reference sheet has no category.
 * **Outfit names** (a character's card → Name this outfit) are saved in the
   studio database, not the repository.
 * **Arc** (Story → Add an arc): `stories/arc-NN/index.md` with its focus.
@@ -115,14 +128,32 @@ All of these open a pull request; nothing changes until you merge it.
 
 ## Site images
 
-**Site images** lists every image in the public character galleries
-(`site/characters.html`) and the Memories album (`site/memories.html`).
-Untick **Show** to hide one; a photo hidden in one character's gallery stays in
-the others. Add album photos with a caption and a screen-reader description;
-they go at the end of the album. **Publish site image changes** opens one pull
-request that rewrites `site/js/visibility-data.js` (and adds the new photo
-files). Nothing is deleted. `site/js/visibility.js` applies the choices before
-the gallery and album scripts run; without JavaScript every image stays visible.
+**Site images** works on the public Characters page (`site/characters.html`)
+and the Memories album (`site/memories.html`). Everything goes out as one pull
+request (**Publish site image changes**) that rewrites `site/js/visibility-data.js`
+and adds any new image files. Nothing is ever deleted.
+
+* **Show:** untick to hide an image. A photo hidden in one character's gallery
+  stays in the others.
+* **Sheets not on the site:** each character lists the repository sheets that
+  are not in their public gallery yet, unticked. Tick Show to add one; the pull
+  request copies it to `site/images/characters/refs/` and records its source in
+  `production/studio/site-sheet-sources.json`.
+* **Blur (18+):** the image shows blurred with an eye button. Readers must
+  confirm they are 18 or older before it shows, and a blurred image never opens
+  in the photo viewer until revealed. Lingerie sheets, and sheets whose name
+  says they show underwear, start blurred; tick or untick it for any image.
+  The studio blurs the same sheets and asks once per browser.
+* **Memories album:** drag a photo to move it, or use Move up and Move down.
+  Edit its caption and screen-reader description in place; **Reset to
+  default** brings back the original, and **Reset album order** restores the
+  order in the HTML. Photos in the repository can be hidden but not deleted;
+  a photo added in the studio can be removed until it is published.
+* **New album photos:** add a photo with a caption and a description; it goes
+  at the end of the album when you publish, and can be moved after.
+
+`site/js/visibility.js` applies all of this before the gallery and album
+scripts run. Without JavaScript every image in the HTML stays visible.
 
 ## Recovery
 

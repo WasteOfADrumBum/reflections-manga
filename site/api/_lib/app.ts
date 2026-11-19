@@ -46,6 +46,8 @@ import { chapterOverview, dashboard } from "./engine/overview.js";
 import type { VersionRow } from "./engine/types.js";
 import { noteApproval, planPage, runWorkerStep, studioCharacters } from "./engine/worker.js";
 import { costCard, registerLibraryRoutes, versionSummary } from "./library.js";
+import { registerSheetRoutes } from "./sheets.js";
+import { pendingRepoArt, registerRepoArtRoutes } from "./publish/repo-art.js";
 import { MANIFEST_PATH, OUTFIT_CATEGORIES, parseManifest } from "./content/characters.js";
 import { errorResponse, json, readJson, Router, SECURITY_HEADERS } from "./http.js";
 import { thumbnail, toReaderWebp, validateUpload } from "./images.js";
@@ -75,7 +77,6 @@ const chapterParam = (s: string) => {
 const REPO_IMAGE_ALLOW = [
   // A character's own sheets: characters/main/<id>/..., characters/family/<family>/<id>/..., characters/friends/<id>/...
   /^characters\/(?:[a-z0-9-]+\/){1,3}(?:references|outfits(?:\/_review)?)\/[\w.-]+\.(png|webp|jpe?g)$/i,
-  /^characters\/_reference-sheets\/(?:[\w-]+\/)*[\w.-]+\.(png|webp|jpe?g)$/i,
   /^stories\/arc-\d{2}\/chapter-\d{3}\/pages\/(?:version_\d+\/)?[\w.-]+\.(png|webp)$/i,
   /^site\/(?:images|pages)\/[\w./-]+\.(png|webp|jpe?g)$/i,
 ];
@@ -347,6 +348,8 @@ export function createApp(deps: StudioDeps) {
       blockers: planned.blockers,
       warnings: planned.warnings,
       suggestedAltText: altTextFromScript(planned.script),
+      repoArtPrUrl: (await pendingRepoArt(deps)).get(`${id}:${page}`) ?? null,
+      publisherReady: !!deps.publisher,
       versions: versions.map(versionSummary),
       continuity: continuity ?? null,
     });
@@ -525,6 +528,8 @@ export function createApp(deps: StudioDeps) {
   });
 
   registerLibraryRoutes(r, deps, requireAdmin);
+  registerSheetRoutes(r, deps, requireAdmin);
+  registerRepoArtRoutes(r, deps, requireAdmin);
 
   return async function handle(req: Request): Promise<Response> {
     const url = new URL(req.url);

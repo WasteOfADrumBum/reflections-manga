@@ -668,7 +668,6 @@ User reopened the entire chapter for regeneration. [V2](../stories/arc-01/chapte
 - Automatic image transfer did not complete. No image files are claimed saved,
   and reference-image approval or profile status was not changed.
 
-
 ## 2026-11-12: Child Directories Renamed
 
 - Renamed child-01 to rowan-hayes-walker, child-02 to avery-bennett-walker,
@@ -816,3 +815,7 @@ Registered seven user-supplied seasonal/cosplay sheets: Autumn as Rias Gremory a
 ## 2026-11-19: Additional Superhero Cosplay Filenames
 
 Renamed five newly supplied `image.png` sheets according to the user's explicit identifications: Cassidy as Supergirl, Autumn as Batgirl, Natalie as Harley Quinn, Morgan as Catwoman, and Ruby as Poison Ivy. Registered each as seasonal cosplay, with original filename, SHA-256, dimensions, and size. Updated outfit catalogs, wardrobe links, and reference counts. Image bytes, permanent character traits, relationships, and chapter chronology are unchanged; no new artwork or master-model approval inferred.
+
+## 2026-11-19: Reference-Sheet Copies Retired
+
+At the user's request, removed `characters/_reference-sheets/`. All 17 images there were byte-identical copies of the characters' main reference sheets, so no artwork was lost. Chapter 001 version 2 prompts, the version 2 page guide and three portrait-study drafts now name each character's main reference sheet (for example `ethan-walker-reference-main.png`). No story, appearance or approval change.

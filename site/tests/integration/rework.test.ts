@@ -33,7 +33,7 @@ describe("outfit picks and prompt edits", () => {
   it("attaches the outfit chosen for a character instead of the prompt's sheet, for that run only", async () => {
     const page = await call("GET", "/chapters/001/pages/23");
     const ethan = page.data.cast.find((c: { characterId: string }) => c.characterId === "ethan-walker");
-    // The prompt names the family copy walker-ethan.png, which is his main reference.
+    // The prompt names his main reference sheet.
     expect(ethan.promptSheet).toBe("characters/main/ethan-walker/references/ethan-walker-reference-main.png");
     const suit = "characters/main/ethan-walker/outfits/ethan-walker-formal-wedding-suit.png";
     const plan = await call("POST", "/chapters/001/pages/23/plan", { options: { sheets: { "ethan-walker": suit } } });
@@ -245,5 +245,96 @@ describe("site images", () => {
   it("refuses paths outside the site images folder", async () => {
     const res = await call("POST", "/site/publish", { hidden: { characters: {}, album: ["../../etc/passwd"] }, confirm: true });
     expect(res.status).toBe(400);
+  });
+});
+
+describe("review fixes", () => {
+  it("moves a sheet into a category: same image, manifest updated, every link rewritten", async () => {
+    const old = "characters/main/morgan-hayes/outfits/_review/morgan-hayes-review-plaid-bra-shorts.png";
+    const res = await call("POST", "/characters/morgan-hayes/sheets/category", { path: old, category: "sleepwear" });
+    expect(res.status).toBe(201);
+    expect(res.data.path).toBe("characters/main/morgan-hayes/outfits/morgan-hayes-sleepwear-plaid-bra-shorts.png");
+    const pr = h.publisher.requests.at(-1)!;
+    expect(pr.deletePaths).toEqual([old]);
+    const moved = pr.files.find((f) => f.path === res.data.path)!;
+    expect(moved.content.equals((await h.repo.readBinary(old))!)).toBe(true);
+    const m = JSON.parse(pr.files.find((f) => f.path === "characters/asset-manifest.json")!.content.toString());
+    expect(m.assets.find((a: { path: string }) => a.path === res.data.path)).toMatchObject({ category: "sleepwear", review: null, characterId: "morgan-hayes" });
+    expect(m.assets.some((a: { path: string }) => a.path === old)).toBe(false);
+    // The outfit library row and the asset organisation record both point at the new file.
+    const index = pr.files.find((f) => f.path === "characters/main/morgan-hayes/outfits/index.md")!.content.toString();
+    expect(index).toContain("| sleepwear | [morgan-hayes-sleepwear-plaid-bra-shorts](morgan-hayes-sleepwear-plaid-bra-shorts.png) |");
+    expect(index).not.toContain("morgan-hayes-review-plaid-bra-shorts");
+    const record = pr.files.find((f) => f.path === "production/character-asset-organization.md")!.content.toString();
+    expect(record).toContain("(../characters/main/morgan-hayes/outfits/morgan-hayes-sleepwear-plaid-bra-shorts.png)");
+    expect(record).not.toContain("(../characters/main/morgan-hayes/outfits/_review/morgan-hayes-review-plaid-bra-shorts.png)");
+    // The main sheet has no category, and a category must be one of the manifest's.
+    expect((await call("POST", "/characters/morgan-hayes/sheets/category", { path: "characters/main/morgan-hayes/references/morgan-hayes-reference-main.png", category: "casual" })).status).toBe(400);
+    expect((await call("POST", "/characters/morgan-hayes/sheets/category", { path: old, category: "nonsense" })).status).toBe(400);
+  });
+
+  it("rewrites relative links, repository paths and bare file names to a moved sheet", async () => {
+    const { rewriteReferences } = await import("../../api/_lib/sheets.js");
+    const oldP = "characters/main/a/outfits/_review/a-review-x.png";
+    const newP = "characters/main/a/outfits/a-casual-x.png";
+    expect(rewriteReferences("[x](_review/a-review-x.png)", "characters/main/a/outfits/index.md", oldP, newP)).toBe("[x](a-casual-x.png)");
+    expect(rewriteReferences("see characters/main/a/outfits/_review/a-review-x.png", "docs/x.md", oldP, newP)).toBe(`see ${newP}`);
+    expect(rewriteReferences("[x](../../characters/main/a/outfits/_review/a-review-x.png)", "assets/drafts/x.md", oldP, newP)).toBe("[x](../../characters/main/a/outfits/a-casual-x.png)");
+    expect(rewriteReferences("Attach a-review-x.png first", "stories/p.txt", oldP, newP)).toBe("Attach a-casual-x.png first");
+    // A different file that happens to share the name elsewhere is left alone.
+    expect(rewriteReferences("[y](../b/outfits/_review/a-review-x.png)", "characters/main/a/index.md", oldP, newP)).toBe("[y](../b/outfits/_review/a-review-x.png)");
+  });
+
+  it("publishes art already in the repository to the reader, once", async () => {
+    const review = await call("GET", "/review");
+    const pages = (review.data.repoArt as { chapterId: string; page: number; pendingPrUrl: string | null }[]).filter((p) => p.chapterId === "001").map((p) => p.page);
+    expect(pages).toEqual([2, 3, 4, 5, 6]);
+    const res = await call("POST", "/chapters/001/publish-repo-art", { pages: [2, 3], altText: { "2": "Rowan and Ruby open the album together while Riley and Avery look on." }, confirm: true });
+    expect(res.status).toBe(201);
+    const pr = h.publisher.requests.at(-1)!;
+    expect(pr.files.map((f) => f.path).sort()).toEqual(["site/js/chapters.js", "site/pages/chapter-001/002.webp", "site/pages/chapter-001/003.webp"]);
+    expect(pr.deletePaths ?? []).toEqual([]);
+    const js = pr.files.find((f) => f.path === "site/js/chapters.js")!.content.toString();
+    expect(js).toContain('src: "/pages/chapter-001/002.webp"');
+    expect(js).toContain("Rowan and Ruby open the album together");
+    expect(js.match(/\/pages\/chapter-001\/001\.webp/g)).toHaveLength(1);
+    // Still waiting on the pull request: shown as pending, and a second request is refused.
+    const again = await call("GET", "/chapters/001/pages/2");
+    expect(again.data.repoArtPrUrl).toMatch(/^https:\/\/github\.com\//);
+    expect((await call("POST", "/chapters/001/publish-repo-art", { pages: [2], confirm: true })).status).toBe(409);
+    // Skipping a page needs confirmation; a page already in the reader is refused.
+    expect((await call("POST", "/chapters/001/publish-repo-art", { pages: [5], confirm: true })).status).toBe(409);
+    expect((await call("POST", "/chapters/001/publish-repo-art", { pages: [1], confirm: true })).status).toBe(409);
+  });
+
+  it("lists every sheet not on the site, adds chosen ones hidden by default, blurred when revealing", async () => {
+    const d = await call("GET", "/site/images");
+    const ruby = d.data.sheets.find((c: { id: string }) => c.id === "ruby-bennett-walker");
+    const blue = ruby.sheets.find((s: { path: string }) => s.path.endsWith("ruby-bennett-walker-lingerie-blue.png"));
+    expect(blue).toMatchObject({ category: "lingerie", sensitive: true });
+    // Sheets already in the public gallery are not offered again.
+    expect(ruby.sheets.some((s: { path: string }) => s.path.endsWith("ruby-bennett-walker-formal-wedding-dress.png"))).toBe(false);
+    const album = d.data.album.map((a: { href: string }) => a.href);
+    const order = [album[3], ...album.filter((x: string) => x !== album[3])];
+    const res = await call("POST", "/site/publish", {
+      hidden: { characters: {}, album: [] },
+      sensitive: ["/images/moments/girls-trip-beach-1536.webp"],
+      album: { order, captions: { [album[0]]: { title: "All six of us" } } },
+      addSheets: [{ characterId: "ruby-bennett-walker", path: blue.path, sensitive: true }],
+      confirm: true,
+    });
+    expect(res.status).toBe(201);
+    const pr = h.publisher.requests.at(-1)!;
+    expect(pr.files.map((f) => f.path)).toEqual(
+      expect.arrayContaining(["site/images/characters/refs/ruby-bennett-walker-lingerie-blue.webp", "site/images/characters/refs/ruby-bennett-walker-lingerie-blue-thumb.webp", "production/studio/site-sheet-sources.json", "site/js/visibility-data.js"]),
+    );
+    const v = parseVisibility(pr.files.find((f) => f.path === "site/js/visibility-data.js")!.content.toString());
+    expect(v.characterAdditions["ruby-bennett-walker"]![0]).toMatchObject({ full: "/images/characters/refs/ruby-bennett-walker-lingerie-blue.webp", label: "Blue" });
+    expect(v.sensitive).toEqual(["/images/characters/refs/ruby-bennett-walker-lingerie-blue.webp", "/images/moments/girls-trip-beach-1536.webp"]);
+    expect(v.album.order[0]).toBe(album[3]);
+    expect(v.album.captions[album[0]]).toEqual({ title: "All six of us" });
+    const sources = JSON.parse(pr.files.find((f) => f.path === "production/studio/site-sheet-sources.json")!.content.toString());
+    expect(sources.sources["/images/characters/refs/ruby-bennett-walker-lingerie-blue.webp"]).toBe(blue.path);
+    expect(Object.keys(sources.sources).length).toBe(61);
   });
 });

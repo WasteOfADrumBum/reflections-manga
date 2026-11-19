@@ -45,11 +45,11 @@ describe("reference planning", () => {
       "2:identity:morgan-hayes",
       "3:outfit:morgan-hayes",
     ]);
-    expect(plan.entries[0]!.path).toBe("characters/_reference-sheets/main_characters/walker-ethan.png");
+    expect(plan.entries[0]!.path).toBe("characters/main/ethan-walker/references/ethan-walker-reference-main.png");
     expect(plan.warnings.join(" ")).toMatch(/page 023 has no usable image/);
     const final = buildFinalPrompt(p, plan);
     expect(final.startsWith(p.text.trimEnd())).toBe(true);
-    expect(final).toContain("image 1 = Ethan Walker identity sheet (walker-ethan.png)");
+    expect(final).toContain("image 1 = Ethan Walker identity sheet (ethan-walker-reference-main.png)");
     expect(final).toContain("Not attached: page 023");
   });
 
@@ -58,9 +58,9 @@ describe("reference planning", () => {
     const plan1 = planReferences({ chapterId: "001", prompt: p1, characters: await loadCharacters(repo), sheetFiles: await sheets(p1), uploads: [], findScenePage: () => null, maxSceneReferences: 3 });
     expect(plan1.blockers).toEqual([]);
     expect(plan1.entries.map((e) => e.path.split("/").pop())).toEqual([
-      "bennett-walker-ruby.png",
-      "walker-ethan.png",
-      "walker-morgan.png",
+      "ruby-bennett-walker-reference-main.png",
+      "ethan-walker-reference-main.png",
+      "morgan-hayes-reference-main.png",
       "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png",
       "ruby-bennett-walker-formal-wedding-dress.png",
       "ethan-walker-formal-wedding-suit.png",
@@ -75,9 +75,9 @@ describe("reference planning", () => {
   it("blocks a page when a named sheet cannot be found", async () => {
     const { prompt: p } = await prompt(23);
     const found = await sheets(p);
-    found.set("walker-ethan.png", null);
+    found.set("ethan-walker-reference-main.png", null);
     const plan = planReferences({ chapterId: "001", prompt: p, characters: await loadCharacters(repo), sheetFiles: found, uploads: [], findScenePage: () => null, maxSceneReferences: 2 });
-    expect(plan.blockers.join(" ")).toMatch(/"walker-ethan.png" named in the reference order was not found/);
+    expect(plan.blockers.join(" ")).toMatch(/"ethan-walker-reference-main.png" named in the reference order was not found/);
   });
 
   it("v1 prompts still use each character's canonical card", async () => {

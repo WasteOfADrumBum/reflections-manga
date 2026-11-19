@@ -76,10 +76,15 @@ and `characters/friends/<id>`; the folder name is the character id. Every image 
 character's `references/` and `outfits/` (including `outfits/_review/`) is one of their
 sheets. `characters/asset-manifest.json` names the main reference, each outfit's category
 and the retired file names that used to point at it, so an older prompt naming a retired
-file still resolves to the right sheet. Family copies in `characters/_reference-sheets/**`
-count as the same sheet as their original. Labels come from the file name pattern
-`<id>-<category>-<descriptor>.png` ("Wedding suit"), sheets awaiting a category show as
-"Needs review", and the owner can rename any sheet in the studio (`sheet_labels`).
+file still resolves to the right sheet. A pre-cast-folder identity name such as
+`walker-ethan.png` that matches nothing falls back to that character's main sheet.
+Labels come from the file name pattern `<id>-<category>-<descriptor>.png` ("Wedding
+suit"); pickers group sheets by category (with a "Needs review" group for sheets awaiting
+one), so two sheets may share a name in different categories. The owner can rename any
+sheet in the studio (`sheet_labels`) and change its category, which moves the file in a
+pull request and rewrites every Markdown or text link to it. Lingerie sheets, and sheets
+whose name says they show underwear, are marked `sensitive` and shown blurred behind an
+eye button until 18+ is confirmed.
 
 Sheets and characters added from the studio follow the same layout and are appended to
 the asset manifest (real hash, size and dimensions), so `tools/validate-character-assets.py`
