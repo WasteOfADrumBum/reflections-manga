@@ -75,6 +75,7 @@ Family structure and adult age approved by the user on 2026-11-12.
 - [Appearance](appearance.md)
 - [Personality](personality.md)
 - [Wardrobe](wardrobe.md)
+- [Character kit](kit/README.md): bible, visual sheets, voice, motion and 3D notes for anime and game work (proposals; not canon)
 
 ## Reference Images
 
