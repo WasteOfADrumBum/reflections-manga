@@ -13,7 +13,9 @@ site/                     Vercel root directory (unchanged deployment)
     openai/               Official SDK adapters, pricing, error classification
     qa/                   Deterministic checks, dialogue comparison, QA combination
     publish/              chapters.js patching, alt text, GitHub pull requests
+    library.ts            Arcs, review queue, uploads, spending, create-via-PR, site images
     auth/, db/, storage/  Sessions, Postgres + migrations, private Blob store
+  js/visibility*.js       Public show/hide and album additions chosen in the studio
 production/studio/config.json   Chapters, locked/unprepared pages, generation defaults
 ```
 
@@ -27,7 +29,11 @@ Dependencies are deliberately few: `openai`, `@vercel/blob`, `@vercel/functions`
    version) and its `scriptFile` (`script-v2.md`). Check the prompt's exact
    lettering against the script word for word; any drift blocks the page (a
    canon decision).
-2. **References.** Identity sheets in the prompt's `REFERENCE ORDER`. Version 2
+2. **References.** Identity sheets in the prompt's `REFERENCE ORDER`. The
+   owner can pick another outfit (any sheet of that character) and edit the
+   prompt for one run; both are stored on the job page (`job_pages.options`),
+   never in the repository. An edited prompt is checked against the script like
+   the original, unless the owner confirms the dialogue change. Version 2
    prompts name each sheet file (`walker-ethan.png`, `children/walker-riley.png`,
    `ruby-bennett-walker-reference-sheet-v11.png`); the studio finds them only in
    the configured sheet folders and the characters' own `references/` folders and
@@ -51,12 +57,34 @@ Dependencies are deliberately few: `openai`, `@vercel/blob`, `@vercel/functions`
    lighting, relationships, previous approved page, emotional beats from the
    script) is written from the page's explicit instructions after it passes.
 7. **Review and publish.** Only an explicit approval plus an explicit publish
-   action opens a pull request that adds new files and appends reader entries.
+   action opens a pull request. It adds new files and reader entries; replacing
+   a page that already has art needs a second, explicit confirmation and never
+   overwrites the original manuscript PNG.
+
+## Repository reads
+
+Production reads GitHub through one cached recursive tree request
+(`GET /git/trees/{ref}?recursive=1`) for every folder listing, plus raw file
+reads, all cached for a minute per instance. The character library is built
+once per content refresh. Admin thumbnails are resized server-side and cached
+privately, so page grids no longer stream full-size PNGs.
+
+## Character library
+
+Every image under `characters/<id>/references/` and `characters/_reference-sheets/**`
+belongs to a character. Family copies listed in `_reference-sheets/index.md`
+are treated as the same sheet as their original. The default sheet is the
+"Current Card", else the family copy's original, else v1. Outfit names come
+from markdown link text that names the file (for example "Morgan's wedding
+outfit v7" in a page guide), else "Outfit (vN)", and the owner can rename them
+in the studio (`sheet_labels`).
 
 ## Durable job engine
 
 * **Queue and state** live in Postgres (`jobs`, `job_pages`, `generation_attempts`,
-  `page_versions`, `continuity_states`, `event_log`). No in-memory queue.
+  `page_versions`, `continuity_states`, `event_log`; migration 2 adds
+  `job_pages.options`, `sheet_labels`, `album_items` and upload columns on
+  `page_versions`). No in-memory queue.
 * **One step per claim.** A worker claims one page phase (`generate` or
   `validate`) under a lease (`lease_owner`, `lease_until`) with
   `FOR UPDATE SKIP LOCKED` and a transaction-scoped advisory lock. All updates

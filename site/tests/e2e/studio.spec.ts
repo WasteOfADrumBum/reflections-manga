@@ -13,7 +13,7 @@ async function signIn(page: Page) {
   await page.getByLabel("Username").fill("owner");
   await page.getByLabel("Password", { exact: true }).fill("correct horse battery staple");
   await page.getByRole("button", { name: "Sign in" }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "Production dashboard" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Dashboard" })).toBeVisible();
 }
 
 test.describe.configure({ mode: "serial" });
@@ -60,13 +60,27 @@ test("one-click test page, approval, full chapter run, review and publish", asyn
   await signIn(page);
   await expectAccessible(page);
 
+  await page.getByRole("link", { name: "Story" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Story" })).toBeVisible();
+  await expectAccessible(page);
+
   await page.getByRole("link", { name: "Characters" }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "Character library" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Characters" })).toBeVisible();
+  await expectAccessible(page);
+
+  await page.goto("/admin/#/chapters/001/pages/23");
+  await expect(page.getByRole("heading", { level: 1, name: /^Page 023/ })).toBeVisible();
+  await expect(page.getByText("separate from ChatGPT Plus").first()).toBeVisible();
+  await expectAccessible(page);
+
+  await page.getByRole("link", { name: "Spending" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "Spending" })).toBeVisible();
   await expectAccessible(page);
 
   await page.getByRole("link", { name: "Generate" }).first().click();
   await expect(page.getByRole("heading", { level: 1, name: "Generate pages" })).toBeVisible();
-  await expect(page.getByLabel("Page 002", { exact: false })).toBeDisabled();
+  // Page 002 already has art: it can get a new version but is not selected by default.
+  await expect(page.getByLabel("Page 002", { exact: false })).not.toBeChecked();
   await expect(page.getByText("Estimated cost")).toBeVisible();
   await expectAccessible(page);
   await page.getByRole("button", { name: "Run one test page" }).click();
@@ -74,20 +88,20 @@ test("one-click test page, approval, full chapter run, review and publish", asyn
   await expect(dialog).toBeVisible();
   await expect(dialog.getByRole("button", { name: "Cancel" })).toBeFocused();
   await dialog.getByRole("button", { name: "Start paid generation" }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "Chapter 001 job" })).toBeVisible();
-  await expect(page.locator("#view").getByText(/Job (Completed|Finished, needs attention): \d+ of/)).toBeVisible({ timeout: 60_000 });
+  await expect(page.getByRole("heading", { level: 1, name: "Chapter 001 run" })).toBeVisible();
+  await expect(page.locator("#view").getByText(/Run (Completed|Finished, needs attention): \d+ of/)).toBeVisible({ timeout: 60_000 });
   await expectAccessible(page);
 
   await page.getByRole("link", { name: "Review pages" }).click();
-  await expect(page.getByRole("heading", { level: 1, name: "Review and publish" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Review" })).toBeVisible();
   await page.getByRole("button", { name: "Approve" }).first().click();
-  await expect(page.getByText(/^Publish page \d{3}$/)).toBeVisible();
+  await expect(page.locator(".publish-row").first()).toBeVisible();
   await expectAccessible(page);
 
   await page.getByRole("link", { name: "Generate" }).first().click();
-  await page.getByRole("button", { name: "Generate chapter" }).click();
+  await page.getByRole("button", { name: "Generate selected pages" }).click();
   await page.getByRole("dialog").getByRole("button", { name: "Start paid generation" }).click();
-  await expect(page.locator("#view").getByText(/Job (Completed|Finished, needs attention): \d+ of/)).toBeVisible({ timeout: 150_000 });
+  await expect(page.locator("#view").getByText(/Run (Completed|Finished, needs attention): \d+ of/)).toBeVisible({ timeout: 150_000 });
   await expect(page.getByRole("link", { name: "Export pages (ZIP)" })).toBeVisible();
 
   await page.getByRole("link", { name: "Review pages" }).click();
