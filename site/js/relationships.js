@@ -35,7 +35,8 @@ window.REFLECTIONS_RELATIONSHIPS = {
     { type: "Also mom to", people: ["rowan-hayes-walker", "riley-hayes-walker"] },
     { type: "Best friend", people: ["morgan-hayes"], note: "(co-parent, not a romantic partner)" },
     { type: "Closest to", people: ["rowan-hayes-walker"] },
-    { type: "Sister", people: ["autumn-bennett"], note: "(older)" }
+    { type: "Sister", people: ["autumn-bennett"], note: "(older)" },
+    { type: "Friend and neighbor", people: ["cassidy-bennett"], note: "(lives next door)" }
   ],
   "rowan-hayes-walker": [
     { type: "Uncles", people: ["nathan-hayes", "adrian-hayes"], note: "(Morgan's brothers)" },
@@ -80,6 +81,11 @@ window.REFLECTIONS_RELATIONSHIPS = {
   ],
   "caleb-mercer": [
     { type: "Best friend", people: ["ethan-walker"] }
+  ],
+  "cassidy-bennett": [
+    { type: "Friend and neighbor", people: ["ruby-bennett-walker"], note: "(Cass genuinely likes Ruby; they're friendly neighbors who could grow closer)" },
+    { type: "Neighbors", people: ["ethan-walker", "morgan-hayes"], note: "(the Walkers live next door)" },
+    { type: "Not related", people: ["the Bennett family"], note: "(the shared surname is a coincidence)" }
   ],
   "autumn-bennett": [
     {"type": "Father", "people": ["thomas-bennett"]},

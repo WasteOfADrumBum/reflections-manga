@@ -49,14 +49,14 @@ Study use does not approve a master model sheet, permanent traits, or chapter ev
 
 The existing clothed sheet was used as an identity input for a standalone
 portrait in opaque sleepwear. See the [image, successful prompt, wardrobe
-substitution, and review notes](../../../assets/drafts/ethan-morgan-ruby-bedroom-portrait-study.md). This does not approve the output,
+substitution, and review notes](../../../../assets/drafts/ethan-morgan-ruby-bedroom-portrait-study.md). This does not approve the output,
 change a master, or establish a chapter event.
 
 ## Pajama Chase Study: 2026-11-13
 
 The user selected a playful chase in Ruby's navy pajamas and Morgan's black
 button-up alternative. See the [image, inputs, successful prompt, and review
-notes](../../../assets/drafts/ethan-morgan-ruby-pajama-chase-study.md). Output approval and permanent wardrobe choices remain open.
+notes](../../../../assets/drafts/ethan-morgan-ruby-pajama-chase-study.md). Output approval and permanent wardrobe choices remain open.
 
 ## Indoor Wedding Outfit Study: 2026-11-13
 
