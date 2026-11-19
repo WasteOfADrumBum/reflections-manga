@@ -1,5 +1,5 @@
 import type { CharacterRecord } from "../content/characters.js";
-import { type ResolvedSheet, resolveCharacter } from "../content/characters.js";
+import { findSheet, type ResolvedSheet, resolveCharacter } from "../content/characters.js";
 import type { LoadedPrompt } from "../content/chapters.js";
 import { pad3 } from "../content/config.js";
 
@@ -67,6 +67,8 @@ export function planReferences(opts: {
   maxTotal?: number;
   /** v2: sheet files named in the prompt, already resolved to repository paths. */
   sheetFiles?: Map<string, ResolvedSheet | null>;
+  /** Owner's outfit picks for this run: characterId -> sheet path (must be that character's sheet). */
+  sheetOverrides?: Record<string, string>;
 }): ReferencePlan {
   const { prompt } = opts;
   const entries: ReferenceManifestEntry[] = [];
@@ -83,6 +85,19 @@ export function planReferences(opts: {
 
   if (prompt.referenceOrder.length === 0) blockers.push("The prompt has no REFERENCE ORDER, so identity sheets cannot be chosen safely.");
   const pageCharacters: CharacterRecord[] = [];
+  /** Swaps in the outfit the owner picked, only if it really is one of that character's sheets. */
+  const pick = (owner: CharacterRecord | null, defaultPath: string, defaultLabel: string): { path: string; label: string } => {
+    const chosen = owner ? opts.sheetOverrides?.[owner.id] : undefined;
+    if (!owner || !chosen) return { path: defaultPath, label: defaultLabel };
+    const found = findSheet([owner], chosen);
+    const current = findSheet([owner], defaultPath);
+    if (!found) {
+      warnings.push(`Ignored the outfit choice for ${owner.displayName}: that sheet is not one of theirs.`);
+      return { path: defaultPath, label: defaultLabel };
+    }
+    if (current && found.sheet.path === current.sheet.path) return { path: defaultPath, label: defaultLabel };
+    return { path: found.sheet.path, label: `${owner.displayName} sheet: ${found.sheet.label} (${found.sheet.file}, chosen for this run)` };
+  };
   for (const slot of prompt.referenceOrder) {
     if (slot.file) {
       const sheet = opts.sheetFiles?.get(slot.file) ?? null;
@@ -91,14 +106,14 @@ export function planReferences(opts: {
         continue;
       }
       const owner = sheet.characterId ? opts.characters.find((ch) => ch.id === sheet.characterId) ?? null : resolveCharacter(opts.characters, slot.name);
-      if (owner && !pageCharacters.includes(owner)) pageCharacters.push(owner);
-      add({
-        role: "identity",
-        label: `${owner?.displayName ?? slot.name} identity sheet (${slot.file.split("/").pop()})`,
-        source: "repo",
-        path: sheet.path,
-        ...(owner ? { characterId: owner.id } : {}),
-      });
+      const firstSlotForOwner = !owner || !pageCharacters.includes(owner);
+      if (owner && firstSlotForOwner) pageCharacters.push(owner);
+      // A prompt can attach two sheets for one person (everyday and wedding);
+      // the owner's pick replaces only the first.
+      const chosen = firstSlotForOwner
+        ? pick(owner, sheet.path, `${owner?.displayName ?? slot.name} identity sheet (${slot.file.split("/").pop()})`)
+        : { path: sheet.path, label: `${owner?.displayName ?? slot.name} identity sheet (${slot.file.split("/").pop()})` };
+      add({ role: "identity", label: chosen.label, source: "repo", path: chosen.path, ...(owner ? { characterId: owner.id } : {}) });
       continue;
     }
     const c = resolveCharacter(opts.characters, slot.name);
@@ -107,14 +122,15 @@ export function planReferences(opts: {
       continue;
     }
     if (!c.canonicalSheet) {
-      blockers.push(`${c.displayName} has no canonical reference sheet (no "Current Card" in references/index.md).`);
+      blockers.push(`${c.displayName} has no character sheet image in the repository yet.`);
       continue;
     }
     if (slot.index !== entries.length + 1) {
       warnings.push(`Reference order lists image ${slot.index} for ${slot.name}; attaching it as image ${entries.length + 1}.`);
     }
     pageCharacters.push(c);
-    add({ role: "identity", label: `${c.displayName} canonical identity sheet`, source: "repo", path: c.canonicalSheet, characterId: c.id });
+    const chosen = pick(c, c.canonicalSheet, `${c.displayName} canonical identity sheet`);
+    add({ role: "identity", label: chosen.label, source: "repo", path: chosen.path, characterId: c.id });
   }
 
   const scoped = (u: UploadedReference) =>

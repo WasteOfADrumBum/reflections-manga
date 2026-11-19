@@ -1,9 +1,9 @@
 import type { StudioDeps } from "../context.js";
 import { content } from "../context.js";
-import { loadCharacters, resolveSheetFiles } from "../content/characters.js";
+import { applySheetLabels, type CharacterRecord, findSheet, resolveSheetFiles } from "../content/characters.js";
 import type { LoadedPrompt } from "../content/chapters.js";
 import { pad3 } from "../content/config.js";
-import { expectedLettering, sha256 } from "../content/prompt-parser.js";
+import { expectedLettering, parsePrompt, sha256 } from "../content/prompt-parser.js";
 import type { Db } from "../db/client.js";
 import { one } from "../db/client.js";
 import { inspectImage, normalizeToTarget, prepareReference } from "../images.js";
@@ -16,7 +16,7 @@ import { buildContinuityState, type ContinuityState, continuitySummary } from ".
 import { logEvent } from "./events.js";
 import { checkEligibility, setStudioSetting } from "./jobs.js";
 import { buildFinalPrompt, planReferences, type ReferenceManifestEntry, type SceneImageCandidate, type UploadedReference } from "./references.js";
-import type { AttemptRow, JobPageRow, JobRow, VersionRow } from "./types.js";
+import type { AttemptRow, JobPageRow, JobRow, PageRunOptions, VersionRow } from "./types.js";
 
 /**
  * Durable worker. Each call performs at most ONE step (generate or validate)
@@ -166,8 +166,8 @@ async function insertVersion(deps: StudioDeps, job: JobRow, jp: JobPageRow, atte
   const prompt = await one<{ prompt_path: string; prompt_sha256: string; settings: unknown }>(deps.db, `SELECT prompt_path, prompt_sha256, settings FROM generation_attempts WHERE id = $1`, [attempt.id]);
   await deps.db.query(
     `INSERT INTO page_versions (id, chapter_id, page, job_id, attempt_id, source, blob_path, sha256, width, height, format, bytes, prompt_path, prompt_sha256, model,
-                                reference_manifest, settings, retry_count, cost_estimate_usd, created_at)
-     VALUES ($1,$2,$3,$4,$5,'generated',$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19)`,
+                                reference_manifest, settings, retry_count, cost_estimate_usd, created_at, prompt_edited)
+     VALUES ($1,$2,$3,$4,$5,'generated',$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20)`,
     [
       id,
       job.chapter_id,
@@ -188,6 +188,7 @@ async function insertVersion(deps: StudioDeps, job: JobRow, jp: JobPageRow, atte
       Math.max(0, attempt.attempt_no - 1),
       attempt.cost_estimate_usd,
       deps.clock.now(),
+      !!jp.options?.promptOverride,
     ],
   );
   return id;
@@ -250,19 +251,50 @@ async function readReference(deps: StudioDeps, e: ReferenceManifestEntry): Promi
   return { label: e.label, filename: `ref-${e.slot}.png`, mime: "image/png", data };
 }
 
-/** Builds everything for one page without spending money. Used by the worker and the "preview request" screen. */
-export async function planPage(deps: StudioDeps, chapterId: string, page: number, settings: { maxSceneReferences: number }) {
+/** Names the owner gave sheets in the studio. */
+export async function sheetLabels(deps: Pick<StudioDeps, "db">): Promise<Map<string, string>> {
+  const rows = await deps.db.query<{ path: string; label: string }>(`SELECT path, label FROM sheet_labels`);
+  return new Map(rows.map((r) => [r.path, r.label]));
+}
+
+/** The character library with the owner's sheet names applied. */
+export async function studioCharacters(deps: StudioDeps): Promise<CharacterRecord[]> {
+  const c = await content(deps);
+  return applySheetLabels(await c.characters(), await sheetLabels(deps));
+}
+
+export interface PageCastEntry {
+  characterId: string;
+  displayName: string;
+  /** Sheet the prompt asks for (repository path of the character's sheet). */
+  promptSheet: string;
+  /** Sheet that will be attached for this run. */
+  selectedSheet: string;
+  sheets: { path: string; label: string; file: string; isDefault: boolean }[];
+}
+
+/** Builds everything for one page without spending money. Used by the worker and the page / generate screens. */
+export async function planPage(deps: StudioDeps, chapterId: string, page: number, settings: { maxSceneReferences: number }, options: PageRunOptions = {}) {
   const c = await content(deps);
   const inv = await c.inventory(chapterId);
   const [elig] = checkEligibility(inv, [page]);
-  const prompt = (await c.loadPrompt(chapterId, page)) as LoadedPrompt | null;
+  const repoPrompt = (await c.loadPrompt(chapterId, page)) as LoadedPrompt | null;
   const script = await c.scriptPage(chapterId, page);
   const blockers: string[] = [];
+  const warnings: string[] = [];
   if (!elig?.eligible) blockers.push(elig?.reason ?? "Page not eligible.");
-  if (!prompt) return { inv, prompt: null, script, plan: null, finalPrompt: null, blockers: [...blockers, "No prompt file."], warnings: [] as string[] };
+  if (!repoPrompt) return { inv, prompt: null, repoPrompt: null, promptEdited: false, script, plan: null, finalPrompt: null, cast: [] as PageCastEntry[], blockers: [...blockers, "No prompt file."], warnings };
+  const override = options.promptOverride?.replace(/\r\n/g, "\n");
+  const promptEdited = !!override && override.trim() !== repoPrompt.text.trim();
+  const prompt: LoadedPrompt = promptEdited ? { ...parsePrompt(override!, { page, version: repoPrompt.version }), path: repoPrompt.path } : repoPrompt;
+  if (promptEdited) warnings.push("This run uses an edited prompt. The repository prompt is unchanged.");
   const consistency = checkPromptAgainstScript(expectedLettering(prompt), script);
-  if (!consistency.ok) blockers.push(...consistency.problems.map((p) => `Script check: ${p}`));
-  const characters = await loadCharacters(deps.repo);
+  if (!consistency.ok) {
+    const problems = consistency.problems.map((p) => `Script check: ${p}`);
+    if (promptEdited && options.allowScriptDrift) warnings.push(...problems.map((p) => `${p} (you confirmed this edit)`));
+    else blockers.push(...problems);
+  }
+  const characters = await studioCharacters(deps);
   const sheetFiles = await resolveSheetFiles(
     deps.repo,
     characters,
@@ -274,13 +306,31 @@ export async function planPage(deps: StudioDeps, chapterId: string, page: number
     prompt,
     characters,
     sheetFiles,
+    sheetOverrides: options.sheets,
     uploads: await loadUploads(deps),
     findScenePage: await loadSceneCandidates(deps, chapterId, page, inv),
     maxSceneReferences: settings.maxSceneReferences,
   });
+  // What the prompt asks for per character (before the owner's picks), for the outfit picker.
+  const defaultPlan = options.sheets ? planReferences({ chapterId, prompt, characters, sheetFiles, uploads: [], findScenePage: () => null, maxSceneReferences: 0 }) : plan;
+  const cast: PageCastEntry[] = [];
+  for (const e of defaultPlan.entries) {
+    if (e.role !== "identity" || !e.characterId || cast.some((x) => x.characterId === e.characterId)) continue;
+    const ch = characters.find((x) => x.id === e.characterId);
+    if (!ch) continue;
+    const promptSheet = findSheet([ch], e.path)?.sheet.path ?? e.path;
+    const selected = plan.entries.find((x) => x.role === "identity" && x.characterId === ch.id)?.path ?? e.path;
+    cast.push({
+      characterId: ch.id,
+      displayName: ch.displayName,
+      promptSheet,
+      selectedSheet: findSheet([ch], selected)?.sheet.path ?? selected,
+      sheets: ch.sheets.map((s) => ({ path: s.path, label: s.label, file: s.file, isDefault: s.isDefault })),
+    });
+  }
   blockers.push(...plan.blockers);
-  const warnings = [...prompt.warnings, ...plan.warnings];
-  return { inv, prompt, script, plan, finalPrompt: buildFinalPrompt(prompt, plan), blockers, warnings };
+  warnings.push(...prompt.warnings, ...plan.warnings);
+  return { inv, prompt, repoPrompt, promptEdited, script, plan, finalPrompt: buildFinalPrompt(prompt, plan), cast, blockers, warnings };
 }
 
 async function generateStep(deps: StudioDeps, job: JobRow, jp: JobPageRow): Promise<string> {
@@ -296,7 +346,7 @@ async function generateStep(deps: StudioDeps, job: JobRow, jp: JobPageRow): Prom
     return "max_attempts";
   }
 
-  const planned = await planPage(deps, job.chapter_id, jp.page, s);
+  const planned = await planPage(deps, job.chapter_id, jp.page, s, jp.options ?? {});
   if (planned.blockers.length || !planned.prompt || !planned.plan || !planned.finalPrompt) {
     await blockPage(deps, job, jp, planned.blockers.length ? planned.blockers : ["Prompt could not be loaded."]);
     return "blocked";

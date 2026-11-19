@@ -50,6 +50,17 @@ export interface JobPageRow {
   current_version_id: string | null;
   last_error: string | null;
   updated_at: Date;
+  options?: PageRunOptions;
+}
+
+/** Choices made on the Generate screen for one page, used for that run only. */
+export interface PageRunOptions {
+  /** characterId -> repository path of the sheet to attach instead of the prompt's default. */
+  sheets?: Record<string, string>;
+  /** Edited prompt text for this run. Never written back to the repository. */
+  promptOverride?: string;
+  /** Owner confirmed the edited prompt may differ from the script's dialogue. */
+  allowScriptDrift?: boolean;
 }
 
 export interface AttemptRow {
@@ -100,4 +111,7 @@ export interface VersionRow {
   review_note: string | null;
   created_at: Date;
   reviewed_at: Date | null;
+  prompt_edited?: boolean;
+  uploaded_by?: string | null;
+  replaces_art?: boolean;
 }

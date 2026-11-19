@@ -86,7 +86,7 @@ describe("reference planning", () => {
     const chars = (await loadCharacters(repo)).map((c) => (c.id === "morgan-hayes" ? { ...c, canonicalSheet: null } : c));
     const plan = planReferences({ chapterId: "001", prompt: p, characters: chars, uploads: [], findScenePage: () => null, maxSceneReferences: 2 });
     expect(plan.entries[0]!.label).toBe("Ethan Walker canonical identity sheet");
-    expect(plan.blockers.join(" ")).toMatch(/Morgan H. Walker has no canonical reference sheet/);
+    expect(plan.blockers.join(" ")).toMatch(/Morgan H. Walker has no character sheet image/);
   });
 });
 

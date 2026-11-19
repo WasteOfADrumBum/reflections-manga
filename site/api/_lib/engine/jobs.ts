@@ -56,7 +56,12 @@ export interface PageEligibility {
   reason: string | null;
 }
 
-/** Server-side gate: locked or unprepared pages can never be queued. */
+/**
+ * Server-side gate: pages in lockedPages and unprepared pages can never be
+ * queued. Pages that already have artwork can get new versions; the existing
+ * art is only replaced if the owner approves a version and publishes it as a
+ * replacement.
+ */
 export function checkEligibility(inv: ChapterInventory, pages: number[]): PageEligibility[] {
   return pages.map((page) => {
     const info = inv.pages.find((p) => p.page === page);
@@ -67,12 +72,22 @@ export function checkEligibility(inv: ChapterInventory, pages: number[]): PageEl
   });
 }
 
+export const pageRunOptionsSchema = z
+  .object({
+    sheets: z.record(z.string().regex(/^[a-z0-9-]+$/), z.string().regex(/^characters\/[\w./-]+\.(png|webp|jpe?g)$/i).refine((v) => !v.includes(".."))).optional(),
+    promptOverride: z.string().max(20000).optional(),
+    allowScriptDrift: z.boolean().optional(),
+  })
+  .strict();
+
 export const createJobSchema = z.object({
   chapterId: z.string().regex(/^\d{3}$/),
   pages: z.array(z.number().int().min(1).max(500)).min(1).max(60),
   settings: settingsOverrideSchema.optional(),
   budgetUsd: z.number().min(0.5).max(200).optional(),
   test: z.boolean().optional(),
+  /** Outfit picks and one-off prompt edits, keyed by page number. */
+  pageOptions: z.record(z.string().regex(/^\d{1,3}$/), pageRunOptionsSchema).optional(),
   confirmPaid: z.literal(true, { message: "Confirm that this starts paid OpenAI requests." }),
 });
 export type CreateJobInput = z.infer<typeof createJobSchema>;
@@ -130,8 +145,8 @@ export async function createJob(deps: StudioDeps, input: CreateJobInput, opts: {
       let position = 0;
       for (const page of pages) {
         await tx.query(
-          `INSERT INTO job_pages (id, job_id, chapter_id, page, position, status, phase, max_attempts, updated_at) VALUES ($1,$2,$3,$4,$5,'queued','generate',$6,$7)`,
-          [deps.newId(), jobId, input.chapterId, page, position++, settings.maxAttemptsPerPage, now],
+          `INSERT INTO job_pages (id, job_id, chapter_id, page, position, status, phase, max_attempts, updated_at, options) VALUES ($1,$2,$3,$4,$5,'queued','generate',$6,$7,$8)`,
+          [deps.newId(), jobId, input.chapterId, page, position++, settings.maxAttemptsPerPage, now, JSON.stringify(input.pageOptions?.[String(page)] ?? {})],
         );
       }
     });
@@ -203,7 +218,12 @@ export async function cancelJob(deps: StudioDeps, jobId: string) {
 }
 
 /** Re-queues one page: inside the active job if it is part of it, otherwise as a new one-page job. */
-export async function regeneratePage(deps: StudioDeps, chapterId: string, page: number, opts: { createdBy: string; settings?: SettingsOverride; budgetUsd?: number }) {
+export async function regeneratePage(
+  deps: StudioDeps,
+  chapterId: string,
+  page: number,
+  opts: { createdBy: string; settings?: SettingsOverride; budgetUsd?: number; options?: z.infer<typeof pageRunOptionsSchema> },
+) {
   if (!deps.generationEnabled) throw forbidden("Paid generation is switched off (STUDIO_GENERATION_ENABLED).");
   const c = await content(deps);
   const inv = await c.inventory(chapterId);
@@ -216,8 +236,8 @@ export async function regeneratePage(deps: StudioDeps, chapterId: string, page: 
     if (!jp) throw conflict("A different job is running for this chapter. Let it finish or cancel it first.", { code: "duplicate_job" });
     if (!["awaiting_review", "failed", "blocked", "cancelled"].includes(jp.status)) throw conflict("That page is already queued or in progress.");
     await deps.db.query(
-      `UPDATE job_pages SET status = 'queued', phase = 'generate', attempts = 0, next_attempt_at = NULL, last_error = NULL, updated_at = $2 WHERE id = $1`,
-      [jp.id, now],
+      `UPDATE job_pages SET status = 'queued', phase = 'generate', attempts = 0, next_attempt_at = NULL, last_error = NULL, updated_at = $2, options = $3 WHERE id = $1`,
+      [jp.id, now, JSON.stringify(opts.options ?? {})],
     );
     await logEvent(deps.db, now, { jobId: active.id, chapterId, page, level: "info", message: `Page ${pad3(page)} re-queued for regeneration.` });
     deps.kick("regenerate");
@@ -226,7 +246,7 @@ export async function regeneratePage(deps: StudioDeps, chapterId: string, page: 
   const verified = await getStudioSetting(deps, "real_generation_verified", false);
   const res = await createJob(
     deps,
-    { chapterId, pages: [page], settings: opts.settings, budgetUsd: opts.budgetUsd, test: !verified, confirmPaid: true },
+    { chapterId, pages: [page], settings: opts.settings, budgetUsd: opts.budgetUsd, test: !verified, confirmPaid: true, pageOptions: opts.options ? { [String(page)]: opts.options } : undefined },
     { createdBy: opts.createdBy, idempotencyKey: null },
   );
   return { jobId: res.job.id, created: true };

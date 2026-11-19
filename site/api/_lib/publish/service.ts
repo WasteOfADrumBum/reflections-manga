@@ -17,7 +17,7 @@ import { addPagesToChaptersJs, type ReaderPageEntry, updateChapterNote } from ".
  */
 export async function publishChapter(
   deps: StudioDeps,
-  opts: { chapterId: string; versionIds: string[]; altText: Record<string, string>; allowGap: boolean; createdBy: string },
+  opts: { chapterId: string; versionIds: string[]; altText: Record<string, string>; allowGap: boolean; createdBy: string; replacePages?: number[] },
 ) {
   if (!deps.publisher) throw forbidden("GITHUB_TOKEN is not configured, so publishing is unavailable.");
   if (!opts.versionIds.length) throw badRequest("Choose at least one approved page.");
@@ -31,7 +31,12 @@ export async function publishChapter(
     if (v.review_status !== "approved") throw conflict(`Page ${pad3(v.page)} is not approved. Approve it before publishing.`);
     if (v.publication_status !== "unpublished") throw conflict(`Page ${pad3(v.page)} already has a publishing pull request.`);
     const info = inv.pages.find((p) => p.page === v.page);
-    if (!info || info.locked) throw conflict(`Page ${pad3(v.page)} is locked or already has artwork in the repository: ${info?.lockReason ?? "unknown page"}`);
+    if (!info || info.locked) throw conflict(`Page ${pad3(v.page)} is locked: ${info?.lockReason ?? "unknown page"}`);
+  }
+  const replace = new Set(opts.replacePages ?? []);
+  const needsReplace = versions.filter((v) => inv.pages.find((p) => p.page === v.page)?.hasArt && !replace.has(v.page)).map((v) => v.page);
+  if (needsReplace.length) {
+    throw conflict(`Page ${needsReplace.map(pad3).join(", ")} already has artwork. Confirm that the approved version should replace it.`, { code: "replace_required", pages: needsReplace });
   }
   if (new Set(versions.map((v) => v.page)).size !== versions.length) throw badRequest("Only one version per page can be published.");
 
@@ -48,14 +53,22 @@ export async function publishChapter(
   const files: { path: string; content: Buffer }[] = [];
   const entries: ReaderPageEntry[] = [];
   const mustNotExist: string[] = [];
+  const replacing = new Set<number>();
   const sorted = [...versions].sort((a, b) => a.page - b.page);
   for (const v of sorted) {
+    const info = inv.pages.find((p) => p.page === v.page)!;
     const stored = await deps.blobs.get(v.blob_path);
     if (!stored) throw new Error(`Image for page ${pad3(v.page)} is missing from storage.`);
     const webp = await toReaderWebp(stored.data);
     const webpPath = `${config.publishedDir}/${pad3(v.page)}.webp`;
-    const sourcePath = `${config.storyDir}/${config.sourcePagePattern.replace("{page}", pad3(v.page))}`;
-    const provenancePath = sourcePath.replace(/\.png$/, ".studio.json");
+    const originalSource = `${config.storyDir}/${config.sourcePagePattern.replace("{page}", pad3(v.page))}`;
+    // A replacement never overwrites the original manuscript PNG: the studio
+    // version is saved next to it under its own name, and only the reader
+    // image (WebP) and its reader entry change.
+    const isReplacement = info.hasArt;
+    if (isReplacement) replacing.add(v.page);
+    const sourcePath = isReplacement ? originalSource.replace(/\.png$/, `.studio-${v.id.slice(0, 8)}.png`) : originalSource;
+    const provenancePath = sourcePath.replace(/\.png$/, isReplacement ? ".json" : ".studio.json");
     const script = await c.scriptPage(opts.chapterId, v.page);
     const alt = (opts.altText[v.id] ?? v.alt_text ?? altTextFromScript(script)).trim();
     if (alt.length < 20) throw badRequest(`Page ${pad3(v.page)} needs descriptive alt text (what happens and what is said).`);
@@ -76,6 +89,9 @@ export async function publishChapter(
             qa: { status: v.qa_status, confidence: v.qa_confidence },
             retryCount: v.retry_count,
             costEstimateUsd: v.cost_estimate_usd,
+            source: v.source,
+            promptEdited: v.prompt_edited ?? false,
+            replacedExistingArt: isReplacement,
             sha256: v.sha256,
             createdAt: v.created_at,
             approvedAt: v.reviewed_at,
@@ -85,11 +101,12 @@ export async function publishChapter(
         )}\n`,
       ),
     });
-    mustNotExist.push(webpPath, sourcePath);
+    mustNotExist.push(sourcePath);
+    if (!isReplacement) mustNotExist.push(webpPath);
     entries.push({ page: v.page, src: `${config.publishedSrcPrefix}${pad3(v.page)}.webp`, alt, width: v.width, height: v.height });
   }
-  let nextJs = addPagesToChaptersJs(chaptersJs, opts.chapterId, entries);
-  nextJs = updateChapterNote(nextJs, opts.chapterId, publishedPages.size + entries.length, config.plannedPages);
+  let nextJs = addPagesToChaptersJs(chaptersJs, opts.chapterId, entries, { replace: new Set([...replacing].filter((p) => publishedPages.has(p))) });
+  nextJs = updateChapterNote(nextJs, opts.chapterId, new Set([...publishedPages, ...entries.map((e) => e.page)]).size, config.plannedPages);
   files.push({ path: "site/js/chapters.js", content: Buffer.from(nextJs) });
 
   const now = deps.clock.now();
@@ -122,14 +139,17 @@ export async function publishChapter(
         `Pages: ${pagesLabel}`,
         `- New reader images under \`${config.publishedDir}/\``,
         `- Original PNGs and \`.studio.json\` provenance next to the manuscript pages`,
-        `- New entries appended to \`site/js/chapters.js\` (existing entries untouched)`,
+        `- Reader entries added to \`site/js/chapters.js\``,
         ``,
-        `No existing artwork is modified or overwritten.`,
+        replacing.size
+          ? `Replaces the reader image for page ${[...replacing].map(pad3).join(", ")}, as chosen in the studio. The original manuscript PNGs stay untouched; the studio versions are saved beside them with a .studio- suffix.`
+          : `No existing artwork is modified or overwritten.`,
       ].join("\n"),
       files,
       mustNotExist,
     });
     await deps.db.query(`UPDATE publications SET status = 'pr_open', branch = $2, pr_url = $3, updated_at = $4 WHERE id = $1`, [publicationId, res.branch, res.prUrl, deps.clock.now()]);
+    if (replacing.size) await deps.db.query(`UPDATE page_versions SET replaces_art = true WHERE publication_id = $1 AND page = ANY($2::int[])`, [publicationId, [...replacing]]);
     await deps.db.query(`UPDATE page_versions SET alt_text = COALESCE($2::jsonb ->> id::text, alt_text) WHERE publication_id = $1`, [publicationId, JSON.stringify(Object.fromEntries(entries.map((e, i) => [sorted[i]!.id, e.alt])))]);
     await logEvent(deps.db, deps.clock.now(), { chapterId: opts.chapterId, level: "info", message: `Publishing pull request opened for pages ${pagesLabel}.`, data: { prUrl: res.prUrl } });
     return { publicationId, prUrl: res.prUrl, branch: res.branch, pages: sorted.map((v) => v.page) };
@@ -145,7 +165,7 @@ export async function publishChapter(
 /** Marks versions as published once their pages appear in the reader on main. */
 export async function reconcilePublished(deps: StudioDeps, chapterId: string, publishedPages: Set<number>) {
   if (!publishedPages.size) return;
-  await deps.db.query(`UPDATE page_versions SET publication_status = 'published' WHERE chapter_id = $1 AND publication_status = 'pr_open' AND review_status = 'approved' AND page = ANY($2::int[])`, [
+  await deps.db.query(`UPDATE page_versions SET publication_status = 'published' WHERE chapter_id = $1 AND publication_status = 'pr_open' AND review_status = 'approved' AND NOT replaces_art AND page = ANY($2::int[])`, [
     chapterId,
     [...publishedPages],
   ]);

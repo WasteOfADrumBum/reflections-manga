@@ -184,6 +184,23 @@ CREATE TABLE IF NOT EXISTS event_log (
 CREATE INDEX IF NOT EXISTS event_log_by_job ON event_log (job_id, id DESC);
 `,
   },
+  {
+    id: 2,
+    name: "per-page run options, uploads, sheet names",
+    sql: `
+-- Per-run choices for one page: outfit sheet per character and a one-off prompt edit.
+ALTER TABLE job_pages ADD COLUMN IF NOT EXISTS options jsonb NOT NULL DEFAULT '{}';
+ALTER TABLE page_versions ADD COLUMN IF NOT EXISTS prompt_edited boolean NOT NULL DEFAULT false;
+ALTER TABLE page_versions ADD COLUMN IF NOT EXISTS uploaded_by text;
+ALTER TABLE page_versions ADD COLUMN IF NOT EXISTS replaces_art boolean NOT NULL DEFAULT false;
+CREATE TABLE IF NOT EXISTS sheet_labels (
+  path text PRIMARY KEY,
+  label text NOT NULL,
+  updated_at timestamptz NOT NULL
+);
+CREATE INDEX IF NOT EXISTS generation_attempts_by_month ON generation_attempts (started_at);
+`,
+  },
 ];
 
 export async function migrate(db: Db): Promise<number[]> {
