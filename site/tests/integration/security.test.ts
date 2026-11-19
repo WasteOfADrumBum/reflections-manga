@@ -20,7 +20,7 @@ const PROTECTED: [string, string][] = [
   ["GET", "/jobs/00000000-0000-4000-8000-000000000000/export"],
   ["POST", "/chapters/001/pages/21/regenerate"],
   ["GET", "/assets/00000000-0000-4000-8000-000000000000"],
-  ["GET", "/repo-image?path=characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png"],
+  ["GET", "/repo-image?path=characters/main/ethan-walker/references/ethan-walker-reference-main.png"],
   ["POST", "/references"],
   ["POST", "/versions/00000000-0000-4000-8000-000000000000/approve"],
   ["POST", "/publish"],
@@ -97,7 +97,17 @@ describe("authentication and authorization", () => {
 
   it("only serves allow-listed repository images", async () => {
     const call = api(h, await login(h));
-    expect((await call("GET", "/repo-image?path=characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png&thumb=1")).status).toBe(200);
+    expect((await call("GET", "/repo-image?path=characters/main/ethan-walker/references/ethan-walker-reference-main.png&thumb=1")).status).toBe(200);
+    for (const path of [
+      "characters/main/ethan-walker/outfits/ethan-walker-formal-wedding-suit.png",
+      "characters/main/morgan-hayes/outfits/_review/morgan-hayes-review-black-top-olive-shorts-study-a.png",
+      "characters/family/bennett/autumn-bennett/references/autumn-bennett-reference-main.png",
+      "characters/family/hayes/diane-hayes/references/diane-hayes-reference-main.png",
+      "characters/family/walker/linda-walker/references/linda-walker-reference-main.png",
+      "characters/friends/natalie-greene/references/natalie-greene-reference-main.png",
+    ]) {
+      expect((await call("GET", `/repo-image?path=${path}&thumb=1`)).status).toBe(200);
+    }
     expect((await call("GET", "/repo-image?path=../.git/config")).status).toBe(400);
     expect((await call("GET", "/repo-image?path=continuity/timeline.md")).status).toBe(404);
   });

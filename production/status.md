@@ -2,7 +2,7 @@
 
 **Chapter 001 · November 18, 2026.** The [30-page retelling and generation guide](../stories/arc-01/chapter-001/page-guide-v2.md) is the current writing draft. Earlier Chapter 001 counts and packs below document v1.
 
-Updated: 2026-11-17.
+Updated: 2026-11-19.
 
 ## Established
 
@@ -13,13 +13,13 @@ Updated: 2026-11-17.
 - A [production walkthrough](getting-started.md), 11 stage prompts, and expanded
   chapter templates are available. No story, images, or PDF is produced by the guide.
 
-- Seventeen fictional characters are registered: six central family members,
-  seven supporting characters including Nat's children and Morgan's brothers,
+- Eighteen fictional characters are registered: six central family members,
+  eight supporting characters including Cass, Nat's children, and Morgan's brothers,
   and four approved parent-generation profiles: Diane (58), Tom (60), Rick (65),
   and Linda (62).
   Parent written profiles are approved independently of artwork.
-- [Nathan "Nate" Hayes](../characters/nathan-hayes/index.md) and
-  [Adrian Hayes](../characters/adrian-hayes/index.md) were added 2026-11-13 as
+- [Nathan "Nate" Hayes](../characters/family/hayes/nathan-hayes/index.md) and
+  [Adrian Hayes](../characters/family/hayes/adrian-hayes/index.md) were added 2026-11-13 as
   Morgan's older brothers and Diane's sons, with Nate oldest and Adrian middle.
   Proposed ages 41 and 38, designs, jobs, childhood responses, and Adrian's
   identity/neurodevelopmental directions remain drafts. See the
@@ -27,8 +27,8 @@ Updated: 2026-11-17.
 - Current names are Morgan H. Walker (Hayes middle name / Walker surname),
   Ruby Bennett-Walker, Rowan Walker, Riley Walker, and Avery Bennett Walker.
   Legacy directory and asset identifiers are preserved.
-- [Cal](../characters/caleb-mercer/index.md), [Nat](../characters/natalie-greene/index.md),
-  and [Autumn Bennett](../characters/autumn-bennett/index.md) have written profiles and draft
+- [Cal](../characters/friends/caleb-mercer/index.md), [Nat](../characters/friends/natalie-greene/index.md),
+  and [Autumn Bennett](../characters/family/bennett/autumn-bennett/index.md) have written profiles and draft
   reference prompts. Selected direction is distinguished from prior suggestions.
   Ellie is 9 like Rowan; Owen is approximately 6 like Riley. Supporting-character
   model sheets and the children's detailed designs remain unapproved.
@@ -130,3 +130,18 @@ remote. Exclude private source material and unrelated work.
 Current approved profiles and the canon log establish selected facts.
 Questionnaire menus preserve earlier options. The change log preserves history;
 superseded ages and heights there do not override the latest approvals.
+
+## Cass Registration: 2026-11-19
+
+[Cassidy "Cass" Bennett](../characters/friends/cassidy-bennett/index.md) has confirmed
+written facts, Ruby relationship direction, reference notes, and a reusable
+prompt. Height and household remain open; the source sheet is located, but
+local import is pending after DNS failure. No story or new artwork approved.
+
+## Character Asset Organization: 2026-11-19
+
+Organized 85 existing character images into 18 main references and 67 outfit sheets. Seven assets await category or revision-lineage decisions in `_review/`. Cass’s white-top/red-shorts main selection was confirmed by the user. Local sheet availability supersedes older pending-import notes. See the [mapping and review record](character-asset-organization.md). No story, master-model approval, relationship change, release, commit, or deployment is implied.
+
+## Cast Folder Navigation: 2026-11-19
+
+The user requested folder and registry grouping: six Main Cast, seven extended Family across Bennett/Hayes/Walker sides, five Friends & Neighbors. See the [registry](../characters/index.md). All 85 character image hashes are retained; no relationship or story-canon changes are implied.

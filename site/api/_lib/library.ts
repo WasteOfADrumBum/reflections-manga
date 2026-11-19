@@ -2,7 +2,7 @@ import { z } from "zod";
 import type { Session } from "./auth/auth.js";
 import type { StudioDeps } from "./context.js";
 import { content } from "./context.js";
-import { findSheet } from "./content/characters.js";
+import { findSheet, MANIFEST_PATH, OUTFIT_CATEGORIES, parseManifest } from "./content/characters.js";
 import { pad3 } from "./content/config.js";
 import { one } from "./db/client.js";
 import { badRequest, conflict, forbidden, HttpError, notFound } from "./errors.js";
@@ -221,58 +221,64 @@ export function registerLibraryRoutes(r: Router, deps: StudioDeps, requireAdmin:
   r.add("POST", "/create/character", async ({ req }) => {
     const s = await requireAdmin(req);
     const publisher = needPublisher(deps);
-    const isForm = (req.headers.get("content-type") ?? "").includes("multipart/form-data");
-    let input: Record<string, string>;
-    let sheet: Buffer | null = null;
-    if (isForm) {
-      const len = Number(req.headers.get("content-length") ?? "0");
-      if (len > 4_400_000) throw new HttpError(413, "Upload must be under 4 MB.", "too_large");
-      const form = await req.formData();
-      input = fields(form);
-      const f = form.get("file");
-      if (f instanceof File && f.size > 0) sheet = Buffer.from(await f.arrayBuffer());
-    } else input = (await readJson(req)) as Record<string, string>;
+    const len = Number(req.headers.get("content-length") ?? "0");
+    if (len > 4_400_000) throw new HttpError(413, "Upload must be under 4 MB.", "too_large");
+    if (!(req.headers.get("content-type") ?? "").includes("multipart/form-data")) throw badRequest("Send the character with its main reference sheet.");
+    const form = await req.formData();
+    const f = form.get("file");
+    const sheet = f instanceof File && f.size > 0 ? Buffer.from(await f.arrayBuffer()) : null;
+    const manifestText = await publisher.readFile(MANIFEST_PATH);
+    const manifest = parseManifest(manifestText);
+    const groups = Object.keys(manifest?.characterGroups ?? { main: 1, friends: 1 });
     const body = z
       .object({
         displayName: z.string().trim().min(2).max(80),
         id: z.string().regex(/^[a-z][a-z0-9-]{1,59}$/).optional().or(z.literal("")),
+        group: z.string().refine((g) => groups.includes(g), "Choose a cast group."),
         role: z.string().trim().max(400).optional(),
-        sheetLabel: z.string().trim().max(80).optional(),
       })
-      .safeParse(input);
-    if (!body.success) throw badRequest("Give the character a name (2 to 80 characters).", body.error.issues.map((i) => i.message));
+      .safeParse(fields(form));
+    if (!body.success) throw badRequest("Give the character a name and a cast group.", body.error.issues.map((i) => i.message));
+    // Every character in the manifest has exactly one main reference, so the first sheet is required.
+    if (!sheet) throw badRequest("Add the character's main reference sheet. Every character needs one.");
     const id = body.data.id || slug(body.data.displayName);
     if (!id) throw badRequest("Choose a folder name using letters, numbers and dashes.");
     const chars = await studioCharacters(deps);
-    if (chars.some((c) => c.id === id) || (await deps.repo.exists(`characters/${id}/index.md`))) throw conflict(`characters/${id} already exists.`);
+    const dir = `characters/${body.data.group}/${id}`;
+    if (chars.some((c) => c.id === id) || (await deps.repo.exists(`${dir}/index.md`))) throw conflict(`A character with the id ${id} already exists.`);
+    let png: Buffer;
+    try {
+      await validateUpload(sheet, 4_000_000);
+      png = await (await import("sharp")).default(sheet).rotate().png().toBuffer();
+    } catch (err) {
+      throw badRequest((err as Error).message);
+    }
     const template = (await deps.repo.readText("characters/_template/index.md")) ?? "# Character Name\n\nStatus: Draft\n";
     const index = template.replace(/^# .*$/m, `# ${body.data.displayName}`).replace(/^## Role\s*$/m, `## Role\n\n${body.data.role ?? ""}`.trimEnd());
-    const files: PublishFile[] = [{ path: `characters/${id}/index.md`, content: Buffer.from(index.endsWith("\n") ? index : `${index}\n`) }];
-    const refLines = [`# ${body.data.displayName}: Reference Images`, "", `Added in Reflections Studio by ${s.user}.`, ""];
-    if (sheet) {
-      try {
-        await validateUpload(sheet, 4_000_000);
-      } catch (err) {
-        throw badRequest((err as Error).message);
-      }
-      const sharp = (await import("sharp")).default;
-      const png = await sharp(sheet).rotate().png().toBuffer();
-      const file = `${id}-reference-sheet-v1.png`;
-      files.push({ path: `characters/${id}/references/${file}`, content: png });
-      refLines.push("## Current Card", "", `- [${body.data.displayName} reference sheet](${file})`, "- Version: v1.", "");
-      if (body.data.sheetLabel) refLines.push(`## Outfits`, "", `- [${body.data.sheetLabel} v1](${file})`, "");
-    } else refLines.push("No sheet yet. Add one from the studio's character library or in a normal commit.", "");
-    files.push({ path: `characters/${id}/references/index.md`, content: Buffer.from(refLines.join("\n")) });
+    const mainFile = `${id}-reference-main.png`;
+    const files: PublishFile[] = [
+      { path: `${dir}/index.md`, content: Buffer.from(index.endsWith("\n") ? index : `${index}\n`) },
+      { path: `${dir}/references/${mainFile}`, content: png },
+      {
+        path: `${dir}/references/index.md`,
+        content: Buffer.from([`# ${body.data.displayName}: Reference Images`, "", `Added in Reflections Studio by ${s.user}.`, "", "## Current Card", "", `- [${body.data.displayName} main reference](${mainFile})`, ""].join("\n")),
+      },
+      { path: `${dir}/outfits/index.md`, content: Buffer.from(`# ${id}: Outfit Library\n\n- [Main reference](../references/${mainFile})\n\n| Category | Outfit sheet | Review |\n|---|---|---|\n`) },
+    ];
+    if (manifest && manifestText) {
+      const next = await withAsset(manifestText, { path: `${dir}/references/${mainFile}`, data: png, characterId: id, role: "main", category: "casual", characterPath: dir, user: s.user }, { group: body.data.group, id });
+      files.push({ path: MANIFEST_PATH, content: Buffer.from(next) });
+    }
     const res = await publisher.openPullRequest({
       branch: `studio/character-${id}-${stamp(deps)}`,
       title: `Add character: ${body.data.displayName}`,
       commitMessage: `Add character ${body.data.displayName}\n\nCreated in Reflections Studio.`,
-      body: `Adds \`characters/${id}/\` from the character template${sheet ? " with a first reference sheet" : ""}. Created in Reflections Studio by ${s.user}. Merge to add them to the studio's character library.`,
+      body: `Adds \`${dir}/\` from the character template with a main reference sheet${manifest ? ", and registers both in `characters/asset-manifest.json`" : ""}. Created in Reflections Studio by ${s.user}. Merge to add them to the studio's character library.`,
       files,
-      mustNotExist: files.map((f) => f.path),
+      mustNotExist: files.filter((x) => x.path !== MANIFEST_PATH).map((x) => x.path),
     });
     await logEvent(deps.db, deps.clock.now(), { level: "info", message: `Pull request opened to add character ${body.data.displayName}.`, data: { prUrl: res.prUrl } });
-    return json({ prUrl: res.prUrl, id }, 201);
+    return json({ prUrl: res.prUrl, id, dir }, 201);
   });
 
   r.add("POST", "/characters/:id/sheets", async ({ req, params }) => {
@@ -283,32 +289,39 @@ export function registerLibraryRoutes(r: Router, deps: StudioDeps, requireAdmin:
     const ch = chars.find((c) => c.id === id);
     if (!ch) throw notFound("Unknown character.");
     const { form, data } = await readUpload(req);
-    const label = z.string().trim().min(2).max(80).safeParse(fields(form).label);
-    if (!label.success) throw badRequest("Name the outfit (for example: Winter coat).");
+    const manifestText = await publisher.readFile(MANIFEST_PATH);
+    const manifest = parseManifest(manifestText);
+    const categories = manifest?.categories?.length ? manifest.categories : OUTFIT_CATEGORIES;
+    const input = z.object({ label: z.string().trim().min(2).max(80), category: z.string().refine((c) => categories.includes(c), "Choose a category.") }).safeParse(fields(form));
+    if (!input.success) throw badRequest("Name the outfit (for example: Winter coat) and choose its category.");
+    let png: Buffer;
     try {
       await validateUpload(data, 4_000_000);
+      png = await (await import("sharp")).default(data).rotate().png().toBuffer();
     } catch (err) {
       throw badRequest((err as Error).message);
     }
-    const next = Math.max(0, ...ch.sheets.filter((x) => x.source === "references").map((x) => x.version ?? 0)) + 1;
-    const file = `${id}-reference-sheet-v${next}.png`;
-    const sharp = (await import("sharp")).default;
-    const png = await sharp(data).rotate().png().toBuffer();
-    const indexPath = `characters/${id}/references/index.md`;
-    const current = (await publisher.readFile(indexPath)) ?? `# ${ch.displayName}: Reference Images\n`;
-    const addition = `\n## Outfit v${next}: ${label.data}\n\n- [${label.data} v${next}](${file})\n- Added in Reflections Studio by ${s.user}.\n`;
+    // Outfit files are named <id>-<category>-<descriptor>.png, as in the rest of the library.
+    let file = `${id}-${input.data.category}-${slug(input.data.label) || "outfit"}.png`;
+    for (let n = 2; ch.sheets.some((x) => x.file === file); n++) file = `${id}-${input.data.category}-${slug(input.data.label) || "outfit"}-v${n}.png`;
+    const path = `${ch.dir}/outfits/${file}`;
+    const indexPath = `${ch.dir}/outfits/index.md`;
+    const currentIndex = (await publisher.readFile(indexPath)) ?? `# ${id}: Outfit Library\n\n| Category | Outfit sheet | Review |\n|---|---|---|\n`;
+    const row = `| ${input.data.category} | [${file.replace(/\.png$/, "")}](${file}) | Added in Reflections Studio by ${s.user}. |`;
+    const files: PublishFile[] = [
+      { path, content: png },
+      { path: indexPath, content: Buffer.from(`${currentIndex.trimEnd()}\n${row}\n`) },
+    ];
+    if (manifest && manifestText) files.push({ path: MANIFEST_PATH, content: Buffer.from(await withAsset(manifestText, { path, data: png, characterId: id, role: "outfit", category: input.data.category, characterPath: ch.dir, user: s.user })) });
     const res = await publisher.openPullRequest({
-      branch: `studio/sheet-${id}-v${next}-${stamp(deps)}`,
-      title: `Add ${ch.firstName}'s ${label.data} sheet (v${next})`,
-      commitMessage: `Add ${ch.displayName} outfit sheet v${next}: ${label.data}\n\nAdded in Reflections Studio.`,
-      body: `Adds \`characters/${id}/references/${file}\` and names it "${label.data}" in the references index. Existing sheets are untouched.`,
-      files: [
-        { path: `characters/${id}/references/${file}`, content: png },
-        { path: indexPath, content: Buffer.from(`${current.trimEnd()}\n${addition}`) },
-      ],
-      mustNotExist: [`characters/${id}/references/${file}`],
+      branch: `studio/outfit-${id}-${stamp(deps)}`,
+      title: `Add ${ch.firstName}'s ${input.data.label} outfit sheet`,
+      commitMessage: `Add ${ch.displayName} outfit sheet: ${input.data.label}\n\nAdded in Reflections Studio.`,
+      body: `Adds \`${path}\` (${input.data.category}), lists it in the outfit library${manifest ? " and registers it in `characters/asset-manifest.json`" : ""}. Existing sheets are untouched.`,
+      files,
+      mustNotExist: [path],
     });
-    return json({ prUrl: res.prUrl, file }, 201);
+    return json({ prUrl: res.prUrl, file, path }, 201);
   });
 
   r.add("POST", "/create/arc", async ({ req }) => {
@@ -510,6 +523,37 @@ export function registerLibraryRoutes(r: Router, deps: StudioDeps, requireAdmin:
     if (items.length) await deps.db.query(`UPDATE album_items SET status = 'pr_open', pr_url = $2 WHERE id = ANY($1::uuid[])`, [items.map((i) => i.id), res.prUrl]);
     return json({ prUrl: res.prUrl }, 201);
   });
+}
+
+/**
+ * Adds one image to characters/asset-manifest.json in the shape
+ * tools/validate-character-assets.py checks: real hash, size and PNG
+ * dimensions, and an originalPath that is not a real repository path (so the
+ * validator's stale-path check never flags links to the new file).
+ */
+export async function withAsset(
+  manifestText: string,
+  a: { path: string; data: Buffer; characterId: string; role: "main" | "outfit"; category: string; characterPath: string; user: string },
+  addToGroup?: { group: string; id: string },
+): Promise<string> {
+  const m = JSON.parse(manifestText) as { assets: Record<string, unknown>[]; characterGroups?: Record<string, { characterIds: string[] }> };
+  const meta = await inspectImage(a.data);
+  m.assets.push({
+    path: a.path,
+    sha256: meta.sha256,
+    dimensions: [meta.width, meta.height],
+    size: a.data.byteLength,
+    originalPath: `studio-upload:${a.path.split("/").pop()}`,
+    characterId: a.characterId,
+    role: a.role,
+    category: a.category,
+    evidence: `Uploaded in Reflections Studio by ${a.user}; category chosen there. No master-art approval inferred.`,
+    review: null,
+    legacyAliases: [],
+    characterPath: a.characterPath,
+  });
+  if (addToGroup && m.characterGroups?.[addToGroup.group] && !m.characterGroups[addToGroup.group]!.characterIds.includes(addToGroup.id)) m.characterGroups[addToGroup.group]!.characterIds.push(addToGroup.id);
+  return `${JSON.stringify(m, null, 2)}\n`;
 }
 
 function needPublisher(deps: StudioDeps) {

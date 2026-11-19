@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { characterForSheetName, loadCharacters, outfitLabelFromLinkText, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.js";
+import { characterForSheetName, describeSheetFile, loadCharacters, outfitLabelFromLinkText, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.js";
 import { ContentService, findChapterBlock, type LoadedPrompt, publishedPagesFromChaptersJs } from "../../api/_lib/content/chapters.js";
 import { loadStudioConfig, parsePageRanges } from "../../api/_lib/content/config.js";
 import { classifyLettering, expectedLettering, nameFromSheetFile, parsePrompt, parsePromptFilename } from "../../api/_lib/content/prompt-parser.js";
@@ -47,9 +47,9 @@ describe("prompt parser (version 2 layout)", () => {
       "bennett-walker-ruby.png",
       "walker-ethan.png",
       "walker-morgan.png",
-      "morgan-hayes-reference-sheet-v7.png",
-      "ruby-bennett-walker-reference-sheet-v11.png",
-      "ethan-walker-reference-sheet-v5.png",
+      "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png",
+      "ruby-bennett-walker-formal-wedding-dress.png",
+      "ethan-walker-formal-wedding-suit.png",
     ]);
     const p8 = parsePrompt((await raw.readText(`${V2}/page-008-v2.txt`))!, { page: 8, version: 2 });
     expect(p8.referenceOrder.map((r) => r.name)).toEqual(["Morgan", "Avery", "Rowan", "Riley"]);
@@ -74,7 +74,7 @@ describe("prompt parser (version 2 layout)", () => {
   it("names characters from sheet files", () => {
     expect(nameFromSheetFile("walker-ethan.png")).toBe("Ethan");
     expect(nameFromSheetFile("children/bennett-walker-avery.png")).toBe("Avery");
-    expect(nameFromSheetFile("morgan-hayes-reference-sheet-v7.png")).toBe("Morgan");
+    expect(nameFromSheetFile("morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png")).toBe("Morgan");
   });
 
   it.each(Array.from({ length: 30 }, (_, i) => i + 1))("page %i prompt matches script-v2.md word for word", async (page) => {
@@ -163,24 +163,57 @@ describe("chapter inventory", () => {
 });
 
 describe("character library", () => {
-  it("treats every sheet as an outfit, picks a default and finds family copies", async () => {
+  it("finds every character in the cast folders with every outfit sheet as a version", async () => {
     const chars = await loadCharacters(repo, { labelDocs: ["stories/arc-01/chapter-001/page-guide-v2.md"] });
-    const ethan = chars.find((c) => c.id === "ethan-walker")!;
-    expect(ethan.canonicalSheet).toBe("characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png");
-    expect(ethan.references[0]!.status).toBe("canonical");
-    expect(ethan.references.filter((r) => r.status === "canonical")).toHaveLength(1);
-    expect(ethan.portrait).toBe("/images/characters/ethan-walker-portrait.webp");
-    expect(ethan.sheets.length).toBeGreaterThanOrEqual(8);
-    // The family copy is the same sheet as v1, not a separate outfit.
-    expect(ethan.sheets[0]!.aliases).toContain("characters/_reference-sheets/main_characters/walker-ethan.png");
-    // Named by the page guide link "Ethan's wedding suit v5".
-    expect(ethan.sheets.find((s) => s.version === 5)!.label).toBe("Wedding suit (v5)");
-    // No "Current Card" no longer means "no sheet": every character with an image has a default.
+    const manifest = JSON.parse((await repo.readText("characters/asset-manifest.json"))!) as { assets: { path: string; characterId: string; role: string; category: string | null }[] };
+    const ids = [...new Set(manifest.assets.map((a) => a.characterId))].sort();
+    expect(chars.map((c) => c.id).sort()).toEqual(ids);
+    expect(chars.find((c) => c.id === "thomas-bennett")!.profilePath).toBe("characters/family/bennett/thomas-bennett/index.md");
+    expect(chars.find((c) => c.id === "natalie-greene")!.profilePath).toBe("characters/friends/natalie-greene/index.md");
+    // Every image the manifest lists shows up as one of its character's sheets.
+    for (const a of manifest.assets) {
+      const c = chars.find((x) => x.id === a.characterId)!;
+      expect(c.sheets.some((s) => s.path === a.path), a.path).toBe(true);
+    }
+    // The manifest's main reference is the default; nobody with an image is "missing a sheet".
+    for (const a of manifest.assets.filter((x) => x.role === "main")) expect(chars.find((c) => c.id === a.characterId)!.canonicalSheet).toBe(a.path);
     for (const c of chars) if (c.sheets.length) expect(c.canonicalSheet, c.id).not.toBeNull();
-    expect(chars.find((c) => c.id === "nathan-hayes")!.canonicalSheet).toBe("characters/nathan-hayes/references/nathan-hayes-reference-character-sheet-v1.png");
-    // A family sheet with no original in the index still belongs to its character.
-    const diane = chars.find((c) => c.id === "diane-hayes")!;
-    expect(diane.sheets.some((s) => s.path === "characters/_reference-sheets/hayes/hayes-diane.png" || s.aliases.includes("characters/_reference-sheets/hayes/hayes-diane.png"))).toBe(true);
+
+    const ethan = chars.find((c) => c.id === "ethan-walker")!;
+    expect(ethan.group).toBe("Main Cast");
+    expect(ethan.canonicalSheet).toBe("characters/main/ethan-walker/references/ethan-walker-reference-main.png");
+    expect(ethan.references.filter((r) => r.status === "canonical")).toHaveLength(1);
+    expect(ethan.sheets[0]).toMatchObject({ isDefault: true, label: "Main sheet" });
+    // The family copy is the same sheet as the main reference, not a separate outfit.
+    expect(ethan.sheets[0]!.aliases).toContain("characters/_reference-sheets/main_characters/walker-ethan.png");
+    expect(ethan.sheets.find((s) => s.path.endsWith("ethan-walker-formal-wedding-suit.png"))).toMatchObject({ category: "formal", label: "Wedding suit", needsReview: false });
+    expect(ethan.portrait).toBe("/images/characters/ethan-walker-portrait.webp");
+
+    const morgan = chars.find((c) => c.id === "morgan-hayes")!;
+    expect(morgan.sheets.find((s) => s.path.endsWith("_review/morgan-hayes-review-black-top-olive-shorts-study-a.png"))).toMatchObject({ needsReview: true, category: null, label: "Needs review: black top olive shorts study a" });
+
+    // Cass is new: all of her outfits are versions, main sheet first.
+    const cass = chars.find((c) => c.id === "cassidy-bennett")!;
+    expect(cass.profilePath).toBe("characters/friends/cassidy-bennett/index.md");
+    expect(cass.canonicalSheet).toBe("characters/friends/cassidy-bennett/references/cassidy-bennett-reference-main.png");
+    expect(cass.sheets).toHaveLength(manifest.assets.filter((a) => a.characterId === "cassidy-bennett").length);
+    expect(cass.sheets.find((s) => s.file === "cassidy-bennett-formal-black-off-shoulder-dress.png")!.label).toBe("Black off shoulder dress");
+  });
+
+  it("describes sheet files by their naming pattern", () => {
+    expect(describeSheetFile("morgan-hayes", "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png")).toEqual({ kind: "outfit", category: "formal", descriptor: "Wedding lace blouse pink skirt" });
+    expect(describeSheetFile("morgan-hayes", "morgan-hayes-reference-main.png").kind).toBe("main");
+    expect(describeSheetFile("morgan-hayes", "morgan-hayes-review-plaid-bra-shorts.png")).toMatchObject({ kind: "review", descriptor: "Plaid bra shorts" });
+    expect(describeSheetFile("ethan-walker", "walker-ethan.png").kind).toBe("legacy");
+  });
+
+  it("still finds a sheet by its retired file name", async () => {
+    const chars = await loadCharacters(repo);
+    const manifest = JSON.parse((await repo.readText("characters/asset-manifest.json"))!) as { assets: { path: string; characterId: string; legacyAliases: string[] }[] };
+    const withAlias = manifest.assets.find((a) => a.legacyAliases.length)!;
+    const oldName = withAlias.legacyAliases[0]!.split("/").pop()!;
+    const found = await resolveSheetFiles(repo, chars, [], [oldName]);
+    expect(found.get(oldName)).toEqual({ path: withAlias.path, characterId: withAlias.characterId });
   });
 
   it("names outfits from link text", () => {
@@ -206,13 +239,13 @@ describe("character library", () => {
     const found = await resolveSheetFiles(repo, chars, dirs, [
       "walker-ethan.png",
       "children/walker-riley.png",
-      "morgan-hayes-reference-sheet-v7.png",
+      "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png",
       "missing-person.png",
       "../site/images/x.png",
     ]);
     expect(found.get("walker-ethan.png")).toEqual({ path: "characters/_reference-sheets/main_characters/walker-ethan.png", characterId: "ethan-walker" });
     expect(found.get("children/walker-riley.png")).toEqual({ path: "characters/_reference-sheets/main_characters/children/walker-riley.png", characterId: "riley-hayes-walker" });
-    expect(found.get("morgan-hayes-reference-sheet-v7.png")).toEqual({ path: "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v7.png", characterId: "morgan-hayes" });
+    expect(found.get("morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png")).toEqual({ path: "characters/main/morgan-hayes/outfits/morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png", characterId: "morgan-hayes" });
     expect(found.get("missing-person.png")).toBeNull();
     expect(found.get("../site/images/x.png")).toBeNull();
     expect(characterForSheetName(chars, "bennett-walker-ruby.png")?.id).toBe("ruby-bennett-walker");
@@ -222,5 +255,15 @@ describe("character library", () => {
   it("parses only the Current Card section", () => {
     expect(parseCurrentCard("# X\n## Current Card\n- [a](a-v1.png)\n## Other\n- [b](b-v2.png)")).toBe("a-v1.png");
     expect(parseCurrentCard("# X\n## Other\n- [b](b-v2.png)")).toBeNull();
+  });
+
+  it.each([
+    ["morgan-hayes-reference-main.png", "Morgan"],
+    ["ethan-walker-formal-wedding-suit.png", "Ethan"],
+    ["ruby-bennett-walker-sleepwear-blue.png", "Ruby"],
+    ["cassidy-bennett-swimwear-black-red-bikini.png", "Cassidy"],
+    ["morgan-hayes-review-black-top-olive-shorts-study-a.png", "Morgan"],
+  ])("identifies the character in descriptive attachment %s", (file, name) => {
+    expect(nameFromSheetFile(file)).toBe(name);
   });
 });

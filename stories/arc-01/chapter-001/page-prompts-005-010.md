@@ -32,9 +32,9 @@ sheets even though the rest of pages 005–007 focuses on Ethan and Morgan.
 
 ## Identity Anchors and Existing Pages
 
-- [Ethan everyday v1](../../../characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png)
-- [Morgan everyday v1](../../../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png)
-- [Ruby everyday v1](../../../characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png)
+- [Ethan everyday v1](../../../characters/main/ethan-walker/references/ethan-walker-reference-main.png)
+- [Morgan everyday v1](../../../characters/main/morgan-hayes/references/morgan-hayes-reference-main.png)
+- [Ruby everyday v1](../../../characters/main/ruby-bennett-walker/references/ruby-bennett-walker-reference-main.png)
 - [Rendered opening inventory](pages/index.md); use [page 003](pages/A01-C001-P003.png)
   for the kitchen and adult outfits, and [page 004](pages/A01-C001-P004.png) for
   Ethan's immediate mirror-to-kitchen continuity.

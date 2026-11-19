@@ -1,5 +1,14 @@
 # Change Log
 
+## 2026-11-18: Porch Self-Timer Family Photograph
+
+- Generated the user's requested six-person exposure after the supplied porch
+  setup, with children left and Ethan just landing between Ruby and Morgan.
+- Saved the 1536 x 1024 image in assets/illustrations, plus exact prompts,
+  reference boards, and visual-review notes in assets/drafts.
+- Preserved original artwork; Morgan's tiny hand/ring detail remains for review.
+  No upload, deployment, chapter replacement, or story approval established.
+
 ## 2026-11-18: Standalone Page 1 Wedding Photograph
 
 - Restored the supplied page-1 wedding print as a separate 1536 x 1024 portrait
@@ -544,7 +553,7 @@ User reopened the entire chapter for regeneration. [V2](../stories/arc-01/chapte
 
 - Implemented the user's corrected spelling: Autumn Bennett and Ruby
   Bennett-Walker, with two t's. Avery remains Avery Bennett-Walker.
-- Renamed characters/autumn to characters/autumn-bennett and
+- Renamed characters/autumn to characters/family/bennett/autumn-bennett and
   characters/ruby-bennett to characters/ruby-bennett-walker.
 - Renamed their prompt files, Ruby's v1 reference filename, and Ruby's site
   image files to match. Updated live profile, prompt, relationship, family-tree,
@@ -770,3 +779,28 @@ User reopened the entire chapter for regeneration. [V2](../stories/arc-01/chapte
 - Created project scaffold
 - Added three draft character profiles
 - Established production and continuity rules
+
+## 2026-11-19: Cassidy "Cass" Bennett Repository Integration
+
+- Registered Cass's confirmed name, Australian nationality, age 40, appearance,
+  elementary teaching role, motherhood, fitness interest, personality, and Ruby dynamic.
+- Added profile, appearance, personality/dialogue, wardrobe, reference record,
+  and reusable prompt; updated registries, relationships, bible, rules, arcs,
+  timeline, family-tree boundary, production status, and canon log.
+- Preserved Bennett without inferred kinship; retained unconfirmed height,
+  household, relatives, teaching grade, hobbies, and encounters as proposals.
+- Located supplied fictional sheet; download failed with DNS. Recorded source
+  link and pending local import without fabricating image or tattoo details.
+- No chapter, new artwork, completed story, or release approved.
+
+## 2026-11-19: Descriptive Character Outfit Library
+
+- Preserved 85 character image files byte-for-byte; selected one named main reference per character and moved alternate sheets into individual outfit folders.
+- Matched Ruby’s 11 pre-session numbered filenames to descriptive images by exact Git-blob hashes.
+- User confirmed Cass’s white-top/red-shorts sheet as main. Main selection does not approve a master model sheet.
+- Updated links, prompt attachments, reference records, and studio lookup for outfit folders. Seven assets retain unresolved category or revision-lineage decisions.
+- No appearance, relationship, chronology, chapter event, or release-canon change. See the [full mapping](../production/character-asset-organization.md).
+
+## 2026-11-19: Cast Navigation Groups
+
+At the user’s request, moved the six core household characters to `characters/main/`, extended relatives to `characters/family/bennett/`, `hayes/`, and `walker/`, and Cal, Nat, Ellie, Owen, and Cass to `characters/friends/`. Reordered the registry and added group indexes. Stable IDs, approval states, relationship facts, and story chronology are preserved. Updated relative links, asset manifest destinations, and studio discovery. Cass is not classified as Ruby’s relative.

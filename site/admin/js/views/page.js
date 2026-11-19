@@ -1,7 +1,7 @@
 // One page: synopsis, art, outfit picks, one-off prompt edits, generate or upload, and versions.
 import { get, post } from "../api.js";
 import { act, costExplainer, crumbs, errorBox, head, render, repoImage, section } from "../shared.js";
-import { alertMessage, badge, clear, confirmDialog, field, h, label, notice, pad3, usd, when } from "../ui.js";
+import { alertMessage, badge, clear, confirmDialog, field, h, label, notice, pad3, sheetOptions, usd, when } from "../ui.js";
 
 function qaList(qa) {
   if (!qa || !qa.checks) return h("p", { class: "small muted" }, "Not checked yet.");
@@ -64,7 +64,7 @@ export function versionCard(v, { onChange, pageLocked = false, hasArt = false })
 }
 
 function outfitPicker(entry, onChange) {
-  const select = h("select", {}, ...entry.sheets.map((s) => h("option", { value: s.path, selected: s.path === entry.selectedSheet }, `${s.label}${s.path === entry.promptSheet ? " (prompt's choice)" : ""}`)));
+  const select = h("select", {}, ...sheetOptions(entry.sheets, entry.selectedSheet, (s) => (s.path === entry.promptSheet ? " (prompt's choice)" : "")));
   const current = () => entry.sheets.find((s) => s.path === select.value) ?? entry.sheets[0];
   const img = h("img", { src: repoImage(current().path, 320), alt: `${entry.displayName}, ${current().label}`, width: "320", height: "213", loading: "lazy", decoding: "async" });
   select.addEventListener("change", () => {

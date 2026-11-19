@@ -98,18 +98,22 @@ describe("admin interface", () => {
     await go("#/characters", () => heading() === "Characters");
     const ethan = [...document.querySelectorAll("li.char-card")].find((a) => a.textContent?.includes("Ethan Walker"))!;
     const img = ethan.querySelector("img")!;
-    expect(img.getAttribute("alt")).toBe("Ethan Walker, Main sheet (v1)");
+    expect(img.getAttribute("alt")).toBe("Ethan Walker, Main sheet");
     const select = ethan.querySelector("select")!;
     expect(select.options.length).toBeGreaterThanOrEqual(8);
-    expect([...select.options].map((o) => o.textContent)).toContain("Wedding suit (v5)");
-    select.value = [...select.options].find((o) => o.textContent === "Wedding suit (v5)")!.value;
+    expect([...select.querySelectorAll("optgroup")].map((g) => g.label)).toContain("Formal");
+    expect([...select.options].map((o) => o.textContent)).toContain("Wedding suit");
+    select.value = [...select.options].find((o) => o.textContent === "Wedding suit")!.value;
     select.dispatchEvent(new Event("change"));
-    expect(img.getAttribute("src")).toMatch(/ethan-walker-reference-sheet-v5\.png/);
-    expect(img.getAttribute("alt")).toBe("Ethan Walker, Wedding suit (v5)");
+    expect(img.getAttribute("src")).toMatch(/ethan-walker-formal-wedding-suit\.png/);
+    expect(img.getAttribute("alt")).toBe("Ethan Walker, Wedding suit");
+    // Cass, added on main, is in the library with her outfits.
+    const cass = [...document.querySelectorAll("li.char-card")].find((a) => a.querySelector("h2")?.textContent?.startsWith("Cass"))!;
+    expect(cass.querySelector("select")!.options.length).toBeGreaterThan(5);
     // No character with a sheet image is reported as missing one.
     expect(document.getElementById("view")!.textContent).not.toMatch(/blocked until/);
     expect(document.querySelector("details:not([open]) .ref-list")).toBeNull();
-    for (const input of document.querySelectorAll("#upload-form input, #upload-form select, #new-character input, #new-character textarea")) {
+    for (const input of document.querySelectorAll("#upload-form input, #upload-form select, #new-character input, #new-character select, #new-character textarea")) {
       expect(document.querySelector(`label[for="${input.id}"]`), input.id).not.toBeNull();
     }
     expect(await a11y()).toEqual([]);

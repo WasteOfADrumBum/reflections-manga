@@ -3,13 +3,16 @@ import type { RepoEntry, RepoSource } from "../repo/source.js";
 /**
  * Character library built from everything under characters/.
  *
- * Every image sheet that belongs to a character is an outfit or version of
- * that character: the files in characters/<id>/references/ and the family
- * copies in characters/_reference-sheets/** (matched by surname-first file
- * name, e.g. "walker-ethan.png"). One sheet is the default: the "Current Card"
- * in references/index.md when there is one, otherwise the original behind the
- * family copy, otherwise the lowest version. A character is only "missing a
- * sheet" when no image exists for them at all.
+ * Characters live in cast folders (characters/main/<id>, characters/family/
+ * <family>/<id>, characters/friends/<id>); the folder name is the character id.
+ * Every image in a character's references/ and outfits/ (including
+ * outfits/_review) is one of their sheets, and characters/asset-manifest.json
+ * says which one is the main reference, each outfit's category, and the
+ * retired file names that used to point at it. Family copies in
+ * characters/_reference-sheets/** count as the same sheet as their original.
+ * The default sheet is the "Current Card" if a references/index.md names one,
+ * else the manifest's main reference, else the "-reference-main" file. A
+ * character is only "missing a sheet" when no image exists for them at all.
  *
  * Uploaded references (stored in Blob) can only add outfit or location
  * references; they never replace a repository sheet.
@@ -19,10 +22,15 @@ export interface CharacterSheet {
   file: string;
   label: string;
   version: number | null;
-  source: "references" | "family";
-  /** Other repository paths holding a copy of the same sheet (family copies). */
+  source: "references" | "outfits" | "family";
+  /** Other repository paths holding a copy of the same sheet: family copies and retired file names. */
   aliases: string[];
   isDefault: boolean;
+  /** Outfit category from the asset manifest or file name (casual, formal, sleepwear, ...). */
+  category: string | null;
+  /** Sheets in outfits/_review whose category the owner has not chosen yet. */
+  needsReview: boolean;
+  reviewNote: string | null;
   size?: number;
 }
 
@@ -40,6 +48,10 @@ export interface CharacterRecord {
   firstName: string;
   aliases: string[];
   profilePath: string;
+  /** Folder holding the character, e.g. characters/main/ethan-walker. */
+  dir: string;
+  /** Cast group from the asset manifest, e.g. "Main Cast". */
+  group: string | null;
   /** The default sheet (called the canonical sheet in older code). */
   canonicalSheet: string | null;
   sheets: CharacterSheet[];
@@ -50,6 +62,52 @@ export interface CharacterRecord {
 
 const IMAGE = /\.(png|webp|jpe?g)$/i;
 export const FAMILY_DIR = "characters/_reference-sheets";
+export const MANIFEST_PATH = "characters/asset-manifest.json";
+export const OUTFIT_CATEGORIES = ["casual", "sleepwear", "swimwear", "activewear", "formal", "workwear", "outerwear", "seasonal", "lingerie"];
+
+/** The relevant part of characters/asset-manifest.json. */
+export interface AssetManifest {
+  categories?: string[];
+  characterGroups?: Record<string, { label: string; characterIds: string[] }>;
+  assets: {
+    path: string;
+    characterId: string;
+    role: "main" | "outfit" | string;
+    category: string | null;
+    review: string | null;
+    originalPath?: string | null;
+    legacyAliases?: string[];
+    characterPath?: string;
+  }[];
+}
+
+export function parseManifest(text: string | null): AssetManifest | null {
+  if (!text) return null;
+  try {
+    const m = JSON.parse(text) as AssetManifest;
+    return Array.isArray(m.assets) ? m : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png" -> formal, "Wedding lace blouse pink skirt";
+ * "morgan-hayes-review-plaid-bra-shorts.png" -> review; "...-reference-main.png" -> main.
+ */
+export function describeSheetFile(id: string, file: string, categories = OUTFIT_CATEGORIES): { kind: "main" | "outfit" | "review" | "legacy"; category: string | null; descriptor: string | null } {
+  const stem = file.replace(/\.(png|webp|jpe?g)$/i, "");
+  const rest = stem.startsWith(`${id}-`) ? stem.slice(id.length + 1) : stem;
+  if (/^reference-main(?:-v\d+)?$/.test(rest)) return { kind: "main", category: null, descriptor: null };
+  const words = (t: string) => {
+    const w = t.replace(/-v\d+$/, "").replace(/-/g, " ").trim();
+    return w ? w.charAt(0).toUpperCase() + w.slice(1) : null;
+  };
+  if (rest.startsWith("review-")) return { kind: "review", category: null, descriptor: words(rest.slice(7)) };
+  const cat = categories.find((c) => rest.startsWith(`${c}-`));
+  if (cat) return { kind: "outfit", category: cat, descriptor: words(rest.slice(cat.length + 1)) };
+  return { kind: "legacy", category: null, descriptor: null };
+}
 
 export function parseCurrentCard(indexMd: string): string | null {
   const lines = indexMd.split("\n");
@@ -160,19 +218,35 @@ export interface LoadCharactersOptions {
 }
 
 export async function loadCharacters(repo: RepoSource, opts: LoadCharactersOptions = {}): Promise<CharacterRecord[]> {
-  const [tree, siteImages] = await Promise.all([repo.walk("characters"), repo.list("site/images/characters")]);
+  const [tree, siteImages, manifestText] = await Promise.all([repo.walk("characters"), repo.list("site/images/characters"), repo.readText(MANIFEST_PATH)]);
+  const manifest = parseManifest(manifestText);
   const site = new Set(siteImages.map((e) => e.name));
-  const ids = [...new Set(tree.filter((e) => /^characters\/[^/_][^/]*\/index\.md$/.test(e.path)).map((e) => e.path.split("/")[1]!))].sort();
-  const familyFiles = tree.filter((e) => e.path.startsWith(`${FAMILY_DIR}/`) && IMAGE.test(e.name));
+  const isSheet = (p: string) => IMAGE.test(p);
+
+  // A character is a folder with an index.md and its own references/ or outfits/
+  // (any depth: characters/main/ethan-walker, characters/family/hayes/diane-hayes,
+  // or the older flat characters/ethan-walker). Group folders and _-prefixed folders are not characters.
+  const manifestDirs = new Set((manifest?.assets ?? []).map((a) => a.characterPath).filter((d): d is string => !!d));
+  const dirs = tree
+    .filter((e) => e.name === "index.md")
+    .map((e) => e.path.slice(0, -"/index.md".length))
+    .filter((d) => d.startsWith("characters/") && !d.split("/").slice(1).some((seg) => seg.startsWith("_")) && !/\/(references|outfits|prompts)$/.test(d))
+    .filter((d) => manifestDirs.has(d) || tree.some((e) => e.path.startsWith(`${d}/references/`) || e.path.startsWith(`${d}/outfits/`)))
+    .sort();
+  const familyFiles = tree.filter((e) => e.path.startsWith(`${FAMILY_DIR}/`) && isSheet(e.name));
+  const assetByPath = new Map((manifest?.assets ?? []).map((a) => [a.path, a]));
+  const groupOf = new Map<string, string>();
+  for (const g of Object.values(manifest?.characterGroups ?? {})) for (const id of g.characterIds) groupOf.set(id, g.label);
+  const categories = manifest?.categories?.length ? manifest.categories : OUTFIT_CATEGORIES;
 
   // All reads run in parallel: on GitHub each one is a network request.
   const [familyIndex, labelDocs, perCharacter] = await Promise.all([
     repo.readText(`${FAMILY_DIR}/index.md`),
     Promise.all((opts.labelDocs ?? []).map(async (p) => ({ path: p, text: (await repo.readText(p)) ?? "" }))),
     Promise.all(
-      ids.map(async (id) => {
-        const [index, refIndex] = await Promise.all([repo.readText(`characters/${id}/index.md`), repo.readText(`characters/${id}/references/index.md`)]);
-        return { id, index: index ?? "", refIndex: refIndex ?? "" };
+      dirs.map(async (dir) => {
+        const [index, refIndex] = await Promise.all([repo.readText(`${dir}/index.md`), repo.readText(`${dir}/references/index.md`)]);
+        return { dir, id: dir.split("/").pop()!, index: index ?? "", refIndex: refIndex ?? "" };
       }),
     ),
   ]);
@@ -185,55 +259,88 @@ export async function loadCharacters(repo: RepoSource, opts: LoadCharactersOptio
   };
   for (const d of labelDocs) noteLinks(d.text, d.path.split("/").slice(0, -1).join("/"));
 
-  const records: CharacterRecord[] = perCharacter.map(({ id, index, refIndex }) => {
+  const seenIds = new Set<string>();
+  const records: CharacterRecord[] = [];
+  for (const { dir, id, index, refIndex } of perCharacter) {
+    if (seenIds.has(id)) continue; // directory basenames are stable character ids
+    seenIds.add(id);
     const heading = index.split("\n").find((l) => l.startsWith("# ")) ?? id;
     const displayName = cleanDisplayName(heading);
-    noteLinks(refIndex, `characters/${id}/references`);
-    const refFiles = tree.filter((e) => e.path.startsWith(`characters/${id}/references/`) && e.path.split("/").length === 4 && IMAGE.test(e.name));
-    const sheets: CharacterSheet[] = refFiles.map((f) => ({ path: f.path, file: f.name, label: "", version: sheetVersion(f.name), source: "references", aliases: [], isDefault: false, size: f.size }));
+    noteLinks(refIndex, `${dir}/references`);
+    const files = tree.filter((e) => (e.path.startsWith(`${dir}/references/`) || e.path.startsWith(`${dir}/outfits/`)) && isSheet(e.name));
+    const sheets: CharacterSheet[] = files.map((f) => {
+      const asset = assetByPath.get(f.path);
+      const described = describeSheetFile(id, f.name, categories);
+      const inReview = f.path.includes("/outfits/_review/") || described.kind === "review";
+      return {
+        path: f.path,
+        file: f.name,
+        label: "",
+        version: sheetVersion(f.name),
+        source: f.path.startsWith(`${dir}/outfits/`) ? "outfits" : "references",
+        aliases: [...new Set([...(asset?.legacyAliases ?? []), ...(asset?.originalPath ? [asset.originalPath] : [])])].filter((p) => p !== f.path),
+        isDefault: false,
+        category: asset?.category ?? described.category,
+        needsReview: asset ? asset.category == null && inReview : inReview,
+        reviewNote: asset?.review ?? null,
+        size: f.size,
+      };
+    });
     const card = parseCurrentCard(refIndex);
-    const cardPath = card ? resolveRelative(`characters/${id}/references`, card) : null;
-    return {
+    const cardPath = card ? resolveRelative(`${dir}/references`, card) : null;
+    const manifestMain = (manifest?.assets ?? []).find((a) => a.characterId === id && a.role === "main")?.path;
+    const main = [cardPath, manifestMain].find((p) => p && sheets.some((s) => s.path === p)) ?? sheets.find((s) => describeSheetFile(id, s.file, categories).kind === "main")?.path ?? null;
+    records.push({
       id,
       displayName,
       firstName: displayName.replace(/["“”]/g, "").split(/\s+/)[0] ?? id,
       aliases: aliasesFor(id, displayName),
-      profilePath: `characters/${id}/index.md`,
-      canonicalSheet: cardPath && sheets.some((s) => s.path === cardPath) ? cardPath : null,
+      profilePath: `${dir}/index.md`,
+      dir,
+      group: groupOf.get(id) ?? null,
+      canonicalSheet: main,
       sheets,
       references: [],
       portrait: site.has(`${id}-portrait.webp`) ? `/images/characters/${id}-portrait.webp` : null,
       sheetThumb: site.has(`${id}-sheet-thumb.webp`) ? `/images/characters/${id}-sheet-thumb.webp` : null,
-    };
-  });
+    });
+  }
 
   // Family sheets: an alias of the original when the index says it is a copy,
   // otherwise a sheet of their own.
   for (const f of familyFiles) {
     const original = copyToOriginal.get(f.name);
-    const owner = (original ? records.find((r) => original.startsWith(`characters/${r.id}/`)) : null) ?? characterForSheetName(records, f.name);
+    const owner = (original ? records.find((r) => original.startsWith(`${r.dir}/`)) : null) ?? characterForSheetName(records, f.name);
     if (!owner) continue;
-    const target = original ? owner.sheets.find((s) => s.path === original) : undefined;
+    const target = original ? owner.sheets.find((s) => s.path === original || s.aliases.includes(original)) : undefined;
     if (target) target.aliases.push(f.path);
-    else owner.sheets.push({ path: f.path, file: f.name, label: "", version: null, source: "family", aliases: [], isDefault: false, size: f.size });
+    else owner.sheets.push({ path: f.path, file: f.name, label: "", version: null, source: "family", aliases: [], isDefault: false, category: null, needsReview: false, reviewNote: null, size: f.size });
   }
 
-  for (const r of records) finishSheets(r, linkTexts);
+  for (const r of records) finishSheets(r, linkTexts, categories);
   return records.sort((a, b) => a.displayName.localeCompare(b.displayName));
 }
 
-function finishSheets(r: CharacterRecord, linkTexts: Map<string, string[]>) {
-  r.sheets.sort((a, b) => (a.source === b.source ? (a.version ?? 0) - (b.version ?? 0) || a.file.localeCompare(b.file, undefined, { numeric: true }) : a.source === "references" ? -1 : 1));
+function finishSheets(r: CharacterRecord, linkTexts: Map<string, string[]>, categories: string[]) {
+  const rank = (x: CharacterSheet) => (x.path === r.canonicalSheet ? 0 : x.needsReview ? 3 : x.source === "family" ? 4 : x.category ? 1 : 2);
+  r.sheets.sort((a, b) => rank(a) - rank(b) || (a.category ?? "").localeCompare(b.category ?? "") || (a.version ?? 0) - (b.version ?? 0) || a.file.localeCompare(b.file, undefined, { numeric: true }));
   const card = r.canonicalSheet ? r.sheets.find((s) => s.path === r.canonicalSheet) : undefined;
-  const def = card ?? r.sheets.find((s) => s.aliases.length > 0) ?? r.sheets.find((s) => s.source === "family") ?? r.sheets.find((s) => s.version === 1) ?? r.sheets[0] ?? null;
+  const def = card ?? r.sheets.find((s) => s.aliases.some((a) => a.startsWith(`${FAMILY_DIR}/`))) ?? r.sheets.find((s) => s.source === "family") ?? r.sheets.find((s) => s.version === 1) ?? r.sheets.find((s) => !s.needsReview) ?? r.sheets[0] ?? null;
   for (const s of r.sheets) {
     s.isDefault = s === def;
-    const named = [s.path, ...s.aliases]
-      .flatMap((p) => linkTexts.get(p) ?? [])
-      .map((t) => outfitLabelFromLinkText(t, r))
-      .filter((t): t is string => !!t && t !== "Main sheet")
-      .sort((a, b) => b.length - a.length);
-    const base = named[0] ?? (s.isDefault ? "Main sheet" : s.source === "family" ? "Family sheet" : "Outfit");
+    const described = describeSheetFile(r.id, s.file, categories);
+    let base: string;
+    if (described.kind === "main" || (s.isDefault && described.kind !== "outfit")) base = "Main sheet";
+    else if (described.kind === "outfit" && described.descriptor) base = described.descriptor;
+    else if (described.kind === "review" && described.descriptor) base = `Needs review: ${described.descriptor.charAt(0).toLowerCase()}${described.descriptor.slice(1)}`;
+    else {
+      const named = [s.path, ...s.aliases]
+        .flatMap((p) => linkTexts.get(p) ?? [])
+        .map((t) => outfitLabelFromLinkText(t, r))
+        .filter((t): t is string => !!t && t !== "Main sheet")
+        .sort((a, b) => b.length - a.length);
+      base = named[0] ?? (s.isDefault ? "Main sheet" : s.source === "family" ? "Family sheet" : "Outfit");
+    }
     s.label = s.version != null ? `${base} (v${s.version})` : base;
   }
   // Two sheets with the same label get their file name added so the picker stays unambiguous.
@@ -304,7 +411,9 @@ export async function resolveSheetFiles(
     const base = file.split("/").pop() ?? file;
     let found: ResolvedSheet | null = null;
     for (const c of characters) {
-      const s = c.sheets.find((x) => x.source === "references" && x.file === base);
+      // Current file names first, then retired names from the asset manifest
+      // (an older prompt may still name "morgan-hayes-reference-sheet-v7.png").
+      const s = c.sheets.find((x) => x.source !== "family" && x.file === base) ?? c.sheets.find((x) => x.source !== "family" && x.aliases.some((a) => !a.startsWith(`${FAMILY_DIR}/`) && a.split("/").pop() === base));
       if (s) {
         found = { path: s.path, characterId: c.id };
         break;

@@ -46,6 +46,7 @@ import { chapterOverview, dashboard } from "./engine/overview.js";
 import type { VersionRow } from "./engine/types.js";
 import { noteApproval, planPage, runWorkerStep, studioCharacters } from "./engine/worker.js";
 import { costCard, registerLibraryRoutes, versionSummary } from "./library.js";
+import { MANIFEST_PATH, OUTFIT_CATEGORIES, parseManifest } from "./content/characters.js";
 import { errorResponse, json, readJson, Router, SECURITY_HEADERS } from "./http.js";
 import { thumbnail, toReaderWebp, validateUpload } from "./images.js";
 import { altTextFromScript } from "./publish/alt-text.js";
@@ -72,7 +73,8 @@ const chapterParam = (s: string) => {
 
 /** Repository images the studio may display: character sheets, manuscript pages and public site images. */
 const REPO_IMAGE_ALLOW = [
-  /^characters\/[a-z0-9-]+\/references\/[\w.-]+\.(png|webp|jpe?g)$/i,
+  // A character's own sheets: characters/main/<id>/..., characters/family/<family>/<id>/..., characters/friends/<id>/...
+  /^characters\/(?:[a-z0-9-]+\/){1,3}(?:references|outfits(?:\/_review)?)\/[\w.-]+\.(png|webp|jpe?g)$/i,
   /^characters\/_reference-sheets\/(?:[\w-]+\/)*[\w.-]+\.(png|webp|jpe?g)$/i,
   /^stories\/arc-\d{2}\/chapter-\d{3}\/pages\/(?:version_\d+\/)?[\w.-]+\.(png|webp)$/i,
   /^site\/(?:images|pages)\/[\w./-]+\.(png|webp|jpe?g)$/i,
@@ -185,7 +187,9 @@ export function createApp(deps: StudioDeps) {
     await requireAdmin(req);
     const chars = await studioCharacters(deps);
     const uploads = await deps.db.query(`SELECT id, character_id, chapter_id, pages, label, kind, status, width, height, bytes, created_at FROM reference_assets ORDER BY created_at DESC`);
-    return json({ characters: chars, uploads, publisherReady: !!deps.publisher });
+    const manifest = parseManifest(await deps.repo.readText(MANIFEST_PATH));
+    const groups = Object.entries(manifest?.characterGroups ?? {}).map(([key, g]) => ({ key, label: g.label }));
+    return json({ characters: chars, uploads, publisherReady: !!deps.publisher, groups, categories: manifest?.categories?.length ? manifest.categories : OUTFIT_CATEGORIES });
   });
 
   r.add("GET", "/repo-image", async ({ req, url }) => {

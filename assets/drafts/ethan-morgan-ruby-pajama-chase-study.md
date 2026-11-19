@@ -8,8 +8,8 @@ Status: Standalone art study, pending user review; not a completed chapter.
 
 - [Pajama chase v1](ethan-morgan-ruby-pajama-chase-v1.png): 1536 x 1024 pixels, RGB.
 - [Exact attached Ruby navy-pajama reference](ethan-morgan-ruby-pajama-chase-ruby-input.png)
-- [Morgan identity reference](../../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png)
-- [Ethan identity reference](../../characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png)
+- [Morgan identity reference](../../characters/main/morgan-hayes/references/morgan-hayes-reference-main.png)
+- [Ethan identity reference](../../characters/main/ethan-walker/references/ethan-walker-reference-main.png)
 - [Earlier unrendered attempt](ethan-morgan-ruby-pajama-chase-attempt.md)
 
 ## User Selection and Scene Direction

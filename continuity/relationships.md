@@ -24,9 +24,9 @@ text and lettering. Naming changes establish no new legal marriage status.
 
 ## Shared Marriage
 
-[Ethan Walker](../characters/ethan-walker/index.md) (38),
-[Morgan H. Walker](../characters/morgan-hayes/index.md) (34), and
-[Ruby Bennett-Walker](../characters/ruby-bennett-walker/index.md) (28) share one
+[Ethan Walker](../characters/main/ethan-walker/index.md) (38),
+[Morgan H. Walker](../characters/main/morgan-hayes/index.md) (34), and
+[Ruby Bennett-Walker](../characters/main/ruby-bennett-walker/index.md) (28) share one
 household and a committed V-shaped polyamorous marriage. Ethan is the romantic
 partner of both women. The family may call itself a throuple; that does not
 make all three pairings romantic.
@@ -124,9 +124,9 @@ backstory or from surnames.
 
 | Child | Previously recorded parents | Opening age | Closest parental attachment |
 |---|---|---|---|
-| [Rowan Walker](../characters/rowan-hayes-walker/index.md), son | Ethan and Morgan | 9 | Ruby |
-| [Avery Bennett Walker](../characters/avery-bennett-walker/index.md), daughter | Ethan and Ruby | 7 | Ethan |
-| [Riley Walker](../characters/riley-hayes-walker/index.md), daughter | Ethan and Morgan | Approximately 6 | Morgan |
+| [Rowan Walker](../characters/main/rowan-hayes-walker/index.md), son | Ethan and Morgan | 9 | Ruby |
+| [Avery Bennett Walker](../characters/main/avery-bennett-walker/index.md), daughter | Ethan and Ruby | 7 | Ethan |
+| [Riley Walker](../characters/main/riley-hayes-walker/index.md), daughter | Ethan and Morgan | Approximately 6 | Morgan |
 
 Rowan and Riley are full siblings; Avery is their paternal half-sister. Those
 existing parentage terms do not measure belonging or emotional closeness.
@@ -136,7 +136,7 @@ Rowan and Riley are nearly inseparable. Avery sometimes ends up outside their
 close pairing, but all three still enjoy playing together. Do not turn this
 imbalance into permanent rejection or attribute it to Avery's autism.
 Avery's individual communication and support preferences remain as recorded
-in her [personality profile](../characters/avery-bennett-walker/personality.md).
+in her [personality profile](../characters/main/avery-bennett-walker/personality.md).
 
 ## Preferred Forms of Address
 
@@ -162,13 +162,13 @@ The children's form of address for Ethan remains unspecified by the user.
 
 | Connection | User-selected foundation | Not established |
 |---|---|---|
-| [Caleb "Cal" Mercer](../characters/caleb-mercer/index.md) and Ethan | Best friends | Meeting, friendship duration, shared hobbies, recovery history, or specific conversations |
-| [Natalie "Nat" Greene](../characters/natalie-greene/index.md) and Morgan | Best friends outside the household | Meeting, co-residence, particular advice, or conflicts |
-| Nat and [Ellie](../characters/ellie-greene/index.md) | Mother and daughter; Ellie is 9 like Rowan | Other parentage, custody, school, or a confirmed friendship with Rowan |
-| Nat and [Owen](../characters/owen-greene/index.md) | Mother and son; Owen is approximately 6 like Riley | Exact age, other parentage, custody, school, or a confirmed friendship with Riley |
+| [Caleb "Cal" Mercer](../characters/friends/caleb-mercer/index.md) and Ethan | Best friends | Meeting, friendship duration, shared hobbies, recovery history, or specific conversations |
+| [Natalie "Nat" Greene](../characters/friends/natalie-greene/index.md) and Morgan | Best friends outside the household | Meeting, co-residence, particular advice, or conflicts |
+| Nat and [Ellie](../characters/friends/ellie-greene/index.md) | Mother and daughter; Ellie is 9 like Rowan | Other parentage, custody, school, or a confirmed friendship with Rowan |
+| Nat and [Owen](../characters/friends/owen-greene/index.md) | Mother and son; Owen is approximately 6 like Riley | Exact age, other parentage, custody, school, or a confirmed friendship with Riley |
 | Ellie and Owen | Older sister and younger brother, both Nat's children | Full/half/adoptive sibling status or shared household |
-| [Autumn Bennett](../characters/autumn-bennett/index.md) and Ruby | Autumn is Ruby's older sister, approximately Morgan's age; Avery's aunt through Ruby | Exact age, sibling type, childhood roles, or specific encounters |
-| [Nathan "Nate" Hayes](../characters/nathan-hayes/index.md), [Adrian Hayes](../characters/adrian-hayes/index.md), and Morgan | Hayes siblings; Nate oldest, Adrian middle, Morgan youngest; Diane is their mother and they share the unnamed father in Morgan's history | Brothers' proposed ages of 41 and 38, detailed childhood responses, present-day tensions, or specific encounters |
+| [Autumn Bennett](../characters/family/bennett/autumn-bennett/index.md) and Ruby | Autumn is Ruby's older sister, approximately Morgan's age; Avery's aunt through Ruby | Exact age, sibling type, childhood roles, or specific encounters |
+| [Nathan "Nate" Hayes](../characters/family/hayes/nathan-hayes/index.md), [Adrian Hayes](../characters/family/hayes/adrian-hayes/index.md), and Morgan | Hayes siblings; Nate oldest, Adrian middle, Morgan youngest; Diane is their mother and they share the unnamed father in Morgan's history | Brothers' proposed ages of 41 and 38, detailed childhood responses, present-day tensions, or specific encounters |
 | Nate and Adrian with Rowan and Riley | Uncles through Morgan | Closeness, address forms, caregiving, visits, or legal status |
 
 Morgan and Ruby remain best friends and coparents. Nat's independent friendship
@@ -192,10 +192,10 @@ autistic traits are independent proposals, not a final identity or diagnosis.
 
 | Parent | Established relationship and upbringing |
 |---|---|
-| [Diane Hayes](../characters/diane-hayes/index.md), 58 | Mother of Nate, Adrian, and Morgan; raised Morgan without her father after he left when Morgan was 13 |
-| [Thomas "Tom" Bennett](../characters/thomas-bennett/index.md), 60 | Father of Ruby and Autumn; raised Ruby without her mother after her death when Ruby was 6; also raised Autumn without her mother present |
-| [Richard "Rick" Walker](../characters/richard-walker/index.md), 65 | Ethan's father |
-| [Linda Walker](../characters/linda-walker/index.md), 62 | Ethan's mother |
+| [Diane Hayes](../characters/family/hayes/diane-hayes/index.md), 58 | Mother of Nate, Adrian, and Morgan; raised Morgan without her father after he left when Morgan was 13 |
+| [Thomas "Tom" Bennett](../characters/family/bennett/thomas-bennett/index.md), 60 | Father of Ruby and Autumn; raised Ruby without her mother after her death when Ruby was 6; also raised Autumn without her mother present |
+| [Richard "Rick" Walker](../characters/family/walker/richard-walker/index.md), 65 | Ethan's father |
+| [Linda Walker](../characters/family/walker/linda-walker/index.md), 62 | Ethan's mother |
 
 Rick and Linda are grandparents through Ethan to Rowan, Riley, and Avery.
 Diane is grandmother through Morgan to Rowan and Riley; Tom is grandfather
@@ -237,3 +237,19 @@ family canon. The [revised batch](../stories/arc-01/chapter-001/page-prompts-021
 proposes indirect requests for company, a small correction between the women,
 and an accepted pause. These are DRAFT interactions, not established relationship
 events, jealousy, spouse hierarchy, new duties or a completed reconciliation.
+
+## Cassidy "Cass" Bennett: Approved 2026-11-19
+
+[Cass](../characters/friends/cassidy-bennett/index.md), 40, Australian, lives next door
+to Ethan, Morgan, and Ruby. She is an elementary school teacher and a mother.
+Partner, marital status, children's details, school, and grade remain open.
+
+Cass genuinely likes Ruby, who admires Cass's confidence, independence, and
+social ease but struggles to nurture their friendship because she is overwhelmed.
+They are friendly neighbors, not yet close friends. This connection preserves
+Morgan and Ruby's established friendship. No specific invitation, rejection,
+conversation, shared school, teaching relationship with the Walker children,
+or later friendship outcome is established.
+
+Bennett is confirmed, superseding Collins. No family relationship to Ruby,
+Autumn, Tom, or Avery has been established. Do not infer kinship from surnames.

@@ -68,8 +68,8 @@ Suggested childhood influences remain proposals. Other existing visual draft
 choices are not approved by these parent designs.
 
 Morgan's older brothers were added at the user's request on 2026-11-13:
-[Nathan "Nate" Hayes](../characters/nathan-hayes/index.md), the oldest sibling,
-and [Adrian Hayes](../characters/adrian-hayes/index.md), the middle sibling.
+[Nathan "Nate" Hayes](../characters/family/hayes/nathan-hayes/index.md), the oldest sibling,
+and [Adrian Hayes](../characters/family/hayes/adrian-hayes/index.md), the middle sibling.
 All three are Diane's children and share the unnamed father in Morgan's history.
 The [Hayes family-history proposal](../characters/hayes-family-history.md)
 retains draft opening ages of 41 and 38, distinct childhood responses, and
@@ -144,3 +144,13 @@ See `../stories/index.md`.
 - Chapter length
 - Publication format
 - Narrative point of view
+
+## Confirmed Supporting Neighbor: 2026-11-19
+
+[Cassidy "Cass" Bennett](../characters/friends/cassidy-bennett/index.md), 40, Australian,
+is the Walker family's next-door neighbor, an elementary school teacher, mother,
+and fitness enthusiast. Confident, outspoken, friendly, humorous, occasionally
+impatient. Cass genuinely likes Ruby; Ruby admires her confidence and social
+ease but struggles to nurture friendship because she is overwhelmed. They are
+friendly neighbors, not yet close friends. Bennett establishes no kinship with
+Ruby. Household, height, and specific story encounters remain undecided.

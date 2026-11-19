@@ -1,18 +1,18 @@
 // Character library: every sheet is an outfit; one picker swaps the preview.
 import { api, get, post, put } from "../api.js";
 import { act, errorBox, head, prLink, render, repoImage, section } from "../shared.js";
-import { badge, clear, field, h, label, notice } from "../ui.js";
+import { badge, clear, field, h, label, notice, sheetOptions } from "../ui.js";
 
-function outfitCard(c, publisherReady) {
+function outfitCard(c, publisherReady, categories) {
   const sheets = c.sheets;
   const def = sheets.find((s) => s.isDefault) ?? sheets[0];
   if (!def) {
-    return h("li", { class: "card char-card" }, h("h2", { id: `c-${c.id}` }, c.displayName), notice("warn", h("p", {}, "No sheet image for this character yet. Add one below.")), addSheetForm(c, publisherReady));
+    return h("li", { class: "card char-card" }, h("h2", { id: `c-${c.id}` }, c.displayName), notice("warn", h("p", {}, "No sheet image for this character yet. Add one below.")), addSheetForm(c, publisherReady, categories));
   }
   const img = h("img", { src: repoImage(def.path, 480), alt: `${c.displayName}, ${def.label}`, loading: "lazy", decoding: "async", width: "480", height: "320" });
   const caption = h("figcaption", {}, h("span", { class: "outfit-name" }, def.label), def.isDefault ? badge("approved", "Default") : null);
   const fullLink = h("a", { href: repoImage(def.path), target: "_blank", rel: "noopener", class: "small" }, "Open full size", h("span", { class: "visually-hidden" }, " (opens in a new tab)"));
-  const select = h("select", { id: `outfit-${c.id}` }, ...sheets.map((s) => h("option", { value: s.path, selected: s === def }, `${s.label}${s.isDefault ? " (default)" : ""}`)));
+  const select = h("select", { id: `outfit-${c.id}` }, ...sheetOptions(sheets, def.path, (s) => (s.isDefault ? " (default)" : "")));
   const rename = h("input", { type: "text", maxlength: "80", value: def.label, id: `rename-${c.id}` });
   const renameBtn = h("button", { class: "btn btn-small", type: "button" }, "Save name");
   const show = (path) => {
@@ -20,7 +20,7 @@ function outfitCard(c, publisherReady) {
     if (!s) return;
     img.src = repoImage(s.path, 480);
     img.alt = `${c.displayName}, ${s.label}`;
-    clear(caption).append(h("span", { class: "outfit-name" }, s.label), s.isDefault ? badge("approved", "Default") : "");
+    clear(caption).append(h("span", { class: "outfit-name" }, s.label), s.isDefault ? badge("approved", "Default") : "", s.needsReview ? badge("uncertain", "Needs a category") : "");
     fullLink.href = repoImage(s.path);
     rename.value = s.label;
   };
@@ -39,23 +39,31 @@ function outfitCard(c, publisherReady) {
     "li",
     { class: "card char-card" },
     h("h2", { id: `c-${c.id}` }, c.displayName),
+    c.group ? h("p", { class: "eyebrow" }, c.group) : null,
     h("figure", { class: "outfit-preview" }, img, caption),
     fullLink,
     field({ id: `outfit-${c.id}`, label: `Outfit (${sheets.length})`, input: select }),
     h("div", { class: "inline-form" }, field({ id: `rename-${c.id}`, label: "Name this outfit", input: rename, hint: "Shown in pickers. Saved in the studio, not the repository." }), renameBtn),
-    addSheetForm(c, publisherReady),
+    addSheetForm(c, publisherReady, categories),
   );
 }
 
-function addSheetForm(c, publisherReady) {
+function addSheetForm(c, publisherReady, categories) {
   const file = h("input", { type: "file", name: "file", accept: "image/png,image/jpeg,image/webp", required: true });
   const name = h("input", { type: "text", name: "label", required: true, minlength: "2", maxlength: "80" });
+  const category = h("select", { name: "category", required: true }, ...categories.map((k) => h("option", { value: k }, k.charAt(0).toUpperCase() + k.slice(1))));
   const result = h("div", { "aria-live": "polite" });
   const btn = h("button", { class: "btn btn-small", type: "submit", disabled: !publisherReady }, "Open pull request");
   const form = h(
     "form",
     {},
-    h("div", { class: "form-grid" }, field({ id: `sheet-file-${c.id}`, label: "Sheet image (under 4 MB)", input: file }), field({ id: `sheet-name-${c.id}`, label: "Outfit name", input: name, hint: "For example: Winter coat" })),
+    h(
+      "div",
+      { class: "form-grid" },
+      field({ id: `sheet-file-${c.id}`, label: "Sheet image (under 4 MB)", input: file }),
+      field({ id: `sheet-name-${c.id}`, label: "Outfit name", input: name, hint: "For example: Winter coat" }),
+      field({ id: `sheet-cat-${c.id}`, label: "Category", input: category }),
+    ),
     btn,
     result,
   );
@@ -67,18 +75,26 @@ function addSheetForm(c, publisherReady) {
   return h("details", { class: "add-sheet" }, h("summary", {}, "Add an outfit sheet"), form);
 }
 
-function newCharacterForm(publisherReady) {
+function newCharacterForm(publisherReady, groups) {
   const name = h("input", { type: "text", name: "displayName", required: true, minlength: "2", maxlength: "80" });
+  const group = h("select", { name: "group", required: true }, ...(groups.length ? groups : [{ key: "main", label: "Main Cast" }, { key: "friends", label: "Friends" }]).map((g) => h("option", { value: g.key }, g.label)));
   const role = h("textarea", { name: "role", rows: "2", maxlength: "400" });
-  const file = h("input", { type: "file", name: "file", accept: "image/png,image/jpeg,image/webp" });
+  const file = h("input", { type: "file", name: "file", accept: "image/png,image/jpeg,image/webp", required: true });
   const result = h("div", { "aria-live": "polite" });
   const btn = h("button", { class: "btn", type: "submit", disabled: !publisherReady }, "Open pull request");
   const form = h(
     "form",
     { class: "panel form-card", id: "new-character" },
     h("h2", {}, "Add a character"),
-    h("p", { class: "small muted" }, "Creates characters/<name>/ from the character template in a pull request. They appear here once you merge it."),
-    h("div", { class: "form-grid" }, field({ id: "nc-name", label: "Name", input: name }), field({ id: "nc-role", label: "Role in the story", input: role }), field({ id: "nc-file", label: "First sheet (optional, under 4 MB)", input: file })),
+    h("p", { class: "small muted" }, "Creates the character's folder in their cast group from the character template, with their main reference sheet, in a pull request. They appear here once you merge it."),
+    h(
+      "div",
+      { class: "form-grid" },
+      field({ id: "nc-name", label: "Name", input: name }),
+      field({ id: "nc-group", label: "Cast group", input: group }),
+      field({ id: "nc-file", label: "Main reference sheet (under 4 MB)", input: file }),
+      field({ id: "nc-role", label: "Role in the story", input: role }),
+    ),
     btn,
     result,
   );
@@ -147,14 +163,26 @@ function uploadsSection(characters, chapters, uploads) {
   return h("details", { class: "panel-details" }, h("summary", {}, `Extra reference images (${uploads.length})`), form, table);
 }
 
+/** Characters grouped like the cast folders (Main Cast, each family, Friends). */
+function castSections(characters, groups, card) {
+  const labels = [...groups.map((g) => g.label), ...new Set(characters.map((c) => c.group).filter((g) => g && !groups.some((x) => x.label === g)))];
+  const sections = labels
+    .map((label) => [label, characters.filter((c) => c.group === label)])
+    .filter(([, list]) => list.length)
+    .map(([label, list], i) => section(label, `cast-${i}`, h("ul", { class: "char-grid", "aria-label": label }, ...list.map(card))));
+  const rest = characters.filter((c) => !c.group || !labels.includes(c.group));
+  if (rest.length) sections.push(section(sections.length ? "Other characters" : "Cast", "cast-rest", h("ul", { class: "char-grid", "aria-label": "Characters" }, ...rest.map(card))));
+  return sections;
+}
+
 export async function charactersView() {
-  const [{ characters, uploads, publisherReady }, { chapters }] = await Promise.all([get("/characters"), get("/chapters")]);
+  const [{ characters, uploads, publisherReady, groups = [], categories = [] }, { chapters }] = await Promise.all([get("/characters"), get("/chapters")]);
   render(
     head("Characters", "Every sheet under characters/ counts as an outfit. Pick one to preview it. The default is used unless you choose another outfit for a page."),
     errorBox(),
     !publisherReady ? notice("warn", h("p", {}, "Adding characters or sheets needs GITHUB_TOKEN on the server.")) : null,
-    h("ul", { class: "char-grid", "aria-label": "Characters" }, ...characters.map((c) => outfitCard(c, publisherReady))),
-    newCharacterForm(publisherReady),
+    ...castSections(characters, groups, (c) => outfitCard(c, publisherReady, categories)),
+    newCharacterForm(publisherReady, groups),
     section("Extra references", "uploads-title", uploadsSection(characters, chapters, uploads)),
   );
 }

@@ -33,27 +33,28 @@ describe("outfit picks and prompt edits", () => {
   it("attaches the outfit chosen for a character instead of the prompt's sheet, for that run only", async () => {
     const page = await call("GET", "/chapters/001/pages/23");
     const ethan = page.data.cast.find((c: { characterId: string }) => c.characterId === "ethan-walker");
-    expect(ethan.promptSheet).toBe("characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png");
-    const suit = "characters/ethan-walker/references/ethan-walker-reference-sheet-v5.png";
+    // The prompt names the family copy walker-ethan.png, which is his main reference.
+    expect(ethan.promptSheet).toBe("characters/main/ethan-walker/references/ethan-walker-reference-main.png");
+    const suit = "characters/main/ethan-walker/outfits/ethan-walker-formal-wedding-suit.png";
     const plan = await call("POST", "/chapters/001/pages/23/plan", { options: { sheets: { "ethan-walker": suit } } });
     expect(plan.status).toBe(200);
     expect(plan.data.blockers).toEqual([]);
     const refs = plan.data.references as { path: string; label: string; characterId?: string }[];
     expect(refs.find((r) => r.characterId === "ethan-walker")).toMatchObject({ path: suit });
-    expect(refs.find((r) => r.characterId === "ethan-walker")!.label).toMatch(/Wedding suit \(v5\).*chosen for this run/);
+    expect(refs.find((r) => r.characterId === "ethan-walker")!.label).toMatch(/Wedding suit \(ethan-walker-formal-wedding-suit\.png, chosen for this run\)/);
 
     const res = await call("POST", "/chapters/001/pages/23/regenerate", { confirmPaid: true, options: { sheets: { "ethan-walker": suit } } });
     expect(res.status).toBe(202);
     await drain(h);
     expect(h.images.calls).toHaveLength(1);
-    expect(h.images.calls[0]!.images.some((i) => i.label.includes("Wedding suit (v5)"))).toBe(true);
+    expect(h.images.calls[0]!.images.some((i) => i.label.includes("Wedding suit"))).toBe(true);
     // The next plan without options goes back to the prompt's own sheet.
     const again = await call("POST", "/chapters/001/pages/23/plan", {});
     expect(again.data.references.find((r: { characterId?: string }) => r.characterId === "ethan-walker").path).not.toBe(suit);
   });
 
   it("refuses a sheet that belongs to someone else", async () => {
-    const plan = await call("POST", "/chapters/001/pages/23/plan", { options: { sheets: { "ethan-walker": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v7.png" } } });
+    const plan = await call("POST", "/chapters/001/pages/23/plan", { options: { sheets: { "ethan-walker": "characters/main/morgan-hayes/outfits/morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png" } } });
     expect(plan.data.warnings.join(" ")).toMatch(/not one of theirs/);
     expect(plan.data.references.find((r: { characterId?: string }) => r.characterId === "ethan-walker").path).not.toMatch(/morgan/);
   });
@@ -152,25 +153,41 @@ describe("spending and performance", () => {
 });
 
 describe("creating story and characters through pull requests", () => {
-  it("adds a character from the template with a first sheet", async () => {
-    const res = await form("/create/character", { displayName: "June Carter", role: "Ruby's coworker" }, { data: await fakePage("sheet", 1536, 1024), name: "s.png", type: "image/png" });
+  it("adds a character to a cast group with a main sheet, registered in the asset manifest", async () => {
+    const res = await form("/create/character", { displayName: "June Carter", group: "friends", role: "Ruby's coworker" }, { data: await fakePage("sheet", 1536, 1024), name: "s.png", type: "image/png" });
     expect(res.status).toBe(201);
     const pr = h.publisher.requests.at(-1)!;
-    expect(pr.files.map((f) => f.path).sort()).toEqual(["characters/june-carter/index.md", "characters/june-carter/references/index.md", "characters/june-carter/references/june-carter-reference-sheet-v1.png"]);
-    expect(pr.files[0]!.content.toString()).toMatch(/^# June Carter/);
+    expect(pr.files.map((f) => f.path).sort()).toEqual([
+      "characters/asset-manifest.json",
+      "characters/friends/june-carter/index.md",
+      "characters/friends/june-carter/outfits/index.md",
+      "characters/friends/june-carter/references/index.md",
+      "characters/friends/june-carter/references/june-carter-reference-main.png",
+    ]);
+    expect(pr.files.find((f) => f.path.endsWith("june-carter/index.md"))!.content.toString()).toMatch(/^# June Carter/);
+    const m = JSON.parse(pr.files.find((f) => f.path === "characters/asset-manifest.json")!.content.toString());
+    const asset = m.assets.find((a: { characterId: string }) => a.characterId === "june-carter");
+    expect(asset).toMatchObject({ role: "main", category: "casual", review: null, dimensions: [1536, 1024], characterPath: "characters/friends/june-carter" });
+    expect(asset.originalPath).toMatch(/^studio-upload:/);
+    expect(m.characterGroups.friends.characterIds).toContain("june-carter");
   });
 
-  it("refuses a character that already exists", async () => {
-    const res = await call("POST", "/create/character", { displayName: "Ethan Walker" });
-    expect(res.status).toBe(409);
+  it("refuses a character that already exists or has no main sheet", async () => {
+    const sheet = { data: await fakePage("sheet", 1536, 1024), name: "s.png", type: "image/png" };
+    expect((await form("/create/character", { displayName: "Ethan Walker", group: "main" }, sheet)).status).toBe(409);
+    expect((await form("/create/character", { displayName: "No Sheet", group: "friends" })).status).toBe(400);
   });
 
-  it("adds an outfit sheet as the next version and names it", async () => {
-    const res = await form("/characters/ethan-walker/sheets", { label: "Winter coat" }, { data: await fakePage("coat", 1536, 1024), name: "c.png", type: "image/png" });
+  it("adds an outfit sheet in its category, listed in the outfit library and the manifest", async () => {
+    const res = await form("/characters/ethan-walker/sheets", { label: "Winter coat", category: "outerwear" }, { data: await fakePage("coat", 1536, 1024), name: "c.png", type: "image/png" });
     expect(res.status).toBe(201);
-    expect(res.data.file).toBe("ethan-walker-reference-sheet-v9.png");
-    const index = h.publisher.requests.at(-1)!.files.find((f) => f.path.endsWith("references/index.md"))!.content.toString();
-    expect(index).toMatch(/\[Winter coat v9\]\(ethan-walker-reference-sheet-v9\.png\)/);
+    expect(res.data.path).toBe("characters/main/ethan-walker/outfits/ethan-walker-outerwear-winter-coat.png");
+    const pr = h.publisher.requests.at(-1)!;
+    const index = pr.files.find((f) => f.path === "characters/main/ethan-walker/outfits/index.md")!.content.toString();
+    expect(index).toMatch(/\| outerwear \| \[ethan-walker-outerwear-winter-coat\]\(ethan-walker-outerwear-winter-coat\.png\) \|/);
+    const m = JSON.parse(pr.files.find((f) => f.path === "characters/asset-manifest.json")!.content.toString());
+    expect(m.assets.find((a: { path: string }) => a.path === res.data.path)).toMatchObject({ role: "outfit", category: "outerwear", characterId: "ethan-walker" });
+    expect((await form("/characters/ethan-walker/sheets", { label: "Coat", category: "nonsense" }, { data: await fakePage("coat", 1536, 1024), name: "c.png", type: "image/png" })).status).toBe(400);
   });
 
   it("adds an arc and a chapter, registering the chapter in the studio config", async () => {
@@ -189,7 +206,7 @@ describe("creating story and characters through pull requests", () => {
   });
 
   it("names an outfit in the studio without touching the repository", async () => {
-    const path = "characters/ethan-walker/references/ethan-walker-reference-sheet-v3.png";
+    const path = "characters/main/ethan-walker/outfits/ethan-walker-formal-wedding-suit.png";
     expect((await call("PUT", "/sheets/label", { path, label: "Gym" })).status).toBe(200);
     const chars = await call("GET", "/characters");
     const ethan = chars.data.characters.find((c: { id: string }) => c.id === "ethan-walker");

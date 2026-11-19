@@ -115,3 +115,11 @@ Do not infer the in-universe date of a name change from that record date.
 Track in-universe chronology. Separate memories and imagined scenes from
 established events. Do not infer relationship dates from birth order, age
 calculations, or the date a production decision was recorded.
+
+## Cass Starting State: Recorded 2026-11-19
+
+Cassidy "Cass" Bennett is 40 at the opening and lives next door to the Walker
+family. She and Ruby are friendly neighbors with unrealized friendship potential.
+Move-in date, immigration timeline, children's birthdays, and individual
+invitations remain unestablished. This record date is not an in-universe date.
+See [relationship canon](relationships.md#cassidy-cass-bennett-approved-2026-11-19).

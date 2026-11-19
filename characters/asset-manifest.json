@@ -1,0 +1,1530 @@
+{
+  "schemaVersion": 1,
+  "organizedOn": "2026-11-19",
+  "categories": [
+    "casual",
+    "sleepwear",
+    "swimwear",
+    "activewear",
+    "formal",
+    "workwear",
+    "outerwear",
+    "seasonal",
+    "lingerie"
+  ],
+  "revisionPolicy": "Use -v2, -v3 only for documented revisions of the SAME named outfit or main sheet. Different garments get different descriptors. Unverified lineage stays in _review; all images retain existing approval status.",
+  "assets": [
+    {
+      "path": "characters/family/hayes/adrian-hayes/references/adrian-hayes-reference-main.png",
+      "sha256": "c4fb87aca49a6d73b980614b8d55bed4606c2929d0498c347773ce2dd85d7d6e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2364801,
+      "originalPath": "characters/adrian-hayes/references/adrian-hayes-reference-character-sheet-v1.png",
+      "characterId": "adrian-hayes",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/hayes/adrian-hayes"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/references/autumn-bennett-reference-main.png",
+      "sha256": "a0123f0e0ad2d26943d3b81e8a170391384aa84c652102685091cef98103bf25",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2576616,
+      "originalPath": "characters/autumn-bennett/references/autumn-bennett-reference-sheet-v1.png",
+      "characterId": "autumn-bennett",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-sleepwear-cardigan-plaid-shorts.png",
+      "sha256": "fdc0a2e8e197a848c56403032b242909fe7a2127123a3eb347ad0a75eee6e1b1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2342613,
+      "originalPath": "characters/autumn-bennett/references/autumn-bennett-reference-sheet-v2.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-swimwear-patterned-one-piece.png",
+      "sha256": "144acd3cfda231db7e2c256338c3757dc687918874e17c9683d7817513a801cf",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2214425,
+      "originalPath": "characters/autumn-bennett/references/autumn-bennett-reference-sheet-v3.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "swimwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-casual-black-blouse-brown-trousers.png",
+      "sha256": "79673f8f7943e1385a67d44f1c4de4df1a25a70864f6f47ea59d457b81d6825e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2757549,
+      "originalPath": "characters/autumn-bennett/references/image copy 2.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-casual-cream-top-brown-ruffle-skirt.png",
+      "sha256": "94f9f3b981b3f3ac4f56f1245d31f42abf419420496325a7b5c3632a0e2fd142",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2378833,
+      "originalPath": "characters/autumn-bennett/references/image copy 3.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-casual-gray-knit-top-brown-shorts.png",
+      "sha256": "d5376f2e5b65f5f54bcc35e4a7e04eb39953c658723e01cbf75f70423fe50dfb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2550431,
+      "originalPath": "characters/autumn-bennett/references/image copy 4.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-casual-striped-top-denim-skirt.png",
+      "sha256": "f1b8861947a054dcc81e6898fc2339f80a3f8310b589ea59901ed2678df58ffa",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2584841,
+      "originalPath": "characters/autumn-bennett/references/image copy 5.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/_review/autumn-bennett-review-blue-printed-bra-shorts.png",
+      "sha256": "cec108882898b99f6f6ac60133384a9511c50bdcb0d55a2751511f7511b7c43d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2434589,
+      "originalPath": "characters/autumn-bennett/references/image copy 6.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": null,
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": "Bra/shorts set is visible, but intended activewear, sleepwear, or lingerie use is not established. Category awaits user selection.",
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-sleepwear-pink-graphic-hoodie-briefs.png",
+      "sha256": "3abec3188cf19087f273e3b8356762c4e3be8165e333ccca6dacb620a22c83dc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2534750,
+      "originalPath": "characters/autumn-bennett/references/image copy 7.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-casual-gray-tee-white-shorts.png",
+      "sha256": "fff2a7c5238c6b1d95b583220db0a467183baf58eb1b42c8b43e0ddb3d73f1a2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2638414,
+      "originalPath": "characters/autumn-bennett/references/image copy.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-sleepwear-blue-white-graphic-top-shorts.png",
+      "sha256": "9134f3f4d4107c5336454e254af3c6099ef12fed827b021f784e0671731cf67a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2394002,
+      "originalPath": "characters/autumn-bennett/references/image.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/main/avery-bennett-walker/references/avery-bennett-walker-reference-main.png",
+      "sha256": "e1e80eae2679d84dae0400bae4c3a6a3454ce75eca13dbced2fba3bbaabcf835",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 3118018,
+      "originalPath": "characters/avery-bennett-walker/references/avery-bennett-walker-reference-sheet-v1.png",
+      "characterId": "avery-bennett-walker",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/avery-bennett-walker"
+    },
+    {
+      "path": "characters/friends/caleb-mercer/references/caleb-mercer-reference-main.png",
+      "sha256": "92d81339e01cbc30889c50cfe382adee04e42746f0b0e62d752d905eaa131404",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2332190,
+      "originalPath": "characters/caleb-mercer/references/caleb-mercer-reference-sheet-v1.png",
+      "characterId": "caleb-mercer",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/caleb-mercer"
+    },
+    {
+      "path": "characters/friends/caleb-mercer/outfits/caleb-mercer-outerwear-motorcycle-leather-jacket.png",
+      "sha256": "d42a74c043987c47017ddd5a118c9fdbd9daac18ccde6d01f0559c7c18c2d79e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2852421,
+      "originalPath": "characters/caleb-mercer/references/caleb-mercer-reference-sheet-v2.png",
+      "characterId": "caleb-mercer",
+      "role": "outfit",
+      "category": "outerwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/caleb-mercer"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-swimwear-black-red-bikini.png",
+      "sha256": "f10bc738ea687979acf5afcfaee55dca392cd4ca1c0934296412d436b2ad964a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2453164,
+      "originalPath": "characters/cassidy-bennett/references/image copy 10.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "swimwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-sleepwear-pink-graphic-tee-pants.png",
+      "sha256": "39278b88874346368ce50011cfde81ce17df2f0ffdf873810bd2ca3bdf0cf427",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2631175,
+      "originalPath": "characters/cassidy-bennett/references/image copy 2.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-activewear-gray-romper.png",
+      "sha256": "5b3fbe016f113a799853e7bce45b9fb388a0d91607828d682ba56af8af5312e7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2498369,
+      "originalPath": "characters/cassidy-bennett/references/image copy 3.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "activewear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-activewear-olive-top-shorts.png",
+      "sha256": "b9010178c9e229adf69f655b2d635610d6417fe37c79002429798a7c5825299f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2570310,
+      "originalPath": "characters/cassidy-bennett/references/image copy 4.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "activewear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-lingerie-gray-bra-briefs.png",
+      "sha256": "f08c6d3d44bde2e825cebb585a386b109a0576665e0be66ffc45e2e91270a2b4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2454476,
+      "originalPath": "characters/cassidy-bennett/references/image copy 5.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "lingerie",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-casual-white-top-gray-sweatpants.png",
+      "sha256": "557c54df952ec7785457ba0841a14674bc29c2f4c21ee27132e821d26cd15e2e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2730387,
+      "originalPath": "characters/cassidy-bennett/references/image copy 6.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/_review/cassidy-bennett-review-blue-red-printed-bra-shorts.png",
+      "sha256": "e8d38621a1cbd7922c48a5f03165ad5de49f26daffea19bf5b5e0af8236b8a2c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2621113,
+      "originalPath": "characters/cassidy-bennett/references/image copy 7.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": null,
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": "Bra/shorts set is visible, but intended activewear, sleepwear, or lingerie use is not established. Category awaits user selection.",
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-formal-black-off-shoulder-dress.png",
+      "sha256": "e8d67bec81762d1debe5533d9ca2611908112ef6fefdc821153b9d41677128f4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2416248,
+      "originalPath": "characters/cassidy-bennett/references/image copy 8.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "formal",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/references/cassidy-bennett-reference-main.png",
+      "sha256": "84384defc30ebbc42c3aebe439337c0828d508abf45c798712e4f4e9ba565db9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2508627,
+      "originalPath": "characters/cassidy-bennett/references/image copy 9.png",
+      "characterId": "cassidy-bennett",
+      "role": "main",
+      "category": "casual",
+      "evidence": "User selected white-top/red-shorts sheet as main on 2026-11-19; matches documented foundational outfit. No master-art approval inferred.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-sleepwear-blue-graphic-top-shorts.png",
+      "sha256": "55fc27035bb2b8f3d55a1f5536d99d6be0f6270cfc53c249b0b494ed9623b724",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2716868,
+      "originalPath": "characters/cassidy-bennett/references/image copy.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-sleepwear-yellow-graphic-hoodie-briefs.png",
+      "sha256": "02f41eac7b2f026d1b58631b0ed09d1c88fac110c64d51f8ea7d80961c3989fc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2603849,
+      "originalPath": "characters/cassidy-bennett/references/image.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/family/hayes/diane-hayes/references/diane-hayes-reference-main.png",
+      "sha256": "9535cfd3faf0be1c0e0acfb74f82cc53ece8bb54f2a5c1b089da78d2630940ad",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2589752,
+      "originalPath": "characters/diane-hayes/references/diane-hayes-reference-sheet-v1.png",
+      "characterId": "diane-hayes",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/hayes/diane-hayes"
+    },
+    {
+      "path": "characters/friends/ellie-greene/references/ellie-greene-reference-main.png",
+      "sha256": "b8fadedf90834b88d7be6ecbb21bb5e08eb8ec6d46ab2bce04ee8fd4cddc8e1b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2324349,
+      "originalPath": "characters/ellie-greene/references/ellie-greene-reference-sheet-v1.png",
+      "characterId": "ellie-greene",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/ellie-greene"
+    },
+    {
+      "path": "characters/main/ethan-walker/references/ethan-walker-reference-main.png",
+      "sha256": "11b74a7ab0da0b32937b51993bbcd81149b7b75faac8ccbc6bea9eb48280c6cc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2789230,
+      "originalPath": "characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png",
+      "characterId": "ethan-walker",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ethan-walker"
+    },
+    {
+      "path": "characters/main/ethan-walker/outfits/ethan-walker-lingerie-black-boxer-briefs.png",
+      "sha256": "5718a7bd0d9134daad39490c19b890287917486cab24932b7ec602e7e034394f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2379997,
+      "originalPath": "characters/ethan-walker/references/ethan-walker-reference-sheet-v2.png",
+      "characterId": "ethan-walker",
+      "role": "outfit",
+      "category": "lingerie",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ethan-walker"
+    },
+    {
+      "path": "characters/main/ethan-walker/outfits/ethan-walker-activewear-black-tank-gray-joggers.png",
+      "sha256": "58cc1a4fb7cfadc2fad01af17df081416b28384212213f15c4690a27db5358b1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2332621,
+      "originalPath": "characters/ethan-walker/references/ethan-walker-reference-sheet-v3.png",
+      "characterId": "ethan-walker",
+      "role": "outfit",
+      "category": "activewear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ethan-walker"
+    },
+    {
+      "path": "characters/main/ethan-walker/outfits/ethan-walker-casual-black-henley.png",
+      "sha256": "073b7249abe7058c8daa0f64a52d3ce76b8134de7d68bd0754dbbe0d054dcdee",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2193416,
+      "originalPath": "characters/ethan-walker/references/ethan-walker-reference-sheet-v4.png",
+      "characterId": "ethan-walker",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ethan-walker"
+    },
+    {
+      "path": "characters/main/ethan-walker/outfits/ethan-walker-formal-wedding-suit.png",
+      "sha256": "82ae06efc4cf90ebf0983964851b1823cfe46ea0f838efca80b0538d4c7f70b2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2071995,
+      "originalPath": "characters/ethan-walker/references/ethan-walker-reference-sheet-v5.png",
+      "characterId": "ethan-walker",
+      "role": "outfit",
+      "category": "formal",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ethan-walker"
+    },
+    {
+      "path": "characters/main/ethan-walker/outfits/ethan-walker-swimwear-striped-board-shorts.png",
+      "sha256": "2a468f86a943053772708687b7b9d8eafdf829be4c1f55bf400dc5d7ef430036",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2369891,
+      "originalPath": "characters/ethan-walker/references/ethan-walker-reference-sheet-v6.png",
+      "characterId": "ethan-walker",
+      "role": "outfit",
+      "category": "swimwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ethan-walker"
+    },
+    {
+      "path": "characters/main/ethan-walker/outfits/ethan-walker-workwear-firefighter-gear.png",
+      "sha256": "d2e8dca0f237c72569cc247e62102b2c653ad3709bd410c5d6c5f986d8efbe6e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2920774,
+      "originalPath": "characters/ethan-walker/references/ethan-walker-reference-sheet-v7.png",
+      "characterId": "ethan-walker",
+      "role": "outfit",
+      "category": "workwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ethan-walker"
+    },
+    {
+      "path": "characters/main/ethan-walker/outfits/ethan-walker-outerwear-motorcycle-vest-hoodie.png",
+      "sha256": "b9ec2230039740c301c4ea4ad0d3f005638da45ea77a1ad9245ed07117a1b544",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2610556,
+      "originalPath": "characters/ethan-walker/references/ethan-walker-reference-sheet-v8.png",
+      "characterId": "ethan-walker",
+      "role": "outfit",
+      "category": "outerwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ethan-walker"
+    },
+    {
+      "path": "characters/family/walker/linda-walker/references/linda-walker-reference-main.png",
+      "sha256": "f29b7adf403c18f9049c4c4a25b2d2900d4231b6e40a79739d238fbb2b0c544d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2499463,
+      "originalPath": "characters/linda-walker/references/linda-walker-reference-sheet-v1.png",
+      "characterId": "linda-walker",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/walker/linda-walker"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-sleepwear-black-graphic-tank-pants.png",
+      "sha256": "7014e4b0666501170d508518113db7ac158c886e5058d76db4a84d03f3b714c7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2593601,
+      "originalPath": "characters/morgan-hayes/references/image copy 2.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-formal-brown-blouse-black-trousers.png",
+      "sha256": "11e019b45cca70d8e034d07aaf7cee72a8d349d4d332e55757c684d3f79d76a0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2307781,
+      "originalPath": "characters/morgan-hayes/references/image copy 3.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "formal",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/_review/morgan-hayes-review-plaid-bra-shorts.png",
+      "sha256": "3ec7bdfd51cadd71bc19382a3b7d033dfff4b98720549b1c13bbf0c8a26119fd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2604131,
+      "originalPath": "characters/morgan-hayes/references/image copy 4.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": null,
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": "Bra/shorts set is visible, but intended activewear, sleepwear, or lingerie use is not established. Category awaits user selection.",
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-sleepwear-purple-graphic-hoodie-briefs.png",
+      "sha256": "feefbb8f32db2944f14d281363ad63e07983ba3178de638ddeb4377829f45592",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2562903,
+      "originalPath": "characters/morgan-hayes/references/image copy 5.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-sleepwear-black-graphic-top-shorts.png",
+      "sha256": "e54273a9a1e63818bd3bb0bfe43516c5eaa5e135fb0a0dd92cee9c2886321cf5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2360305,
+      "originalPath": "characters/morgan-hayes/references/image copy.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-workwear-gray-shirt-trousers.png",
+      "sha256": "99b9b54a9b46365428d68640543dc6c8314b2a7fbd15a758ad96f215c65fbabe",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2676687,
+      "originalPath": "characters/morgan-hayes/references/image.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "workwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/references/morgan-hayes-reference-main.png",
+      "sha256": "7aac989c9de5a6aece98b94e443c804722c1d3e635c440a1500331d51555ca67",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 3132390,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png",
+      "characterId": "morgan-hayes",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/_review/morgan-hayes-review-black-top-olive-shorts-study-b.png",
+      "sha256": "4dfad784a85d1788a49712a9ee22f1ed76973172feaa961af7ea45e6f2f12b4b",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2493832,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v10.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": null,
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": "Same visible outfit as study-a, but different bytes. Revision order and intended sleepwear/activewear use are unverified; neither supersedes the other.",
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/_review/morgan-hayes-review-black-bra-olive-shorts.png",
+      "sha256": "9cdcc4e0b3f52cf619d3eed32d8919e14cbbc699c9f19fc2621757a95237c55f",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2323156,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v11.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": null,
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": "Bra/shorts set is visible, but intended activewear, sleepwear, or lingerie use is not established. Category awaits user selection.",
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-lingerie-black-vest-bodysuit.png",
+      "sha256": "687d3b80cc92f0216bc3278706fbda79a447f4a987a06cf057b65db68bc1aa42",
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "size": 2655482,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v12.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "lingerie",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-lingerie-black-lace-corset.png",
+      "sha256": "14544e0fa4ea4bde54705be49499ac72ed88e85c55d7415c29e9c9522daa382b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2412491,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v2.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "lingerie",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-sleepwear-burgundy-camisole-shorts.png",
+      "sha256": "09c0bb3bbbdcb7a4781c82a7d69a98f125c7ebc834d9b621c1611561d21b919d",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "size": 2149281,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v3.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-sleepwear-black-camisole-shorts.png",
+      "sha256": "a3e2940dd5a4f8d7ddca32850f522e71ddf87141aa8e26c6492a99cdae15d53f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2091810,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v4.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-casual-black-top-gray-joggers.png",
+      "sha256": "6c805777ca52ea11f34acd76cfb98d3d1c28aa72eb684d4f9c9901b46906ea63",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2419512,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v5.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-casual-western-hat-maxi-skirt.png",
+      "sha256": "eac8e09ba77a0859429558e777b841edcc49a7c2c39fc0ed8a9367dfc782335f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2419051,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v6.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png",
+      "sha256": "911c281285ec0aa50caa42a72269f6784db87343512c3aa5546b115b3548ff1d",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "size": 2682809,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v7.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "formal",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-swimwear-black-long-sleeve-one-piece.png",
+      "sha256": "730d91d7de2046347370d0fef6116d4763e952c7106a290abce8355c533d6f1c",
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "size": 2075166,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v8.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "swimwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/_review/morgan-hayes-review-black-top-olive-shorts-study-a.png",
+      "sha256": "fa8a33cf753c4dfd8c35d6878dc537d90b4c77483cc0e9e3328ba8739df34683",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2422700,
+      "originalPath": "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v9.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": null,
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": "Same visible outfit as study-b, but different bytes. Revision order and intended sleepwear/activewear use are unverified; neither supersedes the other.",
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/friends/natalie-greene/outfits/natalie-greene-casual-cream-blouse-brown-skirt.png",
+      "sha256": "56f987d419bf548f3eba3134c3e2ce196de06204c5c710d7eb1ce0a16f6fd983",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2355693,
+      "originalPath": "characters/natalie-greene/references/image copy 2.png",
+      "characterId": "natalie-greene",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/friends/natalie-greene/outfits/_review/natalie-greene-review-green-printed-bra-shorts.png",
+      "sha256": "7d86834b0f6c299e669ce0ee34d1500edc7fff6098dc41a62631ca98417324e7",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2239595,
+      "originalPath": "characters/natalie-greene/references/image copy 3.png",
+      "characterId": "natalie-greene",
+      "role": "outfit",
+      "category": null,
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": "Bra/shorts set is visible, but intended activewear, sleepwear, or lingerie use is not established. Category awaits user selection.",
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/friends/natalie-greene/outfits/natalie-greene-sleepwear-yellow-graphic-hoodie-briefs.png",
+      "sha256": "11a76e833c274049e7774b122c98c9ca2901851c8d31a6b39a9436d5462271bd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2250463,
+      "originalPath": "characters/natalie-greene/references/image copy 4.png",
+      "characterId": "natalie-greene",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/friends/natalie-greene/outfits/natalie-greene-workwear-overalls-tank.png",
+      "sha256": "322116ac647050ee5b2d8cf13b52fcd68fbeb2c0c2c2d9ec0ce02a782fcbb24f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2480512,
+      "originalPath": "characters/natalie-greene/references/image copy.png",
+      "characterId": "natalie-greene",
+      "role": "outfit",
+      "category": "workwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/friends/natalie-greene/outfits/natalie-greene-workwear-overalls-straw-hat.png",
+      "sha256": "9e57d775c62537a0cab139410bb3524f200727b11b9a3b0750637aaed7776397",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2626290,
+      "originalPath": "characters/natalie-greene/references/image.png",
+      "characterId": "natalie-greene",
+      "role": "outfit",
+      "category": "workwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/friends/natalie-greene/references/natalie-greene-reference-main.png",
+      "sha256": "aa3f5291d5271a85f045cfa99e49bf770ca19d4c3edf5d84a55e99b20d693c08",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2171263,
+      "originalPath": "characters/natalie-greene/references/natalie-greene-reference-sheet-v1.png",
+      "characterId": "natalie-greene",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/friends/natalie-greene/outfits/natalie-greene-sleepwear-patterned-hooded-onesie.png",
+      "sha256": "435095841488cf3233fffd36f72b787ece997768329e2fe0e437064f67292a53",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2538166,
+      "originalPath": "characters/natalie-greene/references/natalie-greene-reference-sheet-v2.png",
+      "characterId": "natalie-greene",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/friends/natalie-greene/outfits/natalie-greene-swimwear-olive-two-piece-straw-hat.png",
+      "sha256": "0d8a0499e5c014c465933404f60cbe4c5178d7a474a0f07bcd612c6f1333372d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 1983792,
+      "originalPath": "characters/natalie-greene/references/natalie-greene-reference-sheet-v3.png",
+      "characterId": "natalie-greene",
+      "role": "outfit",
+      "category": "swimwear",
+      "evidence": "Garments visually inspected; category describes this asset, not character canon or occupation.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/family/hayes/nathan-hayes/references/nathan-hayes-reference-main.png",
+      "sha256": "4198380857bdfb948e4aa3bbbd8b519c34dda366c3387ee3c5fb08c4e31a2bd4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2387009,
+      "originalPath": "characters/nathan-hayes/references/nathan-hayes-reference-character-sheet-v1.png",
+      "characterId": "nathan-hayes",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/hayes/nathan-hayes"
+    },
+    {
+      "path": "characters/friends/owen-greene/references/owen-greene-reference-main.png",
+      "sha256": "d660adb8e113db7fb523b0532da35017fa6fe8dd8f9799f20650978a1665f3de",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2080729,
+      "originalPath": "characters/owen-greene/references/owen-greene-reference-sheet-v1.png",
+      "characterId": "owen-greene",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/owen-greene"
+    },
+    {
+      "path": "characters/family/walker/richard-walker/references/richard-walker-reference-main.png",
+      "sha256": "d3287865a383abd92f0cfb8b826b28f1f94753a2f8e4e468bb5bcc53e26347bb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2405113,
+      "originalPath": "characters/richard-walker/references/richard-walker-reference-character-sheet-v1.png",
+      "characterId": "richard-walker",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/walker/richard-walker"
+    },
+    {
+      "path": "characters/main/riley-hayes-walker/references/riley-hayes-walker-reference-main.png",
+      "sha256": "3cc82751888570122c5aeff5bbd49ca9495b4686a919fe727b2e614e668396a8",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2998270,
+      "originalPath": "characters/riley-hayes-walker/references/riley-hayes-walker-reference-sheet-v1.png",
+      "characterId": "riley-hayes-walker",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/riley-hayes-walker"
+    },
+    {
+      "path": "characters/main/rowan-hayes-walker/references/rowan-hayes-walker-reference-main.png",
+      "sha256": "f8a78b21dd54e484d719dbf44b1cb7bfa595f06b19962bc55391f2b8c8a76f16",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2997735,
+      "originalPath": "characters/rowan-hayes-walker/references/rowan-hayes-walker-reference-sheet-v1.png",
+      "characterId": "rowan-hayes-walker",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/rowan-hayes-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-activewear-hoodie-yoga-pants.png",
+      "sha256": "ed345618d1dfc4b5b4acb4140fcad7849925dba1d5403c0469b0063dfc66eab6",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2067204,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-activewear-hoodie-yoga-pants.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "activewear",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v4.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-activewear-woxers.png",
+      "sha256": "e3603a5ef6eac7a7c798077a4b399ba33f3bda333fb8f6e8316eaf575172cf22",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2408560,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-activewear-woxers.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "activewear",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/references/ruby-bennett-walker-reference-main.png",
+      "sha256": "7b8f51f76d18d5f6f86494532b946fb9399188c084ffe8bf4957f47cb5076a9b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2875723,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-casual-default.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-casual-hat-jeans.png",
+      "sha256": "19e6ca4ee8742b51809f798a200bd5a297773f37080401543e3487073c03376e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2544542,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-casual-hat-jeans.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-casual-polo-skirt.png",
+      "sha256": "67c8f0e3ea75b33f4e400310de2605ea8ecda2f4400a01a4f2243b75b4e6cbc8",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2412969,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-casual-polo-skirt.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "casual",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-formal-date-night.png",
+      "sha256": "eef75ba5c5d6983d5359718032388fae56ba82a5f0365515944518069a481270",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2076913,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-formal-date-night.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "formal",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v5.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-formal-wedding-dress.png",
+      "sha256": "df102446e0a2ba39c6c22cf688f0ce9415809bc46bdae0c214891634d5c857b7",
+      "dimensions": [
+        1447,
+        1087
+      ],
+      "size": 2766117,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-formal-wedding-dress.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "formal",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v11.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-lingerie-babydoll.png",
+      "sha256": "b314b167d93e7d71e5608a793b02da36f4bde1880fe5dce9c0d13a7fe8914dfc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2031399,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-lingerie-babydoll.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "lingerie",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v2.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-lingerie-blue.png",
+      "sha256": "63dad8e1fbf2c018415a627ffce7e9ff9861a2dce9812446a2f0792e683faa4f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2535927,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-lingerie-blue.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "lingerie",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v9.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-lingerie-red.png",
+      "sha256": "7aa07707b3643938959c423e0ed0e23ec55d74c244f8812e71f404d61035fb77",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2185310,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-lingerie-red.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "lingerie",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v8.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-lingerie-school-girl.png",
+      "sha256": "b316a510f53ed442d0fd56ac58cf4453ebcdee812f3825f0a96e11eebb558469",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2403717,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-lingerie-school-girl.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "lingerie",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v10.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-sleepwear-blue.png",
+      "sha256": "9004334f6f3a8702e582d8c8ddc6a5f57d4fea458232167c70fee1d1e1021fc2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 1948835,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-sleepwear-blue.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v3.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-sleepwear-pokemon-sweatshirt-shorts.png",
+      "sha256": "d28377a2f22d64448caa28aabb52e56adf2cf961d1356e608485614adf5a8075",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2572546,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-sleepwear-pokemon-sweatshirt-shorts.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-sleepwear-pokemon-sweatshirt.png",
+      "sha256": "da6505ca989e32753b98e29787fa3606d7f2ce42eab98fb5cb17700297dd057b",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "size": 2303598,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-sleepwear-pokemon-sweatshirt.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "sleepwear",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-swimwear-one-piece-coverup.png",
+      "sha256": "02bd370b7718ddc5e2602ed7b476622c814f61bb074cd631c555d687c0602d09",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2347596,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-swimwear-one-piece-coverup.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "swimwear",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v6.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-swimwear-one-piece.png",
+      "sha256": "d19a31ab0ddece8e6b2766f5ebea0fd8cd81f7054973231740f13f1ae3d8fa61",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 1824576,
+      "originalPath": "characters/ruby-bennett-walker/references/ruby-swimwear-one-piece.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "swimwear",
+      "evidence": "Existing user-supplied descriptive filename retained in category/descriptor; image inspected.",
+      "review": null,
+      "legacyAliases": [
+        "characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v7.png"
+      ],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/family/bennett/thomas-bennett/references/thomas-bennett-reference-main.png",
+      "sha256": "b06c212a5f922458a6cff779466ef9387fe6ff6c544932ad49122561be494bea",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2450857,
+      "originalPath": "characters/thomas-bennett/references/thomas-bennet-reference-sheet-v1.png",
+      "characterId": "thomas-bennett",
+      "role": "main",
+      "category": "casual",
+      "evidence": "Existing primary v1 sheet; organizational main only, existing approval limits preserved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/thomas-bennett"
+    }
+  ],
+  "characterGroups": {
+    "main": {
+      "label": "Main Cast",
+      "characterIds": [
+        "ethan-walker",
+        "morgan-hayes",
+        "ruby-bennett-walker",
+        "rowan-hayes-walker",
+        "riley-hayes-walker",
+        "avery-bennett-walker"
+      ]
+    },
+    "family/bennett": {
+      "label": "Bennett Family \u2014 Ruby\u2019s Side",
+      "characterIds": [
+        "autumn-bennett",
+        "thomas-bennett"
+      ]
+    },
+    "family/hayes": {
+      "label": "Hayes Family \u2014 Morgan\u2019s Side",
+      "characterIds": [
+        "diane-hayes",
+        "nathan-hayes",
+        "adrian-hayes"
+      ]
+    },
+    "family/walker": {
+      "label": "Walker Family \u2014 Ethan\u2019s Side",
+      "characterIds": [
+        "richard-walker",
+        "linda-walker"
+      ]
+    },
+    "friends": {
+      "label": "Friends & Neighbors",
+      "characterIds": [
+        "caleb-mercer",
+        "natalie-greene",
+        "ellie-greene",
+        "owen-greene",
+        "cassidy-bennett"
+      ]
+    }
+  }
+}

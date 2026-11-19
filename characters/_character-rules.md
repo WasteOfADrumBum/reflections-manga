@@ -13,14 +13,28 @@ Each character has a canonical:
 
 ## Reusable Character Model
 
+Place each character in `main/`, `friends/`, or one established family side:
+`family/bennett/`, `family/hayes/`, or `family/walker/`. Use the registry's
+established relationships, not surname matching. Keep the character ID stable
+when changing navigation groups. Group indexes and `asset-manifest.json` must
+reflect the actual paths.
+
 Each character directory contains:
 
 - `index.md`: Identity and canonical traits
 - `appearance.md`: Physical appearance
 - `personality.md`: Behavioral characteristics
 - `wardrobe.md`: Outfit definitions
-- `references/`: Approved model sheets
+- `references/`: One named main reference sheet and its approval/continuity record
+- `outfits/`: Descriptive outfit sheets and a linked catalog; uncertain classifications in `_review/`
 - `prompts/`: Versioned text prompts; prompt files do not approve generated artwork
+
+Use [the asset manifest](asset-manifest.json) and each character's outfit catalog
+to locate clothing by category: casual, sleepwear, swimwear, activewear, formal,
+workwear, outerwear, seasonal, or lingerie. Different outfits get descriptive
+names. Use `-v2`, `-v3` only for documented revisions of the same named sheet.
+A main reference is a navigation/identity anchor; master-model approval remains
+separate. See the [organization record](../production/character-asset-organization.md).
 
 ## Continuity
 
@@ -83,3 +97,11 @@ canonical hairstyle, or other permanent traits.
 - Correct accessories
 - Consistent body language
 - Consistent relative height
+
+## Cass Continuity: 2026-11-19
+
+[Cassidy "Cass" Bennett](friends/cassidy-bennett/index.md) is 40 and Australian.
+Preserve Bennett and infer no kinship with Ruby from it. Use the actual supplied
+fictional sheet for facial identity and tattoos; never invent missing details.
+Exact height and household details remain open. Check
+[reference availability](friends/cassidy-bennett/references/index.md) before artwork.

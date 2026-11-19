@@ -61,9 +61,9 @@ describe("reference planning", () => {
       "bennett-walker-ruby.png",
       "walker-ethan.png",
       "walker-morgan.png",
-      "morgan-hayes-reference-sheet-v7.png",
-      "ruby-bennett-walker-reference-sheet-v11.png",
-      "ethan-walker-reference-sheet-v5.png",
+      "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png",
+      "ruby-bennett-walker-formal-wedding-dress.png",
+      "ethan-walker-formal-wedding-suit.png",
     ]);
     const { prompt: p28 } = await prompt(28);
     const scene = (page: number) => ({ page, source: "repo" as const, path: `stories/x/P${page}.png`, provisional: false, label: `Page ${page}` });

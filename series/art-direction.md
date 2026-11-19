@@ -29,11 +29,11 @@ Do not randomize canonical physical traits.
 
 Use the approved written profiles until model sheets are created and approved:
 
-- [Rowan](../characters/rowan-hayes-walker/appearance.md): 9, 130 cm, slender;
+- [Rowan](../characters/main/rowan-hayes-walker/appearance.md): 9, 130 cm, slender;
   chestnut textured short hair, brown-leaning hazel eyes, no visible freckles.
-- [Riley](../characters/riley-hayes-walker/appearance.md): Approximately 6, 110 cm, slender;
+- [Riley](../characters/main/riley-hayes-walker/appearance.md): Approximately 6, 110 cm, slender;
   chestnut pixie cut, green-leaning hazel eyes, light nose freckles.
-- [Avery](../characters/avery-bennett-walker/appearance.md): 7, 126 cm, sturdy;
+- [Avery](../characters/main/avery-bennett-walker/appearance.md): 7, 126 cm, sturdy;
   long auburn hair often tied back, hazel eyes, noticeable nose/cheek freckles.
 
 Use child anatomy and age-appropriate proportions. Rowan is only 4 cm taller

@@ -1538,9 +1538,9 @@ order, then scene pages specified inside each prompt. No art generated here.
 - 030: Ethan → Ruby; after breakfast help, dry and put down the bowl.
 
 Original sheets are in the stable character folders:
-[Ethan](../../../characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png),
-[Morgan](../../../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png),
-[Ruby](../../../characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png).
+[Ethan](../../../characters/main/ethan-walker/references/ethan-walker-reference-main.png),
+[Morgan](../../../characters/main/morgan-hayes/references/morgan-hayes-reference-main.png),
+[Ruby](../../../characters/main/ruby-bennett-walker/references/ruby-bennett-walker-reference-main.png).
 Use original sheets and written specifications; a previous rendering error never
 becomes identity canon. Ruby wears her provisional band; Morgan wears no ring;
 Ethan's ring practice stays open.

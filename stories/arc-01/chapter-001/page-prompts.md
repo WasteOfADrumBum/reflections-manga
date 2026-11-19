@@ -63,12 +63,12 @@ are required. Avery first appears on page 003.
 
 ### Registered Identity Images
 
-- [Ethan v1](../../../characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png)
-- [Morgan v1](../../../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png)
-- [Ruby v1](../../../characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png)
-- [Rowan v1](../../../characters/rowan-hayes-walker/references/rowan-hayes-walker-reference-sheet-v1.png)
-- [Riley v1](../../../characters/riley-hayes-walker/references/riley-hayes-walker-reference-sheet-v1.png)
-- [Avery v1](../../../characters/avery-bennett-walker/references/avery-bennett-walker-reference-sheet-v1.png)
+- [Ethan v1](../../../characters/main/ethan-walker/references/ethan-walker-reference-main.png)
+- [Morgan v1](../../../characters/main/morgan-hayes/references/morgan-hayes-reference-main.png)
+- [Ruby v1](../../../characters/main/ruby-bennett-walker/references/ruby-bennett-walker-reference-main.png)
+- [Rowan v1](../../../characters/main/rowan-hayes-walker/references/rowan-hayes-walker-reference-main.png)
+- [Riley v1](../../../characters/main/riley-hayes-walker/references/riley-hayes-walker-reference-main.png)
+- [Avery v1](../../../characters/main/avery-bennett-walker/references/avery-bennett-walker-reference-main.png)
 
 ## Page 001 Prompt
 

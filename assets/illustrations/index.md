@@ -1,5 +1,14 @@
 # Illustrations
 
+## Chapter 001: Porch Self-Timer Family Photo
+
+- [Six-person family photo](walker-family-porch-timer-photo-v1.png).
+- PNG, 1536 x 1024 pixels; created 2026-11-18 for album use.
+- Shows Avery, Riley, Rowan, Ruby, Ethan, Morgan left to right; Ethan has just
+  reached his seat between Ruby and Morgan, prompting shared laughter.
+- [Source boards, prompts, and review notes](../drafts/walker-family-porch-timer-photo-study.md).
+- Status: generated draft awaiting review; not uploaded, deployed, or used to replace a page.
+
 ## Chapter 001 Page 1: Wedding Album Portrait
 
 - [Standalone wedding portrait](ethan-morgan-ruby-wedding-album-page-001-v1.png).
@@ -9,7 +18,9 @@
 - Unlike the standalone studies below, this derives from an existing chapter
   image. No new wedding facts or chapter artwork approval are established.
 - [Source images, exact prompt, and review notes](../drafts/page-001-wedding-album-portrait-study.md).
-- Status: ready for review/upload by the user; not uploaded or deployed.
+- Website (2026-11-18, at the user's request): Memories album page 3 beside the
+  indoor wedding portrait, and the Ethan, Morgan and Ruby character galleries
+  (`site/images/moments/ethan-morgan-ruby-wedding-album-1536.webp`).
 
 Standalone character illustrations collected by the user on 2026-11-13.
 The entries below describe standalone illustrations and their source studies.
@@ -119,3 +130,33 @@ Written profiles and reference sheets still take precedence for character detail
 - Source: selected revision v2 from `codex/bennett-character-directories`, commit `d39a1672a34723276ffeebc145459f88119d823b`.
 - Website: all four character galleries and the Memories photo album.
 - Status: collected and published at the user's request; scene wardrobe and actions remain standalone illustration details.
+
+## Ethan's Motorcycle
+
+- [ethan-motorcycle.png](ethan-motorcycle.png)
+- Format: PNG, 1536 x 1024 pixels. Added by the user on 2026-11-18.
+- Shows: a matte-black chopper with a tall sissy bar and black spoked wheels
+  outside a brick workshop.
+- Website: Ethan's character gallery.
+- Status: collected and published at the user's request; standalone art.
+
+## Cal's Motorcycle
+
+- [cal-motorcycle.png](cal-motorcycle.png)
+- Format: PNG, 1536 x 1024 pixels. Added by the user on 2026-11-18.
+- Shows: a chrome cruiser with a winged skull on its worn black tank outside a
+  brick garage at sunset.
+- Website: Cal's character gallery.
+- Status: collected and published at the user's request. Cal's wardrobe record
+  still says motorcycle ownership is not established; this image does not change
+  canon until the user approves that.
+
+## Ethan and Cal: The Ride
+
+- [ethan-cal-motorcycle-ride.png](ethan-cal-motorcycle-ride.png)
+- Format: PNG, 1672 x 941 pixels. Added by the user on 2026-11-18.
+- Shows: Ethan and Cal riding a mountain highway at sunset through autumn trees,
+  Cal in front on the chrome cruiser and Ethan behind on the black chopper
+  (riders identified by their motorcycles' file names).
+- Website: Ethan and Cal character galleries and Memories album page 6.
+- Status: collected and published at the user's request; not a chapter event.

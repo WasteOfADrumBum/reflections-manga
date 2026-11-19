@@ -46,7 +46,7 @@ Character ids become links to that bio; any other name shows as plain text.
 
 ## Character images
 
-`images/characters/` holds web-sized copies of the reference sheets in `characters/*/references/`.
+`images/characters/` holds selected web-sized copies of sheets from the grouped character folders’ `references/` and `outfits/` directories.
 If a reference sheet changes, re-export the copy here.
 
 ## Local preview

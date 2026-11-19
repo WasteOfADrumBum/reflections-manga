@@ -151,3 +151,20 @@ export function progress(done, total, labelText) {
     h("progress", { max: String(Math.max(total, 1)), value: String(done), "aria-labelledby": id }),
   );
 }
+
+/**
+ * Options for an outfit picker, grouped by category (Main, Casual, Formal, ...,
+ * Needs review) so long wardrobes stay easy to scan.
+ */
+export function sheetOptions(sheets, selected, note = () => "") {
+  const groups = new Map();
+  for (const s of sheets) {
+    const key = s.isDefault ? "Main" : s.needsReview ? "Needs review" : s.category ? s.category.charAt(0).toUpperCase() + s.category.slice(1) : "Other";
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(s);
+  }
+  const order = (k) => (k === "Main" ? 0 : k === "Needs review" ? 3 : k === "Other" ? 2 : 1);
+  return [...groups.entries()]
+    .sort((a, b) => order(a[0]) - order(b[0]) || a[0].localeCompare(b[0]))
+    .map(([key, list]) => h("optgroup", { label: key }, ...list.map((s) => h("option", { value: s.path, selected: s.path === selected }, `${s.label}${note(s)}`))));
+}

@@ -149,11 +149,12 @@ function parsePanel(block: string): PromptPanel | null {
   };
 }
 
-/** "walker-ethan.png" -> "Ethan"; "morgan-hayes-reference-sheet-v7.png" -> "Morgan". */
+/** "walker-ethan.png" -> "Ethan"; "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png" -> "Morgan". */
 export function nameFromSheetFile(file: string): string {
   const stem = (file.split("/").pop() ?? file).replace(/\.(png|webp|jpe?g)$/i, "");
   const parts = stem.split("-").filter(Boolean);
-  const pick = /reference-sheet/i.test(stem) ? parts[0] : parts.at(-1);
+  const descriptive = /-(?:reference-(?:character-sheet|sheet|main)(?:-|$)|(?:casual|sleepwear|swimwear|activewear|formal|workwear|outerwear|seasonal|lingerie|review)-)/i.test(stem);
+  const pick = descriptive ? parts[0] : parts.at(-1);
   const n = pick ?? stem;
   return n.charAt(0).toUpperCase() + n.slice(1).toLowerCase();
 }

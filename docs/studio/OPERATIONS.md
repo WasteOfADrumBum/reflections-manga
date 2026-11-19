@@ -6,7 +6,7 @@
 |---|---|
 | **Dashboard** | Each chapter's progress, this month's API spend, anything that needs you, recent runs |
 | **Story** | Arcs → chapters → pages, with the arc focus (`stories/arc-NN/index.md`), chapter logline (`outline.md`) and page beat (page guide) from the repository. Add arcs and chapters here |
-| **Characters** | Every sheet under `characters/` as an outfit, with a picker that swaps the preview. Name outfits, add outfit sheets, add characters |
+| **Characters** | Each cast group (Main Cast, the families, Friends) with every outfit sheet as a version, grouped by category in a picker that swaps the preview. Name outfits, add outfit sheets, add characters |
 | **Generate** | Queue several pages at once |
 | **Review** | Every version waiting for a decision, across chapters, and publishing |
 | **Site images** | Show or hide images in the public character galleries and Memories album; add album photos |
@@ -97,12 +97,15 @@ Merging the pull request deploys the pages.
 
 All of these open a pull request; nothing changes until you merge it.
 
-* **Character** (Characters → Add a character): `characters/<name>/index.md`
-  from the character template, a references index, and an optional first sheet
-  as the Current Card.
-* **Outfit sheet** (a character's card → Add an outfit sheet): the next
-  `<id>-reference-sheet-vN.png` plus a named entry in its references index, so
-  the outfit shows up with its name.
+* **Character** (Characters → Add a character): `characters/<group>/<id>/`
+  from the character template with its main reference sheet
+  (`<id>-reference-main.png`), added to that cast group in
+  `characters/asset-manifest.json`. A main sheet is required, because every
+  character in the manifest has exactly one.
+* **Outfit sheet** (a character's card → Add an outfit sheet): pick a category;
+  the file is saved as `outfits/<id>-<category>-<name>.png`, listed in the
+  outfit library table and registered in the asset manifest, so
+  `tools/validate-character-assets.py` still passes.
 * **Outfit names** (a character's card → Name this outfit) are saved in the
   studio database, not the repository.
 * **Arc** (Story → Add an arc): `stories/arc-NN/index.md` with its focus.

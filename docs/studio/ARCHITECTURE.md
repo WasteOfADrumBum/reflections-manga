@@ -35,8 +35,8 @@ Dependencies are deliberately few: `openai`, `@vercel/blob`, `@vercel/functions`
    never in the repository. An edited prompt is checked against the script like
    the original, unless the owner confirms the dialogue change. Version 2
    prompts name each sheet file (`walker-ethan.png`, `children/walker-riley.png`,
-   `ruby-bennett-walker-reference-sheet-v11.png`); the studio finds them only in
-   the configured sheet folders and the characters' own `references/` folders and
+   `ruby-bennett-walker-formal-wedding-dress.png`); the studio finds them only in
+   the configured sheet folders and the characters' own `references/`, `outfits/`, and `outfits/_review/` folders and
    attaches them in exactly that order. Older v1 prompts name a character and get
    the image under "Current Card" in its `references/index.md`. Then approved
    outfit and location uploads scoped to the chapter/page, then scene pages the
@@ -71,13 +71,19 @@ privately, so page grids no longer stream full-size PNGs.
 
 ## Character library
 
-Every image under `characters/<id>/references/` and `characters/_reference-sheets/**`
-belongs to a character. Family copies listed in `_reference-sheets/index.md`
-are treated as the same sheet as their original. The default sheet is the
-"Current Card", else the family copy's original, else v1. Outfit names come
-from markdown link text that names the file (for example "Morgan's wedding
-outfit v7" in a page guide), else "Outfit (vN)", and the owner can rename them
-in the studio (`sheet_labels`).
+Characters live in cast folders: `characters/main/<id>`, `characters/family/<family>/<id>`
+and `characters/friends/<id>`; the folder name is the character id. Every image in a
+character's `references/` and `outfits/` (including `outfits/_review/`) is one of their
+sheets. `characters/asset-manifest.json` names the main reference, each outfit's category
+and the retired file names that used to point at it, so an older prompt naming a retired
+file still resolves to the right sheet. Family copies in `characters/_reference-sheets/**`
+count as the same sheet as their original. Labels come from the file name pattern
+`<id>-<category>-<descriptor>.png` ("Wedding suit"), sheets awaiting a category show as
+"Needs review", and the owner can rename any sheet in the studio (`sheet_labels`).
+
+Sheets and characters added from the studio follow the same layout and are appended to
+the asset manifest (real hash, size and dimensions), so `tools/validate-character-assets.py`
+keeps passing after the pull request merges.
 
 ## Durable job engine
 

@@ -7,7 +7,7 @@
   The studio never generates past `plannedPages`.
 - `identitySheetDirs`: folders searched for the sheet files that v2 prompts name in their reference order
   (for example `walker-ethan.png`, `children/walker-riley.png`). Sheets named like
-  `morgan-hayes-reference-sheet-v7.png` are found in that character's own `references/` folder.
+  `morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png` are found in that character's own `outfits/` folder.
 - Pages with finished artwork in `stories/.../pages/` (v2 art; v1 art lives in `pages/version_1/` and is
   ignored) or already in the reader are protected automatically and never overwritten.
 - `lockedPages`: extra pages to protect, as ranges like `5, 9-12` (empty for Chapter 001).
