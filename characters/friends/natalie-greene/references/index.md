@@ -18,7 +18,7 @@ masters. The proposed 3:2 study layout does not establish manga page standards.
 ## Organized Asset Library: 2026-11-19
 
 - [Main reference](natalie-greene-reference-main.png): navigation/identity selection; existing approval limits remain in force.
-- [Outfit catalog](../outfits/index.md): 7 alternate sheets.
+- [Outfit catalog](../outfits/index.md): 9 alternate sheets.
 - [Asset manifest](../../../asset-manifest.json): exact original paths, SHA-256, dimensions, categories, and review notes.
 
 Local availability and save-name instructions in older dated notes below are superseded by this verified inventory. File presence and organization do not approve a master model sheet.

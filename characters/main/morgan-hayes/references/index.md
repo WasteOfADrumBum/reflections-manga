@@ -7,7 +7,7 @@ not silently approve every incidental image detail or change written canon.
 ## Organized Asset Library: 2026-11-19
 
 - [Main reference](morgan-hayes-reference-main.png): navigation/identity selection; existing approval limits remain in force.
-- [Outfit catalog](../outfits/index.md): 17 alternate sheets.
+- [Outfit catalog](../outfits/index.md): 19 alternate sheets.
 - [Asset manifest](../../../asset-manifest.json): exact original paths, SHA-256, dimensions, categories, and review notes.
 
 Local availability and save-name instructions in older dated notes below are superseded by this verified inventory. File presence and organization do not approve a master model sheet.

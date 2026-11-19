@@ -804,3 +804,15 @@ User reopened the entire chapter for regeneration. [V2](../stories/arc-01/chapte
 ## 2026-11-19: Cast Navigation Groups
 
 At the user’s request, moved the six core household characters to `characters/main/`, extended relatives to `characters/family/bennett/`, `hayes/`, and `walker/`, and Cal, Nat, Ellie, Owen, and Cass to `characters/friends/`. Reordered the registry and added group indexes. Stable IDs, approval states, relationship facts, and story chronology are preserved. Updated relative links, asset manifest destinations, and studio discovery. Cass is not classified as Ruby’s relative.
+
+## 2026-11-19: Ruby Craft Workwear Names
+
+Renamed Ruby's newly supplied `image.png` to `ruby-bennett-walker-workwear-sewing.png` and `image copy.png` to `ruby-bennett-walker-workwear-painting.png`, following the user's explicit outfit descriptions. Registered original paths, hashes, dimensions, and workwear classification in the asset manifest and linked the sheets from her wardrobe and outfit catalog. Image bytes and existing approval limits are preserved; no relationship or chapter chronology changed.
+
+## 2026-11-19: Named Cosplay Outfit Sheets
+
+Registered seven user-supplied seasonal/cosplay sheets: Autumn as Rias Gremory and Ginny (Ginevra) Weasley from Harry Potter; Cass as Cammy from Street Fighter; Natalie as Emma Frost from Marvel; Morgan as Wonder Woman; Ruby as Princess Leia and Slave Leia. Matched the duplicate generic filenames by visual inspection and sheet labels. Renamed files descriptively, updated outfit catalogs, wardrobe records, reference counts, and the asset manifest. All original image bytes are preserved. Costume selections establish no new permanent traits, relationship developments, crossover canon, or chapter chronology.
+
+## 2026-11-19: Additional Superhero Cosplay Filenames
+
+Renamed five newly supplied `image.png` sheets according to the user's explicit identifications: Cassidy as Supergirl, Autumn as Batgirl, Natalie as Harley Quinn, Morgan as Catwoman, and Ruby as Poison Ivy. Registered each as seasonal cosplay, with original filename, SHA-256, dimensions, and size. Updated outfit catalogs, wardrobe links, and reference counts. Image bytes, permanent character traits, relationships, and chapter chronology are unchanged; no new artwork or master-model approval inferred.

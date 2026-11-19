@@ -244,3 +244,44 @@ The user requested actual folder grouping and registry navigation during this se
 - No commit, push, release, production deployment, or story-canon approval was performed.
 
 Repeat the character asset audit with `python tools/validate-character-assets.py`.
+
+## Additional Ruby Workwear: 2026-11-19
+
+The user supplied and identified two additional sheets. The library now contains 87 images: 18 main references and 69 outfits. The earlier 85-image validation above records the initial cleanup. Seven earlier review classifications remain open.
+
+| Before (Ruby outfits folder) | Named workwear |
+|---|---|
+| `image.png` | [ruby-bennett-walker-workwear-sewing.png](../characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-workwear-sewing.png) |
+| `image copy.png` | [ruby-bennett-walker-workwear-painting.png](../characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-workwear-painting.png) |
+
+Both additional workwear files passed hash and catalog-link checks. The wider audit currently reports missing shared `_reference-sheets` copies as well as the previously recorded old chapter links; this two-file rename did not change that shared folder.
+
+## Additional Cosplay Sheets: 2026-11-19
+
+Seven newly supplied costume sheets are registered under `seasonal`, using the `seasonal-cosplay-<costume>` filename pattern. The library now contains 94 images: 18 main references and 76 outfits. The seven earlier classification/revision reviews remain separate and unchanged.
+
+| Character | Before (outfits folder) | Named costume sheet |
+|---|---|---|
+| autumn-bennett | `image copy.png` | [autumn-bennett-seasonal-cosplay-rias-gremory.png](../characters/family/bennett/autumn-bennett/outfits/autumn-bennett-seasonal-cosplay-rias-gremory.png) |
+| autumn-bennett | `image.png` | [autumn-bennett-seasonal-cosplay-ginny-weasley-harry-potter.png](../characters/family/bennett/autumn-bennett/outfits/autumn-bennett-seasonal-cosplay-ginny-weasley-harry-potter.png) |
+| cassidy-bennett | `image.png` | [cassidy-bennett-seasonal-cosplay-cammy-street-fighter.png](../characters/friends/cassidy-bennett/outfits/cassidy-bennett-seasonal-cosplay-cammy-street-fighter.png) |
+| natalie-greene | `image.png` | [natalie-greene-seasonal-cosplay-emma-frost-marvel.png](../characters/friends/natalie-greene/outfits/natalie-greene-seasonal-cosplay-emma-frost-marvel.png) |
+| morgan-hayes | `image.png` | [morgan-hayes-seasonal-cosplay-wonder-woman.png](../characters/main/morgan-hayes/outfits/morgan-hayes-seasonal-cosplay-wonder-woman.png) |
+| ruby-bennett-walker | `image.png` | [ruby-bennett-walker-seasonal-cosplay-princess-leia.png](../characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-seasonal-cosplay-princess-leia.png) |
+| ruby-bennett-walker | `image copy.png` | [ruby-bennett-walker-seasonal-cosplay-slave-leia.png](../characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-seasonal-cosplay-slave-leia.png) |
+
+Autumn's Harry Potter sheet explicitly labels Ginevra Weasley; `ginny-weasley-harry-potter` provides both the familiar name and franchise for searching. Costume names were normalized to Rias Gremory and Cammy. All seven renames retain original SHA-256 hashes, sizes, and dimensions, and their catalog/wardrobe links were checked. No artwork was changed.
+
+## Five Additional Superhero Costumes: 2026-11-19
+
+Registered five user-identified seasonal cosplay sheets. The manifest now contains 99 images: 18 main references and 81 outfits. Previous reviews remain open.
+
+| Character | Before (outfits folder) | Named costume sheet |
+|---|---|---|
+| cassidy-bennett | `image.png` | [cassidy-bennett-seasonal-cosplay-supergirl.png](../characters/friends/cassidy-bennett/outfits/cassidy-bennett-seasonal-cosplay-supergirl.png) |
+| autumn-bennett | `image.png` | [autumn-bennett-seasonal-cosplay-batgirl.png](../characters/family/bennett/autumn-bennett/outfits/autumn-bennett-seasonal-cosplay-batgirl.png) |
+| natalie-greene | `image.png` | [natalie-greene-seasonal-cosplay-harley-quinn.png](../characters/friends/natalie-greene/outfits/natalie-greene-seasonal-cosplay-harley-quinn.png) |
+| morgan-hayes | `image.png` | [morgan-hayes-seasonal-cosplay-catwoman.png](../characters/main/morgan-hayes/outfits/morgan-hayes-seasonal-cosplay-catwoman.png) |
+| ruby-bennett-walker | `image.png` | [ruby-bennett-walker-seasonal-cosplay-poison-ivy.png](../characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-seasonal-cosplay-poison-ivy.png) |
+
+Validated all 99 registered images against recorded SHA-256 hashes, sizes, and dimensions, and checked the five renamed files and affected catalog/wardrobe links. No images were edited or overwritten.

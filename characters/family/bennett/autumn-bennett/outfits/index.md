@@ -17,3 +17,6 @@ The main identity/navigation reference stays in `../references/`. These are outf
 | sleepwear | [autumn-bennett-sleepwear-cardigan-plaid-shorts](autumn-bennett-sleepwear-cardigan-plaid-shorts.png) | Existing approval status retained. |
 | sleepwear | [autumn-bennett-sleepwear-pink-graphic-hoodie-briefs](autumn-bennett-sleepwear-pink-graphic-hoodie-briefs.png) | Existing approval status retained. |
 | swimwear | [autumn-bennett-swimwear-patterned-one-piece](autumn-bennett-swimwear-patterned-one-piece.png) | Existing approval status retained. |
+| seasonal | [Rias Gremory cosplay](autumn-bennett-seasonal-cosplay-rias-gremory.png) | User-selected costume, 2026-11-19; artwork approval limits retained. |
+| seasonal | [Ginny Weasley (Harry Potter) cosplay](autumn-bennett-seasonal-cosplay-ginny-weasley-harry-potter.png) | User-selected costume, 2026-11-19; artwork approval limits retained. |
+| seasonal | [Batgirl cosplay](autumn-bennett-seasonal-cosplay-batgirl.png) | User-selected costume, 2026-11-19; artwork approval limits retained. |

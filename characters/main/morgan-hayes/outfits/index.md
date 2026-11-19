@@ -24,3 +24,5 @@ The main identity/navigation reference stays in `../references/`. These are outf
 | sleepwear | [morgan-hayes-sleepwear-purple-graphic-hoodie-briefs](morgan-hayes-sleepwear-purple-graphic-hoodie-briefs.png) | Existing approval status retained. |
 | swimwear | [morgan-hayes-swimwear-black-long-sleeve-one-piece](morgan-hayes-swimwear-black-long-sleeve-one-piece.png) | Existing approval status retained. |
 | workwear | [morgan-hayes-workwear-gray-shirt-trousers](morgan-hayes-workwear-gray-shirt-trousers.png) | Existing approval status retained. |
+| seasonal | [Wonder Woman cosplay](morgan-hayes-seasonal-cosplay-wonder-woman.png) | User-selected costume, 2026-11-19; artwork approval limits retained. |
+| seasonal | [Catwoman cosplay](morgan-hayes-seasonal-cosplay-catwoman.png) | User-selected costume, 2026-11-19; artwork approval limits retained. |

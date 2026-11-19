@@ -28,3 +28,11 @@ rule does not transfer to her sister.
 ## Saved Outfit Assets: 2026-11-19
 
 See the [outfit catalog](outfits/index.md) for named sheets and unresolved classifications. Asset categories describe visible clothing; they do not approve new wardrobe canon.
+
+## User-Selected Cosplay: 2026-11-19
+
+- [Rias Gremory](outfits/autumn-bennett-seasonal-cosplay-rias-gremory.png): supplied costume sheet, categorized as seasonal.
+- [Ginny Weasley (Harry Potter)](outfits/autumn-bennett-seasonal-cosplay-ginny-weasley-harry-potter.png): supplied costume sheet, categorized as seasonal.
+- [Batgirl](outfits/autumn-bennett-seasonal-cosplay-batgirl.png): supplied costume sheet, categorized as seasonal.
+
+These are costume selections, not new character identities or approved chapter events. Preserve the character's established physical traits beneath the costume.
