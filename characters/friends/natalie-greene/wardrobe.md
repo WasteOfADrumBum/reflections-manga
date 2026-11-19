@@ -23,3 +23,10 @@ An earlier food-stain example was a possible moment, not a permanent costume det
 ## Saved Outfit Assets: 2026-11-19
 
 See the [outfit catalog](outfits/index.md) for named sheets and unresolved classifications. Asset categories describe visible clothing; they do not approve new wardrobe canon.
+
+## User-Selected Cosplay: 2026-11-19
+
+- [Emma Frost (Marvel)](outfits/natalie-greene-seasonal-cosplay-emma-frost-marvel.png): supplied costume sheet, categorized as seasonal.
+- [Harley Quinn](outfits/natalie-greene-seasonal-cosplay-harley-quinn.png): supplied costume sheet, categorized as seasonal.
+
+These are costume selections, not new character identities or approved chapter events. Preserve the character's established physical traits beneath the costume.

@@ -14,3 +14,5 @@ The main identity/navigation reference stays in `../references/`. These are outf
 | swimwear | [natalie-greene-swimwear-olive-two-piece-straw-hat](natalie-greene-swimwear-olive-two-piece-straw-hat.png) | Existing approval status retained. |
 | workwear | [natalie-greene-workwear-overalls-straw-hat](natalie-greene-workwear-overalls-straw-hat.png) | Existing approval status retained. |
 | workwear | [natalie-greene-workwear-overalls-tank](natalie-greene-workwear-overalls-tank.png) | Existing approval status retained. |
+| seasonal | [Emma Frost (Marvel) cosplay](natalie-greene-seasonal-cosplay-emma-frost-marvel.png) | User-selected costume, 2026-11-19; artwork approval limits retained. |
+| seasonal | [Harley Quinn cosplay](natalie-greene-seasonal-cosplay-harley-quinn.png) | User-selected costume, 2026-11-19; artwork approval limits retained. |

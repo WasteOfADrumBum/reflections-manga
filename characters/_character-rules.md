@@ -28,6 +28,7 @@ Each character directory contains:
 - `references/`: One named main reference sheet and its approval/continuity record
 - `outfits/`: Descriptive outfit sheets and a linked catalog; uncertain classifications in `_review/`
 - `prompts/`: Versioned text prompts; prompt files do not approve generated artwork
+- `kit/` (optional): Character kit for anime, film and game work: bible, visual sheets, voice, motion and 3D notes. It links to the files above and approves nothing. Copy it from [the kit template](_template/kit/README.md).
 
 Use [the asset manifest](asset-manifest.json) and each character's outfit catalog
 to locate clothing by category: casual, sleepwear, swimwear, activewear, formal,

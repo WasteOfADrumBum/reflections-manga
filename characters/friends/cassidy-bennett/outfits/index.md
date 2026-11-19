@@ -17,3 +17,5 @@ The main identity/navigation reference stays in `../references/`. These are outf
 | sleepwear | [cassidy-bennett-sleepwear-pink-graphic-tee-pants](cassidy-bennett-sleepwear-pink-graphic-tee-pants.png) | Existing approval status retained. |
 | sleepwear | [cassidy-bennett-sleepwear-yellow-graphic-hoodie-briefs](cassidy-bennett-sleepwear-yellow-graphic-hoodie-briefs.png) | Existing approval status retained. |
 | swimwear | [cassidy-bennett-swimwear-black-red-bikini](cassidy-bennett-swimwear-black-red-bikini.png) | Existing approval status retained. |
+| seasonal | [Cammy (Street Fighter) cosplay](cassidy-bennett-seasonal-cosplay-cammy-street-fighter.png) | User-selected costume, 2026-11-19; artwork approval limits retained. |
+| seasonal | [Supergirl cosplay](cassidy-bennett-seasonal-cosplay-supergirl.png) | User-selected costume, 2026-11-19; artwork approval limits retained. |

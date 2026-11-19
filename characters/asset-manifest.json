@@ -1480,6 +1480,244 @@
       "review": null,
       "legacyAliases": [],
       "characterPath": "characters/family/bennett/thomas-bennett"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-workwear-sewing.png",
+      "sha256": "95ed8e6ec13a427431cf37c8e481e6bf9ba16ec10c5971192d990216cd2a4280",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2427046,
+      "originalPath": "characters/main/ruby-bennett-walker/outfits/image.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "workwear",
+      "evidence": "User identified this supplied sheet as Ruby's sewing work outfit on 2026-11-19. Outfit use selected; no employment, master-model approval, or other permanent traits inferred.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-workwear-painting.png",
+      "sha256": "95f59517976fa38df7fecb216809c92c5ec5b899f20544171467564ed9f5b46a",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2981954,
+      "originalPath": "characters/main/ruby-bennett-walker/outfits/image copy.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "workwear",
+      "evidence": "User identified this supplied sheet as Ruby's painting work outfit on 2026-11-19. Outfit use selected; no employment, master-model approval, or other permanent traits inferred.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-seasonal-cosplay-rias-gremory.png",
+      "sha256": "9670b688145fb09e1e69d2a034b9d69273933e6facae5e1c7536acc2fa476644",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2578658,
+      "originalPath": "characters/family/bennett/autumn-bennett/outfits/image copy.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User-selected cosplay, 2026-11-19. User identified the cosplay; the supplied sheet explicitly labels Rias Gremory. Naming and costume identification do not approve new artwork, permanent traits, crossover canon, or chapter events.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-seasonal-cosplay-ginny-weasley-harry-potter.png",
+      "sha256": "e0d0a84497ab873772c35a17f2a835d86cc781ea42d717393cda317a57a9444c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2459509,
+      "originalPath": "characters/family/bennett/autumn-bennett/outfits/image.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User-selected cosplay, 2026-11-19. User identified Harry Potter cosplay; the supplied sheet labels Ginevra Weasley. Naming and costume identification do not approve new artwork, permanent traits, crossover canon, or chapter events.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-seasonal-cosplay-cammy-street-fighter.png",
+      "sha256": "8a169b1725cf4bd261c7a1569c9332ac407158e2dd530ee9e40d75570d3860fa",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2583617,
+      "originalPath": "characters/friends/cassidy-bennett/outfits/image.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User-selected cosplay, 2026-11-19. User identified Cammy from Street Fighter; the visible green outfit and red beret match the supplied description. Naming and costume identification do not approve new artwork, permanent traits, crossover canon, or chapter events.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/friends/natalie-greene/outfits/natalie-greene-seasonal-cosplay-emma-frost-marvel.png",
+      "sha256": "f1259b5f6d83c0b251303de8c1772bd5c39079be91009c992efde53dd96f0967",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2458139,
+      "originalPath": "characters/friends/natalie-greene/outfits/image.png",
+      "characterId": "natalie-greene",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User-selected cosplay, 2026-11-19. User identified Emma Frost from Marvel; the visible white costume matches the supplied description. Naming and costume identification do not approve new artwork, permanent traits, crossover canon, or chapter events.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-seasonal-cosplay-wonder-woman.png",
+      "sha256": "9336f60fcc900964da40c9d9fea325e410b8e5f3fcd1e584b27c376573cfcaaa",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2504305,
+      "originalPath": "characters/main/morgan-hayes/outfits/image.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User-selected cosplay, 2026-11-19. User identified Wonder Woman; the visible red, blue, and gold costume matches the supplied description. Naming and costume identification do not approve new artwork, permanent traits, crossover canon, or chapter events.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-seasonal-cosplay-princess-leia.png",
+      "sha256": "1a7655bfc44b1c6df5566405701973ac3500f5d1ff1a6be9b0937d3303c10106",
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "size": 2435872,
+      "originalPath": "characters/main/ruby-bennett-walker/outfits/image.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User-selected cosplay, 2026-11-19. User identified Princess Leia; this supplied sheet shows the white gown and side-bun hairstyle. Naming and costume identification do not approve new artwork, permanent traits, crossover canon, or chapter events.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-seasonal-cosplay-slave-leia.png",
+      "sha256": "e328746c9cc80761a5dadbbeeeeea11d59c69fa8f3f5e56e6706538bcde1baa0",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2616273,
+      "originalPath": "characters/main/ruby-bennett-walker/outfits/image copy.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User-selected cosplay, 2026-11-19. User identified Slave Leia; this supplied sheet shows the gold costume with burgundy drapes. Naming and costume identification do not approve new artwork, permanent traits, crossover canon, or chapter events.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
+    },
+    {
+      "path": "characters/friends/cassidy-bennett/outfits/cassidy-bennett-seasonal-cosplay-supergirl.png",
+      "sha256": "e4d22e1034a94c3822aab881ac4cd7a65a0a234b357e5f279d303c02e0df0459",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2688416,
+      "originalPath": "characters/friends/cassidy-bennett/outfits/image.png",
+      "characterId": "cassidy-bennett",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User identified this newly supplied sheet as Supergirl cosplay on 2026-11-19. Filename and category follow that explicit identification; no new artwork, permanent traits, crossover canon, or chapter events approved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/cassidy-bennett"
+    },
+    {
+      "path": "characters/family/bennett/autumn-bennett/outfits/autumn-bennett-seasonal-cosplay-batgirl.png",
+      "sha256": "38ba58c779db42568ce5c0b089be47e90fe773f7e763bfbc49a3f5fc2662544a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "size": 2457088,
+      "originalPath": "characters/family/bennett/autumn-bennett/outfits/image.png",
+      "characterId": "autumn-bennett",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User identified this newly supplied sheet as Batgirl cosplay on 2026-11-19. Filename and category follow that explicit identification; no new artwork, permanent traits, crossover canon, or chapter events approved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/family/bennett/autumn-bennett"
+    },
+    {
+      "path": "characters/friends/natalie-greene/outfits/natalie-greene-seasonal-cosplay-harley-quinn.png",
+      "sha256": "bdea28df09ecb0572a00f27e9b039a73bf4388e4d15625bd283c5979c709e852",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2377722,
+      "originalPath": "characters/friends/natalie-greene/outfits/image.png",
+      "characterId": "natalie-greene",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User identified this newly supplied sheet as Harley Quinn cosplay on 2026-11-19. Filename and category follow that explicit identification; no new artwork, permanent traits, crossover canon, or chapter events approved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/friends/natalie-greene"
+    },
+    {
+      "path": "characters/main/morgan-hayes/outfits/morgan-hayes-seasonal-cosplay-catwoman.png",
+      "sha256": "94e1edcb9d5dc378ab41000527d84d8a1cdb72aed6ba4cf2ccdcd1d7a042e2ef",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "size": 2562674,
+      "originalPath": "characters/main/morgan-hayes/outfits/image.png",
+      "characterId": "morgan-hayes",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User identified this newly supplied sheet as Catwoman cosplay on 2026-11-19. Filename and category follow that explicit identification; no new artwork, permanent traits, crossover canon, or chapter events approved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/morgan-hayes"
+    },
+    {
+      "path": "characters/main/ruby-bennett-walker/outfits/ruby-bennett-walker-seasonal-cosplay-poison-ivy.png",
+      "sha256": "fee27af342ada7a71f73d45fb47a9820dfdbc6215050e9005d0fe8c642b471b8",
+      "dimensions": [
+        1199,
+        1312
+      ],
+      "size": 2630165,
+      "originalPath": "characters/main/ruby-bennett-walker/outfits/image.png",
+      "characterId": "ruby-bennett-walker",
+      "role": "outfit",
+      "category": "seasonal",
+      "evidence": "User identified this newly supplied sheet as Poison Ivy cosplay on 2026-11-19. Filename and category follow that explicit identification; no new artwork, permanent traits, crossover canon, or chapter events approved.",
+      "review": null,
+      "legacyAliases": [],
+      "characterPath": "characters/main/ruby-bennett-walker"
     }
   ],
   "characterGroups": {
