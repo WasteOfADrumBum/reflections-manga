@@ -10,10 +10,10 @@ Those proposals await approval; no chapter events or model sheets are approved.
 
 ## Family Foundation
 
-- [Diane Hayes](diane-hayes/index.md), 58, is mother to the three Hayes siblings.
-- [Nathan "Nate" Hayes](nathan-hayes/index.md) is the oldest sibling.
-- [Adrian Hayes](adrian-hayes/index.md) is the middle sibling.
-- [Morgan H. Walker](morgan-hayes/index.md), 34, is the youngest sibling.
+- [Diane Hayes](family/hayes/diane-hayes/index.md), 58, is mother to the three Hayes siblings.
+- [Nathan "Nate" Hayes](family/hayes/nathan-hayes/index.md) is the oldest sibling.
+- [Adrian Hayes](family/hayes/adrian-hayes/index.md) is the middle sibling.
+- [Morgan H. Walker](main/morgan-hayes/index.md), 34, is the youngest sibling.
 - Their unnamed father had alcoholism and left the family when Morgan was 13.
   This event was already approved; his name, current status, and later contact
   remain unspecified. No additional circumstances of his departure are established.

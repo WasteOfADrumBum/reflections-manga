@@ -70,7 +70,10 @@ const chapterParam = (s: string) => {
 };
 
 /** Repository images the studio may display: character references and manuscript pages. */
-const REPO_IMAGE_ALLOW = [/^characters\/[a-z0-9-]+\/references\/[\w.-]+\.(png|webp|jpe?g)$/i, /^stories\/arc-\d{2}\/chapter-\d{3}\/pages\/[\w.-]+\.(png|webp)$/i];
+const REPO_IMAGE_ALLOW = [
+  /^characters\/(?:main|friends|family\/(?:bennett|hayes|walker))\/[a-z0-9-]+\/(?:references|outfits(?:\/_review)?)\/[\w.-]+\.(png|webp|jpe?g)$/i,
+  /^stories\/arc-\d{2}\/chapter-\d{3}\/pages\/[\w.-]+\.(png|webp)$/i,
+];
 
 export function createApp(deps: StudioDeps) {
   const r = new Router();

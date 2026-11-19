@@ -103,10 +103,10 @@ Supporting-cast relationships selected 2026-11-13:
 
 | Connection | Established relationship | Limits |
 |---|---|---|
-| [Nate](nathan-hayes/index.md), [Adrian](adrian-hayes/index.md), and Morgan | Hayes siblings, all Diane's children; Nate oldest, Morgan youngest | Brothers' ages, childhood responses, designs, jobs, and current family circumstances are proposals |
-| [Autumn Bennett](autumn-bennett/index.md) and Ruby | Autumn is Ruby's older sister and Avery's aunt through Ruby | Exact age, sibling type, and family history remain open |
-| [Natalie "Nat" Greene](natalie-greene/index.md), [Ellie](ellie-greene/index.md), and [Owen](owen-greene/index.md) | Nat is their mother; Ellie is 9, Owen approximately 6 | Other parentage, full/half/adoptive sibling status, custody, and household remain open |
-| [Caleb "Cal" Mercer](caleb-mercer/index.md) and Ethan | Best friends | Meeting, duration, and shared history remain open |
+| [Nate](family/hayes/nathan-hayes/index.md), [Adrian](family/hayes/adrian-hayes/index.md), and Morgan | Hayes siblings, all Diane's children; Nate oldest, Morgan youngest | Brothers' ages, childhood responses, designs, jobs, and current family circumstances are proposals |
+| [Autumn Bennett](family/bennett/autumn-bennett/index.md) and Ruby | Autumn is Ruby's older sister and Avery's aunt through Ruby | Exact age, sibling type, and family history remain open |
+| [Natalie "Nat" Greene](friends/natalie-greene/index.md), [Ellie](friends/ellie-greene/index.md), and [Owen](friends/owen-greene/index.md) | Nat is their mother; Ellie is 9, Owen approximately 6 | Other parentage, full/half/adoptive sibling status, custody, and household remain open |
+| [Caleb "Cal" Mercer](friends/caleb-mercer/index.md) and Ethan | Best friends | Meeting, duration, and shared history remain open |
 | Nat and Morgan | Best friends outside the shared household | Morgan and Ruby's best-friend/coparent bond is also preserved |
 
 These supporting friends and sibling connections add no new parenting or
@@ -128,3 +128,10 @@ These calculations do not establish when the shared marriage began.
 
 See [relationships](../continuity/relationships.md) and
 [timeline](../continuity/timeline.md) for history, boundaries, and open details.
+
+## Neighbor Surname Boundary: 2026-11-19
+
+[Cassidy "Cass" Bennett](friends/cassidy-bennett/index.md) is the Australian next-door
+neighbor, not an established member of Ruby's family tree. She is a mother;
+her household and relatives remain undecided. Shared Bennett surnames establish
+no parent, sibling, cousin, aunt, or other family connection.

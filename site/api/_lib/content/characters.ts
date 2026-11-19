@@ -1,9 +1,10 @@
 import type { RepoSource } from "../repo/source.js";
 
 /**
- * Character library built from characters/<id>/. The canonical identity sheet
+ * Character library built from the main, family, and friends cast folders.
+ * Directory basenames remain stable character IDs. The canonical identity sheet
  * is the image linked under "## Current Card" in references/index.md. Every
- * other image in references/ is shown as experimental and is never attached
+ * other image in references/ or outfits/ is experimental and is never attached
  * automatically. Uploaded references (stored in Blob) can only add outfit or
  * location references; they never replace a canonical sheet.
  */
@@ -63,7 +64,10 @@ function aliasesFor(id: string, displayName: string): string[] {
 }
 
 export async function loadCharacters(repo: RepoSource): Promise<CharacterRecord[]> {
-  const dirs = (await repo.list("characters")).filter((e) => e.type === "dir" && !e.name.startsWith("_"));
+  const roots = ["characters/main", "characters/family/bennett", "characters/family/hayes", "characters/family/walker", "characters/friends"];
+  const dirs = (await Promise.all(roots.map((root) => repo.list(root))))
+    .flat()
+    .filter((e) => e.type === "dir" && !e.name.startsWith("_"));
   const site = new Set((await repo.list("site/images/characters")).map((e) => e.name));
   const records: CharacterRecord[] = [];
   for (const dir of dirs) {
@@ -74,7 +78,10 @@ export async function loadCharacters(repo: RepoSource): Promise<CharacterRecord[
     const refIndex = (await repo.readText(`${dir.path}/references/index.md`)) ?? "";
     const card = parseCurrentCard(refIndex);
     const canonicalSheet = card ? `${dir.path}/references/${card.replace(/^\.\//, "")}` : null;
-    const files = (await repo.list(`${dir.path}/references`)).filter((e) => e.type === "file" && IMAGE.test(e.name));
+    const folders = [`${dir.path}/references`, `${dir.path}/outfits`, `${dir.path}/outfits/_review`];
+    const files = (await Promise.all(folders.map((folder) => repo.list(folder))))
+      .flat()
+      .filter((e) => e.type === "file" && IMAGE.test(e.name));
     const references: CharacterReferenceFile[] = files.map((f) => ({
       path: f.path,
       name: f.name,
@@ -115,9 +122,9 @@ export interface ResolvedSheet {
 
 /**
  * v2 prompts name the exact sheet to attach ("walker-ethan.png",
- * "children/walker-riley.png", "morgan-hayes-reference-sheet-v7.png").
+ * "children/walker-riley.png", "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png").
  * Files are looked up only inside the configured identity-sheet folders and
- * the characters' own references/ folders, never anywhere else.
+ * the characters' own references/ and outfits/ folders, never anywhere else.
  */
 export async function resolveSheetFiles(
   repo: RepoSource,

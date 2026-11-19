@@ -48,3 +48,9 @@ Next planning focus: the foundation concept, Three Hearts, Different Needs.
 Morgan's older brothers, Nathan "Nate" Hayes and Adrian Hayes, are now registered.
 Their [shared family-history record](../characters/hayes-family-history.md)
 separates family connections from proposed ages, designs, and detailed backstory.
+
+## Supporting Neighbor
+
+[Cassidy "Cass" Bennett](../characters/friends/cassidy-bennett/index.md), 40, Australian,
+was confirmed 2026-11-19 as the next-door neighbor and Ruby's potential friend.
+See her profile for approved facts, unresolved proposals, and reference availability.

@@ -1,5 +1,14 @@
 # Illustrations
 
+## Chapter 001: Porch Self-Timer Family Photo
+
+- [Six-person family photo](walker-family-porch-timer-photo-v1.png).
+- PNG, 1536 x 1024 pixels; created 2026-11-18 for album use.
+- Shows Avery, Riley, Rowan, Ruby, Ethan, Morgan left to right; Ethan has just
+  reached his seat between Ruby and Morgan, prompting shared laughter.
+- [Source boards, prompts, and review notes](../drafts/walker-family-porch-timer-photo-study.md).
+- Status: generated draft awaiting review; not uploaded, deployed, or used to replace a page.
+
 ## Chapter 001 Page 1: Wedding Album Portrait
 
 - [Standalone wedding portrait](ethan-morgan-ruby-wedding-album-page-001-v1.png).

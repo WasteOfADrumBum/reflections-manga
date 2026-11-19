@@ -47,9 +47,9 @@ describe("prompt parser (version 2 layout)", () => {
       "bennett-walker-ruby.png",
       "walker-ethan.png",
       "walker-morgan.png",
-      "morgan-hayes-reference-sheet-v7.png",
-      "ruby-bennett-walker-reference-sheet-v11.png",
-      "ethan-walker-reference-sheet-v5.png",
+      "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png",
+      "ruby-bennett-walker-formal-wedding-dress.png",
+      "ethan-walker-formal-wedding-suit.png",
     ]);
     const p8 = parsePrompt((await raw.readText(`${V2}/page-008-v2.txt`))!, { page: 8, version: 2 });
     expect(p8.referenceOrder.map((r) => r.name)).toEqual(["Morgan", "Avery", "Rowan", "Riley"]);
@@ -74,7 +74,7 @@ describe("prompt parser (version 2 layout)", () => {
   it("names characters from sheet files", () => {
     expect(nameFromSheetFile("walker-ethan.png")).toBe("Ethan");
     expect(nameFromSheetFile("children/bennett-walker-avery.png")).toBe("Avery");
-    expect(nameFromSheetFile("morgan-hayes-reference-sheet-v7.png")).toBe("Morgan");
+    expect(nameFromSheetFile("morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png")).toBe("Morgan");
   });
 
   it.each(Array.from({ length: 30 }, (_, i) => i + 1))("page %i prompt matches script-v2.md word for word", async (page) => {
@@ -163,9 +163,22 @@ describe("character library", () => {
   it("finds the canonical card and keeps other sheets experimental", async () => {
     const chars = await loadCharacters(repo);
     const ethan = chars.find((c) => c.id === "ethan-walker")!;
-    expect(ethan.canonicalSheet).toBe("characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png");
+    expect(chars).toHaveLength(18);
+    expect(new Set(chars.map((c) => c.id)).size).toBe(18);
+    expect(chars.find((c) => c.id === "thomas-bennett")!.profilePath).toBe("characters/family/bennett/thomas-bennett/index.md");
+    expect(chars.find((c) => c.id === "natalie-greene")!.profilePath).toBe("characters/friends/natalie-greene/index.md");
+    expect(ethan.canonicalSheet).toBe("characters/main/ethan-walker/references/ethan-walker-reference-main.png");
     expect(ethan.references[0]!.status).toBe("canonical");
     expect(ethan.references.filter((r) => r.status === "canonical")).toHaveLength(1);
+    expect(ethan.references).toContainEqual(expect.objectContaining({
+      path: "characters/main/ethan-walker/outfits/ethan-walker-formal-wedding-suit.png",
+      status: "experimental",
+    }));
+    const morgan = chars.find((c) => c.id === "morgan-hayes")!;
+    expect(morgan.references).toContainEqual(expect.objectContaining({
+      path: "characters/main/morgan-hayes/outfits/_review/morgan-hayes-review-black-top-olive-shorts-study-a.png",
+      status: "experimental",
+    }));
     expect(ethan.portrait).toBe("/images/characters/ethan-walker-portrait.webp");
     expect(chars.find((c) => c.id === "nathan-hayes")!.canonicalSheet).toBeNull();
   });
@@ -185,13 +198,13 @@ describe("character library", () => {
     const found = await resolveSheetFiles(repo, chars, dirs, [
       "walker-ethan.png",
       "children/walker-riley.png",
-      "morgan-hayes-reference-sheet-v7.png",
+      "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png",
       "missing-person.png",
       "../site/images/x.png",
     ]);
     expect(found.get("walker-ethan.png")).toEqual({ path: "characters/_reference-sheets/main_characters/walker-ethan.png", characterId: "ethan-walker" });
     expect(found.get("children/walker-riley.png")).toEqual({ path: "characters/_reference-sheets/main_characters/children/walker-riley.png", characterId: "riley-hayes-walker" });
-    expect(found.get("morgan-hayes-reference-sheet-v7.png")).toEqual({ path: "characters/morgan-hayes/references/morgan-hayes-reference-sheet-v7.png", characterId: "morgan-hayes" });
+    expect(found.get("morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png")).toEqual({ path: "characters/main/morgan-hayes/outfits/morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png", characterId: "morgan-hayes" });
     expect(found.get("missing-person.png")).toBeNull();
     expect(found.get("../site/images/x.png")).toBeNull();
     expect(characterForSheetName(chars, "bennett-walker-ruby.png")?.id).toBe("ruby-bennett-walker");
@@ -201,5 +214,15 @@ describe("character library", () => {
   it("parses only the Current Card section", () => {
     expect(parseCurrentCard("# X\n## Current Card\n- [a](a-v1.png)\n## Other\n- [b](b-v2.png)")).toBe("a-v1.png");
     expect(parseCurrentCard("# X\n## Other\n- [b](b-v2.png)")).toBeNull();
+  });
+
+  it.each([
+    ["morgan-hayes-reference-main.png", "Morgan"],
+    ["ethan-walker-formal-wedding-suit.png", "Ethan"],
+    ["ruby-bennett-walker-sleepwear-blue.png", "Ruby"],
+    ["cassidy-bennett-swimwear-black-red-bikini.png", "Cassidy"],
+    ["morgan-hayes-review-black-top-olive-shorts-study-a.png", "Morgan"],
+  ])("identifies the character in descriptive attachment %s", (file, name) => {
+    expect(nameFromSheetFile(file)).toBe(name);
   });
 });

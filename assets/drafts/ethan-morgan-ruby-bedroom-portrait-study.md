@@ -8,9 +8,9 @@ or master model sheet approved.
 ## Image and Source References
 
 - [Portrait v1](ethan-morgan-ruby-bedroom-portrait-v1.png): 1536 x 1024 pixels, RGB.
-- [Ethan identity input](../../characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png)
-- [Morgan identity input](../../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png)
-- [Ruby identity input](../../characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png)
+- [Ethan identity input](../../characters/main/ethan-walker/references/ethan-walker-reference-main.png)
+- [Morgan identity input](../../characters/main/morgan-hayes/references/morgan-hayes-reference-main.png)
+- [Ruby identity input](../../characters/main/ruby-bennett-walker/references/ruby-bennett-walker-reference-main.png)
 - [Existing relationship canon](../../continuity/relationships.md)
 - [Intimacy production guidance](../../production/intimacy-and-mature-content.md)
 

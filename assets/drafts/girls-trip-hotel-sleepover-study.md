@@ -20,7 +20,7 @@ The resulting image does not depict the originally requested exposure gags.
 - [Autumn pajamas](girls-trip-hotel-autumn-input.png): unchanged attachment copy.
 - [Morgan pajamas](girls-trip-hotel-morgan-input.png): unchanged attachment copy.
 - [Ruby pajamas](girls-trip-hotel-ruby-input.png): unchanged attachment copy.
-- [Natalie identity](../../characters/_reference-sheets/greene-natalie.png): existing clothed reference;
+- [Natalie identity](../../characters/_reference-sheets/greenes/greene-natalie.png): existing clothed reference;
   hooded woodland fleece onesie and high bun described in the prompt.
 
 ## Continuity and Review

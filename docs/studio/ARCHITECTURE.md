@@ -29,8 +29,8 @@ Dependencies are deliberately few: `openai`, `@vercel/blob`, `@vercel/functions`
    canon decision).
 2. **References.** Identity sheets in the prompt's `REFERENCE ORDER`. Version 2
    prompts name each sheet file (`walker-ethan.png`, `children/walker-riley.png`,
-   `ruby-bennett-walker-reference-sheet-v11.png`); the studio finds them only in
-   the configured sheet folders and the characters' own `references/` folders and
+   `ruby-bennett-walker-formal-wedding-dress.png`); the studio finds them only in
+   the configured sheet folders and the characters' own `references/`, `outfits/`, and `outfits/_review/` folders and
    attaches them in exactly that order. Older v1 prompts name a character and get
    the image under "Current Card" in its `references/index.md`. Then approved
    outfit and location uploads scoped to the chapter/page, then scene pages the

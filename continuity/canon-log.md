@@ -5,6 +5,26 @@
 Newest explicit decisions supersede earlier conflicting labels; older entries
 are preserved as historical records.
 
+### 2026-11-19: Cassidy "Cass" Bennett Confirmed
+
+- User confirmed Cassidy "Cass" Bennett, 40, Australian. Bennett supersedes
+  Collins; no family relationship with Ruby or other Bennett characters is established.
+- Next-door neighbor of the Walker household, elementary school teacher,
+  mother, and fitness enthusiast. Partner, marital status, children, school,
+  teaching grade, and other household details remain undecided.
+- Athletic, curvy build, long brunette hair, freckles, brown eyes, and tattoos
+  matching the supplied fictional sheet. Exact height remains open.
+- Confident, outspoken, friendly, humorous, occasionally impatient. Natural
+  Australian English, with contextual vocabulary and no exaggerated accent.
+- Cass genuinely likes Ruby; Ruby admires her but overwhelm and hesitation
+  impede nurturing the friendship. They are friendly neighbors, not close friends.
+- Earlier height of 168 cm, spouse Daniel, two children aged 12 and 8,
+  third-grade assignment, detailed hobbies, and example encounters remain proposals.
+- [Reference source](../characters/friends/cassidy-bennett/references/index.md) located;
+  local import failed with DNS. No local image, dimensions, or tattoo inspection claimed.
+- This request approves written character facts, not new artwork, chapter events,
+  future outcomes, completed stories, or releases.
+
 ### 2026-11-13: Hayes Brothers Added; Detailed Proposal Kept Separate
 
 - At the user's request to integrate the supplied character notes, added Nathan
@@ -57,10 +77,10 @@ are preserved as historical records.
 The user explicitly approved the four parents and requested the established
 written appearance, personality, wardrobe, and family resemblance directions.
 
-- [Diane Hayes](../characters/diane-hayes/index.md): 58, 5'8" / approximately 173 cm; Morgan's mother.
-- [Thomas "Tom" Bennett](../characters/thomas-bennett/index.md): 60, 5'9" / approximately 175 cm; Ruby and Autumn's father.
-- [Richard "Rick" Walker](../characters/richard-walker/index.md): 65, 5'11" / approximately 180 cm; Ethan's father.
-- [Linda Walker](../characters/linda-walker/index.md): 62, 5'5" / approximately 165 cm; Ethan's mother.
+- [Diane Hayes](../characters/family/hayes/diane-hayes/index.md): 58, 5'8" / approximately 173 cm; Morgan's mother.
+- [Thomas "Tom" Bennett](../characters/family/bennett/thomas-bennett/index.md): 60, 5'9" / approximately 175 cm; Ruby and Autumn's father.
+- [Richard "Rick" Walker](../characters/family/walker/richard-walker/index.md): 65, 5'11" / approximately 180 cm; Ethan's father.
+- [Linda Walker](../characters/family/walker/linda-walker/index.md): 62, 5'5" / approximately 165 cm; Ethan's mother.
 - Diane raised Morgan without a father in the household. Tom raised Ruby and
   Autumn without their mother present. Neither absent parent's identity, fate,
   or reason for absence is established. Preserve Autumn as Ruby's older sister.
@@ -94,7 +114,7 @@ written appearance, personality, wardrobe, and family resemblance directions.
   that the surname is Bennett with two t's. The intermediate single-t spelling
   is superseded. Avery remains Avery Bennett-Walker.
 - Autumn's previously undecided surname is resolved by this explicit choice.
-- Profile directories are now characters/autumn-bennett and
+- Profile directories are now characters/family/bennett/autumn-bennett and
   characters/ruby-bennett-walker. Prompt filenames, Ruby's reference filename,
   site image filenames, character identifiers, and project links match.
 - Renamed existing artwork without changing image bytes. No design, age,

@@ -13,28 +13,26 @@ silently approve every incidental detail or override established written facts.
 
 | Character | Image to supply to the generator |
 |---|---|
-| Ethan | [Sheet](../characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png) |
-| Morgan | [Sheet](../characters/morgan-hayes/references/morgan-hayes-reference-sheet-v1.png) |
-| Ruby | [Sheet](../characters/ruby-bennett-walker/references/ruby-bennett-walker-reference-sheet-v1.png) |
-| Rowan | [Sheet](../characters/rowan-hayes-walker/references/rowan-hayes-walker-reference-sheet-v1.png) |
-| Riley | [Sheet](../characters/riley-hayes-walker/references/riley-hayes-walker-reference-sheet-v1.png) |
-| Avery | [Sheet](../characters/avery-bennett-walker/references/avery-bennett-walker-reference-sheet-v1.png) |
+| Ethan | [Sheet](../characters/main/ethan-walker/references/ethan-walker-reference-main.png) |
+| Morgan | [Sheet](../characters/main/morgan-hayes/references/morgan-hayes-reference-main.png) |
+| Ruby | [Sheet](../characters/main/ruby-bennett-walker/references/ruby-bennett-walker-reference-main.png) |
+| Rowan | [Sheet](../characters/main/rowan-hayes-walker/references/rowan-hayes-walker-reference-main.png) |
+| Riley | [Sheet](../characters/main/riley-hayes-walker/references/riley-hayes-walker-reference-main.png) |
+| Avery | [Sheet](../characters/main/avery-bennett-walker/references/avery-bennett-walker-reference-main.png) |
 
-## Pending Supporting-Character Sheets
+## Supporting-Character Sheets
 
-The user will save these PNGs in the corresponding references folders.
-These are expected filenames; no file presence or approval is asserted here.
+These local main sheets are present and indexed. Main-sheet selection does not approve a master model sheet; consult each reference record and outfit catalog.
 
-| Character | References folder | Expected PNG filename |
+| Character | References folder | Local main PNG filename |
 |---|---|---|
-| Cal | [Folder record](../characters/caleb-mercer/references/index.md) | caleb-mercer-reference-sheet-v1.png |
-| Nat | [Folder record](../characters/natalie-greene/references/index.md) | natalie-greene-reference-sheet-v1.png |
-| Autumn Bennett | [Folder record](../characters/autumn-bennett/references/index.md) | autumn-bennett-reference-sheet-v1.png |
-| Ellie | [Folder record](../characters/ellie-greene/references/index.md) | ellie-greene-reference-sheet-v1.png |
-| Owen | [Folder record](../characters/owen-greene/references/index.md) | owen-greene-reference-sheet-v1.png |
+| Cal | [Folder record](../characters/friends/caleb-mercer/references/index.md) | caleb-mercer-reference-main.png |
+| Nat | [Folder record](../characters/friends/natalie-greene/references/index.md) | natalie-greene-reference-main.png |
+| Autumn Bennett | [Folder record](../characters/family/bennett/autumn-bennett/references/index.md) | autumn-bennett-reference-main.png |
+| Ellie | [Folder record](../characters/friends/ellie-greene/references/index.md) | ellie-greene-reference-main.png |
+| Owen | [Folder record](../characters/friends/owen-greene/references/index.md) | owen-greene-reference-main.png |
 
-After a file is saved, verify its actual dimensions and version, inspect the
-image, and record its approval state before selecting it as a canonical reference.
+The complete [asset manifest](../characters/asset-manifest.json) records all 18 characters, original paths, dimensions, hashes, and unresolved classifications. Attach a named outfit from `characters/<group>/<id>/outfits/` when the scene needs it. Reserve version suffixes for documented revisions of the same named sheet.
 
 ## What a Reference Actually Requires
 
@@ -117,3 +115,11 @@ that specific conflict rather than choosing a new permanent trait silently.
 When requested, create a separate full-family height lineup from the six
 individual sheets. Use one floor plane, one camera setup, and the written
 heights. Treat it as a draft until reviewed; no lineup is created by this guide.
+
+## Cass: Required Supplied Sheet
+
+[Cassidy "Cass" Bennett](../characters/friends/cassidy-bennett/references/index.md) has
+an identified external source sheet but no imported repository PNG yet. Obtain
+and attach that actual fictional sheet before using her reference prompt.
+Do not reconstruct tattoos or facial identity from text. Verify dimensions,
+tattoo continuity, and checksum when the source is imported.

@@ -99,17 +99,17 @@ The final two pages remain unscripted; no new art approval is inferred.
 
 ## Supporting-Cast Decisions: 2026-11-13
 
-- [Cal](../characters/caleb-mercer/index.md): Final hair/eye colors,
+- [Cal](../characters/friends/caleb-mercer/index.md): Final hair/eye colors,
   haircut, complexion, recovery specifics, occupation, home, romantic status,
   and how he met Ethan. Smoking and caffeine habits remain unselected alternatives.
-- [Nat](../characters/natalie-greene/index.md): Final hair/eye colors, hairstyle,
+- [Nat](../characters/friends/natalie-greene/index.md): Final hair/eye colors, hairstyle,
   complexion, glasses design, occupation, home, romantic status, hobbies, and
   how she met Morgan. Motherhood does not establish another parent or custody.
-- [Autumn Bennett](../characters/autumn-bennett/index.md): Exact age, final hair shade/
+- [Autumn Bennett](../characters/family/bennett/autumn-bennett/index.md): Exact age, final hair shade/
   length, eye color, complexion/freckles, occupation, home, romantic status,
   accessories, and sister backstory. Ruby's height remains a draft measurement.
-- [Ellie](../characters/ellie-greene/index.md) and
-  [Owen](../characters/owen-greene/index.md): Heights, full visual/personality/
+- [Ellie](../characters/friends/ellie-greene/index.md) and
+  [Owen](../characters/friends/owen-greene/index.md): Heights, full visual/personality/
   wardrobe approval, birthdays, schools, other parentage, household, and any
   friendships with Rowan/Riley. Owen's exact age follows Riley's open age target.
 - Voices, relationship histories, selected interests, and future chapter
@@ -138,8 +138,8 @@ the unnamed father who left when Morgan was 13. See the
   is established, and neither direction explains the other or family withdrawal.
 - Establish current family contact, residences, partners/children if any,
   voices, uncle bonds, and chapter introductions only when needed.
-- Draft [Nate](../characters/nathan-hayes/prompts/nathan-hayes-reference-sheet.md)
-  and [Adrian](../characters/adrian-hayes/prompts/adrian-hayes-reference-sheet.md)
+- Draft [Nate](../characters/family/hayes/nathan-hayes/prompts/nathan-hayes-reference-sheet.md)
+  and [Adrian](../characters/family/hayes/adrian-hayes/prompts/adrian-hayes-reference-sheet.md)
   reference-sheet prompts are prepared. Review future output before registering
   or approving any model sheet; no local reference images exist for either brother.
   External inspiration links from the supplied notes are not approved references.
@@ -179,3 +179,7 @@ Vehicle designs and precise cabinet/sewing/journal designs remain open. No journ
 contents are authorized. Review the 021–030 execution before canon approval;
 final 031–032 staging, lettering, same-day timing and any teaser remain open.
 Keep the approved closing line exact, without inventing its continuation.
+
+## Outfit Classification Review: 2026-11-19
+
+Seven sheets remain in `outfits/_review/`: Morgan’s two black-top/olive-shorts studies, her black-bra/olive-shorts set and plaid set, plus blue/green/blue-red bra-and-shorts sets for Autumn, Natalie, and Cass. Intended activewear/sleepwear/lingerie usage remains open. Morgan’s two studies also need revision lineage confirmed; neither supersedes the other. See the [linked review list and mapping](../production/character-asset-organization.md#unresolved-decisions). Asset organization changes no relationship or story continuity.

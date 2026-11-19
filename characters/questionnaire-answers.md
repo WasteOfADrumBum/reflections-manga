@@ -29,8 +29,8 @@ the original A-D tables. Artwork and model sheets are not approved by these answ
 | Difficulty | Acts before thinking |
 | Learned family habit | Morgan's dry humor |
 
-See [appearance](rowan-hayes-walker/appearance.md), [personality](rowan-hayes-walker/personality.md),
-and [wardrobe](rowan-hayes-walker/wardrobe.md).
+See [appearance](main/rowan-hayes-walker/appearance.md), [personality](main/rowan-hayes-walker/personality.md),
+and [wardrobe](main/rowan-hayes-walker/wardrobe.md).
 
 ## Riley Walker, Approximately 6
 
@@ -52,8 +52,8 @@ and [wardrobe](rowan-hayes-walker/wardrobe.md).
 | Difficulty | Wants to do it all alone |
 | Learned family habit | Morgan's playful confidence |
 
-See [appearance](riley-hayes-walker/appearance.md), [personality](riley-hayes-walker/personality.md),
-and [wardrobe](riley-hayes-walker/wardrobe.md). Her exact age remains the existing
+See [appearance](main/riley-hayes-walker/appearance.md), [personality](main/riley-hayes-walker/personality.md),
+and [wardrobe](main/riley-hayes-walker/wardrobe.md). Her exact age remains the existing
 approximately-six target; no age-confirmation question was asked for Riley.
 
 ## Avery Bennett Walker, 7 Confirmed
@@ -89,8 +89,8 @@ This answer is fictional character development supplied for Avery. Exact
 alternative methods are not established. Do not infer inability to speak,
 intelligence, support level, aggression, or willingness to be touched.
 
-See [appearance](avery-bennett-walker/appearance.md), [personality and communication](avery-bennett-walker/personality.md),
-and [wardrobe](avery-bennett-walker/wardrobe.md).
+See [appearance](main/avery-bennett-walker/appearance.md), [personality and communication](main/avery-bennett-walker/personality.md),
+and [wardrobe](main/avery-bennett-walker/wardrobe.md).
 
 ## Remaining Production Work
 
