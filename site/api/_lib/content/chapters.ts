@@ -1,4 +1,5 @@
 import type { RepoSource } from "../repo/source.js";
+import { type CharacterRecord, loadCharacters } from "./characters.js";
 import { type ChapterConfig, type StudioConfig, pad3, parsePageRanges } from "./config.js";
 import { type ParsedPrompt, parsePrompt, parsePromptFilename } from "./prompt-parser.js";
 import { type ScriptPage, parseScript } from "./script-parser.js";
@@ -9,12 +10,56 @@ export interface RepoPageInfo {
   promptVersion: number | null;
   sourceImagePath: string | null;
   publishedSrc: string | null;
+  /** Artwork already exists (manuscript PNG or reader page). New versions are still allowed. */
+  hasArt: boolean;
+  /** Only pages listed in lockedPages are locked; existing artwork no longer locks a page. */
   locked: boolean;
   lockReason: string | null;
   prepared: boolean;
   unpreparedReason: string | null;
   scriptTitle: string | null;
   plot: string | null;
+  /** One-line beat from the chapter page guide, when there is one. */
+  beat: string | null;
+}
+
+export interface ArcInfo {
+  id: string;
+  number: number;
+  title: string;
+  focus: string | null;
+  indexPath: string;
+  chapterIds: string[];
+}
+
+/** Text of a "## Heading" section in a markdown file, with blank-line paragraphs joined. */
+export function markdownSection(md: string, heading: RegExp): string | null {
+  const lines = md.split("\n");
+  const start = lines.findIndex((l) => /^##\s/.test(l) && heading.test(l.replace(/^##\s+/, "")));
+  if (start < 0) return null;
+  const body: string[] = [];
+  for (const l of lines.slice(start + 1)) {
+    if (/^#{1,2}\s/.test(l)) break;
+    body.push(l);
+  }
+  const text = body
+    .join("\n")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .split(/\n\s*\n/)
+    .map((p) => p.replace(/\s*\n\s*/g, " ").trim())
+    .filter((p) => p && !p.startsWith("|"))
+    .join("\n\n");
+  return text || null;
+}
+
+/** "| [001](...) | The empty space | ... |" rows of a page guide -> page -> beat. */
+export function pageBeats(guide: string): Map<number, string> {
+  const out = new Map<number, string>();
+  for (const line of guide.split("\n")) {
+    const m = /^\|\s*\[?(\d{3})\]?(?:\([^)]*\))?\s*\|\s*([^|]+?)\s*\|/.exec(line);
+    if (m) out.set(Number(m[1]), m[2]!.trim());
+  }
+  return out;
 }
 
 export interface ChapterInventory {
@@ -83,6 +128,8 @@ export function matchBracket(src: string, openIndex: number, open: string, close
 
 export class ContentService {
   private scriptCache = new Map<string, Promise<Map<number, ScriptPage>>>();
+  private charactersCache: Promise<CharacterRecord[]> | null = null;
+  private beatsCache = new Map<string, Promise<Map<number, string>>>();
   constructor(
     private readonly repo: RepoSource,
     private readonly config: StudioConfig,
@@ -122,14 +169,82 @@ export class ContentService {
     return p;
   }
 
+  /** Page guides in a chapter folder ("page-guide-v2.md" preferred over "page-guide.md"). */
+  async pageGuides(chapter: ChapterConfig): Promise<string[]> {
+    const files = (await this.repo.list(chapter.storyDir)).filter((e) => e.type === "file" && /^page-guide[\w.-]*\.md$/.test(e.name)).map((e) => e.path);
+    const rev = chapter.revisionLabel ? files.filter((f) => f.includes(`-${chapter.revisionLabel}.`)) : [];
+    return rev.length ? rev : files;
+  }
+
+  beats(chapter: ChapterConfig): Promise<Map<number, string>> {
+    let p = this.beatsCache.get(chapter.storyDir);
+    if (!p) {
+      p = this.pageGuides(chapter).then(async (files) => {
+        const merged = new Map<number, string>();
+        for (const f of files) for (const [k, v] of pageBeats((await this.repo.readText(f)) ?? "")) if (!merged.has(k)) merged.set(k, v);
+        return merged;
+      });
+      this.beatsCache.set(chapter.storyDir, p);
+    }
+    return p;
+  }
+
+  /** The character library, read once per content refresh (about a minute). */
+  characters(): Promise<CharacterRecord[]> {
+    this.charactersCache ??= (async () => {
+      const guides = (await Promise.all(Object.values(this.config.chapters).map((c) => this.pageGuides(c)))).flat();
+      return loadCharacters(this.repo, { labelDocs: guides });
+    })().catch((err) => {
+      this.charactersCache = null;
+      throw err;
+    });
+    return this.charactersCache;
+  }
+
+  /** Arcs from stories/arc-NN/index.md, with the chapters configured for each. */
+  async arcs(): Promise<ArcInfo[]> {
+    const dirs = (await this.repo.list("stories")).filter((e) => e.type === "dir" && /^arc-\d{2}$/.test(e.name));
+    const arcs = await Promise.all(
+      dirs.map(async (d) => {
+        const md = (await this.repo.readText(`${d.path}/index.md`)) ?? "";
+        const h1 = /^#\s+(.+)$/m.exec(md)?.[1]?.trim() ?? d.name;
+        const number = Number(d.name.slice(4));
+        return {
+          id: d.name,
+          number,
+          title: h1.replace(/^Arc\s+\d+\s*[:·-]\s*/i, "").trim(),
+          focus: markdownSection(md, /^Focus/i),
+          indexPath: `${d.path}/index.md`,
+          chapterIds: this.chapterIds().filter((id) => this.config.chapters[id]!.arcId === d.name),
+        } satisfies ArcInfo;
+      }),
+    );
+    for (const id of this.chapterIds()) {
+      const c = this.config.chapters[id]!;
+      if (!arcs.some((a) => a.id === c.arcId)) arcs.push({ id: c.arcId, number: c.arcNumber, title: c.arcTitle ?? c.arcId, focus: null, indexPath: "", chapterIds: [id] });
+    }
+    return arcs.sort((a, b) => a.number - b.number);
+  }
+
+  /** Chapter logline from outline.md ("## Logline"), else the outline's first paragraph. */
+  async chapterSynopsis(chapterId: string): Promise<{ synopsis: string | null; outlinePath: string | null }> {
+    const c = this.chapterConfig(chapterId);
+    if (!c) return { synopsis: null, outlinePath: null };
+    const path = `${c.storyDir}/outline.md`;
+    const md = await this.repo.readText(path);
+    if (!md) return { synopsis: null, outlinePath: null };
+    return { synopsis: markdownSection(md, /^Logline/i) ?? markdownSection(md, /^(Summary|Synopsis|Premise)/i), outlinePath: path };
+  }
+
   async inventory(chapterId: string): Promise<ChapterInventory> {
     const config = this.chapterConfig(chapterId);
     if (!config) throw new Error(`Unknown chapter ${chapterId}`);
-    const [prompts, sourceEntries, chaptersJs, script] = await Promise.all([
+    const [prompts, sourceEntries, chaptersJs, script, beats] = await Promise.all([
       this.promptFiles(config),
       this.repo.list(`${config.storyDir}/${config.sourcePagePattern.split("/").slice(0, -1).join("/")}`),
       this.repo.readText("site/js/chapters.js"),
       this.script(config),
+      this.beats(config),
     ]);
     const sourceNames = new Set(sourceEntries.map((e) => e.name));
     const published = publishedPagesFromChaptersJs(chaptersJs ?? "", chapterId);
@@ -141,14 +256,8 @@ export class ContentService {
       const sourceName = sourceRel.split("/").pop() ?? "";
       const sourceImagePath = sourceNames.has(sourceName) ? `${config.storyDir}/${sourceRel}` : null;
       const prompt = prompts.get(page);
-      const isLocked = locked.has(page) || sourceImagePath != null || published.has(page);
-      const lockReason = locked.has(page)
-        ? config.lockReason
-        : sourceImagePath
-          ? "Finished artwork for this page is already in the repository."
-          : published.has(page)
-            ? "This page is already published in the reader."
-            : null;
+      const isLocked = locked.has(page);
+      const lockReason = isLocked ? config.lockReason : null;
       const prepared = !unprepared.has(page) && prompt != null && script.has(page);
       pages.push({
         page,
@@ -156,12 +265,14 @@ export class ContentService {
         promptVersion: prompt?.version ?? null,
         sourceImagePath,
         publishedSrc: published.get(page) ?? null,
+        hasArt: sourceImagePath != null || published.has(page),
         locked: isLocked,
         lockReason: isLocked ? lockReason : null,
         prepared,
         unpreparedReason: prepared ? null : unprepared.has(page) ? config.unpreparedReason : !prompt ? "No page prompt file exists yet." : "The script has no entry for this page.",
         scriptTitle: script.get(page)?.title ?? null,
         plot: script.get(page)?.plot ?? null,
+        beat: beats.get(page) ?? null,
       });
     }
     return { id: chapterId, config, pages, scriptPath: `${config.storyDir}/${config.scriptFile}` };

@@ -7,6 +7,7 @@ import type { JobPageRow, VersionRow } from "./types.js";
 
 export type PageDisplayStatus =
   | "published"
+  | "has_art"
   | "locked"
   | "approved"
   | "queued"
@@ -20,21 +21,25 @@ export type PageDisplayStatus =
   | "ready"
   | "unprepared";
 
+/** Short on purpose: these sit in small page tiles. */
 export const STATUS_LABELS: Record<PageDisplayStatus, string> = {
   published: "Published",
+  has_art: "Has art",
   locked: "Locked",
   approved: "Approved",
   queued: "Queued",
   generating: "Generating",
-  checking: "Checking quality",
+  checking: "Checking",
   retrying: "Retrying",
-  awaiting_review: "Awaiting review",
-  needs_attention: "Needs a closer look",
+  awaiting_review: "To review",
+  needs_attention: "Check closely",
   failed: "Failed",
   blocked: "Blocked",
-  ready: "Ready to generate",
+  ready: "Ready",
   unprepared: "Not prepared",
 };
+
+export const DONE_STATUSES: PageDisplayStatus[] = ["published", "has_art", "approved"];
 
 export async function chapterOverview(deps: StudioDeps, chapterId: string) {
   const c = await content(deps);
@@ -50,13 +55,16 @@ export async function chapterOverview(deps: StudioDeps, chapterId: string) {
     const approved = vs.find((v) => v.review_status === "approved") ?? null;
     const latest = vs[0] ?? null;
     const jp = activeJobPages.find((j) => j.page === p.page) ?? null;
+    const replacementPending = approved != null && approved.publication_status === "unpublished";
     let status: PageDisplayStatus;
-    if (p.publishedSrc) status = "published";
-    else if (p.locked) status = "locked";
-    else if (approved) status = "approved";
+    if (p.locked) status = "locked";
     else if (jp && ["queued", "running", "paused"].includes(jp.job_status) && ["queued", "generating", "validating", "retry_wait"].includes(jp.status)) {
       status = jp.status === "generating" ? "generating" : jp.status === "validating" || (jp.status === "queued" && jp.phase === "validate") ? "checking" : jp.status === "retry_wait" ? "retrying" : "queued";
-    } else if (latest && latest.review_status === "awaiting_review") status = latest.qa_status === "pass" ? "awaiting_review" : "needs_attention";
+    } else if (latest && latest.review_status === "awaiting_review") status = latest.qa_status === "pass" || latest.source === "upload" ? "awaiting_review" : "needs_attention";
+    else if (replacementPending) status = "approved";
+    else if (p.publishedSrc) status = "published";
+    else if (p.sourceImagePath) status = "has_art";
+    else if (approved) status = "approved";
     else if (jp?.status === "blocked") status = "blocked";
     else if (jp?.status === "failed" || (latest && latest.review_status === "auto_rejected")) status = "failed";
     else if (!p.prepared) status = "unprepared";
@@ -76,7 +84,7 @@ export async function chapterOverview(deps: StudioDeps, chapterId: string) {
       publicationStatus: approved?.publication_status ?? null,
     };
   });
-  const done = pages.filter((p) => ["published", "locked", "approved"].includes(p.status)).length;
+  const done = pages.filter((p) => DONE_STATUSES.includes(p.status) || (p.status === "awaiting_review" && p.hasArt)).length;
   return {
     id: chapterId,
     title: inv.config.title,
@@ -84,6 +92,9 @@ export async function chapterOverview(deps: StudioDeps, chapterId: string) {
     arcNumber: inv.config.arcNumber,
     plannedPages: inv.config.plannedPages,
     completionPercent: Math.round((done / inv.config.plannedPages) * 100),
+    doneCount: done,
+    revisionLabel: inv.config.revisionLabel,
+    arcId: inv.config.arcId,
     counts: Object.fromEntries(Object.keys(STATUS_LABELS).map((k) => [k, pages.filter((p) => p.status === k).length])),
     pages,
     scriptPath: inv.scriptPath,
@@ -95,7 +106,7 @@ export async function dashboard(deps: StudioDeps) {
   const chapters = [];
   for (const id of c.chapterIds()) {
     const o = await chapterOverview(deps, id);
-    chapters.push({ id: o.id, title: o.title, arcTitle: o.arcTitle, plannedPages: o.plannedPages, completionPercent: o.completionPercent, counts: o.counts });
+    chapters.push({ id: o.id, title: o.title, arcTitle: o.arcTitle, plannedPages: o.plannedPages, completionPercent: o.completionPercent, doneCount: o.doneCount, counts: o.counts });
   }
   const jobs = await deps.db.query(
     `SELECT j.id, j.chapter_id, j.status, j.page_numbers, j.budget_usd, j.spent_estimate_usd, j.spent_reported_usd, j.is_test, j.error, j.created_at, j.finished_at,

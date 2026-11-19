@@ -82,9 +82,13 @@ It uses GitHub Actions minutes only while a job runs (private repositories get
    This is the single controlled real request. Nothing paid happens before you confirm it.
 4. Review the page under **Review**. Approving a page from the test job unlocks
    unattended multi-page jobs.
-5. Press **Generate chapter** to queue every ready page (v2 pages 003–030 for Chapter 001).
-   Check the estimate and set the job budget on that screen; the default $10 cap stops the
-   job early if the whole chapter would cost more.
+5. Press **Generate selected pages** to queue every page without art. Check the estimate and
+   set the run budget on that screen; the default $10 cap stops the run early if the whole
+   chapter would cost more. Generation is billed to OpenAI API credit, separate from ChatGPT
+   Plus. To pick outfits or edit a prompt for one run, open the page from **Story** instead.
+
+Database changes apply automatically on the first request after a deploy (migration 2 adds
+per-page run options, uploads, outfit names and album photos). No manual step is needed.
 
 ## Local development
 

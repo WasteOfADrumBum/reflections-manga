@@ -19,9 +19,10 @@ export function formatEntry(e: ReaderPageEntry): string {
 /**
  * Inserts reader entries into the chapter's `pages: [...]` array in
  * site/js/chapters.js, keeping page order. Existing entries are never changed
- * or removed; a page that is already listed is refused.
+ * or removed; a page that is already listed is refused unless the owner chose
+ * to replace it (opts.replace).
  */
-export function addPagesToChaptersJs(js: string, chapterId: string, entries: ReaderPageEntry[]): string {
+export function addPagesToChaptersJs(js: string, chapterId: string, entries: ReaderPageEntry[], opts: { replace?: Set<number> } = {}): string {
   const block = findChapterBlock(js, chapterId);
   if (!block) throw new Error(`Chapter ${chapterId} is not in site/js/chapters.js.`);
   const pagesKey = /\bpages:\s*\[/g;
@@ -47,9 +48,11 @@ export function addPagesToChaptersJs(js: string, chapterId: string, entries: Rea
     i = end + 1;
   }
   for (const e of entries) {
-    if (existing.some((x) => x.page === e.page)) throw new Error(`Page ${String(e.page).padStart(3, "0")} is already listed in the reader.`);
+    if (!opts.replace?.has(e.page) && existing.some((x) => x.page === e.page)) throw new Error(`Page ${String(e.page).padStart(3, "0")} is already listed in the reader.`);
   }
-  const merged = [...existing, ...entries.map((e) => ({ page: e.page, text: formatEntry(e) }))].sort((a, b) => (a.page ?? 0) - (b.page ?? 0));
+  // A replacement swaps that page's entry (new alt text and size); every other entry stays as written.
+  const kept = existing.filter((x) => !(x.page != null && opts.replace?.has(x.page) && entries.some((e) => e.page === x.page)));
+  const merged = [...kept, ...entries.map((e) => ({ page: e.page, text: formatEntry(e) }))].sort((a, b) => (a.page ?? 0) - (b.page ?? 0));
 
   const indentMatch = /\n(\s*)\{/.exec(inner);
   const indent = indentMatch?.[1] ?? "      ";

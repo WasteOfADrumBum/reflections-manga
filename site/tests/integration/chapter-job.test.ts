@@ -16,17 +16,17 @@ describe("simulated chapter 001 generation (mocked OpenAI)", () => {
     await h.db.close?.();
   });
 
-  it("protects v2 pages that already have art, leaves the rest of the 30-page v2 chapter ready and invents nothing past 030", async () => {
+  it("shows v2 pages that already have art, leaves the rest of the 30-page v2 chapter ready and invents nothing past 030", async () => {
     const { status, data } = await call("GET", "/chapters/001");
     expect(status).toBe(200);
     expect(data.pages).toHaveLength(30);
     const pages = data.pages as { page: number; status: string; sourceImagePath: string | null; publishedSrc: string | null }[];
     const byPage = new Map(pages.map((p) => [p.page, p]));
     expect(byPage.get(1)?.status).toBe("published");
-    expect(byPage.get(2)).toMatchObject({ status: "locked", sourceImagePath: "stories/arc-01/chapter-001/pages/A01-C001-P002.png" });
+    expect(byPage.get(2)).toMatchObject({ status: "has_art", sourceImagePath: "stories/arc-01/chapter-001/pages/A01-C001-P002.png" });
     for (const p of pages) {
       if (p.publishedSrc) expect(p.status, `page ${p.page}`).toBe("published");
-      else if (p.sourceImagePath) expect(p.status, `page ${p.page}`).toBe("locked");
+      else if (p.sourceImagePath) expect(p.status, `page ${p.page}`).toBe("has_art");
       else expect(p.status, `page ${p.page}`).toBe("ready");
     }
     expect(byPage.get(30)?.status).toBe("ready");

@@ -129,7 +129,7 @@ describe("authentication and authorization", () => {
   });
 });
 
-describe("existing artwork is never overwritten", () => {
+describe("existing artwork is protected until the owner chooses a replacement", () => {
   let h: Harness;
   let call: ReturnType<typeof api>;
   beforeAll(async () => {
@@ -139,15 +139,10 @@ describe("existing artwork is never overwritten", () => {
   });
   afterAll(async () => h.db.close?.());
 
-  it.each([1, 2])("refuses to queue page %i, which already has v2 artwork", async (page) => {
-    const res = await call("POST", "/jobs", { chapterId: "001", pages: [page], confirmPaid: true });
-    expect(res.status).toBe(409);
-    expect(JSON.stringify(res.data)).toMatch(/locked|already/i);
-  });
-
-  it("refuses to regenerate a locked page", async () => {
-    const res = await call("POST", "/chapters/001/pages/2/regenerate", { confirmPaid: true });
-    expect(res.status).toBe(409);
+  it("allows a new version of a page that already has artwork, without touching that artwork", async () => {
+    const res = await call("POST", "/estimate", { chapterId: "001", pages: [1, 2] });
+    expect(res.status).toBe(200);
+    expect(res.data.eligibility.every((e: { eligible: boolean }) => e.eligible)).toBe(true);
   });
 
   it("refuses pages past the end of the 30-page v2 chapter instead of inventing them", async () => {
@@ -170,23 +165,19 @@ describe("existing artwork is never overwritten", () => {
 
   it("blocks a queued page that became locked before the worker reached it", async () => {
     await call("POST", "/jobs", { chapterId: "001", pages: [21], confirmPaid: true });
-    // Simulate finished artwork for page 021 landing in the repository mid-job.
-    const repo = h.deps.repo;
-    const realList = repo.list.bind(repo);
-    repo.list = async (dir: string) => {
-      const entries = await realList(dir);
-      if (dir.endsWith("chapter-001/pages")) entries.push({ name: "A01-C001-P021.png", path: `${dir}/A01-C001-P021.png`, type: "file" });
-      return entries;
-    };
+    // Simulate the owner adding page 021 to lockedPages mid-job.
     const { content } = await import("../../api/_lib/context.js");
-    await content(h.deps, true);
+    const c = await content(h.deps, true);
+    const cfg = c.chapterConfig("001")!;
+    cfg.lockedPages = "21";
+    cfg.lockReason = "Locked by the owner.";
     await drain(h);
-    repo.list = realList;
+    cfg.lockedPages = "";
     await content(h.deps, true);
     expect(h.images.calls).toHaveLength(0);
     const jp = (await h.db.query<{ status: string; last_error: string }>(`SELECT status, last_error FROM job_pages`))[0]!;
     expect(jp.status).toBe("blocked");
-    expect(jp.last_error).toMatch(/already in the repository/);
+    expect(jp.last_error).toMatch(/Locked by the owner/);
   });
 
   it("never overwrites an existing blob", async () => {

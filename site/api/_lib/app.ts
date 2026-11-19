@@ -19,7 +19,6 @@ import {
 } from "./auth/auth.js";
 import type { StudioDeps } from "./context.js";
 import { content } from "./context.js";
-import { loadCharacters } from "./content/characters.js";
 import { pad3 } from "./content/config.js";
 import { ensureMigrated } from "./db/schema.js";
 import { one } from "./db/client.js";
@@ -34,6 +33,7 @@ import {
   jobDetail,
   listJobs,
   pauseJob,
+  pageRunOptionsSchema,
   raiseBudget,
   regeneratePage,
   resumeJob,
@@ -44,7 +44,9 @@ import {
 } from "./engine/jobs.js";
 import { chapterOverview, dashboard } from "./engine/overview.js";
 import type { VersionRow } from "./engine/types.js";
-import { noteApproval, planPage, runWorkerStep } from "./engine/worker.js";
+import { noteApproval, planPage, runWorkerStep, studioCharacters } from "./engine/worker.js";
+import { costCard, registerLibraryRoutes, versionSummary } from "./library.js";
+import { MANIFEST_PATH, OUTFIT_CATEGORIES, parseManifest } from "./content/characters.js";
 import { errorResponse, json, readJson, Router, SECURITY_HEADERS } from "./http.js";
 import { thumbnail, toReaderWebp, validateUpload } from "./images.js";
 import { altTextFromScript } from "./publish/alt-text.js";
@@ -69,11 +71,17 @@ const chapterParam = (s: string) => {
   return s;
 };
 
-/** Repository images the studio may display: character references and manuscript pages. */
+/** Repository images the studio may display: character sheets, manuscript pages and public site images. */
 const REPO_IMAGE_ALLOW = [
-  /^characters\/(?:main|friends|family\/(?:bennett|hayes|walker))\/[a-z0-9-]+\/(?:references|outfits(?:\/_review)?)\/[\w.-]+\.(png|webp|jpe?g)$/i,
-  /^stories\/arc-\d{2}\/chapter-\d{3}\/pages\/[\w.-]+\.(png|webp)$/i,
+  // A character's own sheets: characters/main/<id>/..., characters/family/<family>/<id>/..., characters/friends/<id>/...
+  /^characters\/(?:[a-z0-9-]+\/){1,3}(?:references|outfits(?:\/_review)?)\/[\w.-]+\.(png|webp|jpe?g)$/i,
+  /^characters\/_reference-sheets\/(?:[\w-]+\/)*[\w.-]+\.(png|webp|jpe?g)$/i,
+  /^stories\/arc-\d{2}\/chapter-\d{3}\/pages\/(?:version_\d+\/)?[\w.-]+\.(png|webp)$/i,
+  /^site\/(?:images|pages)\/[\w./-]+\.(png|webp|jpe?g)$/i,
 ];
+const THUMB_WIDTHS = new Set([160, 320, 480, 960]);
+
+const thumbCache = new Map<string, Buffer>();
 
 export function createApp(deps: StudioDeps) {
   const r = new Router();
@@ -177,9 +185,11 @@ export function createApp(deps: StudioDeps) {
   // ---- characters and references ----
   r.add("GET", "/characters", async ({ req }) => {
     await requireAdmin(req);
-    const chars = await loadCharacters(deps.repo);
+    const chars = await studioCharacters(deps);
     const uploads = await deps.db.query(`SELECT id, character_id, chapter_id, pages, label, kind, status, width, height, bytes, created_at FROM reference_assets ORDER BY created_at DESC`);
-    return json({ characters: chars, uploads });
+    const manifest = parseManifest(await deps.repo.readText(MANIFEST_PATH));
+    const groups = Object.entries(manifest?.characterGroups ?? {}).map(([key, g]) => ({ key, label: g.label }));
+    return json({ characters: chars, uploads, publisherReady: !!deps.publisher, groups, categories: manifest?.categories?.length ? manifest.categories : OUTFIT_CATEGORIES });
   });
 
   r.add("GET", "/repo-image", async ({ req, url }) => {
@@ -191,10 +201,23 @@ export function createApp(deps: StudioDeps) {
       throw badRequest("Invalid path.");
     }
     if (!REPO_IMAGE_ALLOW.some((re) => re.test(path))) throw notFound();
-    const data = await deps.repo.readBinary(path);
-    if (!data) throw notFound();
-    const thumb = url.searchParams.get("thumb") === "1";
-    return image(thumb ? await thumbnail(data, 480) : data, thumb ? "image/webp" : path.endsWith(".webp") ? "image/webp" : path.match(/\.jpe?g$/i) ? "image/jpeg" : "image/png");
+    const thumbParam = url.searchParams.get("thumb");
+    const width = thumbParam === "1" ? 480 : Number(url.searchParams.get("w") ?? 0);
+    const thumb = THUMB_WIDTHS.has(width);
+    const cacheKey = `${path}@${width}`;
+    let out = thumb ? thumbCache.get(cacheKey) : undefined;
+    if (!out) {
+      const data = await deps.repo.readBinary(path);
+      if (!data) throw notFound();
+      out = thumb ? await thumbnail(data, width) : data;
+      if (thumb) {
+        thumbCache.set(cacheKey, out);
+        if (thumbCache.size > 300) thumbCache.delete(thumbCache.keys().next().value as string);
+      }
+    }
+    // Repository images change only through commits; a short private cache keeps
+    // the grids fast without hiding a merged change for long.
+    return image(out, thumb ? "image/webp" : path.endsWith(".webp") ? "image/webp" : path.match(/\.jpe?g$/i) ? "image/jpeg" : "image/png", { "Cache-Control": "private, max-age=600" });
   });
 
   r.add("POST", "/references", async ({ req }) => {
@@ -223,7 +246,7 @@ export function createApp(deps: StudioDeps) {
     }
     if (meta.data.kind !== "location" && !meta.data.characterId) throw badRequest("Choose the character this reference belongs to.");
     if (meta.data.characterId) {
-      const chars = await loadCharacters(deps.repo);
+      const chars = await studioCharacters(deps);
       if (!chars.some((c) => c.id === meta.data.characterId)) throw badRequest("Unknown character.");
     }
     const id = deps.newId();
@@ -279,10 +302,10 @@ export function createApp(deps: StudioDeps) {
     const id = chapterParam(params.id!);
     const c = await content(deps);
     if (!c.chapterConfig(id)) throw notFound("Unknown chapter.");
-    const overview = await chapterOverview(deps, id);
+    const [overview, syn] = await Promise.all([chapterOverview(deps, id), c.chapterSynopsis(id)]);
     const settings = { defaults: c.studioConfig.generation, overrides: await chapterOverrides(deps, id) };
     const job = await one(deps.db, `SELECT * FROM jobs WHERE chapter_id = $1 ORDER BY created_at DESC LIMIT 1`, [id]);
-    return json({ ...overview, settings, latestJob: job ?? null, realGenerationVerified: await getStudioSetting(deps, "real_generation_verified", false), generationEnabled: deps.generationEnabled });
+    return json({ ...overview, synopsis: syn.synopsis, settings, latestJob: job ?? null, realGenerationVerified: await getStudioSetting(deps, "real_generation_verified", false), generationEnabled: deps.generationEnabled });
   });
 
   r.add("PUT", "/chapters/:id/settings", async ({ req, params }) => {
@@ -297,14 +320,24 @@ export function createApp(deps: StudioDeps) {
     const page = pageNumber(params.page!);
     const c = await content(deps);
     const settings = { ...c.studioConfig.generation, ...(await chapterOverrides(deps, id)) };
-    const planned = await planPage(deps, id, page, settings);
-    const versions = await deps.db.query<VersionRow>(`SELECT * FROM page_versions WHERE chapter_id = $1 AND page = $2 ORDER BY created_at DESC`, [id, page]);
-    const continuity = await one(deps.db, `SELECT state, source, updated_at FROM continuity_states WHERE chapter_id = $1 AND page = $2`, [id, page]);
+    const [planned, versions, continuity, synopsis] = await Promise.all([
+      planPage(deps, id, page, settings),
+      deps.db.query<VersionRow>(`SELECT * FROM page_versions WHERE chapter_id = $1 AND page = $2 ORDER BY created_at DESC`, [id, page]),
+      one(deps.db, `SELECT state, source, updated_at FROM continuity_states WHERE chapter_id = $1 AND page = $2`, [id, page]),
+      c.chapterSynopsis(id),
+    ]);
     const info = planned.inv.pages.find((p) => p.page === page);
+    const config = c.chapterConfig(id)!;
     return json({
       chapterId: id,
       page,
+      chapter: { id, title: config.title, arcId: config.arcId, arcNumber: config.arcNumber, arcTitle: config.arcTitle ?? null, plannedPages: config.plannedPages, synopsis: synopsis.synopsis },
       info,
+      cast: planned.cast,
+      cost: costCard(settings.imageModel, settings.quality, planned.plan?.entries.length ?? 0, settings.maxAttemptsPerPage),
+      settings: { quality: settings.quality, budgetUsdPerJob: settings.budgetUsdPerJob, maxAttemptsPerPage: settings.maxAttemptsPerPage, imageModel: settings.imageModel },
+      generationEnabled: deps.generationEnabled,
+      realGenerationVerified: await getStudioSetting(deps, "real_generation_verified", false),
       prompt: planned.prompt
         ? { path: (planned.prompt as { path?: string }).path, version: planned.prompt.version, sha256: planned.prompt.sha256, text: planned.prompt.text, panelCount: planned.prompt.panelCount, layout: planned.prompt.layout, panels: planned.prompt.panels, referenceOrder: planned.prompt.referenceOrder, sceneReferences: planned.prompt.sceneReferences, characters: planned.prompt.characters }
         : null,
@@ -321,23 +354,26 @@ export function createApp(deps: StudioDeps) {
 
   r.add("POST", "/chapters/:id/pages/:page/regenerate", async ({ req, params }) => {
     const s = await requireAdmin(req);
-    const body = z.object({ settings: settingsOverrideSchema.optional(), budgetUsd: z.number().min(0.5).max(200).optional(), confirmPaid: z.literal(true) }).safeParse(await readJson(req));
+    const body = z
+      .object({ settings: settingsOverrideSchema.optional(), budgetUsd: z.number().min(0.5).max(200).optional(), options: pageRunOptionsSchema.optional(), confirmPaid: z.literal(true) })
+      .safeParse(await readJson(req, 64 * 1024));
     if (!body.success) throw badRequest("Confirm that regeneration starts a paid OpenAI request.");
-    const res = await regeneratePage(deps, chapterParam(params.id!), pageNumber(params.page!), { createdBy: s.user, settings: body.data.settings, budgetUsd: body.data.budgetUsd });
+    const res = await regeneratePage(deps, chapterParam(params.id!), pageNumber(params.page!), { createdBy: s.user, settings: body.data.settings, budgetUsd: body.data.budgetUsd, options: body.data.options });
     return json(res, 202);
   });
 
   // ---- jobs ----
   r.add("POST", "/estimate", async ({ req }) => {
     await requireAdmin(req);
-    const body = z.object({ chapterId: z.string().regex(/^\d{3}$/), pages: z.array(z.number().int()).min(1).max(60), settings: settingsOverrideSchema.optional() }).safeParse(await readJson(req));
+    const body = z.object({ chapterId: z.string().regex(/^\d{3}$/), pages: z.array(z.number().int()).min(1).max(60), settings: settingsOverrideSchema.optional() }).safeParse(await readJson(req, 64 * 1024));
     if (!body.success) throw badRequest("Choose a chapter and pages.");
-    return json(await estimate(deps, body.data.chapterId, body.data.pages, body.data.settings ?? {}));
+    const e = await estimate(deps, body.data.chapterId, body.data.pages, body.data.settings ?? {});
+    return json({ ...e, cost: costCard(e.settings.imageModel, e.settings.quality, e.referencesPerPage, e.settings.maxAttemptsPerPage) });
   });
 
   r.add("POST", "/jobs", async ({ req }) => {
     const s = await requireAdmin(req);
-    const parsed = createJobSchema.safeParse(await readJson(req));
+    const parsed = createJobSchema.safeParse(await readJson(req, 512 * 1024));
     if (!parsed.success) throw badRequest("Check the job settings.", parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`));
     const key = req.headers.get("idempotency-key");
     if (key && !/^[\w-]{8,80}$/.test(key)) throw badRequest("Invalid Idempotency-Key.");
@@ -464,7 +500,14 @@ export function createApp(deps: StudioDeps) {
   r.add("POST", "/publish", async ({ req }) => {
     const s = await requireAdmin(req);
     const body = z
-      .object({ chapterId: z.string().regex(/^\d{3}$/), versionIds: z.array(uuid).min(1).max(60), altText: z.record(z.string(), z.string().max(1500)).default({}), allowGap: z.boolean().default(false), confirm: z.literal(true) })
+      .object({
+        chapterId: z.string().regex(/^\d{3}$/),
+        versionIds: z.array(uuid).min(1).max(60),
+        altText: z.record(z.string(), z.string().max(1500)).default({}),
+        allowGap: z.boolean().default(false),
+        replacePages: z.array(z.number().int().min(1).max(500)).max(60).default([]),
+        confirm: z.literal(true),
+      })
       .safeParse(await readJson(req));
     if (!body.success) throw badRequest("Choose approved pages and confirm publishing.");
     return json(await publishChapter(deps, { ...body.data, createdBy: s.user }), 201);
@@ -481,6 +524,8 @@ export function createApp(deps: StudioDeps) {
     return json({ events: await deps.db.query(`SELECT id, job_id, chapter_id, page, level, message, data, created_at FROM event_log ORDER BY id DESC LIMIT $1`, [limit]) });
   });
 
+  registerLibraryRoutes(r, deps, requireAdmin);
+
   return async function handle(req: Request): Promise<Response> {
     const url = new URL(req.url);
     const path = url.pathname.startsWith(API_PREFIX) ? url.pathname.slice(API_PREFIX.length) || "/" : url.pathname;
@@ -494,31 +539,6 @@ export function createApp(deps: StudioDeps) {
       if (err instanceof z.ZodError) return errorResponse(badRequest("Invalid request.", err.issues.map((i) => i.message)), deps.logger);
       return errorResponse(err, deps.logger);
     }
-  };
-}
-
-function versionSummary(v: VersionRow) {
-  return {
-    id: v.id,
-    page: v.page,
-    chapterId: v.chapter_id,
-    jobId: v.job_id,
-    source: v.source,
-    model: v.model,
-    width: v.width,
-    height: v.height,
-    qaStatus: v.qa_status,
-    qaConfidence: v.qa_confidence,
-    qa: v.qa,
-    reviewStatus: v.review_status,
-    publicationStatus: v.publication_status,
-    retryCount: v.retry_count,
-    costEstimateUsd: v.cost_estimate_usd,
-    altText: v.alt_text,
-    reviewNote: v.review_note,
-    references: v.reference_manifest,
-    createdAt: v.created_at,
-    reviewedAt: v.reviewed_at,
   };
 }
 

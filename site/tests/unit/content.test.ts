@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { characterForSheetName, loadCharacters, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.js";
+import { characterForSheetName, describeSheetFile, loadCharacters, outfitLabelFromLinkText, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.js";
 import { ContentService, findChapterBlock, type LoadedPrompt, publishedPagesFromChaptersJs } from "../../api/_lib/content/chapters.js";
 import { loadStudioConfig, parsePageRanges } from "../../api/_lib/content/config.js";
 import { classifyLettering, expectedLettering, nameFromSheetFile, parsePrompt, parsePromptFilename } from "../../api/_lib/content/prompt-parser.js";
@@ -140,19 +140,22 @@ describe("chapter inventory", () => {
     expect(findChapterBlock(js, "004")?.text).toMatch(/Always the One Who Reaches/);
   });
 
-  it("protects pages with v2 artwork and leaves the rest of the 30-page v2 chapter ready", async () => {
+  it("marks pages with v2 artwork as having art (not locked) and leaves the rest of the 30-page v2 chapter ready", async () => {
     const c = new ContentService(repo, await loadStudioConfig(repo));
     const inv = await c.inventory("001");
     expect(inv.pages).toHaveLength(30);
     expect(inv.scriptPath).toBe("stories/arc-01/chapter-001/script-v2.md");
     // Page 001 is in the reader. Page 002's finished file is part of the v2 layout.
-    // Any later page with a file in pages/ is locked too; that set grows as art lands.
+    // Existing art no longer locks a page: new versions are allowed, and only
+    // lockedPages in the config locks one.
     expect(inv.pages[0]!.publishedSrc).toBe("/pages/chapter-001/001.webp");
-    expect(inv.pages[1]).toMatchObject({ locked: true, sourceImagePath: "stories/arc-01/chapter-001/pages/A01-C001-P002.png" });
+    expect(inv.pages[1]).toMatchObject({ locked: false, hasArt: true, sourceImagePath: "stories/arc-01/chapter-001/pages/A01-C001-P002.png" });
     for (const p of inv.pages) {
-      expect(p.locked, `page ${p.page}`).toBe(p.publishedSrc != null || p.sourceImagePath != null);
+      expect(p.locked, `page ${p.page}`).toBe(false);
+      expect(p.hasArt, `page ${p.page}`).toBe(p.publishedSrc != null || p.sourceImagePath != null);
     }
-    expect(inv.pages[29]).toMatchObject({ locked: false, sourceImagePath: null, prepared: true });
+    expect(inv.pages[29]).toMatchObject({ locked: false, hasArt: false, sourceImagePath: null, prepared: true });
+    expect(inv.pages[0]!.beat).toBe("The empty space");
     expect(inv.pages.every((p) => p.prepared)).toBe(true);
     // Old v1 numbering locks nothing: v1 art lives in pages/version_1/.
     expect(inv.pages[15]!.sourceImagePath).toBeNull();
@@ -160,27 +163,65 @@ describe("chapter inventory", () => {
 });
 
 describe("character library", () => {
-  it("finds the canonical card and keeps other sheets experimental", async () => {
-    const chars = await loadCharacters(repo);
-    const ethan = chars.find((c) => c.id === "ethan-walker")!;
-    expect(chars).toHaveLength(18);
-    expect(new Set(chars.map((c) => c.id)).size).toBe(18);
+  it("finds every character in the cast folders with every outfit sheet as a version", async () => {
+    const chars = await loadCharacters(repo, { labelDocs: ["stories/arc-01/chapter-001/page-guide-v2.md"] });
+    const manifest = JSON.parse((await repo.readText("characters/asset-manifest.json"))!) as { assets: { path: string; characterId: string; role: string; category: string | null }[] };
+    const ids = [...new Set(manifest.assets.map((a) => a.characterId))].sort();
+    expect(chars.map((c) => c.id).sort()).toEqual(ids);
     expect(chars.find((c) => c.id === "thomas-bennett")!.profilePath).toBe("characters/family/bennett/thomas-bennett/index.md");
     expect(chars.find((c) => c.id === "natalie-greene")!.profilePath).toBe("characters/friends/natalie-greene/index.md");
+    // Every image the manifest lists shows up as one of its character's sheets.
+    for (const a of manifest.assets) {
+      const c = chars.find((x) => x.id === a.characterId)!;
+      expect(c.sheets.some((s) => s.path === a.path), a.path).toBe(true);
+    }
+    // The manifest's main reference is the default; nobody with an image is "missing a sheet".
+    for (const a of manifest.assets.filter((x) => x.role === "main")) expect(chars.find((c) => c.id === a.characterId)!.canonicalSheet).toBe(a.path);
+    for (const c of chars) if (c.sheets.length) expect(c.canonicalSheet, c.id).not.toBeNull();
+
+    const ethan = chars.find((c) => c.id === "ethan-walker")!;
+    expect(ethan.group).toBe("Main Cast");
     expect(ethan.canonicalSheet).toBe("characters/main/ethan-walker/references/ethan-walker-reference-main.png");
-    expect(ethan.references[0]!.status).toBe("canonical");
     expect(ethan.references.filter((r) => r.status === "canonical")).toHaveLength(1);
-    expect(ethan.references).toContainEqual(expect.objectContaining({
-      path: "characters/main/ethan-walker/outfits/ethan-walker-formal-wedding-suit.png",
-      status: "experimental",
-    }));
-    const morgan = chars.find((c) => c.id === "morgan-hayes")!;
-    expect(morgan.references).toContainEqual(expect.objectContaining({
-      path: "characters/main/morgan-hayes/outfits/_review/morgan-hayes-review-black-top-olive-shorts-study-a.png",
-      status: "experimental",
-    }));
+    expect(ethan.sheets[0]).toMatchObject({ isDefault: true, label: "Main sheet" });
+    // The family copy is the same sheet as the main reference, not a separate outfit.
+    expect(ethan.sheets[0]!.aliases).toContain("characters/_reference-sheets/main_characters/walker-ethan.png");
+    expect(ethan.sheets.find((s) => s.path.endsWith("ethan-walker-formal-wedding-suit.png"))).toMatchObject({ category: "formal", label: "Wedding suit", needsReview: false });
     expect(ethan.portrait).toBe("/images/characters/ethan-walker-portrait.webp");
-    expect(chars.find((c) => c.id === "nathan-hayes")!.canonicalSheet).toBeNull();
+
+    const morgan = chars.find((c) => c.id === "morgan-hayes")!;
+    expect(morgan.sheets.find((s) => s.path.endsWith("_review/morgan-hayes-review-black-top-olive-shorts-study-a.png"))).toMatchObject({ needsReview: true, category: null, label: "Needs review: black top olive shorts study a" });
+
+    // Cass is new: all of her outfits are versions, main sheet first.
+    const cass = chars.find((c) => c.id === "cassidy-bennett")!;
+    expect(cass.profilePath).toBe("characters/friends/cassidy-bennett/index.md");
+    expect(cass.canonicalSheet).toBe("characters/friends/cassidy-bennett/references/cassidy-bennett-reference-main.png");
+    expect(cass.sheets).toHaveLength(manifest.assets.filter((a) => a.characterId === "cassidy-bennett").length);
+    expect(cass.sheets.find((s) => s.file === "cassidy-bennett-formal-black-off-shoulder-dress.png")!.label).toBe("Black off shoulder dress");
+  });
+
+  it("describes sheet files by their naming pattern", () => {
+    expect(describeSheetFile("morgan-hayes", "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png")).toEqual({ kind: "outfit", category: "formal", descriptor: "Wedding lace blouse pink skirt" });
+    expect(describeSheetFile("morgan-hayes", "morgan-hayes-reference-main.png").kind).toBe("main");
+    expect(describeSheetFile("morgan-hayes", "morgan-hayes-review-plaid-bra-shorts.png")).toMatchObject({ kind: "review", descriptor: "Plaid bra shorts" });
+    expect(describeSheetFile("ethan-walker", "walker-ethan.png").kind).toBe("legacy");
+  });
+
+  it("still finds a sheet by its retired file name", async () => {
+    const chars = await loadCharacters(repo);
+    const manifest = JSON.parse((await repo.readText("characters/asset-manifest.json"))!) as { assets: { path: string; characterId: string; legacyAliases: string[] }[] };
+    const withAlias = manifest.assets.find((a) => a.legacyAliases.length)!;
+    const oldName = withAlias.legacyAliases[0]!.split("/").pop()!;
+    const found = await resolveSheetFiles(repo, chars, [], [oldName]);
+    expect(found.get(oldName)).toEqual({ path: withAlias.path, characterId: withAlias.characterId });
+  });
+
+  it("names outfits from link text", () => {
+    const c = { firstName: "Morgan", displayName: "Morgan H. Walker" };
+    expect(outfitLabelFromLinkText("Morgan's wedding outfit v7", c)).toBe("Wedding outfit");
+    expect(outfitLabelFromLinkText("Morgan H. Walker reference sheet", c)).toBe("Main sheet");
+    expect(outfitLabelFromLinkText("Morgan", c)).toBeNull();
+    expect(outfitLabelFromLinkText("Morgan identity input", c)).toBeNull();
   });
 
   it("resolves the names used in prompts", async () => {

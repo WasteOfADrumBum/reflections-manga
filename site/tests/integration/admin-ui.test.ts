@@ -66,7 +66,7 @@ beforeAll(async () => {
   document.documentElement.setAttribute("lang", "en");
   window.location.hash = "#/dashboard";
   await import("../../admin/js/app.js");
-  await settle(() => heading() === "Production dashboard");
+  await settle(() => heading() === "Dashboard");
 });
 
 afterAll(async () => h.db.close?.());
@@ -81,65 +81,134 @@ describe("admin interface", () => {
     expect(await a11y()).toEqual([]);
   });
 
-  it("shows the character library with canonical sheets and an accessible upload form", async () => {
-    await go("#/characters", () => heading() === "Character library");
-    const ethan = [...document.querySelectorAll("article.char-card")].find((a) => a.textContent?.includes("Ethan Walker"))!;
-    expect(ethan.querySelector("img")?.getAttribute("alt")).toBe("Ethan Walker canonical reference sheet");
-    for (const input of document.querySelectorAll("#upload-form input, #upload-form select")) {
+  it("walks arcs, then chapters, with the story text from the repository", async () => {
+    await go("#/story", () => heading() === "Story");
+    const text = document.getElementById("view")!.textContent!;
+    expect(text).toMatch(/Three Become One/);
+    expect(text).toMatch(/Introduce the marriage, personalities, affection, and unmet needs\./);
+    expect(document.querySelector("nav[aria-label=Studio] a[aria-current=page]")?.textContent).toBe("Story");
+    expect(await a11y()).toEqual([]);
+    await go("#/story/arc-01", () => heading().startsWith("Arc 1"));
+    expect(document.getElementById("view")!.textContent).toMatch(/Ethan moves between the different roles/);
+    expect(document.querySelector('a[href="#/chapters/001"]')).not.toBeNull();
+    expect(await a11y()).toEqual([]);
+  });
+
+  it("shows every character's outfits with a picker that swaps the preview", async () => {
+    await go("#/characters", () => heading() === "Characters");
+    const ethan = [...document.querySelectorAll("li.char-card")].find((a) => a.textContent?.includes("Ethan Walker"))!;
+    const img = ethan.querySelector("img")!;
+    expect(img.getAttribute("alt")).toBe("Ethan Walker, Main sheet");
+    const select = ethan.querySelector("select")!;
+    expect(select.options.length).toBeGreaterThanOrEqual(8);
+    expect([...select.querySelectorAll("optgroup")].map((g) => g.label)).toContain("Formal");
+    expect([...select.options].map((o) => o.textContent)).toContain("Wedding suit");
+    select.value = [...select.options].find((o) => o.textContent === "Wedding suit")!.value;
+    select.dispatchEvent(new Event("change"));
+    expect(img.getAttribute("src")).toMatch(/ethan-walker-formal-wedding-suit\.png/);
+    expect(img.getAttribute("alt")).toBe("Ethan Walker, Wedding suit");
+    // Cass, added on main, is in the library with her outfits.
+    const cass = [...document.querySelectorAll("li.char-card")].find((a) => a.querySelector("h2")?.textContent?.startsWith("Cass"))!;
+    expect(cass.querySelector("select")!.options.length).toBeGreaterThan(5);
+    // No character with a sheet image is reported as missing one.
+    expect(document.getElementById("view")!.textContent).not.toMatch(/blocked until/);
+    expect(document.querySelector("details:not([open]) .ref-list")).toBeNull();
+    for (const input of document.querySelectorAll("#upload-form input, #upload-form select, #new-character input, #new-character select, #new-character textarea")) {
       expect(document.querySelector(`label[for="${input.id}"]`), input.id).not.toBeNull();
     }
     expect(await a11y()).toEqual([]);
   });
 
-  it("lists chapter pages with locked, ready and unprepared statuses", async () => {
+  it("lists chapter pages with published, has-art and ready statuses", async () => {
     await go("#/chapters/001", () => heading().startsWith("Chapter 001"));
     const tiles = [...document.querySelectorAll(".page-tile")].map((t) => t.textContent ?? "");
     expect(tiles).toHaveLength(30);
     expect(tiles[0]).toMatch(/Page 001.*Published/);
-    expect(tiles[1]).toMatch(/Page 002.*Locked/);
+    expect(tiles[1]).toMatch(/Page 002.*Has art/);
     for (let n = 3; n <= 30; n++) {
       const hasArt = await h.repo.exists(`stories/arc-01/chapter-001/pages/A01-C001-P${String(n).padStart(3, "0")}.png`);
       const label = String(n).padStart(3, "0");
-      expect(tiles[n - 1]).toMatch(hasArt ? new RegExp(`Page ${label}.*Locked`) : new RegExp(`Page ${label}.*Ready to generate`));
+      expect(tiles[n - 1]).toMatch(hasArt ? new RegExp(`Page ${label}.*Has art`) : new RegExp(`Page ${label}.*Ready`));
     }
     expect(await a11y()).toEqual([]);
   });
 
-  it("shows a page's script, references and prompt", async () => {
-    await go("#/chapters/001/pages/23", () => heading().startsWith("Page 023"));
+  it("shows a page's synopsis, outfit pickers, an editable prompt and the cost in plain words", async () => {
+    await go("#/chapters/001/pages/23", () => heading().startsWith("Page 023") && !!document.querySelector(".check-result .explain"));
     const text = document.getElementById("view")!.textContent!;
     expect(text).toMatch(/Ruby Bennett-Walker identity sheet \(bennett-walker-ruby\.png\)/);
     expect(text).toMatch(/You missed two murders\./);
+    expect(text).toMatch(/separate from ChatGPT Plus/);
+    expect(text).toMatch(/gpt-image-2\.5-sunburst/);
+    expect(document.querySelectorAll(".pick select").length).toBeGreaterThan(0);
+    const prompt = document.querySelector<HTMLTextAreaElement>("#prompt-edit")!;
+    expect(prompt.value).toMatch(/REFERENCE ORDER/);
+    expect(document.querySelector("#upload-version input[type=file]")).not.toBeNull();
     expect(await a11y()).toEqual([]);
   });
 
-  it("generates a test page in one click, then unlocks the full chapter", async () => {
+  it("lets a page that already has art get a new version", async () => {
+    await go("#/chapters/001/pages/2", () => heading().startsWith("Page 002") && !!document.querySelector(".check-result .explain"));
+    const text = document.getElementById("view")!.textContent!;
+    expect(text).toMatch(/already has art\. New versions don't touch it/);
+    expect(text).not.toMatch(/Locked\./);
+    expect(await a11y()).toEqual([]);
+  });
+
+  it("explains an empty review queue instead of showing nothing", async () => {
+    await go("#/review", () => heading() === "Review");
+    expect(document.getElementById("view")!.textContent).toMatch(/Nothing to review yet/);
+    expect(await a11y()).toEqual([]);
+  });
+
+  it("shows spending with an accessible chart and table", async () => {
+    await go("#/spending", () => heading() === "Spending");
+    const svg = document.querySelector("svg.chart")!;
+    expect(svg.getAttribute("role")).toBe("img");
+    expect(svg.querySelector("title")?.textContent).toBe("API spending by month");
+    expect(document.querySelectorAll("table tbody tr")).toHaveLength(12);
+    expect(await a11y()).toEqual([]);
+  });
+
+  it("lists site images with show/hide controls", async () => {
+    await go("#/site", () => heading() === "Site images");
+    expect(document.querySelectorAll(".vis-toggle input").length).toBeGreaterThan(10);
+    for (const input of document.querySelectorAll("#album-upload input, #album-upload textarea")) {
+      expect(document.querySelector(`label[for="${input.id}"]`), input.id).not.toBeNull();
+    }
+    expect(await a11y()).toEqual([]);
+  });
+
+  it("generates a test page in one click, then unlocks multi-page runs", async () => {
     await go("#/studio/001", () => heading() === "Generate pages" && !!document.querySelector(".stat"));
-    const box = (n: number) => [...document.querySelectorAll<HTMLInputElement>(".check-grid input")].find((i) => i.value === String(n))!;
-    expect(box(2).disabled).toBe(true);
-    const firstReady = [...document.querySelectorAll<HTMLInputElement>(".check-grid input")].find((i) => !i.disabled && i.checked)!;
+    const boxes = () => [...document.querySelectorAll<HTMLInputElement>(".check-grid input")];
+    const box = (n: number) => boxes().find((i) => i.value === String(n))!;
+    // Page 002 has art: it can be chosen for a new version, but is not selected by default.
+    expect(box(2).disabled).toBe(false);
+    expect(box(2).checked).toBe(false);
+    const firstReady = boxes().find((i) => !i.disabled && i.checked)!;
     expect(Number(firstReady.value)).toBeGreaterThan(2);
-    expect(box(Number(firstReady.value)).disabled).toBe(false);
     expect(box(31)).toBeUndefined();
+    expect(document.getElementById("view")!.textContent).toMatch(/separate from ChatGPT Plus/);
     expect(await a11y()).toEqual([]);
     const start = [...document.querySelectorAll("button")].find((b) => b.textContent === "Run one test page")!;
     start.click();
     await new Promise((r) => setTimeout(r, 20));
     expect(document.getElementById("confirm-dialog")!.hasAttribute("open")).toBe(true);
     clickConfirm();
-    await settle(() => window.location.hash.startsWith("#/jobs/") && heading() === "Chapter 001 job");
+    await settle(() => window.location.hash.startsWith("#/jobs/") && heading() === "Chapter 001 run");
     expect(await a11y()).toEqual([]);
     await drain(h);
     expect(h.images.calls).toHaveLength(1);
 
-    await go("#/review/001", () => heading() === "Review and publish" && !!document.querySelector(".version"));
+    await go("#/review/001", () => heading() === "Review" && !!document.querySelector(".version"));
     const approve = [...document.querySelectorAll("button")].find((b) => b.textContent === "Approve")!;
     approve.click();
-    const published = `Publish page ${firstReady.value.padStart(3, "0")}`;
-    await settle(() => !!document.querySelector("form.card h2") && document.getElementById("view")!.textContent!.includes(published));
+    const published = `Page ${firstReady.value.padStart(3, "0")}`;
+    await settle(() => !!document.querySelector(".publish-row") && document.querySelector(".publish-row")!.textContent!.includes(published));
     expect(await a11y()).toEqual([]);
 
     await go("#/studio/001", () => heading() === "Generate pages" && !!document.querySelector(".stat"));
-    expect([...document.querySelectorAll("button")].some((b) => b.textContent === "Generate chapter")).toBe(true);
+    expect([...document.querySelectorAll("button")].some((b) => b.textContent === "Generate selected pages")).toBe(true);
   });
 });
