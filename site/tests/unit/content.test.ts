@@ -27,8 +27,8 @@ describe("prompt parser (version 2 layout)", () => {
     expect(p.panelCount).toBe(3);
     expect(p.panels).toHaveLength(3);
     expect(p.referenceOrder).toEqual([
-      { index: 1, name: "Ruby", file: "bennett-walker-ruby.png" },
-      { index: 2, name: "Ethan", file: "walker-ethan.png" },
+      { index: 1, name: "Ruby", file: "ruby-bennett-walker-reference-main.png" },
+      { index: 2, name: "Ethan", file: "ethan-walker-reference-main.png" },
     ]);
     expect(p.sceneReferences.map((s) => s.page)).toEqual([22]);
     expect(p.characters.map((c) => c.name)).toEqual(["Ruby", "Ethan"]);
@@ -44,16 +44,16 @@ describe("prompt parser (version 2 layout)", () => {
   it("reads numbered sheet lists, child sheets and extra scene pages", async () => {
     const p1 = parsePrompt((await raw.readText(`${V2}/page-001-v2.txt`))!, { page: 1, version: 2 });
     expect(p1.referenceOrder.map((r) => r.file)).toEqual([
-      "bennett-walker-ruby.png",
-      "walker-ethan.png",
-      "walker-morgan.png",
+      "ruby-bennett-walker-reference-main.png",
+      "ethan-walker-reference-main.png",
+      "morgan-hayes-reference-main.png",
       "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png",
       "ruby-bennett-walker-formal-wedding-dress.png",
       "ethan-walker-formal-wedding-suit.png",
     ]);
     const p8 = parsePrompt((await raw.readText(`${V2}/page-008-v2.txt`))!, { page: 8, version: 2 });
     expect(p8.referenceOrder.map((r) => r.name)).toEqual(["Morgan", "Avery", "Rowan", "Riley"]);
-    expect(p8.referenceOrder[1]!.file).toBe("children/bennett-walker-avery.png");
+    expect(p8.referenceOrder[1]!.file).toBe("avery-bennett-walker-reference-main.png");
     const p28 = parsePrompt((await raw.readText(`${V2}/page-028-v2.txt`))!, { page: 28, version: 2 });
     expect(p28.sceneReferences.map((s) => [s.page, s.optional])).toEqual([
       [27, false],
@@ -184,13 +184,14 @@ describe("character library", () => {
     expect(ethan.canonicalSheet).toBe("characters/main/ethan-walker/references/ethan-walker-reference-main.png");
     expect(ethan.references.filter((r) => r.status === "canonical")).toHaveLength(1);
     expect(ethan.sheets[0]).toMatchObject({ isDefault: true, label: "Main sheet" });
-    // The family copy is the same sheet as the main reference, not a separate outfit.
-    expect(ethan.sheets[0]!.aliases).toContain("characters/_reference-sheets/main_characters/walker-ethan.png");
+    expect(ethan.sheets[0]!.sensitive).toBe(false);
+    expect(ethan.sheets.find((s) => s.path.endsWith("ethan-walker-lingerie-black-boxer-briefs.png"))).toMatchObject({ category: "lingerie", sensitive: true });
     expect(ethan.sheets.find((s) => s.path.endsWith("ethan-walker-formal-wedding-suit.png"))).toMatchObject({ category: "formal", label: "Wedding suit", needsReview: false });
     expect(ethan.portrait).toBe("/images/characters/ethan-walker-portrait.webp");
 
     const morgan = chars.find((c) => c.id === "morgan-hayes")!;
-    expect(morgan.sheets.find((s) => s.path.endsWith("_review/morgan-hayes-review-black-top-olive-shorts-study-a.png"))).toMatchObject({ needsReview: true, category: null, label: "Needs review: black top olive shorts study a" });
+    expect(morgan.sheets.find((s) => s.path.endsWith("_review/morgan-hayes-review-black-top-olive-shorts-study-a.png"))).toMatchObject({ needsReview: true, category: null, label: "Black top olive shorts study a", sensitive: false });
+    expect(morgan.sheets.find((s) => s.path.endsWith("_review/morgan-hayes-review-plaid-bra-shorts.png"))).toMatchObject({ needsReview: true, sensitive: true });
 
     // Cass is new: all of her outfits are versions, main sheet first.
     const cass = chars.find((c) => c.id === "cassidy-bennett")!;
@@ -232,19 +233,23 @@ describe("character library", () => {
     expect(resolveCharacter(chars, "Nobody")).toBeNull();
   });
 
-  it("resolves sheet files named by v2 prompts only inside the sheet folders", async () => {
+  it("resolves sheet files named by prompts among the characters' own sheets", async () => {
     const chars = await loadCharacters(repo);
     const config = await loadStudioConfig(repo);
     const dirs = config.chapters["001"]!.identitySheetDirs;
+    expect(dirs).toEqual([]);
     const found = await resolveSheetFiles(repo, chars, dirs, [
+      "ethan-walker-reference-main.png",
       "walker-ethan.png",
       "children/walker-riley.png",
       "morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png",
       "missing-person.png",
       "../site/images/x.png",
     ]);
-    expect(found.get("walker-ethan.png")).toEqual({ path: "characters/_reference-sheets/main_characters/walker-ethan.png", characterId: "ethan-walker" });
-    expect(found.get("children/walker-riley.png")).toEqual({ path: "characters/_reference-sheets/main_characters/children/walker-riley.png", characterId: "riley-hayes-walker" });
+    expect(found.get("ethan-walker-reference-main.png")).toEqual({ path: "characters/main/ethan-walker/references/ethan-walker-reference-main.png", characterId: "ethan-walker" });
+    // Older identity names (from before the cast folders) fall back to that character's main sheet.
+    expect(found.get("walker-ethan.png")).toEqual({ path: "characters/main/ethan-walker/references/ethan-walker-reference-main.png", characterId: "ethan-walker" });
+    expect(found.get("children/walker-riley.png")).toEqual({ path: "characters/main/riley-hayes-walker/references/riley-hayes-walker-reference-main.png", characterId: "riley-hayes-walker" });
     expect(found.get("morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png")).toEqual({ path: "characters/main/morgan-hayes/outfits/morgan-hayes-formal-wedding-lace-blouse-pink-skirt.png", characterId: "morgan-hayes" });
     expect(found.get("missing-person.png")).toBeNull();
     expect(found.get("../site/images/x.png")).toBeNull();

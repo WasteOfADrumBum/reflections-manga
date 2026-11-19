@@ -4,12 +4,12 @@ Begin with [page 001](prompts/version_002/page-001-v2.md). Generate one page at 
 
 ## Identity sheets
 
-- [Ethan](../../../characters/_reference-sheets/main_characters/walker-ethan.png)
-- [Morgan](../../../characters/_reference-sheets/main_characters/walker-morgan.png)
-- [Ruby](../../../characters/_reference-sheets/main_characters/bennett-walker-ruby.png)
-- [Avery](../../../characters/_reference-sheets/main_characters/children/bennett-walker-avery.png)
-- [Riley](../../../characters/_reference-sheets/main_characters/children/walker-riley.png)
-- [Rowan](../../../characters/_reference-sheets/main_characters/children/walker-rowan.png)
+- [Ethan](../../../characters/main/ethan-walker/references/ethan-walker-reference-main.png)
+- [Morgan](../../../characters/main/morgan-hayes/references/morgan-hayes-reference-main.png)
+- [Ruby](../../../characters/main/ruby-bennett-walker/references/ruby-bennett-walker-reference-main.png)
+- [Avery](../../../characters/main/avery-bennett-walker/references/avery-bennett-walker-reference-main.png)
+- [Riley](../../../characters/main/riley-hayes-walker/references/riley-hayes-walker-reference-main.png)
+- [Rowan](../../../characters/main/rowan-hayes-walker/references/rowan-hayes-walker-reference-main.png)
 
 ## Choosing references for what appears on the page
 

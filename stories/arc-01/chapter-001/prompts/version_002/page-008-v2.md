@@ -3,7 +3,7 @@
 ```text
 Create ONE finished-looking DRAFT manga page for Reflections, Chapter 001, “Three Hearts, Different Needs,” retelling v2. Page 8. Exactly 4 panels.
 
-REFERENCE ORDER: Attach these identity sheets first, in order: walker-morgan.png, children/bennett-walker-avery.png, children/walker-rowan.png, children/walker-riley.png. Then attach the selected v2 page 007 for scene continuity.
+REFERENCE ORDER: Attach these identity sheets first, in order: morgan-hayes-reference-main.png, avery-bennett-walker-reference-main.png, rowan-hayes-walker-reference-main.png, riley-hayes-walker-reference-main.png. Then attach the selected v2 page 007 for scene continuity.
 
 FORMAT: 1024 × 1536 portrait. Contemporary seinen-inspired manga, expressive clean linework, restrained natural color, realistic anatomy and cinematic framing. White gutters. Use a wide top panel, two middle panels side by side, then a wide final panel. English, LEFT TO RIGHT across each row, then down. Place the first text unit highest at the left, the reply lower to its right. Frame speakers in that order before drawing balloons. SPEECH uses a smooth oval and one pointed tail aimed at the visible speaker's mouth. THOUGHT uses a scalloped cloud and a short chain of diminishing dots ending beside its owner's head. NARRATION alone uses a square-cornered, tailless box. Print only the quoted lines, exactly once and in listed order. Names, types and panel numbers are instructions. Render only assigned lettering. Keep tails and dot trails clear of other faces. Leave generous white space for lettering. No printed speaker labels, page title or added SFX.
 

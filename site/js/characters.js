@@ -151,7 +151,7 @@
       if (!a) return;
       e.preventDefault();
       var art = a.closest(".char");
-      links = Array.prototype.slice.call(a.closest(".gal-strip").querySelectorAll("a"));
+      links = Array.prototype.slice.call(a.closest(".gal-strip").querySelectorAll("a")).filter(function (x) { return !x.closest(".veil.is-veiled"); });
       who = art ? nameOf(art.id) : "";
       opener = a;
       show(links.indexOf(a));

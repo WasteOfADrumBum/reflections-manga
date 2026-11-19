@@ -16,6 +16,7 @@ import { inspectImage, thumbnail, validateUpload } from "./images.js";
 import { estimatePageCost, IMAGE_PRICING, OUTPUT_TOKENS_ASSUMED, pricingFor } from "./openai/pricing.js";
 import { altTextFromScript } from "./publish/alt-text.js";
 import type { PublishFile } from "./publish/publisher.js";
+import { repoArtPages } from "./publish/repo-art.js";
 
 /**
  * Routes added by the studio rework: arcs, review queue, outfit names, page
@@ -37,7 +38,8 @@ const pageNumber = (s: string) => {
 
 export const ATTEMPT_FLAG_DEFAULT = 5;
 const VISIBILITY_PATH = "site/js/visibility-data.js";
-const slug = (s: string) =>
+const SHEET_SOURCES_PATH = "production/studio/site-sheet-sources.json";
+export const slug = (s: string) =>
   s
     .toLowerCase()
     .normalize("NFKD")
@@ -109,7 +111,7 @@ export function registerLibraryRoutes(r: Router, deps: StudioDeps, requireAdmin:
       pages.get(key)!.versions.push(versionSummary(v));
     }
     const chapters = c.chapterIds().map((id) => ({ id, title: c.chapterConfig(id)!.title }));
-    return json({ pages: [...pages.values()], chapters, publisherReady: !!deps.publisher });
+    return json({ pages: [...pages.values()], repoArt: await repoArtPages(deps), chapters, publisherReady: !!deps.publisher });
   });
 
   // ---- outfit names ----
@@ -379,7 +381,6 @@ export function registerLibraryRoutes(r: Router, deps: StudioDeps, requireAdmin:
       plannedPages: body.data.plannedPages,
       promptDir: "prompts",
       scriptFile: "script.md",
-      identitySheetDirs: ["characters/_reference-sheets/main_characters", "characters/_reference-sheets/main_characters/children"],
       lockedPages: "",
       lockReason: "Locked.",
       unpreparedPages: "",
@@ -412,20 +413,35 @@ export function registerLibraryRoutes(r: Router, deps: StudioDeps, requireAdmin:
     return json({ prUrl: res.prUrl, chapterId }, 201);
   });
 
-  // ---- public site images: show / hide, album additions ----
+  // ---- public site images: show / hide, sheets from the repository, album order and captions ----
   r.add("GET", "/site/images", async ({ req }) => {
     await requireAdmin(req);
-    const [charactersHtml, memoriesHtml, visibilityJs] = await Promise.all([deps.repo.readText("site/characters.html"), deps.repo.readText("site/memories.html"), deps.repo.readText(VISIBILITY_PATH)]);
+    const [charactersHtml, memoriesHtml, visibilityText, sourcesText, chars] = await Promise.all([
+      deps.repo.readText("site/characters.html"),
+      deps.repo.readText("site/memories.html"),
+      deps.repo.readText(VISIBILITY_PATH),
+      deps.repo.readText(SHEET_SOURCES_PATH),
+      studioCharacters(deps),
+    ]);
     const drafts = await deps.db.query(`SELECT id, title, alt, wide, width, height, status, pr_url, created_at FROM album_items WHERE status <> 'removed' ORDER BY created_at`);
+    const onSite = new Set(Object.values(parseSheetSources(sourcesText)));
+    // Every repository sheet not on the public site yet, so it can be added (hidden by default).
+    const sheets = chars
+      .map((c) => ({
+        id: c.id,
+        name: c.displayName,
+        sheets: c.sheets.filter((s) => !onSite.has(s.path)).map((s) => ({ path: s.path, label: s.label, category: s.needsReview ? null : s.category, needsReview: s.needsReview, sensitive: s.sensitive })),
+      }))
+      .filter((c) => c.sheets.length);
     return json({
       characters: parseCharacterGalleries(charactersHtml ?? ""),
       album: parseAlbum(memoriesHtml ?? ""),
-      visibility: parseVisibility(visibilityJs ?? ""),
+      visibility: parseVisibility(visibilityText ?? ""),
+      sheets,
       drafts,
       publisherReady: !!deps.publisher,
     });
   });
-
   r.add("POST", "/site/album-items", async ({ req }) => {
     const s = await requireAdmin(req);
     const { form, data } = await readUpload(req);
@@ -475,22 +491,33 @@ export function registerLibraryRoutes(r: Router, deps: StudioDeps, requireAdmin:
   r.add("POST", "/site/publish", async ({ req }) => {
     const s = await requireAdmin(req);
     const publisher = needPublisher(deps);
+    const href = z.string().regex(/^\/images\/[\w./-]+\.(webp|png|jpe?g)$/i);
     const body = z
       .object({
-        hidden: z.object({ characters: z.record(z.string().regex(/^[a-z0-9-]+$/), z.array(z.string().regex(/^\/images\/[\w./-]+\.(webp|png|jpe?g)$/i)).max(200)), album: z.array(z.string().regex(/^\/images\/[\w./-]+\.(webp|png|jpe?g)$/i)).max(200) }),
+        hidden: z.object({ characters: z.record(z.string().regex(/^[a-z0-9-]+$/), z.array(href).max(300)), album: z.array(href).max(300) }),
+        sensitive: z.array(href).max(600).default([]),
+        album: z
+          .object({
+            order: z.array(href).max(300).default([]),
+            captions: z.record(href, z.object({ title: z.string().trim().max(80).optional(), alt: z.string().trim().max(600).optional() })).default({}),
+          })
+          .default({ order: [], captions: {} }),
+        addSheets: z.array(z.object({ characterId: z.string().regex(/^[a-z0-9-]+$/), path: z.string().max(300), sensitive: z.boolean().default(false) })).max(40).default([]),
         addAlbumItems: z.array(z.string().uuid()).max(20).default([]),
         confirm: z.literal(true),
       })
-      .safeParse(await readJson(req));
+      .safeParse(await readJson(req, 512_000));
     if (!body.success) throw badRequest("Check the site image changes.", body.error.issues.map((i) => i.message));
     const currentJs = (await publisher.readFile(VISIBILITY_PATH)) ?? "";
     const current = parseVisibility(currentJs);
     const files: PublishFile[] = [];
+    const sharp = (await import("sharp")).default;
+
+    // Album photos uploaded in the studio.
     const additions = [...current.albumAdditions];
     const items = body.data.addAlbumItems.length
       ? await deps.db.query<{ id: string; title: string; alt: string; wide: boolean; blob_path: string }>(`SELECT id, title, alt, wide, blob_path FROM album_items WHERE id = ANY($1::uuid[]) AND status = 'draft'`, [body.data.addAlbumItems])
       : [];
-    const sharp = (await import("sharp")).default;
     for (const it of items) {
       const obj = await deps.blobs.get(it.blob_path);
       if (!obj) continue;
@@ -502,23 +529,84 @@ export function registerLibraryRoutes(r: Router, deps: StudioDeps, requireAdmin:
       files.push({ path: `site/images/moments/${base}-full.webp`, content: full }, { path: `site/images/memories/${base}-800.webp`, content: small });
       additions.push({ src: `/images/memories/${base}-800.webp`, full: `/images/moments/${base}-full.webp`, w: fullMeta.width, h: fullMeta.height, thumbW: smallMeta.width, thumbH: smallMeta.height, title: it.title, alt: it.alt, wide: it.wide });
     }
-    const next = { hidden: body.data.hidden, albumAdditions: additions };
+
+    // Character sheets from the repository, added to that character's public gallery.
+    const sensitive = new Set(body.data.sensitive);
+    const characterAdditions: Record<string, CharacterAddition[]> = Object.fromEntries(Object.entries(current.characterAdditions).map(([k, v]) => [k, [...v]]));
+    const sourcesText = await publisher.readFile(SHEET_SOURCES_PATH);
+    const sources = parseSheetSources(sourcesText);
+    if (body.data.addSheets.length) {
+      const chars = await studioCharacters(deps);
+      for (const add of body.data.addSheets) {
+        const ch = chars.find((c) => c.id === add.characterId);
+        const sheet = ch?.sheets.find((x) => x.path === add.path);
+        if (!ch || !sheet) throw badRequest(`That sheet is not one of ${add.characterId}'s sheets.`);
+        if (Object.values(sources).includes(sheet.path)) continue;
+        const data = await deps.repo.readBinary(sheet.path);
+        if (!data) throw badRequest(`Could not read ${sheet.path} from the repository.`);
+        const stem = sheet.file.replace(/\.(png|webp|jpe?g)$/i, "");
+        const fullPath = `site/images/characters/refs/${stem}.webp`;
+        const thumbPath = `site/images/characters/refs/${stem}-thumb.webp`;
+        const full = await sharp(data).resize({ width: 1536, height: 1536, fit: "inside", withoutEnlargement: true }).webp({ quality: 86 }).toBuffer();
+        const thumb = await sharp(data).resize({ height: 240, withoutEnlargement: true }).webp({ quality: 80 }).toBuffer();
+        const fullMeta = await inspectImage(full);
+        const thumbMeta = await inspectImage(thumb);
+        files.push({ path: fullPath, content: full }, { path: thumbPath, content: thumb });
+        const what = sheet.isDefault ? "main reference sheet" : `${sheet.needsReview ? "outfit" : (sheet.category ?? "outfit")} sheet, ${sheet.label}`;
+        const fullHref = `/${fullPath.slice("site/".length)}`;
+        (characterAdditions[ch.id] ??= []).push({
+          src: `/${thumbPath.slice("site/".length)}`,
+          full: fullHref,
+          w: fullMeta.width,
+          h: fullMeta.height,
+          thumbW: thumbMeta.width,
+          thumbH: thumbMeta.height,
+          label: sheet.label,
+          alt: `${ch.displayName} ${what}: front, three-quarter and back views, plus facial expressions.`,
+        });
+        sources[fullHref] = sheet.path;
+        if (add.sensitive) sensitive.add(fullHref);
+      }
+      files.push({ path: SHEET_SOURCES_PATH, content: Buffer.from(sheetSourcesJson(sourcesText, sources)) });
+    }
+
+    const captions: Record<string, { title?: string; alt?: string }> = {};
+    for (const [k, v] of Object.entries(body.data.album.captions)) {
+      const c: { title?: string; alt?: string } = {};
+      if (v.title) c.title = v.title;
+      if (v.alt && v.alt.length >= 20) c.alt = v.alt;
+      if (c.title || c.alt) captions[k] = c;
+    }
+    const next: SiteVisibility = {
+      hidden: body.data.hidden,
+      sensitive: [...sensitive].sort(),
+      album: { order: body.data.album.order, captions },
+      characterAdditions,
+      albumAdditions: additions,
+    };
     files.push({ path: VISIBILITY_PATH, content: Buffer.from(visibilityJs(next)) });
     const hiddenCount = Object.values(next.hidden.characters).reduce((n, l) => n + l.length, 0) + next.hidden.album.length;
+    const sheetCount = body.data.addSheets.length;
     const res = await publisher.openPullRequest({
       branch: `studio/site-images-${stamp(deps)}`,
-      title: `Update site images${items.length ? `: add ${items.length} album photo(s)` : ""}`,
+      title: `Update site images${sheetCount ? `: add ${sheetCount} sheet(s)` : ""}${items.length ? `${sheetCount ? "," : ":"} add ${items.length} album photo(s)` : ""}`,
       commitMessage: `Update which site images are shown\n\nChanged in Reflections Studio.`,
       body: [
         `Changes made in Reflections Studio by ${s.user}.`,
         ``,
         `- ${hiddenCount} image(s) hidden across the character galleries and the Memories album (nothing is deleted; hidden images stay in the repository).`,
-        items.length ? `- ${items.length} new album photo(s), added at the end of the Memories album.` : `- No new album photos.`,
+        `- ${next.sensitive.length} image(s) blurred until the reader confirms they are 18 or older.`,
+        sheetCount ? `- ${sheetCount} character sheet(s) from the repository added to the galleries.` : null,
+        items.length ? `- ${items.length} new album photo(s), added to the Memories album.` : null,
+        next.album.order.length ? `- Memories album order set in the studio.` : null,
+        Object.keys(captions).length ? `- ${Object.keys(captions).length} album caption(s) or description(s) changed.` : null,
         ``,
-        `Only \`${VISIBILITY_PATH}\`${items.length ? " and the new image files" : ""} change. Merging deploys it.`,
-      ].join("\n"),
+        `\`${VISIBILITY_PATH}\`${files.length > 1 ? " and the new image files" : ""} change. Merging deploys it.`,
+      ]
+        .filter((l) => l !== null)
+        .join("\n"),
       files,
-      mustNotExist: files.filter((f) => f.path !== VISIBILITY_PATH).map((f) => f.path),
+      mustNotExist: files.filter((f) => f.path !== VISIBILITY_PATH && f.path !== SHEET_SOURCES_PATH).map((f) => f.path),
     });
     if (items.length) await deps.db.query(`UPDATE album_items SET status = 'pr_open', pr_url = $2 WHERE id = ANY($1::uuid[])`, [items.map((i) => i.id), res.prUrl]);
     return json({ prUrl: res.prUrl }, 201);
@@ -556,12 +644,12 @@ export async function withAsset(
   return `${JSON.stringify(m, null, 2)}\n`;
 }
 
-function needPublisher(deps: StudioDeps) {
+export function needPublisher(deps: StudioDeps) {
   if (!deps.publisher) throw forbidden("GITHUB_TOKEN is not configured, so changes to the repository are unavailable.");
   return deps.publisher;
 }
 
-function stamp(deps: StudioDeps) {
+export function stamp(deps: StudioDeps) {
   return deps.clock.now().toISOString().replace(/[-:T]/g, "").slice(0, 12);
 }
 
@@ -707,7 +795,13 @@ export function parseCharacterGalleries(html: string) {
 }
 
 export function parseAlbum(html: string) {
-  return [...html.matchAll(/<a class="snap-link"([^>]*)>\s*(<img[^>]*>)/g)].map((x) => ({ href: attr(x[1]!, "href")!, title: attr(x[1]!, "data-title"), thumb: attr(x[2]!, "src"), alt: attr(x[2]!, "alt") }));
+  return [...html.matchAll(/<figure class="([^"]*)">\s*<a class="snap-link"([^>]*)>\s*(<img[^>]*>)/g)].map((x) => ({
+    href: attr(x[2]!, "href")!,
+    title: attr(x[2]!, "data-title"),
+    thumb: attr(x[3]!, "src"),
+    alt: attr(x[3]!, "alt"),
+    shape: /\bsnap-tall\b/.test(x[1]!) ? "tall" : /\bsnap-wide\b/.test(x[1]!) ? "wide" : "normal",
+  }));
 }
 
 export interface AlbumAddition {
@@ -722,19 +816,42 @@ export interface AlbumAddition {
   wide?: boolean;
 }
 
+/** A repository sheet added to a character's public gallery from the studio. */
+export interface CharacterAddition {
+  src: string;
+  full: string;
+  w: number;
+  h: number;
+  thumbW?: number;
+  thumbH?: number;
+  label: string;
+  alt: string;
+}
+
 export interface SiteVisibility {
   hidden: { characters: Record<string, string[]>; album: string[] };
+  /** Full-size image paths blurred until the reader confirms they are 18 or older. */
+  sensitive: string[];
+  /** Memories album: photo order (full-size paths) and edited captions and descriptions. */
+  album: { order: string[]; captions: Record<string, { title?: string; alt?: string }> };
+  characterAdditions: Record<string, CharacterAddition[]>;
   albumAdditions: AlbumAddition[];
 }
 
 export function parseVisibility(js: string): SiteVisibility {
-  const empty: SiteVisibility = { hidden: { characters: {}, album: [] }, albumAdditions: [] };
+  const empty: SiteVisibility = { hidden: { characters: {}, album: [] }, sensitive: [], album: { order: [], captions: {} }, characterAdditions: {}, albumAdditions: [] };
   const start = js.indexOf("window.REFLECTIONS_VISIBILITY = ");
   if (start < 0) return empty;
   const body = js.slice(start + "window.REFLECTIONS_VISIBILITY = ".length).trim().replace(/;\s*$/, "");
   try {
     const v = JSON.parse(body) as Partial<SiteVisibility>;
-    return { hidden: { characters: v.hidden?.characters ?? {}, album: v.hidden?.album ?? [] }, albumAdditions: v.albumAdditions ?? [] };
+    return {
+      hidden: { characters: v.hidden?.characters ?? {}, album: v.hidden?.album ?? [] },
+      sensitive: v.sensitive ?? [],
+      album: { order: v.album?.order ?? [], captions: v.album?.captions ?? {} },
+      characterAdditions: v.characterAdditions ?? {},
+      albumAdditions: v.albumAdditions ?? [],
+    };
   } catch {
     return empty;
   }
@@ -746,8 +863,32 @@ export function visibilityJs(v: SiteVisibility): string {
     "// reviewed pull request; editing by hand in a normal commit also works.",
     "// hidden.characters: character id -> full-size image paths to leave out of that gallery.",
     "// hidden.album: full-size image paths to leave out of the Memories album.",
-    "// albumAdditions: photos added to the end of the Memories album.",
+    "// sensitive: full-size image paths blurred until the reader confirms they are 18 or older.",
+    "// album.order / album.captions: Memories album order and edited captions (title) and descriptions (alt).",
+    "// characterAdditions: repository sheets added to a character's gallery.",
+    "// albumAdditions: photos added to the Memories album.",
     `window.REFLECTIONS_VISIBILITY = ${JSON.stringify(v, null, 2)};`,
     "",
   ].join("\n");
+}
+
+/** production/studio/site-sheet-sources.json: public gallery image -> repository sheet it was made from. */
+export function parseSheetSources(text: string | null): Record<string, string> {
+  if (!text) return {};
+  try {
+    const v = JSON.parse(text) as { sources?: Record<string, string> };
+    return v.sources ?? {};
+  } catch {
+    return {};
+  }
+}
+
+export function sheetSourcesJson(previousText: string | null, sources: Record<string, string>): string {
+  let comment = "Which repository sheet each public character-gallery image was made from. Maintained by Reflections Studio (Site images).";
+  try {
+    comment = (JSON.parse(previousText ?? "{}") as { $comment?: string }).$comment ?? comment;
+  } catch {
+    // keep the default comment
+  }
+  return `${JSON.stringify({ $comment: comment, sources: Object.fromEntries(Object.entries(sources).sort(([a], [b]) => a.localeCompare(b))) }, null, 2)}\n`;
 }

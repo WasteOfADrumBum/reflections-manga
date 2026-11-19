@@ -1,7 +1,7 @@
 // Arcs > chapters > pages, with the story text kept in the repository.
 import { get, post, put } from "../api.js";
 import { act, crumbs, errorBox, head, prLink, render, repoImage, section } from "../shared.js";
-import { badge, clear, field, h, notice, progress } from "../ui.js";
+import { badge, field, fill, h, notice, progress } from "../ui.js";
 
 export async function arcsView() {
   const { arcs } = await get("/arcs");
@@ -10,7 +10,7 @@ export async function arcsView() {
   const result = h("div", { "aria-live": "polite" });
   const form = h(
     "form",
-    { class: "panel form-card", id: "new-arc" },
+    { class: "box form-card", id: "new-arc" },
     h("h2", {}, "Add an arc"),
     h("p", { class: "small muted" }, "Opens a pull request that adds stories/arc-NN/index.md. It shows up here once you merge it."),
     h("div", { class: "form-grid" }, field({ id: "arc-title", label: "Arc title", input: title }), field({ id: "arc-focus", label: "What the arc is about", input: focus })),
@@ -20,7 +20,7 @@ export async function arcsView() {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const res = await act(form.querySelector("button"), () => post("/create/arc", { title: title.value.trim(), focus: focus.value.trim() || undefined }), "Pull request opened.").catch(() => null);
-    if (res) clear(result).append(prLink(res.prUrl));
+    if (res) fill(result, prLink(res.prUrl));
   });
   render(
     head("Story", "Pick an arc to see its chapters. Text comes from the arc and chapter files in the repository."),
@@ -53,7 +53,7 @@ export async function arcView(arcId) {
   const result = h("div", { "aria-live": "polite" });
   const form = h(
     "form",
-    { class: "panel form-card", id: "new-chapter" },
+    { class: "box form-card", id: "new-chapter" },
     h("h2", {}, "Add a chapter to this arc"),
     h("p", { class: "small muted" }, "Opens a pull request that adds the chapter folder from the chapter template and registers it in the studio config. Write its script and page prompts there."),
     h("div", { class: "form-grid" }, field({ id: "ch-title", label: "Chapter title", input: title }), field({ id: "ch-pages", label: "Planned pages", input: pages }), field({ id: "ch-logline", label: "Logline (one or two sentences)", input: logline })),
@@ -63,7 +63,7 @@ export async function arcView(arcId) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const res = await act(form.querySelector("button"), () => post("/create/chapter", { arcId, title: title.value.trim(), logline: logline.value.trim() || undefined, plannedPages: Number(pages.value) }), "Pull request opened.").catch(() => null);
-    if (res) clear(result).append(prLink(res.prUrl));
+    if (res) fill(result, prLink(res.prUrl));
   });
   render(
     crumbs(["Story", "#/story"], [`Arc ${arc.number}`]),

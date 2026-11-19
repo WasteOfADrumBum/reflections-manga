@@ -14,11 +14,11 @@ or an established residence. No character traits or relationships were changed.
 
 ## References
 
-- [Ruby](../../characters/_reference-sheets/main_characters/bennett-walker-ruby.png)
-- [Autumn](../../characters/_reference-sheets/bennetts/bennett-autumn.png)
-- [Thomas](../../characters/_reference-sheets/bennetts/bennett-thomas.png)
-- [Avery](../../characters/_reference-sheets/main_characters/children/bennett-walker-avery.png)
-- [Ethan](../../characters/_reference-sheets/main_characters/walker-ethan.png)
+- [Ruby](../../characters/main/ruby-bennett-walker/references/ruby-bennett-walker-reference-main.png)
+- [Autumn](../../characters/family/bennett/autumn-bennett/references/autumn-bennett-reference-main.png)
+- [Thomas](../../characters/family/bennett/thomas-bennett/references/thomas-bennett-reference-main.png)
+- [Avery](../../characters/main/avery-bennett-walker/references/avery-bennett-walker-reference-main.png)
+- [Ethan](../../characters/main/ethan-walker/references/ethan-walker-reference-main.png)
 
 ## Visual Review
 

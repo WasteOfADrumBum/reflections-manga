@@ -12,10 +12,6 @@
       "plannedPages": 30,
       "promptDir": "prompts/version_002",
       "scriptFile": "script-v2.md",
-      "identitySheetDirs": [
-        "characters/_reference-sheets/main_characters",
-        "characters/_reference-sheets/main_characters/children"
-      ],
       "lockedPages": "",
       "lockReason": "Locked.",
       "unpreparedPages": "",

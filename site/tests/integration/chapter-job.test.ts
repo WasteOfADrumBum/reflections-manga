@@ -75,15 +75,15 @@ describe("simulated chapter 001 generation (mocked OpenAI)", () => {
     await drain(h);
     const [p23, p24] = h.images.calls;
     expect(p23!.images.map((i) => i.label)).toEqual([
-      "Ruby Bennett-Walker identity sheet (bennett-walker-ruby.png)",
-      "Ethan Walker identity sheet (walker-ethan.png)",
+      "Ruby Bennett-Walker identity sheet (ruby-bennett-walker-reference-main.png)",
+      "Ethan Walker identity sheet (ethan-walker-reference-main.png)",
     ]);
     // Page 022 has no image yet, so it is not attached, and the prompt says so.
     expect(p23!.prompt).toContain("Not attached: page 022");
     // Page 024 references the new page 023 (a QA-passed draft) after its identity sheets.
     expect(p24!.images.map((i) => i.label)).toEqual([
-      "Ethan Walker identity sheet (walker-ethan.png)",
-      "Morgan H. Walker identity sheet (walker-morgan.png)",
+      "Ethan Walker identity sheet (ethan-walker-reference-main.png)",
+      "Morgan H. Walker identity sheet (morgan-hayes-reference-main.png)",
       "Page 023 (QA-passed draft awaiting review)",
     ]);
     // The verbatim prompt is preserved.
@@ -91,7 +91,7 @@ describe("simulated chapter 001 generation (mocked OpenAI)", () => {
     const v = await call("GET", "/chapters/001/pages/24");
     const refs = v.data.versions[0].references as { role: string; path: string }[];
     expect(refs.map((r) => r.role)).toEqual(["identity", "identity", "scene"]);
-    expect(refs[0]!.path).toBe("characters/_reference-sheets/main_characters/walker-ethan.png");
+    expect(refs[0]!.path).toBe("characters/main/ethan-walker/references/ethan-walker-reference-main.png");
   });
 
   it("updates the continuity record after each successful page", async () => {

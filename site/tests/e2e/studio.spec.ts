@@ -95,7 +95,7 @@ test("one-click test page, approval, full chapter run, review and publish", asyn
   await page.getByRole("link", { name: "Review pages" }).click();
   await expect(page.getByRole("heading", { level: 1, name: "Review" })).toBeVisible();
   await page.getByRole("button", { name: "Approve" }).first().click();
-  await expect(page.locator(".publish-row").first()).toBeVisible();
+  await expect(page.locator('section[aria-labelledby="publish-title"] .publish-row').first()).toBeVisible();
   await expectAccessible(page);
 
   await page.getByRole("link", { name: "Generate" }).first().click();

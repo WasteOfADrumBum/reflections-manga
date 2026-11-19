@@ -28,6 +28,13 @@ export function clear(el) {
   return el;
 }
 
+/** Replaces an element's children. Skips null and false, so optional parts never render as the word "null". */
+export function fill(el, ...children) {
+  clear(el);
+  append(el, children);
+  return el;
+}
+
 const announcer = () => document.getElementById("announcer");
 const alerter = () => document.getElementById("alerter");
 
@@ -167,4 +174,83 @@ export function sheetOptions(sheets, selected, note = () => "") {
   return [...groups.entries()]
     .sort((a, b) => order(a[0]) - order(b[0]) || a[0].localeCompare(b[0]))
     .map(([key, list]) => h("optgroup", { label: key }, ...list.map((s) => h("option", { value: s.path, selected: s.path === selected }, `${s.label}${note(s)}`))));
+}
+
+// ---- revealing images: blurred until the viewer confirms they are 18 or older ----
+const AGE_KEY = "reflections:age-confirmed:v1";
+let ageConfirmedHere = false;
+
+function ageConfirmed() {
+  if (ageConfirmedHere) return true;
+  for (const name of ["localStorage", "sessionStorage"]) {
+    try {
+      if (window[name]?.getItem(AGE_KEY)) return true;
+    } catch {
+      // storage blocked
+    }
+  }
+  return false;
+}
+
+function saveAgeConfirmed() {
+  ageConfirmedHere = true;
+  for (const name of ["localStorage", "sessionStorage"]) {
+    try {
+      window[name]?.setItem(AGE_KEY, new Date().toISOString());
+      return;
+    } catch {
+      // try the next store
+    }
+  }
+}
+
+function eyeIcon() {
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("aria-hidden", "true");
+  svg.setAttribute("focusable", "false");
+  const path = document.createElementNS(ns, "path");
+  path.setAttribute("fill", "none");
+  path.setAttribute("stroke", "currentColor");
+  path.setAttribute("stroke-width", "2");
+  path.setAttribute("stroke-linecap", "round");
+  path.setAttribute("d", "M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12zm10-3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z");
+  svg.append(path);
+  return svg;
+}
+
+/** Asks once per browser for 18+ confirmation (shared with the public site), then resolves true. */
+export async function confirmAge() {
+  if (ageConfirmed()) return true;
+  const ok = await confirmDialog({
+    title: "Show a sensitive image?",
+    body: h("p", {}, "This image shows lingerie or underwear. Confirm that you are 18 or older to see it."),
+    confirmLabel: "I'm 18 or older, show it",
+  });
+  if (ok) saveAgeConfirmed();
+  return ok;
+}
+
+/**
+ * Wraps an image so it can be blurred behind an eye button. Call
+ * wrapper.setSensitive(true|false, label) whenever the image changes.
+ */
+export function veil(img, sensitive = false, labelText = "") {
+  const btn = h("button", { type: "button", class: "veil-btn" }, eyeIcon(), h("span", {}, "Sensitive image"), h("span", { class: "small" }, "Show (18+)"));
+  const wrap = h("span", { class: "veil" }, img, btn);
+  wrap.setSensitive = (on, text = "") => {
+    wrap.classList.toggle("is-veiled", !!on);
+    wrap.classList.toggle("is-revealed", !on);
+    btn.hidden = !on;
+    btn.setAttribute("aria-label", `Sensitive image${text ? `: ${text}` : ""}. Show it (18 or older only)`);
+  };
+  btn.addEventListener("click", async () => {
+    if (!(await confirmAge())) return;
+    wrap.classList.add("is-revealed");
+    btn.hidden = true;
+    announce("Image shown.");
+  });
+  wrap.setSensitive(sensitive, labelText);
+  return wrap;
 }

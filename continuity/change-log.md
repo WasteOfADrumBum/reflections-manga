@@ -804,3 +804,7 @@ User reopened the entire chapter for regeneration. [V2](../stories/arc-01/chapte
 ## 2026-11-19: Cast Navigation Groups
 
 At the user’s request, moved the six core household characters to `characters/main/`, extended relatives to `characters/family/bennett/`, `hayes/`, and `walker/`, and Cal, Nat, Ellie, Owen, and Cass to `characters/friends/`. Reordered the registry and added group indexes. Stable IDs, approval states, relationship facts, and story chronology are preserved. Updated relative links, asset manifest destinations, and studio discovery. Cass is not classified as Ruby’s relative.
+
+## 2026-11-19: Reference-Sheet Copies Retired
+
+At the user's request, removed `characters/_reference-sheets/`. All 17 images there were byte-identical copies of the characters' main reference sheets, so no artwork was lost. Chapter 001 version 2 prompts, the version 2 page guide and three portrait-study drafts now name each character's main reference sheet (for example `ethan-walker-reference-main.png`). No story, appearance or approval change.

@@ -107,6 +107,22 @@ describe("admin interface", () => {
     select.dispatchEvent(new Event("change"));
     expect(img.getAttribute("src")).toMatch(/ethan-walker-formal-wedding-suit\.png/);
     expect(img.getAttribute("alt")).toBe("Ethan Walker, Wedding suit");
+    // Studio sections never use the public site's tilted comic-panel class.
+    expect(document.querySelector("#view .panel")).toBeNull();
+    // Labels are names, never file names; a revealing sheet is blurred behind an eye button.
+    const ruby = [...document.querySelectorAll("li.char-card")].find((a) => a.querySelector("h2")?.textContent === "Ruby Bennett-Walker")!;
+    const rubySelect = ruby.querySelector("select")!;
+    expect([...rubySelect.options].some((o) => /\.png/.test(o.textContent ?? ""))).toBe(false);
+    rubySelect.value = [...rubySelect.options].find((o) => o.value.endsWith("lingerie-blue.png"))!.value;
+    rubySelect.dispatchEvent(new Event("change"));
+    expect(ruby.querySelector(".veil")!.classList.contains("is-veiled")).toBe(true);
+    expect(ruby.querySelector<HTMLButtonElement>(".veil-btn")!.hidden).toBe(false);
+    expect(ruby.querySelector(".outfit-preview figcaption")!.textContent).toMatch(/Blue.*Lingerie.*18\+/);
+    // Outfits can change category; the main sheet cannot.
+    expect(ruby.querySelector<HTMLElement>(".cat-form")!.hidden).toBe(false);
+    rubySelect.value = rubySelect.options[0]!.value;
+    rubySelect.dispatchEvent(new Event("change"));
+    expect(ruby.querySelector<HTMLElement>(".cat-form")!.hidden).toBe(true);
     // Cass, added on main, is in the library with her outfits.
     const cass = [...document.querySelectorAll("li.char-card")].find((a) => a.querySelector("h2")?.textContent?.startsWith("Cass"))!;
     expect(cass.querySelector("select")!.options.length).toBeGreaterThan(5);
@@ -136,7 +152,7 @@ describe("admin interface", () => {
   it("shows a page's synopsis, outfit pickers, an editable prompt and the cost in plain words", async () => {
     await go("#/chapters/001/pages/23", () => heading().startsWith("Page 023") && !!document.querySelector(".check-result .explain"));
     const text = document.getElementById("view")!.textContent!;
-    expect(text).toMatch(/Ruby Bennett-Walker identity sheet \(bennett-walker-ruby\.png\)/);
+    expect(text).toMatch(/Ruby Bennett-Walker identity sheet \(ruby-bennett-walker-reference-main\.png\)/);
     expect(text).toMatch(/You missed two murders\./);
     expect(text).toMatch(/separate from ChatGPT Plus/);
     expect(text).toMatch(/gpt-image-2\.5-sunburst/);
@@ -152,12 +168,18 @@ describe("admin interface", () => {
     const text = document.getElementById("view")!.textContent!;
     expect(text).toMatch(/already has art\. New versions don't touch it/);
     expect(text).not.toMatch(/Locked\./);
+    // Art in the repository but not in the reader can be published from here.
+    expect(text).toMatch(/In the repository, not in the public reader yet/);
+    expect([...document.querySelectorAll("button")].some((b) => b.textContent === "Publish to the reader")).toBe(true);
+    expect(text).not.toMatch(/\bnull\b/);
     expect(await a11y()).toEqual([]);
   });
 
   it("explains an empty review queue instead of showing nothing", async () => {
     await go("#/review", () => heading() === "Review");
     expect(document.getElementById("view")!.textContent).toMatch(/Nothing to review yet/);
+    expect(document.getElementById("view")!.textContent).toMatch(/Art in the repository, not in the reader yet/);
+    expect(document.querySelectorAll(".repo-art-row")).toHaveLength(5);
     expect(await a11y()).toEqual([]);
   });
 
@@ -173,6 +195,23 @@ describe("admin interface", () => {
   it("lists site images with show/hide controls", async () => {
     await go("#/site", () => heading() === "Site images");
     expect(document.querySelectorAll(".vis-toggle input").length).toBeGreaterThan(10);
+    // Sheets not on the site yet are listed unticked; revealing ones start blurred.
+    const blueAdd = document.getElementById("add-characters-main-ruby-bennett-walker-outfits-ruby-bennett-walker-lingerie-blue-png") as HTMLInputElement;
+    expect(blueAdd.checked).toBe(false);
+    expect((document.getElementById("addblur-characters-main-ruby-bennett-walker-outfits-ruby-bennett-walker-lingerie-blue-png") as HTMLInputElement).checked).toBe(true);
+    // The album can be reordered with buttons (drag and drop has this single-pointer alternative) and captions edited.
+    const items = () => [...document.querySelectorAll<HTMLElement>(".album-item")];
+    const first = items()[0]!.dataset.href;
+    const down = items()[0]!.querySelector<HTMLButtonElement>(".move-down")!;
+    down.click();
+    expect(items()[1]!.dataset.href).toBe(first);
+    const caption = items()[1]!.querySelector<HTMLInputElement>("input[type=text]")!;
+    caption.value = "All six of us";
+    caption.dispatchEvent(new Event("input"));
+    expect(items()[1]!.querySelector<HTMLButtonElement>(".changed-note")!.hidden).toBe(false);
+    const reset = [...items()[1]!.querySelectorAll("button")].find((b) => b.textContent === "Reset to default")!;
+    reset.click();
+    expect(caption.value).not.toBe("All six of us");
     for (const input of document.querySelectorAll("#album-upload input, #album-upload textarea")) {
       expect(document.querySelector(`label[for="${input.id}"]`), input.id).not.toBeNull();
     }
@@ -205,7 +244,7 @@ describe("admin interface", () => {
     const approve = [...document.querySelectorAll("button")].find((b) => b.textContent === "Approve")!;
     approve.click();
     const published = `Page ${firstReady.value.padStart(3, "0")}`;
-    await settle(() => !!document.querySelector(".publish-row") && document.querySelector(".publish-row")!.textContent!.includes(published));
+    await settle(() => [...document.querySelectorAll(".publish-row")].some((r) => r.textContent!.includes(published)));
     expect(await a11y()).toEqual([]);
 
     await go("#/studio/001", () => heading() === "Generate pages" && !!document.querySelector(".stat"));

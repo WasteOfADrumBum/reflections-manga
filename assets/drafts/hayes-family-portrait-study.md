@@ -16,13 +16,13 @@ Nathan and Adrian's proposed ages, heights, and designs remain provisional.
 
 ## Input References
 
-- [walker-rowan](../../characters/_reference-sheets/main_characters/children/walker-rowan.png)
-- [hayes-adrian](../../characters/_reference-sheets/hayes/hayes-adrian.png)
-- [hayes-diane](../../characters/_reference-sheets/hayes/hayes-diane.png)
-- [hayes-nathan](../../characters/_reference-sheets/hayes/hayes-nathan.png)
-- [walker-ethan](../../characters/_reference-sheets/main_characters/walker-ethan.png)
-- [walker-morgan](../../characters/_reference-sheets/main_characters/walker-morgan.png)
-- [walker-riley](../../characters/_reference-sheets/main_characters/children/walker-riley.png)
+- [walker-rowan](../../characters/main/rowan-hayes-walker/references/rowan-hayes-walker-reference-main.png)
+- [hayes-adrian](../../characters/family/hayes/adrian-hayes/references/adrian-hayes-reference-main.png)
+- [hayes-diane](../../characters/family/hayes/diane-hayes/references/diane-hayes-reference-main.png)
+- [hayes-nathan](../../characters/family/hayes/nathan-hayes/references/nathan-hayes-reference-main.png)
+- [walker-ethan](../../characters/main/ethan-walker/references/ethan-walker-reference-main.png)
+- [walker-morgan](../../characters/main/morgan-hayes/references/morgan-hayes-reference-main.png)
+- [walker-riley](../../characters/main/riley-hayes-walker/references/riley-hayes-walker-reference-main.png)
 
 The generator accepts up to five input paths. Nathan, Adrian, and Diane's
 unaltered reference sheets were stacked top to bottom into a lossless

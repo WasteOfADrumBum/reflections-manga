@@ -2,6 +2,7 @@ import type { StudioDeps } from "../context.js";
 import { content } from "../context.js";
 import { pad3 } from "../content/config.js";
 import { reconcilePublished } from "../publish/service.js";
+import { reconcileRepoArt } from "../publish/repo-art.js";
 import { getStudioSetting } from "./jobs.js";
 import type { JobPageRow, VersionRow } from "./types.js";
 
@@ -44,7 +45,9 @@ export const DONE_STATUSES: PageDisplayStatus[] = ["published", "has_art", "appr
 export async function chapterOverview(deps: StudioDeps, chapterId: string) {
   const c = await content(deps);
   const inv = await c.inventory(chapterId);
-  await reconcilePublished(deps, chapterId, new Set(inv.pages.filter((p) => p.publishedSrc).map((p) => p.page)));
+  const inReader = new Set(inv.pages.filter((p) => p.publishedSrc).map((p) => p.page));
+  await reconcilePublished(deps, chapterId, inReader);
+  await reconcileRepoArt(deps, chapterId, inReader);
   const versions = await deps.db.query<VersionRow>(`SELECT * FROM page_versions WHERE chapter_id = $1 ORDER BY created_at DESC`, [chapterId]);
   const activeJobPages = await deps.db.query<JobPageRow & { job_status: string }>(
     `SELECT jp.*, j.status AS job_status FROM job_pages jp JOIN jobs j ON j.id = jp.job_id WHERE jp.chapter_id = $1 ORDER BY j.created_at DESC`,

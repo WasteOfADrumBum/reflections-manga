@@ -38,6 +38,60 @@ describe("site visibility script", () => {
     expect(leaves.every((l) => l.querySelector("figure"))).toBe(true);
   });
 
+  it("applies the album order and edited captions, and keeps a tall photo on its own page", () => {
+    load("memories.html", {
+      hidden: { characters: {}, album: [] },
+      album: {
+        order: ["/images/moments/ethan-cal-motorcycle-ride-1672.webp", "/images/moments/ruby-autumn-sisters-1024.webp", "/images/family/family-1536.webp"],
+        captions: { "/images/family/family-1536.webp": { title: "The six of us", alt: "Everyone together on a sunny afternoon, smiling at the camera." } },
+      },
+      albumAdditions: [],
+    });
+    const book = document.querySelector("#album .album-book")!;
+    const hrefs = [...book.querySelectorAll(".snap-link")].map((a) => a.getAttribute("href"));
+    expect(hrefs.slice(0, 3)).toEqual(["/images/moments/ethan-cal-motorcycle-ride-1672.webp", "/images/moments/ruby-autumn-sisters-1024.webp", "/images/family/family-1536.webp"]);
+    const tall = book.querySelector('a[href="/images/moments/ruby-autumn-sisters-1024.webp"]')!.closest(".album-leaf")!;
+    expect(tall.querySelectorAll("figure")).toHaveLength(1);
+    const fam = book.querySelector<HTMLAnchorElement>('a[href="/images/family/family-1536.webp"]')!;
+    expect(fam.getAttribute("data-title")).toBe("The six of us");
+    expect(fam.closest("figure")!.querySelector("figcaption")!.textContent).toBe("The six of us");
+    expect(fam.querySelector("img")!.alt).toBe("Everyone together on a sunny afternoon, smiling at the camera.");
+    // Every photo is still there, two to a page except the tall one.
+    expect(hrefs).toHaveLength(document.querySelectorAll("#album figure").length);
+    for (const leaf of book.querySelectorAll(".album-leaf")) expect(leaf.querySelectorAll("figure").length).toBeLessThanOrEqual(2);
+  });
+
+  it("adds a repository sheet to a gallery and blurs sensitive images until 18+ is confirmed", () => {
+    localStorage.clear();
+    const full = "/images/characters/refs/ruby-bennett-walker-lingerie-blue.webp";
+    load("characters.html", {
+      hidden: { characters: {}, album: [] },
+      sensitive: [full],
+      characterAdditions: { "ruby-bennett-walker": [{ src: "/images/characters/refs/ruby-bennett-walker-lingerie-blue-thumb.webp", full, w: 1536, h: 1024, label: "Blue", alt: "Ruby Bennett-Walker lingerie sheet, Blue." }] },
+      albumAdditions: [],
+    });
+    const ruby = document.getElementById("ruby-bennett-walker")!;
+    const link = ruby.querySelector<HTMLAnchorElement>(`a[href="${full}"]`)!;
+    expect(link).not.toBeNull();
+    const wrap = link.closest(".veil")!;
+    expect(wrap.classList.contains("is-veiled")).toBe(true);
+    expect(link.getAttribute("tabindex")).toBe("-1");
+    const btn = wrap.querySelector<HTMLButtonElement>(".veil-btn")!;
+    expect(btn.getAttribute("aria-label")).toMatch(/Sensitive image hidden.*18 or older/);
+    HTMLDialogElement.prototype.showModal ??= function (this: HTMLDialogElement) { this.setAttribute("open", ""); };
+    HTMLDialogElement.prototype.close ??= function (this: HTMLDialogElement) { this.removeAttribute("open"); this.dispatchEvent(new Event("close")); };
+    // Clicking the image itself never opens it while veiled.
+    const ev = new MouseEvent("click", { bubbles: true, cancelable: true });
+    link.dispatchEvent(ev);
+    expect(ev.defaultPrevented).toBe(true);
+    // Confirming age reveals it and remembers the answer.
+    btn.click();
+    document.querySelector<HTMLButtonElement>("[data-veil-yes]")!.click();
+    expect(wrap.classList.contains("is-veiled")).toBe(false);
+    expect(localStorage.getItem("reflections:age-confirmed:v1")).not.toBeNull();
+    expect(ruby.querySelector(".gal-count")!.textContent).toBe(`${ruby.querySelectorAll(".gal-strip li").length} images`);
+  });
+
   it("does nothing without data", () => {
     load("memories.html", undefined);
     expect(document.querySelectorAll("#album .snap-link").length).toBeGreaterThan(5);

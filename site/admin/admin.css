@@ -108,7 +108,7 @@ thead th { border-bottom: 3px solid var(--rule); }
 fieldset { border: 3px solid var(--rule); padding: 0.75rem 1rem 1rem; margin: 0 0 1.25rem; background: var(--card); }
 legend { font-weight: 800; padding: 0 0.35rem; }
 .form-card { margin-bottom: 1.5rem; }
-.form-grid { display: grid; gap: 0 1.25rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); }
+.form-grid { display: grid; gap: 0 1.25rem; align-items: start; grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr)); }
 
 .check-grid { display: grid; gap: 0.25rem 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr)); }
 .check-grid label { display: flex; gap: 0.5rem; align-items: center; min-height: 44px; }
@@ -127,8 +127,10 @@ legend { font-weight: 800; padding: 0 0.35rem; }
 .char-card h2 { margin: 0; }
 .char-card img { border: 2px solid var(--rule); width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; background: var(--paper-2); }
 .outfit-preview { margin: 0; }
-.outfit-preview figcaption { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.6rem; font-weight: 700; }
+.outfit-preview { position: relative; }
+.outfit-preview figcaption { position: static; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.6rem; font-weight: 700; }
 .char-card .field { margin-bottom: 0; }
+.char-card .badge-row { margin: 0; }
 .inline-form { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: end; }
 .inline-form .field { flex: 1 1 12rem; margin-bottom: 0; }
 .inline-form .btn { margin-bottom: 0.1rem; }
@@ -143,7 +145,8 @@ legend { font-weight: 800; padding: 0 0.35rem; }
 .log time { color: var(--ink-soft); margin-right: 0.5rem; font-variant-numeric: tabular-nums; }
 
 pre.prompt { white-space: pre-wrap; word-break: break-word; background: var(--card); border: 3px solid var(--rule); padding: 1rem; max-height: 32rem; overflow: auto; font-size: 0.9rem; }
-details { border: 3px solid var(--rule); background: var(--card); padding: 0.5rem 0.9rem; margin-bottom: 1rem; }
+details { border: 3px solid var(--rule); background: var(--card); padding: 0.75rem 1rem; margin-bottom: 1rem; }
+details[open] > summary { margin-bottom: 0.75rem; }
 summary { font-weight: 700; cursor: pointer; min-height: 32px; display: flex; align-items: center; }
 
 dialog { border: 3px solid var(--rule); background: var(--paper); color: var(--ink); box-shadow: var(--shadow); max-width: min(36rem, calc(100% - 2rem)); padding: 0; }
@@ -162,8 +165,13 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.55); }
 .studio-main h2 { margin-bottom: 0.75rem; }
 .studio-main h3 { margin-bottom: 0.5rem; }
 .lede { max-width: 60ch; }
-.panel { margin: 0 0 2rem; }
-.panel > h2 { padding-bottom: 0.35rem; border-bottom: 3px solid var(--rule); }
+/* Studio sections. Named .box (not .panel) so the public site's tilted
+   comic-panel styles never apply here. Every bordered box has inner padding. */
+.box { border: 3px solid var(--rule); background: var(--card); padding: 1.25rem 1.5rem 1.5rem; margin: 0 0 2rem; min-width: 0; }
+.box > h2 { margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--rule); }
+.box > :last-child { margin-bottom: 0; }
+.box .box { background: var(--paper); }
+@media (max-width: 40rem) { .box { padding: 1rem; } }
 .panel-details { margin: 0 0 2rem; }
 .panel-details > summary + * { margin-top: 0.75rem; }
 .card-list { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
@@ -181,7 +189,7 @@ figcaption { margin-top: 0.5rem; }
 .stat-row .card p { margin: 0; }
 .stat-row .stat { margin-bottom: 0.25rem; }
 
-.split > .panel { margin-bottom: 0; }
+.split > .box { margin-bottom: 0; }
 .split { margin-bottom: 2rem; }
 .current-art img { border: 2px solid var(--rule); width: 100%; max-width: 24rem; height: auto; aspect-ratio: 2 / 3; object-fit: contain; background: var(--paper-2); }
 .script-panels { padding-left: 1.25rem; }
@@ -223,6 +231,57 @@ figcaption { margin-top: 0.5rem; }
 .flag-list li + li { margin-top: 0.5rem; }
 
 @media (forced-colors: active) {
-  .pick, .vis-item, .explain, .chart-wrap { border-color: CanvasText; }
+  .box, .pick, .vis-item, .explain, .chart-wrap { border-color: CanvasText; }
   .chart-bar { fill: CanvasText; }
 }
+
+/* ---- review fixes: spacing, focus, veiled images, album ordering ---- */
+.studio-main h1[tabindex="-1"]:focus { outline: none; }
+.studio-main p, .studio-main ul, .studio-main ol { overflow-wrap: anywhere; }
+.box > p.small, .box > p.muted { margin-top: 0; }
+.table-scroll { margin: 0 0 1rem; }
+.box .table-scroll > table, .box > table { border-width: 2px; }
+.field-row { display: flex; flex-wrap: wrap; gap: 1rem 1.25rem; align-items: start; }
+.field-row > .field { flex: 1 1 14rem; min-width: 0; }
+.current-art img { display: block; }
+.current-art figcaption { margin-top: 0.6rem; }
+.art-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-top: 1rem; }
+.cat-form { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: end; }
+.cat-form .field { flex: 1 1 10rem; margin-bottom: 0; }
+.char-card > details { margin: 0; }
+.char-card { padding: 1.25rem; }
+
+/* An image blurred until the viewer confirms they are 18 or older. */
+.veil { position: relative; display: block; overflow: hidden; }
+.veil img { filter: blur(18px) saturate(0.6); transform: scale(1.06); }
+.veil-btn {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.35rem;
+  width: 100%; border: 0; background: rgba(19, 19, 23, 0.55); color: #fff; font: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer; padding: 0.5rem; text-align: center;
+}
+.veil-btn svg { width: 2rem; height: 2rem; }
+.veil-btn:focus-visible { outline: 3px solid var(--focus); outline-offset: -6px; }
+.veil.is-revealed img { filter: none; transform: none; }
+.veil.is-revealed .veil-btn { display: none; }
+
+.album-list { list-style: none; padding: 0; margin: 0.75rem 0 1rem; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); }
+.album-item { border: 2px solid var(--rule); background: var(--paper); padding: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; }
+.album-item.is-hidden img { opacity: 0.45; }
+.album-item.is-dragging { opacity: 0.6; }
+.album-item.drop-before { box-shadow: -6px 0 0 var(--accent); }
+.album-item img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border: 2px solid var(--rule); background: var(--paper-2); }
+.album-item .field { margin-bottom: 0; }
+.album-item textarea { min-height: 5rem !important; }
+.album-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+.drag-handle { cursor: grab; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid var(--rule); background: var(--card); color: var(--ink); }
+.drag-handle:active { cursor: grabbing; }
+.order-btns { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.changed-note { font-size: 0.85rem; color: var(--warn); font-weight: 700; margin: 0; }
+@media (forced-colors: active) {
+  .album-item, .drag-handle { border-color: CanvasText; }
+  .veil-btn { background: Canvas; color: CanvasText; }
+}
+.outfit-name { margin: 0; font-weight: 700; }
+.repo-art-row { display: flex; gap: 1rem; align-items: flex-start; }
+.repo-art-thumb { width: 5rem; height: auto; aspect-ratio: 2 / 3; object-fit: cover; border: 2px solid var(--rule); background: var(--paper-2); flex: none; }
+.repo-art-fields { flex: 1 1 auto; min-width: 0; }
+.repo-art-fields .field-check { margin-bottom: 0.5rem; }

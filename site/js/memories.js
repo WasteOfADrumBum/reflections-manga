@@ -69,8 +69,11 @@
     var full = dlg.querySelector("[data-photo-full]");
     var pp = dlg.querySelector("[data-photo-prev]");
     var pn = dlg.querySelector("[data-photo-next]");
-    var show = function (i) {
+    var veiled = function (a) { return !!a.closest(".veil.is-veiled"); };
+    var show = function (i, step) {
       cur = (i + links.length) % links.length;
+      // Never show a sensitive photo the reader has not chosen to reveal.
+      for (var guard = 0; veiled(links[cur]) && guard < links.length; guard++) cur = (cur + (step || 1) + links.length) % links.length;
       var a = links[cur], thumb = a.querySelector("img");
       img.src = a.getAttribute("href");
       img.width = +a.getAttribute("data-w"); img.height = +a.getAttribute("data-h");
@@ -88,8 +91,8 @@
         dlg.showModal();
       });
     });
-    pp.addEventListener("click", function () { show(cur - 1); });
-    pn.addEventListener("click", function () { show(cur + 1); });
+    pp.addEventListener("click", function () { show(cur - 1, -1); });
+    pn.addEventListener("click", function () { show(cur + 1, 1); });
     dlg.querySelector("[data-photo-close]").addEventListener("click", function () { dlg.close(); });
     dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
     dlg.addEventListener("close", function () {
@@ -107,8 +110,8 @@
     var t = e.target;
     if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
     var open = dlg && dlg.open;
-    if (e.key === "ArrowLeft") { e.preventDefault(); open ? show(cur - 1) : turn(-1); }
-    else if (e.key === "ArrowRight") { e.preventDefault(); open ? show(cur + 1) : turn(1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); open ? show(cur - 1, -1) : turn(-1); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); open ? show(cur + 1, 1) : turn(1); }
   });
 
   render(false);

@@ -1,7 +1,8 @@
 // One page: synopsis, art, outfit picks, one-off prompt edits, generate or upload, and versions.
 import { get, post } from "../api.js";
 import { act, costExplainer, crumbs, errorBox, head, render, repoImage, section } from "../shared.js";
-import { alertMessage, badge, clear, confirmDialog, field, h, label, notice, pad3, sheetOptions, usd, when } from "../ui.js";
+import { alertMessage, badge, confirmDialog, field, fill, h, label, notice, pad3, sheetOptions, usd, veil, when } from "../ui.js";
+import { repoArtForm } from "./review.js";
 
 function qaList(qa) {
   if (!qa || !qa.checks) return h("p", { class: "small muted" }, "Not checked yet.");
@@ -67,14 +68,16 @@ function outfitPicker(entry, onChange) {
   const select = h("select", {}, ...sheetOptions(entry.sheets, entry.selectedSheet, (s) => (s.path === entry.promptSheet ? " (prompt's choice)" : "")));
   const current = () => entry.sheets.find((s) => s.path === select.value) ?? entry.sheets[0];
   const img = h("img", { src: repoImage(current().path, 320), alt: `${entry.displayName}, ${current().label}`, width: "320", height: "213", loading: "lazy", decoding: "async" });
+  const frame = veil(img, current().sensitive, `${entry.displayName}, ${current().label}`);
   select.addEventListener("change", () => {
     img.src = repoImage(current().path, 320);
     img.alt = `${entry.displayName}, ${current().label}`;
+    frame.setSensitive(current().sensitive, `${entry.displayName}, ${current().label}`);
     onChange();
   });
   const id = `pick-${entry.characterId}`;
   return {
-    el: h("li", { class: "pick" }, h("figure", {}, img), field({ id, label: entry.displayName, input: select })),
+    el: h("li", { class: "pick" }, h("figure", {}, frame), field({ id, label: entry.displayName, input: select })),
     value: () => select.value,
     entry,
   };
@@ -121,7 +124,7 @@ export async function pageView(id, pageStr) {
     try {
       const plan = await post(`/chapters/${id}/pages/${page}/plan`, { options: options(), quality: quality.value });
       lastPlan = plan;
-      clear(checkBox).append(
+      fill(checkBox, 
         plan.blockers.length ? notice("error", h("p", {}, h("strong", {}, "Can't generate yet:")), h("ul", {}, ...plan.blockers.map((b) => h("li", {}, b)))) : notice("ok", h("p", {}, "Ready. Nothing is sent until you press Generate.")),
         plan.warnings.length ? notice("warn", h("ul", {}, ...plan.warnings.map((b) => h("li", {}, b)))) : null,
         h("h3", {}, "Images attached, in order"),
@@ -130,7 +133,7 @@ export async function pageView(id, pageStr) {
       );
       generate.disabled = info.locked || !info.prepared || plan.blockers.length > 0;
     } catch (err) {
-      clear(checkBox).append(notice("error", h("p", {}, err.message)));
+      fill(checkBox, notice("error", h("p", {}, err.message)));
     }
   }
   promptBox.addEventListener("input", scheduleCheck);
@@ -209,7 +212,10 @@ export async function pageView(id, pageStr) {
       section(
         "Current art",
         "art-title",
-        art ? h("figure", { class: "current-art" }, h("img", { src: art, alt: `Current artwork for page ${pad3(page)}`, width: "480", height: "720", loading: "lazy" }), h("figcaption", { class: "small muted" }, info.publishedSrc ? "In the reader." : "In the repository, not yet in the reader.")) : h("p", { class: "muted" }, "No art yet."),
+        art ? h("figure", { class: "current-art" }, h("img", { src: art, alt: `Current artwork for page ${pad3(page)}`, width: "480", height: "720", loading: "lazy" }), h("figcaption", { class: "small muted" }, info.publishedSrc ? "In the public reader." : "In the repository, not in the public reader yet.")) : h("p", { class: "muted" }, "No art yet."),
+        info.sourceImagePath && !info.publishedSrc
+          ? repoArtForm(id, [{ chapterId: id, page, title: script?.title ?? null, sourceImagePath: info.sourceImagePath, suggestedAltText: d.suggestedAltText, pendingPrUrl: d.repoArtPrUrl }], d.publisherReady)
+          : null,
       ),
     ),
     section(
@@ -228,7 +234,7 @@ export async function pageView(id, pageStr) {
             h("div", { class: "field-check" }, drift, h("label", { for: "allow-drift" }, "My edit changes dialogue on purpose (skip the script match check)")),
           )
         : notice("warn", h("p", {}, "This page has no prompt file yet.")),
-      h("div", { class: "form-grid" }, field({ id: "gen-quality", label: "Quality", input: quality, hint: "Higher costs more per image." }), field({ id: "gen-budget", label: "Budget for this run (USD, API credit)", input: budget })),
+      h("div", { class: "form-grid" }, field({ id: "gen-quality", label: "Quality", input: quality, hint: "Higher quality costs more per image." }), field({ id: "gen-budget", label: "Budget (USD)", input: budget, hint: "API credit for this run. It stops before going over." })),
       checkBox,
       h("div", { class: "btn-row" }, generate),
     ),

@@ -270,7 +270,7 @@ export interface PageCastEntry {
   promptSheet: string;
   /** Sheet that will be attached for this run. */
   selectedSheet: string;
-  sheets: { path: string; label: string; file: string; isDefault: boolean; category: string | null; needsReview: boolean }[];
+  sheets: { path: string; label: string; file: string; isDefault: boolean; category: string | null; needsReview: boolean; sensitive: boolean }[];
 }
 
 /** Builds everything for one page without spending money. Used by the worker and the page / generate screens. */
@@ -325,7 +325,7 @@ export async function planPage(deps: StudioDeps, chapterId: string, page: number
       displayName: ch.displayName,
       promptSheet,
       selectedSheet: findSheet([ch], selected)?.sheet.path ?? selected,
-      sheets: ch.sheets.map((s) => ({ path: s.path, label: s.label, file: s.file, isDefault: s.isDefault, category: s.category, needsReview: s.needsReview })),
+      sheets: ch.sheets.map((s) => ({ path: s.path, label: s.label, file: s.file, isDefault: s.isDefault, category: s.category, needsReview: s.needsReview, sensitive: s.sensitive })),
     });
   }
   blockers.push(...plan.blockers);
