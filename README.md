@@ -26,22 +26,22 @@ Ethan, Morgan and Ruby share one home and one marriage. Ethan is married to both
 <table>
   <tr>
     <td align="center" width="33%" valign="top">
-      <a href="characters/morgan-hayes/index.md"><img src="assets/readme/portraits/morgan-hayes.webp" width="140" alt="Morgan's portrait"></a><br>
-      <a href="characters/morgan-hayes/index.md"><strong>Morgan H. Walker</strong></a><br>
+      <a href="characters/main/morgan-hayes/index.md"><img src="assets/readme/portraits/morgan-hayes.webp" width="140" alt="Morgan's portrait"></a><br>
+      <a href="characters/main/morgan-hayes/index.md"><strong>Morgan H. Walker</strong></a><br>
       <sub>34 · wife &amp; mom</sub><br>
       <em>Strong-willed, and more tender than she lets on.</em><br>
       <sub>Confident, practical and fiercely independent, with a dry sense of humor she hides behind more often than she'd admit.</sub>
     </td>
     <td align="center" width="33%" valign="top">
-      <a href="characters/ethan-walker/index.md"><img src="assets/readme/portraits/ethan-walker.webp" width="140" alt="Ethan's portrait"></a><br>
-      <a href="characters/ethan-walker/index.md"><strong>Ethan Walker</strong></a><br>
+      <a href="characters/main/ethan-walker/index.md"><img src="assets/readme/portraits/ethan-walker.webp" width="140" alt="Ethan's portrait"></a><br>
+      <a href="characters/main/ethan-walker/index.md"><strong>Ethan Walker</strong></a><br>
       <sub>38 · husband &amp; dad</sub><br>
       <em>The one everyone leans on.</em><br>
       <sub>A dependable problem solver who keeps his own uncertainty to himself, and would rather crack a joke than admit he's struggling.</sub>
     </td>
     <td align="center" width="33%" valign="top">
-      <a href="characters/ruby-bennett-walker/index.md"><img src="assets/readme/portraits/ruby-bennett-walker.webp" width="140" alt="Ruby's portrait"></a><br>
-      <a href="characters/ruby-bennett-walker/index.md"><strong>Ruby Bennett-Walker</strong></a><br>
+      <a href="characters/main/ruby-bennett-walker/index.md"><img src="assets/readme/portraits/ruby-bennett-walker.webp" width="140" alt="Ruby's portrait"></a><br>
+      <a href="characters/main/ruby-bennett-walker/index.md"><strong>Ruby Bennett-Walker</strong></a><br>
       <sub>28 · wife &amp; mom</sub><br>
       <em>The quiet heart of the house.</em><br>
       <sub>Warm, gentle and quietly romantic. She speaks through attention and small gestures, and moves with a former dancer's grace.</sub>
@@ -56,20 +56,20 @@ All three see all three adults as their parents.
 <table>
   <tr>
     <td align="center" width="33%" valign="top">
-      <a href="characters/rowan-hayes-walker/index.md"><img src="assets/readme/portraits/rowan-hayes-walker.webp" width="110" alt="Rowan's portrait"></a><br>
-      <a href="characters/rowan-hayes-walker/index.md"><strong>Rowan Walker</strong></a><br>
+      <a href="characters/main/rowan-hayes-walker/index.md"><img src="assets/readme/portraits/rowan-hayes-walker.webp" width="110" alt="Rowan's portrait"></a><br>
+      <a href="characters/main/rowan-hayes-walker/index.md"><strong>Rowan Walker</strong></a><br>
       <sub>9 · 130 cm · Ethan &amp; Morgan's son</sub><br>
       <em>The builder with a comeback for everything.</em>
     </td>
     <td align="center" width="33%" valign="top">
-      <a href="characters/riley-hayes-walker/index.md"><img src="assets/readme/portraits/riley-hayes-walker.webp" width="110" alt="Riley's portrait"></a><br>
-      <a href="characters/riley-hayes-walker/index.md"><strong>Riley Walker</strong></a><br>
+      <a href="characters/main/riley-hayes-walker/index.md"><img src="assets/readme/portraits/riley-hayes-walker.webp" width="110" alt="Riley's portrait"></a><br>
+      <a href="characters/main/riley-hayes-walker/index.md"><strong>Riley Walker</strong></a><br>
       <sub>About 6 · 110 cm · Ethan &amp; Morgan's daughter</sub><br>
       <em>Fearless, curious, and doing it herself.</em>
     </td>
     <td align="center" width="33%" valign="top">
-      <a href="characters/avery-bennett-walker/index.md"><img src="assets/readme/portraits/avery-bennett-walker.webp" width="110" alt="Avery's portrait"></a><br>
-      <a href="characters/avery-bennett-walker/index.md"><strong>Avery Bennett Walker</strong></a><br>
+      <a href="characters/main/avery-bennett-walker/index.md"><img src="assets/readme/portraits/avery-bennett-walker.webp" width="110" alt="Avery's portrait"></a><br>
+      <a href="characters/main/avery-bennett-walker/index.md"><strong>Avery Bennett Walker</strong></a><br>
       <sub>7 · 126 cm · Ethan &amp; Ruby's daughter</sub><br>
       <em>All motion, music and big feelings.</em>
     </td>
@@ -84,7 +84,7 @@ All three see all three adults as their parents.
 ## 🌳 The family tree
 
 <p align="center">
-  <a href="https://reflections-manga.vercel.app/characters"><img src="assets/readme/family-tree.webp" width="900" alt="Family tree. Top row: Diane, Linda and Rick, and Tom. Middle row: Nate and Adrian, Diane's sons, beside their sister Morgan; Nat, Morgan's best friend; Morgan and Ruby, each married to Ethan, who is Linda and Rick's son; and Autumn, Ruby's sister, both Tom's daughters. Bottom row: Ellie and Owen under Nat; Rowan and Riley under Ethan and Morgan; Cal, Ethan's best friend; and Avery under Ethan and Ruby."></a>
+  <a href="https://reflections-manga.vercel.app/characters"><img src="assets/readme/family-tree.webp" width="900" alt="Family tree. Top row: Diane, Linda and Rick, and Tom. Middle row: Nate and Adrian, Diane's sons, beside their sister Morgan; Nat, Morgan's best friend; Morgan and Ruby, each married to Ethan, who is Linda and Rick's son; and Autumn, Ruby's sister, both Tom's daughters. Bottom row: Ellie and Owen under Nat; Rowan and Riley under Ethan and Morgan; Cal, Ethan's best friend; Avery under Ethan and Ruby; and Cass, Ruby's friend and next-door neighbor."></a>
 </p>
 
 <details>
@@ -92,7 +92,7 @@ All three see all three adults as their parents.
 
 Ethan is married to both Morgan and Ruby; all three married in one shared ceremony. Morgan and Ruby are best friends and co-parents, not a couple. Ethan and Morgan's children are Rowan, 9, and Riley, about 6, who are full siblings. Ethan and Ruby's daughter is Avery, 7, a half-sister to both. Rowan is closest to Ruby, Riley to Morgan, and Avery to Ethan.
 
-Diane Hayes, 58, is mother to Morgan and her two older brothers, Nate, about 41, and Adrian, about 38. Linda Walker, 62, and Richard (Rick) Walker, 65, are Ethan's parents. Thomas (Tom) Bennett, 60, is father to Ruby and Autumn. Nat Greene is Morgan's best friend outside the household and mom to Ellie, 9, and Owen, about 6. Cal Mercer, 39, is Ethan's best friend.
+Diane Hayes, 58, is mother to Morgan and her two older brothers, Nate, about 41, and Adrian, about 38. Linda Walker, 62, and Richard (Rick) Walker, 65, are Ethan's parents. Thomas (Tom) Bennett, 60, is father to Ruby and Autumn. Nat Greene is Morgan's best friend outside the household and mom to Ellie, 9, and Owen, about 6. Cal Mercer, 39, is Ethan's best friend. Cass Bennett, 40, lives next door and is Ruby's friend; despite the shared surname, she isn't related to Ruby's family.
 
 The full record is in [characters/family-tree.md](characters/family-tree.md).
 </details>
@@ -104,33 +104,33 @@ The full record is in [characters/family-tree.md](characters/family-tree.md).
     <th colspan="3" align="left">🏡 Morgan's family, the Hayes</th>
   </tr>
   <tr>
-    <td align="center" valign="top"><a href="characters/diane-hayes/index.md"><img src="assets/readme/portraits/diane-hayes.webp" width="84" alt="Diane's portrait"></a><br><a href="characters/diane-hayes/index.md"><strong>Diane</strong></a><br><sub>58 · Morgan's mother</sub></td>
-    <td align="center" valign="top"><a href="characters/nathan-hayes/index.md"><img src="assets/readme/portraits/nathan-hayes.webp" width="84" alt="Nate's portrait"></a><br><a href="characters/nathan-hayes/index.md"><strong>Nate</strong></a><br><sub>About 41 · oldest brother</sub></td>
-    <td align="center" valign="top"><a href="characters/adrian-hayes/index.md"><img src="assets/readme/portraits/adrian-hayes.webp" width="84" alt="Adrian's portrait"></a><br><a href="characters/adrian-hayes/index.md"><strong>Adrian</strong></a><br><sub>About 38 · middle brother</sub></td>
+    <td align="center" valign="top"><a href="characters/family/hayes/diane-hayes/index.md"><img src="assets/readme/portraits/diane-hayes.webp" width="84" alt="Diane's portrait"></a><br><a href="characters/family/hayes/diane-hayes/index.md"><strong>Diane</strong></a><br><sub>58 · Morgan's mother</sub></td>
+    <td align="center" valign="top"><a href="characters/family/hayes/nathan-hayes/index.md"><img src="assets/readme/portraits/nathan-hayes.webp" width="84" alt="Nate's portrait"></a><br><a href="characters/family/hayes/nathan-hayes/index.md"><strong>Nate</strong></a><br><sub>About 41 · oldest brother</sub></td>
+    <td align="center" valign="top"><a href="characters/family/hayes/adrian-hayes/index.md"><img src="assets/readme/portraits/adrian-hayes.webp" width="84" alt="Adrian's portrait"></a><br><a href="characters/family/hayes/adrian-hayes/index.md"><strong>Adrian</strong></a><br><sub>About 38 · middle brother</sub></td>
   </tr>
   <tr>
     <th colspan="3" align="left">👓 Morgan's best friend, the Greenes</th>
   </tr>
   <tr>
-    <td align="center" valign="top"><a href="characters/natalie-greene/index.md"><img src="assets/readme/portraits/natalie-greene.webp" width="84" alt="Nat's portrait"></a><br><a href="characters/natalie-greene/index.md"><strong>Nat</strong></a><br><sub>34 · Morgan's best friend</sub></td>
-    <td align="center" valign="top"><a href="characters/ellie-greene/index.md"><img src="assets/readme/portraits/ellie-greene.webp" width="84" alt="Ellie's portrait"></a><br><a href="characters/ellie-greene/index.md"><strong>Ellie</strong></a><br><sub>9 · Nat's daughter</sub></td>
-    <td align="center" valign="top"><a href="characters/owen-greene/index.md"><img src="assets/readme/portraits/owen-greene.webp" width="84" alt="Owen's portrait"></a><br><a href="characters/owen-greene/index.md"><strong>Owen</strong></a><br><sub>About 6 · Nat's son</sub></td>
+    <td align="center" valign="top"><a href="characters/friends/natalie-greene/index.md"><img src="assets/readme/portraits/natalie-greene.webp" width="84" alt="Nat's portrait"></a><br><a href="characters/friends/natalie-greene/index.md"><strong>Nat</strong></a><br><sub>34 · Morgan's best friend</sub></td>
+    <td align="center" valign="top"><a href="characters/friends/ellie-greene/index.md"><img src="assets/readme/portraits/ellie-greene.webp" width="84" alt="Ellie's portrait"></a><br><a href="characters/friends/ellie-greene/index.md"><strong>Ellie</strong></a><br><sub>9 · Nat's daughter</sub></td>
+    <td align="center" valign="top"><a href="characters/friends/owen-greene/index.md"><img src="assets/readme/portraits/owen-greene.webp" width="84" alt="Owen's portrait"></a><br><a href="characters/friends/owen-greene/index.md"><strong>Owen</strong></a><br><sub>About 6 · Nat's son</sub></td>
   </tr>
   <tr>
     <th colspan="3" align="left">🏍️ Ethan's family and best friend</th>
   </tr>
   <tr>
-    <td align="center" valign="top"><a href="characters/linda-walker/index.md"><img src="assets/readme/portraits/linda-walker.webp" width="84" alt="Linda's portrait"></a><br><a href="characters/linda-walker/index.md"><strong>Linda</strong></a><br><sub>62 · Ethan's mother</sub></td>
-    <td align="center" valign="top"><a href="characters/richard-walker/index.md"><img src="assets/readme/portraits/richard-walker.webp" width="84" alt="Rick's portrait"></a><br><a href="characters/richard-walker/index.md"><strong>Rick</strong></a><br><sub>65 · Ethan's father</sub></td>
-    <td align="center" valign="top"><a href="characters/caleb-mercer/index.md"><img src="assets/readme/portraits/caleb-mercer.webp" width="84" alt="Cal's portrait"></a><br><a href="characters/caleb-mercer/index.md"><strong>Cal</strong></a><br><sub>39 · Ethan's best friend</sub></td>
+    <td align="center" valign="top"><a href="characters/family/walker/linda-walker/index.md"><img src="assets/readme/portraits/linda-walker.webp" width="84" alt="Linda's portrait"></a><br><a href="characters/family/walker/linda-walker/index.md"><strong>Linda</strong></a><br><sub>62 · Ethan's mother</sub></td>
+    <td align="center" valign="top"><a href="characters/family/walker/richard-walker/index.md"><img src="assets/readme/portraits/richard-walker.webp" width="84" alt="Rick's portrait"></a><br><a href="characters/family/walker/richard-walker/index.md"><strong>Rick</strong></a><br><sub>65 · Ethan's father</sub></td>
+    <td align="center" valign="top"><a href="characters/friends/caleb-mercer/index.md"><img src="assets/readme/portraits/caleb-mercer.webp" width="84" alt="Cal's portrait"></a><br><a href="characters/friends/caleb-mercer/index.md"><strong>Cal</strong></a><br><sub>39 · Ethan's best friend</sub></td>
   </tr>
   <tr>
-    <th colspan="3" align="left">🌻 Ruby's family, the Bennetts</th>
+    <th colspan="3" align="left">🌻 Ruby's family, the Bennetts, and her neighbor</th>
   </tr>
   <tr>
-    <td align="center" valign="top"><a href="characters/thomas-bennett/index.md"><img src="assets/readme/portraits/thomas-bennett.webp" width="84" alt="Tom's portrait"></a><br><a href="characters/thomas-bennett/index.md"><strong>Tom</strong></a><br><sub>60 · Ruby and Autumn's father</sub></td>
-    <td align="center" valign="top"><a href="characters/autumn-bennett/index.md"><img src="assets/readme/portraits/autumn-bennett.webp" width="84" alt="Autumn's portrait"></a><br><a href="characters/autumn-bennett/index.md"><strong>Autumn</strong></a><br><sub>Around 34 · Ruby's big sister</sub></td>
-    <td></td>
+    <td align="center" valign="top"><a href="characters/family/bennett/thomas-bennett/index.md"><img src="assets/readme/portraits/thomas-bennett.webp" width="84" alt="Tom's portrait"></a><br><a href="characters/family/bennett/thomas-bennett/index.md"><strong>Tom</strong></a><br><sub>60 · Ruby and Autumn's father</sub></td>
+    <td align="center" valign="top"><a href="characters/family/bennett/autumn-bennett/index.md"><img src="assets/readme/portraits/autumn-bennett.webp" width="84" alt="Autumn's portrait"></a><br><a href="characters/family/bennett/autumn-bennett/index.md"><strong>Autumn</strong></a><br><sub>Around 34 · Ruby's big sister</sub></td>
+    <td align="center" valign="top"><a href="characters/friends/cassidy-bennett/index.md"><img src="assets/readme/portraits/cassidy-bennett.webp" width="84" alt="Cass's portrait"></a><br><a href="characters/friends/cassidy-bennett/index.md"><strong>Cass</strong></a><br><sub>40 · Ruby's friend next door (no relation)</sub></td>
   </tr>
 </table>
 

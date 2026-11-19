@@ -142,7 +142,7 @@ def tree():
             d.text((S(cx), S(y)), html.unescape(role), font=font(BODY, int(S(small))), fill=SOFT, anchor="mt")
     # Line key, as on the site
     ky, kx, f = H + 35, 395, font(BODY, int(S(17)))
-    for label, kind in (("Married", "marry"), ("Best friends", "friend"), ("Parent to child", "line")):
+    for label, kind in (("Married", "marry"), ("Friends", "friend"), ("Parent to child", "line")):
         if kind == "marry":
             d.line([(S(kx), S(ky - 4)), (S(kx + 44), S(ky - 4))], fill=ACCENT, width=int(S(3)))
             d.line([(S(kx), S(ky + 4)), (S(kx + 44), S(ky + 4))], fill=ACCENT, width=int(S(3)))

@@ -504,7 +504,7 @@ a.ft-node:hover .ft-face { transform: scale(1.05); box-shadow: 0 0 0 4px var(--p
 }
 
 @container ft (max-width: 48rem) {
-  .ft-stage { aspect-ratio: 360 / 512; max-width: 30rem; margin-inline: auto; }
+  .ft-stage { aspect-ratio: 360 / 592; max-width: 30rem; margin-inline: auto; }
   .ft-lines-wide { display: none; }
   .ft-lines-narrow { display: block; }
   .ft-node-item { left: calc(var(--nx) * 1%); top: calc(var(--ny) * 1%); }
