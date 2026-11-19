@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { characterForSheetName, loadCharacters, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.js";
+import { characterForSheetName, loadCharacters, outfitLabelFromLinkText, parseCurrentCard, resolveCharacter, resolveSheetFiles } from "../../api/_lib/content/characters.js";
 import { ContentService, findChapterBlock, type LoadedPrompt, publishedPagesFromChaptersJs } from "../../api/_lib/content/chapters.js";
 import { loadStudioConfig, parsePageRanges } from "../../api/_lib/content/config.js";
 import { classifyLettering, expectedLettering, nameFromSheetFile, parsePrompt, parsePromptFilename } from "../../api/_lib/content/prompt-parser.js";
@@ -140,19 +140,22 @@ describe("chapter inventory", () => {
     expect(findChapterBlock(js, "004")?.text).toMatch(/Always the One Who Reaches/);
   });
 
-  it("protects pages with v2 artwork and leaves the rest of the 30-page v2 chapter ready", async () => {
+  it("marks pages with v2 artwork as having art (not locked) and leaves the rest of the 30-page v2 chapter ready", async () => {
     const c = new ContentService(repo, await loadStudioConfig(repo));
     const inv = await c.inventory("001");
     expect(inv.pages).toHaveLength(30);
     expect(inv.scriptPath).toBe("stories/arc-01/chapter-001/script-v2.md");
     // Page 001 is in the reader. Page 002's finished file is part of the v2 layout.
-    // Any later page with a file in pages/ is locked too; that set grows as art lands.
+    // Existing art no longer locks a page: new versions are allowed, and only
+    // lockedPages in the config locks one.
     expect(inv.pages[0]!.publishedSrc).toBe("/pages/chapter-001/001.webp");
-    expect(inv.pages[1]).toMatchObject({ locked: true, sourceImagePath: "stories/arc-01/chapter-001/pages/A01-C001-P002.png" });
+    expect(inv.pages[1]).toMatchObject({ locked: false, hasArt: true, sourceImagePath: "stories/arc-01/chapter-001/pages/A01-C001-P002.png" });
     for (const p of inv.pages) {
-      expect(p.locked, `page ${p.page}`).toBe(p.publishedSrc != null || p.sourceImagePath != null);
+      expect(p.locked, `page ${p.page}`).toBe(false);
+      expect(p.hasArt, `page ${p.page}`).toBe(p.publishedSrc != null || p.sourceImagePath != null);
     }
-    expect(inv.pages[29]).toMatchObject({ locked: false, sourceImagePath: null, prepared: true });
+    expect(inv.pages[29]).toMatchObject({ locked: false, hasArt: false, sourceImagePath: null, prepared: true });
+    expect(inv.pages[0]!.beat).toBe("The empty space");
     expect(inv.pages.every((p) => p.prepared)).toBe(true);
     // Old v1 numbering locks nothing: v1 art lives in pages/version_1/.
     expect(inv.pages[15]!.sourceImagePath).toBeNull();
@@ -160,14 +163,32 @@ describe("chapter inventory", () => {
 });
 
 describe("character library", () => {
-  it("finds the canonical card and keeps other sheets experimental", async () => {
-    const chars = await loadCharacters(repo);
+  it("treats every sheet as an outfit, picks a default and finds family copies", async () => {
+    const chars = await loadCharacters(repo, { labelDocs: ["stories/arc-01/chapter-001/page-guide-v2.md"] });
     const ethan = chars.find((c) => c.id === "ethan-walker")!;
     expect(ethan.canonicalSheet).toBe("characters/ethan-walker/references/ethan-walker-reference-sheet-v1.png");
     expect(ethan.references[0]!.status).toBe("canonical");
     expect(ethan.references.filter((r) => r.status === "canonical")).toHaveLength(1);
     expect(ethan.portrait).toBe("/images/characters/ethan-walker-portrait.webp");
-    expect(chars.find((c) => c.id === "nathan-hayes")!.canonicalSheet).toBeNull();
+    expect(ethan.sheets.length).toBeGreaterThanOrEqual(8);
+    // The family copy is the same sheet as v1, not a separate outfit.
+    expect(ethan.sheets[0]!.aliases).toContain("characters/_reference-sheets/main_characters/walker-ethan.png");
+    // Named by the page guide link "Ethan's wedding suit v5".
+    expect(ethan.sheets.find((s) => s.version === 5)!.label).toBe("Wedding suit (v5)");
+    // No "Current Card" no longer means "no sheet": every character with an image has a default.
+    for (const c of chars) if (c.sheets.length) expect(c.canonicalSheet, c.id).not.toBeNull();
+    expect(chars.find((c) => c.id === "nathan-hayes")!.canonicalSheet).toBe("characters/nathan-hayes/references/nathan-hayes-reference-character-sheet-v1.png");
+    // A family sheet with no original in the index still belongs to its character.
+    const diane = chars.find((c) => c.id === "diane-hayes")!;
+    expect(diane.sheets.some((s) => s.path === "characters/_reference-sheets/hayes/hayes-diane.png" || s.aliases.includes("characters/_reference-sheets/hayes/hayes-diane.png"))).toBe(true);
+  });
+
+  it("names outfits from link text", () => {
+    const c = { firstName: "Morgan", displayName: "Morgan H. Walker" };
+    expect(outfitLabelFromLinkText("Morgan's wedding outfit v7", c)).toBe("Wedding outfit");
+    expect(outfitLabelFromLinkText("Morgan H. Walker reference sheet", c)).toBe("Main sheet");
+    expect(outfitLabelFromLinkText("Morgan", c)).toBeNull();
+    expect(outfitLabelFromLinkText("Morgan identity input", c)).toBeNull();
   });
 
   it("resolves the names used in prompts", async () => {
