@@ -170,7 +170,7 @@ describe("admin interface", () => {
     expect(text).not.toMatch(/Locked\./);
     // Art in the repository but not in the reader can be published from here.
     expect(text).toMatch(/In the repository, not in the public reader yet/);
-    expect([...document.querySelectorAll("button")].some((b) => b.textContent === "Publish to the reader")).toBe(true);
+    expect([...document.querySelectorAll("button")].some((b) => b.textContent === "Publish repository art")).toBe(true);
     expect(text).not.toMatch(/\bnull\b/);
     expect(await a11y()).toEqual([]);
   });

@@ -152,13 +152,13 @@ export function repoArtForm(cid, list, publisherReady) {
   });
   const gap = h("input", { type: "checkbox", id: `ra-gap-${cid}` });
   const result = h("div", { "aria-live": "polite" });
-  const submit = h("button", { class: "btn btn-primary", type: "submit", disabled: !publisherReady || rows.every((r) => r.box.disabled) }, "Publish to the reader");
+  const submit = h("button", { class: "btn btn-primary", type: "submit", disabled: !publisherReady || rows.every((r) => r.box.disabled) }, "Publish repository art");
   const form = h(
     "form",
     { class: "form-card" },
     h("h3", {}, `Chapter ${cid}`),
     ...rows.map((r) => r.el),
-    h("div", { class: "field-check" }, gap, h("label", { for: `ra-gap-${cid}` }, "Publish even if earlier pages are not in the reader yet")),
+    h("div", { class: "field-check" }, gap, h("label", { for: `ra-gap-${cid}` }, "Publish these even if earlier pages are not in the reader yet")),
     submit,
     result,
   );

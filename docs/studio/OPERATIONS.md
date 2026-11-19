@@ -96,7 +96,7 @@ Merging the pull request deploys the pages.
 **Art already in the repository.** Pages whose PNG is already committed under
 the chapter's `pages/` folder (for example made in ChatGPT) but are not in the
 reader appear in Review under "Art in the repository, not in the reader yet",
-and on their page screen under Current art. **Publish to the reader** opens a
+and on their page screen under Current art. **Publish repository art** opens a
 pull request that adds the reader WebP and the reader entry only; the PNG is
 not touched, and a page already in the reader is never overwritten this way
 (replace reader art by uploading a version and publishing it from Review).
