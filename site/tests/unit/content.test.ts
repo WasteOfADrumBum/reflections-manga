@@ -120,7 +120,7 @@ describe("script-v2.md", () => {
     const p22 = pages.get(22)!;
     expect(p22.title).toBe("The unfinished page");
     expect(p22.panels.map((x) => x.lines.length)).toEqual([2, 1, 2]);
-    expect(p22.panels[2]!.lines[1]).toMatchObject({ kind: "thought", speaker: "Ruby", text: "I thought he was waiting for me to drop it." });
+    expect(p22.panels[2]!.lines[1]).toMatchObject({ kind: "thought", speaker: "Ruby", text: "I thought he wanted me to leave him alone. Did I ever ask?" });
     expect(pages.get(1)!.panels[0]!.lines[0]).toMatchObject({ kind: "caption", speaker: null });
   });
 });

@@ -18,7 +18,20 @@ export interface RepoSource {
   readText(repoPath: string): Promise<string | null>;
   readBinary(repoPath: string): Promise<Buffer | null>;
   list(repoDir: string): Promise<RepoEntry[]>;
+  /** Every file under a folder, at any depth (one request on GitHub). */
+  walk(repoDir: string): Promise<RepoEntry[]>;
   exists(repoPath: string): Promise<boolean>;
+}
+
+/** Shared helper so every source walks the same way when it has no faster path. */
+export async function walkByListing(source: Pick<RepoSource, "list">, dir: string, depth = 8): Promise<RepoEntry[]> {
+  const out: RepoEntry[] = [];
+  const entries = await source.list(dir);
+  for (const e of entries) {
+    if (e.type === "file") out.push(e);
+    else if (depth > 0) out.push(...(await walkByListing(source, e.path, depth - 1)));
+  }
+  return out;
 }
 
 export function assertRepoPath(repoPath: string): string {
@@ -64,6 +77,9 @@ export class LocalRepoSource implements RepoSource {
     } catch {
       return [];
     }
+  }
+  walk(dir: string) {
+    return walkByListing(this, dir);
   }
   async exists(p: string) {
     try {
@@ -133,7 +149,47 @@ export class GitHubRepoSource implements RepoSource {
     });
   }
 
-  list(dir: string) {
+  /**
+   * The whole repository tree in one request. Listing folders one by one cost
+   * dozens of API calls per page view and made the admin slow; the recursive
+   * tree answers every list() and walk() from a single cached response.
+   */
+  private tree() {
+    return this.memo("tree", async () => {
+      const f = this.opts.fetchImpl ?? fetch;
+      const res = await f(`https://api.github.com/repos/${this.opts.repository}/git/trees/${encodeURIComponent(this.opts.ref)}?recursive=1`, {
+        headers: { Authorization: `Bearer ${this.opts.token}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28", "User-Agent": "reflections-studio" },
+      });
+      if (!res.ok) return null;
+      const body = (await res.json()) as { truncated?: boolean; tree?: { path: string; type: string; size?: number }[] };
+      if (body.truncated || !Array.isArray(body.tree)) return null;
+      return body.tree
+        .filter((e) => e.type === "blob" || e.type === "tree")
+        .map((e) => ({ name: e.path.split("/").pop() ?? e.path, path: e.path, type: e.type === "tree" ? ("dir" as const) : ("file" as const), size: e.size }));
+    });
+  }
+
+  async list(dir: string) {
+    const clean = assertRepoPath(dir).replace(/\/$/, "");
+    const tree = await this.tree().catch(() => null);
+    if (tree) {
+      const prefix = `${clean}/`;
+      return tree
+        .filter((e) => e.path.startsWith(prefix) && !e.path.slice(prefix.length).includes("/") && !e.name.startsWith("."))
+        .sort((a, b) => a.name.localeCompare(b.name));
+    }
+    return this.listByContents(clean);
+  }
+
+  async walk(dir: string) {
+    const clean = assertRepoPath(dir).replace(/\/$/, "");
+    const tree = await this.tree().catch(() => null);
+    if (!tree) return walkByListing({ list: (d) => this.listByContents(d) }, clean);
+    const prefix = `${clean}/`;
+    return tree.filter((e) => e.type === "file" && e.path.startsWith(prefix) && !e.path.split("/").some((part) => part.startsWith("."))).sort((a, b) => a.path.localeCompare(b.path));
+  }
+
+  private listByContents(dir: string) {
     return this.memo(`l:${dir}`, async () => {
       const res = await this.request(dir, "application/vnd.github+json");
       if (!res) return [];

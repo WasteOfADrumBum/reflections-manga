@@ -70,7 +70,7 @@ describe("review and publishing", () => {
     expect(alt23).toContain(`Ethan: "Sometimes it sounds like everyone's in the next room. It was like that this morning."`);
     expect(alt23).toContain(`Ruby: "You missed two murders."`);
     const alt22 = after.pages.find((p) => p.src.endsWith("022.webp"))!.alt;
-    expect(alt22).toContain(`"I thought he was waiting for me to drop it."`);
+    expect(alt22).toContain(`"I thought he wanted me to leave him alone. Did I ever ask?"`);
     // Other chapters are untouched.
     expect(evalChapters(nextJs).filter((c) => c.id !== "001")).toEqual(evalChapters(original).filter((c) => c.id !== "001"));
 

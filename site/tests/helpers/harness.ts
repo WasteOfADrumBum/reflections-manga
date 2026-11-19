@@ -55,6 +55,9 @@ export class V2ReaderRepo implements RepoSource {
   async list(dir: string): Promise<RepoEntry[]> {
     return (await this.base.list(dir)).filter((e) => !V2ReaderRepo.hidden(e.path));
   }
+  async walk(dir: string): Promise<RepoEntry[]> {
+    return (await this.base.walk(dir)).filter((e) => !V2ReaderRepo.hidden(e.path));
+  }
   exists(p: string) {
     return V2ReaderRepo.hidden(p) ? Promise.resolve(false) : this.base.exists(p);
   }
